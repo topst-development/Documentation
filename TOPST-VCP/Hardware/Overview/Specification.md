@@ -1,4 +1,7 @@
-# Introduction
+<h1 style="color:red">
+  Introduction
+</h1>
+
 
 This document serves as a hardware user guide for TOPST VCP based on the TCC7045 application processors. It provides information on system installation, debugging, and detailed insights into the overall design and usage of TOPST VCP.
 
