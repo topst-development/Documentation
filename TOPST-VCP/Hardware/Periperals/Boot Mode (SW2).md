@@ -10,6 +10,8 @@ The slide switch (SW2) is used to select the boot modes of the TOPST VCP.
 
 Figure 1.1 shows the appearance of slide switch (SW2).
 
+![그림3](https://github.com/Topst-Dev/Documentation/assets/161264431/d0ea65a4-edd7-424a-ab9e-ce70bdabc6af)
+
 Figure 1.2 shows the schematic of slide switch (SW2).
 
 ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/b76f8e31-4009-43d3-87d6-08354be1565c)
