@@ -61,7 +61,7 @@ TOPST VCP can implement the following functions:
 - Car Audio Video Navigation (AVN) System
 - Digital Cluster
 - Head Up Display (HUD)
-- Training & ...
+- Training & Education
 
 
 ## Table 3.1: Default Configuration of TOPST VCP
