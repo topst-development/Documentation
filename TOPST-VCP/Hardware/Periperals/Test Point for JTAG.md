@@ -4,6 +4,7 @@
 
 
 TDI, TMS, TRSTn, TDO and TCK are test points for connecting the VCP TOPST to a JTAG emulator.  
+
 Figure 1.1 shows the appearance of the test points(TDI, TMS, TRSTn, TDO, and TCK).
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/03a94d33-d12c-4c26-bcf8-efd48c020152"></p>  
 
