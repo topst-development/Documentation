@@ -15,7 +15,7 @@ Table 1.1 shows the pin description of J20D1.
 
 **Table 1.1 J20D1 Pin Description:**  
 
-|  Pin Number | TCC7045 Port Name | Signal Name | Dir(MCU◀▶J20D1)| Description                                   |
+|  **Pin Number** | **TCC7045 Port Name** | **Signal Name** | **Dir(MCU◀▶J20D1)**| **Description**                                   |
 |:-----------:|:-----------------:|:-----------:|:--------------:|--------------|
 | 1           |         -         | SYS_3P3     |       -        | Power 3.3V      |
 | 2           |         -         | B_5P0       |       -        | Power 5.0V |
@@ -62,7 +62,7 @@ Table 1.2 shows the pin description of J20D1.
 
 **Table 1.1 J14D1 PinFuction:**  
 
-|  No         | TCC7045 Port Name | Signal Name | IO Level | FUNC0        | FUNC1       | FUNC2       | FUNC3          | FUNC4(ANALOG) |
+|  **No**         | **TCC7045 Port Name** | **Signal Name** | **IO Level** | **FUNC0**        | **FUNC1**       | **FUNC2**       | **FUNC3**          | **FUNC4(ANALOG)** |
 |:-----------:|:-----------------:|:-----------:|:--------:|:------------:|:-----------:|:-----------:|:--------------:|:-------------:|
 | 1           |         -         | SYS_3P3     | 3.3V     |      -       |      -      |      -      |        -       |       -       |
 | 2           |         -         | B_5P0       | 3.3V     |      -       |      -      |      -      |        -       |       -       |
