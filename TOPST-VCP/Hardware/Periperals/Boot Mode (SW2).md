@@ -14,7 +14,7 @@ Figure 1.1 shows the appearance of slide switch (SW2).
 
 Figure 1.2 shows the schematic of slide switch (SW2).
 
-![image](https://github.com/Topst-Dev/Documentation/assets/161264431/b76f8e31-4009-43d3-87d6-08354be1565c)
+![그림4](https://github.com/Topst-Dev/Documentation/assets/161264431/1145024a-dbaf-4107-b2c2-05c8abc39571)
 
 Table 1.1 describes the function of slide switch (SW2).
 
