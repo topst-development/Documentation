@@ -1,6 +1,8 @@
 <h1 style="color:re">
   External CPU Interface Connector
 </h1>
+
+
 This is connector for connecting External CPU Board.  
 However, a separate cable for connection is not provided.  
 
