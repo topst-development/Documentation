@@ -3,30 +3,32 @@
 </h1>
 
 
-TOPST VCP has one pin for boot configuration using Boot Mode (BM) and supports 2 modes:
+TOPST VCP has one pin for boot configuration using Boot Mode (BM) and supports 2 modes:  
 UART boot mode and normal mode.
 
 The slide switch (SW2) is used to select the boot modes of the TOPST VCP.
 
 
-### Figure 1.1: Slide switch(SW2)
+
 Figure 1.1 shows the appearance of slide switch (SW2).
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/033ea2c3-48cc-4fc6-b768-8135b918c99c"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/e26dd2fc-66ff-40d9-ba98-e5590616b00d"></p>
 
-### Figure 1.2: Schematic of Slide Switch (SW2) for Boot Mode
+
 Figure 1.2 shows the schematic of slide switch (SW2).
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/3fc2d956-ac32-416b-bcd9-2877689b5093"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8a457adc-4d55-4472-bee0-834ac9e5a1a8"></p>
 
-## Table 1.1: function of slide switch (SW2).
+Table 1.1: describes the function slide switch (SW2).    
 | Reference Number | Function Name Name | Description                               |
 |------------------|--------------------|-------------------------------------------|
-|       SW2        |      Boot Mode     |  Boot mode of TCC7045                     |
+|       SW2        |      Boot Mode     |  Boot mode of TCC7045                     |  
+<div align="center">Table 1.1 Description of Slide Switch (SW2) for Boot Mode</div>  
 
-### Figure 1.3: Slide Switch Position (SW2)
+  
+
 Figure 1.3 shows circuit connection status according to the slide switch position.
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dd7de4d0-a387-4360-b669-603f5db03f93"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/61949a2f-b2cd-4934-8759-2719dc0052a9"></p>
 
 
 ## UART Boot Mode
