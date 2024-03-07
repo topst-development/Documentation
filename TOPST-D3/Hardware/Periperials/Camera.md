@@ -2,6 +2,8 @@
   Camera Interface
 </h1>
 
+The TOPST D3 has a MIPI 2-lane CSI camera that is compatible with the Raspberry Pi camera device and a MIPI 4-lane CSI camera connector for a 4-channel camera application like Surround View Monitoring (SVM) system(optional support).  
+
 
 ## MIPI 4ch Connector for CAM  
 
