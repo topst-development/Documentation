@@ -8,9 +8,9 @@ This document is a hardware user guide for TOPST VCP based on the TCC7045 applic
 
 Table 1.1 describes the features of the TCC7045.  
 
-**Table 1.1: Features of TCC7045:**  
+**Table 1.1: Features of TCC7045:** 
 
-| **Part Name**       | **TCC7045**                                  |
+| Part Name        | TCC7045                                  |
 |------------------|------------------------------------------|
 | Package          | Pin to Pin Compatible FBGA-196pin (12BD) |
 | CPU Frequency    | 200MHz                                   |
@@ -41,7 +41,7 @@ Table 1.1 describes the features of the TCC7045.
 
 **Table 1.2 terminology:**  
 
-| **Terminology** | **Definition**                                              |
+| Terminology | Definition                                              |
 |-------------|---------------------------------------------------------|
 | ACC         | Accessories Power                                       |
 | AP          | Application Processor                                   |
@@ -73,7 +73,7 @@ Table 1.3 Describes the default configuration of TOPST VCP.
 
 **Table 1.3 Default Configuration of TOPST VCP:**  
 
-| **Board Name** | **Description**            |
+| Board Name | Description            |
 |------------|------------------------|
 | TOPST VCP  | TCC7045 MCU module     |  
 
@@ -87,7 +87,7 @@ Table 1.4 describes connectors of TOPST VCP(top view).
 
 **Table 1.4 Description of TOPST VCP (Top View):**  
 
-| **Number** | **Reference**  | **Name**                    | **Description**                                                       | 
+| Number | Reference  | Name                    | Description                                                       | 
 |--------|------------|-------------------------|-------------------------------------------------------------------|
 | 1      | SW7        | Slide Switch            | Test for ACC Signal ON/OFF                                        |
 | 2      | SW3        | Slide Switch            | Test for Illumination (ILL) ON/OFF                                |
@@ -110,6 +110,6 @@ Figure 1.3 shows the bottom view of TOPST VCP.
 Table 1.5 describes the connectors of TOPST VCP (bottom view).  
 
 **Table 1.5 Description of TOPST VCP (Bottom View):**
-| **Number** | **Reference** Number | **Name**           | **Description**                           |
+| Number | Reference Number | Name           | Description                           |
 |--------|------------------|----------------|---------------------------------------|
 | 1      | J14D1            | 28-pin Header Female | Header for connecting MCU with external CPU |
