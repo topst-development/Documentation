@@ -11,7 +11,7 @@ Figure 1.1 shows the power plug size for the DC 5V power adapter.
 
 **Note**: The plug size must be with 2.1 mm ~ 2.5 mm.  
 
-Caution: Compatibility issues may occur if you use an adapter other than the one provided by Telechips.  
+**Caution**: Compatibility issues may occur if you use an adapter other than the one provided by Telechips.  
 
 
 Figure 1.2 shows the location of 5V Power Jack on the TOPST D3.  
