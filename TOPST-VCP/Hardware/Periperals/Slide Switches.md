@@ -12,7 +12,7 @@ Table 1.1 describes the setting of SW3.
 
 **Table 1.1 SW3 Settings:**  
 
-|  **Part Number**       | **Function** | **Figure** | **Value** | **Description**                    |
+|  Part Number             | Function       | Figure       | Value       | Description                        |
 |:------------------------:|:--------------:|:------------:|:-----------:|------------------------------------|
 |SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/fa415569-3eec-4c63-a349-1f8d5aa08aad)|5V|Power of Illumination is turned on. Default setting|
 | SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e354fb9a-98b0-4425-a1fe-f1db739ebb42) | 0V | Power of Illumination is turned off. |  
@@ -23,7 +23,7 @@ Table 1.2 describes the setting of SW7.
 
 **Table 1.2 SW7 Settings:**  
 
-|  **Part Number**       | **Function** | **Figure** | **Value** | **Description**                    |
+|  Part Number             | Function       | Figure       | Value       | Description                        |
 |:------------------------:|:--------------:|:------------:|:-----------:|------------------------------------|
 |SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/fa415569-3eec-4c63-a349-1f8d5aa08aad)|5V|Power of ACC is turned on. Default setting|
 | SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e354fb9a-98b0-4425-a1fe-f1db739ebb42) | 0V | Power of ACC is turned off. |  
@@ -34,7 +34,7 @@ Table 1.3 describes the setting of SW8.
 
 **Table 1.3 SW8 Settings:**  
 
-|  **Part Number**       | **Function** | **Figure** | **Value** | **Description**                    |
+|  Part Number             | Function       | Figure       | Value       | Description                        |
 |:------------------------:|:--------------:|:------------:|:-----------:|------------------------------------|
 |SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/fa415569-3eec-4c63-a349-1f8d5aa08aad)|High|Enter STR Mode|
 | SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e354fb9a-98b0-4425-a1fe-f1db739ebb42) | Low | Exit STR Mode. Default setting|  
