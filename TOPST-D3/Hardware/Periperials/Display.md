@@ -2,6 +2,8 @@
   DisplayPort Connector
 </h1>
 
+The TOPST D3 has one DisplayPort that supports DP 1.4 with resolution up to 4Kp60.  
+
 
 Figure 1.1 shows how to enable the display using DisplayPort on TOPST-D3. If you want to connect to another Display Devices that only support HDMI, you can use DP to HDMI converting cables.  
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/ad4cbbc1-e548-4437-a6d6-6503ea4c80e3"></p>  
