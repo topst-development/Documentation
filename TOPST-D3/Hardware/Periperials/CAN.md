@@ -2,6 +2,10 @@
   CAN
 </h1>
 
+## CAN Interface  
+
+The TOPST D3 has a dedicated CAN connector for 20-pin Flat Flexible Cable (FFC) that supports Electric Control Unit (ECU) communications.  
+
 
 ## CAN I/F Connector  
 
