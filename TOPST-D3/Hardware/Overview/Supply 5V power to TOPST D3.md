@@ -22,3 +22,14 @@ Supply 5V power to the TOPST D3 by performing the following steps:
 >  1. Check the DC 5V power adapter that is included in TOPST D3 kit.
 >  2. Plug in the included power adapter to AC outlet.
 >  3. Insert the DC socket of power adapter to the 5V Poser Jack on the TOPST D3.
+
+Table 1.1 shows the absolute maximum ratings.  
+
+**Caution:** Stress levels above those listed in Table 1.1 may cause permanent damage to the device. This is a stress rating only; functional operation of the device under conditions different from those listed in the operational sections of other TOPST guides is not implied.  
+
+Long-term exposure to maximum rating conditions can affect device reliablilty.  
+
+**Table 1.1 Absolute Maximum Ratings:**
+| Parameter        | Minimum | Maximum | Unit |
+|:----------------:|:-------:|:-------:|:----:|
+| 5V Input Voltage | 4.5     | 5.5     | V    |
