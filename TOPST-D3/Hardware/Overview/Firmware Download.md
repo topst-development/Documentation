@@ -1,1 +1,28 @@
+<h1 style="color:red">
+  Connect TOPST D3 to Host PC for Firmware Download
+</h1>
 
+
+Firmware Downloader(**FWDN**) writes a ROM image to the TOPST D3 via USB communication on the computer.  
+
+The TOPST D3 has one Boot Mode button and supports two kinds of boot modes through the Boot Mode button as follows:
+- USB Boot Mode is used to write a ROM image by using the **FWDN** program on your computer.
+- eMMC Boot Mode is used to boot the TOPST D3 by using a ROM image that is stored in eMMC device.
+
+**Note**: USB 2.0 D/H port is used for firmware downloader (**FWDN**)  
+
+To use **FWDN**, connect the TOPST D3 to your computer as follows:
+>  1.  Check that VTC driver is installed on your computre. If VTC driver is not installed, install it according to the **FWDN** guideline that is found on topst.ai
+>  2.  Prepare one USB Type-A cable.
+>  3.	 Connect USB 2.0 D/H on the TOPST D3 to your computer by using the USB Type-A cable.
+>  4.	 Use one of the two methods below to change the boot mode of the TOPST D3.
+>   > 1) method 1
+>   >   >  - If the TOPST D3 is not powered yet, press the FWDN button and connect 5V power th the TOPST D3.
+>   >   >  - Release the FWDN Boot mode button.
+>   > 2) method 2
+>   >   >  - If the TOPST D3 is already powered, press the Reset button and FWDN Boot mode button.
+>   >   >  - Release the FWDN Boot mode button.
+>  5.  Download your ROM image according to the **FWDN** guide.
+
+Figure 1 shows the appearance of Reset button, FWDN button and USB 2.0 D/H on the TOPST D3.  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dbfdb92a-4a12-4c94-8095-33e4c694933c"></p>
