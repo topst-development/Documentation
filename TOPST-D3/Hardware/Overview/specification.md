@@ -3,7 +3,40 @@
 </h1>
 
 
-This document describes information about all connector on TOPST D3 board, as well as the correct connection methods depending on the user’s intended usage.  
+TOPST D3 is an ultra-small and low-power computer with microprocessors, memory, and input/output (I/O) terminals. TOPST D3 can combine a variety of sensors including motion, ultrasound, infrared, LiDAR, motor drive, vehicle communication transceiver, microphone, and communication module.  
+
+For support, see the hardware documentation section of the TOPST website(topst.ai) and post questions to TOPST Technical Q&A.  
+
+## Technical Specifications  
+
+Table 2.1 shows the technical specifications for TOPST D3.  
+
+**Table 2.1 Technical Specification:**  
+| Part Name        | TCC 8050                                                |
+|:----------------:|---------------------------------------------------------|
+| CPU              | ARM® Cortex-A72 1.6 GHz, Quad                           |
+| CPU              | ARM Cortex-A53 1.45 GHz, Quad                           |
+| CPU              | ARM Cortex-R5                                           |
+| GPU              | 169 GFLOPS, IMG PowerVR 9XTP                            |
+| Memory           | 4GB 64-bit LPDDR4 2ch                                   |
+| Storage          | Micro SD Card(Not included), 8GB eMMC 5.1 Flash Storage |
+|Automotive Network| CAN 3ch                                                 |
+| Net work         | Gigabit Ethernet                                        |
+| Video Encoder    | 4Kp30 (HEVC) FHD H.265                                  |
+| Video Decoder    | 4Kp60 (HEVC, VP9) FHD H.265                             |
+| Camera           | MIPI CSI2 2-lane, MIPI CSI2 4-lane                      |
+| Display          | DisplayPort 1.4                                         |
+| USB              | USB 2.0 Host, USB 2.0 DRD, USB 3.0 DRD                  |
+| Others           | PCIe Gen3, UART/JTAG debugger port, I2S, I2C, SPI, PWM  |
+| Power            | 5V/3A                                                   |
+| OS               | Linux                                                   |
+| Mechanical       | 90 mm x 90 mm                                           |
+
+
+## Block Diagram  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8bb0ccd7-be82-4818-8750-2045e7bd35b3"></p>
+
+
 
 ## TOPST D3 (Top View)  
 
