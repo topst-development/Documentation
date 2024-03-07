@@ -70,4 +70,8 @@ Table 1.2 describes the connectors and components on the TOPST D3 (bottom view).
 | Item | Description                | Item | Description                         |
 |:----:|----------------------------|:----:|-------------------------------------|
 | T23  | CAN interface connector    | T25  | Debug interface connector(UART/JTAG)|
-| T24  | Micro SD card socket       | T26  | MIPI 2ch connector for CAM          |
+| T24  | Micro SD card socket       | T26  | MIPI 2ch connector for CAM          |  
+
+## Temperature Range and Thermals  
+The recommended ambient operating temperature range is -10°C to 55°C.   
+The TOPST D3 reduces the CPU clock speed and voltage to reduce thermal output when the TOPST D3 is in an idle state or has a light workload through Dynamic Voltage and Frequency Scaling (DVFS) solutions. The TOPST D3 operates perfectly without any extra cooling devices. If you want to operate it at full performance for extended operating temperature range such as Automotive requirement, please contact TOPST;topst@topst.ai
