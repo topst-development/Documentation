@@ -2,6 +2,8 @@
   USB
 </h1>
 
+The TOPST D3 has 2 x USB 2.0 and 1 x USB 3.0 type-A sockets. Downstream USB current is limited to approximately 0.5A per socket.  
+
 
 Figure 1.1 shows how to connect a USB memory stick and mouse.  
 - USB Memory Stick
