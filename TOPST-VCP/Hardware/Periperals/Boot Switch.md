@@ -1,4 +1,4 @@
-![image](https://github.com/Topst-Dev/Documentation/assets/161264431/43ea8793-7679-483c-911d-1aee518e07b8)<h1 style="color:red">
+<h1 style="color:red">
   Boot Mode (SW2)
 </h1>
 
