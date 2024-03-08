@@ -49,7 +49,7 @@ Table 1.1 shows the pin description of J14D1.
 
 Table 1.2 shows the pin description of J14D1. 
 
-**Table 1.1 J14D1 Pin Fuction:**  
+**Table 1.2 J14D1 Pin Fuction:**  
 
 |  No         | TCC7045 Port Name | Signal Name | IO Level | FUNC0        | FUNC1       | FUNC2       | FUNC3          | FUNC4(ANALOG) |
 |:-----------:|:-----------------:|:-----------:|:--------:|:------------:|:-----------:|:-----------:|:--------------:|:-------------:|
