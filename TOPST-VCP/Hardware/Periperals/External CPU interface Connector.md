@@ -12,7 +12,7 @@ Figure 1.1 shows the appearance of External CPU Interface Connector (J14D1).
 Figure 1.2 shows the schematic of External CPU Interface Connector (J14D1).
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/caae18c2-7f83-4e72-bbd0-c586ab0e9e75"></p>  
 
-Table 1.1 shows the pin description of J20D1.  
+Table 1.1 shows the pin description of J14D1.  
 
 **Table 1.1 J14D1 Pin Description:**  
 
@@ -47,9 +47,9 @@ Table 1.1 shows the pin description of J20D1.
 | 27          | GPIO_A14          | GPIO_A14    |  ▶            | LCD Backlight Enable Control                 |
 | 28          | GPIO_K01          | GPIO_K01    |  ◀            | CAN0_RX                                      |
 
-Table 1.2 shows the pin description of J20D1. 
+Table 1.2 shows the pin description of J14D1. 
 
-**Table 1.1 J14D1 PinFuction:**  
+**Table 1.1 J14D1 Pin Fuction:**  
 
 |  No         | TCC7045 Port Name | Signal Name | IO Level | FUNC0        | FUNC1       | FUNC2       | FUNC3          | FUNC4(ANALOG) |
 |:-----------:|:-----------------:|:-----------:|:--------:|:------------:|:-----------:|:-----------:|:--------------:|:-------------:|
