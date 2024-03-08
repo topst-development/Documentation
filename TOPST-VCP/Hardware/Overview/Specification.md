@@ -8,7 +8,7 @@ This document is a hardware user guide for TOPST VCP based on the TCC7045 applic
 
 Table 1.1 describes the features of the TCC7045.  
 
-**Table 1.1: Features of TCC7045:** 
+**Table 1.1 Features of TCC7045:** 
 
 | Part Name        | TCC7045                                  |
 |------------------|------------------------------------------|
@@ -44,13 +44,8 @@ Table 1.1 describes the features of the TCC7045.
 | Terminology | Definition                                              |
 |-------------|---------------------------------------------------------|
 | ACC         | Accessories Power                                       |
-| AP          | Application Processor                                   |
-| AVB         | Audio Video Bridging                                    |
-| BU          | Battery Unit                                            |
-| EVB         | Evaluation Board                                        |
 | GPIO        | General Purpose Input Output                            |
 | ILL         | Illumination                                            |
-| SDM         | Safe Display Manager                                    |
 | STR         | Suspend to RAM                                          |
 | TOPST       | Total Open-Platform for System development and Training |
 | VCP         | Vehicle Control Processor                               |
