@@ -13,7 +13,7 @@ Figure 1.2 shows the schematic of a standard 40-pin GPIO header.
 
 Table 1.1 shows the pin description of J20D1.  
 
-**Table 1.1 J20D1 Pin Description:**  
+**Table 1.1 40-Pin Description:**  
 
 |  Pin Number | TCC7045 Port Name | Signal Name | Dir(MCU◀▶J20D1)| Description                                   |
 |:-----------:|:-----------------:|:-----------:|:--------------:|--------------|
@@ -60,7 +60,7 @@ Table 1.1 shows the pin description of J20D1.
 
 Table 1.2 shows the pin description of J20D1. 
 
-**Table 1.1 J14D1 PinFuction:**  
+**Table 1.1 40-Pin PinFuction:**  
 
 |  No         | TCC7045 Port Name | Signal Name | IO Level | FUNC0        | FUNC1       | FUNC2       | FUNC3          | FUNC4(ANALOG) |
 |:-----------:|:-----------------:|:-----------:|:--------:|:------------:|:-----------:|:-----------:|:--------------:|:-------------:|
