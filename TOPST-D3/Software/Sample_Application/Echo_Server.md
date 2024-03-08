@@ -5,9 +5,9 @@ Echo Server is a demo program that can check Transmission Control Protocol (TCP)
 Echo Server prints the received messages in order and ends when it receives a **q** message.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/756bd937-ae88-48d7-b4fe-09b4a974d1e4" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/756bd937-ae88-48d7-b4fe-09b4a974d1e4" width="450" height="200" style="margin: auto;">
 </div>
-<p align="center"><strong>Figure 2.2 Echo Server Example</strong></p
+<p align="center"><strong>Figure 2.2 Echo Server Example</strong></p>
 
 ```c
 #include <stdio.h>
@@ -93,7 +93,6 @@ int main(int argc, char** argv)
 	
  	return 0;
 }
-
 ```
 
 
@@ -111,17 +110,16 @@ The **socket()** function creates an unbound socket in a communications domain, 
 
 **Parameters**
 
-n  **domain**: Specifies the communications domain in which a socket is to be created.
+-  **domain**: Specifies the communications domain in which a socket is to be created.
 
-n  **type**: Specifies the type of socket to be created.
+-  **type**: Specifies the type of socket to be created.
 
-n  **protocol:** Specifies a particular protocol to be used with the socket. Specifying a protocol of 0 causes **socket()** to use an unspecified default protocol that is appropriate for the requested socket type.
+-  **protocol:** Specifies a particular protocol to be used with the socket. Specifying a protocol of 0 causes **socket()** to use an unspecified default protocol that is appropriate for the requested socket type.
 
 **Return Value**
 
 Upon successful completion, **socket()** returns a non-negative integer, the socket file descriptor. Otherwise, a value of -1 is returned and **errno** is set to indicate the error.
 
----
 
 ```c
 #include <sys/socket.h>
@@ -132,23 +130,21 @@ int bind	(int 			socket,
 
 ```
 
----
 
 The **bind()** function assigns an address to an unnamed socket. Sockets created with **socket()** function are initially unnamed; they are identified only by their address family.
 
 **Parameters**
 
-n  **socket**: Specifies the file descriptor of the socket to be bound.
+-  **socket**: Specifies the file descriptor of the socket to be bound.
 
-n  **address**: Points to a **sockaddr** structure that contains the address to be bound to the socket. The length and format of the address depend on the address family of the socket.
+-  **address**: Points to a **sockaddr** structure that contains the address to be bound to the socket. The length and format of the address depend on the address family of the socket.
 
-n  **address_len**: Specifies the length of the **sockaddr** structure that is pointed to by the address argument.
+-  **address_len**: Specifies the length of the **sockaddr** structure that is pointed to by the address argument.
 
 **Return Value**
 
 Upon successful completion, **bind()** returns 0. Otherwise, -1 is returned and **errno** is set to indicate the error.
 
----
 
 ```c
 #include <sys/socket.h>
@@ -187,11 +183,11 @@ The accept() function extracts the first connection on the queue of pending conn
 
 **Parameters**
 
-n  **socket**: Specifies that a socket that was created with **socket()** is bound to an address with **bind()** and issued a successful call to **listen()**.
+-  **socket**: Specifies that a socket that was created with **socket()** is bound to an address with **bind()** and issued a successful call to **listen()**.
 
-n  **address**: Either a null pointer or a pointer to a **sockaddr** structure where the address of the connecting socket will be returned.
+-  **address**: Either a null pointer or a pointer to a **sockaddr** structure where the address of the connecting socket will be returned.
 
-n  **address_len**: Points to a **socklen_t**, which on input specifies the length of the supplied **sockaddr** structure, and on output specifies the length of the stored address.
+-  **address_len**: Points to a **socklen_t**, which on input specifies the length of the supplied **sockaddr** structure, and on output specifies the length of the stored address.
 
 **Return Value**
 

@@ -521,25 +521,25 @@ The **signal()** function sets the error handler for the **sig** signal. The sig
 
 **Parameters**
 
-n  **sig:** The signal to set the signal handler to. It can be an implementation-defined value or one of the following values:
+**sig:** The signal to set the signal handler to. It can be an implementation-defined value or one of the following values:
 
-l  SIGABRT
+-   SIGABRT
 
-l  SIGFPE
+-   SIGFPE
 
-l  SIGILL
+-   SIGILL
 
-l  SIGINT
+-   SIGINT
 
-l  SIGSEGV
+-   SIGSEGV
 
-l  SIGTERM
+-   SIGTERM
 
-n  **handler:** The signal handler which must be one of the following:
+**handler:** The signal handler which must be one of the following:
 
-l  SIG_DFL macro: The signal handler is set to default signal handler.
+-   SIG_DFL macro: The signal handler is set to default signal handler.
 
-l  SIG_IGN macro: The signal is ignored.
+-   SIG_IGN macro: The signal is ignored.
 
 **Return Value**
 
@@ -562,15 +562,15 @@ The **select()** function indicates which of the specified file descriptors are 
 
 **Parameters**
 
-n  **nfds**: The **nfds** argument specifies the range of file descriptors to be tested. The **select()** function tests file descriptors in the range of 0 to nfds-1.
+- **nfds**: The **nfds** argument specifies the range of file descriptors to be tested. The **select()** function tests file descriptors in the range of 0 to nfds-1.
 
-n  **readfds**: If the **readfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to read. On output, the object specifies which file descriptors are ready to read.
+- **readfds**: If the **readfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to read. On output, the object specifies which file descriptors are ready to read.
 
-n  **writefds**: If the **writefds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to write. On output, the object specifies which file descriptors are ready to write.
+- **writefds**: If the **writefds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to write. On output, the object specifies which file descriptors are ready to write.
 
-n  **errorfds**: If the **errorfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked for pending error conditions. On output, the object specifies which file descriptors have error conditions pending.
+- **errorfds**: If the **errorfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked for pending error conditions. On output, the object specifies which file descriptors have error conditions pending.
 
-n  **timeout**: If the **timeout** argument is not a null pointer, it points to an object of **struct timeval** type that specifies a maximum interval to wait for the selection to complete. If the **timeout** argument points to an object of **struct timeval** type whose members are 0, **select()** does not block. If the **timeout** argument is a null pointer, **select()** blocks until an event causes one of the masks to be returned with a valid (non-zero) value. If the time limit expires before any event occurs that would cause one of the masks to be set to a non-zero value, **select()** completes successfully and returns 0.
+- **timeout**: If the **timeout** argument is not a null pointer, it points to an object of **struct timeval** type that specifies a maximum interval to wait for the selection to complete. If the **timeout** argument points to an object of **struct timeval** type whose members are 0, **select()** does not block. If the **timeout** argument is a null pointer, **select()** blocks until an event causes one of the masks to be returned with a valid (non-zero) value. If the time limit expires before any event occurs that would cause one of the masks to be set to a non-zero value, **select()** completes successfully and returns 0.
 
 **Return Value**
 
@@ -590,7 +590,7 @@ The **FD_ZERO()** function initializes the file descriptor set to contain no fil
 
 **Parameters**
 
-n  **fdset**: The file descriptor set
+- **fdset**: The file descriptor set
 
 **Return Value**
 
@@ -610,9 +610,9 @@ The **FD_SET()** function adds a file descriptor to a file descriptor set.
 
 **Parameters**
 
-n  **fd:** The file descriptor
+- **fd:** The file descriptor
 
-n  **fdset:** The file descriptor set
+- **fdset:** The file descriptor set
 
 **Return Value**
 

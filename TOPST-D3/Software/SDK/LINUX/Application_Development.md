@@ -11,7 +11,7 @@ This chapter provides information for further development of new applications an
 - Official Reference: [https://docs.yoctoproject.org/3.1.21/singleindex.html#using-devtool-in-your-sdk-workflow](https://docs.yoctoproject.org/3.1.21/singleindex.html%23using-devtool-in-your-sdk-workflow)
 - ***Devtool*** Reference: https://docs.yoctoproject.org/ref-manual/devtool-reference.html
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/92bb8127-95d6-43ae-9544-39784666ba0c" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/92bb8127-95d6-43ae-9544-39784666ba0c" width="700" height="850" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.1 Yocto Devtool Process</strong></p>
 
@@ -71,7 +71,6 @@ Warning: source-mirror not exist!!
 The build to be slowler or fail because will be download source code from upstream before build.
 ```
 
----
 
 ### 1.1.1.2 Add Source Code
 
@@ -83,7 +82,6 @@ You can add source code from remote repository and local directory to SDK:
 devtool add {recipe-name} {fetch-url or source-tree}
 ```
 
----
 
 Then, the **devtool add** command generates **new_recipe** or **new_recipe2** in workspace/recipes/new_recipe or new_recipe2. And the source code is downloaded or copied in workspace/sources/new_recipe or new_recipes2 directory. You can modify your recipes in workspace.
 
@@ -97,7 +95,6 @@ You can see more information by using the **devtool add --help** command.
 devtool modify {recipe-name}
 ```
 
----
 
 Then, the **devtool modify** command o generates a “.bbappend” file in workspace/appends/ivi_recipe.bbappend. The source code is downloaded in workspace/sources/ivi_recipe. You can modify your source code and bbappend.
 
@@ -111,7 +108,6 @@ You can update the existing recipe to build the recipe for an updated set of sou
 devtool upgrade -V {version} {recipe-name}
 ```
 
----
 
 The command above updates the SRCREV of the recipe. In your workspace, "ivi_recipe_1.0.1.bb" is generated in workspace/recipes directory, and "ivi_recipe_1.0.1.bbappend" can be generated in workspace/appends directory.
 
@@ -125,7 +121,6 @@ If you want to build your source code or recipe, you can build it as follows:
 bitbake {recipe-name} or devtool build {recipe-name}
 ```
 
----
 
 You can install your outputs to your target as follows:
 
@@ -133,7 +128,6 @@ You can install your outputs to your target as follows:
 devtool deploy-target {recipe-name} {target}
 ```
 
----
 
 After you finish editing recipes and source code, you can apply your recipes to Yocto layer:
 
@@ -141,7 +135,6 @@ After you finish editing recipes and source code, you can apply your recipes to 
 devtool finish {recipe-name} {layer-name}
 ```
 
----
 
 In your workspace, the ***devtool*** makes the devtool branch. If you commit your patch to devtool branch and finish executing ***Devtool***, the **devtool finish** command generates the patches and adds the patches to the recipe.
 
@@ -151,7 +144,6 @@ If you want to remove your local outputs, you can reset the recipe:
 devtool reset {recipe-name} or devtool reset –all
 ```
 
----
 
 ### 1.1.2 Build Application with Eclipse
 
@@ -197,7 +189,6 @@ glibc-x86_64-automotive-linux-platform-image-aarch64-toolchain/poky-telechips-sy
 glibc-x86_64-automotive-linux-platform-image-aarch64-toolchain/poky-telechips-systemd-glibc-x86_64-automotive-linux-platform-image-aarch64-toolchain-nodistro.0.host.manifest
 ```
 
----
 
 ### 1.1.2.2 Install SDK
 
@@ -227,7 +218,6 @@ Each time you wish to use the SDK in a new shell session, you need to source the
 $ . /usr/local/oecore-x86_64/environment-setup-aarch64-telechips-linux
 ```
 
----
 
 The path to the now installed SDK is used to set up ***Eclipse***.
 
@@ -239,7 +229,6 @@ Install JDK version 1.8.
 $ sudo apt-get install openjdk-8-jre libcanberra-gtk-module
 ```
 
----
 
 If more than one JDK is installed, the command above can be used to change the version to 1.8.
 
@@ -252,7 +241,7 @@ If more than one JDK is installed, the command above can be used to change the v
 2. Download the C/C++ Developers Linux version.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/36ff523a-4f4b-46c4-a92c-51eab6fe1527" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/36ff523a-4f4b-46c4-a92c-51eab6fe1527" width="700" height="450" style="margin: auto;">
 </div>
 
 3. Extract and install using tar.
@@ -261,7 +250,6 @@ If more than one JDK is installed, the command above can be used to change the v
 $ tar -xzvf ~/Downloads/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz
 ```
 
----
 
 1. Run ***Eclipse***.
 
@@ -271,7 +259,6 @@ $ cd eclipse
 $ ./eclipse
 ```
 
----
 
 ### 1.1.2.5 Eclipse Software Installation
 
@@ -291,14 +278,14 @@ $ ./eclipse
 
 3. Select an option according to the table below.
 
-| Linux Tools |  |
-| --- | --- |
+| Linux Tools |  
+| --- | 
 | 1. Linux Tools LTTng Tracer Control 
 | 2. Linux Tools LTTng Userspace Analysis 
 | 3. LTTng Kernel Analysis 
 
-| Mobile and Device Development |  |
-| --- | --- |
+| Mobile and Device Development |
+| --- | 
 | 1. C/C++ Remote Launch (Requires RSE Remote System Explorer) 
 | 2. Remote System Explorer End-user Runtime
 | 3.Remote System Explorer User Actions
@@ -306,8 +293,8 @@ $ ./eclipse
 | 5. TCF Remote System Explorer add-in
 | 6. TCF Target Explorer 
 
-| Programming Language |  |
-| --- | --- |
+| Programming Language |
+| --- | 
 | 1. C/C++ Autotools Support
 | 2. C/C++ Development Tools
 
@@ -320,7 +307,7 @@ $ ./eclipse
 1. Click “Install New Software…” on the Help tab again.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d8d486a8-d33b-4635-ae22-4dc1ae1b28d7" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d8d486a8-d33b-4635-ae22-4dc1ae1b28d7" width="700" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.4 Eclipse Yocto Installation</strong></p>
 
@@ -329,7 +316,7 @@ $ ./eclipse
 Location: http://downloads.yoctoproject.org/releases/eclipse-plugin/1.8/luna
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b320627a-dcef-485d-8893-d20f99d4ccc8" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b320627a-dcef-485d-8893-d20f99d4ccc8" width="700" height="200" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.5 Add Repository</strong></p>
 
@@ -350,14 +337,14 @@ Yocto Project Documentation plug-in
 
 1. Click Preferences on the Window tab.
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/4105db85-2035-4513-bc24-c46fb7525a3f" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/4105db85-2035-4513-bc24-c46fb7525a3f" width="700" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.6 Select Preferences</strong></p>
 
 1. Click the Yocto Project ADT on the left tab and set it up.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/06487724-9523-4d31-8045-260f426bb1ec" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/06487724-9523-4d31-8045-260f426bb1ec" width="700" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.7 Preference Settings</strong></p>
 
@@ -370,12 +357,12 @@ Yocto Project Documentation plug-in
 1. Select the project you want and select “Yocto Project ADT Autotools Project” in Project type. Then, click Next and Finish.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ef659c1-abf4-4f13-8347-847eede42aff" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ef659c1-abf4-4f13-8347-847eede42aff" width="700" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.8 Create New Project</strong></p>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c60445f3-e4d1-41cf-8fe4-9ebfdd9e979d" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c60445f3-e4d1-41cf-8fe4-9ebfdd9e979d" width="700" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.9 Project Preference</strong></p>
 
@@ -383,7 +370,7 @@ Yocto Project Documentation plug-in
 3. Click the **hammer** button on the top to build.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b91390ab-5a63-4380-94cb-781e28a2db42" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b91390ab-5a63-4380-94cb-781e28a2db42" width="400" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.10 Reconfigure Project</strong></p>
 
@@ -392,7 +379,7 @@ Yocto Project Documentation plug-in
 1. Select “Debug Configuration” on the Run tab. You can create a new tab by double-clicking the “C/C++ Remote Application” tab.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/957dc0bc-3a9e-40bc-8b9f-d1983f96a27c" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/957dc0bc-3a9e-40bc-8b9f-d1983f96a27c" width="700" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.11 Debug Configuration</strong></p>
 
@@ -414,12 +401,12 @@ Yocto Project Documentation plug-in
 5. Write in “Remote Absolute File Path for C/C++ Application” the path to create the executable file at the desired location on the board.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/badc573a-f6d3-4576-95f7-09f14f9c408c" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/badc573a-f6d3-4576-95f7-09f14f9c408c" width="750" height="100" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.14 Set Source Path</strong></p>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/356c0acc-d49f-4311-958f-9fc17df67906" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/356c0acc-d49f-4311-958f-9fc17df67906" width="750" height="350" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.15 Success Screen</strong></p>
 
@@ -446,7 +433,6 @@ The demo program records for 3 seconds and plays the recorded sound.
 $ sudo apt-get install libasound2-dev alsa-utils
 ```
 
----
 
 - Check the sound card.
 
@@ -457,7 +443,7 @@ $ aplay -l
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/19371066-8a6b-45a0-a8f4-4e0949f7e662" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/19371066-8a6b-45a0-a8f4-4e0949f7e662" width="750" height="150" style="margin: auto;">
 </div>
 
 - Test sound.
@@ -466,7 +452,7 @@ $ aplay -l
 $ speaker-test -c 2
 ```
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/4e28ba09-1d4b-4e53-b25f-dc3dc9ab66fd" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/4e28ba09-1d4b-4e53-b25f-dc3dc9ab66fd" width="750" height="300" style="margin: auto;">
 </div>
 
 ### 1.2.1.1 SoX
@@ -479,7 +465,7 @@ $ sudo apt-get install sox libsox-fmt-all
 $ play ${sample.mp3}
 ```
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/33dc949c-d26c-42dc-bd61-312e5ab7ebe3" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/33dc949c-d26c-42dc-bd61-312e5ab7ebe3" width="750" height="250" style="margin: auto;">
 </div>
 
 ### 1.2.2 Video – VLC
@@ -490,11 +476,11 @@ VideoLAN Clients (VLC) is a free and open-source cross-platform multimedia playe
 $ sudo apt-get install vlc
 ```
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ae4120fb-cffa-4c1f-8628-8b71df3db294" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ae4120fb-cffa-4c1f-8628-8b71df3db294" width="600" height="350" style="margin: auto;">
 </div>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cb1790c0-f06c-4316-bc2b-b58f08f18001" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cb1790c0-f06c-4316-bc2b-b58f08f18001" width="600" height="350" style="margin: auto;">
 </div>
 
 ### 1.2.3 General Purpose Input/Output (GPIO)
@@ -512,7 +498,7 @@ The above functions allow you to use the MMC/SD card for insertion or removal, w
 The pin map is as follows:
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/79d68d72-1e4c-41a4-b3a8-f9507b3d7821" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/79d68d72-1e4c-41a4-b3a8-f9507b3d7821" width="500" height="400" style="margin: auto;">
 </div>
 
 The following is an example of testing the input and output of the board. You can test the input and output by controlling the pin number.
@@ -529,7 +515,7 @@ $ echo 1 > /sys/class/gpio/gpio84/value
 $ echo 0 > /sys/class/gpio/gpio84/value
 ```
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/75ea32f8-e75f-4276-8c57-4a4360b9888e" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/75ea32f8-e75f-4276-8c57-4a4360b9888e" width="400" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.17 GPIO Example Board</strong></p>
 
@@ -552,7 +538,7 @@ $ python3 luma.led_matrix/examples/matrix_demo.py
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/61ca0d9a-d2f9-4829-81bc-f6745c60f490" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/61ca0d9a-d2f9-4829-81bc-f6745c60f490" width="400" height="500" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.18 Dot-matrix Test with SPI</strong></p>
 
@@ -627,7 +613,7 @@ Output a list of installed busses.
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e733d7ad-a126-4ffc-97a7-f760d552140d" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e733d7ad-a126-4ffc-97a7-f760d552140d" width="750" height="150" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.19 I2C Device</strong></p>
 
@@ -654,7 +640,6 @@ Refer to “*TOPST D3 Common SDK-Install Guide for ROS2*” and perform the
 $ sudo apt-get install ros-humble-desktop
 ```
 
----
 
 - Set server environment.
 
@@ -665,7 +650,7 @@ $ ros2 run demo_nodes_cpp talker
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/8b4f7fe7-d430-4384-9ac2-c24b7c2618f0" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/8b4f7fe7-d430-4384-9ac2-c24b7c2618f0" width="750" height="250" style="margin: auto;">
 </div>
 
 - Set client environment.
@@ -677,5 +662,5 @@ $ ros2 run demo_nodes_py listener
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/26c2d6b5-5992-4e1e-b1f0-695d6ed5e1c3" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/26c2d6b5-5992-4e1e-b1f0-695d6ed5e1c3" width="750" height="250" style="margin: auto;">
 </div>

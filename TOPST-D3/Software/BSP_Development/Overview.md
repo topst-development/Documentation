@@ -14,6 +14,6 @@ The TCC8050 is an optimized processor for network devices which require the ease
 This innovative and rich feature set expands the categories of application that can be used with TCC8050 to meet evolving technology and market needs.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/7e08afb9-6dff-4cca-8a58-21f13cae6d40" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/7e08afb9-6dff-4cca-8a58-21f13cae6d40" width="1000" height="1200" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 1.1 Functional Block Diagram</strong></p>

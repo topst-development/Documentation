@@ -25,23 +25,23 @@ struct pwm_chip {
 
 **Parameters**
 
-n  **dev**: The device that provides the PWMs
+- **dev**: The device that provides the PWMs
 
-n  **list**: List nodes for internal use
+-   **list**: List nodes for internal use
 
-n  **ops**: Callbacks for this PWM controller
+-   **ops**: Callbacks for this PWM controller
 
-n  **base**: The number of first PWM controlled by this chip
+-   **base**: The number of first PWM controlled by this chip
 
-n  **npwm**: The number of PWMs controlled by this chip
+-  **npwm**: The number of PWMs controlled by this chip
 
-n  **pwms**: The array of PWM devices allocated by the framework
+-  **pwms**: The array of PWM devices allocated by the framework
 
-n  **of_xlate**: The request a PWM device given a device tree PWM specifier
+-  **of_xlate**: The request a PWM device given a device tree PWM specifier
 
-n  **of_pwm_n_cells**: The number of cells expected in the device tree PWM specifier
+-  **of_pwm_n_cells**: The number of cells expected in the device tree PWM specifier
 
-n  **can_sleep**: Must be true for the .config, .enable, or .disable operations to sleep
+-  **can_sleep**: Must be true for the .config, .enable, or .disable operations to sleep
 
 
 ```c
@@ -65,23 +65,23 @@ PWM channel object
 
 **Parameters**
 
-n  **label**: The name of the PWM device
+-   **label**: The name of the PWM device
 
-n  **flags**: The flags associated with the PWM device
+-   **flags**: The flags associated with the PWM device
 
-n  **hwpwm**: The relative index of the PWM device per chip
+-   **hwpwm**: The relative index of the PWM device per chip
 
-n  **pwm**: The global index of the PWM device
+-   **pwm**: The global index of the PWM device
 
-n  **chip**: The PWM chip providing this PWM device
+-   **chip**: The PWM chip providing this PWM device
 
-n  **chip_data**: The chip-private data associated with the PWM device
+-   **chip_data**: The chip-private data associated with the PWM device
 
-n  **args**: PWM arguments
+-   **args**: PWM arguments
 
-n  **state**: The last applied state
+-   **state**: The last applied state
 
-n  **last**: The last implemented state (for **PWM_DEBUG**)
+-   **last**: The last implemented state (for **PWM_DEBUG**)
 
 
 ```c
@@ -115,7 +115,6 @@ int main(void) {
 
 ```
 
----
 
 The following is a demo program to control the brightness of LED by using PWM.
 
@@ -130,7 +129,6 @@ optional arguments:
 
 ```
 
----
 
 **Example:**
 
@@ -140,12 +138,12 @@ python3 pwmexample.py -cn 0 -p 100000 -cy 3
 
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d51fd9d3-c1cf-4e40-aa0a-d2d7b84e1da1" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d51fd9d3-c1cf-4e40-aa0a-d2d7b84e1da1" width="700" height="150" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 2.11 PWM Example</strong></p>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/dbd9d158-64b2-436f-8cc4-429f7fb4635a" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/dbd9d158-64b2-436f-8cc4-429f7fb4635a" width="400" height="550" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 2.12 Circuit Used in Example</strong></p>
 

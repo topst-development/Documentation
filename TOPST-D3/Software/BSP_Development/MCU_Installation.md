@@ -5,14 +5,14 @@
 Figure 5.1 shows software components in TCC8050 MCU BSP. The TCC8050 MCU BSP is composed of device driver, Real Time Operating System (RTOS), System Adaptation Layer (SAL), and sample application. The MCU BSP is categorized into three types (Sample, 3rd party, and TC Support) by usage. The sample is a sample code for testing device driver. You can refer to the sample code while implementing your own solution, but quality is not guaranteed. The MCU BSP has the 3rd party software such as RTOS, but this MCU BSP does not provide technical support for the RTOS itself. The device driver and SAL interface are supported by Telechips (TC Support).
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/793aa74a-652f-4797-9b56-18579ac6d367" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/793aa74a-652f-4797-9b56-18579ac6d367" width="700" height="550" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.1 Software Components in TCC8050 MCU BSP</strong></p>
 
 ## 1.2 Directory Structure
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/0bc19621-a3d6-4494-acaa-d901d0a83b57" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/0bc19621-a3d6-4494-acaa-d901d0a83b57" width="300" height="350" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.2 Directory Structure</strong></p>
 
@@ -120,9 +120,10 @@ create_final_rom - success
 The TCC8050 MICOM sub-system has a 5-channel UART, and each UART channel consists of one ARM® PrimeCell™ UART (PL011) controller and one ARM® PrimeCell™ DMA controller (PL081). Data transmitted/received via UART communication can be transferred from/to the internal memory (SRAM-0 or SRAM-1) by the UART dedicated DMA controller.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/45c50597-0f5f-49f4-b5f9-028fac162f37" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/45c50597-0f5f-49f4-b5f9-028fac162f37" width="1000" height="850" style="margin: auto;">
 </div>
-<p align="center"><strong>Figure 5.3 Block Diagram of UART</strong></p
+<p align="center"><strong>Figure 5.3 Block Diagram of UART</strong></p>
+
 
 ### 1.4.1.1 Features
 
@@ -178,8 +179,8 @@ The features of the UART DMA controller are as follows:
 The following source code is the basic information on how to set UART for MCU debugging.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/672d844c-389c-4274-9370-4a3242d9373b" width="500" height="350" style="margin: auto;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/662f4f9a-c34d-4ba1-85ac-e4eab6caa8a2" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/672d844c-389c-4274-9370-4a3242d9373b" width="350" height="200" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/662f4f9a-c34d-4ba1-85ac-e4eab6caa8a2" width="600" height="500" style="margin: auto;">
 </div>
 
 ```bash
@@ -437,7 +438,7 @@ Acceptance filtering is implemented by a combination of up to 128 filter element
 A total of three CAN FD controllers are integrated in the TCC8050 MICOM sub-system. The CPU can configure each CAN controller through AHB to APB host I/F. Each CAN FD controller accesses SRAM-0 or SRAM-1 integrated in MICOM sub-system through AHB bus matrix and uses SRAM-0 or SRAM-1 as message memory.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/48657fe6-0d65-47a3-a437-80a9309f0742" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/48657fe6-0d65-47a3-a437-80a9309f0742" width="1000" height="700" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 5.4 Block Diagram of CAN FD Controller</strong></p
 
@@ -461,8 +462,8 @@ The features of the CAN application are as follows:
 - Two clock domains (CAN clock and bus clock)
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/816cf63d-fb5e-4ef0-9ebb-86304da9019c" width="500" height="350" style="margin: auto;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a961f6b3-4fa6-482d-9014-8a923cf19907" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/816cf63d-fb5e-4ef0-9ebb-86304da9019c" width="350" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a961f6b3-4fa6-482d-9014-8a923cf19907" width="600" height="400" style="margin: auto;">
 </div>
 
 ### 1.4.2.2 Create Task

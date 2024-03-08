@@ -12,7 +12,7 @@ Linux distribution version:
 - Ubuntu 20.04 (LTS) and above
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c588b93c-107a-4f95-a197-7d1e9875f170" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c588b93c-107a-4f95-a197-7d1e9875f170" width="750" height="400" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 2.1 Ubuntu Installation</strong></p>
 
@@ -30,18 +30,18 @@ Recommended capacity is 150 GB or more, 8 GB RAM, and 16 processors.
 It is recommended that network adapter is set as Bridged.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/366bbdfa-6b1f-4fc7-a168-e7c3d8542d41" width="500" height="350">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/59a33d1f-2634-4cd5-9ac7-081d7365bf59" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/366bbdfa-6b1f-4fc7-a168-e7c3d8542d41" width="500" height="400">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/59a33d1f-2634-4cd5-9ac7-081d7365bf59" width="500" height="400">
 </div>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9ac6858f-c4c7-4c6d-907f-6aada1d59b96" width="500" height="350">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5bc3cd34-d465-4698-81e0-bf7d00e17c98" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9ac6858f-c4c7-4c6d-907f-6aada1d59b96" width="500" height="400">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5bc3cd34-d465-4698-81e0-bf7d00e17c98" width="500" height="400">
 </div>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9625271c-2d11-42a9-9ac1-ed178de9f399" width="500" height="350">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ff96ad69-39c2-445d-87b9-f5cdf8c3e8ee" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9625271c-2d11-42a9-9ac1-ed178de9f399" width="500" height="400">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ff96ad69-39c2-445d-87b9-f5cdf8c3e8ee" width="500" height="400">
 </div>
 <p align="center"><strong>Figure 2.2 VMware Settings for Virtual Server</strong></p>
 
@@ -57,7 +57,6 @@ If SSH and Samba are already installed or you will not use them, you can skip th
 sudo apt install -y net-tools openssh-server samba
 ```
 
----
 
 After downloading SSH and Samba, you should set each program to your environment.
 
@@ -75,7 +74,6 @@ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa lib
 sudo apt-get install -y xterm zstd ncftp curl git-lfs vim
 ```
 
----
 
 ### 1.3.3 Install Repo
 
@@ -93,7 +91,6 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 sudo apt-get install repo
 ```
 
----
 
 If there is a Repo error, download the latest version and put it directly into the /usr/bin/ folder.
 
@@ -106,5 +103,3 @@ chmod a+x ~/bin/repo
 
 sudo mv ~/bin/repo /usr/bin/repo
 ```
-
----

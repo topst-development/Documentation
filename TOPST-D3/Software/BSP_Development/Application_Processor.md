@@ -275,7 +275,7 @@ $ make tcc805x_defconfig
 $ make menuconfig
 ```
  <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/3999b02e-fe6f-4e2f-9f1f-5bfd4ec5b5f5" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/3999b02e-fe6f-4e2f-9f1f-5bfd4ec5b5f5" width="750" height="400" style="margin: auto;">
 </div>
 
 ```bash
@@ -736,7 +736,7 @@ $ make menuconfig
 ```
  
  <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9d934f78-e28e-46a9-b8a0-e6f47cef637c" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9d934f78-e28e-46a9-b8a0-e6f47cef637c" width="750" height="400" style="margin: auto;">
 </div>
 
 ```bash
@@ -1410,7 +1410,7 @@ The following shows how to use the Kernel **menuconfig**.
 $ bitbake virtual/kernel -c menuconfig
 ```
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b7fd7468-02ee-435a-9c54-db1a85648faf" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b7fd7468-02ee-435a-9c54-db1a85648faf" width="750" height="400" style="margin: auto;">
 </div>
 
 ```bash
@@ -2519,7 +2519,7 @@ $ bitbake virtual/kernel -c menuconfig
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b1e7e6b8-3116-4ae5-9952-7f3e50607ddf" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b1e7e6b8-3116-4ae5-9952-7f3e50607ddf" width="750" height="400" style="margin: auto;">
 </div>
 
 ```bash
@@ -3200,8 +3200,8 @@ drivers/firmware/tcc_sc_fw.c
 ### 1.3.1 SD
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/09a478fe-394f-4bed-ae67-d61fecef467b" width="500" height="350" style="margin: auto;">
-	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a9bb5ccd-3eed-44df-93ae-f01c94e1e18b" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/09a478fe-394f-4bed-ae67-d61fecef467b" width="300" height="350" style="margin: auto;">
+	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a9bb5ccd-3eed-44df-93ae-f01c94e1e18b" width="650" height="400" style="margin: auto;">
 </div>
 
 ### 1.3.1.1 U-Boot Configuration
@@ -3357,8 +3357,8 @@ Device Drivers --->
 ### 1.3.2 USB
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b6574be4-d59c-4fc8-9ab0-09663aeb1a54" width="500" height="350" style="margin: auto;">
-	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/726793c6-0288-4ebd-888a-84cb032bf7ca" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b6574be4-d59c-4fc8-9ab0-09663aeb1a54" width="300" height="300" style="margin: auto;">
+	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/726793c6-0288-4ebd-888a-84cb032bf7ca" width="600" height="450" style="margin: auto;">
 </div>
 
 ### 1.3.2.1 Features
@@ -3377,7 +3377,7 @@ Device Drivers --->
 ### 1.3.2.1.2  Linux USB Stack Architecture
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/769e11da-f364-4934-a9ea-80b5cf52cf20" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/769e11da-f364-4934-a9ea-80b5cf52cf20" width="700" height="550" style="margin: auto;">
 </div>
 
 ### 1.3.2.2 USB 2.0 Host
@@ -3609,7 +3609,7 @@ Device Drivers --->
 There are two types of DP-to-HDMI adapters: passive and active. TOPST supports only active adapters.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5175e774-6e5d-4124-a768-e08fca13887e" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5175e774-6e5d-4124-a768-e08fca13887e" width="600" height="450" style="margin: auto;">
 </div>
 
 TOPST uses DisplayPort by default. This feature is supported by the main core.
@@ -3735,7 +3735,7 @@ $ Bitbake virtual-kernel -c build
 ### 1.3.4 PCIe
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e892503b-d493-4177-aaf6-e780ff56e7d1" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e892503b-d493-4177-aaf6-e780ff56e7d1" width="750" height="550" style="margin: auto;">
 </div>
 
 ### 1.3.4.1 Device Tree
@@ -3826,10 +3826,10 @@ CONFIG_IWLWIFI_DEBUG=y
 ### 1.3.5 Audio
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46f69442-4f76-4cec-b96f-e926cae17f6c" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46f69442-4f76-4cec-b96f-e926cae17f6c" width="500" height="250" style="margin: auto;">
 </div>
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/14e7d7f9-aeab-45ec-ae24-5e075b3f2b89" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/14e7d7f9-aeab-45ec-ae24-5e075b3f2b89" width="900" height="500" style="margin: auto;">
 </div>
 
 ### 1.3.5.1 Feature (TBD)
@@ -4131,7 +4131,7 @@ $ i2cset <bus> <chip> <register> <value>
 ### 1.3.7 SPI Master
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a14ee70c-1046-417d-814a-076da4124707" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a14ee70c-1046-417d-814a-076da4124707" width="750" height="550" style="margin: auto;">
 </div>
 
 ### 1.3.7.1 Device Tree
@@ -4319,7 +4319,7 @@ root@jammy:~# ls /dev/spidev0.*
 ### 1.3.8 GPIO
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ee529df-9d4e-42ec-835f-fe323be8d7af" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ee529df-9d4e-42ec-835f-fe323be8d7af" width="750" height="550" style="margin: auto;">
 </div>
 
 ### 1.3.8.1 U-Boot Configuration
@@ -4913,8 +4913,8 @@ root@jammy:~# dmesg | grep UART
 The following is the UART setting information for debugging.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/aa0a0d0b-45a2-47ad-b840-dc849330b949" width="500" height="350" style="margin: auto;">
-	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1967825b-8a66-46fe-bddd-61c334266473" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/aa0a0d0b-45a2-47ad-b840-dc849330b949" width="350" height="250" style="margin: auto;">
+	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1967825b-8a66-46fe-bddd-61c334266473" width="600" height="450" style="margin: auto;">
 </div>
 
 ### 1.3.9.4.1 Configuration for CA72

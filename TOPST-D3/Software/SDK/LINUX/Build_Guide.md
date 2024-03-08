@@ -7,7 +7,7 @@ is based on Yocto Project 3.1 Dunfell. Therefore, the Yocto Project environment 
 Figure 3.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and perform build. After the build is completed, package, image, and SDK are provided as results.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/daa02968-b0b5-4ff2-8dd0-65edd6393f45" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/daa02968-b0b5-4ff2-8dd0-65edd6393f45" width="750" height="400" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 3.1 Yocto Project Task Process</strong></p>
 
@@ -72,7 +72,6 @@ $ git clone https://git.huconn.com/linux_ivi_mirror/script/build-autolinux.git t
 $ cd topst
 ```
 
----
 
 ### 1.1.2.2 Composition of autolinux
 
@@ -184,7 +183,6 @@ enter the subfeature list
 ex) -sf rvc gpu-vz meta-update
 ```
 
----
 
 ### 1.1.2.4 Download and Configure SDK
 
@@ -382,7 +380,6 @@ autolinux         boot-firmware  buildtools  cr5-bsp  poky    scri
 autolinux.config  build          classes     doc      README  template
 ```
 
----
 
 ### 1.1.2.5 Build TOPST
 
@@ -415,7 +412,6 @@ If the environment for ***BitBake*** execution is not set up, run the command be
 $ source poky/oe-init-build-env build/tcc8050-main
 ```
 
----
 
 - Sub-core
 
@@ -423,7 +419,6 @@ $ source poky/oe-init-build-env build/tcc8050-main
 $ source poky/oe-init-build-env build/tcc8050-sub
 ```
 
----
 
 If the environment is set up to run ***BitBake***, enter the command below to build the image.
 
@@ -1121,7 +1116,6 @@ create_final_rom - success
 ~/{TOPST_PATH}
 ```
 
----
 
 ### 1.1.3.4 “Make fai” for Automotive Platform
 
@@ -1349,7 +1343,6 @@ FWDN tool PATH : /boot-firmware/tools/fwdn
 Time taken in 0:00:35.981413
 ```
 
----
 
 ### 1.1.3.5 Ubuntu File System Build
 

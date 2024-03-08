@@ -2992,7 +2992,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_G[00]</td>
     <td>RPI RESERVED0 PIN27</td>
-    <td<span style= "color: blue;">>GPIO_G[00]</span></td>
+    <td><span style= "color: blue;">GPIO_G[00]</span></td>
     <td>MI2S_MCLK(02)</td>
     <td>I2S_MCLK(01)</td>
     <td></td>
@@ -3523,7 +3523,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>CLK_OUT(00)</td>
+        <td><span style= "color: blue;">CLK_OUT(00)<span></td>
       </tr>
       <tr>
         <td>GPIO_E[01]</td>
@@ -3548,9 +3548,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_E[03]</td>
         <td>DAC_DOUT, NC</td>
-        <td>I2C_SCL(19)</td>
+        <td><span style= "color: blue;">I2C_SCL(19)<span></td>
         <td></td>
-        <td>PDM_OUT(73)</td>
+        <td><span style= "color: blue;">PDM_OUT(73)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3558,9 +3558,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_E[04]</td>
         <td></td>
-        <td>I2C_SDA(19)</td>
+        <td><span style= "color: blue;">I2C_SDA(19)<span></td>
         <td></td>
-        <td>PDM_OUT(74)</td>
+        <td><span style= "color: blue;">PDM_OUT(74)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3590,7 +3590,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(75)</td>
+        <td><span style= "color: blue;">PDM_OUT(75)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3600,7 +3600,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(76)</td>
+        <td><span style= "color: blue;">PDM_OUT(76)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3608,9 +3608,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_E[09]</td>
         <td></td>
-        <td>I2C_SCL(20)</td>
+        <td><span style= "color: blue;">I2C_SCL(20)<span></td>
         <td></td>
-        <td>PDM_OUT(77)</td>
+        <td><span style= "color: blue;">PDM_OUT(77)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3618,9 +3618,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_E[10]</td>
         <td></td>
-        <td>I2C_SDA(20)</td>
+        <td><span style= "color: blue;">I2C_SDA(20)<span></td>
         <td></td>
-        <td>PDM_OUT(78)</td>
+        <td><span style= "color: blue;">PDM_OUT(78)<span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(01)</td>
@@ -3658,9 +3658,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_E[14]</td>
         <td></td>
-        <td>I2C_SCL(21)</td>
+        <td><span style= "color: blue;">I2C_SCL(21)<span></td>
         <td></td>
-        <td>PDM_OUT(79)</td>
+        <td><span style= "color: blue;">PDM_OUT(79)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3668,12 +3668,12 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_E[15]</td>
         <td></td>
-        <td>I2C_SDA(21)</td>
+        <td><span style= "color: blue;">I2C_SDA(21)<span></td>
         <td></td>
-        <td>PDM_OUT(80)</td>
+        <td><span style= "color: blue;">PDM_OUT(80)<span></td>
         <td></td>
         <td></td>
-        <td>CLK_OUT(02)</td>
+        <td><span style= "color: blue;">CLK_OUT(02)<span></td>
     </tr>
     <tr>
         <td>GPIO_E[16]</td>
@@ -3700,7 +3700,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(81)</td>
+        <td><span style= "color: blue;">PDM_OUT(81)<span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -3737,128 +3737,128 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_H[00]</td>
       <td>SNOR_D0</td>
-      <td>GPIO_H[00]</td>
-      <td>SNOR_D[0]</td>
+      <td><span style= "color: blue;">GPIO_H[00]</span></td>
+      <td><span style= "color: red;">SNOR_D[0]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>UT_TXD(30)</td>
+      <td><span style= "color: blue;">UT_TXD(30)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[01]</td>
       <td>SNOR_D1</td>
-      <td>GPIO_H[01]</td>
-      <td>SNOR_D[1]</td>
+      <td><span style= "color: blue;">GPIO_H[01]</span></td>
+      <td><span style= "color: red;">SNOR_D[1]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>UT_RXD(30)</td>
+      <td><span style= "color: blue;">UT_RXD(30)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[02]</td>
       <td>SNOR_D2</td>
-      <td>GPIO_H[02]</td>
-      <td>SNOR_D[2]</td>
+      <td><span style= "color: blue;">GPIO_H[02]</span></td>
+      <td><span style= "color: red;">SNOR_D[2]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>UT_RTS(30)</td>
+      <td><span style= "color: blue;">UT_RTS(30)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[03]</td>
       <td>SNOR_D3</td>
-      <td>GPIO_H[03]</td>
-      <td>SNOR_D[3]</td>
+      <td><span style= "color: blue;">GPIO_H[03]</span></td>
+      <td><span style= "color: red;">SNOR_D[3]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>UT_CTS(30)</td>
+      <td><span style= "color: blue;">UT_CTS(30)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[04]</td>
       <td>PMIC_I2C_SCL</td>
-      <td>GPIO_H[04]</td>
-      <td>SNOR_D[4]</td>
+      <td><span style= "color: blue;">GPIO_H[04]</span></td>
+      <td><span style= "color: red;">SNOR_D[4]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSCK(26)</td>
-      <td>UT_TXD(28)</td>
+      <td><span style= "color: blue;">GSCK(26)</span></td>
+      <td><span style= "color: blue;">UT_TXD(28)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[05]</td>
       <td>PMIC_I2C_SDA</td>
-      <td>GPIO_H[05]</td>
-      <td>SNOR_D[5]</td>
+      <td><span style= "color: blue;">GPIO_H[05]</span></td>
+      <td><span style= "color: red;">SNOR_D[5]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSCMD(26)</td>
-      <td>UT_RXD(28)</td>
+      <td><span style= "color: blue;">GSCMD(26)</span></td>
+      <td><span style= "color: blue;">UT_RXD(28)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[06]</td>
       <td></td>
-      <td>GPIO_H[06]</td>
-      <td>SNOR_D[6]</td>
+      <td><span style= "color: blue;">GPIO_H[06]</span></td>
+      <td><span style= "color: red;">SNOR_D[6]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSDO(26)</td>
-      <td>UT_RTS(28)</td>
+      <td><span style= "color: blue;">GSDO(26)</span></td>
+      <td><span style= "color: blue;">UT_RTS(28)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[07]</td>
       <td></td>
-      <td>GPIO_H[07]</td>
-      <td>SNOR_D[7]</td>
+      <td><span style= "color: blue;">GPIO_H[07]</span></td>
+      <td><span style= "color: red;">SNOR_D[7]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSDI(26)</td>
-      <td>UT_CTS(28)</td>
+      <td><span style= "color: blue;">GSDI(26)</span></td>
+      <td><span style= "color: blue;">UT_CTS(28)</span></td>
     </tr>
     <tr>
       <td>GPIO_H[08]</td>
       <td>SNOR_CLK</td>
-      <td>GPIO_H[08]</td>
-      <td>SNOR_CLK</td>
+      <td><span style= "color: blue;">GPIO_H[08]</span></td>
+      <td><span style= "color: red;">SNOR_CLK</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>TCO[0]</td>
+      <td><span style= "color: blue;">TCO[0]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_H[09]</td>
       <td>SNOR_CS#</td>
-      <td>GPIO_H[09]</td>
-      <td>SNOR_CS#</td>
+      <td><span style= "color: blue;">GPIO_H[09]</span></td>
+      <td><span style= "color: red;">SNOR_CS#</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>TCO[1]</td>
+      <td><span style= "color: blue;">TCO[1]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_H[10]</td>
       <td></td>
-      <td>GPIO_H[10]</td>
-      <td>SNOR_RST#</td>
+      <td><span style= "color: blue;">GPIO_H[10]</span></td>
+      <td><span style= "color: red;">SNOR_RST#</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -3869,8 +3869,8 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_H[11]</td>
       <td></td>
-      <td>GPIO_H[11]</td>
-      <td>SNOR_DQS</td>
+      <td><span style= "color: blue;">GPIO_H[11]</span></td>
+      <td><span style= "color: red;">SNOR_DQS</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -3937,9 +3937,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <td>GPIO_H[04]</td>
     <td>PMIC_I2C_SCL</td>
     <td></td>
-    <td>I2C_SCL(22)</td>
+    <td><span style= "color: blue;">I2C_SCL(22)</span></td>
     <td></td>
-    <td>PDM_OUT(82)</td>
+    <td><span style= "color: blue;">PDM_OUT(82)</span></td>
     <td></td>
     <td>CLK_OUT(00)</td>
   </tr>
@@ -3947,49 +3947,49 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <td>GPIO_H[05]</td>
     <td>PMIC_I2C_SDA</td>
     <td></td>
-    <td>I2C_SDA(22)</td>
+    <td><span style= "color: blue;">I2C_SDA(22)</span></td>
     <td></td>
-    <td>PDM_OUT(83)</td>
+    <td><span style= "color: blue;">PDM_OUT(83)</span></td>
     <td></td>
     <td>CLK_OUT(01)</td>
   </tr>
   <tr>
     <td>GPIO_H[06]</td>
     <td></td>
-    <td>UT_TXD(29)</td>
-    <td>I2C_SCL(23)</td>
+    <td><span style= "color: blue;">UT_TXD(29)</span></td>
+    <td><span style= "color: blue;">I2C_SCL(23)</span></td>
     <td></td>
-    <td>PDM_OUT(84)</td>
+    <td><span style= "color: blue;">PDM_OUT(84)</span></td>
     <td></td>
     <td>CLK_OUT(02)</td>
   </tr>
   <tr>
     <td>GPIO_H[07]</td>
     <td></td>
-    <td>UT_RXD(29)</td>
-    <td>I2C_SDA(23)</td>
+    <td><span style= "color: blue;">UT_RXD(29)</span></td>
+    <td><span style= "color: blue;">I2C_SDA(23)</span></td>
     <td></td>
-    <td>PDM_OUT(85)</td>
+    <td><span style= "color: blue;">PDM_OUT(85)</span></td>
     <td></td>
     <td>CLK_OUT(03)</td>
   </tr>
   <tr>
     <td>GPIO_H[08]</td>
     <td>SNOR_CLK</td>
-    <td>UT_RTS(29)</td>
+    <td><span style= "color: blue;">UT_RTS(29)</span></td>
     <td></td>
     <td></td>
-    <td>PDM_OUT(86)</td>
+    <td><span style= "color: blue;">PDM_OUT(86)</span></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>GPIO_H[09]</td>
     <td>SNOR_CS#</td>
-    <td>UT_CTS(29)</td>
+    <td><span style= "color: blue;">UT_CTS(29)</span></td>
     <td></td>
     <td></td>
-    <td>PDM_OUT(87)</td>
+    <td><span style= "color: blue;">PDM_OUT(87)</span></td>
     <td></td>
     <td></td>
   </tr>
@@ -4032,7 +4032,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[00]</td>
     <td>PHY1_INH</td>
-    <td>GPIO_K[00]</td>
+    <td><span style= "color: red;">GPIO_K[00]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4044,7 +4044,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[01]</td>
     <td></td>
-    <td>GPIO_K[01]</td>
+    <td><span style= "color: red;">GPIO_K[01]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4056,7 +4056,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[02]</td>
     <td></td>
-    <td>GPIO_K[02]</td>
+    <td><span style= "color: red;">GPIO_K[02]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4068,7 +4068,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[03]</td>
     <td></td>
-    <td>GPIO_K[03]</td>
+    <td><span style= "color: red;">GPIO_K[03]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4080,7 +4080,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[04]</td>
     <td></td>
-    <td>GPIO_K[04]</td>
+    <td><span style= "color: red;">GPIO_K[04]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4092,7 +4092,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[05]</td>
     <td></td>
-    <td>GPIO_K[05]</td>
+    <td><span style= "color: red;">GPIO_K[05]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4104,7 +4104,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[06]</td>
     <td>CAN0_INH</td>
-    <td>GPIO_K[06]</td>
+    <td><span style= "color: red;">GPIO_K[06]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4116,7 +4116,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[07]</td>
     <td></td>
-    <td>GPIO_K[07]</td>
+    <td><span style= "color: red;">GPIO_K[07]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4128,7 +4128,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[08]</td>
     <td>CAN0_STB</td>
-    <td>GPIO_K[08]</td>
+    <td><span style= "color: red;">GPIO_K[08]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4140,9 +4140,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[09]</td>
     <td></td>
-    <td>GPIO_K[09]</td>
+    <td><span style= "color: red;">GPIO_K[09]</span></td>
     <td></td>
-    <td>UT_TXD(36)</td>
+    <td><span style= "color: red;">UT_TXD(36)</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4152,9 +4152,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[10]</td>
     <td></td>
-    <td>GPIO_K[10]</td>
+    <td><span style= "color: red;">GPIO_K[10]</span></td>
     <td></td>
-    <td>UT_RXD(36)</td>
+    <td><span style= "color: red;">UT_RXD(36)</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4164,7 +4164,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[11]</td>
     <td></td>
-    <td>GPIO_K[11]</td>
+    <td><span style= "color: red;">GPIO_K[11]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4176,7 +4176,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[12]</td>
     <td>STR_MODE</td>
-    <td>GPIO_K[12]</td>
+    <td><span style= "color: red;">GPIO_K[12]</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4188,9 +4188,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[13]</td>
     <td>CAN0_TX</td>
-    <td>GPIO_K[13]</td>
+    <td><span style= "color: red;">GPIO_K[13]</span></td>
     <td></td>
-    <td>CAN0_TX</td>
+    <td><span style= "color: red;">CAN0_TX</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4200,9 +4200,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[14]</td>
     <td>CAN0_RX</td>
-    <td>GPIO_K[14]</td>
+    <td><span style= "color: red;">GPIO_K[14]</span></td>
     <td></td>
-    <td>CAN0_RX</td>
+    <td><span style= "color: red;">CAN0_RX</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4212,9 +4212,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[15]</td>
     <td>CAN1_TX</td>
-    <td>GPIO_K[15]</td>
+    <td><span style= "color: red;">GPIO_K[15]</span></td>
     <td></td>
-    <td>CAN1_TX</td>
+    <td><span style= "color: red;">CAN1_TX</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4224,9 +4224,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[16]</td>
     <td>CAN1_RX</td>
-    <td>GPIO_K[16]</td>
+    <td><span style= "color: red;">GPIO_K[16]</span></td>
     <td></td>
-    <td>CAN1_RX</td>
+    <td><span style= "color: red;">CAN1_RX</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4236,9 +4236,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[17]</td>
     <td>CAN2_TX</td>
-    <td>GPIO_K[17]</td>
+    <td><span style= "color: red;">GPIO_K[17]</span></td>
     <td></td>
-    <td>CAN2_TX</td>
+    <td><span style= "color: red;">CAN2_TX</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4248,9 +4248,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   <tr>
     <td>GPIO_K[18]</td>
     <td>CAN2_RX</td>
-    <td>GPIO_K[18]</td>
+    <td><span style= "color: red;">GPIO_K[18]</span></td>
     <td></td>
-    <td>CAN2_RX</td>
+    <td><span style= "color: red;">CAN2_RX</span></td>
     <td></td>
     <td></td>
     <td></td>
@@ -4395,7 +4395,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td>STR_MODE</td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(109)</td>
+      <td><span style= "color: red;">PDM_OUT(109)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -4478,271 +4478,271 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_MA[00]</td>
       <td></td>
-      <td>GPIO_MA[00]</td>
+      <td><span style= "color: blue;">GPIO_MA[00]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_CLKI</td>
       <td>TRACE_DATA[0]</td>
       <td></td>
-      <td>GSCK(27)</td>
-      <td>UT_TXD(31)</td>
+      <td><span style= "color: blue;">GSCK(27)</span></td>
+      <td><span style= "color: blue;">UT_TXD(31)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[01]</td>
       <td></td>
-      <td>GPIO_MA[01]</td>
+      <td><span style= "color: blue;">GPIO_MA[01]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_HSYNC</td>
       <td>TRACE_DATA[1]</td>
       <td></td>
-      <td>GSCMD(27)</td>
-      <td>UT_RXD(31)</td>
+      <td><span style= "color: blue;">GSCMD(27)</span></td>
+      <td><span style= "color: blue;">UT_RXD(31)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[02]</td>
       <td></td>
-      <td>GPIO_MA[02]</td>
+      <td><span style= "color: blue;">GPIO_MA[02]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_VSYNC</td>
       <td>TRACE_DATA[2]</td>
       <td></td>
-      <td>GSDO(27)</td>
-      <td>UT_RTS(31)</td>
+      <td><span style= "color: blue;">GSDO(27)</span></td>
+      <td><span style= "color: blue;">UT_RTS(31)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[03]</td>
       <td></td>
-      <td>GPIO_MA[03]</td>
+      <td><span style= "color: blue;">GPIO_MA[03]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[00]</td>
       <td>TRACE_DATA[3]</td>
       <td></td>
-      <td>GSDI(27)</td>
-      <td>UT_CTS(31)</td>
+      <td><span style= "color: blue;">GSDI(27)</span></td>
+      <td><span style= "color: blue;">UT_CTS(31)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[04]</td>
       <td></td>
-      <td>GPIO_MA[04]</td>
+      <td><span style= "color: blue;">GPIO_MA[04]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[01]</td>
       <td>TRACE_DATA[4]</td>
       <td></td>
-      <td>TCO[0]</td>
+      <td><span style= "color: blue;">TCO[0]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_MA[05]</td>
       <td></td>
-      <td>GPIO_MA[05]</td>
+      <td><span style= "color: blue;">GPIO_MA[05]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[02]</td>
       <td>TRACE_DATA[5]</td>
       <td></td>
-      <td>TCO[1]</td>
+      <td><span style= "color: blue;">TCO[1]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_MA[06]</td>
       <td></td>
-      <td>GPIO_MA[06]</td>
+      <td><span style= "color: blue;">GPIO_MA[06]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[03]</td>
       <td>TRACE_DATA[6]</td>
       <td></td>
-      <td>GSCK(28)</td>
-      <td>UT_TXD(32)</td>
+      <td><span style= "color: blue;">GSCK(28)</span></td>
+      <td><span style= "color: blue;">UT_TXD(32)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[07]</td>
       <td></td>
-      <td>GPIO_MA[07]</td>
+      <td><span style= "color: blue;">GPIO_MA[07]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[04]</td>
       <td>TRACE_DATA[7]</td>
       <td></td>
-      <td>GSCMD(28)</td>
-      <td>UT_RXD(32)</td>
+      <td><span style= "color: blue;">GSCMD(28)</span></td>
+      <td><span style= "color: blue;">UT_RXD(32)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[08]</td>
       <td></td>
-      <td>GPIO_MA[08]</td>
+      <td><span style= "color: blue;">GPIO_MA[08]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[05]</td>
       <td>TRACE_DATA[8]</td>
       <td></td>
-      <td>GSDO(28)</td>
-      <td>UT_RTS(32)</td>
+      <td><span style= "color: blue;">GSDO(28)</span></td>
+      <td><span style= "color: blue;">UT_RTS(32)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[09]</td>
       <td></td>
-      <td>GPIO_MA[09]</td>
+      <td><span style= "color: blue;">GPIO_MA[09]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[06]</td>
       <td>TRACE_DATA[9]</td>
       <td></td>
-      <td>GSDI(28)</td>
-      <td>UT_CTS(32)</td>
+      <td><span style= "color: blue;">GSDI(28)</span></td>
+      <td><span style= "color: blue;">UT_CTS(32)</span></td>
     </tr>
     <tr>
       <td>GPIO_MA[10]</td>
       <td></td>
-      <td>GPIO_MA[10]</td>
+      <td><span style= "color: blue;">GPIO_MA[10]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_PD[07]</td>
       <td>TRACE_DATA[10]</td>
       <td></td>
-      <td>TCO[2]</td>
+      <td><span style= "color: blue;">TCO[2]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_MA[11]</td>
       <td></td>
-      <td>GPIO_MA[11]</td>
+      <td><span style= "color: blue;">GPIO_MA[11]</span></td>
       <td></td>
       <td></td>
       <td>CIF4_FIELD</td>
       <td>TRACE_DATA[11]</td>
       <td></td>
-      <td>TCO[3]</td>
+      <td><span style= "color: blue;">TCO[3]</span></td>
       <td></td>
     </tr>
     <tr>
         <td>GPIO_MA[12]</td>
         <td></td>
-        <td>GPIO_MA[12]</td>
+        <td><span style= "color: blue;">GPIO_MA[12]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_DATAEN</td>
         <td>TRACE_DATA[12]</td>
         <td></td>
-        <td>GSCK(29)</td>
-        <td>UT_TXD(33)</td>
+        <td><span style= "color: blue;">GSCK(29)</span></td>
+        <td><span style= "color: blue;">UT_TXD(33)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[13]</td>
         <td></td>
-        <td>GPIO_MA[13]</td>
+        <td><span style= "color: blue;">GPIO_MA[13]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[08]</td>
         <td>TRACE_DATA[13]</td>
         <td></td>
-        <td>GSCMD(29)</td>
-        <td>UT_RXD(33)</td>
+        <td><span style= "color: blue;">GSCMD(29)</span></td>
+        <td><span style= "color: blue;">UT_RXD(33)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[14]</td>
         <td></td>
-        <td>GPIO_MA[14]</td>
+        <td><span style= "color: blue;">GPIO_MA[14]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[09]</td>
         <td>TRACE_DATA[14]</td>
         <td></td>
-        <td>GSDO(29)</td>
-        <td>UT_RTS(33)</td>
+        <td><span style= "color: blue;">GSDO(29)</span></td>
+        <td><span style= "color: blue;">UT_RTS(33)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[15]</td>
         <td></td>
-        <td>GPIO_MA[15]</td>
+        <td><span style= "color: blue;">GPIO_MA[15]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[10]</td>
         <td>TRACE_DATA[15]</td>
         <td></td>
-        <td>GSDI(29)</td>
-        <td>UT_CTS(33)</td>
+        <td><span style= "color: blue;">GSDI(29)</span></td>
+        <td><span style= "color: blue;">UT_CTS(33)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[16]</td>
         <td></td>
-        <td>GPIO_MA[16]</td>
+        <td><span style= "color: blue;">GPIO_MA[16]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[11]</td>
         <td>TRACE_DATA[16]</td>
         <td></td>
-        <td>TCO[4]</td>
+        <td><span style= "color: blue;">TCO[4]</span></td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MA[17]</td>
         <td></td>
-        <td>GPIO_MA[17]</td>
+        <td><span style= "color: blue;">GPIO_MA[17]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[12]</td>
         <td>TRACE_DATA[17]</td>
         <td></td>
-        <td>TCO[5]</td>
+        <td><span style= "color: blue;">TCO[5]</span></td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MA[18]</td>
         <td></td>
-        <td>GPIO_MA[18]</td>
+        <td><span style= "color: blue;">GPIO_MA[18]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[13]</td>
         <td>TRACE_DATA[18]</td>
         <td></td>
-        <td>GSCK(30)</td>
-        <td>UT_TXD(34)</td>
+        <td><span style= "color: blue;">GSCK(30)</span></td>
+        <td><span style= "color: blue;">UT_TXD(34)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[19]</td>
         <td></td>
-        <td>GPIO_MA[19]</td>
+        <td><span style= "color: blue;">GPIO_MA[19]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[14]</td>
         <td>TRACE_DATA[19]</td>
         <td></td>
-        <td>GSCMD(30)</td>
-        <td>UT_RXD(34)</td>
+        <td><span style= "color: blue;">GSCMD(30)</span></td>
+        <td><span style= "color: blue;">UT_RXD(34)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[20]</td>
         <td></td>
-        <td>GPIO_MA[20]</td>
+        <td><span style= "color: blue;">GPIO_MA[20]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[15]</td>
         <td>TRACE_DATA[20]</td>
         <td></td>
-        <td>GSDO(30)</td>
-        <td>UT_RTS(34)</td>
+        <td><span style= "color: blue;">GSDO(30)</span></td>
+        <td><span style= "color: blue;">UT_RTS(34)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[21]</td>
         <td></td>
-        <td>GPIO_MA[21]</td>
+        <td><span style= "color: blue;">GPIO_MA[21]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[16]</td>
         <td>TRACE_DATA[21]</td>
         <td></td>
-        <td>GSDI(30)</td>
-        <td>UT_CTS(34)</td>
+        <td><span style= "color: blue;">GSDI(30)</span></td>
+        <td><span style= "color: blue;">UT_CTS(34)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[22]</td>
         <td></td>
-        <td>GPIO_MA[22]</td>
+        <td><span style= "color: blue;">GPIO_MA[22]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[17]</td>
@@ -4754,7 +4754,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[23]</td>
         <td></td>
-        <td>GPIO_MA[23]</td>
+        <td><span style= "color: blue;">GPIO_MA[23]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[18]</td>
@@ -4766,55 +4766,55 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[24]</td>
         <td></td>
-        <td>GPIO_MA[24]</td>
+        <td><span style= "color: blue;">GPIO_MA[24]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[19]</td>
         <td>TRACE_DATA[24]</td>
         <td></td>
-        <td>GSCK(31)</td>
-        <td>UT_TXD(35)</td>
+        <td><span style= "color: blue;">GSCK(31)</span></td>
+        <td><span style= "color: blue;">UT_TXD(35)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[25]</td>
         <td></td>
-        <td>GPIO_MA[25]</td>
+        <td><span style= "color: blue;">GPIO_MA[25]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[20]</td>
         <td>TRACE_DATA[25]</td>
         <td></td>
-        <td>GSCMD(31)</td>
-        <td>UT_RXD(35)</td>
+        <td><span style= "color: blue;">GSCMD(31)</span></td>
+        <td><span style= "color: blue;">UT_RXD(35)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[26]</td>
         <td></td>
-        <td>GPIO_MA[26]</td>
+        <td><span style= "color: blue;">GPIO_MA[26]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[21]</td>
         <td>TRACE_DATA[26]</td>
         <td></td>
-        <td>GSDO(31)</td>
-        <td>UT_RTS(35)</td>
+        <td><span style= "color: blue;">GSDO(31)</span></td>
+        <td><span style= "color: blue;">UT_RTS(35)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[27]</td>
         <td></td>
-        <td>GPIO_MA[27]</td>
+        <td><span style= "color: blue;">GPIO_MA[27]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[22]</td>
         <td>TRACE_DATA[27]</td>
         <td></td>
-        <td>GSDI(31)</td>
-        <td>UT_CTS(35)</td>
+        <td><span style= "color: blue;">GSDI(31)</span></td>
+        <td><span style= "color: blue;">UT_CTS(35)</span></td>
       </tr>
       <tr>
         <td>GPIO_MA[28]</td>
         <td></td>
-        <td>GPIO_MA[28]</td>
+        <td><span style= "color: blue;">GPIO_MA[28]</span></td>
         <td></td>
         <td></td>
         <td>CIF4_PD[23]</td>
@@ -4826,7 +4826,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[29]</td>
         <td></td>
-        <td>GPIO_MA[29]</td>
+        <td><span style= "color: blue;">GPIO_MA[29]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -4873,7 +4873,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td></td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(88)</td>
+      <td><span style= "color: blue;">PDM_OUT(88)</span></td>
       <td>USB20H_VBUSON(06)</td>
       <td></td>
       <td></td>
@@ -4883,7 +4883,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td></td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(89)</td>
+      <td><span style= "color: blue;">PDM_OUT(89)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -4891,9 +4891,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_MA[04]</td>
       <td></td>
-      <td>I2C_SCL(24)</td>
+      <td><span style= "color: blue;">I2C_SCL(24)</span></td>
       <td></td>
-      <td>PDM_OUT(90)</td>
+      <td><span style= "color: blue;">PDM_OUT(90)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -4901,9 +4901,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_MA[05]</td>
       <td></td>
-      <td>I2C_SDA(24)</td>
+      <td><span style= "color: blue;">I2C_SDA(24)</span></td>
       <td></td>
-      <td>PDM_OUT(91)</td>
+      <td><span style= "color: blue;">PDM_OUT(91)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -4933,7 +4933,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td></td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(92)</td>
+      <td><span style= "color: blue;">PDM_OUT(92)</span></td>
       <td></td>
       <td></td>
       <td>CLK_OUT(00)</td>
@@ -4943,7 +4943,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td></td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(93)</td>
+      <td><span style= "color: blue;">PDM_OUT(93)</span></td>
       <td></td>
       <td></td>
       <td>CLK_OUT(01)</td>
@@ -4951,9 +4951,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_MA[10]</td>
       <td></td>
-      <td>I2C_SCL(25)</td>
+      <td><span style= "color: blue;">I2C_SCL(25)</span></td>
       <td></td>
-      <td>PDM_OUT(94)</td>
+      <td><span style= "color: blue;">PDM_OUT(94)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -4961,9 +4961,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_MA[11]</td>
       <td></td>
-      <td>I2C_SDA(25)</td>
+      <td><span style= "color: blue;">I2C_SDA(25)</span></td>
       <td></td>
-      <td>PDM_OUT(95)</td>
+      <td><span style= "color: blue;">PDM_OUT(95)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -4993,7 +4993,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(96)</td>
+        <td><span style= "color: blue;">PDM_OUT(96)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5003,7 +5003,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(97)</td>
+        <td><span style= "color: blue;">PDM_OUT(97)</span></td>
         <td>USB30_VBUSON(07)</td>
         <td></td>
         <td></td>
@@ -5011,9 +5011,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[16]</td>
         <td></td>
-        <td>I2C_SCL(26)</td>
+        <td><span style= "color: blue;">I2C_SCL(26)</span></td>
         <td></td>
-        <td>PDM_OUT(98)</td>
+        <td><span style= "color: blue;">PDM_OUT(98)</span></td>
         <td>USBOTG_VBUSON(07)</td>
         <td></td>
         <td></td>
@@ -5021,9 +5021,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[17]</td>
         <td></td>
-        <td>I2C_SDA(26)</td>
+        <td><span style= "color: blue;">I2C_SDA(26)</span></td>
         <td></td>
-        <td>PDM_OUT(99)</td>
+        <td><span style= "color: blue;">PDM_OUT(99)</span></td>
         <td>USB20H_VBUSON(07)</td>
         <td></td>
         <td></td>
@@ -5053,7 +5053,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(100)</td>
+        <td><span style= "color: blue;">PDM_OUT(100)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(02)</td>
@@ -5063,7 +5063,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(101)</td>
+        <td><span style= "color: blue;">PDM_OUT(101)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(03)</td>
@@ -5071,9 +5071,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[22]</td>
         <td></td>
-        <td>I2C_SCL(27)</td>
+        <td><span style= "color: blue;">I2C_SCL(27)</span></td>
         <td></td>
-        <td>PDM_OUT(102)</td>
+        <td><span style= "color: blue;">PDM_OUT(102)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5081,9 +5081,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[23]</td>
         <td></td>
-        <td>I2C_SDA(27)</td>
+        <td><span style= "color: blue;">I2C_SDA(27)</span></td>
         <td></td>
-        <td>PDM_OUT(103)</td>
+        <td><span style= "color: blue;">PDM_OUT(103)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5094,7 +5094,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>WDT_RESETn</td>
+        <td><span style= "color: blue;">WDT_RESETn</span></td>
         <td></td>
         <td></td>
       </tr>
@@ -5113,7 +5113,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(104)</td>
+        <td><span style= "color: blue;">PDM_OUT(104)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(04)</td>
@@ -5123,7 +5123,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(105)</td>
+        <td><span style= "color: blue;">PDM_OUT(105)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(05)</td>
@@ -5131,9 +5131,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[28]</td>
         <td></td>
-        <td>I2C_SCL(28)</td>
+        <td><span style= "color: blue;">I2C_SCL(28)</span></td>
         <td></td>
-        <td>PDM_OUT(106)</td>
+        <td><span style= "color: blue;">PDM_OUT(106)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5141,9 +5141,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MA[29]</td>
         <td></td>
-        <td>I2C_SDA(28)</td>
+        <td><span style= "color: blue;">I2C_SDA(28)</span></td>
         <td></td>
-        <td>PDM_OUT(107)</td>
+        <td><span style= "color: blue;">PDM_OUT(107)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5166,271 +5166,271 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
       <td>GPIO_MB[00]</td>
       <td>EAVB_PHY_IRQ#</td>
-      <td>GPIO_MB[00]</td>
+      <td><span style= "color: blue;">GPIO_MB[00]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSCK(32)</td>
-      <td>UT_TXD(37)</td>
+      <td><span style= "color: blue;">GSCK(32)</span></td>
+      <td><span style= "color: blue;">UT_TXD(37)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[01]</td>
       <td></td>
-      <td>GPIO_MB[01]</td>
+      <td><span style= "color: blue;">GPIO_MB[01]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSCMD(32)</td>
-      <td>UT_RXD(37)</td>
+      <td><span style= "color: blue;">GSCMD(32)</span></td>
+      <td><span style= "color: blue;">UT_RXD(37)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[02]</td>
       <td></td>
-      <td>GPIO_MB[02]</td>
+      <td><span style= "color: blue;">GPIO_MB[02]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSDO(32)</td>
-      <td>UT_RTS(37)</td>
+      <td><span style= "color: blue;">GSDO(32)</span></td>
+      <td><span style= "color: blue;">UT_RTS(37)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[03]</td>
       <td>AMP_MUTE</td>
-      <td>GPIO_MB[03]</td>
+      <td><span style= "color: blue;">GPIO_MB[03]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSDI(32)</td>
-      <td>UT_CTS(37)</td>
+      <td><span style= "color: blue;">GSDI(32)</span></td>
+      <td><span style= "color: blue;">UT_CTS(37)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[04]</td>
       <td></td>
-      <td>GPIO_MB[04]</td>
+      <td><span style= "color: blue;">GPIO_MB[04]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>TCO[0]</td>
+      <td><span style= "color: blue;">TCO[0]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_MB[05]</td>
       <td>MIPI0_GPIO2</td>
-      <td>GPIO_MB[05]</td>
+      <td><span style= "color: blue;">GPIO_MB[05]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>TCO[1]</td>
+      <td><span style= "color: blue;">TCO[1]</span></td>
       <td></td>
     </tr>
     <tr>
       <td>GPIO_MB[06]</td>
       <td></td>
-      <td>GPIO_MB[06]</td>
+      <td><span style= "color: blue;">GPIO_MB[06]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSCK(33)</td>
-      <td>UT_TXD(38)</td>
+      <td><span style= "color: blue;">GSCK(33)</span></td>
+      <td><span style= "color: blue;">UT_TXD(38)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[07]</td>
       <td></td>
-      <td>GPIO_MB[07]</td>
+      <td><span style= "color: blue;">GPIO_MB[07]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSCMD(33)</td>
-      <td>UT_RXD(38)</td>
+      <td><span style= "color: blue;">GSCMD(33)</span></td>
+      <td><span style= "color: blue;">UT_RXD(38)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[08]</td>
       <td></td>
-      <td>GPIO_MB[08]</td>
+      <td><span style= "color: blue;">GPIO_MB[08]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSDO(33)</td>
-      <td>UT_RTS(38)</td>
+      <td><span style= "color: blue;">GSDO(33)</span></td>
+      <td><span style= "color: blue;">UT_RTS(38)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[09]</td>
       <td></td>
-      <td>GPIO_MB[09]</td>
+      <td><span style= "color: blue;">GPIO_MB[09]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>GSDI(33)</td>
-      <td>UT_CTS(38)</td>
+      <td><span style= "color: blue;">GSDI(33)</span></td>
+      <td><span style= "color: blue;">UT_CTS(38)</span></td>
     </tr>
     <tr>
       <td>GPIO_MB[10]</td>
       <td></td>
-      <td>GPIO_MB[10]</td>
+      <td><span style= "color: blue;">GPIO_MB[10]</span></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>TCO[2]</td>
+      <td><span style= "color: blue;">TCO[2]</span></td>
       <td></td>
     </tr>
     <tr>
         <td>GPIO_MB[11]</td>
         <td></td>
-        <td>GPIO_MB[11]</td>
+        <td><span style= "color: blue;">GPIO_MB[11]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[3]</td>
+        <td><span style= "color: blue;">TCO[3]</span></td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MB[12]</td>
         <td></td>
-        <td>GPIO_MB[12]</td>
+        <td><span style= "color: blue;">GPIO_MB[12]</span></td>
         <td>MI2S_MCLK(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(34)</td>
-        <td>UT_TXD(39)</td>
+        <td><span style= "color: blue;">GSCK(34)</span></td>
+        <td><span style= "color: blue;">UT_TXD(39)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[13]</td>
         <td></td>
-        <td>GPIO_MB[13]</td>
+        <td><span style= "color: blue;">GPIO_MB[13]</span></td>
         <td>MI2S_BCLK(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(34)</td>
-        <td>UT_RXD(39)</td>
+        <td><span style= "color: blue;">GSCMD(34)</span></td>
+        <td><span style= "color: blue;">UT_RXD(39)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[14]</td>
         <td></td>
-        <td>GPIO_MB[14]</td>
+        <td><span style= "color: blue;">GPIO_MB[14]</span></td>
         <td>MI2S_LRCK(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(34)</td>
-        <td>UT_RTS(39)</td>
+        <td><span style= "color: blue;">GSDO(34)</span></td>
+        <td><span style= "color: blue;">UT_RTS(39)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[15]</td>
         <td>MIPI0_PD</td>
-        <td>GPIO_MB[15]</td>
+        <td><span style= "color: blue;">GPIO_MB[15]</span></td>
         <td>MI2S_DAO0(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(34)</td>
-        <td>UT_CTS(39)</td>
+        <td><span style= "color: blue;">GSDI(34)</span></td>
+        <td><span style= "color: blue;">UT_CTS(39)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[16]</td>
         <td>MIPI0_INTB</td>
-        <td>GPIO_MB[16]</td>
+        <td><span style= "color: blue;">GPIO_MB[16]</span></td>
         <td>MI2S_DAI0(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[4]</td>
+        <td><span style= "color: blue;">TCO[4]</span></td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MB[17]</td>
         <td>MIPI0_GPIO1</td>
-        <td>GPIO_MB[17]</td>
+        <td><span style= "color: blue;">GPIO_MB[17]</span></td>
         <td>MI2S_DAO1(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[5]</td>
+        <td><span style= "color: blue;">TCO[5]</span></td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MB[18]</td>
         <td></td>
-        <td>GPIO_MB[18]</td>
+        <td><span style= "color: blue;">GPIO_MB[18]</span></td>
         <td>MI2S_DAI1(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(35)</td>
-        <td>UT_TXD(40)</td>
+        <td><span style= "color: blue;">GSCK(35)</span></td>
+        <td><span style= "color: blue;">UT_TXD(40)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[19]</td>
         <td></td>
-        <td>GPIO_MB[19]</td>
+        <td><span style= "color: blue;">GPIO_MB[19]</span></td>
         <td>MI2S_DAO2(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(35)</td>
-        <td>UT_RXD(40)</td>
+        <td><span style= "color: blue;">GSCMD(35)</span></td>
+        <td><span style= "color: blue;">UT_RXD(40)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[20]</td>
         <td></td>
-        <td>GPIO_MB[20]</td>
+        <td><span style= "color: blue;">GPIO_MB[20]</span></td>
         <td>MI2S_DAI2(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(35)</td>
-        <td>UT_RTS(40)</td>
+        <td><span style= "color: blue;">GSDO(35)</span></td>
+        <td><span style= "color: blue;">UT_RTS(40)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[21]</td>
         <td></td>
-        <td>GPIO_MB[21]</td>
+        <td><span style= "color: blue;">GPIO_MB[21]</span></td>
         <td>MI2S_DAO3(04)</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(35)</td>
-        <td>UT_CTS(40)</td>
+        <td><span style= "color: blue;">GSDI(35)</span></td>
+        <td><span style= "color: blue;">UT_CTS(40)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[22]</td>
         <td></td>
-        <td>GPIO_MB[22]</td>
+        <td><span style= "color: blue;">GPIO_MB[22]</span></td>
         <td>MI2S_DAI3(04)</td>
         <td></td>
         <td></td>
@@ -5442,7 +5442,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[23]</td>
         <td></td>
-        <td>GPIO_MB[23]</td>
+        <td><span style= "color: blue;">GPIO_MB[23]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5454,55 +5454,55 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[24]</td>
         <td></td>
-        <td>GPIO_MB[24]</td>
+        <td><span style= "color: blue;">GPIO_MB[24]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(36)</td>
-        <td>UT_TXD(41)</td>
+        <td><span style= "color: blue;">GSCK(36)</span></td>
+        <td><span style= "color: blue;">UT_TXD(41)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[25]</td>
         <td></td>
-        <td>GPIO_MB[25]</td>
+        <td><span style= "color: blue;">GPIO_MB[25]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(36)</td>
-        <td>UT_RXD(41)</td>
+        <td><span style= "color: blue;">GSCMD(36)</span></td>
+        <td><span style= "color: blue;">UT_RXD(41)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[26]</td>
         <td></td>
-        <td>GPIO_MB[26]</td>
+        <td><span style= "color: blue;">GPIO_MB[26]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(36)</td>
-        <td>UT_RTS(41)</td>
+        <td><span style= "color: blue;">GSDO(36)</span></td>
+        <td><span style= "color: blue;">UT_RTS(41)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[27]</td>
         <td></td>
-        <td>GPIO_MB[27]</td>
+        <td><span style= "color: blue;">GPIO_MB[27]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(36)</td>
-        <td>UT_CTS(41)</td>
+        <td><span style= "color: blue;">GSDI(36)</span></td>
+        <td><span style= "color: blue;">UT_CTS(41)</span></td>
       </tr>
       <tr>
         <td>GPIO_MB[28]</td>
         <td>DCDC_SYNC</td>
-        <td>GPIO_MB[28]</td>
+        <td><span style= "color: blue;">GPIO_MB[28]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5514,7 +5514,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[29]</td>
         <td></td>
-        <td>GPIO_MB[29]</td>
+        <td><span style= "color: blue;">GPIO_MB[29]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5526,7 +5526,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[30]</td>
         <td></td>
-        <td>GPIO_MB[30]</td>
+        <td><span style= "color: blue;">GPIO_MB[30]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5538,7 +5538,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[31]</td>
         <td></td>
-        <td>GPIO_MB[31]</td>
+        <td><span style= "color: blue;">GPIO_MB[31]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5585,7 +5585,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td></td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(110)</td>
+      <td><span style= "color: blue;">PDM_OUT(110)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -5595,7 +5595,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <td>AMP_MUTE</td>
       <td></td>
       <td></td>
-      <td>PDM_OUT(111)</td>
+      <td><span style= "color: blue;">PDM_OUT(111)</span></td>
       <td></td>
       <td></td>
       <td></td>
@@ -5603,9 +5603,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MB[04]</td>
         <td></td>
-        <td>I2C_SCL(29)</td>
+        <td><span style= "color: blue;">I2C_SCL(29)</span></td>
         <td></td>
-        <td>PDM_OUT(112)</td>
+        <td><span style= "color: blue;">PDM_OUT(112)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5613,9 +5613,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[05]</td>
         <td>MIPI0_GPIO2</td>
-        <td>I2C_SDA(29)</td>
+        <td><span style= "color: blue;">I2C_SDA(29)</span></td>
         <td></td>
-        <td>PDM_OUT(113)</td>
+        <td><span style= "color: blue;">PDM_OUT(113)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5645,7 +5645,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(114)</td>
+        <td><span style= "color: blue;">PDM_OUT(114)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(00)</td>
@@ -5655,7 +5655,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(115)</td>
+        <td><span style= "color: blue;">PDM_OUT(115)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(01)</td>
@@ -5663,9 +5663,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[10]</td>
         <td></td>
-        <td>I2C_SCL(30)</td>
+        <td><span style= "color: blue;">I2C_SCL(30)</span></td>
         <td></td>
-        <td>PDM_OUT(116)</td>
+        <td><span style= "color: blue;">PDM_OUT(116)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5673,9 +5673,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[11]</td>
         <td></td>
-        <td>I2C_SDA(30)</td>
+        <td><span style= "color: blue;">I2C_SDA(30)</span></td>
         <td></td>
-        <td>PDM_OUT(117)</td>
+        <td><span style= "color: blue;">PDM_OUT(117)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5705,7 +5705,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(118)</td>
+        <td><span style= "color: blue;">PDM_OUT(118)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5715,7 +5715,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td>MIPI0_PD</td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(119)</td>
+        <td><span style= "color: blue;">PDM_OUT(119)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5723,9 +5723,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[16]</td>
         <td>MIPI0_INTB</td>
-        <td>I2C_SCL(31)</td>
+        <td><span style= "color: blue;">I2C_SCL(31)</span></td>
         <td></td>
-        <td>PDM_OUT(120)</td>
+        <td><span style= "color: blue;">PDM_OUT(120)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5733,9 +5733,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[17]</td>
         <td>MIPI0_GPIO1</td>
-        <td>I2C_SDA(31)</td>
+        <td><span style= "color: blue;">I2C_SDA(31)</span></td>
         <td></td>
-        <td>PDM_OUT(121)</td>
+        <td><span style= "color: blue;">PDM_OUT(121)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5765,7 +5765,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(122)</td>
+        <td><span style= "color: blue;">PDM_OUT(122)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(02)</td>
@@ -5775,7 +5775,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(123)</td>
+        <td><span style= "color: blue;">PDM_OUT(123)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(03)</td>
@@ -5783,9 +5783,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[22]</td>
         <td></td>
-        <td>I2C_SCL(32)</td>
+        <td><span style= "color: blue;">I2C_SCL(32)</span></td>
         <td></td>
-        <td>PDM_OUT(124)</td>
+        <td><span style= "color: blue;">PDM_OUT(124)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5793,9 +5793,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[23]</td>
         <td></td>
-        <td>I2C_SDA(32)</td>
+        <td><span style= "color: blue;">I2C_SDA(32)</span></td>
         <td></td>
-        <td>PDM_OUT(125)</td>
+        <td><span style= "color: blue;">PDM_OUT(125)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5823,9 +5823,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[26]</td>
         <td></td>
-        <td>I2C_SCL(33)</td>
+        <td><span style= "color: blue;">I2C_SCL(33)</span></td>
         <td></td>
-        <td>PDM_OUT(126)</td>
+        <td><span style= "color: blue;">PDM_OUT(126)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(04)</td>
@@ -5833,9 +5833,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[27]</td>
         <td></td>
-        <td>I2C_SDA(33)</td>
+        <td><span style= "color: blue;">I2C_SDA(33)</span></td>
         <td></td>
-        <td>PDM_OUT(127)</td>
+        <td><span style= "color: blue;">PDM_OUT(127)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(05)</td>
@@ -5845,7 +5845,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td>DCDC_SYNC</td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(128)</td>
+        <td><span style= "color: blue;">PDM_OUT(128)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5855,7 +5855,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(129)</td>
+        <td><span style= "color: blue;">PDM_OUT(129)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5863,9 +5863,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[30]</td>
         <td></td>
-        <td>I2C_SCL(34)</td>
+        <td><span style= "color: blue;">I2C_SCL(34)</span></td>
         <td></td>
-        <td>PDM_OUT(130)</td>
+        <td><span style= "color: blue;">PDM_OUT(130)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5873,9 +5873,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MB[31]</td>
         <td></td>
-        <td>I2C_SDA(34)</td>
+        <td><span style= "color: blue;">I2C_SDA(34)</span></td>
         <td></td>
-        <td>PDM_OUT(131)</td>
+        <td><span style= "color: blue;">PDM_OUT(131)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -5899,271 +5899,271 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[00]</td>
         <td>CAN1_STB</td>
-        <td>GPIO_MC[00]</td>
+        <td><span style= "color: blue;">GPIO_MC[00]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(37)</td>
-        <td>UT_TXD(42)</td>
+        <td><span style= "color: blue;">GSCK(37)</td>
+        <td><span style= "color: blue;">UT_TXD(42)</td>
     </tr>
     <tr>
         <td>GPIO_MC[01]</td>
         <td>CAN2_STB</td>
-        <td>GPIO_MC[01]</td>
+        <td><span style= "color: blue;">GPIO_MC[01]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(37)</td>
-        <td>UT_RXD(42)</td>
+        <td><span style= "color: blue;">GSCMD(37)</td>
+        <td><span style= "color: blue;">UT_RXD(42)</td>
     </tr>
     <tr>
         <td>GPIO_MC[02]</td>
         <td></td>
-        <td>GPIO_MC[02]</td>
+        <td><span style= "color: blue;">GPIO_MC[02]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(37)</td>
-        <td>UT_RTS(42)</td>
+        <td><span style= "color: blue;">GSDO(37)</td>
+        <td><span style= "color: blue;">UT_RTS(42)</td>
     </tr>
     <tr>
         <td>GPIO_MC[03]</td>
         <td></td>
-        <td>GPIO_MC[03]</td>
+        <td><span style= "color: blue;">GPIO_MC[03]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(37)</td>
-        <td>UT_CTS(42)</td>
+        <td><span style= "color: blue;">GSDI(37)</td>
+        <td><span style= "color: blue;">UT_CTS(42)</td>
     </tr>
     <tr>
         <td>GPIO_MC[04]</td>
         <td>PMIC_IRQ#</td>
-        <td>GPIO_MC[04]</td>
+        <td><span style= "color: blue;">GPIO_MC[04]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO(0)</td>
+        <td><span style= "color: blue;">TCO(0)</td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MC[05]</td>
         <td>USB_PWR_EN</td>
-        <td>GPIO_MC[05]</td>
+        <td><span style= "color: blue;">GPIO_MC[05]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO(1)</td>
+        <td><span style= "color: blue;">TCO(1)</td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MC[06]</td>
         <td>USB20DH_PWR_CTL</td>
-        <td>GPIO_MC[06]</td>
+        <td><span style= "color: blue;">GPIO_MC[06]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(38)</td>
-        <td>UT_TXD(43)</td>
+        <td><span style= "color: blue;">GSCK(38)</td>
+        <td><span style= "color: blue;">UT_TXD(43)</td>
     </tr>
     <tr>
         <td>GPIO_MC[07]</td>
         <td>USB20H_PWR_CTL</td>
-        <td>GPIO_MC[07]</td>
+        <td><span style= "color: blue;">GPIO_MC[07]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(38)</td>
-        <td>UT_RXD(43)</td>
+        <td><span style= "color: blue;">GSCMD(38)</td>
+        <td><span style= "color: blue;">UT_RXD(43)</td>
       </tr>    
       <tr>
         <td>GPIO_MC[08]</td>
         <td>USB30_PWR_CTL</td>
-        <td>GPIO_MC[08]</td>
+        <td><span style= "color: blue;">GPIO_MC[08]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(38)</td>
-        <td>UT_RTS(43)</td>
+        <td><span style= "color: blue;">GSDO(38)</td>
+        <td><span style= "color: blue;">UT_RTS(43)</td>
       </tr>
       <tr>
         <td>GPIO_MC[09]</td>
         <td></td>
-        <td>GPIO_MC[09]</td>
+        <td><span style= "color: blue;">GPIO_MC[09]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(38)</td>
-        <td>UT_CTS(43)</td>
+        <td><span style= "color: blue;">GSDI(38)</td>
+        <td><span style= "color: blue;">UT_CTS(43)</td>
       </tr>
       <tr>
         <td>GPIO_MC[10]</td>
         <td></td>
-        <td>GPIO_MC[10]</td>
+        <td><span style= "color: blue;">GPIO_MC[10]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[2]</td>
+        <td><span style= "color: blue;">TCO[2]</td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MC[11]</td>
         <td>GMAC_RST# / PHY1_RSTN</td>
-        <td>GPIO_MC[11]</td>
+        <td><span style= "color: blue;">GPIO_MC[11]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[3]</td>
+        <td><span style= "color: blue;">TCO[3]</td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MC[12]</td>
         <td>USB20H_FLT</td>
-        <td>GPIO_MC[12]</td>
+        <td><span style= "color: blue;">GPIO_MC[12]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(39)</td>
-        <td>UT_TXD(44)</td>
+        <td><span style= "color: blue;">GSCK(39)</td>
+        <td><span style= "color: blue;">UT_TXD(44)</td>
       </tr>
       <tr>
         <td>GPIO_MC[13]</td>
         <td>USB20DH_FLT</td>
-        <td>GPIO_MC[13]</td>
+        <td><span style= "color: blue;">GPIO_MC[13]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(39)</td>
-        <td>UT_RXD(44)</td>
+        <td><span style= "color: blue;">GSCMD(39)</td>
+        <td><span style= "color: blue;">UT_RXD(44)</td>
       </tr>
       <tr>
         <td>GPIO_MC[14]</td>
         <td>USB30_FLT</td>
-        <td>GPIO_MC[14]</td>
+        <td><span style= "color: blue;">GPIO_MC[14]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(39)</td>
-        <td>UT_RTS(44)</td>
+        <td><span style= "color: blue;">GSDO(39)</td>
+        <td><span style= "color: blue;">UT_RTS(44)</td>
       </tr>
       <tr>
         <td>GPIO_MC[15]</td>
         <td></td>
-        <td>GPIO_MC[15]</td>
+        <td><span style= "color: blue;">GPIO_MC[15]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(39)</td>
-        <td>UT_CTS(44)</td>
+        <td><span style= "color: blue;">GSDI(39)</td>
+        <td><span style= "color: blue;">UT_CTS(44)</td>
       </tr>
       <tr>
         <td>GPIO_MC[16]</td>
         <td></td>
-        <td>GPIO_MC[16]</td>
+        <td><span style= "color: blue;">GPIO_MC[16]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[4]</td>
+        <td><span style= "color: blue;">TCO[4]</td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MC[17]</td>
         <td></td>
-        <td>GPIO_MC[17]</td>
+        <td><span style= "color: blue;">GPIO_MC[17]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>TCO[5]</td>
+        <td><span style= "color: blue;">TCO[5]</td>
         <td></td>
       </tr>
       <tr>
         <td>GPIO_MC[18]</td>
         <td></td>
-        <td>GPIO_MC[18]</td>
+        <td><span style= "color: blue;">GPIO_MC[18]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(40)</td>
-        <td>UT_TXD(45)</td>
+        <td><span style= "color: blue;">GSCK(40)</td>
+        <td><span style= "color: blue;">UT_TXD(45)</td>
       </tr>
       <tr>
         <td>GPIO_MC[19]</td>
         <td></td>
-        <td>GPIO_MC[19]</td>
+        <td><span style= "color: blue;">GPIO_MC[19]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(40)</td>
-        <td>UT_RXD(45)</td>
+        <td><span style= "color: blue;">GSCMD(40)</td>
+        <td><span style= "color: blue;">UT_RXD(45)</td>
       </tr>
       <tr>
         <td>GPIO_MC[20]</td>
         <td></td>
-        <td>GPIO_MC[20]</td>
+        <td><span style= "color: blue;">GPIO_MC[20]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(40)</td>
-        <td>UT_RTS(45)</td>
+        <td><span style= "color: blue;">GSDO(40)</td>
+        <td><span style= "color: blue;">UT_RTS(45)</td>
       </tr>
       <tr>
         <td>GPIO_MC[21]</td>
         <td></td>
-        <td>GPIO_MC[21]</td>
+        <td><span style= "color: blue;">GPIO_MC[21]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(40)</td>
-        <td>UT_CTS(45)</td>
+        <td><span style= "color: blue;">GSDI(40)</td>
+        <td><span style= "color: blue;">UT_CTS(45)</td>
       </tr>
       <tr>
         <td>GPIO_MC[22]</td>
         <td></td>
-        <td>GPIO_MC[22]</td>
+        <td><span style= "color: blue;">GPIO_MC[22]</td>
         <td></td>
         <td></td>
         <td></td>
@@ -6175,7 +6175,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MC[23]</td>
         <td></td>
-        <td>GPIO_MC[23]</td>
+        <td><span style= "color: blue;">GPIO_MC[23]</td>
         <td></td>
         <td></td>
         <td></td>
@@ -6187,55 +6187,55 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MC[24]</td>
         <td>MC_DBG_UT_TX</td>
-        <td>GPIO_MC[24]</td>
+        <td><span style= "color: blue;">GPIO_MC[24]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>UT_TXD(46)</td>
+        <td><span style= "color: blue;">UT_TXD(46)</td>
       </tr>
       <tr>
         <td>GPIO_MC[25]</td>
         <td>MC_DBG_UT_RX</td>
-        <td>GPIO_MC[25]</td>
+        <td><span style= "color: blue;">GPIO_MC[25]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>UT_RXD(46)</td>
+        <td><span style= "color: blue;">UT_RXD(46)</td>
       </tr>
       <tr>
         <td>GPIO_MC[26]</td>
         <td></td>
-        <td>GPIO_MC[26]</td>
+        <td><span style= "color: blue;">GPIO_MC[26]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td>HSM_GSCK</td>
-        <td>UT_RTS(46)</td>
+        <td><span style= "color: blue;">UT_RTS(46)</td>
       </tr>
       <tr>
         <td>GPIO_MC[27]</td>
         <td></td>
-        <td>GPIO_MC[27]</td>
+        <td><span style= "color: blue;">GPIO_MC[27]</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td>HSM_GSCMD</td>
-        <td>UT_CTS(46)</td>
+        <td><span style= "color: blue;">UT_CTS(46)</td>
       </tr>
       <tr>
         <td>GPIO_MC[28]</td>
         <td></td>
-        <td>GPIO_MC[28]</td>
+        <td><span style= "color: blue;">GPIO_MC[28]</td>
         <td></td>
         <td></td>
         <td></td>
@@ -6247,7 +6247,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       <tr>
         <td>GPIO_MC[29]</td>
         <td></td>
-        <td>GPIO_MC[29]</td>
+        <td><span style= "color: blue;">GPIO_MC[29]</td>
         <td></td>
         <td></td>
         <td></td>
@@ -6304,7 +6304,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(132)</td>
+        <td><span style= "color: blue;">PDM_OUT(132)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6312,9 +6312,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[04]</td>
         <td>PMIC_IRQ#</td>
-        <td>I2C_SCL(35)</td>
+        <td><span style= "color: blue;">I2C_SCL(35)</span></td>
         <td></td>
-        <td>PDM_OUT(133)</td>
+        <td><span style= "color: blue;">PDM_OUT(133)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6322,9 +6322,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[05]</td>
         <td>USB_PWR_EN</td>
-        <td>I2C_SDA(35)</td>
+        <td><span style= "color: blue;">I2C_SDA(35)</span></td>
         <td></td>
-        <td>PDM_OUT(134)</td>
+        <td><span style= "color: blue;">DM_OUT(134)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6334,7 +6334,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td>USB20DH_PWR_CTL</td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(135)</td>
+        <td><span style= "color: blue;">PDM_OUT(135)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6354,7 +6354,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td>USB30_PWR_CTL</td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(136)</td>
+        <td><span style= "color: blue;">PDM_OUT(136)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(00)</td>
@@ -6364,7 +6364,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(137)</td>
+        <td><span style= "color: blue;">PDM_OUT(137)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(01)</td>
@@ -6372,9 +6372,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[10]</td>
         <td></td>
-        <td>I2C_SCL(36)</td>
+        <td><span style= "color: blue;">I2C_SCL(36)</span></td>
         <td></td>
-        <td>PDM_OUT(138)</td>
+        <td><span style= "color: blue;">PDM_OUT(138)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6382,9 +6382,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[11]</td>
         <td>GMAC_RST# / PHY1_RSTN</td>
-        <td>I2C_SDA(36)</td>
+        <td><span style= "color: blue;">I2C_SDA(36)</span></td>
         <td></td>
-        <td>PDM_OUT(139)</td>
+        <td><span style= "color: blue;">PDM_OUT(139)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6414,7 +6414,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td>USB30_FLT</td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(140)</td>
+        <td><span style= "color: blue;">PDM_OUT(140)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6424,7 +6424,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(141)</td>
+        <td><span style= "color: blue;">PDM_OUT(141)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6432,9 +6432,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[16]</td>
         <td></td>
-        <td>I2C_SCL(37)</td>
+        <td><span style= "color: blue;">I2C_SCL(37)</span></td>
         <td></td>
-        <td>PDM_OUT(142)</td>
+        <td><span style= "color: blue;">PDM_OUT(142)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6442,9 +6442,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[17]</td>
         <td></td>
-        <td>I2C_SDA(37)</td>
+        <td><span style= "color: blue;">I2C_SDA(37)</span></td>
         <td></td>
-        <td>PDM_OUT(143)</td>
+        <td><span style= "color: blue;">PDM_OUT(143)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6474,7 +6474,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(144)</td>
+        <td><span style= "color: blue;">PDM_OUT(144)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(02)</td>
@@ -6484,7 +6484,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(145)</td>
+        <td><span style= "color: blue;">PDM_OUT(145)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(03)</td>
@@ -6492,9 +6492,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[22]</td>
         <td></td>
-        <td>I2C_SCL(38)</td>
+        <td><span style= "color: blue;">I2C_SCL(38)</span></td>
         <td></td>
-        <td>PDM_OUT(146)</td>
+        <td><span style= "color: blue;">PDM_OUT(146)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6502,9 +6502,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[23]</td>
         <td></td>
-        <td>I2C_SDA(38)</td>
+        <td><span style= "color: blue;">I2C_SDA(38)</span></td>
         <td></td>
-        <td>PDM_OUT(147)</td>
+        <td><span style= "color: blue;">PDM_OUT(147)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6534,7 +6534,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(148)</td>
+        <td><span style= "color: blue;">PDM_OUT(148)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(04)</td>
@@ -6544,7 +6544,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
         <td></td>
         <td></td>
         <td></td>
-        <td>PDM_OUT(149)</td>
+        <td><span style= "color: blue;">PDM_OUT(149)</span></td>
         <td></td>
         <td></td>
         <td>CLK_OUT(05)</td>
@@ -6552,9 +6552,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[28]</td>
         <td></td>
-        <td>I2C_SCL(39)</td>
+        <td><span style= "color: blue;">I2C_SCL(39)</span></td>
         <td></td>
-        <td>PDM_OUT(150)</td>
+        <td><span style= "color: blue;">PDM_OUT(150)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6562,9 +6562,9 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MC[29]</td>
         <td></td>
-        <td>I2C_SDA(39)</td>
+        <td><span style= "color: blue;">I2C_SDA(39)</span></td>
         <td></td>
-        <td>PDM_OUT(151)</td>
+        <td><span style= "color: blue;">PDM_OUT(151)</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6588,55 +6588,55 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[00]</td>
         <td></td>
-        <td>GPIO_MD[00]</td>
+        <td><span style= "color: blue;">GPIO_MD[00]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(41)</td>
+        <td><span style= "color: blue;">GSCK(41)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[01]</td>
         <td></td>
-        <td>GPIO_MD[01]</td>
+        <td><span style= "color: blue;">GPIO_MD[01]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(41)</td>
+        <td><span style= "color: blue;">GSCMD(41)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[02]</td>
         <td></td>
-        <td>GPIO_MD[02]</td>
+        <td><span style= "color: blue;">GPIO_MD[02]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(41)</td>
+        <td><span style= "color: blue;">GSDO(41)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[03]</td>
         <td></td>
-        <td>GPIO_MD[03]</td>
+        <td><span style= "color: blue;">GPIO_MD[03]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(41)</td>
+        <td><span style= "color: blue;">GSDI(41)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[04]</td>
         <td></td>
-        <td>GPIO_MD[04]</td>
+        <td><span style= "color: blue;">GPIO_MD[04]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6648,7 +6648,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[05]</td>
         <td></td>
-        <td>GPIO_MD[05]</td>
+        <td><span style= "color: blue;">GPIO_MD[05]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6660,7 +6660,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[06]</td>
         <td></td>
-        <td>GPIO_MD[06]</td>
+        <td><span style= "color: blue;">GPIO_MD[06]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6672,7 +6672,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[07]</td>
         <td></td>
-        <td>GPIO_MD[07]</td>
+        <td><span style= "color: blue;">GPIO_MD[07]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6684,7 +6684,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[08]</td>
         <td></td>
-        <td>GPIO_MD[08]</td>
+        <td><span style= "color: blue;">GPIO_MD[08]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6696,7 +6696,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[09]</td>
         <td></td>
-        <td>GPIO_MD[09]</td>
+        <td><span style= "color: blue;">GPIO_MD[09]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6708,79 +6708,79 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[10]</td>
         <td></td>
-        <td>GPIO_MD[10]</td>
+        <td><span style= "color: blue;">GPIO_MD[10]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>UT_TXD(47)</td>
         <td></td>
+        <td><span style= "color: blue;">UT_TXD(47)</span></td>
     </tr>
     <tr>
         <td>GPIO_MD[11]</td>
         <td></td>
-        <td>GPIO_MD[11]</td>
+        <td><span style= "color: blue;">GPIO_MD[11]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>UT_RXD(47)</td>
         <td></td>
+        <td><span style= "color: blue;">UT_RXD(47)</span></td>
     </tr>
     <tr>
         <td>GPIO_MD[12]</td>
         <td></td>
-        <td>GPIO_MD[12]</td>
+        <td><span style= "color: blue;">GPIO_MD[12]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCK(42)</td>
+        <td><span style= "color: blue;">GSCK(42)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[13]</td>
         <td></td>
-        <td>GPIO_MD[13]</td>
+        <td><span style= "color: blue;">GPIO_MD[13]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSCMD(42)</td>
+        <td><span style= "color: blue;">GSCMD(42)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[14]</td>
         <td></td>
-        <td>GPIO_MD[14]</td>
+        <td><span style= "color: blue;">GPIO_MD[14]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDO(42)</td>
+        <td><span style= "color: blue;">GSDO(42)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[15]</td>
         <td></td>
-        <td>GPIO_MD[15]</td>
+        <td><span style= "color: blue;">GPIO_MD[15]</span></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>GSDI(42)</td>
+        <td><span style= "color: blue;">GSDI(42)</span></td>
         <td></td>
     </tr>
     <tr>
         <td>GPIO_MD[16]</td>
         <td></td>
-        <td>GPIO_MD[16]</td>
+        <td><span style= "color: blue;">GPIO_MD[16]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -6792,7 +6792,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>GPIO_MD[17]</td>
         <td></td>
-        <td>GPIO_MD[17]</td>
+        <td><span style= "color: blue;">GPIO_MD[17]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7013,7 +7013,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[00]</td>
         <td></td>
-        <td>AD[00]</td>
+        <td><span style= "color: red;">AD[00]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7025,7 +7025,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[01]</td>
         <td></td>
-        <td>AD[01]</td>
+        <td><span style= "color: red;">AD[01]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7037,7 +7037,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[02]</td>
         <td></td>
-        <td>AD[02]</td>
+        <td><span style= "color: red;">AD[02]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7049,7 +7049,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[03]</td>
         <td>USB_OCP_DET</td>
-        <td>AD[03]</td>
+        <td><span style= "color: red;">AD[03]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7061,7 +7061,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[04]</td>
         <td></td>
-        <td>AD[04]</td>
+        <td><span style= "color: red;">AD[04]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7073,7 +7073,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[05]</td>
         <td></td>
-        <td>AD[05]</td>
+        <td><span style= "color: red;">AD[05]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7085,7 +7085,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[06]</td>
         <td></td>
-        <td>AD[06]</td>
+        <td><span style= "color: red;">AD[06]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7097,7 +7097,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[07]</td>
         <td></td>
-        <td>AD[07]</td>
+        <td><span style= "color: red;">AD[07]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7109,7 +7109,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[08]</td>
         <td></td>
-        <td>AD[08]</td>
+        <td><span style= "color: red;">AD[08]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7121,7 +7121,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[09]</td>
         <td></td>
-        <td>AD[09]</td>
+        <td><span style= "color: red;">AD[09]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7133,7 +7133,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[10]</td>
         <td></td>
-        <td>AD[10]</td>
+        <td><span style= "color: red;">AD[10]</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -7145,7 +7145,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     <tr>
         <td>AD[11]</td>
         <td></td>
-        <td>AD[11]</td>
+        <td><span style= "color: red;">AD[11]</span></td>
         <td></td>
         <td></td>
         <td></td>

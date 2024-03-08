@@ -18,19 +18,19 @@ If you press **SW2** and supply power, the USB boot process is initiated. If you
 Pressing **SW1** causes the system to reset. If you want to download a firmware, press **SW1** and **SW2** at the same time to boot USB mode.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/be28cc4c-7df1-49cf-bd62-e13f277663f2" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/be28cc4c-7df1-49cf-bd62-e13f277663f2" width="350" height="250" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 4.1 USB Connection</strong></p>
 
 Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Administrator) and boot after changing to USB mode in Windows.
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13ae985b-e214-4a47-95da-020fd5e0a50e" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13ae985b-e214-4a47-95da-020fd5e0a50e" width="600" height="350" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 4.2 USB Connection in Windows Environment</strong></p>
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6e737702-3f96-4f55-842d-8e2d91fa50ea" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6e737702-3f96-4f55-842d-8e2d91fa50ea" width="750" height="150" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 4.3 USB Connection in Linux Environment</strong></p>
 
@@ -270,7 +270,6 @@ Download Pre-built F/W Image
 - * When writing FAI files without low-format, there may be garbage values in partition where data is not written.
 ```
 
----
 
 ### 1.3.1 Partition FWDN with Windows
 
@@ -532,7 +531,6 @@ Download Pre-built F/W Image
 100% [||||||||||||||||||||||||||||||] 8978432/8978432End !!
 ```
 
----
 
 ## 1.4 FWDN in Linux
 
@@ -674,6 +672,6 @@ Time taken in 0:04:08.614812
 1. Connect to the main core by using the UART port in the ***SSH*** (Speed (bsp): 115200)
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/f5936328-9781-4463-ae48-359a227de9a3" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/f5936328-9781-4463-ae48-359a227de9a3" width="750" height="650" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 4.5 Connected Screen (ID and Password are root)</strong></p>

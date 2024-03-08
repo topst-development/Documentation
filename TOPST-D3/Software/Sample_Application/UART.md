@@ -147,21 +147,20 @@ The **tcflush()** function is called by a process to flush all input that has be
 
 **Parameters**
 
-n  **fildes**: Indicates a file descriptor associated with a terminal device.
+-   **fildes**: Indicates a file descriptor associated with a terminal device.
 
-n  **where**: Indicates whether the system is to flush input or output, represented by one of the following symbols defined in the **termios.h** header file:
+-   **where**: Indicates whether the system is to flush input or output, represented by one of the following symbols defined in the **termios.h** header file:
 
-l  TCIFLUSH: Flushes input data that has been received by the system but not read by an application.
+-   **TCIFLUSH**: Flushes input data that has been received by the system but not read by an application.
 
-l  TCOFLUSH: Flushes output data that has been written by an application but not sent to the terminal.
+-   **TCOFLUSH**: Flushes output data that has been written by an application but not sent to the terminal.
 
-l  TCIOFLUSH: Flushes both input and output data.
+-   **TCIOFLUSH**: Flushes both input and output data.
 
 **Return Value**
 
 The **tcflush()** function returns 0 if successful and -1 if unsuccessful. If the **tcflush()** function is called from a background process with a file descriptor that refers to the controlling terminal for the process, a SIGTTOU signal may be generated. This causes the function call to be unsuccessful and the function returns -1 and sets **errno** to EINTR. If SIGTTOU is blocked, the function call proceeds normally.
 
----
 
 ```c
 #include <termios.h>
@@ -179,11 +178,11 @@ The **tcsetattr()** function changes the attributes associated with a terminal. 
 
 **Parameters**
 
-n  **fildes**: Indicates an open file descriptor associated with a terminal.
+-   **fildes**: Indicates an open file descriptor associated with a terminal.
 
-n  **optional_actions**: Indicates a symbol defined in the **termios.h** header file that specifies when to change the terminal attributes.
+-   **optional_actions**: Indicates a symbol defined in the **termios.h** header file that specifies when to change the terminal attributes.
 
-n  **termios_p**: A pointer to a termios control structure that contains the desired terminal attributes.
+-   **termios_p**: A pointer to a termios control structure that contains the desired terminal attributes.
 
 **Return Value**
 
@@ -191,15 +190,15 @@ If successful, **tcsetattr()** returns 0.
 
 If unsuccessful, **tcsetattr()** returns -1 and sets **errno** to one of the following values:
 
-n  **EBADF**: **fildes** is not a valid open file descriptor.
+-   **EBADF**: **fildes** is not a valid open file descriptor.
 
-n  **EINTR**: A signal interrupted **tcsetattr()**.
+-   **EINTR**: A signal interrupted **tcsetattr()**.
 
-n  **EINVAL**: When is not a recognized value, or some entry in the supplied termios structure had an incorrect value.
+-   **EINVAL**: When is not a recognized value, or some entry in the supplied termios structure had an incorrect value.
 
-n  **EIO**: The process group of the process issuing the function is an orphaned, background process group, and the process issuing the function is not ignoring or blocking SIGTTOU.
+-   **EIO**: The process group of the process issuing the function is an orphaned, background process group, and the process issuing the function is not ignoring or blocking SIGTTOU.
 
-n  **ENOTTY**: **fildes** is not associated with a terminal.
+-   **ENOTTY**: **fildes** is not associated with a terminal.
 
 
 ```c
@@ -215,9 +214,9 @@ The **FD_ISSET()** function returns a value for the file descriptor in the file 
 
 **Parameters**
 
-n  **fd**: The file descriptor.
+-   **fd**: The file descriptor.
 
-n  **fdset**: The file descriptor set.
+-   **fdset**: The file descriptor set.
 
 **RETURN VALUE**
 
@@ -238,13 +237,13 @@ The **pthread_create()** function is used to create a new thread with attributes
 
 **Parameters**
 
-n  **thread**: The location where the ID of the newly created thread should be stored, or NULL if the thread ID is not required.
+-   **thread**: The location where the ID of the newly created thread should be stored, or NULL if the thread ID is not required.
 
-n  **attr**: The thread attribute object specifying the attributes for the thread that is being created. If **attr** is NULL, the thread is created with default attributes.
+-   **attr**: The thread attribute object specifying the attributes for the thread that is being created. If **attr** is NULL, the thread is created with default attributes.
 
-n  **start_routine**: The main function for the thread; the thread begins executing user code at this address.
+-   **start_routine**: The main function for the thread; the thread begins executing user code at this address.
 
-n  **arg**: The argument passed to start.
+-   **arg**: The argument passed to start.
 
 **RETURN VALUE**
 
@@ -252,10 +251,10 @@ If successful, **pthread_create()** returns 0.
 
 If unsuccessful, **pthread_create()** returns -1 and sets **errno** to one of the following values:
 
-n  **EAGAIN**: The system lacks the necessary resources to create another thread.
+-   **EAGAIN**: The system lacks the necessary resources to create another thread.
 
-n  **EINVAL**: The value specified by the thread is null.
+-   **EINVAL**: The value specified by the thread is null.
 
-n  **ELEMULTITHREADFORK**: **pthread_create()** was invoked from a child process created by calling **fork()** from a multi-threaded process. This child process is restricted from becoming multi-threaded.
+-   **ELEMULTITHREADFORK**: **pthread_create()** was invoked from a child process created by calling **fork()** from a multi-threaded process. This child process is restricted from becoming multi-threaded.
 
-n  **ENOMEM**: There is not enough memory to create the thread.
+-   **ENOMEM**: There is not enough memory to create the thread.

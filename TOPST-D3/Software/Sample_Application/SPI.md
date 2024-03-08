@@ -20,7 +20,7 @@ $ ./spiTest -d /dev/spidev0.0 -l 4 -m 12AB
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c7914b9b-092f-4a8a-8907-90d154ae1b7e" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c7914b9b-092f-4a8a-8907-90d154ae1b7e" width="700" height="150" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 2.5 SPI Example</strong></p>
 
@@ -187,15 +187,15 @@ The file offset that is used to mark the current position within the file is the
 
 **Parameters**
 
-n  **path**: The path argument points to a pathname naming the file.
+-   **path**: The path argument points to a pathname naming the file.
 
-n  **oflag**: Values for **oflag** are constructed by a bitwise-inclusive OR of flags from the following list, defined in **<fcntl.h>**. Applications shall specify exactly one of the first three values (file access modes) below in the value of **oflag**:
+-  **oflag**: Values for **oflag** are constructed by a bitwise-inclusive OR of flags from the following list, defined in **<fcntl.h>**. Applications shall specify exactly one of the first three values (file access modes) below in the value of **oflag**:
 
-l  O_RDONLY: Open for reading only.
+-  O_RDONLY: Open for reading only.
 
-l  O_WRONLY: Open for writing only.
+-  O_WRONLY: Open for writing only.
 
-l  O_RDWR: Open for reading and writing. The result is undefined if this flag is applied to a FIFO.
+-  O_RDWR: Open for reading and writing. The result is undefined if this flag is applied to a FIFO.
 
 **Return Value**
 
@@ -213,7 +213,7 @@ The **close()** function closes a file descriptor, so that it no longer refers t
 
 **Parameters**
 
-n  **fd**: The file descriptor for the file you want to close.
+-  **fd**: The file descriptor for the file you want to close.
 
 **Return Value**
 
@@ -234,11 +234,11 @@ The **ioctl()** system call manipulates the underlying device parameters of spec
 
 **Parameters**
 
-n  **fd**: Open file descriptor
+-  **fd**: Open file descriptor
 
-n  **request**: Device-dependent request code
+-  **request**: Device-dependent request code
 
-l  An untyped pointer to memory.  It was traditionally char *argp (from the days before void * was valid C), and will be so named for this discussion.
+ An untyped pointer to memory.  It was traditionally char *argp (from the days before void * was valid C), and will be so named for this discussion.
 
 **Return Value**
 
@@ -253,6 +253,6 @@ $ matrix.demo.py
 ```
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46474588-da7b-472a-a73c-8192b69a47cf" width="500" height="350" style="margin: auto;">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46474588-da7b-472a-a73c-8192b69a47cf" width="400" height="600" style="margin: auto;">
 </div>
 <p align="center"><strong>Figure 2.6 Dot-matrix Test with SPI</strong></p>
