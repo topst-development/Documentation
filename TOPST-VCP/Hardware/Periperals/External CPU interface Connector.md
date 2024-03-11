@@ -16,7 +16,7 @@ Table 1.1 shows the pin description of J14D1.
 
 **Table 1.1 J14D1 Pin Description:**  
 
-|  Pin Number | TCC70xx Port Name | Signal Name | Dir(MCU◀▶J14D1)| Description                                |
+|  Pin Number | TCC7045 Port Name | Signal Name | Dir(MCU◀▶J14D1)| Description                                |
 |:-----------:|:-----------------:|:-----------:|:--------------:|----------------------------------------------|
 | 1           |         -         | B_UP        |  -             | Power 12V                                    |
 | 2           |         -         | B_UP        |  -             | Power 12V                                    |
