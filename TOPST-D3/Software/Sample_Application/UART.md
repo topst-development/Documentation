@@ -10,10 +10,10 @@ The following is a demo program for simple serial communication with the UART pr
 USAGE: ./uartexample
 ```
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/48d2e884-1e7d-4d9a-a5bc-ddf2acbd6e07" width="500" height="350" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.7 UART Example</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/48d2e884-1e7d-4d9a-a5bc-ddf2acbd6e07" width="700" height="200">
+</p>
+<p align="center"><strong>Figure 1.1 UART Example</strong></p>
 
 ```c
 #include <stdio.h>

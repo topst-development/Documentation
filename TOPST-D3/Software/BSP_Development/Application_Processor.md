@@ -274,9 +274,9 @@ $ make tcc805x_defconfig
 
 $ make menuconfig
 ```
- <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/3999b02e-fe6f-4e2f-9f1f-5bfd4ec5b5f5" width="750" height="400" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/3999b02e-fe6f-4e2f-9f1f-5bfd4ec5b5f5" width="750" height="400" >
+</p>
 
 ```bash
 $ bitbake u-boot-tcc -c build
@@ -735,9 +735,9 @@ $ make tcc805x_subcore_defconfig
 $ make menuconfig
 ```
  
- <div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9d934f78-e28e-46a9-b8a0-e6f47cef637c" width="750" height="400" style="margin: auto;">
-</div>
+ <p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9d934f78-e28e-46a9-b8a0-e6f47cef637c" width="750" height="400" >
+</p>
 
 ```bash
 $ bitbake u-boot-tcc -c build
@@ -1409,9 +1409,9 @@ The following shows how to use the Kernel **menuconfig**.
 ```bash
 $ bitbake virtual/kernel -c menuconfig
 ```
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b7fd7468-02ee-435a-9c54-db1a85648faf" width="750" height="400" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b7fd7468-02ee-435a-9c54-db1a85648faf" width="750" height="400" >
+</p>
 
 ```bash
 $ bitbake u-boot-tcc -c build
@@ -2518,9 +2518,9 @@ The following shows how to use the Linux Kernel **menuconfig**.
 $ bitbake virtual/kernel -c menuconfig
 ```
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b1e7e6b8-3116-4ae5-9952-7f3e50607ddf" width="750" height="400" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b1e7e6b8-3116-4ae5-9952-7f3e50607ddf" width="750" height="400" >
+</p>
 
 ```bash
 $ bitbake u-boot-tcc -c build
@@ -3199,10 +3199,10 @@ drivers/firmware/tcc_sc_fw.c
 
 ### 1.3.1 SD
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/09a478fe-394f-4bed-ae67-d61fecef467b" width="300" height="350" style="margin: auto;">
-	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a9bb5ccd-3eed-44df-93ae-f01c94e1e18b" width="650" height="400" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/09a478fe-394f-4bed-ae67-d61fecef467b" width="300" height="350" >
+	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a9bb5ccd-3eed-44df-93ae-f01c94e1e18b" width="650" height="400" >
+</p>
 
 ### 1.3.1.1 U-Boot Configuration
 
@@ -3263,37 +3263,71 @@ The following shows pin configuration.
 
 ### 1.3.1.1.2 Properties
 
-Table 4.1 Required Properties for SDHCI Driver in U-Boot
+<p align="center"><strong>Table 1.1 Required Properties for SDHCI Driver in U-Boot</strong></p>
 
-| Property | Description |
-| --- | --- |
-| compatible | Must be "telechips,<chipset>-sdhci". 
- 
-Example: 
-n  "telechips, tcc8050-sdhci" for TCC8050 |
-| reg | The first one is for the SDHCI registers themselves.
-The second one is for the channel control configuration registers.
-The third one is for the channel clock delay configuration registers.
-The last one is for the channel command and data delay registers. |
-| max-frequency | Maximum operating clock frequency |
-| bus-width | The number of data lines can be <1>, <4>, or <8>. |
-| controller-id | Specify a controller ID. |
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>compatible</td>
+		<td>Must be "telechips, < chipset >-sdhci". <br> <strong>Example:</strong><br> <li>"telechips, tcc8050-sdhci" for TCC8050</td>
+	</tr>
+	<tr>
+		<td>reg</td>
+		<td>The first one is for the SDHCI registers themselves.<br> The second one is for the channel control configuration registers.<br> The third one is for the channel clock delay configuration registers.<br> The last one is for the channel command and data delay registers.</td>
+	</tr>
+	<tr>
+		<td>max-frequency</td>
+		<td>Maximum operating clock frequency</td>
+	</tr>
+	<tr>
+		<td>bus-width</td>
+		<td>The number of data lines can be < 1 >, < 4 >, or < 8 >. </td>
+	</tr>
+	</tr>
+		<td>controller-id</td>
+		<td>Specify a controller ID.</td>
+	</tr>
+</table>
 
-Table 4.2 Optional Properties for SDHCI Driver in U-Boot
+<p align="center"><strong>Table 1.2 Optional Properties for SDHCI Driver in U-Boot</strong></p>
 
-| Property | Description |
-| --- | --- |
-| mmc-pwrseq | phandle to the MMC power sequence node |
-| non-removable | Notify that a slot type is non-removable to the driver. |
-| mmc-hs200-1_8v | Set the voltage as 1.8V for HS200. |
-| mmc-hs400-1_8v | Set the voltage as 1.8V for HS400. |
-| tcc-mmc-taps | Array of delay tap register settings: 
-n  The first value is for OTAPDLYSEL field in TAPDLYn register. 
-n  The second value is for SDn_CMD_OUT_DLY, SDn_CMD_OEN_DLY, and SDn_CMD_IN_DLY fields in SDn_CMD_DLY register. 
-n  The third value is for SDn_DATAm_OUT_DLY, SDn_DATAm_OEN_DLY, and SDn_DATAm_IN_DLY fields in SDn_DATAm_DLY register. 
-n  The last value is for TX_CLK_DLY_n field in TX_CLK_DLY register. |
-| tcc-mmc-hs400-pos-tap | Detection timing control value on positive edge of DQS signal for HS400 |
-| tcc-mmc-hs400-neg_tap | Detection timing control value on negative edge of DQS signal for HS400 |
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>mmc-pwrseq</td>
+		<td>phandle to the MMC power sequence node</td>
+	</tr>
+	<tr>
+		<td>non-removable</td>
+		<td>Notify that a slot type is non-removable to the driver.</td>
+	</tr>
+	<tr>
+		<td>mmc-hs200-1_8v</td>
+		<td>Set the voltage as 1.8V for HS200.</td>
+	</tr>
+	<tr>
+		<td>mmc-hs400-1_8v</td>
+		<td>Set the voltage as 1.8V for HS400.</td>
+	</tr>
+	</tr>
+		<td>tcc-mmc-taps</td>
+		<td>Array of delay tap register settings:<br> <li>The first value is for OTAPDLYSEL field in TAPDLYn register. <li>The second value is for SDn_CMD_OUT_DLY, SDn_CMD_OEN_DLY, and SDn_CMD_IN_DLY fields in SDn_CMD_DLY register. <li>The third value is for SDn_DATAm_OUT_DLY, SDn_DATAm_OEN_DLY, and SDn_DATAm_IN_DLY fields in SDn_DATAm_DLY register. <li>The last value is for TX_CLK_DLY_n field in TX_CLK_DLY register.</td>
+	</tr>
+	<tr>
+		<td>tcc-mmc-hs400-pos-tap</td>
+		<td>Detection timing control value on positive edge of DQS signal for HS400</td>
+	</tr>
+	<tr>
+		<td>tcc-mmc-hs400-neg_tap </td>
+		<td>Detection timing control value on negative edge of DQS signal for HS400</td>
+	</tr>
+</table>
 
 ### 1.3.1.1.3 Configuration
 
@@ -3356,10 +3390,10 @@ Device Drivers --->
 
 ### 1.3.2 USB
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b6574be4-d59c-4fc8-9ab0-09663aeb1a54" width="300" height="300" style="margin: auto;">
-	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/726793c6-0288-4ebd-888a-84cb032bf7ca" width="600" height="450" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b6574be4-d59c-4fc8-9ab0-09663aeb1a54" width="300" height="300">
+	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/726793c6-0288-4ebd-888a-84cb032bf7ca" width="600" height="450">
+</p>
 
 ### 1.3.2.1 Features
 
@@ -3376,9 +3410,9 @@ Device Drivers --->
 
 ### 1.3.2.1.2  Linux USB Stack Architecture
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/769e11da-f364-4934-a9ea-80b5cf52cf20" width="700" height="550" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/769e11da-f364-4934-a9ea-80b5cf52cf20" width="700" height="550" >
+</p>
 
 ### 1.3.2.2 USB 2.0 Host
 
@@ -3608,9 +3642,9 @@ Device Drivers --->
 
 There are two types of DP-to-HDMI adapters: passive and active. TOPST supports only active adapters.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5175e774-6e5d-4124-a768-e08fca13887e" width="600" height="450" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5175e774-6e5d-4124-a768-e08fca13887e" width="600" height="450" >
+</p>
 
 TOPST uses DisplayPort by default. This feature is supported by the main core.
 
@@ -3734,9 +3768,9 @@ $ Bitbake virtual-kernel -c build
 
 ### 1.3.4 PCIe
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e892503b-d493-4177-aaf6-e780ff56e7d1" width="750" height="550" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e892503b-d493-4177-aaf6-e780ff56e7d1" width="750" height="550" >
+</p>
 
 ### 1.3.4.1 Device Tree
 
@@ -3825,12 +3859,12 @@ CONFIG_IWLWIFI_DEBUG=y
 
 ### 1.3.5 Audio
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46f69442-4f76-4cec-b96f-e926cae17f6c" width="500" height="250" style="margin: auto;">
-</div>
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/14e7d7f9-aeab-45ec-ae24-5e075b3f2b89" width="900" height="500" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46f69442-4f76-4cec-b96f-e926cae17f6c" width="500" height="250" >
+</p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/14e7d7f9-aeab-45ec-ae24-5e075b3f2b89" width="900" height="500" >
+</p>
 
 ### 1.3.5.1 Feature (TBD)
 
@@ -4013,31 +4047,80 @@ Properties for I2C master driver in device tree consist of required properties a
 
 **Note 2**: **port-mux** numbers should not overlap. The default value is an exception.
 
-Table 4.3 Required Properties of I2C Master Driver in Device Tree
+<p align="center"><strong>Table 1.3 Required Properties of I2C Master Driver in Device Tree</strong></p>
 
-| Property | Description |
-| --- | --- |
-| compatible | Name for matching with the drivers depending on chipset "telechips,<chipset>- i2c" |
-| reg | Specifies the physical base address and size of the registers |
-| #address-cells | Should be <1> |
-| #size-cells | Should be <0> |
-| clocks | Array of clocks for I2C Master |
-| clock-frequency | Desired I2C SCL speed in Hz |
-| pinctrl-names | Should be “default” |
-| port-mux | I2C port number |
-| pinctrl-0 | Pin control group to be used for I2C |
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>compatible</td>
+		<td>Name for matching with the drivers depending on chipset<br> "telechips,< chipset >- i2c"</td>
+	</tr>
+	<tr>
+		<td>reg</td>
+		<td>Specifies the physical base address and size of the registers</td>
+	</tr>
+	<tr>
+		<td>#address-cells</td>
+		<td>Should be < 1 ></td>
+	</tr>
+	<tr>
+		<td>#size-cells</td>
+		<td>Should be < 0 ></td>
+	</tr>
+	</tr>
+		<td>clocks</td>
+		<td>Array of clocks for I2C Master </td>
+	</tr>
+	<tr>
+		<td>clock-frequency</td>
+		<td>Desired I2C SCL speed in Hz</td>
+	</tr>
+	<tr>
+		<td>pinctrl-names</td>
+		<td>Should be “default”</td>
+	</tr>
+	<tr>
+		<td>port-mux </td>
+		<td>I2C port number</td>
+	</tr>
+	<tr>
+		<td>pinctrl-0</td>
+		<td>Pin control group to be used for I2C</td>
+	</tr>
+</table>
 
-Table 4.4 Optional Properties of I2C Master Driver in Device Tree
+<p align="center"><strong>Table 1.4 Optional Properties of I2C Master Driver in Device Tree</strong></p>
 
-| Property | Default Value | Description |
-| --- | --- | --- |
-| pulse-width-high | 2 | Clock high width |
-| pulse-width-low | 3 | Clock low width |
-| noise_filter | 0 | Noise filter counter load value
-n  0: Disables noise filter. |
-| status | "okay" | Activation status
-"okay": Activates the device.
-"disabled": Deactivates the device. |
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Default Value</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>pulse-width-high</td>
+		<td>2</td>
+		<td>Clock high width</td>
+	</tr>
+	<tr>
+		<td>pulse-width-low</td>
+		<td>3</td>
+		<td>Clock low width</td>
+	</tr>
+	<tr>
+		<td>noise_filter</td>
+		<td>0</td>
+		<td>Noise filter counter load value<br> <li>0: Disables noise filter</td>
+	</tr>
+	<tr>
+		<td>status</td>
+		<td>"okay"</td>
+		<td>Activation status<br> "okay": Activates the device<br> "disabled": Deactivates the device</td>
+	</tr>
+</table>
 
 ### 1.3.6.1.3 Driver Source File
 
@@ -4130,9 +4213,9 @@ $ i2cset <bus> <chip> <register> <value>
 
 ### 1.3.7 SPI Master
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a14ee70c-1046-417d-814a-076da4124707" width="750" height="550" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a14ee70c-1046-417d-814a-076da4124707" width="750" height="550" >
+</p>
 
 ### 1.3.7.1 Device Tree
 
@@ -4144,7 +4227,6 @@ The following is the Device Tree information for U-Boot of the main core (CA72).
 <Bootloader>/arch/arm64/boot/dts/tcc/tcc805x.dtsi
 <Bootloader>/arch/arm64/boot/dts/tcc/tcc8050_53-pinctrl.dtsi
 <Bootloader>/arch/arm64/boot/dts/tcc/tcc8050-linux-ivi-tost_sv0.1.dts
-
 ```
 
 The following shows Pin configuration:
@@ -4239,38 +4321,80 @@ The following shows Pin configuration:
 
 Properties for SPI master driver in device tree consists of required properties and optional properties.
 
-Table 4.5 Required Properties of SPI Master Driver in Device Tree
+<p align="center"><strong>Table 1.5 Required Properties of SPI Master Driver in Device Tree</strong></p>
 
-| Property | Description |
-| --- | --- |
-| compatible | Name for matching with the drivers depending on chipset 
-“telechips,<chipset>-spi” |
-| reg | Specify the physical base address and size of the registers |
-| interrupts | Interrupt specifier |
-| clocks | Array of clocks for GPSB |
-| pinctrl-names | Should be “idle”, “active” |
-| pinctrl-0 | Pin control group to be used for SPI in idle state |
-| pinctrl-1 | Pin control group to be used for SPI in active state |
-| gpsb-id | Bus ID of SPI master device |
-| gpsb-port | SPI port number |
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>compatible</td>
+		<td>Name for matching with the drivers depending on chipset<br> “telechips,< chipset >-spi” </td>
+	</tr>
+	<tr>
+		<td>reg</td>
+		<td>Specify the physical base address and size of the registers</td>
+	</tr>
+	<tr>
+		<td>interrupts</td>
+		<td>Interrupt specifier</td>
+	</tr>
+	<tr>
+		<td>clocks</td>
+		<td>Array of clocks for GPSB</td>
+	</tr>
+	<tr>
+		<td>pinctrl-names</td>
+		<td>Should be “idle”, “active”</td>
+	</tr>
+	<tr>
+		<td>pinctrl-0</td>
+		<td>Pin control group to be used for SPI in idle state</td>
+	</tr>
+	<tr>
+		<td>pinctrl-1</td>
+		<td>Pin control group to be used for SPI in active state</td>
+	</tr>
+	<tr>
+		<td>gpsb-id</td>
+		<td>Bus ID of SPI master device</td>
+	</tr>
+	<tr>
+		<td>gpsb-port</td>
+		<td>SPI port number</td>
+	</tr>
+<table>
 
-Table 4.6 Optional Properties of SPI Master Driver in Device Tree
+<p align="center"><strong>Table 1.6 Optional Properties of SPI Master Driver in Device Tree</strong></p>
 
-| Property | Default Value | Description |
-| --- | --- | --- |
-| spi-max-frequency | 20 MHz | Maximum speed |
-| ctf-mode-disable | 0 | n  0: Continuous transfer mode 
-n  1: Single mode |
-| status | “okay” | Activation status 
-“okay”: Activates the device. 
-“disabled”: Deactivates the device. |
-| access-control0
-access-control1
-access-control2
-access-control3 | 0x00000000 to 0xFFFFFFFF | Address filtering 
- 
-Note 1: DMA can access only a region of addresses. 
-Note 2: If the region of DMA addresses is out of the range that you set in device tree, GPSB sends 0x00 and cannot read the data. |
+<table>
+	<tr>
+		<th>Property</th>
+		<th>Default Value</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>spi-max-frequency</td>
+		<td>20 MHz</td>
+		<td>Maximum speed</td>
+	</tr>
+	<tr>
+		<td>ctf-mode-disable</td>
+		<td>0</td>
+		<td><li>0: Continuous transfer mode <li>1: Single mode </td>
+	</tr>
+	<tr>
+		<td>status</td>
+		<td>"okay"</td>
+		<td>Activation status<br> “okay”: Activates the device.<br> “disabled”: Deactivates the device.</td>
+	</tr>
+	<tr>
+		<td>access-control0<br> access-control1<br> access-control2<br> access-control3</td>
+		<td>0x00000000 to 0xFFFFFFFF</td>
+		<td>Address filtering<br><br> <strong>Note 1:</strong>DMA can access only a region of addresses.<br> <strong>Note 2:</strong> If the region of DMA addresses is out of the range that you set in device tree, GPSB sends 0x00 and cannot read the data.</td>
+	</tr>
+</table>
 
 ### 1.3.7.2 Kernel Configuration
 
@@ -4318,9 +4442,9 @@ root@jammy:~# ls /dev/spidev0.*
 
 ### 1.3.8 GPIO
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ee529df-9d4e-42ec-835f-fe323be8d7af" width="750" height="550" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ee529df-9d4e-42ec-835f-fe323be8d7af" width="750" height="550" >
+</p>
 
 ### 1.3.8.1 U-Boot Configuration
 
@@ -4385,23 +4509,62 @@ arch/arm/dts/tcc8050_53-pinctrl.dtsi
 
 ### 1.3.8.1.2 Properties
 
-Table 4.7 Pin Control Options
+<p align="center"><strong>Table 1.7 Pin Control Options</strong></p>
 
-| Option | Description |
-| --- | --- |
-| GPIO_ACTIVE_HIGH | If GPIO data is 1, the GPIO is output in high state. |
-| GPIO_ACTIVE_LOW | If GPIO data is 1, the GPIO is output in low state. |
-| telechips,drive-strength | Set port driver strength |
-| telechips,no-pull | Disable pull-up/down |
-| telechips,pull-up | Select pull-up/down and enables pull-up/down |
-| Telechips,pull-down |  |
-| telechips,input-enable | Enable input buffer |
-| telechips,output-low | Enable output and set to low/high |
-| telechips,output-high |  |
-| telechips,schmitt-input | Set to schmitt input type or CMOS input type |
-| telechips,cmos-input |  |
-| telechips,slow-slew | Select slew rate to fast/slow |
-| telechips,fast-slew |  |
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>GPIO_ACTIVE_HIGH</td>
+    <td>If GPIO data is 1, the GPIO is output in high state.</td>
+  </tr>
+  <tr>
+    <td>GPIO_ACTIVE_LOW</td>
+    <td>If GPIO data is 1, the GPIO is output in low state.</td>
+  </tr>
+  <tr>
+    <td>telechips,drive-strength</td>
+    <td>Set port driver strength</td>
+  </tr>
+  <tr>
+    <td>telechips,no-pull</td>
+    <td>Disable pull-up/down</td>
+  </tr>
+  <tr>
+    <td>telechips,pull-up</td>
+    <td rowspan="2">Select pull-up/down and enables pull-up/down</td>
+  </tr>
+  <tr>
+    <td>Telechips,pull-down</td>
+  </tr>
+  <tr>
+    <td>telechips,input-enable</td>
+    <td>Enable input buffer</td>
+  </tr>
+  <tr>
+    <td>telechips,output-low</td>
+    <td rowspan="2">Enable output and set to low/high</td>
+  </tr>
+  <tr>
+    <td>telechips,output-high</td>
+  </tr>
+  <tr>
+    <td>telechips,schmitt-input</td>
+    <td rowspan="2">Set to schmitt input type or CMOS input type</td>
+  </tr>
+  <tr>
+    <td>telechips,cmos-input</td>
+  </tr>
+  <tr>
+    <td rowspan="2">telechips,slow-slew</td>
+    <td>Select slew rate to slow</td>
+  </tr>
+  <tr>
+    <td>telechips,fast-slew</td>
+  </tr>
+</table>
 
 ### 1.3.8.1.3 Driver Source File
 
@@ -4539,13 +4702,13 @@ arch/arm64/boot/dts/tcc/tcc8050-linux-ivi-tost_sv0.1.dts
 **Example**:
 
 ```bash
-	&gpx: x represents small letter of GPIO group such as A, B, C, D, etc. The following example applies to GPIO D group. 
-	arg 1: GPIO number 
-	arg 2: Option 
+- &gpx: x represents small letter of GPIO group such as A, B, C, D, etc. The following example applies to GPIO D group. 
+	- arg 1: GPIO number 
+	- arg 2: Option 
 
-	gpio-states = <arg1 arg2>; 
-	arg 1: GPIO D 25 is set to low (0). 
-	arg 2: GPIO D 24 is set to high (1). 
+- gpio-states = <arg1 arg2>; 
+	- arg 1: GPIO D 25 is set to low (0). 
+	- arg 2: GPIO D 24 is set to high (1). 
 
 regulators { 
 gpios = <&gpd 25 0x4 &gpd 24 0x4>; 
@@ -4704,24 +4867,66 @@ static const struct of_device_id tcc_pinctrl_of_match[] = {
 
 ### 1.3.8.2.5 Properties
 
-Table 4.8 Pin Control Options
+<p align="center"><strong>Table 1.8 Pin Control Options</strong></p>
 
-| Option | Description |
-| --- | --- |
-| telechips,drive-strength | Set port driver strength. |
-| telechips,no-pull | Disable pull-up/down. |
-| telechips,pull-up | Select pull-up/down and enable pull-up/down. |
-| Telechips,pull-down |  |
-| telechips,input-enable | Disable output. |
-| telechips,output-low | Enable output and set to low/high. |
-| telechips,output-high |  |
-| telechips,input_buffer_enable | Enable/disable input buffer. |
-| telechips,input_buffer_disable |  |
-| telechips,Schmitt-input | Set to Schmitt input type or CMOS input type. |
-| telechips,cmos-input |  |
-| telechips,slow-slew | Select slew rate to fast/slow. |
-| telechips,fast-slew |  |
-| telechips,eclk-sel | Select external input clock. |
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>telechips,drive-strength</td>
+    <td>Set port driver strength.</td>
+  </tr>
+  <tr>
+    <td>telechips,no-pull</td>
+    <td>Disable pull-up/down.</td>
+  </tr>
+  <tr>
+    <td>telechips,pull-up</td>
+    <td rowspan="2">Select pull-up/down and enable pull-up/down.</td>
+  </tr>
+  <tr>
+    <td>Telechips,pull-down</td>
+  </tr>
+  <tr>
+    <td>telechips,input-enable</td>
+    <td>Disable output.</td>
+  </tr>
+  <tr>
+    <td>telechips,output-low</td>
+    <td rowspan="2">Enable output and set to low/high.</td>
+  </tr>
+  <tr>
+    <td>telechips,output-high</td>
+  </tr>
+  <tr>
+    <td>telechips,input_buffer_enable</td>
+    <td rowspan="2">Enable/disable input buffer.</td>
+  </tr>
+  <tr>
+    <td>telechips,input_buffer_disable</td>
+  </tr>
+  <tr>
+    <td>telechips,Schmitt-input</td>
+    <td rowspan="2">Set to Schmitt input type or CMOS input type.</td>
+  </tr>
+  <tr>
+    <td>telechips,cmos-input</td>
+  </tr>
+  <tr>
+    <td>telechips,slow-slew</td>
+    <td rowspan="2">Select slew rate to fast/slow.</td>
+  </tr>
+  <tr>
+    <td>telechips,fast-slew</td>
+  </tr>
+  <tr>
+    <td>telechips,eclk-sel</td>
+    <td>Select external input clock.</td>
+  </tr>
+</table>
+
 
 ### 1.3.8.2.6 Example for Sample Driver
 
@@ -4811,27 +5016,54 @@ Eight port channels (Port 0 to Port 7)
 
 ### 1.3.9.2.2 Properties
 
-Table 4.9 Node Data of UART Device Tree
+<p align="center"><strong>Table 1.9 Node Data of UART Device Tree</strong></p>
 
-| Parameter | Format | Description |
-| --- | --- | --- |
-| node | <name>[@<unit-address>] | <name> is a simple ASCII string and can be up to 31 characters in length. 
-<unit-address> is the primary address used to access the device. |
-| compatible | "<manufacturer>,<model>" | Compatible is a list of strings. 
-The first string in the list specifies the exact device which the node represents. 
-The following strings represent other devices which the device is compatible with. |
-| reg | <address length> | An address value is a list of one or more 32-bit integers called cells. 
-The length value as one register range with length 0 x 1000. |
-| interrupts | <int_type int_num trigger> | The parameter should contain the UART interrupt numbers. |
-| clocks | <peri_clk_label peri_idx>, <iobus_clk_label iobus_idx> | The first clock corresponds to the clock named UARTCLK on the IP block. 
-The second clock corresponds to the PCLK. |
-| clock-names | "uart_clk_name", "io_bus_clk name" | The listed first clock must be named “uartclk” and the listed second clock must be named “apb_pclk” |
-| status | A node is enabled if:
-- "ok" or "okay"
-A node is disabled if:
-- "disabled" | Activation status 
-“okay”: Activates the device. 
-“disabled”: Deactivates the device. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Format</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>node</td>
+    <td>&lt;name&gt;[@&lt;unit-address&gt;]</td>
+    <td>&lt;name&gt; is a simple ASCII string and can be up to 31 characters in length. 
+    &lt;unit-address&gt; is the primary address used to access the device.</td>
+  </tr>
+  <tr>
+    <td>compatible</td>
+    <td>"&lt;manufacturer&gt;,&lt;model&gt;"</td>
+    <td>Compatible is a list of strings. The first string in the list specifies the exact device which the node represents. 
+    The following strings represent other devices which the device is compatible with.</td>
+  </tr>
+  <tr>
+    <td>reg</td>
+    <td>&lt;address length&gt;</td>
+    <td>An address value is a list of one or more 32-bit integers called cells. 
+    The length value as one register range with length 0 x 1000.</td>
+  </tr>
+  <tr>
+    <td>interrupts</td>
+    <td>&lt;int_type int_num trigger&gt;</td>
+    <td>The parameter should contain the UART interrupt numbers.</td>
+  </tr>
+  <tr>
+    <td>clocks</td>
+    <td>&lt;peri_clk_label peri_idx&gt;, &lt;iobus_clk_label iobus_idx&gt;</td>
+    <td>The first clock corresponds to the clock named UARTCLK on the IP block. 
+    The second clock corresponds to the PCLK.</td>
+  </tr>
+  <tr>
+    <td>clock-names</td>
+    <td>"uart_clk_name", "io_bus_clk name"</td>
+    <td>The listed first clock must be named “uartclk” and the listed second clock must be named “apb_pclk”</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>A node is enabled if:<br>"ok" or "okay"<br>A node is disabled if:<br>"disabled"</td>
+    <td>Activation status: <br>“okay”: Activates the device.<br>“disabled”: Deactivates the device.</td>
+  </tr>
+</table>
 
 ### 1.3.9.2.3 Pin Configurations for Raspberry PIN Map
 
@@ -4912,10 +5144,10 @@ root@jammy:~# dmesg | grep UART
 
 The following is the UART setting information for debugging.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/aa0a0d0b-45a2-47ad-b840-dc849330b949" width="350" height="250" style="margin: auto;">
-	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1967825b-8a66-46fe-bddd-61c334266473" width="600" height="450" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/aa0a0d0b-45a2-47ad-b840-dc849330b949" width="350" height="250" >
+	<img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1967825b-8a66-46fe-bddd-61c334266473" width="600" height="450" >
+</p>
 
 ### 1.3.9.4.1 Configuration for CA72
 
@@ -5076,22 +5308,54 @@ Telechips device tree files are located in <Kernel>/arch/arm64/boot/dts/tcc/.
 
 Properties for PWM driver in device tree consist of required properties and optional properties.
 
-| Property | Description |
-| --- | --- |
-| Compatible | Name for matching with the drivers depending on chipsets |
-| reg | Physical base address and size of the controller's register area. |
-| tcc,pwm-number | Should be 4. Total number of ports supported by the chip.
-Refer to Full Specification for ports infomation. |
-| #pwm-cells | Should be <2>
-the pwm-cells property is used to define the number of cells that are used to represent a PWM signal. |
-| clocks | phandle to input clock. |
-| clock-frequency | Desired PWM frequency in Hz. |
-| pinctrl-names | Sould be "default". |
-| pinctrl-0 | phandle to pinctrl function. |
-| gfb-port | Port mapping number for PDM0, PDM1, PDM2, PDM3 |
-| status | Activation status
-"okay”: Activates the device.
-"disabled”: Deactivates the device. |
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Compatible</td>
+    <td>Name for matching with the drivers depending on chipsets</td>
+  </tr>
+  <tr>
+    <td>reg</td>
+    <td>Physical base address and size of the controller's register area.</td>
+  </tr>
+  <tr>
+    <td>tcc,pwm-number</td>
+    <td>Should be 4. Total number of ports supported by the chip.
+    Refer to Full Specification for ports information.</td>
+  </tr>
+  <tr>
+    <td>#pwm-cells</td>
+    <td>Should be &lt;2&gt;
+    the pwm-cells property is used to define the number of cells that are used to represent a PWM signal.</td>
+  </tr>
+  <tr>
+    <td>clocks</td>
+    <td>phandle to input clock.</td>
+  </tr>
+  <tr>
+    <td>clock-frequency</td>
+    <td>Desired PWM frequency in Hz.</td>
+  </tr>
+  <tr>
+    <td>pinctrl-names</td>
+    <td>Should be "default".</td>
+  </tr>
+  <tr>
+    <td>pinctrl-0</td>
+    <td>phandle to pinctrl function.</td>
+  </tr>
+  <tr>
+    <td>gfb-port</td>
+    <td>Port mapping number for PDM0, PDM1, PDM2, PDM3</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>Activation status: <br>"okay”: Activates the device.<br>"disabled”: Deactivates the device.</td>
+  </tr>
+</table>
 
 ### 1.3.10.1.3 Example
 

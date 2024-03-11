@@ -35,9 +35,9 @@ An example was made by using a demo program based on Advanced Linux Sound Archit
 
 The example program records sound for 3 seconds and plays the recorded sound.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/bc5def05-31bd-462b-8401-a1c14542eb02" width="800" height="100" style="margin: auto;">
-</div>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/bc5def05-31bd-462b-8401-a1c14542eb02" width="800" height="100">
+</p>
 <p align="center"><strong>Figure 2.1 Audio Example</strong></p>
 
 ```bash

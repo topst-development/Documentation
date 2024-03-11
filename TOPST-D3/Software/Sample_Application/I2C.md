@@ -35,24 +35,24 @@ Each cell in the output table will contain one of the following symbols:
 OptionsDescription-yn  Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.-an  Force scanning of non-regular addresses. Not recommended.-qn  Use SMBus "quick write" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to corrupt the Atmel AT24RF08 EEPROM found on many IBM Thinkpad laptops.-rn  Use SMBus "read byte" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. 
 n  This is known to lock SMBus on various write-only chips (most notably clock chips at address 0x69).-Fn  Display the list of functionalities implemented by the adapter and exit-Vn  Display the version and exit-ln  Output a list of installed buses 
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/27b6d33d-f18f-4f09-bcb8-eeca28109636" width="800" height="150" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.8 I2C Device</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/27b6d33d-f18f-4f09-bcb8-eeca28109636" width="800" height="150">
+</p>
+<p align="center"><strong>Figure 1.1 I2C Device</strong></p>
 
 ```bash
 $ pip install RPLCD
 $ rplcd-tests i2c testsuite expander=PCF8574 addr=0x3f port=1 cols=16 rows=2 charmap=A00
 ```
 
-As shown in Figure 2.8, **addr** should be checked and written appropriately in the above command.
+As shown in Figure 1.2, **addr** should be checked and written appropriately in the above command.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/7e38a522-177f-447a-82d2-4a219b0319ae" width="600" height="250" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.9 Check addr</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/7e38a522-177f-447a-82d2-4a219b0319ae" width="600" height="250">
+</p>
+<p align="center"><strong>Figure 1.2 Check addr</strong></p>
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1f21dfbe-2983-4983-88ff-a75199a4370d" width="500" height="350" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.10 I2C LCD Test</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1f21dfbe-2983-4983-88ff-a75199a4370d" width="500" height="350">
+</p>
+<p align="center"><strong>Figure 1.3 I2C LCD Test</strong></p>

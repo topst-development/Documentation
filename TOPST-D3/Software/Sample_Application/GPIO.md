@@ -21,15 +21,15 @@ $ gpioExample -g 82 -o 0
 
 ```
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6a50edf9-332d-46ad-9ed4-84b033149e27" width="500" height="350" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.3 GPIO Example</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6a50edf9-332d-46ad-9ed4-84b033149e27" width="500" height="350">
+</p>
+<p align="center"><strong>Figure 1.1 GPIO Example</strong></p>
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a8569505-e11c-4f86-8139-74fc4773272d" width="500" height="350" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.4 GPIO Example Board</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a8569505-e11c-4f86-8139-74fc4773272d" width="500" height="350">
+</p>
+<p align="center"><strong>Figure 1.2 GPIO Example Board</strong></p>
 
 ```c
 #include <errno.h>

@@ -11,10 +11,10 @@ Linux distribution version:
 - Ubuntu 18.04 (LTS)
 - Ubuntu 20.04 (LTS) and above
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c588b93c-107a-4f95-a197-7d1e9875f170" width="750" height="400" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.1 Ubuntu Installation</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c588b93c-107a-4f95-a197-7d1e9875f170" width="750" height="400">
+</p>
+<p align="center"><strong>Figure 1.1 Ubuntu Installation</strong></p>
 
 ## 1.2 Virtual Machine Installation
 
@@ -29,21 +29,21 @@ Recommended capacity is 150 GB or more, 8 GB RAM, and 16 processors.
 
 It is recommended that network adapter is set as Bridged.
 
-<div style="display: flex; justify-content: center;">
+<p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/366bbdfa-6b1f-4fc7-a168-e7c3d8542d41" width="500" height="400">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/59a33d1f-2634-4cd5-9ac7-081d7365bf59" width="500" height="400">
-</div>
+</p>
 
-<div style="display: flex; justify-content: center;">
+<p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9ac6858f-c4c7-4c6d-907f-6aada1d59b96" width="500" height="400">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5bc3cd34-d465-4698-81e0-bf7d00e17c98" width="500" height="400">
-</div>
+</p>
 
-<div style="display: flex; justify-content: center;">
+<p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9625271c-2d11-42a9-9ac1-ed178de9f399" width="500" height="400">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ff96ad69-39c2-445d-87b9-f5cdf8c3e8ee" width="500" height="400">
-</div>
-<p align="center"><strong>Figure 2.2 VMware Settings for Virtual Server</strong></p>
+</p>
+<p align="center"><strong>Figure 1.2 VMware Settings for Virtual Server</strong></p>
 
 ## 1.3 Setting Linux Environment
 
@@ -62,7 +62,7 @@ After downloading SSH and Samba, you should set each program to your environment
 
 ### 1.3.2 Utilities
 
-Install the utilities at once. To use Yocto Project, the following utilities must be installed on Host System (individual computer or development server).
+Install the utilities at once. To use Yocto Project, the following utilities must be installed on Host System (inpidual computer or development server).
 
 ```bash
 sudo apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib build-essential chrpath

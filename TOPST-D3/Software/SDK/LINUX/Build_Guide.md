@@ -4,12 +4,12 @@
 
 is based on Yocto Project 3.1 Dunfell. Therefore, the Yocto Project environment must be set on the host PC to use TOPST D3 SDK. To download SDK, source-mirror, and tools, you must install utilities.
 
-Figure 3.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and perform build. After the build is completed, package, image, and SDK are provided as results.
+Figure 1.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and perform build. After the build is completed, package, image, and SDK are provided as results.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/daa02968-b0b5-4ff2-8dd0-65edd6393f45" width="750" height="400" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 3.1 Yocto Project Task Process</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/daa02968-b0b5-4ff2-8dd0-65edd6393f45" width="750" height="400">
+</p>
+<p align="center"><strong>Figure 1.1 Yocto Project Task Process</strong></p>
 
 There are two ways to download and build TOPST D3 SDK as follows:
 
@@ -22,41 +22,96 @@ However, this document only describes ***autolinux***.
 
 After TOPST is downloaded, you can check the following items.
 
-|  | Item |  | Description |
-| --- | --- | --- | --- |
-| poky | Meta |  | Yocto Project 3.1 Dunfell build system |
-|  | meta-poky |  |  |
-|  | meta-yocto-bsp |  |  |
-|  | meta-arm |  | Support Arm toolchain Layer |
-|  | meta-qt5 |  | Support Qt5 5.6.3 Layer |
-|  | meta-gplv2 |  | Support packages to avoid GPLv3 license |
-|  | meta-telechips-bsp |  | Support Telechips BSP Layer |
-|  | meta-telechips | meta-core | Recipes that require modification from Open Source Software (OSS) used by Telechips TOPST D3 SDK or recipes that are not in Yocto Project 3.1 |
-|  |  | meta-extra | OSS Layer that is added by Telechips |
-|  |  | meta-qt5 | Support Qt5 to support Telechips GUI application |
-|  |  | meta-ivi | Configuration package and example programs of In-vehicle Infotainment (IVI) |
-|  |  | meta-subcore | Configuration package and example programs on sub-core |
-|  | download_web.sh |  | Script for downloading source-mirror, tools, and FWDN |
-| boot-firmware |  | prebuilt | Boot-firmware files 
-|   |   |   |Tools to make images for boot-firmware 
-|   |   |   |Each boot-firmware for TOPST |
-|  |  | fwdn | FWDN execute file 
-|   |   |   |VTC driver 
-|   |   |   |Source code |
-|  |  | mktcimg | mktcimg execute file source code |
-| tools |  |  |   -  gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz
-|   |   |   |-  x86_64-buildtools-extended-nativesdk-standalone-3.0+snapshot-20200315.sh
-|   |   |   |-  x86_64-buildtools-nativesdk-standalone-3.1.sh |
-| cr5-bsp |  | scripts | Debug script for JTAG debugger such as TRACE32 |
-|  |  | source | Source code
-|   |   |   |-  app.drivers: Application drivers. These drivers do not access hardware directly.
-|   |   |   |-  app.sample: Sample applications
-|   |   |   |-  build: Build environment & utilities
-|   |   |   |-  core: Assembly core files
-|   |   |   |-  dev.drivers: Device drivers
-|   |   |   |-  os: Operating System
-|   |   |   |-  sal: System Adaptation Layer |
-|  |  | tools | Tools for FWDN & FW upgrade |
+<table>
+  <tr>
+    <th></th>
+    <th colspan="2">Item</th>
+    <th colspan="1">Description</th>
+  </tr>
+  <tr>
+    <td rowspan="12">poky</td>
+    <td colspan="2">Meta</td>
+    <td rowspan="3">Yocto Project 1.1 Dunfell build system</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-poky</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-yocto-bsp</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-arm</td>
+    <td>Support Arm toolchain Layer</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-qt5</td>
+    <td>Support Qt5 5.6.3 Layer</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-gplv2</td>
+    <td>Support packages to avoid GPLv3 license</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-telechips-bsp</td>
+    <td>Support Telechips BSP Layer</td>
+  </tr>
+  <tr>
+    <td rowspan="5">meta-telechips</td>
+    <td>meta-core</td>
+    <td>Recipes that require modification from Open Source Software (OSS) used by Telechips TOPST D3 SDK or recipes that are not in Yocto Project 3.1</td>
+  </tr>
+  <tr>
+    <td>meta-extra</td>
+    <td>OSS Layer that is added by Telechips</td>
+  </tr>
+  <tr>
+    <td>meta-qt5</td>
+    <td>Support Qt5 to support Telechips GUI application</td>
+  </tr>
+  <tr>
+    <td>meta-ivi</td>
+    <td>Configuration package and example programs of In-vehicle Infotainment (IVI)</td>
+  </tr>
+  <tr>
+    <td>meta-subcore</td>
+    <td>Configuration package and example programs on sub-core</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2">download_web.sh</td>
+    <td>Script for downloading source-mirror, tools, and FWDN</td>
+  </tr>
+  <tr>
+    <td colspan="2" rowspan="3">boot-firmware</td>
+    <td>prebuilt</td>
+    <td>Boot-firmware files<br>Tools to make images for boot-firmware<br>Each boot-firmware for TOPST</td>
+  </tr>
+  <tr>
+    <td>fwdn</td>
+    <td>FWDN execute file<br>VTC driver<br>Source code</td>
+  </tr>
+  <tr>
+    <td>mktcimg</td>
+    <td>mktcimg execute file source code</td>
+  </tr>
+  <tr>
+    <td colspan="3">tools</td>
+    <td><li>gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz<li>x86_64-buildtools-extended-nativesdk-standalone-3.0+snapshot-20200315.sh<li>x86_64-buildtools-nativesdk-standalone-3.1.sh</td>
+  </tr>
+  <tr>
+    <td colspan="2" rowspan="3">cr5-bsp</td>
+    <td>scripts</td>
+    <td>Debug script for JTAG debugger such as <strong>TRACE32</strong></td>
+  </tr>
+  <tr>
+    <td>source</td>
+    <td>Source code<li>app.drivers: Application drivers. These drivers do not access hardware directly.<li>app.sample: Sample applications<li>build: Build environment & utilities<li>core: Assembly core files<li>dev.drivers: Device drivers<li>os: Operating System<li>sal: System Adaptation Layer</td>
+  </tr>
+  <tr>
+    <td>tools</td>
+    <td>Tools for FWDN & FW upgrade</td>
+  </tr>
+</table>
 
 ### 1.1.2 autolinux
 
@@ -75,19 +130,60 @@ $ cd topst
 
 ### 1.1.2.2 Composition of autolinux
 
-| File |  | Description |
-| --- | --- | --- |
-| autolinux |  | Python script to automatically download and build the SDK |
-| README |  | Document that describes autolinux |
-| classes | feature.py | Python class for SDK features |
-|  | features/common.py | File that defines supported common features |
-|  | features/ivi.py | File that defines supported TOPST D3 SDK features |
-| doc | variable.txt | Document that describes the variables used in autolinux |
-| script | build_configure.sh | Shell script to execute configure in autolinux |
-|  | build_image.sh | Shell script to execute BitBake in autolinux |
-|  | devtool.sh | Shell script to execute devtool in autolinux |
-| template | sdk.py | File that defines supported SDKs, source mirror, and build tool paths |
-|  | tcc805x_linux_ivi.py | File that defines supported machines and manifests for TOPST D3 SDK |
+<table>
+  <tr>
+    <th colspan="2">File</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td colspan="2">autolinux</td>
+    <td>Python script to automatically download and build the SDK</td>
+  </tr>
+  <tr>
+    <td colspan="2">README</td>
+    <td>Document that describes <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td rowspan="3">classes</td>
+    <td>feature.py</td>
+    <td>Python class for SDK features</td>
+  </tr>
+  <tr>
+    <td>features/common.py</td>
+    <td>File that defines supported common features</td>
+  </tr>
+  <tr>
+    <td>features/ivi.py</td>
+    <td>File that defines supported TOPST D3 SDK features</td>
+  </tr>
+  <tr>
+    <td>doc</td>
+    <td>variable.txt</td>
+    <td>Document that describes the variables used in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td rowspan="3">script</td>
+    <td>build_configure.sh</td>
+    <td>Shell script to execute <strong>configure</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td>build_image.sh</td>
+    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td>devtool.sh</td>
+    <td>Shell script to execute <strong>devtool</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td rowspan="2">template</td>
+    <td>sdk.py</td>
+    <td>File that defines supported SDKs, source mirror, and build tool paths</td>
+  </tr>
+  <tr>
+    <td>tcc805x_linux_ivi.py</td>
+    <td>File that defines supported machines and manifests for TOPST D3 SDK</td>
+  </tr>
+</table>
 
 ### 1.1.2.3 autolinux Usage
 
@@ -385,24 +481,75 @@ autolinux.config  build          classes     doc      README�
 
 You can use the **BitBake** command to build on per-target basis. These targets differ for each package that is included in the build.
 
-| Command | Core | Created image |  |  | Description |
-| --- | --- | --- | --- | --- | --- |
-|  |  | Bootloader | Kernel | File system |  |
-| main | Main (CA72) | U-Boot 2020.01 | 5.4.159 | automotive-linux-platform-image | ivi-image + demo applications |
-| sub | Sub (CA53) |  |  | telechips-subcore-image | minimal root filesystem |
-| ubuntu | Main (CA72) | - | - | ubuntu-image | Ubuntu 22.04 TLS |
+<table>
+  <tr>
+    <th rowspan="2">Command</th>
+    <th rowspan="2">Core</th>
+    <th colspan="3">Created image</th>
+    <th rowspan="2">Description</th>
+  </tr>
+  <tr>
+    <th>Bootloader</th>
+    <th>Kernel</th>
+    <th>File system</th>
+  </tr>
+  <tr>
+    <td>main</td>
+    <td>Main (CA72)</td>
+    <td rowspan="2">U-Boot 2020.01</td>
+    <td rowspan="2">5.4.159</td>
+    <td>automotive-linux-platform-image</td>
+    <td>ivi-image + demo applications</td>
+  </tr>
+  <tr>
+    <td>sub</td>
+    <td>Sub (CA53)</td>
+    <td>telechips-subcore-image</td>
+    <td>Minimal root filesystem</td>
+  </tr>
+  <tr>
+    <td>ubuntu</td>
+    <td>Main (CA72)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>ubuntu-image</td>
+    <td>Ubuntu 22.04 TLS</td>
+  </tr>
+</table>
 
 In addition to the default image above, the image below is included in the system. If necessary, you can build with the below image.
 
 See the following table for field methods.
 
-| Core | File system | Description |
-| --- | --- | --- |
-| Main (CA72) | telechips-ivi-image-minimal | minimal root filesystem |
-|  | telechips-ivi-image-multimedia | ivi-image-minimal + GStreamer |
-|  | telechips-ivi-image | ivi-image-multimedia + Qt |
-|  | automotive-linux-platform-image | ivi-image + demo applications |
-| Sub (CA53) | telechips-subcore-image | minimal root filesystem |
+<table>
+  <tr>
+    <th>Core</th>
+    <th>File system</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td rowspan="4">Main (CA72)</td>
+    <td>telechips-ivi-image-minimal</td>
+    <td>Minimal root filesystem</td>
+  </tr>
+  <tr>
+    <td>telechips-ivi-image-multimedia</td>
+    <td>ivi-image-minimal + GStreamer</td>
+  </tr>
+  <tr>
+    <td>telechips-ivi-image</td>
+    <td>ivi-image-multimedia + Qt</td>
+  </tr>
+  <tr>
+    <td>automotive-linux-platform-image</td>
+    <td>ivi-image + demo applications</td>
+  </tr>
+  <tr>
+    <td>Sub (CA53)</td>
+    <td>telechips-subcore-image</td>
+    <td>Minimal root filesystem</td>
+  </tr>
+</table>
 
 If the environment for ***BitBake*** execution is not set up, run the command below
 
@@ -540,7 +687,6 @@ automotive-linux-platform-image-tcc8050-main-20230719075654.rootfs.squashfs  au
 automotive-linux-platform-image-tcc8050-main-20230719075654.testdata.json    automotive-linux-platform-image-tcc8050-main.testdata.json
 ```
 
----
 
 Then, download the build filesystem image to the TOPST D3 (Open platform board). (Refer to Chapter 4.3.1.)
 
@@ -564,10 +710,27 @@ As described in Chapter 3.1.2.5, the options below create the U-Boot, kernel, an
 
 Refer to Chapter 4 for download instructions.
 
-| Command | Core | Created image |  |  | Description |
-| --- | --- | --- | --- | --- | --- |
-|  |  | Bootloader | Kernel | File system |  |
-| main | Main (CA72) | U-Boot 2020.01 | 5.4.159 | automotive-linux-platform-image | ivi-image + demo applications |
+<table>
+    <tr>
+        <th rowspan="2">Command</th>
+        <th rowspan="2">Core</th>
+        <th colspan="3">Created image</th>
+        <th rowspan="2">Description</th>
+    </tr>
+    <tr>
+        <th>Bootloader</th>
+        <th>Kernel</th>
+        <th>File system</th>
+    </tr>
+    <tr>
+        <td>main</td>
+        <td>Main (CA72)</td>
+        <td>U-boot 2020.01</td>
+        <td>5.4.159</td>
+        <td>automotive-linux-platform-image</td>
+        <td>ivi-image + demo applications</td>
+    </tr>
+</table>
 
 The main core build image is created in the following path:
 
@@ -687,10 +850,27 @@ As described in Chapter 3.1.2.5, the options below create the u-boot, kernel, an
 
 Refer to Chapter 4 for download instructions.
 
-| Command | Core | Created image |  |  | Description |
-| --- | --- | --- | --- | --- | --- |
-|  |  | Bootloader | Kernel | File system |  |
-| sub | Sub (CA53) | U-Boot 2020.01 | 5.4.159 | telechips-subcore-image | minimal root filesystem |
+<table>
+    <tr>
+        <th rowspan="2">Command</th>
+        <th rowspan="2">Core</th>
+        <th colspan="3">Created image</th>
+        <th rowspan="2">Description</th>
+    </tr>
+    <tr>
+        <th>Bootloader</th>
+        <th>Kernel</th>
+        <th>File system</th>
+    </tr>
+    <tr>
+        <td>sub</td>
+        <td>Sub (CA53)</td>
+        <td>U-Boot 2020.01</td>
+        <td>5.4.159</td>
+        <td>telechips-subcore-image</td>
+        <td>minimal root filesystem</td>
+    </tr>
+</table>
 
 The sub-core build image is created in the following path:
 
@@ -1123,11 +1303,32 @@ This option creates a binary of the main core and sub-core into one image for au
 
 Refer to Chapter 4 for download instructions.
 
-| Command | Into SD Data.fai |  |  |  | Description |
-| --- | --- | --- | --- | --- | --- |
-|  | Core | Bootloader | Kernel | File system |  |
-| make_fai | Main (CA72) | U-Boot 2020.01 | 5.4.159 | automotive-linux-platform-image | ivi-image + demo applications |
-|  | Sub (CA53) |  |  | telechips-subcore-image | minimal root filesystem |
+<table>
+    <tr>
+        <th rowspan="2">Command</th>
+        <th colspan="4">Into SD Data.fai</th>
+        <th rowspan="2">Description</th>
+    </tr>
+    <tr>
+        <th>Core</th>
+        <th>Bootloader</th>
+        <th>Kernel</th>
+        <th>File system</th>
+    </tr>
+    <tr>
+        <td rowspan="2">make_fai</td>
+        <td>Main (CA72)</td>
+        <td rowspan="2">U-boot 2020.01</td>
+        <td rowspan="2">5.4.159</td>
+        <td>automotive-linux-platform-image</td>
+        <td>ivi-image + demo applications</td>
+    </tr>
+    <tr>
+        <td>Sub (CA53)</td>
+        <td>telechips-subcore-image</td>
+        <td>minimal root filesystem</td>
+    </tr>
+</table>
 
 The “SD Data.fai” build image is created in the following path:
 

@@ -17,22 +17,22 @@ If you press **SW2** and supply power, the USB boot process is initiated. If you
 
 Pressing **SW1** causes the system to reset. If you want to download a firmware, press **SW1** and **SW2** at the same time to boot USB mode.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/be28cc4c-7df1-49cf-bd62-e13f277663f2" width="350" height="250" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 4.1 USB Connection</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/be28cc4c-7df1-49cf-bd62-e13f277663f2" width="350" height="250">
+</p>
+<p align="center"><strong>Figure 1.1 USB Connection</strong></p>
 
 Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Administrator) and boot after changing to USB mode in Windows.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13ae985b-e214-4a47-95da-020fd5e0a50e" width="600" height="350" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 4.2 USB Connection in Windows Environment</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13ae985b-e214-4a47-95da-020fd5e0a50e" width="600" height="350">
+</p>
+<p align="center"><strong>Figure 1.2 USB Connection in Windows Environment</strong></p>
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6e737702-3f96-4f55-842d-8e2d91fa50ea" width="750" height="150" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 4.3 USB Connection in Linux Environment</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6e737702-3f96-4f55-842d-8e2d91fa50ea" width="750" height="150">
+</p>
+<p align="center"><strong>Figure 1.3 USB Connection in Linux Environment</strong></p>
 
 ## 1.3 FWDN in Windows
 
@@ -664,14 +664,14 @@ Time taken in 0:04:08.614812
 2. Install the serial port driver (CP210x Universal Windows Driver) in the Windows environment. (Download link: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 3. Change the boot mode to normal (eMMC) and reboot. Use a USB Type-C to USB 2.0 or 3.0 cable, not a C to C cable.
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cd6038b8-d22a-4c25-9409-1f9623aad7cf" width="500" height="350" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 4.4 UART Port</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cd6038b8-d22a-4c25-9409-1f9623aad7cf" width="500" height="350">
+</p>
+<p align="center"><strong>Figure 1.4 UART Port</strong></p>
 
 1. Connect to the main core by using the UART port in the ***SSH*** (Speed (bsp): 115200)
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/f5936328-9781-4463-ae48-359a227de9a3" width="750" height="650" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 4.5 Connected Screen (ID and Password are root)</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/f5936328-9781-4463-ae48-359a227de9a3" width="750" height="650">
+</p>
+<p align="center"><strong>Figure 1.5 Connected Screen (ID and Password are root)</strong></p>

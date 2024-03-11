@@ -19,10 +19,10 @@ USAGE: ./spiTest -d dev -l len -m mosi -s speed
 $ ./spiTest -d /dev/spidev0.0 -l 4 -m 12AB
 ```
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c7914b9b-092f-4a8a-8907-90d154ae1b7e" width="700" height="150" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.5 SPI Example</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c7914b9b-092f-4a8a-8907-90d154ae1b7e" width="700" height="150">
+</p>
+<p align="center"><strong>Figure 1.1 SPI Example</strong></p>
 
 ```c
 #include <string.h>
@@ -252,7 +252,7 @@ $ pip3 install luma.core
 $ matrix.demo.py
 ```
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46474588-da7b-472a-a73c-8192b69a47cf" width="400" height="600" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.6 Dot-matrix Test with SPI</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/46474588-da7b-472a-a73c-8192b69a47cf" width="400" height="600">
+</p>
+<p align="center"><strong>Figure 1.2 Dot-matrix Test with SPI</strong></p>

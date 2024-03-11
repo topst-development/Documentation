@@ -137,15 +137,15 @@ python3 pwmexample.py -cn 0 -p 100000 -cy 3
 ```
 
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d51fd9d3-c1cf-4e40-aa0a-d2d7b84e1da1" width="700" height="150" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.11 PWM Example</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d51fd9d3-c1cf-4e40-aa0a-d2d7b84e1da1" width="700" height="150">
+</p>
+<p align="center"><strong>Figure 1.1 PWM Example</strong></p>
 
-<div style="display: flex; justify-content: center;">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/dbd9d158-64b2-436f-8cc4-429f7fb4635a" width="400" height="550" style="margin: auto;">
-</div>
-<p align="center"><strong>Figure 2.12 Circuit Used in Example</strong></p>
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/dbd9d158-64b2-436f-8cc4-429f7fb4635a" width="400" height="550">
+</p>
+<p align="center"><strong>Figure 1.2 Circuit Used in Example</strong></p>
 
 ```python
 import os
