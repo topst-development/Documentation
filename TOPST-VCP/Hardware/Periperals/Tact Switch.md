@@ -22,13 +22,13 @@ Figure 1.4 shows the schematic of tack switch (SW4, SW6).
 
 
 ## Tact Switch (SW1)  
-SW1 is a tact switch to reset the power block and system block in TCC7045. The function of this button is as follows:  
+SW1 is a tact switch to reset the power block and system block in Main Processor Unit, TCC7045. The function of this button is as follows:  
 - Pressing the tack switch (SW1) in the power on state forces the power block to reset and the system of the TCC7045 to restart.
 - Be careful when pressing the tack switch as the power may suddenly turn off and data may be corrupted.
 
 
 ## Tact Switch (SW4, SW6)
-SW4, SW6 is a tact switch to input a low signal in TCC7045. The function of this button is as follows:  
+SW4, SW6 is a tact switch to input a low signal in Main Processor Unit, TCC7045. The function of this button is as follows:  
 - Pressing the tack switch (SW4, SW6) inputs a low signal to ADC or GPIO port of the TCC7045.
 - This allows that multiple operations may be executed.
 
