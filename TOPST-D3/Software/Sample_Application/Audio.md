@@ -38,7 +38,7 @@ The example program records sound for 3 seconds and plays the recorded sound.
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/bc5def05-31bd-462b-8401-a1c14542eb02" width="800" height="100">
 </p>
-<p align="center"><strong>Figure 2.1 Audio Example</strong></p>
+<p align="center"><strong>Figure 1.1 Audio Example</strong></p>
 
 ```bash
 $ man aplay
