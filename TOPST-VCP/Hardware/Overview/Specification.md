@@ -3,8 +3,7 @@
 </h1>
 
 
-This document is a hardware user guide for TOPST VCP based on the TCC7045 application processors. This document describes system installation, debugging, and detailed information on overall design and TOPST VCP usage.
-
+This document is a hardware user guide for TOPST VCP based on the TCC7045 application processors.
 
 Table 1.1 describes the features of the TCC7045.  
 
@@ -55,14 +54,17 @@ Table 1.1 describes the features of the TCC7045.
 
 Figure 1.1 shows the system block diagram of TOPST VCP.  
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/4c517865-c001-4d29-aa5b-79339cb3de79"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/91598f7d-0a56-42cb-bb90-5ece432f7d43"></p>
 
 ## TOPST VCP Overview
 TOPST VCP can implement the following functions:
-- Car Audio Video Navigation (AVN) System
-- Digital Cluster
-- Head Up Display (HUD)
+- Automotive Application
+  - Car Audio Video Navigation (AVN)System, Digital Cluster, Head Up Display (HUD), etc.
+- IOT Application
+  - Smart Factory, Etc.
 - Training & Education
+  - Sensor, Actuator Application, CAN Application, Etc.
+
 
 Table 1.3 Describes the default configuration of TOPST VCP.  
 
