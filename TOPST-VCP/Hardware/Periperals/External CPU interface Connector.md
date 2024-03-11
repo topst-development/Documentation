@@ -3,7 +3,7 @@
 </h1>
 
 
-This is connector for connecting External CPU Board.  
+J14D1 is connector for connecting External CPU Board.  
 However, a separate cable for connection is not provided.  
 
 Figure 1.1 shows the appearance of External CPU Interface Connector (J14D1).
