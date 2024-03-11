@@ -9,9 +9,9 @@ For support, see the hardware documentation section of the TOPST website(topst.a
 
 ## Technical Specifications  
 
-Table 2.1 shows the technical specifications for TOPST D3.  
+Table 1.1 shows the technical specifications for TOPST D3.  
 
-**Table 2.1 Technical Specification:**  
+**Table 1.1 Technical Specification:**  
 | Part Name        | TCC 8050                                                |
 |:----------------:|---------------------------------------------------------|
 | CPU              | ARM® Cortex-A72 1.6 GHz, Quad                           |
@@ -43,9 +43,9 @@ Table 2.1 shows the technical specifications for TOPST D3.
 Figure 1.1 shows the top view of the TOPST D3.  
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/3383a4f4-e9bf-4739-972d-39ed326397b9"></p>  
 
-Table 1.1 describes the connectors and components on the TOPST (top view).  
+Table 1.2 describes the connectors and components on the TOPST (top view).  
 
-**Table 1.1 Description of TOPST D3 (Top View):**  
+**Table 1.2 Description of TOPST D3 (Top View):**  
 
 | Item | Description                | Item | Description                      |
 |:----:|----------------------------|:----:|----------------------------------|
@@ -63,9 +63,9 @@ Table 1.1 describes the connectors and components on the TOPST (top view).
 Figure 1.2 shows the bottom view of the TOPST D3.  
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/254ebfea-b7dc-4abe-b0c9-1988474a1a78"></p>  
 
-Table 1.2 describes the connectors and components on the TOPST D3 (bottom view).  
+Table 1.3 describes the connectors and components on the TOPST D3 (bottom view).  
 
-**Table 1.2 Description of TOPST D3 (Bottom View):**  
+**Table 1.3 Description of TOPST D3 (Bottom View):**  
 
 | Item | Description                | Item | Description                         |
 |:----:|----------------------------|:----:|-------------------------------------|
