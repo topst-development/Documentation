@@ -3,7 +3,7 @@
 </h1>
 
 
-This is a standard 20-pin/2 mm connector to connect an external key function.  
+J10D1 is a standard 20-pin/2 mm connector to connect an external key function.  
 If you want to use other switch functions, a key sub-board should be developed first.  
 
 Figure 1.1 shows the appearance of key connector (J10D1).
