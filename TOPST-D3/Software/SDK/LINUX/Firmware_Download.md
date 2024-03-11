@@ -1,0 +1,677 @@
+# 1 Firmware Download
+
+This chapter describes how to download ***FWDN*** to the TOPST D3 (Open platform board) and log in the Linux console.
+
+## 1.1 Firmware Download Sequence
+
+The downloading sequence of ***FWDN*** is as follows:
+
+1. Set the boot mode switch to USB boot mode.
+2. Open Windows prompt or Linux console and test ***FWDN V8***.
+3. Connect ***FWDN V8*** to board.
+4. Download fai file.
+
+## 1.2 Connect TOPST D3 and Host PC with USB Boot
+
+If you press **SW2** and supply power, the USB boot process is initiated. If you supply power without pressing **SW2**, the normal boot process is initiated.
+
+Pressing **SW1** causes the system to reset. If you want to download a firmware, press **SW1** and **SW2** at the same time to boot USB mode.
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/be28cc4c-7df1-49cf-bd62-e13f277663f2" width="350" height="250">
+</p>
+<p align="center"><strong>Figure 1.1 USB Connection</strong></p>
+
+Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Administrator) and boot after changing to USB mode in Windows.
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13ae985b-e214-4a47-95da-020fd5e0a50e" width="600" height="350">
+</p>
+<p align="center"><strong>Figure 1.2 USB Connection in Windows Environment</strong></p>
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6e737702-3f96-4f55-842d-8e2d91fa50ea" width="750" height="150">
+</p>
+<p align="center"><strong>Figure 1.3 USB Connection in Linux Environment</strong></p>
+
+## 1.3 FWDN in Windows
+
+1. After connecting to TOPST D3, go to “boot-firmware/tools/fwdn” through Samba in the Windows environment.
+2. Right-click and select “Open in Terminal”.
+
+    “boot-firmware/tools/fwdn” is an executable file that enables automatic firmware download by using ***FWDN V8***.
+
+1. Enter**.** \**bat** command to start the download.
+2. When**bat** runs, you can select **“all**” or “**part”**.  If you select “**all**”, you can download the entire firmware.  If you select “**part**”, you can download only the part you want.
+
+```bash
+PS Z:\topst\modify-filesystem\boot-firmware\tools\fwdn> .\fwdn.bat
+
+Start the FWDN V8
+
+Enter the part you want to install : all, main, sub, mcu, QUIT
+
+: all
+
+Connect FWDN V8 to Board
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::LoadFWDNRom:403] Start to load FWDN rom
+
+[FWDN_V8::LoadMCERT:592] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\mcert.bin
+
+[FWDN_V8::LoadHSM:609] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\hsm.cs.bin
+
+[FWDN_V8::SendFWDNHeader:634] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\fwdn.rom - Header
+
+[FWDN_V8::SendFWDNBody_V8:537] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\fwdn.rom - Body
+
+[FWDN_V8::LoadFWDNRom:414] Complete to load FWDN rom
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\dram_params.bin
+
+[FWDN_V8::PrintDeviceInfo:1183] --------------Device info-------------
+
+[FWDN_V8::PrintDeviceInfo:1184]
+
+- ---- Detail of Storages -----
+
+#### eMMC Info ####
+
+Manufacture ID: 0x11
+
+OEM: 0x100
+
+Name: 008GB
+
+User Capacity: 7.3 GiB (7818182656 Byte)
+
+Boot Capacity: 8 MiB (8388608 Byte)
+
+RPMB Capacity: 4 MiB (4194304 Byte)
+
+Speed Mode: HS200
+
+#### SNOR Info ####
+
+Manufacture ID: 0xc2
+
+Device ID: 0x2019
+
+Name: MXIC-MX25L25645G
+
+Sector Size: 4 KiB (4096 Byte)
+
+Total Capacity: 32 MiB (33554432 Byte)
+
+4Byte Address Mode: Supported
+
+#### UFS Info ####
+
+Vendor : TOSHIBA
+
+Product : THGAFEG8T10100
+
+Revision : 0100
+
+bSecureRemovalType : 3
+
+LUN0(Boot) Capcity: 8 MiB(8388608 Byte)
+
+LUN0(Boot) bProvisioningType = 3
+
+LUN1(Boot) Capcity: 8 MiB(8388608 Byte)
+
+LUN1(Boot) bProvisioningType = 3
+
+LUN2(User) Capcity: 29.8 GiB(31998345216 Byte)
+
+LUN2(Boot) bProvisioningType = 3
+
+Total Capacity: 29.8 GiB(32015122432 Byte)
+
+- ---- Summary of Storages -----
+
+eMMC : O
+
+SNOR : O
+
+UFS : O
+
+- O : Init success
+- X : Init failed or not exist
+- ---- Summary of DRAM Init -----
+
+DRAM Init : Success (Result 0x0 )
+
+DRAM Size : 8192MB
+
+[FWDN_V8::PrintDeviceInfo:1185] --------------------------------------
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/06-14:14:41
+
+Low Format Storage by FWDN V8 - Optional
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[FWDN_V8::LowformatCommand:1352] Start low-format
+
+[FWDN_V8::LowformatCommand:1353] low-format can take a long time
+
+[FWDN_V8::LowformatCommand:1382] Complete low-format
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/06-14:14:49
+
+Download Pre-built F/W Image
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\bconf.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\bconf.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\mcert.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\mcert.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\dram_params.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\dram_params.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\hsm.cs.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\hsm.cs.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\scfw.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\scfw.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\optee.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\optee.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl2.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl2.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl2.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl2.rom
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/06-14:15:00
+
+100% [||||||||||||||||||||||||||||||] 859264/859264Download Images to SNOR for CR5 Core
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] deploy-fwdn\cr5_snor.rom
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/06-14:15:07
+
+100% [||||||||||||||||||||||||||||||] 4194304/4194304Download FAI File - SD_Data.fai
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] deploy-fwdn\SD_Data.fai
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] deploy-fwdn\SD_Data.fai
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/06-15:12:10
+
+100% [||||||||||||||||||||||||||||||] 3208651712/3208651712
+
+- * When writing FAI files without low-format, there may be garbage values in partition where data is not written.
+```
+
+
+### 1.3.1 Partition FWDN with Windows
+
+If you select “**part”**, you can download only the firmware you want. If you enter the desired item, the download will begin. When you enter the **-h** command, the following list of downloadable parts appears:
+
+- bootloader
+- kernel
+- filesystem
+- dtb
+- home
+
+```bash
+PS \boot-firmware\tools\fwdn> .\fwdn.bat
+
+Start the FWDN V8
+
+Start the FWDN V8
+
+Enter the part you want to install : all, main, sub, mcu, QUIT
+
+: main
+
+Enter the part you want to install on main-core?: all, bootloader, kernel, filesystem, dtb, home
+
+: kernel
+
+Partition Install Start
+
+Connect FWDN V8 to Board
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::LoadFWDNRom:403] Start to load FWDN rom
+
+[FWDN_V8::LoadMCERT:592] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\mcert.bin
+
+[FWDN_V8::LoadHSM:609] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\hsm.cs.bin
+
+[FWDN_V8::SendFWDNHeader:634] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\fwdn.rom - Header
+
+[FWDN_V8::SendFWDNBody_V8:537] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\fwdn.rom - Body
+
+[FWDN_V8::LoadFWDNRom:414] Complete to load FWDN rom
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\dram_params.bin
+
+[FWDN_V8::PrintDeviceInfo:1183] --------------Device info-------------
+
+[FWDN_V8::PrintDeviceInfo:1184]
+
+- ---- Detail of Storages -----
+
+#### eMMC Info ####
+
+Manufacture ID: 0x11
+
+OEM: 0x100
+
+Name: 008GB
+
+User Capacity: 7.3 GiB (7818182656 Byte)
+
+Boot Capacity: 8 MiB (8388608 Byte)
+
+RPMB Capacity: 4 MiB (4194304 Byte)
+
+Speed Mode: HS200
+
+#### SNOR Info ####
+
+Manufacture ID: 0xc2
+
+Device ID: 0x2019
+
+Name: MXIC-MX25L25645G
+
+Sector Size: 4 KiB (4096 Byte)
+
+Total Capacity: 32 MiB (33554432 Byte)
+
+4Byte Address Mode: Supported
+
+#### UFS Info ####
+
+Vendor : TOSHIBA
+
+Product : THGAFEG8T10100
+
+Revision : 0100
+
+bSecureRemovalType : 3
+
+LUN0(Boot) Capcity: 8 MiB(8388608 Byte)
+
+LUN0(Boot) bProvisioningType = 3
+
+LUN1(Boot) Capcity: 8 MiB(8388608 Byte)
+
+LUN1(Boot) bProvisioningType = 3
+
+LUN2(User) Capcity: 29.8 GiB(31998345216 Byte)
+
+LUN2(Boot) bProvisioningType = 3
+
+Total Capacity: 29.8 GiB(32015122432 Byte)
+
+- ---- Summary of Storages -----
+
+eMMC : O
+
+SNOR : O
+
+UFS : O
+
+- O : Init success
+- X : Init failed or not exist
+- ---- Summary of DRAM Init -----
+
+DRAM Init : Success (Result 0x0 )
+
+DRAM Size : 8192MB
+
+[FWDN_V8::PrintDeviceInfo:1185] --------------------------------------
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:12
+
+Download Pre-built F/W Image
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\bconf.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\bconf.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\mcert.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\mcert.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\dram_params.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\dram_params.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\hsm.cs.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\hsm.cs.bin
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\scfw.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\scfw.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\optee.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\optee.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl1.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl2.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca72_bl2.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl2.rom
+
+[FWDN_V8::GetFileAndWriteCommand:748] \boot-firmware\tools\fwdn\deploy-fwdn\boot-firmware\ca53_bl2.rom
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:15
+
+100% [||||||||||||||||||||||||||||||] 859264/859264Download Images to SNOR for CR5 Core
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] deploy-fwdn\cr5_snor.rom
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:19
+
+100% [||||||||||||||||||||||||||||||] 4194304/4194304Kernel install
+
+[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] ..\..\..\build\tcc8050-main\tmp\deploy\images\tcc8050-main\tc-boot-tcc8050-main.img
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:20
+
+100% [||||||||||||||||||||||||||||||] 11386880/11386880[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] ..\..\..\build\tcc8050-main\tmp\deploy\images\tcc8050-main\tc-boot-tcc8050-main.img
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:21
+
+100% [||||||||||||||||||||||||||||||] 11386880/11386880[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] ..\..\..\build\tcc8050-sub\tmp\deploy\images\tcc8050-sub\tc-boot-tcc8050-sub.img
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:21
+
+100% [||||||||||||||||||||||||||||||] 8978432/8978432[main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
+
+[FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
+
+[main:117] Start write command
+
+[FWDN_V8::GetFileAndWriteCommand:748] ..\..\..\build\tcc8050-sub\tmp\deploy\images\tcc8050-sub\tc-boot-tcc8050-sub.img
+
+[main:125] Complete write command
+
+[main:142] Complete FWDN
+
+[FWDNLogger::PrintCurTime:111] 22/10/19-11:47:22
+
+100% [||||||||||||||||||||||||||||||] 8978432/8978432End !!
+```
+
+
+## 1.4 FWDN in Linux
+
+In a Linux environment, you must run ***FWDN*** with root privileges. Use the **sudo** command or execute as root account.
+
+```bash
+TOPST@ubuntu:~/build/TOPST$ sudo ./autolinux -c fwdn
+Read configuration from autolinux.config
+ 
+=================================================================================
+Start the FWDN V8
+Start the FWDN V8
+Enter the part you want to install : all, main, sub, mcu, QUIT
+: all
+Start the FWDN V8
+Connect FWDN V8 to Board
+[main:30] FWDN V8 v1.4.7 - 2022.8.29 11:05:52
+[LoadFWDNRom:403] Start to load FWDN rom
+[LoadMCERT:592] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/mcert.bin
+[LoadHSM:609] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/hsm.cs.bin
+[SendFWDNHeader:634] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/fwdn.rom - Header
+[SendFWDNBody_V8:537] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/fwdn.rom - Body
+[LoadFWDNRom:414] Complete to load FWDN rom
+[GetFWDNRomVersion:1530] fwdn.rom version : 21.9.29
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/dram_params.bin
+[PrintDeviceInfo:1187] --------------Device info-------------
+[PrintDeviceInfo:1188]
+ 
+----- Detail of Storages -----
+#### eMMC Info ####
+Manufacture ID: 0x11
+OEM: 0x100
+Name: 008GB
+User Capacity: 7.3 GiB (7818182656 Byte)
+Boot Capacity: 8 MiB (8388608 Byte)
+RPMB Capacity: 4 MiB (4194304 Byte)
+Speed Mode: HS200
+#### SNOR Info ####
+Manufacture ID: 0xc2
+Device ID: 0x2019
+Name: MXIC-MX25L25645G
+Sector Size: 4 KiB (4096 Byte)
+Total Capacity: 32 MiB (33554432 Byte)
+4Byte Address Mode: Supported
+#### UFS Info ####
+Vendor : TOSHIBA
+Product : THGAFEG8T10100
+Revision : 0100
+bSecureRemovalType : 3
+LUN0(Boot) Capcity: 8 MiB(8388608 Byte)
+LUN0(Boot) bProvisioningType = 3
+LUN1(Boot) Capcity: 8 MiB(8388608 Byte)
+LUN1(Boot) bProvisioningType = 3
+LUN2(User) Capcity: 29.8 GiB(31998345216 Byte)
+LUN2(Boot) bProvisioningType = 3
+Total Capacity: 29.8 GiB(32015122432 Byte)
+ 
+----- Summary of Storages -----
+eMMC : O
+SNOR : O
+UFS : O
+- O : Init success
+- X : Init failed or not exist
+ 
+----- Summary of DRAM Init -----
+DRAM Init : Success (Result 0x0 )
+DRAM Size : 8192MB
+ 
+[PrintDeviceInfo:1189] --------------------------------------
+[main:146] Complete FWDN
+[PrintCurTime:111] 22/10/05-23:15:30
+Low Format Storage by FWDN V8 - Optional
+[main:30] FWDN V8 v1.4.7 - 2022.8.29 11:05:52
+[GetFWDNRomVersion:1530] fwdn.rom version : 21.9.29
+[LowformatCommand:1356] Start low-format
+[LowformatCommand:1357] low-format can take a long time
+[LowformatCommand:1386] Complete low-format
+[main:146] Complete FWDN
+[PrintCurTime:111] 22/10/05-23:15:31
+Download Pre-built F/W Image
+[main:30] FWDN V8 v1.4.7 - 2022.8.29 11:05:52
+[GetFWDNRomVersion:1530] fwdn.rom version : 21.9.29
+[main:121] Start write command
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/bconf.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/bconf.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/mcert.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/mcert.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/dram_params.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/dram_params.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/hsm.cs.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/hsm.cs.bin
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/scfw.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/scfw.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/optee.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/optee.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca72_bl1.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca72_bl1.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca53_bl1.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca53_bl1.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca72_bl2.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca72_bl2.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca53_bl2.rom
+[GetFileAndWriteCommand:748] /build/tcc8050-main/tmp/deploy/images/tcc8050-main/boot-firmware/ca53_bl2.rom
+[main:129] Complete write command
+[main:146] Complete FWDN
+[PrintCurTime:111] 22/10/05-23:15:32
+100% [||||||||||||||||||||||||||||||] 859264/859264Download Images to SNOR for CR5 Core
+[main:30] FWDN V8 v1.4.7 - 2022.8.29 11:05:52
+[GetFWDNRomVersion:1530] fwdn.rom version : 21.9.29
+[main:121] Start write command
+[GetFileAndWriteCommand:748] deploy-fwdn/cr5_snor.rom
+[main:129] Complete write command
+[main:146] Complete FWDN
+[PrintCurTime:111] 22/10/05-23:15:35
+100% [||||||||||||||||||||||||||||||] 4194304/4194304Download FAI File - SD_Data.fai
+[main:30] FWDN V8 v1.4.7 - 2022.8.29 11:05:52
+[GetFWDNRomVersion:1530] fwdn.rom version : 21.9.29
+[main:121] Start write command
+[GetFileAndWriteCommand:748] deploy-fwdn/SD_Data.fai                           
+[main:129] Complete write command
+[main:146] Complete FWDN
+[PrintCurTime:111] 22/10/05-23:19:32
+100% [||||||||||||||||||||||||||||||] 3208520640/3208520640
+** When writing FAI files without low-format, there may be garbage values in partition where data is not written.End !!
+Time taken in 0:04:08.614812
+```
+
+## 1.5 TOPST Connection with UART
+
+1. Use the UART connection to verify that the firmware download is completed successfully.
+2. Install the serial port driver (CP210x Universal Windows Driver) in the Windows environment. (Download link: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+3. Change the boot mode to normal (eMMC) and reboot. Use a USB Type-C to USB 2.0 or 3.0 cable, not a C to C cable.
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cd6038b8-d22a-4c25-9409-1f9623aad7cf" width="500" height="350">
+</p>
+<p align="center"><strong>Figure 1.4 UART Port</strong></p>
+
+1. Connect to the main core by using the UART port in the ***SSH*** (Speed (bsp): 115200)
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/f5936328-9781-4463-ae48-359a227de9a3" width="750" height="650">
+</p>
+<p align="center"><strong>Figure 1.5 Connected Screen (ID and Password are root)</strong></p>
