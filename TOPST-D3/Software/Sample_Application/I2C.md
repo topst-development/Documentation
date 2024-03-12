@@ -53,6 +53,6 @@ As shown in Figure 1.2, **addr** should be checked and written appropriately in 
 <p align="center"><strong>Figure 1.2 Check addr</strong></p>
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1f21dfbe-2983-4983-88ff-a75199a4370d" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/1f21dfbe-2983-4983-88ff-a75199a4370d" width="500" height="700">
 </p>
 <p align="center"><strong>Figure 1.3 I2C LCD Test</strong></p>
