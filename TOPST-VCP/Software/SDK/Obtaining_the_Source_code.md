@@ -1,0 +1,48 @@
+# 1 Obtaining the Source Code
+
+The source code forms the backbone of any development project. It contains all the necessary files, configurations, and instructions required to build and run software for a specific platform. In the context of the TOPST-VCP board, obtaining the correct source code is crucial to ensure compatibility and optimal performance.
+
+This chapter will guide you through the process of fetching the source code using git, a widely-used version control system.
+
+## 1.1 Cloning the TOPST-VCP Source Code
+
+To obtain the source code for the TOPST-VCP board, you'll be using the git clone command. This command creates a copy of the remote repository on your local machine, allowing you to work with the code directly.
+
+Follow these steps to clone the TOPST-VCP source code:
+
+1. **Open Terminal** : Launch the terminal application on your Ubuntu 22.04 system.
+2. **Navigate to Desired Directory** : Choose a suitable location on your system where you'd like to save the source code. For instance, if you'd like to save it in the user home directory, use the command
+
+```bash
+cd ~
+```
+
+3. **Clone the Repository** : Use the following command to clone the TOPST-VCP source code from the provided git address
+
+```bash
+git clone https://git.huconn.com/topst-vcp/topst-vcp-bsp-freertos.git
+```
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ade01a9a-0d3d-451a-a5bd-4d928f71005b" width="750" height="350">
+</p>
+<p align="center"><strong>Figure 1. Clone the Repository</strong></p>
+
+4. **Navigate to the Cloned Directory** : Once the cloning process is complete, use the following command to navigate to the directory containing the source code
+
+```bash
+cd topst-vcp-bsp-freertos
+```
+
+You now have a local copy of the TOPST-VCP source code on your machine, ready for building and development.
+
+## 1.2 Familiarizing with the Source Code Structure
+
+After cloning, it's beneficial to familiarize yourself with the directory structure and contents of the source code. This will give you a better understanding of where specific files are located and how the codebase is organized.
+
+- Use commands like ls to list the contents of directories.
+- Explore key directories and files to understand their purpose and functionality.
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/77b68348-8e02-4f4b-af73-c890a7891d6c" width="750" height="350">
+</p>
+<p align="center"><strong>Figure 2. Source code Structure</strong></p>
