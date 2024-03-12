@@ -481,7 +481,7 @@ autolinux.config  build          classes     doc      README�
 
 You can use the **BitBake** command to build on per-target basis. These targets differ for each package that is included in the build.
 
-<table align="center">
+<table>
   <tr>
     <th rowspan="2">Command</th>
     <th rowspan="2">Core</th>
@@ -521,7 +521,7 @@ In addition to the default image above, the image below is included in the syste
 
 See the following table for field methods.
 
-<table align="center">
+<table>
   <tr>
     <th>Core</th>
     <th>File system</th>
@@ -708,7 +708,7 @@ As described in Chapter 3.1.2.5, the options below create the U-Boot, kernel, an
 
 Refer to Chapter 4 for download instructions.
 
-<table align="center">
+<table>
     <tr>
         <th rowspan="2">Command</th>
         <th rowspan="2">Core</th>
@@ -846,7 +846,7 @@ As described in Chapter 3.1.2.5, the options below create the u-boot, kernel, an
 
 Refer to Chapter 4 for download instructions.
 
-<table align="center">
+<table>
     <tr>
         <th rowspan="2">Command</th>
         <th rowspan="2">Core</th>
@@ -1297,7 +1297,7 @@ This option creates a binary of the main core and sub-core into one image for au
 
 Refer to Chapter 4 for download instructions.
 
-<table align="center">
+<table>
     <tr>
         <th rowspan="2">Command</th>
         <th colspan="4">Into SD Data.fai</th>
