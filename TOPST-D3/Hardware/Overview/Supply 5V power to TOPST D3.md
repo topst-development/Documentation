@@ -19,9 +19,9 @@ Figure 1.2 shows the location of 5V Power Jack on the TOPST D3.
 
 
 Supply 5V power to the TOPST D3 by performing the following steps:
->  1. Check the DC 5V power adapter that is included in TOPST D3 kit.
->  2. Plug in the included power adapter to AC outlet.
->  3. Insert the DC socket of power adapter to the 5V Poser Jack on the TOPST D3.
+1. Check the DC 5V power adapter that is included in TOPST D3 kit.
+2. Plug in the included power adapter to AC outlet.
+3. Insert the DC socket of power adapter to the 5V Poser Jack on the TOPST D3.
 
 Table 1.1 shows the absolute maximum ratings.  
 
