@@ -58,13 +58,7 @@ aplay [flags] [filename [filename]] ...
 
 If the filename is not specified, the standard output or input is used. The **aplay** utility accepts multiple filenames.
 
-<style>
-  .tap{
-    text-indent: 50px;
-  }
-</style>
-
-<table>
+<table align="center">
   <tr>
     <th>Option</th>
     <th>Description</th>
@@ -105,49 +99,53 @@ If the filename is not specified, the standard output or input is used. The **ap
     <td>-f, --format=FORMAT</td>
     <td>
       <li><strong>Sample format</strong>
-      <li><strong>Recognized sample foramts are:</strong>
-      <li class="tap">S8
-      <li class="tap">U8
-      <li class="tap">S16_LE
-      <li class="tap">S16_BE
-      <li class="tap">U16_LE
-      <li class="tap">U16_BE
-      <li class="tap">S24_LE
-      <li class="tap">S24_BE
-      <li class="tap">U24_LE
-      <li class="tap">U24_BE
-      <li class="tap">S32_LE
-      <li class="tap">S32_BE
-      <li class="tap">U32_LE
-      <li class="tap">U32_BE
-      <li class="tap">FLOAT_LE
-      <li class="tap">FLOAT_BE
-      <li class="tap">FLOAT64_LE
-      <li class="tap">FLOAT64_BE
-      <li class="tap">IEC958_SUBFRAME_LE
-      <li class="tap">IEC958_SUBFRAME_BE
-      <li class="tap">MU_LAW
-      <li class="tap">A_LAW
-      <li class="tap">IMA_ADPCM
-      <li class="tap">MPEG
-      <li class="tap">GSM
-      <li class="tap">SPECIAL
-      <li class="tap">S24_3LE
-      <li class="tap">S24_3BE
-      <li class="tap">U24_3LE
-      <li class="tap">U24_3BE
-      <li class="tap">S20_3LE
-      <li class="tap">S20_3BE
-      <li class="tap">U20_3LE
-      <li class="tap">U20_3BE
-      <li class="tap">S18_3LE
-      <li class="tap">S18_3BE
-      <li class="tap">U18_3LE
-      <li class="tap"><strong>Some of these formats may not be available on selected hardware.</strong>
-      <li><strong>The available format shortcuts are:</strong>
-      <li class="tap"><strong>-f cd (16-bit little-endian, 44100, stereo) [-f S16_LE -c2 -r44100]</strong>
-      <li class="tap"><strong>-f cdr (16-bit big-endian, 44100, stereo) [-f S16_BE -c2 -f44100]</strong>
-      <li class="tap"><strong>-f dat (16-bit little-endian, 48000, stereo) [-f S16_LE -c2 -r48000]</strong>
+      <li><strong>Recognized sample foramts are:</strong><br>
+          <pre>
+  - S8
+  - U8 
+  - S16_LE
+  - S16_BE
+  - U16_LE
+  - U16_BE
+  - S24_LE
+  - S24_BE
+  - U24_LE
+  - U24_BE
+  - S32_LE
+  - S32_BE
+  - U32_LE
+  - U32_BE
+  - FLOAT_LE
+  - FLOAT_BE
+  - FLOAT64_LE
+  - FLOAT64_BE
+  - IEC958_SUBFRAME_LE
+  - IEC958_SUBFRAME_BE
+  - MU_LAW
+  - A_LAW
+  - IMA_ADPCM
+  - MPEG
+  - GSM
+  - SPECIAL
+  - S24_3LE
+  - S24_3BE
+  - U24_3LE
+  - U24_3BE
+  - S20_3LE
+  - S20_3BE
+  - U20_3LE
+  - U20_3BE
+  - S18_3LE
+  - S18_3BE
+  - U18_3LE
+  - <strong>Some of these formats may not be available on selected hardware.</strong>
+      </pre>
+      <li><strong>The available format shortcuts are:</strong><br>
+      <pre>
+  <strong>-f cd (16-bit little-endian, 44100, stereo) [-f S16_LE -c2 -r44100]</strong>
+  <strong>-f cdr (16-bit big-endian, 44100, stereo) [-f S16_BE -c2 -f44100]</strong>
+  <strong>-f dat (16-bit little-endian, 48000, stereo) [-f S16_LE -c2 -r48000]</strong>
+      </pre>
       <li><strong>If no format is given, U8 is used.</strong>
     </td>
   </tr>
@@ -262,12 +260,14 @@ If the filename is not specified, the standard output or input is used. The **ap
   <tr>
     <td>--use-strftime</td>
     <td><li><strong>When recording, interpret %-codes in the file name parameter by using the strftime facility whenever the output file is opened. The important strftime codes are: </strong>
-    <li class="tap"><strong>%Y: year</strong>
-    <li class="tap"><strong>%m: month</strong>
-    <li class="tap"><strong>%d: day of the month</strong>
-    <li class="tap"><strong>%H: hour</strong>
-    <li class="tap"><strong>%M: minute</strong>
-    <li class="tap"><strong>%S: second</strong>
+    <pre>
+- <strong>%Y: year</strong>
+- <strong>%m: month</strong>
+- <strong>%d: day of the month</strong>
+- <strong>%H: hour</strong>
+- <strong>%M: minute</strong>
+- <strong>%S: second</strong>
+    </pre>
     </td>
   </tr>
   <tr>

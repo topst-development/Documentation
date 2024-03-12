@@ -251,7 +251,7 @@ $ tar -xzvf ~/Downloads/eclipse-cpp-luna-SR2-linux-gtk-x86_64.tar.gz
 ```
 
 
-1. Run ***Eclipse***.
+4. Run ***Eclipse***.
 
 ```bash
 $ cd eclipse
@@ -341,7 +341,7 @@ Yocto Project Documentation plug-in
 </p>
 <p align="center"><strong>Figure 1.6 Select Preferences</strong></p>
 
-1. Click the Yocto Project ADT on the left tab and set it up.
+2. Click the Yocto Project ADT on the left tab and set it up.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/06487724-9523-4d31-8045-260f426bb1ec" width="700" height="500">

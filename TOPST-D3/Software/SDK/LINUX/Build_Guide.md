@@ -22,7 +22,7 @@ However, this document only describes ***autolinux***.
 
 After TOPST is downloaded, you can check the following items.
 
-<table>
+<table align="center">
   <tr>
     <th></th>
     <th colspan="2">Item</th>
@@ -130,7 +130,7 @@ $ cd topst
 
 ### 1.1.2.2 Composition of autolinux
 
-<table>
+<table align="center">
   <tr>
     <th colspan="2">File</th>
     <th>Description</th>
@@ -481,7 +481,7 @@ autolinux.config  build          classes     doc      README�
 
 You can use the **BitBake** command to build on per-target basis. These targets differ for each package that is included in the build.
 
-<table>
+<table align="center">
   <tr>
     <th rowspan="2">Command</th>
     <th rowspan="2">Core</th>
@@ -521,7 +521,7 @@ In addition to the default image above, the image below is included in the syste
 
 See the following table for field methods.
 
-<table>
+<table align="center">
   <tr>
     <th>Core</th>
     <th>File system</th>
@@ -669,8 +669,6 @@ NOTE: Writing buildhistory took: 1 seconds
 Summary: There was 1 WARNING message shown.
 ```
 
----
-
 Check the built filesystem image.
 
 ```bash
@@ -710,7 +708,7 @@ As described in Chapter 3.1.2.5, the options below create the U-Boot, kernel, an
 
 Refer to Chapter 4 for download instructions.
 
-<table>
+<table align="center">
     <tr>
         <th rowspan="2">Command</th>
         <th rowspan="2">Core</th>
@@ -842,15 +840,13 @@ Built Path : /home/topst/build/tcc8050-main
 =================================================================================
 ```
 
----
-
 ### 1.1.3.2 Sub-core Build
 
 As described in Chapter 3.1.2.5, the options below create the u-boot, kernel, and telechips-subcore-image file system for the sub-core.
 
 Refer to Chapter 4 for download instructions.
 
-<table>
+<table align="center">
     <tr>
         <th rowspan="2">Command</th>
         <th rowspan="2">Core</th>
@@ -981,8 +977,6 @@ Built Path : /home/topst/build/tcc8050-sub
 
 =================================================================================
 ```
-
----
 
 ### 1.1.3.3 MCU Build
 
@@ -1303,7 +1297,7 @@ This option creates a binary of the main core and sub-core into one image for au
 
 Refer to Chapter 4 for download instructions.
 
-<table>
+<table align="center">
     <tr>
         <th rowspan="2">Command</th>
         <th colspan="4">Into SD Data.fai</th>
@@ -1553,4 +1547,4 @@ If you want to create and insert Ubuntu images, refer to “*TOPST D3 Linux SDK-
 
 | Core | Created image | Description |
 | --- | --- | --- |
-| Main (CA72) | ubuntu-jammy-arm64-xx.img | Ubuntu 22.04 TLS |
+| Main (CA72) | ubuntu-jammy-arm64-xx.img | Ubuntu 22.04 LTS |

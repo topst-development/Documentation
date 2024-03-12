@@ -1,4 +1,4 @@
-### 1.1.1 Pulse Width Modulation (PWM)
+# 1 Pulse Width Modulation (PWM)
 
 Pulse Width Modulation (PWM) is a type of pulse modulation that modulates the width of the pulse according to the magnitude of the signal.
 
