@@ -22,7 +22,7 @@ However, this document only describes ***autolinux***.
 
 After TOPST is downloaded, you can check the following items.
 
-<table>
+<table align="center">
   <tr>
     <th></th>
     <th colspan="2">Item</th>
@@ -130,7 +130,7 @@ $ cd topst
 
 ### 1.1.2.2 Composition of autolinux
 
-<table>
+<table align="center">
   <tr>
     <th colspan="2">File</th>
     <th>Description</th>
@@ -669,8 +669,6 @@ NOTE: Writing buildhistory took: 1 seconds
 Summary: There was 1 WARNING message shown.
 ```
 
----
-
 Check the built filesystem image.
 
 ```bash
@@ -842,8 +840,6 @@ Built Path : /home/topst/build/tcc8050-main
 =================================================================================
 ```
 
----
-
 ### 1.1.3.2 Sub-core Build
 
 As described in Chapter 3.1.2.5, the options below create the u-boot, kernel, and telechips-subcore-image file system for the sub-core.
@@ -981,8 +977,6 @@ Built Path : /home/topst/build/tcc8050-sub
 
 =================================================================================
 ```
-
----
 
 ### 1.1.3.3 MCU Build
 
@@ -1553,4 +1547,4 @@ If you want to create and insert Ubuntu images, refer to “*TOPST D3 Linux SDK-
 
 | Core | Created image | Description |
 | --- | --- | --- |
-| Main (CA72) | ubuntu-jammy-arm64-xx.img | Ubuntu 22.04 TLS |
+| Main (CA72) | ubuntu-jammy-arm64-xx.img | Ubuntu 22.04 LTS |

@@ -2,14 +2,14 @@
 
 The following tables show the GPIO pin maps available on the TCC8050. Depending on the color, the pins available for each core are marked.
 
-<table>
+<table align="center">
   <tr>
     <th>TOPST D3</th>
     <th>Function Table (Black: A72/A53, <span style="color: blue;">Blue: A72/A53/R5</span>, <span style="color: red;">Red: R5</span>)</th>
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -204,7 +204,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -367,7 +367,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -514,7 +514,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -637,7 +637,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -772,7 +772,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -885,7 +885,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -1284,7 +1284,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -1617,7 +1617,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
   </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -1980,7 +1980,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
   </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -2284,7 +2284,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   
 </table>
 
-<table>
+<table align="center">
     <thead>
       <tr>
         <th>Package</th>
@@ -2663,7 +2663,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     </tbody>
   </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -2976,7 +2976,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
   </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -3123,7 +3123,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -3246,7 +3246,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -3501,7 +3501,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
 </table>
 
-<table>
+<table align="center">
     <thead>
       <tr>
         <th>Package</th>
@@ -3718,7 +3718,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     </tbody>
   </table>
 
-<table>
+<table align="center">
   <thead>
     <tr>
       <th>Package</th>
@@ -3881,7 +3881,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tbody>
 </table>
 
-<table>
+<table align="center">
  <thead>
   <tr>
     <th>Package</th>
@@ -4016,7 +4016,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
  </tbody>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <th>Package</th>
     <th>Default</th>
@@ -4259,7 +4259,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -4462,7 +4462,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -4837,7 +4837,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -5150,7 +5150,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
   </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -5549,7 +5549,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
   </table>
 
-<table>
+<table align="center">
     <tr>
       <th>Package</th>
       <th>Default</th>
@@ -5883,7 +5883,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
   </table>
   
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -6258,7 +6258,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
       </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -6572,7 +6572,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
 
 </table>
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -6803,7 +6803,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -6997,7 +6997,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
 </table>
 
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -7157,7 +7157,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
 </table>
 
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -7291,7 +7291,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
 </table>
 
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>
@@ -7330,7 +7330,7 @@ The following tables show the GPIO pin maps available on the TCC8050. Depending 
     </tr>
 </table>
 
-<table>
+<table align="center">
     <tr>
         <th>Package</th>
         <th>Default</th>

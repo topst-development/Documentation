@@ -41,8 +41,8 @@ Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Admi
 
     “boot-firmware/tools/fwdn” is an executable file that enables automatic firmware download by using ***FWDN V8***.
 
-1. Enter**.** \**bat** command to start the download.
-2. When**bat** runs, you can select **“all**” or “**part”**.  If you select “**all**”, you can download the entire firmware.  If you select “**part**”, you can download only the part you want.
+3. Enter **.\fwdn.bat** command to start the download.
+4. When **fwdn.bat** runs, you can select **"all"** or **"part"**.<br>  If you select **"all"**, you can download the entire firmware.<br>  If you select **"part"**, you can download only the part you want.
 
 ```bash
 PS Z:\topst\modify-filesystem\boot-firmware\tools\fwdn> .\fwdn.bat
@@ -273,7 +273,7 @@ Download Pre-built F/W Image
 
 ### 1.3.1 Partition FWDN with Windows
 
-If you select “**part”**, you can download only the firmware you want. If you enter the desired item, the download will begin. When you enter the **-h** command, the following list of downloadable parts appears:
+If you select **“part”**, you can download only the firmware you want. If you enter the desired item, the download will begin. When you enter the **-h** command, the following list of downloadable parts appears:
 
 - bootloader
 - kernel
@@ -669,7 +669,7 @@ Time taken in 0:04:08.614812
 </p>
 <p align="center"><strong>Figure 1.4 UART Port</strong></p>
 
-1. Connect to the main core by using the UART port in the ***SSH*** (Speed (bsp): 115200)
+4. Connect to the main core by using the UART port in the ***SSH*** (Speed (bsp): 115200)
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/f5936328-9781-4463-ae48-359a227de9a3" width="750" height="650">

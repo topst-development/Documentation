@@ -3265,7 +3265,7 @@ The following shows pin configuration.
 
 <p align="center"><strong>Table 1.1 Required Properties for SDHCI Driver in U-Boot</strong></p>
 
-<table>
+<table align="center">
 	<tr>
 		<th>Property</th>
 		<th>Description</th>
@@ -3294,7 +3294,7 @@ The following shows pin configuration.
 
 <p align="center"><strong>Table 1.2 Optional Properties for SDHCI Driver in U-Boot</strong></p>
 
-<table>
+<table align="center">
 	<tr>
 		<th>Property</th>
 		<th>Description</th>
@@ -4049,7 +4049,7 @@ Properties for I2C master driver in device tree consist of required properties a
 
 <p align="center"><strong>Table 1.3 Required Properties of I2C Master Driver in Device Tree</strong></p>
 
-<table>
+<table align="center">
 	<tr>
 		<th>Property</th>
 		<th>Description</th>
@@ -4094,7 +4094,7 @@ Properties for I2C master driver in device tree consist of required properties a
 
 <p align="center"><strong>Table 1.4 Optional Properties of I2C Master Driver in Device Tree</strong></p>
 
-<table>
+<table align="center">
 	<tr>
 		<th>Property</th>
 		<th>Default Value</th>
@@ -4323,7 +4323,7 @@ Properties for SPI master driver in device tree consists of required properties 
 
 <p align="center"><strong>Table 1.5 Required Properties of SPI Master Driver in Device Tree</strong></p>
 
-<table>
+<table align="center">
 	<tr>
 		<th>Property</th>
 		<th>Description</th>
@@ -4364,11 +4364,11 @@ Properties for SPI master driver in device tree consists of required properties 
 		<td>gpsb-port</td>
 		<td>SPI port number</td>
 	</tr>
-<table>
+</table>
 
 <p align="center"><strong>Table 1.6 Optional Properties of SPI Master Driver in Device Tree</strong></p>
 
-<table>
+<table align="center">
 	<tr>
 		<th>Property</th>
 		<th>Default Value</th>
@@ -4511,7 +4511,7 @@ arch/arm/dts/tcc8050_53-pinctrl.dtsi
 
 <p align="center"><strong>Table 1.7 Pin Control Options</strong></p>
 
-<table>
+<table align="center">
   <tr>
     <th>Option</th>
     <th>Description</th>
@@ -4869,7 +4869,7 @@ static const struct of_device_id tcc_pinctrl_of_match[] = {
 
 <p align="center"><strong>Table 1.8 Pin Control Options</strong></p>
 
-<table>
+<table align="center">
   <tr>
     <th>Option</th>
     <th>Description</th>
@@ -5018,7 +5018,7 @@ Eight port channels (Port 0 to Port 7)
 
 <p align="center"><strong>Table 1.9 Node Data of UART Device Tree</strong></p>
 
-<table>
+<table align="center">
   <tr>
     <th>Parameter</th>
     <th>Format</th>
@@ -5308,7 +5308,7 @@ Telechips device tree files are located in <Kernel>/arch/arm64/boot/dts/tcc/.
 
 Properties for PWM driver in device tree consist of required properties and optional properties.
 
-<table>
+<table align="center">
   <tr>
     <th>Property</th>
     <th>Description</th>
