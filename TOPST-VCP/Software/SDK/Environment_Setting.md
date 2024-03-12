@@ -1,0 +1,49 @@
+# 1 Environment Setting
+
+Successfully developing for the TOPST-VCP board requires a well-structured development environment. This chapter will guide you through the necessary steps to set up your Ubuntu 22.04 system with all the essential tools, utilities, and software packages.
+
+## 1.1 Installing Essential Tools and Utilities
+
+Before diving into the specifics of the TOPST-VCP board, it's crucial to have some basic utilities and tools installed. These tools serve as the foundation upon which other software and configurations will be built.
+
+1. **Terminal** : Ubuntu 22.04 comes with a built-in terminal. Familiarize yourself with its usage, as many of the following steps will require terminal commands.
+2. **Text Editor**: While Ubuntu comes with a basic text editor, you might want to consider installing more robust editors such as “nano”, “vim” or graphical ones like “gedit” or “VSCode” based on your preference.
+3. **SSH Tools** : Remote access to other systems or devices, especially the TOPST- VCP board, can be essential during development. Various SSH tools can facilitate this:
+4. **Putty** : A popular, free, and open-source terminal emulator that supports SSH, among other protocols. It's lightweight and easy to use.
+5. **Tera Term** : An open-source terminal emulator that's more feature-rich and provides extensive support for various communication protocols, including SSH.
+6. **Secure CRT** : A commercial product known for its robustness and advanced features. It's a go-to choice for professionals seeking a comprehensive SSH tool with extensive session management capabilities.
+
+Depending on your specific needs and preferences, you can choose one or more of these tools for SSH access.
+
+## 1.2 Installing Software Using apt
+
+The “apt” package manager is a powerful tool in Ubuntu, allowing you to install, update, and manage software packages with ease.
+
+### 1.2.1 Updating the package list
+
+Before installing any new software, it's a good practice to update the list of available packages. This ensures you're getting the latest versions and dependencies.
+
+```bash
+sudo apt update
+
+sudo apt upgrade
+```
+
+This command fetches the latest list of available packages from the repositories.
+
+### 1.2.2 Installing common development tools
+
+For most development tasks, especially for the TOPST-VCP board, some common tools are essential.
+
+Install these tools using the following command :
+
+```bash
+sudo apt install build-essential git
+```
+
+This command installs both the buide-essential package and git. (For your reference, the tool below is Secure CRT.)
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6a5d052b-c48b-4e2c-b140-7039ea35d4fd" width="700" height="400">
+</p>
+<p align="center"><strong>Figure 1. Install Essential Package</strong></p>
