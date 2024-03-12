@@ -42,12 +42,12 @@ Table 1 describes the connectors of the UART/JTAG sub-board.
 This chapter describes how to connect the TOPST D3 and the UART/JTAG sub-board.  
 
 Connect the UART/JTAG sub-board to the TOPST D3 by using a Flexible Flat Cable (FFC) as follows:
->  1. Prepare one FFC and one USB Type-C cable.
->  2. Connect the FFC to Debug I/F connector on the UART/JTAG sub-board and Debug I/F connector on the TOPST D3
->  >  - It is important to connect the blue line of the FFC facing up.
->  3. Connect the UART/JTAG sub-board to your Host PC by using a USB Type-C cable.
->  >  - Refer to Table 1 to select the appropriate UART port according to the target core. For example, A72 UART can be connected to the UART Port of the main core (Cortex-A72 Quad).
->  4. Check the serial log message through the Terminal application on your Host PC
+1. Prepare one FFC and one USB Type-C cable.
+2. Connect the FFC to Debug I/F connector on the UART/JTAG sub-board and Debug I/F connector on the TOPST D3
+- It is important to connect the blue line of the FFC facing up.
+3. Connect the UART/JTAG sub-board to your Host PC by using a USB Type-C cable.
+- Refer to Table 1 to select the appropriate UART port according to the target core. For example, A72 UART can be connected to the UART Port of the main core (Cortex-A72 Quad).
+4. Check the serial log message through the Terminal application on your Host PC
 
 Figure 1.4 shows the location of Debug on the TOPST D3 connected with Debug on the UART/JTAG sub-board.  
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dd1cd014-554e-4948-b0d5-bc976853c75f"></p>  
@@ -57,9 +57,9 @@ Figure 1.4 shows the location of Debug on the TOPST D3 connected with Debug on t
 This chapter describes how to connect JTAG debugger to the TOPST D3.  
 
 Connect JTAG debugger to the TOPST D3 as follows:
->  1. Prepare one JTAG debugger.
->  2. Referring to Chapter Connecting UART/JTAG Sub-board to TOPST D3 above, connect the UART/JTAG sub-board to the TOPST D3.
->  3. Connect the JTAG debugger to JTAG Header on the UART/JTAG Sub-board.
+1. Prepare one JTAG debugger.
+2. Referring to Chapter Connecting UART/JTAG Sub-board to TOPST D3 above, connect the UART/JTAG sub-board to the TOPST D3.
+3. Connect the JTAG debugger to JTAG Header on the UART/JTAG Sub-board.
 
 Figure 1.5 shows the location of JTAG Header on the UART/JTAG sub-board.  
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d4043853-8723-4fe3-9403-2a4fe413564c"></p>  
