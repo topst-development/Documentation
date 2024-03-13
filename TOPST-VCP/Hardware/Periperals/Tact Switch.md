@@ -7,7 +7,7 @@ The TOPST VCP has three tact switches for PORN (SW1), ADC01 (SW4), KEY0 (SW6).
 
 Figure 1.1 shows the location of the tact switch (SW1).  
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/6b1f58e9-403e-4198-affc-802f54b9047c"</p>  
-<p align="center"><strong>Figure Tact Switch (SW1)</strong></p>
+<p align="center"><strong>Figure 1.1 Tact Switch (SW1)</strong></p>
 
 
 Figure 1.2 shows the location of the tact switch (SW4, SW6).
