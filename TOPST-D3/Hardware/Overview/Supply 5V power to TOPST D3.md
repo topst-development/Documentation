@@ -7,7 +7,8 @@ The TOPST D3 is configured to be powered through 5V Power Jack, and a 5V/3A powe
 
 
 Figure 1.1 shows the power plug size for the DC 5V power adapter.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d12fe96d-e73b-41fb-998e-a0cb92eea39d"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/db79b325-5b82-49fa-819f-5c7b523b204b"></p>  
+<p align="center"><strong>Figure 1.1 Plug Size for DC 5V Power Supply</strong></p>
 
 **Note**: The plug size must be with 2.1 mm ~ 2.5 mm.  
 
@@ -15,7 +16,8 @@ Figure 1.1 shows the power plug size for the DC 5V power adapter.
 
 
 Figure 1.2 shows the location of 5V Power Jack on the TOPST D3.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/3a5f5737-1d45-4c4a-9d5a-3aab1abec715"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/9614e76f-df8c-4cb1-aaa6-b9a263be460d"></p>
+<p align="center"><strong>Figure 1.2 DC Jack on TOPST D3</strong></p>
 
 
 Supply 5V power to the TOPST D3 by performing the following steps:
