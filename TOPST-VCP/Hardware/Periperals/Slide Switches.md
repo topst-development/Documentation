@@ -43,4 +43,5 @@ Table 1.3 describes the setting of SW8.
 
 
 Figure 1.2 shows the schematic of toggle switches (SW3, SW7, and SW8).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/4630d146-824d-4713-bcdc-d67b1bf0ca6e"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/afa3433b-a495-4fd0-b2ca-b44131cf899d"></p>
+<p align="center"><strong>Figure 1.2 Schematic of Toggle Switches (SW3, SW7, and SW8)</strong></p>
