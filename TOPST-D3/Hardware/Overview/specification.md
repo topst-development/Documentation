@@ -34,14 +34,16 @@ Table 1.1 shows the technical specifications for TOPST D3.
 
 
 ## Block Diagram  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8bb0ccd7-be82-4818-8750-2045e7bd35b3"></p>
 
+Figure 1.1 shows the system block diagram of TOPST D3
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8bb0ccd7-be82-4818-8750-2045e7bd35b3"></p>
+<p align="center"><strong>Figure 1.1 System Block Diagram</strong></p>
 
 
 ## TOPST D3 (Top View)  
 
 Figure 1.2 shows the top view of the TOPST D3.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/ca0ad6ff-fcfe-4401-a328-1e21848b4bca"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/5f0ad688-2c21-4ec6-903b-b1d9f8f61b34"></p>
 <p align="center"><strong>Figure 1.2 TOPST D3 (Top View)</strong></p>
 
 Table 1.2 describes the connectors and components on the TOPST (top view).  
@@ -61,8 +63,9 @@ Table 1.2 describes the connectors and components on the TOPST (top view).
 
 ## TOPST D3 (Bottom View)  
 
-Figure 1.2 shows the bottom view of the TOPST D3.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/254ebfea-b7dc-4abe-b0c9-1988474a1a78"></p>  
+Figure 1.3 shows the bottom view of the TOPST D3.  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/a076e705-2638-4408-9767-922217919cfe"></p>
+<p align="center"><strong>Figure 1.3 TOPST D3 (Bottom View)</strong></p>
 
 Table 1.3 describes the connectors and components on the TOPST D3 (bottom view).  
 
