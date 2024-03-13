@@ -9,7 +9,7 @@ UART boot mode and normal mode.
 The slide switch (SW2) is used to select the boot modes of the TOPST VCP.
 
 
-Figure 1.1 shows the appearance of slide switch (SW2).
+Figure 1.1 shows the location of slide switch (SW2).
 
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/bb2f0001-5311-4c3c-b0dc-13944167bc1e"></p>
 <p align="center"><strong>Figure 1.1 Slide Switch (SW2) </strong> </p>
