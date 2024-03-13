@@ -5,7 +5,7 @@
 
 J20D1 is a standard 40-pin GPIO header.  
 
-Figure 1.1 shows the appearance of External CPU Interface Connector (J20D1).
+Figure 1.1 shows the location of External CPU Interface Connector (J20D1).
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/6e00142a-4a69-4585-b0a8-2ff8d758e20c"></p>
 <p align="center"><strong>Figure 1.1 Standard 40-pin GPIO header</strong></p>
 
