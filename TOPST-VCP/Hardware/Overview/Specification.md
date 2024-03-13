@@ -54,7 +54,8 @@ Table 1.1 describes the features of the TCC7045.
 
 Figure 1.1 shows the system block diagram of TOPST VCP.  
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/91598f7d-0a56-42cb-bb90-5ece432f7d43"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/176d5d74-3786-488c-95c3-30229d3babf9"></p>
+<p align="center"><strong>Figure 1.1 Block Diagram</strong></p>
 
 ## TOPST VCP Overview
 TOPST VCP can implement the following functions:
