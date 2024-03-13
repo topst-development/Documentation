@@ -8,7 +8,7 @@ A toolchain typically consists of a compiler, linker, assembler, and debugger, a
 
 ## 1.2 Choosing the toolchain for board
 
-For the TOPST-VCP board, which is based on the ARM Cortex-R5 architecture, the recommended toolchain is gcc-linaro-7.21.1-2017.11-x86_64_arm-eabi.
+For the TOPST-VCP board, which is based on the ARM Cortex-R5 architecture, the recommended toolchain is gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.
 
 This toolchain is optimized for the ARM architecture and ensures compatibility with the TCC7045 chip on the board.
 
@@ -25,12 +25,12 @@ wget https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-e
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/da888bbb-e52f-489b-86ec-287429ba98c6" width="800" height="350">
 </p>
-<p align="center"><strong>Figure 1. Toolchain Website</strong></p>
+<p align="center"><strong>Figure 1 Toolchain Website</strong></p>
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/bef0f6d4-526d-4422-9234-cfa749080be7" width="750" height="400">
 </p>
-<p align="center"><strong>Figure 2. Download the Toolchain in progress</strong></p>
+<p align="center"><strong>Figure 2 Download the Toolchain in progress</strong></p>
 
 2. **Extract the Toolchain** : Once the download is complete, extract the contents of the .tar.xz file
 
@@ -42,7 +42,7 @@ tar -xvf gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/049fc4ac-04b2-4896-951c-de758cfd4b08" width="750" height="400">
 </p>
-<p align="center"><strong>Figure 3. Extract the ToolChain</strong></p>
+<p align="center"><strong>Figure 3 Extract the ToolChain</strong></p>
 
 3. **Move the Toolchain to /opt** : The /opt directory is a standard location for optional software on Linux. Move the extracted toolchain to this directory
 
@@ -54,7 +54,7 @@ sudo mv gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi /opt/
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d83e6951-a739-4dfc-86fe-2a3b39bce7b8" width="750" height="400">
 </p>
-<p align="center"><strong>Figure 4. Move the ToolChain</strong></p>
+<p align="center"><strong>Figure 4 Move the ToolChain</strong></p>
 
 ## 1.4 Verifying the toolchain Installation
 
