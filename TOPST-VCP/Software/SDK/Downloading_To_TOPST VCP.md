@@ -1,4 +1,4 @@
-# 1 Downloading to TOPST VCP hardware
+#  Downloading to TOPST VCP hardware
 
 Transferring built software to the TOPST-VCP board is a crucial step in the development process. This chapter provides a comprehensive guide on how to download the software onto the VCP hardware using a Linux-based development environment.
 
@@ -14,7 +14,7 @@ Before beginning the download process, ensure the TOPST-VCP board is in a stable
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13e33072-6d87-48a1-b143-4b091c9f9e11" width="800" height="200">
 </p>
-<p align="center"><strong>Figure 1. Verify the USB Connectoin</strong></p>
+<p align="center"><strong>Figure 1 Verify the USB Connectoin</strong></p>
 
 The expected output should resemble :
 
@@ -36,7 +36,7 @@ If you see the above output, the connection has been established correctly.
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/2e76b3a6-f114-44ff-a207-007930c18b94" width="450" height="300">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6af48452-83c5-4740-93c4-4a902731917c" width="450" height="300">
 </p>
-<p align="center"><strong>Figure 2. Set the Board to Download Mode</strong></p>
+<p align="center"><strong>Figure 2 Set the Board to Download Mode</strong></p>
 
 2. **Execute the Download Command** : Use the FWDN tool to download the software for 4MB flash onto the Board
 
@@ -49,7 +49,7 @@ If you see the above output, the connection has been established correctly.
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/76b3ec0b-198e-4814-a1fd-0d48539227c9" width="800" height="250">
 </p>
-<p align="center"><strong>Figure 3. Execute the Download Command</strong></p>
+<p align="center"><strong>Figure 3 Execute the Download Command</strong></p>
 
 3. **Reset the Board:** After the download process completes, switch the FWDN switch back to the NORMAL position. Reset the board either by powering it on again or by pressing the PORN button.
 
@@ -57,7 +57,7 @@ If you see the above output, the connection has been established correctly.
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6535ed68-a935-418a-bb20-86cc7ca04742" width="450" height="300">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/90d5d029-ea1a-4782-a415-672f1132a112" width="450" height="300">
 </p>
-<p align="center"><strong>Figure 4. Reset the Board</strong></p>
+<p align="center"><strong>Figure 4 Reset the Board</strong></p>
 
 ## 1.4 Verifying the Software on the Board
 
@@ -77,7 +77,7 @@ minicom -D /dev/ttyUSB0 -b 115200 -8
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d61458ba-c922-4afb-bce8-e6ba90594880" width="800" height="800">
 </p>
-<p align="center"><strong>Figure 5. Open a Serial Connection</strong></p>
+<p align="center"><strong>Figure 5 Open a Serial Connection</strong></p>
 
 ## 1.5 Troubleshooting Common Issues
 
@@ -98,7 +98,7 @@ sudo usermod -aG dialout $USER
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6108cfc6-e21b-45ff-b433-3233163b1630" width="800" height="300">
 </p>
-<p align="center"><strong>Figure 6. Modify User Group Permissions</strong></p>
+<p align="center"><strong>Figure 6 Modify User Group Permissions</strong></p>
 
 Remember, the majority of issues you encounter will have solutions or workarounds. It's essential to understand the error messages and consult documentation or online communities when in doubt.
 
@@ -117,14 +117,14 @@ minicom -D /dev/ttyUSB0 -b 115200 -8
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cf753060-4f4e-4b7a-ab6f-2862f65bad2f" width="500" height="600">
 </p>
-<p align="center"><strong>Figure 7. Launch minicom</strong></p>
+<p align="center"><strong>Figure 7 Launch minicom</strong></p>
 
 2. **Access the Setup screen :** While in minicom, press Ctrl-A followed “o” to access the setup screen.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/27d439b2-8866-4471-9789-1b146b3546b3" width="500" height="500">
 </p>
-<p align="center"><strong>Figure 8. Access the Setup screen</strong></p>
+<p align="center"><strong>Figure 8 Access the Setup screen</strong></p>
 
 3. **Navigate to Serial Port Setup** : From the list of options, choose "Serial port setup"
 4. **Modify Flow Control :** Inside the serial port setup, press “ F” to toggle the hardware flow control to "No".
@@ -132,7 +132,7 @@ minicom -D /dev/ttyUSB0 -b 115200 -8
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/8c77339e-6c44-4915-ad1e-bf7b8b2d126d" width="500" height="550">
 </p>
-<p align="center"><strong>Figure 9. Modify Flow Control</strong></p>
+<p align="center"><strong>Figure 9 Modify Flow Control</strong></p>
 
 5. **Exit and Save** : When you're done, Exit the setup and save the configuration. Now, minicom should communicate properly with the TOPST-VCP board.
 
