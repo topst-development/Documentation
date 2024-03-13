@@ -46,4 +46,4 @@ This command installs both the buide-essential package and git. (For your refere
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6a5d052b-c48b-4e2c-b140-7039ea35d4fd" width="700" height="400">
 </p>
-<p align="center"><strong>Figure 1. Install Essential Package</strong></p>
+<p align="center"><strong>Figure 1 Install Essential Package</strong></p>
