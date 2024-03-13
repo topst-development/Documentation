@@ -7,11 +7,13 @@ J14D1 is connector for connecting External CPU Board.
 However, a separate cable for connection is not provided.  
 
 Figure 1.1 shows the appearance of External CPU Interface Connector (J14D1).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/4b6d432d-3672-40e9-b079-cbe0397e1931"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/bd36977b-a30d-49fc-bf69-0069ef321471"></p>
+<p align="center"><strong>Figure 1.1 External CPU Interface Connector (J14D1)</strong></p>
 
 
 Figure 1.2 shows the schematic of External CPU Interface Connector (J14D1).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/caae18c2-7f83-4e72-bbd0-c586ab0e9e75"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/b6b15a5e-ca36-4d29-b53f-a282fc981757"></p>
+<p align="center"><strong>Figure 1.2 Schematic of External CPU Interface Connector (J14D1)</strong></p>
 
 Table 1.1 shows the pin description of J14D1.  
 
