@@ -6,7 +6,7 @@
 J10D1 is a standard 20-pin/2 mm connector to connect an external key function.  
 If you want to use other switch functions, a key sub-board should be developed first.  
 
-Figure 1.1 shows the appearance of key connector (J10D1).
+Figure 1.1 shows the location of key connector (J10D1).
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/217d800b-11e6-4dd2-a244-1e3c2cce6602"></p> 
 <p align="center"><strong>Figure 1.1 Key Connector</strong></p>
 
