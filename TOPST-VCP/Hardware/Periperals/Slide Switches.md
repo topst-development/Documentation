@@ -5,7 +5,7 @@
 
 On the TOPST VCP, SW3 is used to select ON or OFF for ILL, SW7 is used to select ON or OFF for ACC, and SW8 is used to select ON or OFF for enabling STR mode.  
 
-Figure 1.1 shows the location of toggle switches (S@3, SW7, and SW8).
+Figure 1.1 shows the location of toggle switches (SW3, SW7, and SW8).
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/39a25284-fd30-4f53-96c9-79a60810a06f"></p>
 <p align="center"><strong>Figure 1.1 Toggle Switches (SW3, SW7, SW8)</strong></p>
 
