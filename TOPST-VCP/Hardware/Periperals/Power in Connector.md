@@ -3,6 +3,7 @@
 </h1>
 
 The TOPST VCP is configured to be powered through 5V Power Jack.  
+
 Figure 1.1 shows the power plug size for the DC 5V power adapter.  
 
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/35c0e42e-0391-4f0f-8ed1-ef255f107adb"></p>  
