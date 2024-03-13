@@ -12,7 +12,7 @@ Figure 1.1 shows the 1 mm Pitch 40-pin Flexible Flat Cable (FFC) (A side-A side)
 <p align="center"><strong>Figure 1.1 1 mm Pitch 40-pin FFC (A Side-A Side)</strong></p>
 
 Figure 1.2 shows how to connect a 1 mm Pitch 40-pin FFC to the MIPI 4ch connector.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dc5a53fd-bc66-41ce-9e43-a3fb00470e68></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dc5a53fd-bc66-41ce-9e43-a3fb00470e68"></p>
 <p align="center"><strong>Figure 1.2 Connect FFC to MIPI 4ch Connector</strong></p>
 
 
