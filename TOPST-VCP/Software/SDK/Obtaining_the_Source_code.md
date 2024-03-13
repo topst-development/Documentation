@@ -1,4 +1,4 @@
-# 1 Obtaining the Source Code
+#  Obtaining the Source Code
 
 The source code forms the backbone of any development project. It contains all the necessary files, configurations, and instructions required to build and run software for a specific platform. In the context of the TOPST-VCP board, obtaining the correct source code is crucial to ensure compatibility and optimal performance.
 
