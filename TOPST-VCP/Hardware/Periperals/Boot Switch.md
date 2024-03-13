@@ -11,7 +11,8 @@ The slide switch (SW2) is used to select the boot modes of the TOPST VCP.
 
 Figure 1.1 shows the appearance of slide switch (SW2).
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/e26dd2fc-66ff-40d9-ba98-e5590616b00d"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/379ecf47-b9d8-453f-9c42-255a9104b8d4"></p>  
+
 
 
 Figure 1.2 shows the schematic of slide switch (SW2).
@@ -43,7 +44,7 @@ Table 1.2 describes the setting of slide switch for UART boot mode.
  
 | Pin | Value | Figure                              |
 |:---:|:-----:|-------------------------------------|
-| BM (SW2) | High (1) |  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e5df491e-1776-4b1f-9e91-1c2dd5e61025)    ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/a66a2c96-fcb8-4f06-b0ca-6ec863292b8b)        |  
+| BM (SW2) | High (1) |  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e5df491e-1776-4b1f-9e91-1c2dd5e61025)   ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/17beb32a-cc49-45b7-9a79-f528759baf49)        |  
 
  
 
@@ -59,7 +60,8 @@ Table 1.3 descrubes the setting of slide switch for normal mode.
 
 | Pin | Value | Figure                              |
 |:---:|:-----:|-------------------------------------|
-| BM (SW2) | Low(0) |  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e22dedaf-ba40-4d03-8490-60fe2bd6ba5d)     ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/2f871000-ab0c-4f81-bfdb-31fc05373906)      |  
+| BM (SW2) | Low(0) |  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e22dedaf-ba40-4d03-8490-60fe2bd6ba5d)  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/d8749701-a756-4f5d-88d4-e6bffc79a26b)
+      |  
 
  
 
