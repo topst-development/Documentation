@@ -6,7 +6,8 @@
 ## Debugger I/F Connector (UART/JTAG) to Host PC  
 
 Figure 1.1 shows the 0.5 mm Pitch 20-pin FFC (A side–B side) used for debugging.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/21cef494-2147-4d43-91ca-004d4c8acb16"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8a28cf06-accc-4c17-bc95-5b6497250e1a"></p>
+<p align="center"><strong>Figure 1.1 0.5 mm Pitch 20-pin FFC (A Side-B Side)</strong></p>
 
 
 ## Debug Port on TOPST D3  
@@ -14,7 +15,8 @@ Figure 1.1 shows the 0.5 mm Pitch 20-pin FFC (A side–B side) used for debuggin
 The TOPST D3 uses serial communication for debugging output, and Debug is designed for FFC connector.  
 
 Figure 1.2 shows the appearance of Debug on the TOPST D3.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/490ba306-6322-43f1-9210-581772203890"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/199205ef-9a73-4aae-bf67-d1cb4537e798"></p>  
+<p align="center"><strong> Figure 1.2 Connect UART/JTAG Connector</strong></p>
 
 
 ## UART/JTAG Sub-board  
@@ -22,7 +24,8 @@ Figure 1.2 shows the appearance of Debug on the TOPST D3.
 The UART/JTAG sub-board is a debugging board for serial port and JTAG. You can check the serial log by connecting the UART/JTAG sub-board to your Host PC using a USB Type-C cable.   
 
 Figure 1.3 shows the overview of the UART/JTAG sub-board.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/e330d74c-e1a9-45ec-b2a7-c2520ad47e68"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d4ffd8bf-e018-437a-a1de-4bfd966bd3b1"></p>
+<p align="center"><strong>Figure 1.3 UART/JTAG Sub-board (Top View)</strong></p>
 
 Table 1 describes the connectors of the UART/JTAG sub-board.  
 
@@ -50,7 +53,8 @@ Connect the UART/JTAG sub-board to the TOPST D3 by using a Flexible Flat Cable (
 4. Check the serial log message through the Terminal application on your Host PC
 
 Figure 1.4 shows the location of Debug on the TOPST D3 connected with Debug on the UART/JTAG sub-board.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dd1cd014-554e-4948-b0d5-bc976853c75f"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/37de3928-1412-4f24-964d-45190f4fa623"></p>
+<p align="center"><strong>Figure 1.4 Connect TOPST D3 and UART/JTAG Sub-board by using FFC</strong></p>
 
 ## Connect JTAG Debugger to TOPST D3  
 
@@ -62,5 +66,6 @@ Connect JTAG debugger to the TOPST D3 as follows:
 3. Connect the JTAG debugger to JTAG Header on the UART/JTAG Sub-board.
 
 Figure 1.5 shows the location of JTAG Header on the UART/JTAG sub-board.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d4043853-8723-4fe3-9403-2a4fe413564c"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/fb4fbcca-f53b-49c6-a209-8d50962d5695"></p>  
+<p align="center"><strong>Figure 1.5 JTAG Header</strong></p>
 
