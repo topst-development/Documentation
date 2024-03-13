@@ -11,13 +11,16 @@ The slide switch (SW2) is used to select the boot modes of the TOPST VCP.
 
 Figure 1.1 shows the appearance of slide switch (SW2).
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/379ecf47-b9d8-453f-9c42-255a9104b8d4"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/bb2f0001-5311-4c3c-b0dc-13944167bc1e"></p>
+<p align="center"><strong>Figure 1.1 Slide Switch (SW2) </strong> </p>
 
 
 
 Figure 1.2 shows the schematic of slide switch (SW2).
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8a457adc-4d55-4472-bee0-834ac9e5a1a8"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/bed66745-24db-45f6-959f-cb8142ec0ca7"></p>
+<p align="center"><strong>Figure 1.2 Schematic of Slide Switch (SW2) for Boot Mode </strong> </p>
+
 
 Table 1.1 describes the function slide switch (SW2).  
 
@@ -30,7 +33,8 @@ Table 1.1 describes the function slide switch (SW2).
   
 
 Figure 1.3 shows circuit connection status according to the slide switch position.
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/61949a2f-b2cd-4934-8759-2719dc0052a9"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/c1df3c91-8367-443a-aebf-fffe8129bf75"></p>
+<p align="center"><strong> Figure 1.3 Slide Switch Position (SW2) </strong> </p>
 
 
 ## UART Boot Mode
@@ -60,8 +64,7 @@ Table 1.3 descrubes the setting of slide switch for normal mode.
 
 | Pin | Value | Figure                              |
 |:---:|:-----:|-------------------------------------|
-| BM (SW2) | Low(0) |  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e22dedaf-ba40-4d03-8490-60fe2bd6ba5d)  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/d8749701-a756-4f5d-88d4-e6bffc79a26b)
-      |  
+| BM (SW2) | Low(0) |  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e22dedaf-ba40-4d03-8490-60fe2bd6ba5d)  ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/d8749701-a756-4f5d-88d4-e6bffc79a26b) |  
 
  
 
