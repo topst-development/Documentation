@@ -5,20 +5,25 @@
 
 The TOPST VCP has three tact switches for PORN (SW1), ADC01 (SW4), KEY0 (SW6).  
 
-Figure 1.1 shows the appearance of the tact switch (SW1).  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/bf95011e-88c2-40fe-8af5-52a0cde58d3b"</p>  
+Figure 1.1 shows the location of the tact switch (SW1).  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/6b1f58e9-403e-4198-affc-802f54b9047c"</p>  
+<p align="center"><strong>Figure Tact Switch (SW1)</strong></p>
 
 
-Figure 1.2 shows the appearance of the tact switch (SW4, SW6).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/ed7ae37f-ed93-4ab1-a7b9-cf12e4958bc0"</p>  
+Figure 1.2 shows the location of the tact switch (SW4, SW6).
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/c36b6b47-a028-426e-ad21-ec2f05cc7cd8"</p>
+<p align="center"><strong>Figure 1.2 Tact Switch (SW4, SW6)</strong></p>
+
 
 
 Figure 1.3 shows the schematic of tack switch (SW1).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8f16f6a0-808e-422a-b95f-163efe22bdd3"</p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8ff11f85-39a5-42cc-827c-32b92b2b6a6e"></p>  
+<p align="center"><strong>Figure 1.3 Schematic of Tact Switch</strong></p>
 
 
 Figure 1.4 shows the schematic of tack switch (SW4, SW6).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/c11ffcfe-d45e-4fe4-9e5c-a14c6e307c4a"</p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d0fe379c-3828-457c-9b2a-d38106b32416"</p>
+<p align="center"><strong>Figure 1.4 Schematic of Tact Switch (SW4, SW6)</strong>
 
 
 ## Tact Switch (SW1)  
