@@ -16,15 +16,6 @@ Before beginning the download process, ensure the TOPST-VCP board is in a stable
 </p>
 <p align="center"><strong>Figure 1 Verify the USB Connectoin</strong></p>
 
-The expected output should resemble :
-
-```bash
-topst@topst-vcp:~$ sudo dmesg |grep tty
-
-[ 0.087985] printk: console [tty0] enabled
-
-[ 104.756740] usb 2-1: cp210x converter now attached to ttyUSB0
-```
 
 If you see the above output, the connection has been established correctly.
 
