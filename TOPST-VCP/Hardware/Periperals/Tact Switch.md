@@ -18,7 +18,7 @@ Figure 1.2 shows the location of the tact switch (SW4, SW6).
 
 Figure 1.3 shows the schematic of tack switch (SW1).
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/8ff11f85-39a5-42cc-827c-32b92b2b6a6e"></p>  
-<p align="center"><strong>Figure 1.3 Schematic of Tact Switch</strong></p>
+<p align="center"><strong>Figure 1.3 Schematic of Tact Switch (SW1)</strong></p>
 
 
 Figure 1.4 shows the schematic of tack switch (SW4, SW6).
