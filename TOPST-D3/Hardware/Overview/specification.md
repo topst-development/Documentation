@@ -40,8 +40,9 @@ Table 1.1 shows the technical specifications for TOPST D3.
 
 ## TOPST D3 (Top View)  
 
-Figure 1.1 shows the top view of the TOPST D3.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/3383a4f4-e9bf-4739-972d-39ed326397b9"></p>  
+Figure 1.2 shows the top view of the TOPST D3.  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/ca0ad6ff-fcfe-4401-a328-1e21848b4bca"></p>
+<p align="center"><strong>Figure 1.2 TOPST D3 (Top View)</strong></p>
 
 Table 1.2 describes the connectors and components on the TOPST (top view).  
 
