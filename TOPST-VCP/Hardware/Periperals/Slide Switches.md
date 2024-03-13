@@ -6,7 +6,7 @@
 On the TOPST VCP, SW3 is used to select ON or OFF for ILL, SW7 is used to select ON or OFF for ACC, and SW8 is used to select ON or OFF for enabling STR mode.  
 
 Figure 1.1 shows the appearance of toggle switches (S@3, SW7, and SW8).
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/4967618f-fa85-440a-8e76-051df41f1a97"></p>
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d6bddf25-0245-4540-a89e-35b1002e4e48"></p>
 
 Table 1.1 describes the setting of SW3.  
 
@@ -14,8 +14,8 @@ Table 1.1 describes the setting of SW3.
 
 |  Part Number             | Function       | Figure       | Value       | Description                        |
 |:------------------------:|:--------------:|:------------:|:-----------:|------------------------------------|
-|SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/fa415569-3eec-4c63-a349-1f8d5aa08aad)|5V|Power of Illumination is turned on. Default setting|
-| SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e354fb9a-98b0-4425-a1fe-f1db739ebb42) | 0V | Power of Illumination is turned off. |  
+|SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/86f1869c-499f-44b4-9fcb-5b493106b22d)|5V|Power of Illumination is turned on. Default setting|
+| SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/20727547-eade-4c66-a482-653366b7e1ff) | 0V | Power of Illumination is turned off. |  
 
 
 
@@ -25,8 +25,8 @@ Table 1.2 describes the setting of SW7.
 
 |  Part Number             | Function       | Figure       | Value       | Description                        |
 |:------------------------:|:--------------:|:------------:|:-----------:|------------------------------------|
-|SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/fa415569-3eec-4c63-a349-1f8d5aa08aad)|5V|Power of ACC is turned on. Default setting|
-| SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e354fb9a-98b0-4425-a1fe-f1db739ebb42) | 0V | Power of ACC is turned off. |  
+|SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/1cb1d0ac-8e0e-437d-b29d-1c2693fa5a82)|5V|Power of ACC is turned on. Default setting|
+| SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/5e6e2ce3-e976-4412-bef9-8d25eadb0606) | 0V | Power of ACC is turned off. |  
 
 
 
@@ -36,8 +36,8 @@ Table 1.3 describes the setting of SW8.
 
 |  Part Number             | Function       | Figure       | Value       | Description                        |
 |:------------------------:|:--------------:|:------------:|:-----------:|------------------------------------|
-|SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/fa415569-3eec-4c63-a349-1f8d5aa08aad)|High|Enter STR Mode|
-| SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/e354fb9a-98b0-4425-a1fe-f1db739ebb42) | Low | Exit STR Mode. Default setting|  
+|SW3|ILL On or Off|![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cebbdd6-8b11-43ea-a7ce-e61cc8fdc804) ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/0cea05f2-83ee-4be0-aeed-f6b8b59a2b01)|High|Enter STR Mode|
+| SW3 | ILL On or Off | ![image](https://github.com/Topst-Dev/Documentation/assets/161264431/8240acb7-4c6c-4f86-b5b4-aee4100e8fcf)![image](https://github.com/Topst-Dev/Documentation/assets/161264431/b32a6857-d84b-4507-bf8d-ac9c7e78f0c3) | Low | Exit STR Mode. Default setting|  
 
 
 
