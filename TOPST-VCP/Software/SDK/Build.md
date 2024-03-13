@@ -1,4 +1,4 @@
-# 1 Building the Source Code
+#  Building the Source Code
 
 With the source code successfully obtained, the next critical step is to build it, ensuring it's tailored to run optimally on the TOPST-VCP board.
 
@@ -27,7 +27,7 @@ This command reads the Makeflie in the current directory and executes the build 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/84b9a259-e6e7-4463-bc98-47ad15e0d04b" width="750" height="350">
 </p>
-<p align="center"><strong>Figure 1. Run the make</strong></p>
+<p align="center"><strong>Figure 1 Run the make</strong></p>
 
 3. **Verify the Build Output** : Once the build process is complete, you should find the following output files on the terminal
 - output/tcc70xx_pflash_boot.rom
@@ -40,7 +40,7 @@ Ensure these files are present as they'll be crucial for the next stages of deve
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/08838777-78c1-455c-822e-06f90d5e00bf" width="750" height="350">
 </p>
-<p align="center"><strong>Figure 2. Verify the Build Output</strong></p>
+<p align="center"><strong>Figure 2 Verify the Build Output</strong></p>
 
 To make sure all output files, use the following command :
 
@@ -51,4 +51,4 @@ ls output/ -al
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b82ae0af-fef7-411e-b0a1-f62ae01108b9" width="750" height="350">
 </p>
-<p align="center"><strong>Figure 3. Build Output File</strong></p>
+<p align="center"><strong>Figure 3 Build Output File</strong></p>
