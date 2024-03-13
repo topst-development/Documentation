@@ -6,7 +6,7 @@
 DC 5V is supplied through DC jack of J2 from an 5V adapter.  
 
 Figure 1.1 shows the appearance of J2.
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/9571e9e1-f45b-4ae2-9af8-0eb037eb216a"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/f0fde73a-27d7-4342-8f64-5268ace2926f"></p>  
 
 
 Figure 1.2 shows the schematic of J2.
