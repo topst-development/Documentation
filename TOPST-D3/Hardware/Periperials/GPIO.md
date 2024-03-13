@@ -10,10 +10,12 @@ The TOPST D3 (Open platform board) provides 28 GPIOs via 40 pin header that is b
 
 ## GPIO 40 pin Header
 Figure 1.1 shows the 2.54 mm Pitch 40 pin IDC Cable.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/c6533706-96ad-4939-b8b9-2ca03a236304"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/78110a46-b1a2-4d70-8450-e2141f44036c"></p>
+<p align="center"><strong>Figure 1.1 2.54-mm Pitch 40-pin IDC Cable</strong></p>
 
 Figure 1.2 shows the pin number 1 of the GPIO Header and how to connect an IDC cable to the GPIO Header.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/d41fd510-170c-46cc-857e-e8f0989fbcb4"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/e8ca78e0-0c1b-4071-87eb-21374536c584"></p>
+<p align="center"><strong>Figure 1.2 Connect 40Pin GPIO Header</strong></p>
 
 
 ## GPIO Pin Assignments  
