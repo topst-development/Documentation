@@ -1,4 +1,4 @@
-# 1 Prerequisites
+#  Prerequisites
 
 Before diving into the setup and development processes for the TOPST-VCP board, there are several prerequisites to consider. This chapter will guide you through the recommended Linux distribution, the hardware requirements, and the foundational knowledge required to ensure a smooth development experience.
 
