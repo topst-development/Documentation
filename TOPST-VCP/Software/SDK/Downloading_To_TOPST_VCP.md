@@ -24,8 +24,8 @@ If you see the above output, the connection has been established correctly.
 1. **Set the Board to Download Mode :** On the TOPST-VCP board, flip the FWDN switch to the FWDN position. Press the PORN button to reset it. The board is now in FWDN download mode.
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/2e76b3a6-f114-44ff-a207-007930c18b94" width="450" height="300">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6af48452-83c5-4740-93c4-4a902731917c" width="450" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/161264431/ae243a90-6b58-42da-b85f-41007e768b1a" width="450" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/161264431/da2ff1e9-24ec-40c5-8fd3-6862690cdb1a" width="450" height="300">
 </p>
 <p align="center"><strong>Figure 2 Set the Board to Download Mode</strong></p>
 
