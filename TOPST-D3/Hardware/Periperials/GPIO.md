@@ -22,7 +22,8 @@ Figure 1.2 shows the pin number 1 of the GPIO Header and how to connect an IDC c
 
 Figure 1.3 shows the GPIO connector pin out.  
 All GPIOs are available as inputs and outputs, and some GPIO pins can be switched to function as I2C, I2S, SPI and PWM.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/7a496091-bb9c-41af-b304-5c716b87e594"></p>  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/159778aa-beae-49e6-9a3c-143d61858b82"></p>  
+<p align="center"><strong>Figure 1.3 GPIO Connector Pinout</strong></p>
 
 Table 1.1 details the default pin fuctions and available alternative GPIO functions.  
 
