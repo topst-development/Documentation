@@ -16,13 +16,14 @@ To use **FWDN**, connect the TOPST D3 to your computer as follows:
 2.  Prepare one USB Type-A cable.
 3.	 Connect USB 2.0 D/H on the TOPST D3 to your computer by using the USB Type-A cable.
 4.	 Use one of the two methods below to change the boot mode of the TOPST D3.
->  1) method 1
+>  4-1) method 1
 - If the TOPST D3 is not powered yet, press the FWDN button and connect 5V power th the TOPST D3.
 - Release the FWDN Boot mode button.
->  2) method 2
+>  4-2) method 2
 - If the TOPST D3 is already powered, press the Reset button and FWDN Boot mode button.
 - Release the FWDN Boot mode button.
 5.  Download your ROM image according to the **FWDN** guide.
 
-Figure 1 shows the appearance of Reset button, FWDN button and USB 2.0 D/H on the TOPST D3.  
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/dbfdb92a-4a12-4c94-8095-33e4c694933c"></p>
+Figure 1.1 shows the appearance of Reset button, FWDN button and USB 2.0 D/H on the TOPST D3.  
+<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/c3815afe-a366-410f-8c62-d3b9f4d4494e"></p>
+<p align="center"><strong>Figure 1.1 USB Socket for FWDN and Buttons to change Boot Mode</strong>
