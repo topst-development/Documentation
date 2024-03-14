@@ -23,25 +23,16 @@ struct pwm_chip {
 ```
 
 
-**Parameters**
-
-- **dev**: The device that provides the PWMs
-
--   **list**: List nodes for internal use
-
--   **ops**: Callbacks for this PWM controller
-
--   **base**: The number of first PWM controlled by this chip
-
--  **npwm**: The number of PWMs controlled by this chip
-
--  **pwms**: The array of PWM devices allocated by the framework
-
--  **of_xlate**: The request a PWM device given a device tree PWM specifier
-
--  **of_pwm_n_cells**: The number of cells expected in the device tree PWM specifier
-
--  **can_sleep**: Must be true for the .config, .enable, or .disable operations to sleep
+>**Parameters**
+>-   **dev**: The device that provides the PWMs
+>- **list**: List nodes for internal use
+>- **ops**: Callbacks for this PWM controller
+>- **base**: The number of first PWM controlled by this chip
+>-   **npwm**: The number of PWMs controlled by this chip
+>-   **pwms**: The array of PWM devices allocated by the framework
+>-   **of_xlate**: The request a PWM device given a device tree PWM specifier
+>-   **of_pwm_n_cells**: The number of cells expected in the device tree PWM specifier
+>-   **can_sleep**: Must be true for the .config, .enable, or .disable operations to sleep
 
 
 ```c
@@ -61,27 +52,18 @@ struct pwm_device {
 ```
 
 
-PWM channel object
-
-**Parameters**
-
--   **label**: The name of the PWM device
-
--   **flags**: The flags associated with the PWM device
-
--   **hwpwm**: The relative index of the PWM device per chip
-
--   **pwm**: The global index of the PWM device
-
--   **chip**: The PWM chip providing this PWM device
-
--   **chip_data**: The chip-private data associated with the PWM device
-
--   **args**: PWM arguments
-
--   **state**: The last applied state
-
--   **last**: The last implemented state (for **PWM_DEBUG**)
+>PWM channel object
+>
+>**Parameters**
+>- **label**: The name of the PWM device
+>-   **flags**: The flags associated with the PWM device
+>- **hwpwm**: The relative index of the PWM device per chip
+>- **pwm**: The global index of the PWM device
+>- **chip**: The PWM chip providing this PWM device
+>- **chip_data**: The chip-private data associated with the PWM device
+>- **args**: PWM arguments
+>- **state**: The last applied state
+>-   **last**: The last implemented state (for **PWM_DEBUG**)
 
 
 ```c
@@ -133,7 +115,7 @@ optional arguments:
 **Example:**
 
 ```bash
-python3 pwmexample.py -cn 0 -p 100000 -cy 3
+$ python3 pwmexample.py -cn 0 -p 100000 -cy 3
 ```
 
 
@@ -143,7 +125,7 @@ python3 pwmexample.py -cn 0 -p 100000 -cy 3
 <p align="center"><strong>Figure 1.1 PWM Example</strong></p>
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/dbd9d158-64b2-436f-8cc4-429f7fb4635a" width="400" height="550">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/dbd9d158-64b2-436f-8cc4-429f7fb4635a" width="400" height="650">
 </p>
 <p align="center"><strong>Figure 1.2 Circuit Used in Example</strong></p>
 
