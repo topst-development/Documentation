@@ -41,20 +41,27 @@ After Downloading of Ubuntu completed, Install virtual machines, such as ***VMwa
 </p>
 <p align="center"><strong>Figure 1.4 Enter the Virtual machine name</strong>  
     
-4. Recommended capacity is 150 GB or more, 8 GB RAM, and 16 processors.
-
-It is recommended that network adapter is set as Bridged.
-
-
+4. Set the maximum disk size to 150 GB.
 <p align="center"> 
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5bc3cd34-d465-4698-81e0-bf7d00e17c98" width="500" height="400">
-</p>
+</p>  
+<p align="center"><strong>Figure 1.5 Setting disk size</strong></p>  
 
+5. Set the RAM Size to 8GB.
+
+6. Set the processors ~
+
+7. Set the network adapter to Bridged.
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9625271c-2d11-42a9-9ac1-ed178de9f399" width="500" height="400">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/ff96ad69-39c2-445d-87b9-f5cdf8c3e8ee" width="500" height="400">
 </p>
-<p align="center"><strong>Figure 1.2 VMware Settings for Virtual Server</strong></p>
+<p align="center"><strong>Figure 1.8 Setting network adapter</strong></p>
+
+8. Click finish and the installation starts.
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9625271c-2d11-42a9-9ac1-ed178de9f399" width="500" height="400">
+</p>
+<p align="center"><strong>Figure 1.9 VMware Settings for Virtual Server</strong></p>
 
 ## 1.3 Setting Linux Environment
 
@@ -103,7 +110,7 @@ Use the following command to install repo.
 sudo apt-get install repo
 ```
 
-If you see the error messange '/usr/bin/env 'python' no such file or directory', Use the following command that allows the file 'python' to point to 'python3'.
+If you see the error messange '/usr/bin/env 'python' no such file or directory', use the following command that allows the file 'python' to point to 'python3'.
 
 ```bash
 sudo ln -sf /usr/bin/python3 /usr/bin/python
