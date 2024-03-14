@@ -1,4 +1,4 @@
-# 1 I2C
+# I2C
 
 The inter-integrated circuit (I2C) is easily read as "i-to-c", but the formal pronunciation is "i-square-c".
 
