@@ -1,4 +1,4 @@
-# 1 Audio Example
+# Audio Example
 
 ```c
 #include <stdio.h>
