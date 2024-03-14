@@ -36,7 +36,7 @@ An example was made by using a demo program based on Advanced Linux Sound Archit
 The example program records sound for 3 seconds and plays the recorded sound.
 
 ```bash
-$
+$ audioExample
 ```
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/bc5def05-31bd-462b-8401-a1c14542eb02" width="800" height="100">
@@ -245,7 +245,7 @@ If the filename is not specified, the standard output or input is used. The **ap
     <td><li><strong>Test ring buffer position</strong></td>
   </tr>
   <tr>
-    <td>--test-coef=<coef></td>
+    <td>--test-coef=[coef]</td>
     <td><li><strong>Test coefficient for ring buffer position; default is 8. Expression for validation is: coef * (buffer_size / 2). Minimum value is 1</strong></td>
   </tr>
   <tr>
@@ -254,10 +254,10 @@ If the filename is not specified, the standard output or input is used. The **ap
   </tr>
   <tr>
     <td>--max-file-time</td>
-    <td><li><strong>When recording and the output file has recorded sound for the maximum file time, close the output file and open a new output file. The default is the maximum size supported by the file format: 2 GB for WAV files. This option has no effect if --separate-channels is specified.</strong></td>
+    <td><li><strong>When recording and the output file has recorded sound for the maximum file time, close the output file and open a new output file. The default is the maximum size supported by the file format: 2 GB for WAV files. This option has no effect if --separate-channels is specified.</strong>
   </tr>
   <tr>
-    <td>--process-id-file <file name></td>
+    <td>--process-id-file [file name]</td>
     <td><li><strong>aplay writes its process ID here, so other programs can send signals to it.</strong></td>
   </tr>
   <tr>
@@ -271,6 +271,7 @@ If the filename is not specified, the standard output or input is used. The **ap
 - <strong>%M: minute</strong>
 - <strong>%S: second</strong>
     </pre>
+    <li><strong>In addition, %v is the file number, starting at 1. When this option is specified, intermediate directories for the output file are created automatically. This option has no effect if <strong>--sparate-channels</strong> is specified.</strong><br>   
     </td>
   </tr>
   <tr>
