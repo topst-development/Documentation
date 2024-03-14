@@ -1,4 +1,4 @@
-# 1 Echo Server Example
+# Echo Server Example
 
 Echo Server is a demo program that can check Transmission Control Protocol (TCP) communication. Echo Server sends a message to the main core in the desired host environment and prints out the message. (bb PATH: ./poky/meta-telechips/meta-ivi/recipes-applications/telechips-automotive-linux/echoserver-example_1.0.0.bb)
 
