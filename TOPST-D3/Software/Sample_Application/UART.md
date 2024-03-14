@@ -1,4 +1,4 @@
-# 1 UART Example
+# UART Example
 
 Universal Asynchronous Receiver/Transmitter (UART) communication is a serial communication in which one data transmission or reception pin is used. UART sends 1 byte at a time, and each bit is transmitted in sequence (series). UART is a method commonly used in MCU (for example, Arduino), and there are TX (pins that send data) and RX (pins that receive data). From a circuit perspective, 0 and 1 of each bit can be thought of as GND and VCC in the MCU, and if the received signal is interpreted, the received signal can be switched from bit to byte again.
 
