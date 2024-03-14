@@ -1,4 +1,4 @@
-# 1 Firmware Download
+# Firmware Download
 
 This chapter describes how to download ***FWDN*** to the TOPST D3 (Open platform board) and log in the Linux console.  
 The ***FWDN V8*** is a PC tool for downloading firmware in Windows 10 64-bit and Linux environments. This chapter describes the case of downloading in Windows and Linux environments.
