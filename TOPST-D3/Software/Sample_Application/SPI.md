@@ -1,4 +1,4 @@
-# 1 SPI Example
+# SPI Example
 
 Serial Peripheral Interface (SPI) is a serial communication method like I2C, CAN, and UART that can transfer data between small peripherals such as microcontrollers, shift registers, and SD cards. Simply put, SPI is one of the communication methods for exchanging data between devices and devices, namely integrated circuits (ICs) and chips. SPI communication is a synchronous communication method that supports one-to-many communication, which has the disadvantage of requiring multiple lines for multiple communication. You can transmit and receive data at the same time. SPI is easily wired, so it is often used for communication between chips such as simple sensors and memory.
 
