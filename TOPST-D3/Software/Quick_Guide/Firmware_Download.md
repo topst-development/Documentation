@@ -1,4 +1,4 @@
-# **1        FWDN Guide**
+# FWDN Guide
 
 This chapter describes how to download the Firmware Downloader (***FWDN***) to the TOPST D3 and log in to the Linux console.
 
