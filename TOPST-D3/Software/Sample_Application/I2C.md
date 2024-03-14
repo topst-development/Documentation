@@ -22,19 +22,22 @@ i2cdetect -l
 
 **Description**
 i2cdetect is a userspace program used to scan an I2C bus for devices. i2cdetect outputs a table with the list of detected devices on the specified bus. i2cbus indicates the number or name of the I2C bus to be scanned, and should correspond to one of the buses listed by i2cdetect -l. The optional parameters first and last restrict the scanning range (default: from 0x03 to 0x77).
-i2cdetect can also be used to query the functionalities of an I2C bus (see option -F.)
- 
-**Caution**: This program can confuse your I2C bus, cause data loss or worse.
- 
-Interpreting the Output
-Each cell in the output table will contain one of the following symbols:
-  "--". The address was probed but no chip answered.
-  "UU". Probing was skipped because this address is currently in use by a driver. This strongly suggests that there is a chip at this address.
-  An address number in hexadecimal such as "2d" or "4e". A chip was found at this address.
- 
-OptionsDescription-yn  Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.-an  Force scanning of non-regular addresses. Not recommended.-qn  Use SMBus "quick write" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to corrupt the Atmel AT24RF08 EEPROM found on many IBM Thinkpad laptops.-rn  Use SMBus "read byte" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. 
-n  This is known to lock SMBus on various write-only chips (most notably clock chips at address 0x69).-Fn  Display the list of functionalities implemented by the adapter and exit-Vn  Display the version and exit-ln  Output a list of installed buses 
+i2cdetect can also be used to query the functionalities of an I2C bus (see option -F.)  
 
+**Caution**: This program can confuse your I2C bus, cause data loss or worse.  
+
+**Interpreting the Output**  
+Each cell in the output table will contain one of the following symbols:  
+- "--". The address was probed but no chip answered.
+- "UU". Probing was skipped because this address is currently in use by a driver. This strongly suggests that there is a chip at this address.
+- An address number in hexadecimal such as "2d" or "4e". A chip was found at this address.
+
+| Options | Description |
+|:-------:|-------------|
+|-y| Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts. |
+|-a| Force scanning of non-regular addresses. Not recommended. |
+|-q| Use SMBus "quick write" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to corrupt the Atmel AT24RF08 EEPROM found on many IBM Thinkpad laptops.|
+|-r| 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/27b6d33d-f18f-4f09-bcb8-eeca28109636" width="800" height="150">
 </p>
