@@ -115,7 +115,7 @@ If you see the error messange '/usr/bin/env 'python' no such file or directory',
 ```bash
 sudo ln -sf /usr/bin/python3 /usr/bin/python
 ```
-If there is a Repo error, Use the following command to download the latest version and to put it directly into the /usr/bin/ folder.
+If there is a Repo error, Use the following command to download the latest version and put it directly into the /usr/bin/ folder.
 
 ```bash
 mkdir -p ~/bin
