@@ -103,7 +103,7 @@ $ cd topst
 ### 1.4.3 autolinux Usage
 
 ```bash
-**$ ./autolinux --help**
+$ ./autolinux --help
 
 usage: autolinux [-h] -c COMMAND [COMMAND ...] [-V] [-f FEATURES [FEATURES ...]] [-sf SUBFEATURES [SUBFEATURES ...]]
 
@@ -211,7 +211,7 @@ The following configurations must be set:
 When the configuration is completed, the set-up is saved as “autolinux.config”.
 
 ```bash
-**$ ./autolinux -c configure**
+$ ./autolinux -c configure
 
 The command is configure or Add configuration options(sdk,core,manifest)
 
@@ -384,7 +384,7 @@ SUBFEATURES=meta-micom,meta-update
 
 Time taken in 0:03:32.689284
 
-**$ ls**
+$ ls
 
 autolinux         boot-firmware  buildtools  cr5-bsp  poky    script    tools
 
