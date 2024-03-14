@@ -32,6 +32,22 @@ Each cell in the output table will contain one of the following symbols:
 - "UU". Probing was skipped because this address is currently in use by a driver. This strongly suggests that there is a chip at this address.
 - An address number in hexadecimal such as "2d" or "4e". A chip was found at this address.
 
+<table align="center">
+  <tr>
+    <td>-y</td>
+    <td><li><strong> Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts.</strong> 
+    </td>
+  </tr>
+  <tr>
+    <td>-a</td>
+    <td><li><strong>Force scanning of non-regular addresses. Not recommended.</strong></td>
+  </tr>
+  <tr>
+    <td>-q</td>
+    <td><li><strong>Use SMBus "quick write" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended. This is known to corrupt the Atmel AT24RF08 EEPROM found on many IBM Thinkpad laptops.</strong></td>
+  </tr>
+</table>
+
 | Options | Description |
 |:-------:|-------------|
 |-y| Disable interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this flag is used, it will perform the operation directly. This is mainly meant to be used in scripts. |
