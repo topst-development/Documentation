@@ -52,8 +52,19 @@ Each cell in the output table will contain one of the following symbols:
   </tr>
   <tr>
     <td>-r</td>
-    <td><li><strong>Use SMBus " read byte" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended.</strong></td>
-    <li><strong>This is known to lock SMBus on various write-only chips (most notably clock chips at address 0X69).</strong>
+    <td><li><strong>Use SMBus " read byte" commands for probing (by default, the command used is the one believed to be the safest for each address). Not recommended.<li>This is known to lock SMBus on various write-only chips (most notably clock chips at address 0X69).</strong></td>
+  </tr>
+    <tr>
+    <td>-F</td>
+    <td><li><strong>Display the list of functionalities implemented by the adapter and exit.</strong></td>
+  </tr>
+   <tr>
+    <td>-V</td>
+    <td><li><strong>Display the version and exit.</strong></td>
+  </tr>
+   <tr>
+    <td>-l</td>
+    <td><li><strong>Output a list of installed buses.</strong></td>
   </tr>
 </table>
 
