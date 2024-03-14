@@ -1,6 +1,7 @@
 # 1 Firmware Download
 
-This chapter describes how to download ***FWDN*** to the TOPST D3 (Open platform board) and log in the Linux console.
+This chapter describes how to download ***FWDN*** to the TOPST D3 (Open platform board) and log in the Linux console.  
+The ***FWDN V8*** is a PC tool for downloading firmware in Windows 10 64-bit and Linux environments. This chapter describes the case of downloading in Windows and Linux environments.
 
 ## 1.1 Firmware Download Sequence
 
@@ -22,7 +23,7 @@ Pressing **SW1** causes the system to reset. If you want to download a firmware,
 </p>
 <p align="center"><strong>Figure 1.1 USB Connection</strong></p>
 
-Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Administrator) and boot after changing to USB mode in Windows.
+Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Administrator) and boot after changing to USB mode in Windows environment.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/13ae985b-e214-4a47-95da-020fd5e0a50e" width="600" height="350">
@@ -32,9 +33,14 @@ Install VTC Driver (boot-firmware\tools\fwdn) on Host PC (be sure to run as Admi
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6e737702-3f96-4f55-842d-8e2d91fa50ea" width="750" height="150">
 </p>
-<p align="center"><strong>Figure 1.3 USB Connection in Linux Environment</strong></p>
+<p align="center"><strong>Figure 1.3 USB Connection in Linux Environment</strong></p>  
 
-## 1.3 FWDN in Windows
+Use the VTC Driver V5.0.0.14 or higher. If you use previous version, install the latest version.  
+To check the version, confirm the device manager in Windows environment.  
+
+The VTC driver install file (vtcdrv v5.0.0.14.zip) is included in the Path: boot-firmware/tools/fwdn/.
+
+## 1.3 FWDN in Windows Environment
 
 1. After connecting to TOPST D3, go to “boot-firmware/tools/fwdn” through Samba in the Windows environment.
 2. Right-click and select “Open in Terminal”.
@@ -271,7 +277,7 @@ Download Pre-built F/W Image
 ```
 
 
-### 1.3.1 Partition FWDN with Windows
+### 1.3.1 Partition FWDN with Windows Environment
 
 If you select **“part”**, you can download only the firmware you want. If you enter the desired item, the download will begin. When you enter the **-h** command, the following list of downloadable parts appears:
 
@@ -532,7 +538,7 @@ Download Pre-built F/W Image
 ```
 
 
-## 1.4 FWDN in Linux
+## 1.4 FWDN in Linux Environment
 
 In a Linux environment, you must run ***FWDN*** with root privileges. Use the **sudo** command or execute as root account.
 
