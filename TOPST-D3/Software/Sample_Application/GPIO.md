@@ -22,12 +22,12 @@ $ gpioExample -g 82 -o 0
 ```
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6a50edf9-332d-46ad-9ed4-84b033149e27" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6a50edf9-332d-46ad-9ed4-84b033149e27" width="500" height="250">
 </p>
 <p align="center"><strong>Figure 1.1 GPIO Example</strong></p>
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a8569505-e11c-4f86-8139-74fc4773272d" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a8569505-e11c-4f86-8139-74fc4773272d" width="500" height="550">
 </p>
 <p align="center"><strong>Figure 1.2 GPIO Example Board</strong></p>
 
@@ -517,33 +517,25 @@ void ( *signal (int sig, void(*func)(int)) )(int)
 ```
 
 
-The **signal()** function sets the error handler for the **sig** signal. The signal handler can be set so that default handling occurs, signal is ignored, or a user-defined function is called. When signal handler is set to a function and a signal occurs, it is defined by implementation whether the signal (**sig** or SIG_DFL) will be executed immediately before the start of signal handler. Also, the implementation can prevent some implementation-defined set of signals from occurring while the signal handler runs.
-
-**Parameters**
-
-**sig:** The signal to set the signal handler to. It can be an implementation-defined value or one of the following values:
-
--   SIGABRT
-
--   SIGFPE
-
--   SIGILL
-
--   SIGINT
-
--   SIGSEGV
-
--   SIGTERM
-
-**handler:** The signal handler which must be one of the following:
-
--   SIG_DFL macro: The signal handler is set to default signal handler.
-
--   SIG_IGN macro: The signal is ignored.
-
-**Return Value**
-
-Previous signal handler on success or SIG_ERR on failure (setting a signal handler can be disabled on some implementations).
+>The **signal()** function sets the error handler for the **sig** signal. The signal handler can be set so that default handling occurs, signal is ignored, or a user-defined function is called. When signal handler is set to a function and a signal occurs, it is defined by implementation whether the signal (**sig** or SIG_DFL) will be executed immediately before the start of signal handler. Also, the implementation can prevent some implementation-defined set of signals from occurring while the signal handler runs.
+>
+>**Parameters**
+>
+>**sig:** The signal to set the signal handler to. It can be an implementation-defined value or one of the following values:
+>-   SIGABRT
+>-   SIGFPE
+>-   SIGILL
+>-   SIGINT
+>-   SIGSEGV
+>-   SIGTERM
+>
+>**handler:** The signal handler which must be one of the following:
+>-   SIG_DFL macro: The signal handler is set to default signal handler.
+>-   SIG_IGN macro: The signal is ignored.
+>
+>**Return Value**
+>
+>Previous signal handler on success or SIG_ERR on failure (setting a signal handler can be disabled on some implementations).
 
 
 ```c
@@ -558,25 +550,20 @@ int select (int                       nfds,
 ```
 
 
-The **select()** function indicates which of the specified file descriptors are ready for reading, ready for writing, or has an error condition pending. If the specified error condition is false for all of the specified file descriptors, **select()** blocks the file descriptor up to the specified timeout interval until the specified condition is true for at least one of the specified file descriptors. The **select()** function supports regular files, terminal and pseudo-terminal devices, STREAMS-based files, FIFOs, and pipes. The behavior of **select()** on file descriptors that refer to other types of files is unspecified.
-
-**Parameters**
-
-- **nfds**: The **nfds** argument specifies the range of file descriptors to be tested. The **select()** function tests file descriptors in the range of 0 to nfds-1.
-
-- **readfds**: If the **readfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to read. On output, the object specifies which file descriptors are ready to read.
-
-- **writefds**: If the **writefds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to write. On output, the object specifies which file descriptors are ready to write.
-
-- **errorfds**: If the **errorfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked for pending error conditions. On output, the object specifies which file descriptors have error conditions pending.
-
-- **timeout**: If the **timeout** argument is not a null pointer, it points to an object of **struct timeval** type that specifies a maximum interval to wait for the selection to complete. If the **timeout** argument points to an object of **struct timeval** type whose members are 0, **select()** does not block. If the **timeout** argument is a null pointer, **select()** blocks until an event causes one of the masks to be returned with a valid (non-zero) value. If the time limit expires before any event occurs that would cause one of the masks to be set to a non-zero value, **select()** completes successfully and returns 0.
-
-**Return Value**
-
-**FD_CLR()**, **FD_SET()** and **FD_ZERO()** return no value. **FD_ISSET()** returns a non-zero value if the bit for the file descriptor **fd** is set in the file descriptor set pointed to by fdset, and 0 if otherwise.
-
-Upon successful completion, **select()** returns the total number of bits set in the bit masks. Otherwise, -1 is returned, and **errno** is set to indicate the error.
+>The **select()** function indicates which of the specified file descriptors are ready for reading, ready for writing, or has an error condition pending. If the specified error condition is false for all of the specified file descriptors, **select()** blocks the file descriptor up to the specified timeout interval until the specified condition is true for at least one of the specified file descriptors. The **select()** function supports regular files, terminal and pseudo-terminal devices, STREAMS-based files, FIFOs, and pipes. The behavior of **select()** on file descriptors that refer to other types of files is unspecified.
+>
+>**Parameters**
+>- **nfds**: The **nfds** argument specifies the range of file descriptors to be tested. The **select()** function tests file descriptors in the range of 0 to nfds-1.
+>- **readfds**: If the **readfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to read. On output, the object specifies which file descriptors are ready to read.
+>- **writefds**: If the **writefds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked to see if they are ready to write. On output, the object specifies which file descriptors are ready to wite.
+>- **errorfds**: If the **errorfds** argument is not a null pointer, it points to an object of **fd_set** type. On input, the object specifies the file descriptors to be checked for pending error conditions. On output, the object specifies which file descriptors have error conditions pending.
+>- **timeout**: If the **timeout** argument is not a null pointer, it points to an object of **struct timeval** type that specifies a maximum interval to wait for the selection to complete. If the **timeout** argument points to an object of **struct timeval** type whose members are 0, **select()** does not block. If the **timeout** argument is a null pointer, **select()** blocks until an event causes one of the masks to be returned with a valid (non-zero) value. If the time limit expires before any event occurs that would cause one of the masks to be set to a non-zero value, **select()** completes successfully and returns 0.
+>
+>**Return Value**
+>
+>**FD_CLR()**, **FD_SET()** and **FD_ZERO()** return no value. **FD_ISSET()** returns a non-zero value if the bit for the file descriptor **fd** is set in the file descriptor set pointed to by fdset, and 0 if otherwise.
+>
+>Upon successful completion, **select()** returns the total number of bits set in the bit masks. Otherwise, -1 is returned, and **errno** is set to indicate the error.
 
 
 ```c
@@ -586,15 +573,14 @@ void FD_ZERO(fd_set *fdset);
 ```
 
 
-The **FD_ZERO()** function initializes the file descriptor set to contain no file descriptors.
-
-**Parameters**
-
-- **fdset**: The file descriptor set
-
-**Return Value**
-
-Previous signal handler on success or SIG_ERR on failure (setting a signal handler can be disabled on some implementations).
+>The **FD_ZERO()** function initializes the file descriptor set to contain no file descriptors.
+>
+>**Parameters**
+>- **fdset**: The file descriptor set
+>
+>**Return Value**
+>
+>Previous signal handler on success or SIG_ERR on failure (setting a signal handler can be disabled on some implementations).
 
 
 ```c
@@ -606,14 +592,12 @@ void FD_SET(int           fd,
 ```
 
 
-The **FD_SET()** function adds a file descriptor to a file descriptor set.
-
-**Parameters**
-
-- **fd:** The file descriptor
-
-- **fdset:** The file descriptor set
-
-**Return Value**
-
-Previous signal handler on success or SIG_ERR on failure (setting a signal handler can be disabled on some implementations).
+>The **FD_SET()** function adds a file descriptor to a file descriptor set.
+>
+>**Parameters**
+>- **fd:** The file descriptor
+>- **fdset:** The file descriptor set
+>
+>**Return Value**
+>
+>Previous signal handler on success or SIG_ERR on failure (setting a signal handler can be disabled on some implementations).
