@@ -45,13 +45,9 @@ After Downloading of Ubuntu completed, Install virtual machines, such as ***VMwa
 
 It is recommended that network adapter is set as Bridged.
 
-<p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/366bbdfa-6b1f-4fc7-a168-e7c3d8542d41" width="500" height="400">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/59a33d1f-2634-4cd5-9ac7-081d7365bf59" width="500" height="400">
-</p>
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/9ac6858f-c4c7-4c6d-907f-6aada1d59b96" width="500" height="400">
+    
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5bc3cd34-d465-4698-81e0-bf7d00e17c98" width="500" height="400">
 </p>
 
