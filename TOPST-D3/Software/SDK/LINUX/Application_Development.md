@@ -307,9 +307,9 @@ $ ./eclipse
 1. Click “Install New Software…” on the Help tab again.
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d8d486a8-d33b-4635-ae22-4dc1ae1b28d7" width="700" height="500">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/0bec4883-5afc-41d5-864d-05212b576d8f" >
 </p>
-<p align="center"><strong>Figure 1.4 Eclipse Yocto Installation</strong></p>
+<p align="center"><strong>Figure 1.4 Eclipse Window</strong></p>
 
 2. Press the Add button to add a repository and set it as follows:
 
@@ -319,6 +319,11 @@ Location: http://downloads.yoctoproject.org/releases/eclipse-plugin/1.8/luna
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b320627a-dcef-485d-8893-d20f99d4ccc8" width="700" height="200">
 </p>
 <p align="center"><strong>Figure 1.5 Add Repository</strong></p>
+
+<p align="center">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/d8d486a8-d33b-4635-ae22-4dc1ae1b28d7" width="700" height="500">
+</p>
+<p align="center"><strong>Figure 1.6 Eclipse Yocto Installation</strong></p>
 
 
 3. Select the following plug-ins.
@@ -339,14 +344,14 @@ Yocto Project Documentation plug-in
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/4105db85-2035-4513-bc24-c46fb7525a3f" width="700" height="500">
 </p>
-<p align="center"><strong>Figure 1.6 Select Preferences</strong></p>
+<p align="center"><strong>Figure 1.7 Select Preferences</strong></p>
 
 2. Click the Yocto Project ADT on the left tab and set it up.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/06487724-9523-4d31-8045-260f426bb1ec" width="700" height="500">
 </p>
-<p align="center"><strong>Figure 1.7 Preference Settings</strong></p>
+<p align="center"><strong>Figure 1.8 Preference Settings</strong></p>
 
 “Cross Compiler Options” are set to Standalone, and “Toolchain Root Location” and “Sysroot Location” select the folder where the SDK was previously installed. (If you followed this example, the folder is \build\tcc8050-main\tmp\deploy\sdk\maincore)
 
@@ -359,12 +364,12 @@ Yocto Project Documentation plug-in
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/6ef659c1-abf4-4f13-8347-847eede42aff" width="700" height="500">
 </p>
-<p align="center"><strong>Figure 1.8 Create New Project</strong></p>
+<p align="center"><strong>Figure 1.9 Create New Project</strong></p>
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c60445f3-e4d1-41cf-8fe4-9ebfdd9e979d" width="700" height="500">
 </p>
-<p align="center"><strong>Figure 1.9 Project Preference</strong></p>
+<p align="center"><strong>Figure 1.10 Project Preference</strong></p>
 
 2. After creating the project, right-click on the project, and click “Reconfigure Project” to automatically create files.
 3. Click the **hammer** button on the top to build.
@@ -372,7 +377,7 @@ Yocto Project Documentation plug-in
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b91390ab-5a63-4380-94cb-781e28a2db42" width="400" height="500">
 </p>
-<p align="center"><strong>Figure 1.10 Reconfigure Project</strong></p>
+<p align="center"><strong>Figure 1.11 Reconfigure Project</strong></p>
 
 ### 1.1.2.8.2 Debug Project with TCF
 
@@ -381,7 +386,7 @@ Yocto Project Documentation plug-in
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/957dc0bc-3a9e-40bc-8b9f-d1983f96a27c" width="700" height="500">
 </p>
-<p align="center"><strong>Figure 1.11 Debug Configuration</strong></p>
+<p align="center"><strong>Figure 1.12 Debug Configuration</strong></p>
 
 2. Connect ***Eclipse*** and the board to each other via Ethernet.
 3. Select “New” on the “Connection” tab, and select TCF.
@@ -389,31 +394,31 @@ Yocto Project Documentation plug-in
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/fe44eec9-d669-4115-8d7a-6d0c1472e386" width="500" height="350">
 </p>
-<p align="center"><strong>Figure 1.12 Select Target</strong></p>
+<p align="center"><strong>Figure 1.13 Select Target</strong></p>
 
 4. Click IP after connecting SSH with a serial connection. Enter the IP address into “Host name,” fill in “Connection name” and select Finish.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5229c9ae-db3d-4544-a1a0-cc52894abf26" width="500" height="350">
 </p>
-<p align="center"><strong>Figure 1.13 Connect Target Network</strong></p>
+<p align="center"><strong>Figure 1.14 Connect Target Network</strong></p>
 
 5. Write in “Remote Absolute File Path for C/C++ Application” the path to create the executable file at the desired location on the board.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/badc573a-f6d3-4576-95f7-09f14f9c408c" width="750" height="100">
 </p>
-<p align="center"><strong>Figure 1.14 Set Source Path</strong></p>
+<p align="center"><strong>Figure 1.15 Set Source Path</strong></p>
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/356c0acc-d49f-4311-958f-9fc17df67906" width="750" height="350">
 </p>
-<p align="center"><strong>Figure 1.15 Success Screen</strong></p>
+<p align="center"><strong>Figure 1.16 Success Screen</strong></p>
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b4a865d5-a72c-4ba3-ad92-cb66709e8d40" width="500" height="350">
 </p>
-<p align="center"><strong>Figure 1.16 Board Console Screen</strong></p>
+<p align="center"><strong>Figure 1.17 Board Console Screen</strong></p>
 
 6. An executable file called “HelloWorld” was created, and when executed, the content is printed based on the code written.
 
@@ -445,6 +450,8 @@ $ aplay -l
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/19371066-8a6b-45a0-a8f4-4e0949f7e662" width="750" height="150">
 </p>
+<p align="center"><strong>Figure 1.18 aplay -l result Screen</strong></p>
+
 
 - Test sound.
 
@@ -454,6 +461,8 @@ $ speaker-test -c 2
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/4e28ba09-1d4b-4e53-b25f-dc3dc9ab66fd" width="750" height="300">
 </p>
+<p align="center"><strong>Figure 1.19 speaker-test -c 2 result Screen</strong></p>
+
 
 ### 1.2.1.1 SoX
 
@@ -467,6 +476,8 @@ $ play ${sample.mp3}
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/33dc949c-d26c-42dc-bd61-312e5ab7ebe3" width="750" height="250">
 </p>
+<p align="center"><strong>Figure 1.20 play ${sample.mp3} result Screen</strong></p>
+
 
 ### 1.2.2 Video – VLC
 
@@ -482,6 +493,8 @@ $ sudo apt-get install vlc
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/cb1790c0-f06c-4316-bc2b-b58f08f18001" width="600" height="350">
 </p>
+<p align="center"><strong>Figure 1.22 VLC player on TOPST D3</strong></p>
+
 
 ### 1.2.3 General Purpose Input/Output (GPIO)
 
@@ -500,6 +513,8 @@ The pin map is as follows:
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/79d68d72-1e4c-41a4-b3a8-f9507b3d7821" width="500" height="400">
 </p>
+<p align="center"><strong>Figure 1.23 GPIO Linux Pin map</strong></p>
+
 
 The following is an example of testing the input and output of the board. You can test the input and output by controlling the pin number.
 
@@ -517,7 +532,7 @@ $ echo 0 > /sys/class/gpio/gpio84/value
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/75ea32f8-e75f-4276-8c57-4a4360b9888e" width="400" height="500">
 </p>
-<p align="center"><strong>Figure 1.17 GPIO Example Board</strong></p>
+<p align="center"><strong>Figure 1.24 GPIO Example Board</strong></p>
 
 ### 1.2.4 Serial Peripheral Interface (SPI)
 
@@ -540,7 +555,7 @@ $ python3 luma.led_matrix/examples/matrix_demo.py
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/61ca0d9a-d2f9-4829-81bc-f6745c60f490" width="400" height="500">
 </p>
-<p align="center"><strong>Figure 1.18 Dot-matrix Test with SPI</strong></p>
+<p align="center"><strong>Figure 1.25 Dot-matrix Test with SPI</strong></p>
 
 ### 1.2.5 Inter-integrated Circuit (I2C)
 
@@ -615,7 +630,7 @@ Output a list of installed busses.
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e733d7ad-a126-4ffc-97a7-f760d552140d" width="750" height="150">
 </p>
-<p align="center"><strong>Figure 1.19 I2C Device</strong></p>
+<p align="center"><strong>Figure 1.26 I2C Device</strong></p>
 
 ```bash
 $ pip install smbus2
@@ -628,7 +643,7 @@ $ rplcd-tests i2c testsuite expander=PCF8574 addr=0x3f port=1 cols=16 rows=2 cha
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e9324725-10f1-4076-b7a2-188082435d80" width="500" height="350">
 </p>
-<p align="center"><strong>Figure 1.20 I2C LCD Test</strong></p>
+<p align="center"><strong>Figure 1.27 I2C LCD Test</strong></p>
 
 ### 1.2.6 ROS2
 
@@ -652,6 +667,8 @@ $ ros2 run demo_nodes_cpp talker
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/8b4f7fe7-d430-4384-9ac2-c24b7c2618f0" width="750" height="250">
 </p>
+<p align="center"><strong>Figure 1.28 ros2 run talker Screen</strong></p>
+
 
 - Set client environment.
 
@@ -664,3 +681,5 @@ $ ros2 run demo_nodes_py listener
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/26c2d6b5-5992-4e1e-b1f0-695d6ed5e1c3" width="750" height="250">
 </p>
+<p align="center"><strong>Figure 1.29 ros2 run listener Screen</strong></p>
+
