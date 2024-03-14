@@ -24,8 +24,23 @@ After Downloading of Ubuntu completed, Install virtual machines, such as ***VMwa
 ### 1.2.1 Create Virtual Server
 
 1. Select one of the Ubuntu versions described in Chapter 1.1.
-2. Enter the name and password you want.
-3. Set the name of the virtual machine.
+<p align="center">
+   <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/366bbdfa-6b1f-4fc7-a168-e7c3d8542d41" width="500" height="400">
+</p>
+<p align="center"><strong>Figure 1.2 Select Ubuntu image</strong></p>  
+
+2. Enter the name and password you want.  
+<p align="center">
+   <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/59a33d1f-2634-4cd5-9ac7-081d7365bf59" width="500" height="400">
+</p>
+<p align="center"><strong>Figure 1.3 Enter the name and password</strong></p>  
+
+3. Enter the name of the virtual machine you want.
+<p align="center">
+   <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/366bbdfa-6b1f-4fc7-a168-e7c3d8542d41" width="500" height="400">
+</p>
+<p align="center"><strong>Figure 1.4 Enter the Virtual machine name</strong>  
+    
 4. Recommended capacity is 150 GB or more, 8 GB RAM, and 16 processors.
 
 It is recommended that network adapter is set as Bridged.
