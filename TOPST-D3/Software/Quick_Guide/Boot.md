@@ -25,30 +25,30 @@ Install the UART Bridge VCP driver (found on https://www.silabs.com/developers/u
 Afterwards, when you , the CP210x USB to UART driver is set up as follows.
 
 <br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/9e5444c8-2990-4d93-99ae-71740d5284e4" alt="Figure 1.1 TOPST Debugging Board" width="350" height="250">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/9e5444c8-2990-4d93-99ae-71740d5284e4" alt="Figure 1.1 TOPST Debugging Board">
     <p><strong>Figure 1.2 USB Connection in Windows Environment</strong></p>
 </div><br>
 
 Connect each UART port by using the terminal emulator on the host PC. Shown below is the log screen that was booted by connecting to the main core, sub-core, and MCU core. (**Example**: Terminal emulator: PuTTY or mobaXterm, Speed: 115200 bps, Data bits: 8, Parity: None, Stop bits: 1, Flow Control: None)
 
 <br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/3f1b3677-defa-45c7-a95e-9081215275a0" alt="Figure 1.1 TOPST Debugging Board" width="400" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/161264431/eb38e963-ea0c-4453-b59a-d184293d488a" >
     <p><strong>Figure 1.3 Connected Screen for Main Core (ID and Password are root)</strong></p>
 </div><br>
 
 <br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/60909aba-3c0f-49d5-b622-9bdfd9073b85" alt="Figure 1.1 TOPST Debugging Board" width="400" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/60909aba-3c0f-49d5-b622-9bdfd9073b85" alt="Figure 1.1 TOPST Debugging Board" >
     <p><strong>Figure 1.4 Connected Screen for Sub-core (ID and Password are root)</strong></p>
 </div><br>
 
 <br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/24ceb1f4-11bc-4bea-b8fa-2dc135001237" alt="Figure 1.1 TOPST Debugging Board" width="400" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/24ceb1f4-11bc-4bea-b8fa-2dc135001237" alt="Figure 1.1 TOPST Debugging Board" >
     <p><strong>Figure 1.5 Connected Screen for MCU Core</strong></p>
 </div><br>
 
 ## 1.3 TOPST Connection with DP Port
 
-When the firmware loads normally, the DP port is connected to the monitor, and the DP port boots, Ubuntu loads into the monitor as shown below. Ubuntu operates on the main core as described above.
+When the firmware loads normally, Connect the DisplayPort cable to the monitor and TOPST D3 board. Then Ubuntu loads into the monitor as shown below. Ubuntu operates on the main core as described above.
 
 <br><div align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/0633a9c2-af8f-472e-97c3-26b34a5c5aa4" alt="Figure 1.1 TOPST Debugging Board" width="500" height="300">
