@@ -1,10 +1,18 @@
 #  Build Guide
 
-## 1.1 TOPST
+## 1.1 TOPST D3 Linux SDK Build Prepration
 
-is based on Yocto Project 3.1 Dunfell. Therefore, the Yocto Project environment must be set on the host PC to use TOPST D3 SDK. To download SDK, source-mirror, and tools, you must install utilities.
+TOPST D3 Linux SDK is based on Yocto Project 3.1 Dunfell. Therefore, the Yocto Project environment must be set on the host PC to use TOPST D3 Linux SDK. To download SDK, source-mirror, and tools, you must install utilities.  
 
-Figure 1.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and perform build. After the build is completed, package, image, and SDK are provided as results.
+## 1.2 Yocto Project  
+
+The Yocto Project is an open source project focuses on embedded Linux development.  
+It uses a combination of Open Embedded project, which is Poky, and ***bitbake*** as the build system to make Linux images.  
+By using Yocto Project, you can simultaneously build the bootloader, kernel, and rootfs.  
+
+## 1.3 Task Process
+
+Figure 1.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
 
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/daa02968-b0b5-4ff2-8dd0-65edd6393f45" width="750" height="400">
@@ -18,9 +26,9 @@ There are two ways to download and build TOPST D3 SDK as follows:
 
 However, this document only describes ***autolinux***.
 
-### 1.1.1 Composition of TOPST
+### 1.4 Composition of TOPST
 
-After TOPST is downloaded, you can check the following items.
+After autolinux build is completed, you can check the following items.
 
 <table align="center">
   <tr>
@@ -29,7 +37,7 @@ After TOPST is downloaded, you can check the following items.
     <th colspan="1">Description</th>
   </tr>
   <tr>
-    <td rowspan="12">poky</td>
+    <td rowspan="13">poky</td>
     <td colspan="2">Meta</td>
     <td rowspan="3">Yocto Project 1.1 Dunfell build system</td>
   </tr>
@@ -77,16 +85,16 @@ After TOPST is downloaded, you can check the following items.
     <td>Configuration package and example programs on sub-core</td>
   </tr>
   <tr>
-    <td></td>
     <td colspan="2">download_web.sh</td>
     <td>Script for downloading source-mirror, tools, and FWDN</td>
   </tr>
   <tr>
-    <td colspan="2" rowspan="3">boot-firmware</td>
-    <td>prebuilt</td>
+    <td  rowspan="3">boot-firmware</td>
+    <td colspan="2">prebuilt</td>
     <td>Boot-firmware files<br>Tools to make images for boot-firmware<br>Each boot-firmware for TOPST</td>
   </tr>
   <tr>
+    <td rowspan="2">tools</td>
     <td>fwdn</td>
     <td>FWDN execute file<br>VTC driver<br>Source code</td>
   </tr>
@@ -113,11 +121,11 @@ After TOPST is downloaded, you can check the following items.
   </tr>
 </table>
 
-### 1.1.2 autolinux
+### 1.5 autolinux
 
 ***autolinux*** was developed by Telechips to make it easy to download and build SDK. ***autolinux*** does not provide all settings and functions, so you should set detailed configurations.
 
-### 1.1.2.1 Get autolinux with Git
+### 1.5.1 Get autolinux with Git
 
 The following code shows how to get ***autolinux*** with Git.
 
@@ -128,7 +136,7 @@ $ cd topst
 ```
 
 
-### 1.1.2.2 Composition of autolinux
+### 1.5.2 Composition of autolinux
 
 <table align="center">
   <tr>
@@ -185,7 +193,7 @@ $ cd topst
   </tr>
 </table>
 
-### 1.1.2.3 autolinux Usage
+### 1.5.3 autolinux Usage
 
 ```bash
 **$ ./autolinux --help**
@@ -280,7 +288,7 @@ ex) -sf rvc gpu-vz meta-update
 ```
 
 
-### 1.1.2.4 Download and Configure SDK
+### 1.5.4 Download and Configure TOPST D3 Linux SDK
 
 TOPST D3 SDK is downloaded at initial configuration.
 
@@ -291,9 +299,9 @@ You can set up the initial configuration by using a **configure** command. If yo
 The following configurations must be set:
 
 - **Choose a core to build.**
-- **Choose the features** to build.
+- **Choose the features** at tcc-0850-main and tcc8050-sub to build.
 
-When the configuration is completed, the setup is saved as “autolinux.config”.
+When the configuration is completed, the set-up is saved as “autolinux.config”.
 
 ```bash
 **$ ./autolinux -c configure**
@@ -477,7 +485,8 @@ autolinux.config  build          classes     doc      README�
 ```
 
 
-### 1.1.2.5 Build TOPST
+### 1.5.5 Build TOPSTD3 Linux SDKls
+
 
 You can use the **BitBake** command to build on per-target basis. These targets differ for each package that is included in the build.
 
@@ -698,15 +707,14 @@ Enter the options below when downloading:
 
     : **filesystem**
 
-### 1.1.3 Optional Build
+### 1.6 Optional Build
 
 Each core can be built separately. If you enter the core name to build as the last parameter, an image of that core is created.
 
-### 1.1.3.1 Main Core Build
+### 1.6.1 Main Core Build
 
-As described in Chapter 3.1.2.5, the options below create the U-Boot, kernel, and automatic-linux-platform-image file system for the main core.
+As described in Chapter 1.4.5, the options below create the U-Boot 2020.01, 5.4.159 kernel, and automatic-linux-platform-image file system for the main core.
 
-Refer to Chapter 4 for download instructions.
 
 <table>
     <tr>
@@ -840,11 +848,9 @@ Built Path : /home/topst/build/tcc8050-main
 =================================================================================
 ```
 
-### 1.1.3.2 Sub-core Build
+### 1.6.2 Sub-core Build
 
-As described in Chapter 3.1.2.5, the options below create the u-boot, kernel, and telechips-subcore-image file system for the sub-core.
-
-Refer to Chapter 4 for download instructions.
+As described in Chapter 1.4.5, the options below create the u-boot, kernel, and telechips-subcore-image file system for the sub-core.
 
 <table>
     <tr>
@@ -978,11 +984,9 @@ Built Path : /home/topst/build/tcc8050-sub
 =================================================================================
 ```
 
-### 1.1.3.3 MCU Build
+### 1.6.3 MCU Build
 
 The following is the image information that is generated during the build.
-
-Refer to Chapter 4 for download instructions.
 
 | Command | Core | Created image | Description |
 | --- | --- | --- | --- |
@@ -1291,11 +1295,11 @@ create_final_rom - success
 ```
 
 
-### 1.1.3.4 “Make fai” for Automotive Platform
+### 1.6.4 “Make fai” for Automotive Platform
 
 This option creates a binary of the main core and sub-core into one image for automotive platform image. The following is a list of images that are created with this option.
 
-Refer to Chapter 4 for download instructions.
+Enter make_fai command to make"SD_Data.fai". The make_fai command is based on the image defined in "autolinux.config".
 
 <table>
     <tr>
@@ -1539,7 +1543,7 @@ Time taken in 0:00:35.981413
 ```
 
 
-### 1.1.3.5 Ubuntu File System Build
+### 1.6.5 Ubuntu File System Build
 
 The TOPST system is configured with the following images by default.
 
