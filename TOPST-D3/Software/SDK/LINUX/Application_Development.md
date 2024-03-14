@@ -1,4 +1,4 @@
-# 1 Development Guide
+# Development Guide
 
 ## 1.1 Software Package
 
