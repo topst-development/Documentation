@@ -4,6 +4,10 @@ Echo Server is a demo program that can check Transmission Control Protocol (TCP)
 
 Echo Server prints the received messages in order and ends when it receives a **q** message.
 
+```bash
+$ echoserverExample 9999
+```
+
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/756bd937-ae88-48d7-b4fe-09b4a974d1e4" width="450" height="200">
 </p>
@@ -106,19 +110,16 @@ int socket	(int	domain,
 ```
 
 
-The **socket()** function creates an unbound socket in a communications domain, and returns a file descriptor that can be used in later function calls that operate on sockets.
-
-**Parameters**
-
--   **domain**: Specifies the communications domain in which a socket is to be created.
-
--   **type**: Specifies the type of socket to be created.
-
--   **protocol:** Specifies a particular protocol to be used with the socket. Specifying a protocol of 0 causes **socket()** to use an unspecified default protocol that is appropriate for the requested socket type.
-
-**Return Value**
-
-Upon successful completion, **socket()** returns a non-negative integer, the socket file descriptor. Otherwise, a value of -1 is returned and **errno** is set to indicate the error.
+>The **socket()** function creates an unbound socket in a communications domain, and returns a file descriptor that can be used in later function calls that operate on sockets.
+>
+>**Parameters**
+>-   **domain**: Specifies the communications domain in which a socket is to be created.
+>-   **type**: Specifies the type of socket to be created.
+>-   **protocol:** Specifies a particular protocol to be used with the socket. Specifying a protocol of 0 causes **socket()** to use an unspecified default protocol that is appropriate for the requested socket type.
+>
+>  **Return Value**
+>
+>Upon successful completion, **socket()** returns a non-negative integer, the socket file descriptor. Otherwise, a value of -1 is returned and **errno** is set to indicate the error.
 
 
 ```c
@@ -131,19 +132,16 @@ int bind	(int 			socket,
 ```
 
 
-The **bind()** function assigns an address to an unnamed socket. Sockets created with **socket()** function are initially unnamed; they are identified only by their address family.
-
-**Parameters**
-
--   **socket**: Specifies the file descriptor of the socket to be bound.
-
--   **address**: Points to a **sockaddr** structure that contains the address to be bound to the socket. The length and format of the address depend on the address family of the socket.
-
--   **address_len**: Specifies the length of the **sockaddr** structure that is pointed to by the address argument.
-
-**Return Value**
-
-Upon successful completion, **bind()** returns 0. Otherwise, -1 is returned and **errno** is set to indicate the error.
+>The **bind()** function assigns an address to an unnamed socket. Sockets created with **socket()** function are initially unnamed; they are identified only by their address family.
+>
+>**Parameters**
+>-   **socket**: Specifies the file descriptor of the socket to be bound.
+>-   **address**: Points to a **sockaddr** structure that contains the address to be bound to the socket. The length and format of the address depend on the address family of the socket.
+>-   **address_len**: Specifies the length of the **sockaddr** structure that is pointed to by the address argument.
+>
+>**Return Value**
+>
+>Upon successful completion, **bind()** returns 0. Otherwise, -1 is returned and **errno** is set to indicate the error.
 
 
 ```c
@@ -155,19 +153,19 @@ int listen	(int 	socket,
 ```
 
 
-The **listen()** function marks a connection-mode socket that is specified by the socket argument as accepting connections. The **listen()** function also limits the number of outstanding connections in the socket's listen queue to the value specified by the backlog argument.
-
-If **listen()** is called with a backlog argument value that is less than 0, the function sets the length of the socket's listen queue to 0.
-
-The implementation may include incomplete connections in the queue subject to the queue limit. The implementation may also increase the specified queue limit internally if it includes such incomplete connections in the queue subject to this limit.
-
-Implementations may limit the length of the socket's listen queue. If backlog exceeds the implementation-dependent maximum queue length, the length of the socket's listen queue will be set to the maximum supported value.
-
-The socket in use may require the process to have appropriate privileges to use the **listen()** function.
-
-**Return Value**
-
-Upon successful completions, **listen()** returns 0. Otherwise, -1 is returned and **errno** is set to indicate the error.
+>The **listen()** function marks a connection-mode socket that is specified by the socket argument as accepting connections. The **listen()** function also limits the number of outstanding connections in the socket's listen queue to the value specified by the backlog argument.
+>
+>If **listen()** is called with a backlog argument value that is less than 0, the function sets the length of the socket's listen queue to 0.
+>
+>The implementation may include incomplete connections in the queue subject to the queue limit. The implementation may also increase the specified queue limit internally if it includes such incomplete connections in the queue subject to this limit.
+>
+>Implementations may limit the length of the socket's listen queue. If backlog exceeds the implementation-dependent maximum queue length, the length of the socket's listen queue will be set to the maximum supported value.
+>
+>The socket in use may require the process to have appropriate privileges to use the **listen()** function.
+>
+>**Return Value**
+>
+>Upon successful completions, **listen()** returns 0. Otherwise, -1 is returned and **errno** is set to indicate the error.
 
 
 ```c
@@ -179,16 +177,13 @@ int accept	(int 		socket,
 ```
 
 
-The accept() function extracts the first connection on the queue of pending connections, creates a new socket with the same socket type protocol and address family as the specified socket, and allocates a new file descriptor for that socket.
-
-**Parameters**
-
--   **socket**: Specifies that a socket that was created with **socket()** is bound to an address with **bind()** and issued a successful call to **listen()**.
-
--   **address**: Either a null pointer or a pointer to a **sockaddr** structure where the address of the connecting socket will be returned.
-
--   **address_len**: Points to a **socklen_t**, which on input specifies the length of the supplied **sockaddr** structure, and on output specifies the length of the stored address.
-
-**Return Value**
-
-Upon successful completion, **accept()** returns the non-negative file descriptor of the accepted socket. Otherwise, -1 is returned and **errno** is set to indicate the error.
+>The accept() function extracts the first connection on the queue of pending connections, creates a new socket with the same socket type protocol and address family as the specified socket, and allocates a new file descriptor for that socket.
+>
+>**Parameters**
+>-   **socket**: Specifies that a socket that was created with **socket()** is bound to an address with **bind()** and issued a successful call to **listen()**.
+>-   **address**: Either a null pointer or a pointer to a **sockaddr** structure where the address of the connecting socket will be returned.
+>-   **address_len**: Points to a **socklen_t**, which on input specifies the length of the supplied **sockaddr** structure, and on output specifies the length of the stored address.
+>
+>**Return Value**
+>
+>Upon successful completion, **accept()** returns the non-negative file descriptor of the accepted socket. Otherwise, -1 is returned and **errno** is set to indicate the error.
