@@ -1,4 +1,4 @@
-# 1 Booting Guide
+#  Booting Guide
 
 This chapter describes how to boot the TOPST D3 and log in to the for each core.
 
