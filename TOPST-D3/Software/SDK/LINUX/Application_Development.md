@@ -411,12 +411,12 @@ Yocto Project Documentation plug-in
 <p align="center"><strong>Figure 1.15 Set Source Path</strong></p>
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/356c0acc-d49f-4311-958f-9fc17df67906" width="750" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/356c0acc-d49f-4311-958f-9fc17df67906" width="950" height="350">
 </p>
 <p align="center"><strong>Figure 1.16 Success Screen</strong></p>
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b4a865d5-a72c-4ba3-ad92-cb66709e8d40" width="500" height="350">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/b4a865d5-a72c-4ba3-ad92-cb66709e8d40" width="750" height="350">
 </p>
 <p align="center"><strong>Figure 1.17 Board Console Screen</strong></p>
 
@@ -448,7 +448,7 @@ $ aplay -l
 ```
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/19371066-8a6b-45a0-a8f4-4e0949f7e662" width="750" height="150">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/19371066-8a6b-45a0-a8f4-4e0949f7e662" width="850" height="150">
 </p>
 <p align="center"><strong>Figure 1.18 aplay -l result Screen</strong></p>
 
@@ -474,7 +474,7 @@ $ sudo apt-get install sox libsox-fmt-all
 $ play ${sample.mp3}
 ```
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/33dc949c-d26c-42dc-bd61-312e5ab7ebe3" width="750" height="250">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/33dc949c-d26c-42dc-bd61-312e5ab7ebe3" width="850" height="250">
 </p>
 <p align="center"><strong>Figure 1.20 play ${sample.mp3} result Screen</strong></p>
 
@@ -628,7 +628,7 @@ Output a list of installed busses.
 ```
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e733d7ad-a126-4ffc-97a7-f760d552140d" width="750" height="150">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/e733d7ad-a126-4ffc-97a7-f760d552140d" width="1200" height="100">
 </p>
 <p align="center"><strong>Figure 1.26 I2C Device</strong></p>
 
@@ -679,7 +679,7 @@ $ ros2 run demo_nodes_py listener
 ```
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/26c2d6b5-5992-4e1e-b1f0-695d6ed5e1c3" width="750" height="250">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/26c2d6b5-5992-4e1e-b1f0-695d6ed5e1c3" width="800" height="165">
 </p>
 <p align="center"><strong>Figure 1.29 ros2 run listener Screen</strong></p>
 
