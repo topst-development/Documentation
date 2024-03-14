@@ -46,8 +46,7 @@ After Downloading of Ubuntu completed, Install virtual machines, such as ***VMwa
 It is recommended that network adapter is set as Bridged.
 
 
-<p align="center">
-    
+<p align="center"> 
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/5bc3cd34-d465-4698-81e0-bf7d00e17c98" width="500" height="400">
 </p>
 
@@ -61,9 +60,11 @@ It is recommended that network adapter is set as Bridged.
 
 ### 1.3.1 Install SSH and Samba
 
-but you can use SSH and Samba to work in a much more convenient environment. SSH and Samba allows you to execute commands on remote computers and copy files to other computers.
+After any virtual machine installed, you can use additional utilities such as SSH and Samba for more convenient development environment. SSH and Samba allows you to execute commands on remote computers and copy files to other computers.
 
 If SSH and Samba are already installed or you will not use them, you can skip this chapter.
+
+Use the following command to install net-tools, SSH, Samba.
 
 ```bash
 sudo apt install -y net-tools openssh-server samba
@@ -75,6 +76,8 @@ After downloading SSH and Samba, you should set each program to your environment
 ### 1.3.2 Utilities
 
 Install the utilities at once. To use Yocto Project, the following utilities must be installed on Host System (inpidual computer or development server).
+
+Use the following command to install Utilities.
 
 ```bash
 sudo apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib build-essential chrpath
@@ -89,22 +92,23 @@ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim
 
 ### 1.3.3 Install Repo
 
-You can download TOPST D3 SDK through Android Repo.
-
-To install Repo, refer to the following website: https://source.android.com/source/downloading.html.
-
-If Repo is already installed, you can use it without re-installing.
-
+You can download TOPST D3 SDK through Android Repo.  
+To install Repo, refer to the following website: https://source.android.com/source/downloading.html.  
+If Repo is already installed, you can use it without re-installing.  
 Before installing Repo, the installed Python version (3.6 or higher) should be properly set.
 
+Use the following command to install repo.
 ```bash
-sudo ln -sf /usr/bin/python3 /usr/bin/python
 
 sudo apt-get install repo
 ```
 
+If you see the error messange '/usr/bin/env 'python' no such file or directory', Use the following command that allows the file 'python' to point to 'python3'.
 
-If there is a Repo error, download the latest version and put it directly into the /usr/bin/ folder.
+```bash
+sudo ln -sf /usr/bin/python3 /usr/bin/python
+```
+If there is a Repo error, Use the following command to download the latest version and to put it directly into the /usr/bin/ folder.
 
 ```bash
 mkdir -p ~/bin
