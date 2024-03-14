@@ -19,113 +19,20 @@ Figure 1.1 shows the task process of Yocto Project. You can download source from
 </p>
 <p align="center"><strong>Figure 1.1 Yocto Project Task Process</strong></p>
 
-There are two ways to download and build TOPST D3 SDK as follows:
+There are two ways to download and build TOPST D3 Linux SDK as follows:
 
 - ***autolinux*** (python script to automatically download and build the SDK)
 - Manual operation
 
 However, this document only describes ***autolinux***.
 
-### 1.4 Composition of TOPST
 
-After autolinux build is completed, you can check the following items.
 
-<table align="center">
-  <tr>
-    <th></th>
-    <th colspan="2">Item</th>
-    <th colspan="1">Description</th>
-  </tr>
-  <tr>
-    <td rowspan="13">poky</td>
-    <td colspan="2">Meta</td>
-    <td rowspan="3">Yocto Project 1.1 Dunfell build system</td>
-  </tr>
-  <tr>
-    <td colspan="2">meta-poky</td>
-  </tr>
-  <tr>
-    <td colspan="2">meta-yocto-bsp</td>
-  </tr>
-  <tr>
-    <td colspan="2">meta-arm</td>
-    <td>Support Arm toolchain Layer</td>
-  </tr>
-  <tr>
-    <td colspan="2">meta-qt5</td>
-    <td>Support Qt5 5.6.3 Layer</td>
-  </tr>
-  <tr>
-    <td colspan="2">meta-gplv2</td>
-    <td>Support packages to avoid GPLv3 license</td>
-  </tr>
-  <tr>
-    <td colspan="2">meta-telechips-bsp</td>
-    <td>Support Telechips BSP Layer</td>
-  </tr>
-  <tr>
-    <td rowspan="5">meta-telechips</td>
-    <td>meta-core</td>
-    <td>Recipes that require modification from Open Source Software (OSS) used by Telechips TOPST D3 SDK or recipes that are not in Yocto Project 3.1</td>
-  </tr>
-  <tr>
-    <td>meta-extra</td>
-    <td>OSS Layer that is added by Telechips</td>
-  </tr>
-  <tr>
-    <td>meta-qt5</td>
-    <td>Support Qt5 to support Telechips GUI application</td>
-  </tr>
-  <tr>
-    <td>meta-ivi</td>
-    <td>Configuration package and example programs of In-vehicle Infotainment (IVI)</td>
-  </tr>
-  <tr>
-    <td>meta-subcore</td>
-    <td>Configuration package and example programs on sub-core</td>
-  </tr>
-  <tr>
-    <td colspan="2">download_web.sh</td>
-    <td>Script for downloading source-mirror, tools, and FWDN</td>
-  </tr>
-  <tr>
-    <td  rowspan="3">boot-firmware</td>
-    <td colspan="2">prebuilt</td>
-    <td>Boot-firmware files<br>Tools to make images for boot-firmware<br>Each boot-firmware for TOPST</td>
-  </tr>
-  <tr>
-    <td rowspan="2">tools</td>
-    <td>fwdn</td>
-    <td>FWDN execute file<br>VTC driver<br>Source code</td>
-  </tr>
-  <tr>
-    <td>mktcimg</td>
-    <td>mktcimg execute file source code</td>
-  </tr>
-  <tr>
-    <td colspan="3">tools</td>
-    <td><li>gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz<li>x86_64-buildtools-extended-nativesdk-standalone-3.0+snapshot-20200315.sh<li>x86_64-buildtools-nativesdk-standalone-3.1.sh</td>
-  </tr>
-  <tr>
-    <td colspan="2" rowspan="3">cr5-bsp</td>
-    <td>scripts</td>
-    <td>Debug script for JTAG debugger such as <strong>TRACE32</strong></td>
-  </tr>
-  <tr>
-    <td>source</td>
-    <td>Source code<li>app.drivers: Application drivers. These drivers do not access hardware directly.<li>app.sample: Sample applications<li>build: Build environment & utilities<li>core: Assembly core files<li>dev.drivers: Device drivers<li>os: Operating System<li>sal: System Adaptation Layer</td>
-  </tr>
-  <tr>
-    <td>tools</td>
-    <td>Tools for FWDN & FW upgrade</td>
-  </tr>
-</table>
-
-### 1.5 autolinux
+### 1.4 autolinux
 
 ***autolinux*** was developed by Telechips to make it easy to download and build SDK. ***autolinux*** does not provide all settings and functions, so you should set detailed configurations.
 
-### 1.5.1 Get autolinux with Git
+### 1.4.1 Get autolinux with Git
 
 The following code shows how to get ***autolinux*** with Git.
 
@@ -136,7 +43,7 @@ $ cd topst
 ```
 
 
-### 1.5.2 Composition of autolinux
+### 1.4.2 Composition of autolinux
 
 <table align="center">
   <tr>
@@ -193,7 +100,7 @@ $ cd topst
   </tr>
 </table>
 
-### 1.5.3 autolinux Usage
+### 1.4.3 autolinux Usage
 
 ```bash
 **$ ./autolinux --help**
@@ -288,7 +195,7 @@ ex) -sf rvc gpu-vz meta-update
 ```
 
 
-### 1.5.4 Download and Configure TOPST D3 Linux SDK
+### 1.4.4 Download and Configure TOPST D3 Linux SDK
 
 TOPST D3 SDK is downloaded at initial configuration.
 
@@ -485,7 +392,7 @@ autolinux.config  build          classes     doc      README�
 ```
 
 
-### 1.5.5 Build TOPSTD3 Linux SDKls
+### 1.4.5 Build TOPST D3 Linux SDK 
 
 
 You can use the **BitBake** command to build on per-target basis. These targets differ for each package that is included in the build.
@@ -707,11 +614,11 @@ Enter the options below when downloading:
 
     : **filesystem**
 
-### 1.6 Optional Build
+### 1.5 Optional Build
 
 Each core can be built separately. If you enter the core name to build as the last parameter, an image of that core is created.
 
-### 1.6.1 Main Core Build
+### 1.5.1 Main Core Build
 
 As described in Chapter 1.4.5, the options below create the U-Boot 2020.01, 5.4.159 kernel, and automatic-linux-platform-image file system for the main core.
 
@@ -848,7 +755,7 @@ Built Path : /home/topst/build/tcc8050-main
 =================================================================================
 ```
 
-### 1.6.2 Sub-core Build
+### 1.5.2 Sub-core Build
 
 As described in Chapter 1.4.5, the options below create the u-boot, kernel, and telechips-subcore-image file system for the sub-core.
 
@@ -984,7 +891,7 @@ Built Path : /home/topst/build/tcc8050-sub
 =================================================================================
 ```
 
-### 1.6.3 MCU Build
+### 1.5.3 MCU Build
 
 The following is the image information that is generated during the build.
 
@@ -1295,11 +1202,10 @@ create_final_rom - success
 ```
 
 
-### 1.6.4 “Make fai” for Automotive Platform
+### 1.5.4 “Make fai” for Automotive Platform
 
 This option creates a binary of the main core and sub-core into one image for automotive platform image. The following is a list of images that are created with this option.
 
-Enter make_fai command to make"SD_Data.fai". The make_fai command is based on the image defined in "autolinux.config".
 
 <table>
     <tr>
@@ -1326,7 +1232,9 @@ Enter make_fai command to make"SD_Data.fai". The make_fai command is based on th
         <td>telechips-subcore-image</td>
         <td>minimal root filesystem</td>
     </tr>
-</table>
+</table>  
+
+Enter make_fai command to make"SD_Data.fai". The make_fai command is based on the image defined in "autolinux.config".
 
 The “SD Data.fai” build image is created in the following path:
 
@@ -1542,8 +1450,103 @@ FWDN tool PATH : /boot-firmware/tools/fwdn
 Time taken in 0:00:35.981413
 ```
 
+### 1.6 Composition of TOPST D3 Linux SDK
 
-### 1.6.5 Ubuntu File System Build
+After autolinux build is completed, you can check the following items.
+
+<table align="center">
+  <tr>
+    <th></th>
+    <th colspan="2">Item</th>
+    <th colspan="1">Description</th>
+  </tr>
+  <tr>
+    <td rowspan="13">poky</td>
+    <td colspan="2">Meta</td>
+    <td rowspan="3">Yocto Project 1.1 Dunfell build system</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-poky</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-yocto-bsp</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-arm</td>
+    <td>Support Arm toolchain Layer</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-qt5</td>
+    <td>Support Qt5 5.6.3 Layer</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-gplv2</td>
+    <td>Support packages to avoid GPLv3 license</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-telechips-bsp</td>
+    <td>Support Telechips BSP Layer</td>
+  </tr>
+  <tr>
+    <td rowspan="5">meta-telechips</td>
+    <td>meta-core</td>
+    <td>Recipes that require modification from Open Source Software (OSS) used by Telechips TOPST D3 SDK or recipes that are not in Yocto Project 3.1</td>
+  </tr>
+  <tr>
+    <td>meta-extra</td>
+    <td>OSS Layer that is added by Telechips</td>
+  </tr>
+  <tr>
+    <td>meta-qt5</td>
+    <td>Support Qt5 to support Telechips GUI application</td>
+  </tr>
+  <tr>
+    <td>meta-ivi</td>
+    <td>Configuration package and example programs of In-vehicle Infotainment (IVI)</td>
+  </tr>
+  <tr>
+    <td>meta-subcore</td>
+    <td>Configuration package and example programs on sub-core</td>
+  </tr>
+  <tr>
+    <td colspan="2">download_web.sh</td>
+    <td>Script for downloading source-mirror, tools, and FWDN</td>
+  </tr>
+  <tr>
+    <td  rowspan="3">boot-firmware</td>
+    <td colspan="2">prebuilt</td>
+    <td>Boot-firmware files<br>Tools to make images for boot-firmware<br>Each boot-firmware for TOPST</td>
+  </tr>
+  <tr>
+    <td rowspan="2">tools</td>
+    <td>fwdn</td>
+    <td>FWDN execute file<br>VTC driver<br>Source code</td>
+  </tr>
+  <tr>
+    <td>mktcimg</td>
+    <td>mktcimg execute file source code</td>
+  </tr>
+  <tr>
+    <td colspan="3">tools</td>
+    <td><li>gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz<li>x86_64-buildtools-extended-nativesdk-standalone-3.0+snapshot-20200315.sh<li>x86_64-buildtools-nativesdk-standalone-3.1.sh</td>
+  </tr>
+  <tr>
+    <td colspan="2" rowspan="3">cr5-bsp</td>
+    <td>scripts</td>
+    <td>Debug script for JTAG debugger such as <strong>TRACE32</strong></td>
+  </tr>
+  <tr>
+    <td>source</td>
+    <td>Source code<li>app.drivers: Application drivers. These drivers do not access hardware directly.<li>app.sample: Sample applications<li>build: Build environment & utilities<li>core: Assembly core files<li>dev.drivers: Device drivers<li>os: Operating System<li>sal: System Adaptation Layer</td>
+  </tr>
+  <tr>
+    <td>tools</td>
+    <td>Tools for FWDN & FW upgrade</td>
+  </tr>
+</table>
+
+
+### 1.7 Ubuntu File System Build
 
 The TOPST system is configured with the following images by default.
 
