@@ -196,7 +196,7 @@ $ cd topst
 ### 1.5.3 autolinux Usage
 
 ```bash
-**$ ./autolinux --help**
+$ ./autolinux --help</strong
 
 usage: autolinux [-h] -c COMMAND [COMMAND ...] [-V] [-f FEATURES [FEATURES ...]] [-sf SUBFEATURES [SUBFEATURES ...]]
 
