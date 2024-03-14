@@ -1,31 +1,32 @@
-# 1 Setting Host Environment
+#  Setting Host Environment
 
 ## 1.1 Ubuntu Installation
 
-Since TOPST is based on the Yocto Project, the supported Linux version follows the Yocto.
+Since TOPST D3 Linux SDK is based on the Yocto Project, Linux version of TOPST D3 SDK follows the Yocto project.
 
-You can install another version of Linux, but in this document, TOPST is described based on Ubuntu ([https://releases.ubuntu.com](https://releases.ubuntu.com/)).
+You can install another version of Linux, but in this document, TOPST D3 Linux SDK is described based on Ubuntu ([https://releases.ubuntu.com](https://releases.ubuntu.com/)).
 
 Linux distribution version:
 
 - Ubuntu 18.04 (LTS)
-- Ubuntu 20.04 (LTS) and above
+- Ubuntu 20.04 (LTS)
+- Ubuntu 22.04 (LTS)
 
 <p align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/c588b93c-107a-4f95-a197-7d1e9875f170" width="750" height="400">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/161264431/4c025c5b-9709-4242-b053-fdb3742e01d1">
 </p>
 <p align="center"><strong>Figure 1.1 Ubuntu Installation</strong></p>
 
 ## 1.2 Virtual Machine Installation
 
-Install virtual machines, such as ***VMware*** and ***Virtualbox***, to create an Ubuntu development environment.
+After Downloading of Ubuntu completed, Install virtual machines, such as ***VMware*** and ***Virtualbox***, to create an Ubuntu development environment.
 
 ### 1.2.1 Create Virtual Server
 
-1. Select one of the Ubuntu versions described in Chapter 1.
+1. Select one of the Ubuntu versions described in Chapter 1.1.
 2. Enter the name and password you want.
-
-Recommended capacity is 150 GB or more, 8 GB RAM, and 16 processors.
+3. Set the name of the virtual machine.
+4. Recommended capacity is 150 GB or more, 8 GB RAM, and 16 processors.
 
 It is recommended that network adapter is set as Bridged.
 
