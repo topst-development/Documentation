@@ -14,7 +14,7 @@ Download and Installation:
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/a76a2840-586b-4642-857d-b167b39453b3" width="650" height="400">
 </p>
-<p align="center"><strong>Figure 1 Development Environment</strong></p>
+<p align="center"><strong>Figure 1.1 Development Environment</strong></p>
 
 ## 1.2 Hardware Requirements
 
