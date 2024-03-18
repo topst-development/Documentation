@@ -1,4 +1,4 @@
-# 1 Introduction
+#  Introduction
 
 This document contains information on how to develop Board Support Package (BSP).
 
