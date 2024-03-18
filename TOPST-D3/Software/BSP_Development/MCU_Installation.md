@@ -1,4 +1,4 @@
-# 1 MCU (CR5) Installation
+#  MCU (CR5) Installation
 
 ## 1.1 Software Architecture
 
