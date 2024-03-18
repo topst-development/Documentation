@@ -1,4 +1,4 @@
-# 1 Configuring the Toolchain
+# 1 Configuring th Toolchain
 
 A toolchain is a crucial component in the development process, especially when working with specialized hardware like the TOPST-VCP board. It provides a collection of tools that allow developers to compile, link, and debug their code for the target platform.
 
