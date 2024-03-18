@@ -40,7 +40,7 @@ Ensure these files are present as they'll be crucial for the next stages of deve
 <p align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/144076415/08838777-78c1-455c-822e-06f90d5e00bf" width="750" height="350">
 </p>
-<p align="center"><strong>Figure 2 Verify the Build Output</strong></p>
+<p align="center"><strong>Figure 1.2 Verify the Build Output</strong></p>
 
 To make sure all output files, use the following command :
 
