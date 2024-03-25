@@ -7,6 +7,60 @@ This document is a hardware user guide for TOPST VCP based on the TCC7045 applic
 
 Table 1.1 describes the features of the TCC7045.  
 
+<table align="center">
+  <tr>
+    <td colspan="2">Part Name</td>
+    <td>TCC7045</td>
+  </tr>
+  <tr>
+    <td colspan="2">Package</td>
+    <td>Pin to Pin Compatible FBGA-196pin (12BD)</td>
+  </tr>
+   <tr>
+    <td colspan="2">CPU Frequency</td>
+    <td>200MHz</td>
+  </tr>
+  <tr>
+    <td rowspan="4">On-chip Memory</td>
+    <td>Program Flash</td>
+    <td>4MB</td>
+  </tr>
+  <tr>
+    <td>SRAM</td>
+    <td>512KB (Including Retention RAM 16KB)</td>
+  </tr>
+  <tr>
+    <td>Data Flash</td>
+    <td>128KB</td>
+  </tr>
+  <tr>
+    <td>DMA Channel</td>
+    <td>22-channel</td>
+  </tr>
+  <tr>
+    <td rowspan="9">script</td>
+    <td>build_configure.sh</td>
+    <td>Shell script to execute <strong>configure</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td>build_image.sh</td>
+    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td>devtool.sh</td>
+    <td>Shell script to execute <strong>devtool</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td rowspan="2">template</td>
+    <td>sdk.py</td>
+    <td>File that defines supported SDKs, source mirror, and build tool paths</td>
+  </tr>
+  <tr>
+    <td>tcc805x_linux_ivi.py</td>
+    <td>File that defines supported machines and manifests for TOPST D3 SDK</td>
+  </tr>
+</table>
+
 **Table 1.1 Features of TCC7045:** 
 
 | Part Name        | TCC7045                                  |
