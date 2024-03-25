@@ -7,127 +7,93 @@ This document is a hardware user guide for TOPST VCP based on the TCC7045 applic
 
 Table 1.1 describes the features of the TCC7045.  
 
+**Table 1.1 Features of TCC7045:**   
+
 <table align="center">
-  <tr>
-    <td colspan="2">Part Name</td>
+  <td colspan="3">Part Name</td>
     <td>TCC7045</td>
   </tr>
-  <tr>
-    <td colspan="2">Package</td>
+  <td colspan="3">Package</td>
     <td>Pin to Pin Compatible FBGA-196pin (12BD)</td>
   </tr>
-   <tr>
-    <td colspan="2">CPU Frequency</td>
+  <td colspan="3">CPU Frequency</td>
     <td>200MHz</td>
   </tr>
   <tr>
     <td rowspan="4">On-chip Memory</td>
-    <td>Program Flash</td>
+    <td colspan="2">Program Flash</td>
     <td>4MB</td>
   </tr>
   <tr>
-    <td>SRAM</td>
-    <td>512KB (Including Retention RAM 16KB)</td>
+    <td colspan="2">SRAM</td>
+    <td>512KB (Including Retention RAM 16KB</td>
   </tr>
   <tr>
-    <td>Data Flash</td>
+    <td colspan="2">Data Flash</td>
     <td>128KB</td>
   </tr>
   <tr>
-    <td>DMA Channel</td>
+    <td colspan="2">DMA Channel</td>
     <td>22-channel</td>
   </tr>
   <tr>
-    <td rowspan="13">Peripheral</td>
-    <td>Ethernet</td>
+    <td rowspan="12">Peripheral</td>
+    <td colspan="2">Ethernet</td>
     <td>1 Gbps with AVB</td>
   </tr>
   <tr>
-    <td>CAN / CANFD</td>
-    <td>3-channel</td>
-  </tr>
-    <tr>
-    <td>CAN / CANFD</td>
+    <td colspan="2">CAN / CANFD</td>
     <td>3-channel</td>
   </tr>
   <tr>
-    <td>Dedicated LIN / UART</td>
-    <td>3-channel (Maximun 6-channel)</td>
-  </tr>
-    <tr>
-    <td>Dedicated I2C</td>
+    <td colspan="2">Dedicated LIN / UART</td>
     <td>3-channel (Maximum 6-channel)</td>
   </tr>
-    <tr>
-    <td>Dedicated GPSB (SPI)</td>
-    <td>2-channel (Maximun 5-channel(</td>
+  <tr>
+    <td colspan="2">Dedicated I2C</td>
+    <td>3-channel (Maximum 6-channel)</td>
   </tr>
-    <tr>
-    <td>MFIO (Allocated UART, I2C, GPSB)</td>
+  <tr>
+    <td colspan="2">Dedicated GPSB (SPI)</td>
+    <td>2-channel (Maximum 5-channel)</td>
+  </tr>
+  <tr>
+    <td colspan="2">MFIO (Allocated UART, I2C, GPSB)</td>
     <td>3-channel</td>
-  </tr>
-    <tr>
+  <tr>
     <td rowspan="4">ADC</td>
-    <td>Resolution</td>
-    <td>12-bit SAR type</td>  
+    <td>Resulution</td>
+    <td>12-bit SAR type</td>
   </tr>
-    <tr>
+  <tr>
     <td>Channels</td>
-    <td>12-channel x 2 groups</td>
+    <td>12-channel x 2groups</td>
   </tr>
-    <tr>
+  <tr>
     <td>Input Range</td>
     <td>3.3V</td>
   </tr>
-    <tr>
+  <tr>
     <td>Sample Rate</td>
     <td>Over 1.0 MSPs</td>
   </tr>
   <tr>
-    <td>I2S</td>
+    <td colspan="2">I2S</td>
     <td>1-channel</td>
   </tr>
   <tr>
-    <td>Serial Flash Interface</td>
+    <td colspan="2">Serial Flash Interface</td>
     <td>Quad SPI</td>
   </tr>
-  <tr>
-    <td>Power System</td>
+  <td colspan="3">Power System</td>
     <td>3.3V Single</td>
   </tr>
-  <tr>
-    <td>Temperature</td>
+  <td colspan="3">Temperature</td>
     <td>-40 ~ 105°C</td>
   </tr>
 </table>
 
-**Table 1.1 Features of TCC7045:** 
 
-| Part Name        | TCC7045                                  |
-|------------------|------------------------------------------|
-| Package          | Pin to Pin Compatible FBGA-196pin (12BD) |
-| CPU Frequency    | 200MHz                                   |
-| On-chip Memory   |                                          |
-| - Program Flash  | 4 MB                                     |
-| - SRAM           | 512 KB (Including Retention RAM 16 KB)   |
-| - Data Flash     | 128 KB                                   |
-| DMA Channel      | 22-channel                               |
-| Peripheral       |                                          |
-| - Ethernet       | 1 Gbps with AVB                          |
-| - CAN/CANFD      | 3-channel                                |
-| - Dedicated LIN/UART | 3-channel (Maximum 6-channel)        |
-| - Dedicated I2C  | 3-channel (Maximum 6-channel)            |
-| - Dedicated GPSB (SPI) | 2-channel (Maximum 5-channel)      |
-| - MFIO (Allocated UART, I2C, GPSB) | 3-channel              |
-| - ADC            |                                          |
-|   - Resolution  | 12-bit SAR type                           |
-|   - Channels    | 12-channel x 2 groups                     |
-|   - Input Range | 3.3V                                      |
-|   - Sample Rate | Over 1.0 MSPs                             |
-| - I2S            | 1-channel                                |
-| - Serial Flash Interface | Quad SPI                         |
-| Power System     | 3.3V single                              |
-| Temperature      | -40 ~ 105℃                              |
 
 
 ## Terminology  
