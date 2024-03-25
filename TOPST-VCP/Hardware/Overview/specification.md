@@ -38,26 +38,66 @@ Table 1.1 describes the features of the TCC7045.
     <td>22-channel</td>
   </tr>
   <tr>
-    <td rowspan="9">script</td>
-    <td>build_configure.sh</td>
-    <td>Shell script to execute <strong>configure</strong> in <strong>autolinux</strong></td>
+    <td rowspan="13">Peripheral</td>
+    <td>Ethernet</td>
+    <td>1 Gbps with AVB</td>
   </tr>
   <tr>
-    <td>build_image.sh</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
+    <td>CAN / CANFD</td>
+    <td>3-channel</td>
+  </tr>
+    <tr>
+    <td>CAN / CANFD</td>
+    <td>3-channel</td>
   </tr>
   <tr>
-    <td>devtool.sh</td>
-    <td>Shell script to execute <strong>devtool</strong> in <strong>autolinux</strong></td>
+    <td>Dedicated LIN / UART</td>
+    <td>3-channel (Maximun 6-channel)</td>
+  </tr>
+    <tr>
+    <td>Dedicated I2C</td>
+    <td>3-channel (Maximum 6-channel)</td>
+  </tr>
+    <tr>
+    <td>Dedicated GPSB (SPI)</td>
+    <td>2-channel (Maximun 5-channel(</td>
+  </tr>
+    <tr>
+    <td>MFIO (Allocated UART, I2C, GPSB)</td>
+    <td>3-channel</td>
+  </tr>
+    <tr>
+    <td rowspan="4">ADC</td>
+    <td>Resolution</td>
+    <td>12-bit SAR type</td>  
+  </tr>
+    <tr>
+    <td>Channels</td>
+    <td>12-channel x 2 groups</td>
+  </tr>
+    <tr>
+    <td>Input Range</td>
+    <td>3.3V</td>
+  </tr>
+    <tr>
+    <td>Sample Rate</td>
+    <td>Over 1.0 MSPs</td>
   </tr>
   <tr>
-    <td rowspan="2">template</td>
-    <td>sdk.py</td>
-    <td>File that defines supported SDKs, source mirror, and build tool paths</td>
+    <td>I2S</td>
+    <td>1-channel</td>
   </tr>
   <tr>
-    <td>tcc805x_linux_ivi.py</td>
-    <td>File that defines supported machines and manifests for TOPST D3 SDK</td>
+    <td>Serial Flash Interface</td>
+    <td>Quad SPI</td>
+  </tr>
+  <tr>
+    <td>Power System</td>
+    <td>3.3V Single</td>
+  </tr>
+  <tr>
+    <td>Temperature</td>
+    <td>-40 ~ 105°C</td>
   </tr>
 </table>
 
