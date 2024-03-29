@@ -1,4 +1,4 @@
-﻿# Build Guide
+# Build Guide
 
 ## TOPST AI SDK
 
@@ -14,8 +14,7 @@ source from upstream based on metadata and perform build.
 After the build is completed, package, image, and SDK are provided as
 results.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Build guide.image1.png"
-style="width:7.27639in;height:3.56458in"
+<img src="./media/image1.png" style="width:7.27639in;height:3.56458in"
 alt="텍스트, 스크린샷, 폰트, 도표이(가) 표시된 사진 자동 생성된 설명" />
 
 Figure 3 1 Yocto Project Task Process
