@@ -14,7 +14,7 @@ source from upstream based on metadata and perform build.
 After the build is completed, package, image, and SDK are provided as
 results.
 
-<img src="./media/image1.png" style="width:7.27639in;height:3.56458in"
+<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Build guide.image1.png" style="width:7.27639in;height:3.56458in"
 alt="텍스트, 스크린샷, 폰트, 도표이(가) 표시된 사진 자동 생성된 설명" />
 
 Figure 3 1 Yocto Project Task Process
@@ -114,9 +114,9 @@ Table 1.1 Composition of TOPST AI SDK
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
-<thead>
+<tbody>
 <tr class="header">
-<th><p><strong>$ repo init -u
+<td><p><strong>$ repo init -u
 ssh://sgit.telechips.com/nd_cs_pre/manifest.git -m
 tcc750x_linux_nn_0.9.0.xml</strong></p>
 <p>Downloading Repo source from
@@ -137,10 +137,8 @@ topst_ND/.bin/repo</p>
 <p>Fetching: 100% (12/12), done in 1m14.010s</p>
 <p>Updating files: 100% (819/819), done.</p>
 <p>Checking out: 100% (12/12), done in 6.056s</p>
-<p>repo sync has finished successfully.</p></th>
+<p>repo sync has finished successfully.</p></td>
 </tr>
-</thead>
-<tbody>
 </tbody>
 </table>
 
@@ -152,7 +150,7 @@ topst_ND/.bin/repo</p>
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>$ <strong>poky/download.sh</strong></p>
+<td><p>$ <strong>poky/download.sh</strong></p>
 <p>This may take a long time depending on your network environment.</p>
 <p>Continue? (Y/n) =&gt; <strong>Y</strong></p>
 <p>Start tools downloading...done</p>
@@ -160,7 +158,7 @@ topst_ND/.bin/repo</p>
 <p>Start source mirror downloading...done</p>
 <p>$ <strong>ls</strong></p>
 <p>boot-firmware fwdn-v8 mktcimg poky rtpm source-mirror tc-nn-toolkit
-tools</p></th>
+tools</p></td>
 </tr>
 </thead>
 <tbody>
@@ -173,7 +171,7 @@ tools</p></th>
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>$ <strong>pwd</strong></p>
+<td><p>$ <strong>pwd</strong></p>
 <p>/home/topst_ND/SDK_build</p>
 <p>$
 <strong>./tools/x86_64-buildtools-nativesdk-standalone-4.0.sh</strong></p>
@@ -193,7 +191,7 @@ source the environment setup script e.g.</p>
 /home/topst_ND/SDK_build/buildtools/environment-setup-x86_64-pokysdk-linux</p>
 <p>$ <strong>ls buildtools/</strong></p>
 <p>environment-setup-x86_64-pokysdk-linux sysroots
-version-x86_64-pokysdk-linux</p></th>
+version-x86_64-pokysdk-linux</p></td>
 </tr>
 </thead>
 <tbody>
@@ -212,7 +210,7 @@ The build image is created in the following path:
 </colgroup>
 <thead>
 <tr class="header">
-<th><p><strong>$ source
+<td><p><strong>$ source
 poky/meta-telechips/meta-nn/nn-build.sh</strong></p>
 <p>Choose MACHINE</p>
 <p>1. tcc7500-main</p>
@@ -260,7 +258,7 @@ Boards(eg. tcc7500)</p>
 <p>- 'devtool' and 'recipetool' handle common recipe tasks</p>
 <p>- 'bitbake-layers' handles common layer tasks</p>
 <p>- 'oe-pkgdata-util' handles common target package tasks</p>
-<p><strong>$ bitbake telechips-nn-image</strong></p></th>
+<p><strong>$ bitbake telechips-nn-image</strong></p></td>
 </tr>
 </thead>
 <tbody>
@@ -290,7 +288,7 @@ The “SD Data.fai” build image is created in the following path:
 </colgroup>
 <thead>
 <tr class="header">
-<th><p><strong>$ bitbake telechips-nn-image -f -c make_fai</strong></p>
+<td><p><strong>$ bitbake telechips-nn-image -f -c make_fai</strong></p>
 <p>Loading cache: 100% |##########################################Time:
 0:00:00</p>
 <p>Loaded 2835 entries from dependency cache.</p>
@@ -339,7 +337,7 @@ be rerun and all succeeded.</p>
 <p><strong>$ ls -l tmp/deploy/fwdn</strong></p>
 <p><em><strong>SD_Data.fai</strong></em> SD_Data.gpt SD_Data.gpt.back
 SD_Data.gpt.prim <em><strong>boot-firmware</strong></em>
-partition.list</p></th>
+partition.list</p></td>
 </tr>
 </thead>
 <tbody>
