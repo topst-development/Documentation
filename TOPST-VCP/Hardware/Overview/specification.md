@@ -1,6 +1,4 @@
-<h1 style="color:red">
-  Introduction
-</h1>
+# 1. Introduction
 
 
 This document is a hardware user guide for TOPST VCP based on the TCC7045 application processors.
@@ -93,10 +91,11 @@ Table 1.1 describes the features of the TCC7045.
   </tr>
 </table>
 
+<br/><br/>
 
+## 1.2 Terminology  
 
-
-## Terminology  
+<br/>
 
 **Table 1.2 terminology:**  
 
@@ -109,15 +108,18 @@ Table 1.1 describes the features of the TCC7045.
 | TOPST       | Total Open-Platform for System development and Training |
 | VCP         | Vehicle Control Processor                               |
 
+<br/><br/>
 
-## Block Diagram
+## 1.3 Block Diagram
 
 Figure 1.1 shows the system block diagram of TOPST VCP.  
 
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/176d5d74-3786-488c-95c3-30229d3babf9"></p>
 <p align="center"><strong>Figure 1.1 Block Diagram</strong></p>
 
-## TOPST VCP Overview
+<br/><br/>
+
+## 1.4 TOPST VCP Overview
 TOPST VCP can implement the following functions:
 - Automotive Application
   - Car Audio Video Navigation (AVN)System, Digital Cluster, Head Up Display (HUD), etc.
@@ -135,6 +137,7 @@ Table 1.3 Describes the default configuration of TOPST VCP.
 |------------|------------------------|
 | TOPST VCP  | TCC7045 MCU module     |  
 
+<br/>
 
 Figure 1.2 shows the top view of TOPST VCP.  
 
@@ -160,6 +163,7 @@ Table 1.4 describes connectors of TOPST VCP(top view).
 | 11     | J20D1      | 40-pin Pin Header Male  | Header for GPIO expander                                          |
 | 12     | LED2, LED4 | LED                     | LED that indicates the status of MCU module                       |  
 
+<br/>
  
 Figure 1.3 shows the bottom view of TOPST VCP.
 <p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/18fea623-8eef-45a0-850b-f370c7881389"></p>  
