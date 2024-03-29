@@ -6,7 +6,7 @@ This document is described in the following order:
 * FWDN Guide
 * Booted Ubuntu GUI Screen 
   
-<br>
+<br><br>
 
 # 2. Ubuntu File System Creation Guide
 
@@ -14,6 +14,7 @@ This chapter describes how to install the Ubuntu file system for the main core (
 
 Refer to “Documentation/TOPST-D3/Software/SDK/LINUX” for the user's development environment.
 
+<br><br>
 
 ## 2.1. Get Ubuntu with Git
 The Ubuntu version provided by Git is Ubuntu 22.04.2 LTS (Jammy Jellyfish) as shown below.
@@ -21,6 +22,8 @@ The Ubuntu version provided by Git is Ubuntu 22.04.2 LTS (Jammy Jellyfish) as sh
 ```
 git clone https://git.huconn.com/linux_ivi_mirror/topst-ubuntu-rootfs.git
 ```
+
+<br><br>
 
 ## 2.2. Procedure to create Ubuntu Root File System
 
@@ -37,7 +40,12 @@ If you run the following script without setting the options, you can create an i
 7. Install **<code>Weston GUI Launcher.</code></strong>
 8. Create the Ubuntu Ext4 image.
 
+<br><br>
+
 ## 2.3 create_ubuntu_jammy_arm64_rootfs.sh 
+
+<br>
+
 ### 2.3.1. Script Usage 
 
 The following is a description of script options.
@@ -58,6 +66,8 @@ $ ./create_ubuntu_jammy_arm64_rootfs.sh  --help
    --image-name=IMAGE_NAME Image name"
    --launcher=LAUNCHER_NAME (default is weston)
 ```
+
+<br>
 
 ### 2.3.2. Default Settings for Options
 
@@ -83,6 +93,8 @@ PREBUILT_FSTAB="fstab/fstab.ubuntu-jammy-arm64"
 PREBUILT_DEB="prebuilt-deb"
 ```
 
+<br>
+
 ### 2.3.3. Install Emulator on Linux Host PC
 
 Install the emulator on the Host PC.
@@ -99,6 +111,8 @@ for package in $REQUIRED_PACKAGES; do
     fi
 done
 ```
+
+<br>
 
 ### 2.3.4. Create the Root File System Directory
 
@@ -133,6 +147,8 @@ sudo cp /usr/bin/qemu-$QEMU_ARCH-static $TARGET_DIR/usr/bin
 sudo chroot $TARGET_DIR /debootstrap/debootstrap --second-stage
 ```
 
+<br>
+
 ### 2.3.6. Install Prebuilt Packages from .deb Files
 
 Install the generated package (kernel and module) compiled from “_TOPST Development User Guide_”.
@@ -153,6 +169,7 @@ sudo chroot "$TARGET_DIR" /bin/sh -c "sed -i 's/Depends: kernel-5.4.159-tcc/#Dep
 sudo cp $PREBUILT_DEB/etc/modules-load.d/* $TARGET_DIR/etc/modules-load.d/
 ```
 
+<br>
 
 ### 2.3.7. Configure rootfs
 
@@ -214,6 +231,8 @@ optional: true
 EOF"
 ```
 
+<br>
+
 ### 2.3.8. Install Wayland Launcher
 
 TOPST provides the GUI Launcher by using Weston Wayland.
@@ -226,6 +245,8 @@ sudo rm -rf $TARGET_DIR/root/install-weston.sh
 sudo cp application/TOPST-background.png $TARGET_DIR/usr/share/weston/
 ```
 
+<br>
+
 ### 2.3.9. Create Ext4 Image
 
 Create a root file system image with the settings shown above in Chapters 2.3.1 to 2.3.8. Use the generated image as the root file system when using the main core (CA72).
@@ -236,7 +257,7 @@ echo "Creating $IMAGE_NAME with size $IMAGE_SIZE bytes"
 dd if=/dev/zero of=$IMAGE_NAME bs=1 count=0 seek=$IMAGE_SIZE
 sudo mkfs.ext4 -F $IMAGE_NAME
 ```
-<br>
+<br><br>
 
 # 3. FWDN Guide
 
@@ -249,7 +270,7 @@ For more information on **_FWDN_**, refer to “Frimware_Download.md".
     <p><strong>Figure 3.1 FWDN CLI</strong></p>
 </div><br>
 
-<br>
+<br><br>
 
 # 4. Booted Ubuntu GUI Screen
 
