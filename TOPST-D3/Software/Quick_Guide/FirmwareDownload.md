@@ -1,8 +1,10 @@
-# FWDN Guide
+# 1. FWDN Guide
 
 This chapter describes how to download the Firmware Downloader (***FWDN***) to the TOPST D3 and log in to the Linux console.
 
-## **1.1   Firmware Download Sequence**
+<br><br>
+
+## 1.1   Firmware Download Sequence
 
 The download sequence of ***FWDN*** is as follows:
 
@@ -10,7 +12,9 @@ The download sequence of ***FWDN*** is as follows:
 2. Connect the USB A-to-A cable to the USB 2.0 FWDN port.
 3. Download the TOPST image.
 
-## **1.2   Enter FWDN Mode**
+<br><br>
+
+## 1.2   Enter FWDN Mode
 
 Press the **SW2** (FWDN Mode Convert) button and connect the power to enter ***FWDN*** mode. Alternatively, if power is connected, press the **SW2** button (FWDN Mode Convert) and press the **SW1** button (System Reset) to enter the ***FWDN*** mode.
 
@@ -34,6 +38,8 @@ Install the Vendor Telechips Certification (VTC) driver (found on [https://gsmus
     <p><strong>Figure 1.3 USB Connection in Linux Environment</strong></p>
 </div>
 <br>
+
+<br><br>
 
 ## 1.3 Run FWDN with CLI Tool
 
@@ -62,6 +68,8 @@ When the TOPST D3 is rebooted by pressing the SW1 (Reset) button, Ubuntu launche
     <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/74414924-906e-48f8-a8b4-b48a2cf7ccc9" alt="Download Image by using FWDN CLI Tool" >
     <p><strong>Figure 1.5 Download Image by using FWDN CLI Tool</strong></p>
 </div><br>
+
+<br><br>
 
 ## 1.4 Run FWDN with TOPST Tool
 
