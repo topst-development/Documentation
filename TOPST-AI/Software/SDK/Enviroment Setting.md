@@ -17,7 +17,7 @@ Linux distribution version:
 You can download it by clicking "64-bit PC (AMD64) desktop image" as
 shown in figure 2.1.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image1.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image1.png"
 style="width:5.42479in;height:3.48958in" />
 
 Figure 1.1 Ubuntu Installation
@@ -34,7 +34,7 @@ This section describes how to use virtualbox.
 1.  Download VirtualBox and install
     (<https://www.virtualbox.org/wiki/Downloads>)
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image2.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image2.png"
 style="width:3.768in;height:1.18559in" />
 
 Figure 1.2 Download VirtualBox for Virtual Server
@@ -45,7 +45,7 @@ Figure 1.2 Download VirtualBox for Virtual Server
 
 4.  Click “New Icon” as shown in Figure 2.3
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image3.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image3.png"
 style="width:2.17708in;height:0.62708in" />
 
 Figure 1.3 Create New Virtual Machine
@@ -63,7 +63,7 @@ Figure 1.3 Create New Virtual Machine
 - ISO Image: Here you need to add a link to the ISO you downloaded from
   the Ubuntu website.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image4.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image4.png"
 style="width:5.64583in;height:2.75069in"
 alt="텍스트, 스크린샷, 식물, 웹 페이지이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -86,7 +86,7 @@ user without sudo access.
 
 Ensure your Hostname has no spaces to proceed!
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image5.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image5.png"
 style="width:5.64567in;height:2.75197in" />
 
 Figure 1.5 Configuration Virtual Machine(2)
@@ -106,7 +106,7 @@ Figure 1.5 Configuration Virtual Machine(2)
 > green areas of each slider to prevent issues with your machine running
 > both the VM and the host OS.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image6.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image6.png"
 style="width:5.64514in;height:2.75139in"
 alt="텍스트, 스크린샷, 웹 페이지, 소프트웨어이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -121,7 +121,7 @@ alt="텍스트, 스크린샷, 웹 페이지, 소프트웨어이(가) 표시된 �
 > pre-allocate the full amount, check the ‘Pre-allocate Full Size’ check
 > box. This will improve performance but may take up unnecessary space.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image7.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image7.png"
 style="width:5.64514in;height:2.75139in"
 alt="텍스트, 스크린샷, 웹 페이지, 소프트웨어이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -129,7 +129,7 @@ alt="텍스트, 스크린샷, 웹 페이지, 소프트웨어이(가) 표시된 �
 
 8.  Check the summary of your machine settings and click finish.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image8.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image8.png"
 style="width:5.64567in;height:2.75197in"
 alt="텍스트, 스크린샷, 소프트웨어, 웹 페이지이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -137,7 +137,7 @@ Figure 1.8 Configuration Virtual Machine(5)
 
 9.  If the configuration is complete, launch the virtual machine.
 
-    <img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Enviroment Setting.image9.png"
+    <img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Enviroment Setting.image9.png"
     style="width:5.68546in;height:1.64583in" />
 
     Figure 1.9 Configuration Virtual Machine(6)

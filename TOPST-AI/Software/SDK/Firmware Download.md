@@ -21,7 +21,7 @@ You can transfer the built image to TCC750x using FWDN.
 
 TCC750x provides FWDN function by using the ethernet and UART.
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Firmware Download.image1.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Firmware Download.image1.png"
 style="width:2.21806in;height:2.80208in"
 alt="텍스트, 도표, 폰트, 라인이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -39,7 +39,7 @@ for detailed configuration settings for FWDN.
 To download firmware to TEST AI, you must connect between TEST AI and
 Host PC using Ethernet and USB A-to-C cables respectively
 
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Firmware Download.image2.png"
+<img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Firmware Download.image2.png"
 style="width:2.71875in;height:4.06605in"
 alt="전자제품, 전자 공학, 전자 부품, 회로 구성요소이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -55,7 +55,7 @@ Pressing reset switch causes the system to reset. If you want to
 download a firmware, press boot mode switch and reset switch at the same
 time to FWDN boot mode.
 
-> <img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Firmware Download.image3.jpeg"
+> <img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Firmware Download.image3.jpeg"
 > style="width:3.76534in;height:1.76042in" />
 >
 > Figure 1.3 Boot Mode Switch
@@ -71,7 +71,7 @@ time to FWDN boot mode.
 - fwdn_batch.bat (copy from ~/\<Topst SDK Build
   directory\>/boot-firmware/fwdn_batch.bat )
 
-> <img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Firmware Download.image4.png"
+> <img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Firmware Download.image4.png"
 > style="width:5.01042in;height:2.05139in"
 > alt="텍스트, 스크린샷, 폰트, 번호이(가) 표시된 사진 자동 생성된 설명" />
 >
@@ -79,7 +79,7 @@ time to FWDN boot mode.
 
 1.  Run **fwdn_batch.bat** and enter the **port number**.
 
-    <img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Firmware Download.image5.png"
+    <img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Firmware Download.image5.png"
     style="width:4.22917in;height:3.62292in"
     alt="텍스트, 전자제품, 스크린샷, 소프트웨어이(가) 표시된 사진 자동 생성된 설명" />
 
@@ -87,7 +87,7 @@ time to FWDN boot mode.
 
 2.  Finish FWDN
 
-    <img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Firmware Download.image6.png"
+    <img src="https://github.com/topst-development/Documentation/blob/Tsolutions/TOPST-AI/Software/media/Firmware Download.image6.png"
     style="width:5.32292in;height:1.21597in"
     alt="텍스트, 스크린샷, 폰트이(가) 표시된 사진 자동 생성된 설명" />
 
