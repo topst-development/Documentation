@@ -291,7 +291,7 @@ Refer to Chapter 4 for download instructions.
     </th>
   </tr>
 </table>
-|   Command   |   Into SD Dtat.fai   |          |                    |    Description              |
+|   Command   |   Into SD Data.fai   |          |                    |    Description              |
 |-------------|----------------------|----------|--------------------|-----------------------------|
 |             | Bootloader           | Kernel   | File system        |                             |
 | make_fai    | U-Boot 2022.01       | 5.10.177 | telechips-nn-image | ai-image + demo application |
