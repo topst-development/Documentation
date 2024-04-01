@@ -279,9 +279,20 @@ This option creates a binary into one image for TOPST AI platform image.
 The following is a list of images that are created with this option.
 Refer to Chapter 4 for download instructions.
 
-|             |                      |          |                    |                             |
+<br/>
+
+<table>
+  <tr>
+    <th>
+      <strong>Command</strong>
+    </th>
+    <th>
+      <strong>Into SD Data.fai</strong>
+    </th>
+  </tr>
+</table>
+|   Command   |   Into SD Dtat.fai   |          |                    |    Description              |
 |-------------|----------------------|----------|--------------------|-----------------------------|
-| **Command** | **Into SD Data.fai** |          |                    | **Description**             |
 |             | Bootloader           | Kernel   | File system        |                             |
 | make_fai    | U-Boot 2022.01       | 5.10.177 | telechips-nn-image | ai-image + demo application |
 
