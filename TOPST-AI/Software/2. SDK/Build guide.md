@@ -112,7 +112,7 @@ After TOPST AI SDK is downloaded, you can check the following items.
 
 ### 2.3.1 Get TOPST AI with Git
 
-<table>
+```bash
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -142,13 +142,13 @@ topst_ND/.bin/repo</p>
 <p>repo sync has finished successfully.</p></td>
 </tr>
 </tbody>
-</table>
+```
 
 <br/>
 
 ### 2.3.2 Download And Install Build Tools 
 
-<table>
+```bash
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -167,9 +167,9 @@ tools</p></td>
 </thead>
 <tbody>
 </tbody>
-</table>
+```
 
-<table>
+```bash
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -200,7 +200,7 @@ version-x86_64-pokysdk-linux</p></td>
 </thead>
 <tbody>
 </tbody>
-</table>
+```
 
 <br/>
 
@@ -210,7 +210,7 @@ The build image is created in the following path:
 
 - {TOPST_PATH}/build/tcc7500-main/tmp/deploy/images/tcc7500-main
 
-<table>
+```bash
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -271,7 +271,7 @@ Boards(eg. tcc7500)</p>
 </tbody>
 </table>
 
-<br/>
+```
 
 ### 2.3.4 Make FWDN Image
 
@@ -300,7 +300,7 @@ The “SD Data.fai” build image is created in the following path:
 
 - {TOPST_AI_PATH}/build/tcc7500-main/tmp/deploy/fwdn
 
-<table>
+```bash
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -360,6 +360,6 @@ partition.list</p></td>
 </thead>
 <tbody>
 </tbody>
-</table>
+```
 
 
