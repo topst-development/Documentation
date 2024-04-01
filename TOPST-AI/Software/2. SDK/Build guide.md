@@ -2,28 +2,22 @@
 
 ## TOPST AI SDK
 
-TOPST AI SDK is based on Yocto Project 4.0 kirkstone. Therefore, the
-Yocto Project environment must be set on the host PC to use
+TOPST AI SDK is based on Yocto Project 4.0 kirkstone. 
+Therefore, the Yocto Project environment must be set on the host PC to useTOPST AI SDK. 
+To download SDK, source-mirror, and tools, you must install utilities.
 
-TOPST AI SDK. To download SDK, source-mirror, and tools, you must
-install utilities.
+You can download source from upstream based on metadata and perform build.
+After the build is completed, package, image, and SDK are provided as results.
+Figure 3.1 shows the task process of Yocto Project.
 
-Figure 3.1 shows the task process of Yocto Project. You can download
-source from upstream based on metadata and perform build.
-
-After the build is completed, package, image, and SDK are provided as
-results.
-
-<img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Build guide.image1.png" style="width:7.27639in;height:3.56458in"
-alt="텍스트, 스크린샷, 폰트, 도표이(가) 표시된 사진 자동 생성된 설명" />
-
-Figure 3 1 Yocto Project Task Process
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Build guide.image1.png" style="width:7.27639in;height:3.56458in"</p>
+<p align="center"><strong>Figure 3.1 Yocto Project Task Process</strong></p>
 
 ## Composition of TOPST AI SDK
 
 After TOPST AI SDK is downloaded, you can check the following items.
 
-Table 1.1 Composition of TOPST AI SDK
+**Table 1.1 Composition of TOPST AI SDK**
 
 <table>
 <colgroup>
@@ -269,7 +263,6 @@ Boards(eg. tcc7500)</p>
 
 This option creates a binary into one image for TOPST AI platform image.
 The following is a list of images that are created with this option.
-
 Refer to Chapter 4 for download instructions.
 
 |             |                      |          |                    |                             |
