@@ -1,6 +1,8 @@
-# Build Guide
+# 2. Build Guide
 
-## TOPST AI SDK
+<br/><br/>
+
+## 2.1 TOPST AI SDK
 
 TOPST AI SDK is based on Yocto Project 4.0 kirkstone. 
 Therefore, the Yocto Project environment must be set on the host PC to useTOPST AI SDK. 
@@ -8,16 +10,18 @@ To download SDK, source-mirror, and tools, you must install utilities.
 
 You can download source from upstream based on metadata and perform build.
 After the build is completed, package, image, and SDK are provided as results.
-Figure 3.1 shows the task process of Yocto Project.
+Figure 2.1 shows the task process of Yocto Project.
 
 <p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/TOPST-AI/Software/media/Build guide.image1.png" style="width:7.27639in;height:3.56458in"</p>
-<p align="center"><strong>Figure 3.1 Yocto Project Task Process</strong></p>
+<p align="center"><strong>Figure 2.1 Yocto Project Task Process</strong></p>
 
-## Composition of TOPST AI SDK
+<br/><br/>
+
+## 2.2 Composition of TOPST AI SDK
 
 After TOPST AI SDK is downloaded, you can check the following items.
 
-**Table 1.1 Composition of TOPST AI SDK**
+**Table 2.1 Composition of TOPST AI SDK:**
 
 <table>
 <colgroup>
@@ -100,9 +104,13 @@ After TOPST AI SDK is downloaded, you can check the following items.
 </tbody>
 </table>
 
-## Download And Build TOPST AI SDK
+<br/><br/>
 
-### Get TOPST AI with Git
+## 2.3 Download And Build TOPST AI SDK
+
+<br/>
+
+### 2.3.1 Get TOPST AI with Git
 
 <table>
 <colgroup>
@@ -136,7 +144,9 @@ topst_ND/.bin/repo</p>
 </tbody>
 </table>
 
-### Download And Install Build Tools 
+<br/>
+
+### 2.3.2 Download And Install Build Tools 
 
 <table>
 <colgroup>
@@ -192,7 +202,9 @@ version-x86_64-pokysdk-linux</p></td>
 </tbody>
 </table>
 
-### Execute Build Script
+<br/>
+
+### 2.3.3 Execute Build Script
 
 The build image is created in the following path:
 
@@ -259,7 +271,9 @@ Boards(eg. tcc7500)</p>
 </tbody>
 </table>
 
-### Make FWDN Image
+<br/>
+
+### 2.3.4 Make FWDN Image
 
 This option creates a binary into one image for TOPST AI platform image.
 The following is a list of images that are created with this option.
@@ -337,4 +351,4 @@ partition.list</p></td>
 </tbody>
 </table>
 
-# 
+
