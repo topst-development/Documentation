@@ -282,6 +282,6 @@ When you boot after downloading, you will see the screen of the Weston Wayland L
 
 
 <br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/0633a9c2-af8f-472e-97c3-26b34a5c5aa4" alt="Figure 1.1 TOPST Debugging Board" width="500" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/0633a9c2-af8f-472e-97c3-26b34a5c5aa4" alt="Figure 1.1 TOPST Debugging Board" >
     <p><strong>Figure 4.1 Ubuntu Launcher</strong></p>
 </div><br>
