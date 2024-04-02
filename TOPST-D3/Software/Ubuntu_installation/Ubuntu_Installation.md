@@ -266,7 +266,7 @@ You can download Ubuntu images by using the **_FWDN_** Command Line Interface (C
 For more information on **_FWDN_**, refer to “Frimware_Download.md".
 
 <br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/b5edc72b-c1b5-4762-a758-243aed1cb921" alt="Figure 1.1 TOPST Debugging Board" width="500" height="300">
+    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/b5edc72b-c1b5-4762-a758-243aed1cb921" alt="Figure 1.1 TOPST Debugging Board" >
     <p><strong>Figure 3.1 FWDN CLI</strong></p>
 </div><br>
 
