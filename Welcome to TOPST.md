@@ -1,7 +1,7 @@
 
-# Welcome to TOPST Documentaition
+# Welcome to TOPST Documentation
 
-The TOPST Documentation Center is the place for tutorials and guides for supporting TOPST OSHW and accessories, maintained by the TOPST team and community.
+The TOPST Documentation is the place for tutorials and guides for supporting TOPST OSHW and accessories, maintained by the TOPST team and community.
 
 
 <br/><br/><br/>
