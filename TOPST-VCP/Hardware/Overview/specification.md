@@ -141,7 +141,8 @@ Table 1.3 Describes the default configuration of TOPST VCP.
 
 Figure 1.2 shows the top view of TOPST VCP.  
 
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/e63e3885-df53-43d5-8807-12e5a016e677"></p>  
+<p align="center"><img src="https://github.com/topst-development/Documentation/assets/161264431/3967a8b1-8ed9-4537-9528-fafb8a6ad425"></p>  
+<p align="center"><strong>Figure 1.2 TOPST VCP (Top View)</strong>
 
 
 Table 1.4 describes connectors of TOPST VCP(top view).  
@@ -150,23 +151,25 @@ Table 1.4 describes connectors of TOPST VCP(top view).
 
 | Number | Reference  | Name                    | Description                                                       | 
 |--------|------------|-------------------------|-------------------------------------------------------------------|
-| 1      | SW7        | Slide Switch            | Test for ACC Signal ON/OFF                                        |
-| 2      | SW3        | Slide Switch            | Test for Illumination (ILL) ON/OFF                                |
-| 3      | SW8        | Slide Switch            | Test for STR Enable                                               |
-| 4      | SW4, 6     | Tact Switch             | Test for ADC01 and KEY                                            |
-| 5      | J2         | DC Jack                 | DC Power Input Jack                                               |
-| 6      | RJ290      | Potentiometer           | Test for Illumination (ILL)                                       |
-| 7      | J10D1      | 20-pin Pin Header Male  | Header for connecting MCU module with key sub-board               |
-| 8      | SW1        | Tact Switch             | PORN: Initializes the system and the power management of TCC7045  |
-| 9      | JC1        | USB Type-C Connector    | UART for debugging or FWDN port                                   |
-| 10     | SW2        | Slide Switch            | Selects the boot mode of system                                   |
-| 11     | J20D1      | 40-pin Pin Header Male  | Header for GPIO expander                                          |
-| 12     | LED2, LED4 | LED                     | LED that indicates the status of MCU module                       |  
+| 1      | JC1        | USB Type-C Connector    | UART for debugging or FWDN port                                   |
+| 2      | SW2        | Slide Switch            | Selects the boot mode of system                                   |
+| 3      | J20D1      | 40-pin Pin Header Male  | Header for GPIO expander                                          |
+| 4      | LED2, LED4 | LED                     | LED that indicates the status of MCU module                       |
+| 5      | SW7        | Slide Switch            | Test for ACC Signal ON/OFF                                        |
+| 6      | SW3        | Slide Switch            | Test for Illumination (ILL) ON/OFF                                |
+| 7      | SW8        | Slide Switch            | Test for STR Enable                                               |
+| 8      | SW4, 6     | Tact Switch             | Test for ADC01 and KEY                                            |
+| 9      | J2         | DC Jack                 | DC Power Input Jack                                               |
+| 10     | RJ290      | Potentiometer           | Test for Illumination (ILL)                                       |
+| 11     | J10D1      | 20-pin Pin Header Male  | Header for connecting MCU module with key sub-board               |
+| 12     | SW1        | Tact Switch             | PORN: Initializes the system and the power management of TCC7045  |
+
 
 <br/>
  
 Figure 1.3 shows the bottom view of TOPST VCP.
-<p align="center"><img src="https://github.com/Topst-Dev/Documentation/assets/161264431/18fea623-8eef-45a0-850b-f370c7881389"></p>  
+<p align="center"><img src="https://github.com/topst-development/Documentation/assets/161264431/4ab2fd93-2636-43e5-ae78-34de76534687" width="900", height="600"></p>  
+<p align="center"><strong>Figure 1.3 TOPST VCP (Bottom View)</strong></p>
 
 
 Table 1.5 describes the connectors of TOPST VCP (bottom view).  
