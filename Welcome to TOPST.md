@@ -14,8 +14,7 @@ If you encounter any problems while using this documentation, please submit an i
 
 ## Join the community
 
-  •	TOPST Community : https://community.topst.ai/ 
-   - Main technical support channel, both English and Korean are supported
+  •	TOPST Community : https://community.topst.ai/ - Main technical support channel, both English and Korean are supported
 
   •	TOPST official e-mail : topst@topst.ai 
     – If interested in business partnerships or other inquiries, please email us
