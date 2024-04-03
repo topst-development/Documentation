@@ -15,12 +15,10 @@ If you encounter any problems while using this documentation, please submit an i
 ## Join the community
 
   •	TOPST Community : https://community.topst.ai/ 
-<br/>
    - Main technical support channel, both English and Korean are supported
 
   •	TOPST official e-mail : topst@topst.ai 
-<br/>
-– If interested in business partnerships or other inquiries, please email us
+    – If interested in business partnerships or other inquiries, please email us
 
 <br/><br/><br/>
 
