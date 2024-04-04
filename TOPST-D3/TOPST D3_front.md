@@ -15,7 +15,7 @@ To navigate to the main document pages, please refer to the table below.
       각 페이지 링크
     </td>
     <td>
-      Hardware specification, information of peripherals...
+      Hardware specification, information of peripherals etc.
     </td>
   </tr>
   <tr>
