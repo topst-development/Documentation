@@ -43,7 +43,7 @@ We reserve the right to modify, suspend, or discontinue the availability of any 
 By accessing and using the Software on our website, you acknowledge that you have read, understood, and agreed to be bound by the terms and conditions outlined in this declaration and the applicable open-source licenses.
 
 <br/><br/>
-"If you do not agree with any part of this declaration or the open-source licenses, please refrain from using the Software."
+#### If you do not agree with any part of this declaration or the open-source licenses, please refrain from using the Software.
 <br/><br/><br/>
 
 Thank you for being a part of TOPST community!
