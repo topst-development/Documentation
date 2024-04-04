@@ -4,7 +4,6 @@
 Welcome to TOPST.AI
 
 <br/>
-<br/>
 We are pleased to provide you access to various open-source software ("Software") on our website. Before you proceed to use any of the Software, we kindly request that you carefully read and understand the following declaration.
 <br/><br/>
 
@@ -44,7 +43,7 @@ By accessing and using the Software on our website, you acknowledge that you hav
 
 <br/><br/>
 #### If you do not agree with any part of this declaration or the open-source licenses, please refrain from using the Software.
-<br/><br/><br/>
+<br/><br/>
 
 Thank you for being a part of TOPST community!
 
