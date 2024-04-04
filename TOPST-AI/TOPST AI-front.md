@@ -31,7 +31,7 @@ To navigate to the main document pages, please refer to the table below.
     <td>
       Linux SDK build guide
       <br/>
-      각 페이지 링크
+      각 페이지 링크https://topst.ai/tech/docs?TOPST-AI&Software&SDK&1.%20Enviroment%20Setting
     </td>
     <td>
       To perform the SDK build yourself, please refer to this page.
