@@ -11,7 +11,7 @@ To navigate to the main document pages, please refer to the table below.
     <td>
       Hardware Overview  
       <br/>
-      각 페이지 링크
+      각 페이지 링크https://topst.ai/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification
     </td>
     <td>
       Hardware specification, information of peripherals etc.
