@@ -25,7 +25,7 @@
       CPU : Cortex-A72 & 53, Cortex-R5
     </td>
     <td rowspan="4">
-      [TOPST D3](https://topst.ai/tech/docs?TOPST%20D3)
+      <a href="https://topst.ai/tech/docs?TOPST%20D3">TOPST D3</a>
     </td>
     <tr>
     <td>
@@ -67,7 +67,7 @@
       CPU : Cortex-R5
     </td>
     <td rowspan="4">
-      [TOPST VCP](https://topst.ai/tech/docs?TOPST%20VCP)
+      <a href="https://topst.ai/tech/docs?TOPST%20VCP">TOPST VCP</a>
     </td>
     <tr>
     <td>
@@ -93,13 +93,13 @@
   </tr>
   <tr>
     <td rowspan="4">
-      <img src="https://github.com/topst-development/Documentation/assets/161264431/4a140fe1-70e9-4a3f-aa57-9e78ac83b9050">
+      <img src="https://github.com/topst-development/Documentation/assets/161264431/a7767237-b311-4a7b-9c50-1aea7c7ce1cc">
     </td>
     <td>
       CPU : Cortex-A53
     </td>
     <td rowspan="4">
-      [TOPST AI](https://topst.ai/tech/docs?TOPST%20AI)
+      <a href="https://topst.ai/tech/docs?TOPST%20AI">TOPST AI</a>
     </td>
     <tr>
     <td>
