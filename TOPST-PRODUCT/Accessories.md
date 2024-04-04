@@ -1,4 +1,4 @@
-# Accesoories
+# Accessories
 
 
 **TOPST offers dedicated accessories.**
