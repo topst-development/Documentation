@@ -2,8 +2,7 @@
 
 **TOPST offers several main boards based on various types of SoCs**
 
-**Main Board List**  
-
+## Main Board List
 <br/>
 
 <table>
@@ -104,7 +103,7 @@
       CPU : Cortex-A53
     </td>
     <td rowspan="4">
-      TOPST D3
+      TOPST AI
       <br/>
       페이지 링크
     </td>
