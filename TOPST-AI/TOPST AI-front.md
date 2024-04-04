@@ -13,7 +13,7 @@ To navigate to the main document pages, please refer to the table below.
 <table>
   <tr>
     <td>
-      [Hardware Overview](https://topst.ai/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification)
+      <a href="https://topst.ai/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification">Hardware Overview</a>
     </td>
     <td>
       Hardware specification, information of peripherals etc.
@@ -29,7 +29,7 @@ To navigate to the main document pages, please refer to the table below.
   </tr>
   <tr>
     <td>
-      [Linux SDK build guide](https://topst.ai/tech/docs?TOPST-AI&Software&SDK&1.%20Enviroment%20Setting)
+      <a href="https://topst.ai/tech/docs?TOPST-AI&Software&SDK&1.%20Enviroment%20Setting">Linux SDK build guide</a>
     </td>
     <td>
       To perform the SDK build yourself, please refer to this page.
