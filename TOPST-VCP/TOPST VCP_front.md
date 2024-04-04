@@ -13,9 +13,7 @@ To navigate to the main document pages, please refer to the table below.
 <table>
   <tr>
     <td>
-      Hardware Overview  
-      <br/>
-      각 페이지 링크https://topst.ai/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification
+      <a href="https://topst.ai/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification">Hardware Overview</a>  
     </td>
     <td>
       Hardware specification, information of peripherals etc.
@@ -31,9 +29,7 @@ To navigate to the main document pages, please refer to the table below.
   </tr>
   <tr>
     <td>
-      Free RTOS SDK build guide
-      <br/>
-      각 페이지 링크https://topst.ai/tech/docs?TOPST-VCP&Software&SDK&1.%20Specification
+      <a href="https://topst.ai/tech/docs?TOPST-VCP&Software&SDK&1.%20Specification">Free RTOS SDK build guide</a>
     </td>
     <td>
       To perform the SDK build yourself, please refer to this page.
