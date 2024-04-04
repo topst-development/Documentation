@@ -7,7 +7,6 @@ TOPST D3  is High performance SBC with Multi-CPU; Cortex-A72 quad & Cortex-A53, 
 
 To navigate to the main document pages, please refer to the table below.
 <br/>
-<br/>
 
 <br/>
 
