@@ -20,9 +20,7 @@ To navigate to the main document pages, please refer to the table below.
   </tr>
   <tr>
     <td>
-      TOPST VCP Official Images
-      <br/>
-       (Preparing..)
+      TOPST VCP Official Image(Preparing..)
     </td>
     <td>
       If you want to quickly mount a pre-built image, You can download it.
