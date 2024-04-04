@@ -19,9 +19,7 @@ To navigate to the main document pages, please refer to the table below.
   </tr>
   <tr>
     <td>
-      TOPST AI Official Images
-      <br/>
-       각 페이지 링크
+      TOPST AI Official Images(Preparing..)
     </td>
     <td>
       If you want to quickly mount a pre-built image, You can download it.
