@@ -1,2 +1,4 @@
 
-# AI FAQ
+# AI FAQ(Prepareing)
+
+we are compiling frequently asked questions from customers
