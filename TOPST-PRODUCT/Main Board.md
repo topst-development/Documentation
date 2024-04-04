@@ -86,7 +86,7 @@
 <table>
   <tr>
     <th>
-      TOPST D3
+      TOPST AI
     </th>
     <th>
       Description
