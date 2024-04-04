@@ -13,9 +13,7 @@ To navigate to the main document pages, please refer to the table below.
 <table>
   <tr>
     <td>
-      Hardware Overview  
-      <br/>
-      각 페이지 링크https://topst.ai/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification
+      <a href="https://topst.ai/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification">Hardware Overview</a>
     </td>
     <td>
       Hardware specification, information of peripherals etc.
@@ -33,9 +31,7 @@ To navigate to the main document pages, please refer to the table below.
   </tr>
   <tr>
     <td>
-      Linux SDK build guide
-      <br/>
-      각 페이지 링크https://topst.ai/tech/docs?TOPST-D3&Software&SDK&LINUX&1.%20Environment%20Setting.md
+      <a href="https://topst.ai/tech/docs?TOPST-D3&Software&SDK&LINUX&1.%20Environment%20Setting.md">Linux SDK build guide</a>
     </td>
     <td>
       To perform the SDK build yourself, please refer to this page.
