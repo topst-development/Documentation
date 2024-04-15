@@ -1,5 +1,5 @@
 
-# OpenSource policy
+# Open-Source policy
 
 Welcome to TOPST.AI
 
