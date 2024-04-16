@@ -1,5 +1,5 @@
 
-# Open Source License Agreement
+# Open source License Agreement
 
 Welcome to TOPST.AI
 
