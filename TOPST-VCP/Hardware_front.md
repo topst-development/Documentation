@@ -6,7 +6,7 @@ The key specifications for the Topst VCP are as follows.
 For more detailed specifications and instructions on usage, please refer to the Document below.  
 - [Board Specification](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification)
 - [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Periperals&1.%20Power%20in%20Connector)
-- [Schematic](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Schematics)
+- [Schematic](https://drive.google.com/file/d/1JVAUYN4zxuKCY-mxab5mSaby5Lm5hw-c/view?usp=sharing)
 
 <br/>
 
