@@ -38,70 +38,87 @@ There is one ways to download and build TOPST D3 Linux SDK as follows:
 
 <table align="center">
   <tr>
-    <th colspan="2">File</th>
+    <th colspan="3">File</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td colspan="2">easy-setup.sh</td>
+    <td colspan="3">easy-setup.sh</td>
     <td>Python script to automatically download and build the SDK</td>
   </tr>
   <tr>
-    <td colspan="2">stitch-fai.sh</td>
+    <td colspan="3">stitch-fai.sh</td>
     <td>Document that describes <strong>autolinux</strong></td>
   </tr>
   <tr>
     <td rowspan="5">tools</td>
-    <td>README.md</td>
+    <td colspan="2">README.md</td>
     <td>Python class for SDK features</td>
   </tr>
   <tr>
-    <td>easy-setup.sh</td>
+    <td colspan="2">easy-setup.sh</td>
     <td>File that defines supported common features</td>
   </tr>
   <tr>
-    <td>mktcimg</td>
+    <td colspan="2">mktcimg</td>
     <td>File that defines supported TOPST D3 SDK features</td>
   </tr>
   <tr>
-    <td>partition.list</td>
+    <td colspan="2">partition.list</td>
     <td>File that defines supported TOPST D3 SDK features</td>
   </tr>
   <tr>
-    <td>stitch-fai.sh</td>
+    <td colspan="2">stitch-fai.sh</td>
     <td>File that defines supported TOPST D3 SDK features</td>
   </tr>
   <tr>
-    <td rowspan="9">poky</td>
-    <td>meta-arm</td>
+    <td rowspan="14">poky</td>
+    <td colspan="2">meta-arm</td>
     <td>Shell script to execute <strong>configure</strong> in <strong>autolinux</strong></td>
   </tr>
   <tr>
+    <td colspan="2">meta-qt5</td>
+    <td>Support Arm toolchain Layerin <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-telechips-bsp</td>
+    <td>Support Telechips BSP Layer</td>
+  </tr>
+  <tr>
+  <tr>
+    <td colspan="2">meta-topst-subcore</td>
+    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-gplv2</td>
+    <td>Support packages to avoid GPLv3 license</td>
+  </tr>
+  <tr>
+    <td rowspan="5">meta-telechips</td> 
+    <td>meta-core</td>
+    <td>Recipes that require modification from Open Source Software (OSS) used by Telechips TOPST D3 SDK or recipes that are not in Yocto Project 3.1</td>
+  </tr>
+  <tr>
+    <td>meta-extra</td>
+    <td>OSS Layer that is added by Telechips</td>
+  </tr>
+  <tr>
     <td>meta-qt5</td>
+    <td>Support Qt5 to support Telechips GUI application</td>
+  </tr>
+  <tr>
+    <td>meta-ivi</td>
+    <td>Configuration package and example programs of In-vehicle Infotainment (IVI)</td>
+  </tr>
+  <tr>
+    <td>meta-subcore</td>
+    <td>Configuration package and example programs on sub-core</td>
+  </tr>
+  <tr>
+    <td colspan="2">meta-topst</td>
     <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
   </tr>
   <tr>
-    <td>meta-telechips-bsp</td>
-    <td>Shell script to execute <strong>devtool</strong> in <strong>autolinux</strong></td>
-  </tr>
-  <tr>
-  <tr>
-    <td>meta-topst-subcore</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
-  </tr>
-  <tr>
-    <td>meta-gplv2</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
-  </tr>
-  <tr>
-    <td>meta-telechips</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
-  </tr>
-  <tr>
-    <td>meta-topst</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
-  </tr>
-  <tr>
-    <td>poky</td>
+    <td colspan="2">poky</td>
     <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
   </tr>
     
