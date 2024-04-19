@@ -5,7 +5,7 @@ For more detailed specifications and instructions on usage, please refer to the 
 
 - [Board Specification](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification)
 - [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Peripherals&1.%20GPIO)
-- [Schematic](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Schematics)
+- [Schematic](https://drive.google.com/file/d/1M9VXhLHARlfA2COzmtsRDQhMAEiikiGE/view?usp=sharing)
 
 <br/>
 
