@@ -3,9 +3,9 @@
 The key specifications for the Topst D3 are as follows.  
 For more detailed specifications and instructions on usage, please refer to the Document below.
 
-- Board Specification
-- Information of peripheral
-- Schematic
+- [Board Specification](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification)
+- [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Peripherals&1.%20GPIO)
+- [Schematic](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Schematics)
 
 <br/>
 
