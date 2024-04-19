@@ -4,9 +4,9 @@
 The key specifications for the Topst VCP are as follows.
 
 For more detailed specifications and instructions on usage, please refer to the Document below.  
-- Board Specification
-- Information of peripheral
-- Schematic
+- [Board Specification]()
+- [Information of peripheral]()
+- [Schematic]()
 
 <br/>
 
