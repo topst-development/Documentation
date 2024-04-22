@@ -174,10 +174,7 @@ $ ./easy-setup.sh
 	source yocto/poky/oe-init-build-env build-main
 	bitbake topst
 
-	or
-
-	source yocto/poky/oe-init-build-env build-sub
-	bitbake topst-subcore
+[!] Will you use subcore? (yes/no) no
 ```
 ```
 $ source yocto/poky/oe-init-build-env build-main
@@ -192,7 +189,10 @@ Common targets are:
     meta-toolchain
     meta-ide-support
 
-You can also run generated qemu images with a command like 'runqemu qemux86'
+TOPST common targets are:
+    topst-minimal
+    topst-multimedia    (minimal + GStreamer)
+    topst               (minimal + GStreamer + Qt)
 
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
