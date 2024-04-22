@@ -288,6 +288,9 @@ I: Retrieving bash 5.1-6ubuntu1
 I: Validating bash 5.1-6ubuntu1
 I: Retrieving bsdutils 1:2.37.2-4ubuntu3
 I: Validating bsdutils 1:2.37.2-4ubuntu3
+                   ㆍ
+                   ㆍ
+                   ㆍ
 ```
 
 
