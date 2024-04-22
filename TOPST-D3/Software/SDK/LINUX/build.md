@@ -47,47 +47,44 @@ There is one ways to download and build TOPST D3 Linux SDK as follows:
   </tr>
   <tr>
     <td colspan="3">stitch-fai.sh</td>
-    <td>Document that describes <strong>autolinux</strong></td>
+    <td>Script for making fai image(minimal + GStreamer + Qt)</td>
   </tr>
   <tr>
     <td rowspan="5">tools</td>
     <td colspan="2">README.md</td>
-    <td>Python class for SDK features</td>
+    <td rowspan="5">Tools related build</td>
   </tr>
   <tr>
     <td colspan="2">easy-setup.sh</td>
-    <td>File that defines supported common features</td>
   </tr>
   <tr>
     <td colspan="2">mktcimg</td>
-    <td>File that defines supported TOPST D3 SDK features</td>
+</td>
   </tr>
   <tr>
     <td colspan="2">partition.list</td>
-    <td>File that defines supported TOPST D3 SDK features</td>
   </tr>
   <tr>
     <td colspan="2">stitch-fai.sh</td>
-    <td>File that defines supported TOPST D3 SDK features</td>
   </tr>
   <tr>
-    <td rowspan="14">poky</td>
+    <td rowspan="14">yocto</td>
+    <td colspan="2">poky</td>
+    <td>Yocto Project 1.1 Dunfell build system</td>
+  </tr>
+  <tr>
     <td colspan="2">meta-arm</td>
-    <td>Shell script to execute <strong>configure</strong> in <strong>autolinux</strong></td>
+    <td>Support Arm toolchain Layer</td>
   </tr>
   <tr>
     <td colspan="2">meta-qt5</td>
-    <td>Support Arm toolchain Layerin <strong>autolinux</strong></td>
+    <td>Support Qt5 5.6.3 Layer</td>
   </tr>
   <tr>
     <td colspan="2">meta-telechips-bsp</td>
     <td>Support Telechips BSP Layer</td>
   </tr>
   <tr>
-  <tr>
-    <td colspan="2">meta-topst-subcore</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
-  </tr>
   <tr>
     <td colspan="2">meta-gplv2</td>
     <td>Support packages to avoid GPLv3 license</td>
@@ -115,16 +112,29 @@ There is one ways to download and build TOPST D3 Linux SDK as follows:
   </tr>
   <tr>
     <td colspan="2">meta-topst</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
-  </tr>
+    <td>Maincore recipe</td>
+  </tr>  
   <tr>
-    <td colspan="2">poky</td>
-    <td>Shell script to execute <strong>BitBake</strong> in <strong>autolinux</strong></td>
+    <td colspan="2">meta-topst-subcore</td>
+    <td>Subcore recipe</td>
   </tr>
-    
 </table>
 
 <br/>
+
+### 2.4.1 Create and regist SSH Key
+
+```
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAA ... MYFI4PP8kik= ben@topst
+```
+<br/>
+
+After you create SSH Key, register your SSH Key in gitlab. 
+
+<p algin="center"><img src="https://github.com/topst-development/Documentation/assets/161264431/b55c7d64-8140-4007-af30-8e1ebc204a69"></p>
+<p align="center"><strong>Figure 2.2 Register SSH Key</strong></p>
 
 
 ### 2.4.1 Get TOPST-D3 with Git
