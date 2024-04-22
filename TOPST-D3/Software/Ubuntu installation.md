@@ -259,7 +259,16 @@ sudo mkfs.ext4 -F $IMAGE_NAME
 ```
 <br><br>
 
-# 3. FWDN Guide
+# 3. Build
+
+```
+$ ./create_ubuntu_jammy_arm64_rootfs.sh
+```
+
+
+<br><br>
+
+# 4. FWDN Guide
 
 You can download Ubuntu images by using the **_FWDN_** Command Line Interface (CLI) tool in your Windows Host PC environment as shown below.
 
@@ -267,12 +276,13 @@ For more information on **_FWDN_**, refer to “Frimware_Download.md".
 
 <br><div align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/b5edc72b-c1b5-4762-a758-243aed1cb921" alt="Figure 1.1 TOPST Debugging Board" >
-    <p><strong>Figure 3.1 FWDN CLI</strong></p>
+    <p><strong>Figure 4.1 FWDN CLI</strong></p>
 </div><br>
 
 <br><br>
 
-# 4. Booted Ubuntu GUI Screen
+
+# 5. Booted Ubuntu GUI Screen
 
 When you boot after downloading, you will see the screen of the Weston Wayland Launcher loaded with the Ubuntu image as shown below.
 
@@ -283,5 +293,5 @@ When you boot after downloading, you will see the screen of the Weston Wayland L
 
 <br><div align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/0633a9c2-af8f-472e-97c3-26b34a5c5aa4" alt="Figure 1.1 TOPST Debugging Board" >
-    <p><strong>Figure 4.1 Ubuntu Launcher</strong></p>
+    <p><strong>Figure 5.1 Ubuntu Launcher</strong></p>
 </div><br>
