@@ -50,22 +50,27 @@ There is one ways to download and build TOPST D3 Linux SDK as follows:
     <td>Script for making fai image(minimal + GStreamer + Qt)</td>
   </tr>
   <tr>
-    <td rowspan="5">tools</td>
+    <td rowspan="7">tools</td>
     <td colspan="2">README.md</td>
-    <td rowspan="5">Tools related build</td>
+    <td rowspan="7">Tools related build</td>
   </tr>
   <tr>
     <td colspan="2">easy-setup.sh</td>
   </tr>
   <tr>
     <td colspan="2">mktcimg</td>
-</td>
-  </tr>
-  <tr>
-    <td colspan="2">partition.list</td>
   </tr>
   <tr>
     <td colspan="2">stitch-fai.sh</td>
+  </tr>
+  <tr>
+    <td colspan="2">fwdn</td>
+  </tr>
+  <tr>
+    <td colspan="2">partition.dual.list</td>
+  </tr>
+  <tr>
+    <td colspan="2">partition.single.list</td>
   </tr>
   <tr>
     <td rowspan="14">yocto</td>
@@ -131,13 +136,27 @@ ssh-rsa AAAA ... MYFI4PP8kik= ben@topst
 ```
 <br/>
 
-After you create SSH Key, register your SSH Key in gitlab. 
+After you create SSH Key, register your SSH Key in [GITLAB](https://gitlab.com/-/user_settings/ssh_keys). 
 
-<p algin="center"><img src="https://github.com/topst-development/Documentation/assets/161264431/b55c7d64-8140-4007-af30-8e1ebc204a69"></p>
+<p algin="center"><img src="https://github.com/topst-development/Documentation/assets/161264431/1b888871-d8a7-4adb-9d33-d6c839168e00"></p>
 <p align="center"><strong>Figure 2.2 Register SSH Key</strong></p>
 
+<br/>
 
-### 2.4.1 Get TOPST-D3 with Git
+### 2.4.2 Create SSH config
+
+```
+$ vi ~/.ssh/config
+
+Host gitlab.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+    UpdateHostKeys yes
+```
+<br/>
+
+
+### 2.4.3 Get TOPST-D3 with Git
 
 ```
 $ mkdir topst
@@ -175,7 +194,7 @@ repo sync has finished successfully.
 
 
 
-### 2.4.3 Execute Build Script
+### 2.4.4 Execute Build Script
 
 ```
 $ ./easy-setup.sh 
@@ -217,46 +236,18 @@ $ bitbake topst
 <br/>
 
 
-### 2.5.4 “Make fai” for Automotive Platform
+### 2.5.5 Make FWDN Image
 
-This option creates a binary into one image for platform image. The following is a list of images that are created with this option.
-<br/>
-
-<table>
-    <tr>
-        <th rowspan="2">Command</th>
-        <th colspan="4">Into SD Data.fai</th>
-        <th rowspan="2">Description</th>
-    </tr>
-    <tr>
-        <th>Core</th>
-        <th>Bootloader</th>
-        <th>Kernel</th>
-        <th>File system</th>
-    </tr>
-    <tr>
-        <td rowspan="2">make_fai</td>
-        <td>Main (CA72)</td>
-        <td rowspan="2">U-boot 2020.01</td>
-        <td rowspan="2">5.4.159</td>
-        <td>automotive-linux-platform-image</td>
-        <td>ivi-image + demo applications</td>
-    </tr>
-    <tr>
-        <td>Sub (CA53)</td>
-        <td>telechips-subcore-image</td>
-        <td>minimal root filesystem</td>
-    </tr>
-</table>  
+This option creates a binary into one image for TOPST D3 platform image. The following is a list of images that are created with this option.
 
 <br/>
 
-The “SD Data.fai” build image is created in the following path:
+The output.fwdn.win.zip including “Output.fai” build image and fwdn tools is created in the following path:
 
-- {TOPST_PATH}/build/tcc8050-main/tmp/deploy/fwdn
+- {TOPST_PATH}/
 
 ```
-
+$ ./stitch-fai.sh -f
 ```
 
 <br/><br/>
