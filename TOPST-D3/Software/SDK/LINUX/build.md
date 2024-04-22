@@ -132,8 +132,33 @@ There is one ways to download and build TOPST D3 Linux SDK as follows:
 ```
 $ mkdir topst
 $ cd topst
+
 $ repo init -u https://gitlab.com/topst.ai/manifests -m topst-d3-pre-v0.1.xml
+Downloading Repo source from https://gerrit.googlesource.com/git-repo
+
+... A new version of repo (2.45) is available.
+... New version is available at: /home/ben/topst/.repo/repo/repo
+... The launcher is run from: /usr/bin/repo
+!!! The launcher is not writable.  Please talk to your sysadmin or distro
+!!! to get an update installed.
+
+
+Your identity is: Seonguk Nam <topstdeveloper@gmail.com>
+If you want to change this, please re-run 'repo init' with --config-name
+
+repo has been initialized in /home/ben/topst
+
 $ repo sync
+
+... A new version of repo (2.45) is available.
+... New version is available at: /home/ben/topst/.repo/repo/repo
+... The launcher is run from: /usr/bin/repo
+!!! The launcher is not writable.  Please talk to your sysadmin or distro
+!!! to get an update installed.
+
+Fetching: 100% (9/9), done in 13.638s
+Checking out: 100% (9/9), done in 0.510s
+repo sync has finished successfully.
 ```
 
 <br/>
