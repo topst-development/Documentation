@@ -263,6 +263,31 @@ sudo mkfs.ext4 -F $IMAGE_NAME
 
 ```
 $ ./create_ubuntu_jammy_arm64_rootfs.sh
+Creating the rootfs directory
+Running debootstrap first stage
+[sudo] password for ben: 
+I: Retrieving InRelease 
+I: Checking Release signature
+I: Valid Release signature (key id F6ECB3762474EDA9D21B7022871920D1991BC93C)
+I: Retrieving Packages 
+I: Validating Packages 
+I: Resolving dependencies of required packages...
+I: Resolving dependencies of base packages...
+I: Checking component main on http://ports.ubuntu.com/ubuntu-ports...
+I: Retrieving adduser 3.118ubuntu5
+I: Validating adduser 3.118ubuntu5
+I: Retrieving apt 2.4.5
+I: Validating apt 2.4.5
+I: Retrieving apt-utils 2.4.5
+I: Validating apt-utils 2.4.5
+I: Retrieving base-files 12ubuntu4
+I: Validating base-files 12ubuntu4
+I: Retrieving base-passwd 3.5.52build1
+I: Validating base-passwd 3.5.52build1
+I: Retrieving bash 5.1-6ubuntu1
+I: Validating bash 5.1-6ubuntu1
+I: Retrieving bsdutils 1:2.37.2-4ubuntu3
+I: Validating bsdutils 1:2.37.2-4ubuntu3
 ```
 
 
