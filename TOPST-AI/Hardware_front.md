@@ -6,7 +6,7 @@ The key specifications for the TOPST AI are as follows.
 For more detailed specifications and instructions on usage, please refer to the table below.
 - [Board Specification](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification)
 - [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Periperials&1.%20GPIO)
-- [Schematic](https://drive.google.com/file/d/11zWSt5NFOKsACkqdkOUDBhUozHfKsolN/view?usp=sharing)
+- [Schematic](https://drive.google.com/file/d/1K5FRUOBnA4mya_wkIiCnZR4u9AAlN8R4/view?usp=drive_link)
 
 <br/>
 
