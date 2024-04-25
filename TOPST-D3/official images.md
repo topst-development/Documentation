@@ -1,6 +1,6 @@
 # Official Images for TOPST D3  
 
-Official of TOPST D3 is based on Linux OS.  
+Official of TOPST D3 is based on Ubuntu 22.04.  
 You can download the image file here.  
 
 <img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
