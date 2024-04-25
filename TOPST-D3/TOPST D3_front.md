@@ -12,7 +12,7 @@ To navigate to the main document pages, please refer to the table below.
 
 [Hardware Overview](https://topst.ai/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification) : Hardware specification, information of peripherals etc.
 
-[TOPST D3 Official Images](https://flab-dev.net/tech/docs?TOPST-D3&Software) : If you want to quickly mount a pre-built image, You can download it.
+[TOPST D3 Official Images](https://drive.google.com/file/d/1eJimz-nC3WcH8Kp6yauGftyIznoC6FB7/view?usp=drive_link) : If you want to quickly mount a pre-built image, You can download it.
 
 [Linux SDK build guide](https://topst.ai/tech/docs?TOPST-AI&Software&SDK&1.%20Enviroment%20Setting) : To perform the SDK build yourself, please refer to this page.
 
