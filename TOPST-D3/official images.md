@@ -3,7 +3,7 @@
 Official of TOPST D3 is based on Linux OS.  
 You can download the image file here.  
 
-<img src="https://github.com/topst-development/Documentation/assets/161264431/0003c16a-d8d1-4a8b-8c66-396e9f482227">  
+<img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
 
 **Download :**  
 -	[LINUX images](https://drive.google.com/file/d/1eJimz-nC3WcH8Kp6yauGftyIznoC6FB7/view?usp=drive_link)
