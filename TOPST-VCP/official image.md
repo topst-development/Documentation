@@ -6,7 +6,7 @@ You can download the image file here.
 <img src="https://github.com/topst-development/Documentation/assets/161264431/626b98b5-dadf-4734-b70e-c25491916773">  
 
 **Download :**  
--	[LINUX images](https://drive.google.com/file/d/1dptd30hq__tFXrF4GobiqJaFSWOSXe43/view?usp=drive_link)
+-	[Free RTOS image](https://drive.google.com/file/d/1dptd30hq__tFXrF4GobiqJaFSWOSXe43/view?usp=drive_link)
 -	For more information, please visit github
 
 **Release note :**  
