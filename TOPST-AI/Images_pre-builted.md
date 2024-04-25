@@ -1,13 +1,14 @@
 # Official Images for TOPST AI
 
 
-Official of TOPST AI is based on Linux OS.  
+Official of TOPST AI is based on Yocto project.  
 You can download the image file here.  
 
-<img src="https://github.com/topst-development/Documentation/assets/161264431/0003c16a-d8d1-4a8b-8c66-396e9f482227">  
+<img src="https://github.com/topst-development/Documentation/assets/161264431/51739f42-6b47-4f60-9165-30cebaf80740">  
 
 **Download :**  
--	[LINUX images](https://drive.google.com/file/d/1EWHJ9MfdoJL6BO-TL-8iFkzkygPv5e3i/view?usp=drive_link)
+-	[ images](https://drive.google.com/file/d/1EWHJ9MfdoJL6BO-TL-8iFkzkygPv5e3i/view?usp=drive_link)
+  <br>
 -	For more information, please visit github
 
 **Release note :**  
