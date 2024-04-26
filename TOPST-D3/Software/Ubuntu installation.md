@@ -300,7 +300,7 @@ I: Validating bsdutils 1:2.37.2-4ubuntu3
 
 You can download Ubuntu images by using the **_FWDN_** Command Line Interface (CLI) tool in your Windows Host PC environment as shown below.
 
-For more information on **_FWDN_**, refer to “Frimware_Download.md".
+For more information on **_FWDN_**, refer to “Quick Guide/1.Frimware_Download".
 
 <br><div align="center">
     <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/b5edc72b-c1b5-4762-a758-243aed1cb921" alt="Figure 1.1 TOPST Debugging Board" >
