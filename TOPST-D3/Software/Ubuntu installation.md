@@ -259,7 +259,7 @@ sudo mkfs.ext4 -F $IMAGE_NAME
 ```
 <br><br>
 
-# 3. Excute Script
+# 3. Execute Script
 
 ```
 $ ./create_ubuntu_jammy_arm64_rootfs.sh
