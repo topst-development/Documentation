@@ -1,6 +1,5 @@
-# TOPST VCP Arduino 
+# TOPST VCP Arduino Introduction 
 
-## Introduction 
 Welcome to the TOPST VCP Arduino project! This repository is dedicated to creating an Arduino software package for the TOPST VCP, based on the Telechips TCC7045, a sophisticated Vehicle Control Processor (VCP). Our goal is to provide a development environment that parallels the simplicity and flexibility of Arduino, specifically tailored for automotive semiconductors.
 
 ## About TOPST VCP 
