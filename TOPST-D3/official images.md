@@ -6,7 +6,7 @@ You can download the image file here.
 <img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
 
 **Download :**  
--	[Ubuntu images](https://drive.google.com/file/d/1eJimz-nC3WcH8Kp6yauGftyIznoC6FB7/view?usp=drive_link)
+-	[Ubuntu images](https://drive.google.com/file/d/1UzArkpt-Aw67YhAMtlSfkELEHYBMBqT7/view?usp=drive_link)
 <br>
 -	For more information, please visit github
 
