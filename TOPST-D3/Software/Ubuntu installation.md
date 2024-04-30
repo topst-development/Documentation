@@ -27,6 +27,8 @@ $ git clone https://gitlab.com/topst.ai/topst-d3-ubuntu.git
 
 # 3. Execute Script
 
+
+Run 'populate_ubuntu.sh'.
 ```
 $ sudo ./populate_ubuntu.sh 
 [!] Prepare workspace
