@@ -71,6 +71,10 @@ I: Retrieving dbus 1.12.20-2ubuntu4
                    ㆍ
                    ㆍ
 ```
-
+You can check etx4 file below.
+```
+$ ls
+populate_ubuntu.sh  src  ubuntu.ext4
+```
 
 
