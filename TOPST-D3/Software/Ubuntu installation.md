@@ -73,32 +73,4 @@ I: Retrieving dbus 1.12.20-2ubuntu4
 ```
 
 
-<br><br>
 
-# 4. FWDN Guide
-
-You can download Ubuntu images by using the **_FWDN_** Command Line Interface (CLI) tool in your Windows Host PC environment as shown below.
-
-For more information on **_FWDN_**, refer to “Quick Guide/1.Frimware_Download".
-
-<br><div align="center">
-    <img src="https://github.com/Topst-Dev/Documentation/assets/16188136/b5edc72b-c1b5-4762-a758-243aed1cb921" alt="Figure 1.1 TOPST Debugging Board" >
-    <p><strong>Figure 4.1 FWDN CLI</strong></p>
-</div><br>
-
-<br><br>
-
-
-# 5. Booted Ubuntu GUI Screen
-
-When you boot after downloading, you will see the screen of the Weston Wayland Launcher loaded with the Ubuntu image as shown below.
-
-* Description: Ubuntu 22.04.2 LTS
-* Release: 22.04
-* Codename: jammy
-
-
-<br><div align="center">
-    <img src="https://github.com/topst-development/Documentation/assets/161264431/2aeb6326-88f9-4224-88c7-59c281dd5926">
-    <p><strong>Figure 5.1 Ubuntu Launcher</strong></p>
-</div><br>
