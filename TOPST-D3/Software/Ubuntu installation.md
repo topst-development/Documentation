@@ -20,7 +20,7 @@ Refer to “Documentation/TOPST-D3/Software/SDK/LINUX” for the user's developm
 The Ubuntu version provided by Git is Ubuntu 22.04.2 LTS (Jammy Jellyfish) as shown below.
 
 ```
-$ git clone git@github.com:topst-development/ubuntu-rootfs
+$ git clone https://gitlab.com/topst.ai/topst-d3-ubuntu.git
 ```
 
 <br><br>
