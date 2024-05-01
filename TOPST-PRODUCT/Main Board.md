@@ -39,7 +39,7 @@
 <table>
   <tr>
     <td rowspan="2">
-      <img src="https://github.com/topst-development/Documentation/assets/161264431/7eb81b61-e399-47a8-bd2d-cadd0ff5e8f2">
+      <img src="https://github.com/topst-development/Documentation/assets/161264431/158d7fff-0aeb-4e93-b7c5-64b96aa60ca7">
     </td>
     <td>
       CPU : Cortex-R5
