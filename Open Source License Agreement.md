@@ -16,7 +16,7 @@ You are granted a non-exclusive, worldwide, royalty-free license to use, modify,
 <br/><br/>
 
 ## No Warranty
-The Software is provided on an "AS IS" basis, without warranties or conditions of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. We do not guarantee the accuracy, reliability, non-infringement or completeness of the Software.
+The Software is provided on an "AS IS" basis, without warranties or conditions of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. We do not guarantee the accuracy, reliability, non-infringement, or completeness of the Software.
 <br/><br/>
 
 ## No Liability 
