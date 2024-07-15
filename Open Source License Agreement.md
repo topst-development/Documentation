@@ -16,11 +16,11 @@ You are granted a non-exclusive, worldwide, royalty-free license to use, modify,
 <br/><br/>
 
 ## No Warranty
-The Software is provided on an "AS IS" basis, without warranties or conditions of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. We do not guarantee the accuracy, reliability, or completeness of the Software.
+The Software is provided on an "AS IS" basis, without warranties or conditions of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. We do not guarantee the accuracy, reliability, non-infringement or completeness of the Software.
 <br/><br/>
 
 ## No Liability 
-In no event shall TOPST.AI or its contributors be liable for any damages or losses arising from the use of the Software. This includes, but is not limited to, direct, indirect, incidental, special, or consequential damages, even if advised of the possibility of such damage.
+In no event shall TOPST.AI or its contributors be liable for any damages or losses arising from the use of the Software. This includes, but is not limited to, direct, indirect, incidental, special, or consequential damages, even if advised of the possibility of such damage.You are responsible for all or any of intellectual property licenses required for actual application, TOPST.AI does not provide any indemnification for any intellectual properties owned by third party.
 <br/><br/>
 
 ## Compliance with Laws
