@@ -1,3 +1,71 @@
 # Compatible Sensors with TOPST D3
 
-## 1. Touch Sensor
+<br/><br/>
+
+## 1. Touch Sensor(TTP223B)  
+* Power supply for **2~5.5V DC**
+* capacitive type
+
+The following code is an example in which the LED turns on when you touch the touch recognition part of the touch sensor.
+```
+import time
+import os
+ 
+TOUCH_SENSOR_PIN = 89
+LED_PIN = 83
+ 
+def setup_gpio(pin, direction):
+    gpio_path = f"/sys/class/gpio/gpio{pin}"
+ 
+    if not os.path.exists(gpio_path):
+        with open("/sys/class/gpio/export", "w") as f:
+            f.write(str(pin))
+ 
+    with open(f"{gpio_path}/direction", "w") as f:
+        f.write(direction)
+ 
+def read_gpio(pin):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+ 
+def write_gpio(pin, value):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+ 
+def unexport_gpio(pin):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+ 
+def main():
+    try:
+        setup_gpio(TOUCH_SENSOR_PIN, "in")
+        setup_gpio(LED_PIN, "out")
+ 
+        write_gpio(LED_PIN, 0)
+ 
+        while True:
+            sensor_value = read_gpio(TOUCH_SENSOR_PIN)
+ 
+            if sensor_value == "1":
+                print("detected touch. turn on led")
+                write_gpio(LED_PIN, 1)
+            else:
+                print("undetected touch. turn off led")
+                write_gpio(LED_PIN, 0)
+ 
+            time.sleep(0.1)
+    except KeyboardInterrupt:
+        print("stop")
+        unexport_gpio(TOUCH_SENSOR_PIN)
+        unexport_gpio(LED_PIN)
+ 
+if __name__ == "__main__":
+    main()
+```
+
+
+
+
+
