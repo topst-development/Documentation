@@ -38,5 +38,11 @@ style="width:2.21806in;height:2.80208in"</p>
 
 <span style="color:#2D3748; background-color:#fff5b1">노란배경 검정글씨</span>
 
+----
+<font color="red">빨강</font></br>
+<font color="blue">파랑</font></br>
+
+<p style="color:red">빨강</p>
+<p style="color:blue">파랑</p>
 
 
