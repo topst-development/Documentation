@@ -14,7 +14,7 @@ You can download the image file here.
 
 |Ver|   Date   |
 |:-:|:--------:|
-|1.0|2025.01.13|  
+|1.0|2024.04.25|  
 
 TOPST team is also preparing other official OS versions.  
 
