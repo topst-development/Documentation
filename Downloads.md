@@ -13,6 +13,7 @@ https://github.com/topst-development/documents
 ### Image
  
 #### &ensp;Ubuntu
+https://drive.google.com/file/d/1hDoKRjrKDnP5lGk1c1pXN73kgdZN4TGv/view?usp=sharing
 #### &ensp;Yocto
  
 ## AI-G
