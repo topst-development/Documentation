@@ -65,3 +65,12 @@ Test if your setup works by uploading a simple sketch:
 ## 2.2 Troubleshooting
 If you encounter any issues during the setup, refer to the [Arduino Troubleshooting Guide](https://www.arduino.cc/en/Guide/Troubleshooting).  
 For more information and advanced features, refer to TOPST VCP documentation or visit [Arduino Help Center](https://support.arduino.cc/hc/en-us).
+
+</br>
+
+# 3. References
+- Contact TOPST for more details: topst@topst.ai
+
+**Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference
+documents are unavailable, the contents directly related to your development can be guided.
+
