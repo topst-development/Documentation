@@ -98,7 +98,7 @@ Table 1.1 describes the features of the TCC7045.
 </br>
 
 ## 1.1 Terminology
-<p align="center"><strong>Table 1.1 Features of TCC7045</strong></p>
+<p align="center"><strong>Table 1.2 Features of TCC7045</strong></p>
 <table align="center">
   <tr>
     <td clospan="2"><strong>Terminology</strong></td>
@@ -269,7 +269,7 @@ Table 3.2 describes connectors of TOPST VCP-G board (top view).
 
 Figure 3.2 shows the bottom view of the TOPST VCP-G board.  
 **Note:** Figure 3.2 currently shows the TOPST_VCP-G_V1.1.1 board. This image will be updated to the TOPST_VCP-G_V2.1.1 board.
-<p align="center"><img src="/home/ben/Documentation/Assets/TOPST VCP-G/Hardware/3.2 TOPST VCP-G Board (Bottom View).png"></p>
+<p align="center"><img src="../../Assets/TOPST VCP-G/Hardware/3.2 TOPST VCP-G Board (Bottom View).png"></p>
 <p align="center"><strong>Figure 3.2 TOPST VCP-G Board (Bottom View)</strong></p>
 
 </br></br>
