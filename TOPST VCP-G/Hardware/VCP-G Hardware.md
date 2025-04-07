@@ -474,7 +474,7 @@ JC100 on the TOPST VCP-G board includes a built-in USB-to-UART bridge controller
 
 ## 4.7 Pin Headers for GPIO, ADC, Power, CAN, SPI
 The TOPST VCP-G board have nine 2.54mm pin headers for power, GPIO, ADC, CAN, and SPI to connect others such as sensor or sub-board.  
-Table 4.3 describes purpose of nine pin headers on the TOPST VCP-G board.
+Table 4.4 describes purpose of nine pin headers on the TOPST VCP-G board.
 <p align="center"><strong>Table 4.4 Pin Headers on TOPST VCP-G Board</strong></p>
 <table align="center">
   <tr>
@@ -543,7 +543,7 @@ Figure 4.8 shows the location of pin headers on the TOPST VCP-G board.
 <p align="center"><img src="../../Assets/TOPST VCP-G/Hardware/4.8 Pin Headers on TOPST VCP-G Board.png"></p>
 <p align="center"><strong>Figure 4.8 Pin Headers on TOPST VCP-G Board</strong><p>
 
-Table 4.4 shows the pin description of J10D100.
+Table 4.5 shows the pin description of J10D100.
 <p align="center"><strong>Table 4.5 J10D100 Pin Description</strong></p>
 <table align="center">
   <tr>
@@ -1002,7 +1002,7 @@ Table 4.10 shows the pin description of J8D104.
 </table>
 
 Table 4.11 shows the pin description of J3D100.
-<p align="center"><strong>Table 4.10 J3D100 Pin Description</strong></p>
+<p align="center"><strong>Table 4.11 J3D100 Pin Description</strong></p>
 <table align="center">
   <tr>
     <th rowspan="3"><strong>Pin Number</strong></th>
@@ -1062,7 +1062,7 @@ Table 4.11 shows the pin description of J3D100.
 </table>
 
 Table 4.12 shows the pin description of J18D100.
-<p align="center"><strong>Table 4.10 J18D100 Pin Description</strong></p>
+<p align="center"><strong>Table 4.12 J18D100 Pin Description</strong></p>
 <table align="center">
   <tr>
     <th rowspan="3"><strong>Pin Number</strong></th>
