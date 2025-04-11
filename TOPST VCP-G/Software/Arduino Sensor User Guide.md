@@ -1913,7 +1913,7 @@ The following table shows pin mapping.
 
 </br>
 
-# 3. References
+# 8. References
 - Contact TOPST for more details: topst@topst.ai
 
 **Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference
