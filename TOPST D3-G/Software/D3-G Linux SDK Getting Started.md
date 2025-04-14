@@ -690,6 +690,8 @@ Perform the following steps and verify that the firmware download is successfull
 
 2. Install a terminal emulator such as Tera Term or PuTTY. 
 3. Connect the Host PC and the A72 UART Pin on the TOPST D3-G. Use a USB to TTL Cable. 
+4. Connect the black cable to GND pin. 
+5. Connect the RXD cable to TX pin of A72 UART pins and TXD cable to RX pin of UART pins. 
 
  
 <p align="center">
@@ -698,3 +700,16 @@ Perform the following steps and verify that the firmware download is successfull
 <p align="center"><strong>Figure 9 UART Connection with host PC</strong></p>  
 
 
+The figure 10 below shows a successful login.  
+Both the username and password for login are set to **root**.
+
+<p align="center">
+    <img src="../../Assets/TOPST D3-G/Software/d3-g login as root.png", width="700">
+</p>
+<p align="center"><strong>Figure 10 Connected Screen (ID and Password are topst)</strong></p>  
+
+<br/><br/>
+
+# 6. Ubuntu OS partition resize
+We also provide an Ubuntu OS.
+By following this section, you can download the Ubuntu image, upload it to the board, and expand the allocated eMMC storage capacity.
