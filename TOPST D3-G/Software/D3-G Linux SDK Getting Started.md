@@ -713,3 +713,76 @@ Both the username and password for login are set to **root**.
 # 6. Ubuntu OS partition resize
 We also provide an Ubuntu OS.
 By following this section, you can download the Ubuntu image, upload it to the board, and expand the allocated eMMC storage capacity.
+<br/>
+
+## 6.1 Download Ubuntu Image
+Official of TOPST D3-G is based on Ubuntu 22.04.  
+You can download the image file here.  
+
+<img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
+
+**Download :**  
+-	[Download Link here](https://drive.google.com/file/d/1hDoKRjrKDnP5lGk1c1pXN73kgdZN4TGv/view?usp=sharing)
+<br>
+-	For more information, please visit our github page (경로 추가)
+
+**Release note :**  
+
+|Ver|   Date   |
+|:-:|:--------:|
+|1.0|2024.04.25|  
+
+TOPST team is also preparing other official OS versions.  
+For information on releases of other OS, please refer to the TOPST community.  
+<br/>
+
+## 6.2 Firmware upload to D3-G
+Run “fwdn_ubuntu.batch” file. 
+Refer to Section 5 to upload the Ubuntu image to the D3-G board.
+After FWDN is completed, remove the USB Type-C cable from the FWDN port and remove the power cable. 
+<br/>
+
+## 6.3 Resize eMMC storage (Only D3-G)
+When you log in after booting the board, you must resize the eMMC storage first.
+Follow the steps below for eMMC Storage resizing.
+
+1. To resize partitions by modifying size and layout on the disk, use the following command.
+     ```
+     parted
+     ```
+
+2. Extend GUID Partition Table(GPT). 
+    ```
+    rescue
+    Fix 
+    0 
+    100%
+    ```
+3. Check that ext4 is partition by using the p (print) 
+   ```
+   p
+   ```
+4. Resize partition 4
+    ```
+    resizepart 4
+    Yes
+    100%
+    ```
+5. Reboot 
+6. Resize the ext4 filesystem on partition 4.
+    ```
+    resize2fs /dev/mmcblk0p4
+    ```
+7. Check the changed partition size by using the following command.
+   ```
+   df -h
+   ```
+
+You can confirm that the available space is 27GB after resizing.
+<br/><br/>
+
+# 7. References
+- Contact TOPST for more details: topst@topst.ai
+
+**Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference
+documents are unavailable, the contents directly related to your development can be guided.
