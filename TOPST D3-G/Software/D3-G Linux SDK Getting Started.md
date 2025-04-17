@@ -48,7 +48,7 @@ wsl  // access ubuntu
 ls   // check contents in your directory
 ```
 Refer to the figure 1.1 below to check the result (may vary depending on the user).
-<p align="center"><img src="../../../Assets/TOPST D3-G/Software/1.1 wsl linux.png" width="500"></p>
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/1.1 wsl linux.png" width="500"></p>
 <p align="center"><strong>Figure 1.1 WSL2 Screenshot </strong></p>
 
 <br/>
