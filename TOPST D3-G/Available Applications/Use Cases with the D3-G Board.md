@@ -5,6 +5,7 @@ This document includes information on the following:
 - Input Device
   - Keyboard 
   - Mouse
+- Video Output
 - Camera Connection
   - MIPI CSI
   - USB WebCam
@@ -14,7 +15,6 @@ This document includes information on the following:
   - NVME M.2 SSD
   - USB Storage
 - Ethernet Connection
-- Video Output
 - 40 Pin GPIO Header
   - Available Sensor & Device
 - JTAG Connection
@@ -23,7 +23,185 @@ This document includes information on the following:
 
 # 2. Input Device
 The D3-G supports two USB ports for connecting input devices.
-It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users to connect a mouse or keyboard to directly control the board.
+It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users to connect a mouse or keyboard to directly control the board. 
+
+***Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
 <p align="center"><img src="../../Assets/TOPST D3-G/Software/input device.png" width="500"></p>
-<p align="center"><strong>Figure 1.1 WSL2 Screenshot </strong></p>
+<p align="center"><strong>Figure 1. Connect input device to D3-G </strong></p>
+<br/><br/> 
+
+# 3. Video Output
+The D3-G board supports FHD monitors via its only DisplayPort (DP) output.
+It also supports multi-display output using a daisy chain setup, allowing connection of up to two FHD monitors and one HD monitor simultaneously.
+
+**Note**: To use HDMI, a separate active converter adapter is required.
+<p align="center"><img src="../../Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
+<p align="center"><strong>Figure 2. Connect Monitor to D3-G </strong></p>
+<br/><br/>
+
+# 4. Camera Connection
+The D3-G board supports camera functionality, offering flexibility for various applications.
+You can connect either a MIPI CSI camera or a USB webcam, depending on your project requirements.
+<br/>
+
+## 4.1 USB Webcam
+The D3-G board supports USB webcams, with resolutions up to Full HD (FHD).
+You can test the webcam by following the steps below:
+1. Connect the USB camera to a USB port on the board.
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/webcam.png" width="400"></p>
+<p align="center"><strong>Figure 3. Connect webcam to D3-G </strong></p>
+
+2. Connect the input devices(mouse&keyboard)and monitor to D3-G.
+   
+3. Boot the D3-G board.
+
+4. Check the available /dev/video devices.
+```
+ls /dev/video*
+```
+5. Verify the video output using OpenCV (or vutils).
+```
+touch webcam.py
+chmod a+x webcam.py
+```
+```
+# You can edit the script file using vim or nano editor
+# This is camera application python code using OpenCV
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+if not cap.isOpened():
+    print("\\@@ Camera open failed!")
+    exit()
+
+print("Press 'q' to exit the camera window.")
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("\\@@ Failed to read frame")
+        break
+
+    cv2.imshow("Camera Feed", frame)
+
+    # pressed 'q' key, escape
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
+```
+```
+# run webcom.py
+python3 webcam.py
+```
+<br/>
+
+## 4.2 MIPI CSI
+CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
+It enables high-speed, low-power transmission of image data from the camera to the processor.
+
+The D3-G board features two MIPI CSI channels(ch0, ch1), allowing users to attach camera modules that support FFC (Flat Flexible Cable) connections.
+Currently, the D3-G board supports only the ArduCam (5MP) and Raspberry Pi v1 Camera (5MP) modules. 
+
+**Note** : Currently, the D3-G board does not support simultaneous use of CSI channel 0 and CSI channel 1.
+
+### 4.2.1 Ardu cam
+ArduCam is a versatile camera module designed for embedded systems and IoT applications. It supports various image sensors and interfaces, including MIPI CSI, making it suitable for integration with development boards like the D3-G.
+The 5MP ArduCam module supported by the D3-G offers decent image quality and is commonly used for basic computer vision tasks, streaming, and camera-based AI applications. Its compatibility with FFC cables makes it easy to connect to the D3-G’s CSI interface. 
+
+Below are the specifications for the ArduCam module.
+
+| Spec                     | Description                                 |
+| ------------------------ | ------------------------------------------- |
+| Sensor                   | OV5647 (5 Megapixel)                        |
+| Resolution               | 2592 × 1944 (Full 5MP)                      |
+| Supported Output Formats | RAW, YUV, JPEG (sensor dependent)           |
+| Interface                | MIPI CSI-2                                  |
+| Frame Rate               | Up to 30fps at 1080p, 60fps at 720p         |
+| Lens Mount               | Fixed-focus lens (standard)                 |
+| FOV (Field of View)      | Approx. 54° – 70° (varies by model)         |
+| Connection Type          | FFC (Flat Flexible Cable)                   |
+| Operating Voltage        | 3.3V (typical)                              |
+| Form Factor              | Compact PCB, ~25mm x 24mm                   |
+| Compatibility            | Raspberry Pi, D3-G (via MIPI CSI-2 port)    |
+| Additional Features      | Low power consumption, plug-and-play module |
+
+
+You can test the Arducam by following the steps below:
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/arducam.png" width="400"></p>
+<p align="center"><strong>Figure 4. Ardu cam </strong></p>
+
+1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 5.
+ 
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/Arducam to D3G.png" width="500"></p>
+<p align="center"><strong>Figure 5. Connecting the ArduCam to the D3-G </strong></p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+
+### 4.2.2 Raspberry Pi v1 Camera
+
+The Raspberry Pi Camera Module v1 is a compact 5MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board via a MIPI CSI-2 interface using an FFC (Flat Flexible Cable).
+
+Designed originally for the Raspberry Pi series, this module is also compatible with the D3-G board, making it a reliable choice for basic camera applications such as image capture, video recording, and computer vision projects.
+
+Below are the specifications for the ArduCam module.
+
+| Spec                | Description                              |
+| ------------------- | ---------------------------------------- |
+| Sensor              | OmniVision OV5647                        |
+| Resolution          | 2592 × 1944 (5MP)                        |
+| Output Formats      | RAW, YUV, JPEG                           |
+| Interface           | MIPI CSI-2                               |
+| Frame Rate          | 1080p30, 720p60, VGA90                   |
+| Lens                | Fixed-focus                              |
+| FOV (Field of View) | ~54°                                     |
+| Cable Type          | FFC (15-pin)                             |
+| Board Dimensions    | 25mm x 24mm                              |
+| Compatibility       | Raspberry Pi, D3-G (via MIPI CSI-2 port) |
+
+
+You can test the Arducam by following the steps below:
+
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/rasp v1 cam.jpg" width="400"></p>
+<p align="center"><strong>Figure 6. Raspberry pi v1 cam </strong></p>
+
+
+1. Connect Raspbery pi v1 cam to D3-G MIPI CSI 1 below figure 7.
+ 
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/rasp v1 cam to d3g.png" width="500"></p>
+<p align="center"><strong>Figure 7. Connecting the Raspberry pi v1 cam to the D3-G </strong></p> 
+
+
+
+
+
+
+
