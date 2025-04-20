@@ -155,8 +155,8 @@ After downloading SSH and Samba, you should set each program to your environment
 
 ### 2.2.3 Install Utilities
 
-Install the utilities at once. To use Yocto Project, the following utilities must be installed on Host PC(individual computer or development server).
-
+Install the utilities at once. To use Yocto Project, the following utilities **must** be installed on Host PC(individual computer or development server).
+****
 Use the following command to install Utilities.
 
 ```
