@@ -315,3 +315,19 @@ The D3-G board supports digital input and output (GPIO) through its 40-pin heade
 
 <br/>
 
+## 7.2 I2C
+
+### 7.2.1 9-Axis Gyro
+### 7.2.2 1602A LCD Display
+### 7.2.3 Photoregister(BH1750)
+
+## 7.3 SPI
+### 7.3.1 Dot Matrix
+
+## 7.4 PWM
+### 7.4.1 LED
+### 7.4.2 Mini Servo Motor
+
+# 8. JTAG Connection
+
+# 9. CAN Connection
