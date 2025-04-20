@@ -140,7 +140,7 @@ You can test the Arducam by following the steps below:
 <p align="center"><img src="../../Assets/TOPST D3-G/Software/Arducam to D3G.png" width="500"></p>
 <p align="center"><strong>Figure 5. Connecting the ArduCam to the D3-G </strong></p> 
 
-
+2. 
 
 
 
@@ -203,5 +203,115 @@ You can test the Arducam by following the steps below:
 
 
 
+# 5. Storage Connection
+This chapter covers how to connect the D3-G board to various storage devices.
+Supported storage options include USB drives, SD cards, and external storage via PCIe.
+<br/>
 
+## 5.1 USB Drive
+The D3-G board supports USB storage devices through its USB 2.0 and USB 3.0 Type-A ports.
+To connect a USB drive:
+
+1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/usb storage connection with d3g.png" width="500"></p>
+<p align="center"><strong>Figure 8. Connecting the usb storage to the D3-G </strong></p> 
+
+1. Once connected, the device will typically be recognized as /dev/sda1, /dev/sdb1, etc., depending on the system state.
+
+2. You can manually mount the USB drive using the following command:
+   ```
+   sudo mount /dev/sda1 /mnt
+   ```
+
+<br/>
+
+## 5.2 SD card
+The D3-G board includes a microSD card slot that supports standard SDHC/SDXC cards.
+To use an SD card with the board:
+
+1. Insert the microSD card into the SD card slot on the D3-G.
+
+1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/sd card connect with d3g.png" width="500"></p>
+<p align="center"><strong>Figure 9. Connecting the SD Card to the D3-G </strong></p> 
+
+1. Once inserted, the system will typically recognize the SD card as /dev/mmcblk1p1 or a similar device node.
+  ```
+  ls /dev/mmcblk*
+
+  ```
+2. To mount the SD card manually, use the following command:
+   ```
+   sudo mount /dev/mmcblk1p1 /mnt 
+   ```
+3. After mounting, you can access the SD card contents under the /mnt directory.
+
+<br/>
+
+## 5.3 SATA HDD
+
+## 5.4 NVME M.2 SSD
+
+</br></br>
+
+
+# 6. Ethernet Connection
+
+## 6.1 Network Connection Via Router
+
+## 6.2 Nework Sharing with the Host PC
+
+## 6.3 WIFI Device Connection 
+
+
+<br/><br/>
+
+# 7. 40 Pin GPIO Header
+The D3-G board features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
+This header is compatible with general-purpose input/output (GPIO) operations and can be used to connect sensors, LEDs, buttons, and other peripheral devices.
+
+Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
+
+<p align="center"><img src="../../Assets/TOPST D3-G/Software/" width="500"></p>
+<p align="center"><strong>Figure 10. 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
+
+**Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
+<br/>
+
+## 7.1 GPIO Digital In/Out
+
+The D3-G board supports digital input and output (GPIO) through its 40-pin header, enabling users to interact with external devices such as buttons, LEDs, sensors. 
+<br/>
+
+### 7.1.1 LED
+
+<br/>
+
+### 7.1.2 Button
+
+<br/>
+
+### 7.1.3 Touch Sensor
+
+<br/>
+
+### 7.1.4 Vibration Detection Sensor
+
+<br/>
+
+### 7.1.5 Infrared Sensor
+
+<br/>
+
+### 7.1.6 Phtoregister
+
+<br/>
+
+### 7.1.7 Air Pollution Chect Sensor
+
+<br/>
+
+### 7.1.8 Ultrasonic Sensor
+
+<br/>
 
