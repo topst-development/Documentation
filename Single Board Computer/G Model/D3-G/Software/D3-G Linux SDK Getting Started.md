@@ -48,7 +48,7 @@ wsl  // access ubuntu
 ls   // check contents in your directory
 ```
 Refer to the figure 1.1 below to check the result (may vary depending on the user).
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/1.1 wsl linux.png" width="500"></p>
+<p align="center"><img src="../../../../Assets/TOPST D3-G/Software/1.1 wsl linux.png" width="500"></p>
 <p align="center"><strong>Figure 1.1 WSL2 Screenshot </strong></p>
 
 <br/>
@@ -234,7 +234,7 @@ By using Yocto Project, you can simultaneously build the bootloader, kernel, and
 Figure 1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
 
 <p align="center">
-    <img src="../../Assets/TOPST D3-G/Software/2.1 yocto project task process.png", width="700">
+    <img src="../../../../Assets/TOPST D3-G/Software/2.1 yocto project task process.png", width="700">
 </p>
 <p align="center"><strong>Figure 1 Yocto Project Task Process</strong></p>
 
@@ -244,11 +244,84 @@ Figure 1 shows the task process of Yocto Project. You can download source from u
 The following are the components of the Yocto Project we have configured.
 Figure 2 shows composition of TOSPT D3-G SDK.
 
-<p align="center">
-    <img src="../../Assets/TOPST D3-G/Software/2.2 composition of TOPST D3-G SDK.png">
-</p>
-<p align="center"><strong>Figure 2 Composition of TOPST D3-G</strong></p>
 
+**Table 1 Composition of TOPST SDK:**
+<table border="1" cellspacing="0" cellpadding="5">
+  <colgroup>
+    <col style="width: 10%">
+    <col style="width: 10%">
+    <col style="width: 10%">
+    <col style="width: 56%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="3"style="text-align: center; vertical-align: middle;"><strong>Item</strong></th>
+      <th style="text-align: center; vertical-align: middle;" ><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup.sh</td>
+      <td>Python script to automatically download and build the SDK</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai.sh</td>
+      <td>Script for making fai images (minimal + Sample Application)</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_ai-g</td>
+      <td rowspan="6">Tools related to the build process and <strong>FWDN</strong></td>
+    </tr>
+     <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_d3-g</td>
+    </tr>
+     <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_d5-g</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">fwdn v8_ai-g</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">fwdn v8</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">mktcimg</td>
+    </tr>
+    <tr>
+      <td rowspan="8"style="text-align: center; vertical-align: middle;">poky</td>
+      <td colspan="2"style="text-align: center; vertical-align: middle;">poky</td>
+      <td>Yocto Project 4.0 Kirkstone build system</td>
+    </tr>
+    <tr>
+      <td colspan="2"style="text-align: center; vertical-align: middle;">meta-openembedded</td>
+      <td>Support OE-Core Layer</td>
+    </tr>
+    <tr>
+      <td colspan="2"style="text-align: center; vertical-align: middle;">meta-arm</td>
+      <td>Support ARM toolchain Layer</td>
+    </tr>
+    <tr>
+      <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst-bsp</td>
+      <td>Support TOPST BSP Layer</td>
+    </tr>
+    <tr>
+      <td colspan="2"style="text-align: center; vertical-align: middle;">meta-gplv2</td>
+      <td>Support packages that avoid GPLv3 license</td>
+    </tr>
+    <tr>
+      <td>meta-telechips</td>
+      <td>meta-core</td>
+      <td>
+        Recipes that require modification from Open-Source Software (OSS) used by Telechips TOPST AI-G SDK or recipes that are not in Yocto Project 4.0
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst</td>
+      <td>TOPST recipe</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
 <br/>
 
 ## 3.5 Ready to build
@@ -271,105 +344,104 @@ vi ~/.gitconfig
 Below is our Yocto configuration XML file. You can download the repository to get started.
 
 ```
-$ mkdir topst
-$ cd topst
+$ mkdir topst_dev
+$ cd topst_dev
 
-$ repo init -u https://github.com/topst-development/manifest -m topst-d3-pre-v0.1.xml
+$ repo init -u git@gitlab.com:topst-private-release/manifests.git -m linux_yp4.0_topst_1.0.0.xml
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
 
-... A new version of repo (2.45) is available.
-... New version is available at: /home/ben/topst/.repo/repo/repo
+... A new version of repo (2.54) is available.
+... New version is available at: /home/sooyong/topst_dev/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
 
 
-Your identity is: Seonguk Nam <topstdeveloper@gmail.com>
+Your identity is: sooyong <adrenalin7237@gmail.com>
 If you want to change this, please re-run 'repo init' with --config-name
 
-repo has been initialized in /home/ben/topst
+repo has been initialized in /home/sooyong/topst_dev
+```
 
+```
 $ repo sync
 
-... A new version of repo (2.45) is available.
-... New version is available at: /home/ben/topst/.repo/repo/repo
+... A new version of repo (2.54) is available.
+... New version is available at: /home/sooyong/topst_dev/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
 
-Fetching: 100% (9/9), done in 13.638s
-Checking out: 100% (9/9), done in 0.510s
+Fetching: 100% (14/14), done in 33.045s
+boot-firmware_ai-g: Shared project bsp/boot-firmware found, disabling pruning.
+fwdn_v8: Shared project tools/fwdn_v8 found, disabling pruning.
+Checking out:  57% (8/14), done in 0.898s
+Checking out:  42% (6/14), done in 0.365s
 repo sync has finished successfully.
 ```
 
 <br/><br/>
 
+## 3.6 Execute topst-build.sh 
+topst-build.sh is a shell script that sets up the core environment required to build TOPST images for D3-G and AI-G boards. Execute the following commands. By selecting option 2, you are now ready to install the main OS on the D3-G.
 
-## 3.6 Execute easy-setup Script  
-The `easy-setup.sh` is a shell script designed to build the D3-G image by selecting the appropriate core configuration.
-<br/>
-
-### 3.6.1 Build Single Core for main OS
-
-When you run 'easy-setup.sh', you can see the screen below.  
 ```
-$ ./easy-setup.sh
-```
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/2.3 end user license agreement.png"></p>
-<p align="center"><strong>Figure 3 End User License Agreement</strong></p>  
+$ . poky/meta-topst/topst-build.sh 
+Choose MACHINE
+  1. ai-g-topst
+  2. d3-g-topst-main
+  3. d3-g-topst-sub
+  4. d5-g-topst-main
+  5. d5-g-topst-sub
+select number(1-5) => 2
+machine(d3-g-topst-main) selected.
+You had no conf/local.conf file. This configuration file has therefore been
+created for you from /home/sooyong/topst_dev/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
+You may wish to edit it to, for example, select a different MACHINE (target
+hardware). See conf/local.conf for more information as common configuration
+options are commented.
 
-You must read this notice until scroll down to bottom.  
-After you read this notice, go to "Proceed to confirm" with right arrow key.
+You had no conf/bblayers.conf file. This configuration file has therefore been
+created for you from /home/sooyong/topst_dev/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
+To add additional metadata layers into your configuration please add entries
+to conf/bblayers.conf.
 
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/proceed to confirm.png"></p>
-<p align="center"><strong>Figure 4 Go To 'Proceed to confirm'</strong></p>
+The Yocto Project has extensive documentation about OE including a reference
+manual which can be found at:
+    https://docs.yoctoproject.org
 
-Then you can see the screen below.
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/accept.png"></p>
-<p align="center"><strong>Figure 5 Accept Screen</strong></p>
+For more information about OpenEmbedded see the website:
+    https://www.openembedded.org/
 
-If you select Accept, you can build following command.
-```
-[+] Please execute the following command to initiate the build process
-
-    source yocto/poky/oe-init-build-env build-main
-    bitbake telechips-topst-image
-
-[!] Will you use subcore? (yes/no) no
-```
-```
-$ source yocto/poky/oe-init-build-env build-main
-
-### Shell environment set up for builds. ###
-
-You can now run 'bitbake <target>'
-
-Common targets are:
+Yocto Project common targets are:
     core-image-minimal
-    core-image-full-cmdline
     core-image-sato
-    core-image-weston
     meta-toolchain
+    adt-installer
     meta-ide-support
 
-You can also run generated qemu images with a command like 'runqemu qemux86'
+
+Telechips common targets are:
+    telechips-topst-image-minimal
+    telechips-topst-image-multimedia
+    telechips-topst-image
+
+    meta-toolchain-topst(Application Development Toolkit)
+
+
+You can also run generated TOSPT images on TOPST board
 
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
  - 'bitbake-layers' handles common layer tasks
  - 'oe-pkgdata-util' handles common target package tasks
+
 ```
-Now, you can build D3-G image following command. 
+
+Run the following command to start building the main OS.
 ```
 $ bitbake telechips-topst-image
 ```
-<br/>
-
-### 3.6.2 Build Dual Core for optional OS => 현재 지원되는지 확인
-```
-```
-</br>   
-
 
 ## 3.7 Make FWDN Image
 
@@ -519,7 +591,7 @@ To use FWDN, connect the TOPST D3-G to the Host PC as follows:
 4. Connect the USB Type-C cable to the USB Type-C FWDN Port on the TOPST D3-G and the Host PC. 
 
 <p align="center">
-    <img src="../../Assets/TOPST D3-G/Hardware/connect to d3g to host pc using c type.png">
+    <img src="../../../../Assets/TOPST D3-G/Hardware/connect to d3g to host pc using c type.png">
 </p>
 <p align="center"><strong>Figure 6 Connection to D3-G to Host PC Using USB C-Type Cable </strong></p>
 
@@ -529,12 +601,12 @@ To use FWDN, connect the TOPST D3-G to the Host PC as follows:
 Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 3.2 and Figure 3.3.
 
 <p align="center">
-    <img src="../../Assets/TOPST D3-G/Software/USB Connection in Windows Environment.png", width="700">
+    <img src="../../../../Assets/TOPST D3-G/Software/USB Connection in Windows Environment.png", width="700">
 </p>
 <p align="center"><strong>Figure 7 USB Connection in Windows Environment</strong></p>
 
 <p align="center">
-    <img src="../../Assets/TOPST D3-G/Software/USB Connection in Linux System.png", width="700">
+    <img src="../../../../Assets/TOPST D3-G/Software/USB Connection in Linux System.png", width="700">
 </p>
 <p align="center"><strong>Figure 8 USB Connection in Linux Environment</strong></p>  
 
@@ -695,7 +767,7 @@ Perform the following steps and verify that the firmware download is successfull
 
  
 <p align="center">
-    <img src="../../Assets/TOPST D3-G/Software/USB to TTL Connection.png", width="700">
+    <img src="../../../../Assets/TOPST D3-G/Software/USB to TTL Connection.png", width="700">
 </p>
 <p align="center"><strong>Figure 9 UART Connection with host PC</strong></p>  
 
@@ -704,7 +776,7 @@ The figure 10 below shows a successful login.
 Both the username and password for login are set to **root**.
 
 <p align="center">
-    <img src="../../Assets/TOPST D3-G/Software/d3-g login as root.png", width="700">
+    <img src="../../../../Assets/TOPST D3-G/Software/d3-g login as root.png", width="700">
 </p>
 <p align="center"><strong>Figure 10 Connected Screen (ID and Password are topst)</strong></p>  
 
