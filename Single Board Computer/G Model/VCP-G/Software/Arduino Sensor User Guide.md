@@ -43,7 +43,7 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs o
     - (+) pin is connected to the 5V power rail on the breadboard.
     - (-) pin is connected to pin 48 on the TOPST VCP-G board.  
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/vcp4LED Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/vcp4LED%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 2.1 vcp4LED Circuit Schematic</strong></p>
 
 #### 2.1.2.1 Pin Mapping
@@ -163,7 +163,7 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs a
     - One leg of the button switch is connected to pin 45 on the TOPST VCP-G board.
     - The diagonally opposite leg of the button is connected to the GND pin.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/vcp4LED_Button Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/vcp4LED_Button%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 2.2 vcp4LED_Button Circuit Schematic</strong></p>
 
 #### 2.2.2.1 Pin Mapping
@@ -295,7 +295,7 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
     - (+) pin of the LED is connected to 3.3V on the TOPST VCP-G board with a 220Ω resistor.
     - (-) pin of the LED is connected to center pin of the potentiometer.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/AnalogInOutSerial Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/AnalogInOutSerial%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 3.1 AnalogInOutSerial Circuit Schematic</strong></p>
 
 #### 3.1.2.1 Pin Mapping
@@ -413,7 +413,7 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
     - (+) pin of the LED is connected to 3.3V on the TOPST VCP-G board with a 220Ω resistor.
     - (-) pin of the LED is connected to pin 5 on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/AnalogInput Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/AnalogInput%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 3.2 AnalogInput Circuit Schematic</strong></p>
 
 #### 3.2.2.1 Pin Mapping
@@ -525,7 +525,7 @@ This example program demonstrates how the TOPST VCP board controls an LED on the
     - (+) pin of the LED is connected to 5V on the TOPST VCP-G board.
     - (-) pin of the LED is connected to pin 9 on the TOPST VCP-G board with a 220Ω resistor.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/pwmFade Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/pwmFade%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 3.3 pwmFade Circuit Schematic</strong></p>
 
 #### 3.3.2.1 Pin Mapping
@@ -631,7 +631,7 @@ This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED 
     - CS pin of the 8x8 Dot Matrix is connected to pin 10 on the TOPST VCP-G board.
     - CLS pin of the 8x8 Dot Matrix is connected to pin 13 on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/vcpSPI_Dot8x8 Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/vcpSPI_Dot8x8%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 4.1 vcpSPI_Dot8x8 Circuit Schematic</strong></p>
 
 #### 4.1.2.1 Pin Mapping
@@ -807,7 +807,7 @@ In this example, the LCD is initialized, and the backlight is enabled for clear 
     - SDA pin of the LCD1602 is connected to pin 48 on the TOPST VCP-G board.
     - SCL pin of the LCD1602 is connected to pin 49 on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/vcpI2C_LCD1602 Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/vcpI2C_LCD1602%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 5.1 vcpI2C_LCD1602 Circuit Schematic</strong></p>
 
 #### 5.1.2.1 Pin Mapping
@@ -1022,7 +1022,7 @@ This example program demonstrates how the TOPST VCP-G board reads analog value o
     - GND pin of the potentiometer is connected to GND on the TOPST VCP-G board with a 10kΩ resistor.
     - VCC pin of the potentiometer is connected to 3.3V on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/vcpGraph Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/vcpGraph%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 6.1 vcpGraph Circuit Schematic</strong></p>
 
 #### 6.2.2.1 Pin Mapping
@@ -1228,7 +1228,7 @@ This example demonstrates how the TOPST VCP-G board controls an IR sensor and tw
     - (-) of LED is connected to the resistor, and the resistor is connected to GND on the TOPST VCP-G board.
     - (+) of LED is connected to pin 17 on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/Infrared (IR) Sensor Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/Infrared%20(IR)%20Sensor%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 7.1 Infrared (IR) Sensor Circuit Schematic</strong></p>
 
 ##### 7.1.1.2.1 Pin Mapping
@@ -1348,7 +1348,7 @@ Transceiver value is LOW, it indicates there is an obstacle, and the red LED tur
     - VCC pin of the IR Transceiver sensor is connected to 5V on the TOPST VCP-G board.
     - GND pin of the IR Transceiver sensor is connected to GND to the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/Infrared (IR) Sensor (Transceiver) Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/Infrared%20(IR)%20Sensor%20(Transceiver)%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 7.2 Infrared (IR) Sensor (Transceiver) Circuit Schematic</strong></p>
 
 ##### 7.1.2.2.1 Pin Mapping
@@ -1446,7 +1446,7 @@ This example shows how the TOPST VCP-G board reads joystick inputs and prints th
     - VRy pin of KY-023 is connected to the analog pin A4 on the TOPST VCP-G board. 
     - SW pin of KY-023 is connected to pin 2 on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/Joystick Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/Joystick%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 7.3 Joystick Circuit Schematic</strong></p>
 
 #### 7.2.2.1 Pin Mapping
@@ -1555,7 +1555,7 @@ This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) t
     - GND pin of the gas sensor is connected to GND on the TOPST VCP-G board.
 
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/Gas Sensor Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/Gas%20Sensor%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 7.4 Gas Sensor Circuit Schematic</strong></p>
 
 #### 7.3.2.1 Pin Mapping
@@ -1652,7 +1652,7 @@ When a touch is detected, the module outputs relevant digital/analog values to t
     - (-) pin of the LED is connected to GND on the TOPST VCP-G board with a 10kΩ resistor.
 
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/Metal Touch Sensor Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/Metal%20Touch%20Sensor%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 7.5 Metal Touch Sensor Circuit Schematic</strong></p>
 
 #### 7.4.2.1 Pin Mapping
@@ -1780,7 +1780,7 @@ This example demonstrates how the TOPST VCP-G board controls 4-wire stepper moto
 - (+) pin is connected to 5V on the TOPST VCP-G board.
 - (-) pin is connected to GND on the TOPST VCP-G board.
 
-<p align="center"><img src="../../Assets/TOPST VCP-G/Software/Step Motor with Motor Driver Circuit Schematic.png"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20VCP-G/Software/Step%20Motor%20with%20Motor%20Driver%20Circuit%20Schematic.png?raw=true"></p>
 <p align="center"><strong>Figure 7.6 STep Motor with Motor Driver Circuit Schematic</strong></p>
 
 #### 7.5.2.1 Pin Mapping

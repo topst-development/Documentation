@@ -48,7 +48,7 @@ wsl  // access ubuntu
 ls   // check contents in your directory
 ```
 Refer to the figure 1.1 below to check the result (may vary depending on the user).
-<p align="center"><img src="../../../../Assets/TOPST D3-G/Software/1.1 wsl linux.png" width="500"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/1.1%20wsl%20linux.png?raw=true" width="500"></p>
 <p align="center"><strong>Figure 1.1 WSL2 Screenshot </strong></p>
 
 <br/>
@@ -234,7 +234,7 @@ By using Yocto Project, you can simultaneously build the bootloader, kernel, and
 Figure 1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
 
 <p align="center">
-    <img src="../../../../Assets/TOPST D3-G/Software/2.1 yocto project task process.png", width="700">
+    <img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/2.1%20yocto%20project%20task%20process.png?raw=true", width="700">
 </p>
 <p align="center"><strong>Figure 1 Yocto Project Task Process</strong></p>
 
@@ -591,7 +591,7 @@ To use FWDN, connect the TOPST D3-G to the Host PC as follows:
 4. Connect the USB Type-C cable to the USB Type-C FWDN Port on the TOPST D3-G and the Host PC. 
 
 <p align="center">
-    <img src="../../../../Assets/TOPST D3-G/Hardware/connect to d3g to host pc using c type.png">
+    <img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Hardware/connect%20to%20d3g%20to%20host%20pc%20using%20c%20type.png?raw=true">
 </p>
 <p align="center"><strong>Figure 6 Connection to D3-G to Host PC Using USB C-Type Cable </strong></p>
 
@@ -601,12 +601,12 @@ To use FWDN, connect the TOPST D3-G to the Host PC as follows:
 Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 3.2 and Figure 3.3.
 
 <p align="center">
-    <img src="../../../../Assets/TOPST D3-G/Software/USB Connection in Windows Environment.png", width="700">
+    <img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Windows%20Environment.png?raw=true", width="700">
 </p>
 <p align="center"><strong>Figure 7 USB Connection in Windows Environment</strong></p>
 
 <p align="center">
-    <img src="../../../../Assets/TOPST D3-G/Software/USB Connection in Linux System.png", width="700">
+    <img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Linux%20System.png?raw=true", width="700">
 </p>
 <p align="center"><strong>Figure 8 USB Connection in Linux Environment</strong></p>  
 
@@ -767,7 +767,7 @@ Perform the following steps and verify that the firmware download is successfull
 
  
 <p align="center">
-    <img src="../../../../Assets/TOPST D3-G/Software/USB to TTL Connection.png", width="700">
+    <img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/USB%20to%20TTL%20Connection.png?raw=true", width="700">
 </p>
 <p align="center"><strong>Figure 9 UART Connection with host PC</strong></p>  
 
@@ -776,7 +776,7 @@ The figure 10 below shows a successful login.
 Both the username and password for login are set to **root**.
 
 <p align="center">
-    <img src="../../../../Assets/TOPST D3-G/Software/d3-g login as root.png", width="700">
+    <img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/d3-g%20login%20as%20root.png?raw=true", width="700">
 </p>
 <p align="center"><strong>Figure 10 Connected Screen (ID and Password are topst)</strong></p>  
 
