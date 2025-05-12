@@ -27,7 +27,7 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users 
 
 ***Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/input device.png" width="500"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/input%20device.png?raw=true" width="500"></p>
 <p align="center"><strong>Figure 1. Connect input device to D3-G </strong></p>
 <br/><br/> 
 
@@ -36,7 +36,7 @@ The D3-G board supports FHD monitors via its only DisplayPort (DP) output.
 It also supports multi-display output using a daisy chain setup, allowing connection of up to two FHD monitors and one HD monitor simultaneously.
 
 **Note**: To use HDMI, a separate active converter adapter is required.
-<p align="center"><img src="../../Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/monitor.png?raw=true" width="500"></p>
 <p align="center"><strong>Figure 2. Connect Monitor to D3-G </strong></p>
 <br/><br/>
 
@@ -49,7 +49,7 @@ You can connect either a MIPI CSI camera or a USB webcam, depending on your proj
 The D3-G board supports USB webcams, with resolutions up to Full HD (FHD).
 You can test the webcam by following the steps below:
 1. Connect the USB camera to a USB port on the board.
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/webcam.png" width="400"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/webcam.png?raw=true" width="400"></p>
 <p align="center"><strong>Figure 3. Connect webcam to D3-G </strong></p>
 
 2. Connect the input devices(mouse&keyboard)and monitor to D3-G.
@@ -132,12 +132,12 @@ Below are the specifications for the ArduCam module.
 
 
 You can test the Arducam by following the steps below:
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/arducam.png" width="400"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/arducam.png?raw=true" width="400"></p>
 <p align="center"><strong>Figure 4. Ardu cam </strong></p>
 
 1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 5.
  
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/Arducam to D3G.png" width="500"></p>
+<p align="center"><img src="https://github.com/topst-development/Documentation/blob/main/Assets/TOPST%20D3-G/Software/Arducam%20to%20D3G.png?raw=true" width="500"></p>
 <p align="center"><strong>Figure 5. Connecting the ArduCam to the D3-G </strong></p> 
 
 2. 
