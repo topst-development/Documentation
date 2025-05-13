@@ -27,7 +27,7 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users 
 
 ***Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/input device.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
 <p align="center"><strong>Figure 1. Connect input device to D3-G </strong></p>
 <br/><br/> 
 
@@ -36,7 +36,7 @@ The D3-G board supports FHD monitors via its only DisplayPort (DP) output.
 It also supports multi-display output using a daisy chain setup, allowing connection of up to two FHD monitors and one HD monitor simultaneously.
 
 **Note**: To use HDMI, a separate active converter adapter is required.
-<p align="center"><img src="../../Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
 <p align="center"><strong>Figure 2. Connect Monitor to D3-G </strong></p>
 <br/><br/>
 
@@ -49,7 +49,7 @@ You can connect either a MIPI CSI camera or a USB webcam, depending on your proj
 The D3-G board supports USB webcams, with resolutions up to Full HD (FHD).
 You can test the webcam by following the steps below:
 1. Connect the USB camera to a USB port on the board.
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/webcam.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
 <p align="center"><strong>Figure 3. Connect webcam to D3-G </strong></p>
 
 2. Connect the input devices(mouse&keyboard)and monitor to D3-G.
@@ -132,12 +132,12 @@ Below are the specifications for the ArduCam module.
 
 
 You can test the Arducam by following the steps below:
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/arducam.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/arducam.png" width="400"></p>
 <p align="center"><strong>Figure 4. Ardu cam </strong></p>
 
 1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 5.
  
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/Arducam to D3G.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/Arducam%20to%20D3G.png" width="500"></p>
 <p align="center"><strong>Figure 5. Connecting the ArduCam to the D3-G </strong></p> 
 
 2. 
@@ -190,13 +190,13 @@ Below are the specifications for the ArduCam module.
 
 You can test the Arducam by following the steps below:
 
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/rasp v1 cam.jpg" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam.jpg" width="400"></p>
 <p align="center"><strong>Figure 6. Raspberry pi v1 cam </strong></p>
 
 
 1. Connect Raspbery pi v1 cam to D3-G MIPI CSI 1 below figure 7.
  
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/rasp v1 cam to d3g.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 7. Connecting the Raspberry pi v1 cam to the D3-G </strong></p> 
 
 
@@ -213,7 +213,7 @@ The D3-G board supports USB storage devices through its USB 2.0 and USB 3.0 Type
 To connect a USB drive:
 
 1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/usb storage connection with d3g.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/usb%20storage%20connection%20with%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 8. Connecting the usb storage to the D3-G </strong></p> 
 
 1. Once connected, the device will typically be recognized as /dev/sda1, /dev/sdb1, etc., depending on the system state.
@@ -232,7 +232,7 @@ To use an SD card with the board:
 1. Insert the microSD card into the SD card slot on the D3-G.
 
 1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/sd card connect with d3g.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 9. Connecting the SD Card to the D3-G </strong></p> 
 
 1. Once inserted, the system will typically recognize the SD card as /dev/mmcblk1p1 or a similar device node.
