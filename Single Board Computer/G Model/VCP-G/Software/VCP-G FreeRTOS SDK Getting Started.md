@@ -248,7 +248,7 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Execute%20Download%20Command.png"></p>
     <p align="center"><strong>Figure 6.3 Execute Download Command</strong></p>
 3. **Reset the Board:** After the download process is complete, disconnect and reconnect the power cable.
-    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
+    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/feature/editor/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
     <p align="center"><strong>Figure 6.4 Reset the Board</strong></p>
 
     </br>
