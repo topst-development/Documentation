@@ -234,7 +234,7 @@ By using Yocto Project, you can simultaneously build the bootloader, kernel, and
 Figure 1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/1.1%20wsl%20linux.png", width="700">
+    <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/2.1%20yocto%20project%20task%20process.png", width="700">
 </p>
 <p align="center"><strong>Figure 1 Yocto Project Task Process</strong></p>
 
