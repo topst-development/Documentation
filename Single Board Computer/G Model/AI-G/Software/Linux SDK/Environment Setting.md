@@ -1,5 +1,5 @@
-﻿
 # 1. Introduction
+
 This document provides guidelines for building the TOPST AI-G SDK, including setting up the host environment, building the SDK, using the firmware downloader, connecting the AI-G with a PC
 
 This document includes information on the following: 
