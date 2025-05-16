@@ -406,16 +406,16 @@ Caution: If you re-run ./easy-setup.sh, be careful as the built sources will be 
 ```
 ./easy-setup_ai-g.sh
 ```
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
 <p align="center"><strong>Figure 3 End User License Agreement</strong></p>
 <br/>
 Scroll down to the bottom of the screen and read this notice. After you read this notice, press the right arrow key and [Enter].
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license2.png"></p>
 <p align="center"><strong>Figure 4 Go To 'Proceed to confirm'</strong></p>
 <br/>
 
 Then you can see the following screen. 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" ></p>
 <p align="center"><strong>Figure 5 Accept Screen </strong></p>
 <br/>
 
