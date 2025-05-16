@@ -495,7 +495,7 @@ to be continue
 #### step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the AI-G board’s PCIe slot. 
 <br/>
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/4.2.1%20AI-G%20NVME%20M.2%20SSD%20connection.png" width="600"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/4.2.1%20AI-G%20NVME%20M.2%20SSD%20connection.png" width="300"></p>
 <p align="center"><strong>Figure 4.2.1 AI-G NVME M.2 SSD connection  </strong></p>
 
 #### step 2. Boot the AI-G Board

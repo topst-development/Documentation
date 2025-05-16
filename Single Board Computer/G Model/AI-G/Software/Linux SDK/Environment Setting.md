@@ -397,11 +397,34 @@ repo sync has finished successfully.
 
 ## 3.6 Execute Build Script  
 
+If you run ./easy-setup.sh script, you can see the following screen. 
+
+ 
+
+Caution: If you re-run ./easy-setup.sh, be careful as the built sources will be deleted if you select yes. 
+
+```
+./easy-setup_ai-g.sh
+```
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license.png" width="550"></p>
+<p align="center"><strong>Figure 3 End User License Agreement</strong></p>
+<br/>
+Scroll down to the bottom of the screen and read this notice. After you read this notice, press the right arrow key and [Enter].
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license.png" width="550"></p>
+<p align="center"><strong>Figure 4 Go To 'Proceed to confirm'</strong></p>
+<br/>
+
+Then you can see the following screen. 
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" width="550"></p>
+<p align="center"><strong>Figure 5 Accept Screen </strong></p>
+<br/>
+
 The build image is created in the following path:
 
 - {TOPST_PATH}/build/ai-g-topst/tmp/deploy/images/ai-g-topst-main
 
 ```
+
 $ . poky/meta-topst/topst-build.sh
 
 Choose MACHINE
@@ -563,7 +586,7 @@ The downloading sequence of ***FWDN*** is as follows:
 You can transfer the built image to TCC750x by using FWDN. TCC750x provides FWDN by using Ethernet and UART. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/3.%20connect%20host%20pc%20to%20topst%20ai-g.png" width="550"></p>
-<p align="center"><strong>Figure 3 Connection between Host PC and TOPST AI-G for FWDN</strong></p>
+<p align="center"><strong>Figure 6 Connection between Host PC and TOPST AI-G for FWDN</strong></p>
 
 To use FWDN V8, connect the TOPST AI-G to the Host PC as follows: 
 
@@ -584,7 +607,7 @@ To use FWDN V8, connect the TOPST AI-G to the Host PC as follows:
 Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 4
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/4.%20VTC.png" width="550"></p>
-<p align="center"><strong>Figure 4 Check COM Port</strong></p>
+<p align="center"><strong>Figure 7 Check COM Port</strong></p>
 <br/>
 
 ### 4.2.2 Connect Ethernet and Uart Port Between TOPST AI-G And Host PC
@@ -593,7 +616,7 @@ Host PC Network Configuration
 
 Control Panel → Network and Internet → Network Connectivity → Set Ethernet device properties for FWDN 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/5.%20network_setting.png"></p>
-<p align="center"><strong>Figure 5 Setting Ethernet Device Properties for FWDN</strong></p>
+<p align="center"><strong>Figure 8 Setting Ethernet Device Properties for FWDN</strong></p>
 <br/><br/>
 
 ## 4.3 Ready to Download FWDN
@@ -663,14 +686,14 @@ Perform the following steps and verify that the firmware download is successfull
 
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/6.%20connetc%20host%20pc%20to%20ai-g%20with%20uart%20cable.png"></p>
-<p align="center"><strong>Figure 6 UART Connection with host PC</strong></p>  
+<p align="center"><strong>Figure 9 UART Connection with host PC</strong></p>  
 
 
 The figure 10 below shows a successful login.  
 Both the username and password for login are set to **root**.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/7.%20connenct%20screen.png" width="550"></p>
-<p align="center"><strong>Figure 7 Connected Screen (ID and Password are topst)</strong></p>  
+<p align="center"><strong>Figure 10 Connected Screen (ID and Password are topst)</strong></p>  
 
 
 
