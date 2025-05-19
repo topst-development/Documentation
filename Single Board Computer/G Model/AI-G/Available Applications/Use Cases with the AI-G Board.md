@@ -46,7 +46,8 @@ To demonstrate digital output, an LED can be connected to one of the GPIO pins o
 - LED
     - (+) pin connected to pin 26 on the TOPST AI-G board.
     - (-) pin connected to pin 14 which acts as GND on the TOPST AI-G board.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20LED%20connection.png" width="600"></p>
+<br/>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20LED%20Circuit%20Schematic.png" width="600"></p>
 <p align="center"><strong>Figure 3.1.1 AI-G GPIO LED Circuit Schematic  </strong></p>
 
 #### Step 2.1 Pin Mapping
