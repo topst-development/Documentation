@@ -40,17 +40,17 @@ To demonstrate digital output, an LED can be connected to one of the GPIO pins o
 - LED (x1)
 - male to female jumper wire (x2)
 - DC 5V Power Adapter (x1)
-- USB Type-C to A Cable (x1)
+- USB to TTL Serial Cable (x1)
 
 #### Step 2. Example Circuit
 - LED
     - (+) pin connected to pin 26 on the TOPST AI-G board.
-    - (-) pin connected to pin 14 which acts as GND on the TOPST AI-G board.
-<br/>
+    - (-) pin connected to pin 14 which acts as GND on the TOPST AI-G board.  
+
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20LED%20Circuit%20Schematic.png" width="600"></p>
 <p align="center"><strong>Figure 3.1.1 AI-G GPIO LED Circuit Schematic  </strong></p>
 
-#### Step 2.1 Pin Mapping
+##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 2.1 Pin Mapping of AI-G LED</strong></p>
@@ -104,8 +104,8 @@ To stop the script, press 'Ctrl+C'.
 When the script is terminated, GPIO72 will be automatically unexported and cleaned up.  
 > Make sure to give the script execute permission before running:
 > ```bash
-> chmod +x AI_GPIO_LED_TEST
-> ./AI_GPIO_LED_TEST
+> $ chmod +x AI_GPIO_LED_TEST
+> $ ./AI_GPIO_LED_TEST
 > ```
 <br/>
 
@@ -115,11 +115,40 @@ When the script is terminated, GPIO72 will be automatically unexported and clean
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.  
 In this example, one side of the button is connected to a 3.3V power pin on the AI-G board, while the other side is connected to GPIO79. When the button is pressed, GPIO79 reads a HIGH signal 1.
 
-#### Step 1. Example Circuit
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.2%20AI-G%20GPIO%20Button%20connection.png" width="600"></p>
-<p align="center"><strong>Figure 3.1.2 AI-G GPIO Button connection  </strong></p>
+#### Step 1. Hardware Requirements
+- TOPST AI-G board (x1)
+- Breadboard (x1)
+- Button (x1)
+- male to female jumper wire (x2)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 
-#### Step 2. Example Code
+#### Step 2. Example Circuit
+- Button switch
+    - One leg of the button switch is connected to pin 22 on the TOPST AI-G board.
+    - The opposite leg above the button is connected to the 3.3V pin.  
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20Button%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure 3.1.1 AI-G GPIO Button Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of AI-G Button</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>AI-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">One leg pin of button</td>
+        <td>22</td>
+        <td>79</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
 To monitor the button input connected to GPIO79 on the AI-G board, simply run the following code:
 
 ```bash
@@ -152,7 +181,7 @@ while true; do
 done
 ```
 
-#### Step 3. Execution Result
+#### Step 4. Execution Result
 This script configures GPIO79 as a digital input and continuously monitors its value in real time.  
 When executed, pressing the button connected to GPIO79 will print a message indicating that the button has been pressed.
 <br/>
@@ -161,8 +190,8 @@ To stop the script, press 'Ctrl+C'.
 When the script is terminated, GPIO79 will be automatically unexported and cleand up.
 > Make sure to give the script execute permission before running:
 > ```bash
-> chmod +x AI_GPIO_BUTTON_TEST
-> ./AI_GPIO_BUTTON_TEST
+> $ chmod +x AI_GPIO_BUTTON_TEST
+> $ ./AI_GPIO_BUTTON_TEST
 > ```
 <br/>
 
@@ -179,13 +208,59 @@ The SDA line is used for both transmitting and receiving data, while the SCL lin
 The 1602A LCD is a character display module commonly used in embedded systems.  
 On the AI-G board, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
 
-#### Step 1. Example Circuit
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.2.1%20AI-G%20LCD%20Display%20connection.png" width="600"></p>
-<p align="center"><strong>Figure 3.2.1 AI-G LCD Display connection  </strong></p>
+#### Step 1. Hardware Requirements
+- TOPST AI-G board (x1)
+- 1602A LCD Display (x1)
+- female to female jumper wire (x4)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 
-#### Step 2. Example Code
-To access I2C devices on the AI-G board, you need to write a C program using the i2c-dev interface and cross-compile it for the target architecture.
-Below is a simple example (lcd_i2c_test.c):
+#### Step 2. Example Circuit
+- LCD1602A
+    - VCC pin of the LCD1602A is connected to the 5V pin on the TOPST AI-G board.
+    - GND pin of the LCD1602A is connected to GND on the TOPST AI-G board.
+    - SDA pin of the LCD1602A is connected to pin 3 on the TOPST AI-G board.
+    - SCL pin of the LCD1602A is connected to pin 5 on the TOPST AI-G board.  
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.2.1%20AI-G%20I2C%20LCD Display%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure 3.2.1 AI-G I2C LCD Display Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of AI-G LCD Display</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>AI-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>6</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>4</td>
+        <td>5V</td>
+    </tr>
+    <tr>
+        <td colspan="3">SDA</td>
+        <td>3</td>
+        <td>103</td>
+    </tr>
+    <tr>
+        <td colspan="3">SCL</td>
+        <td>5</td>
+        <td>102</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+To access I2C devices on the AI-G board, you need to write a C program using the i2c-dev interface and cross-compile it for the target architecture.  
+Below is a simple example (I2C_TEST.c):
+
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -256,9 +331,10 @@ int main() {
     return 0;
 }
 ```
-#### step 3. Install Toolchain(gcc-arm-9.2)
+##### Step 3.1 Install Toolchain(gcc-arm-9.2)
 To build binaries for the ARM 64-bit (AArch64) architecture, especially in embedded Linux environments, you need a cross-compilation toolchain.
 This step installs the GCC ARM 9.2 toolchain for AArch64.
+
 ```
 $ wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz
 
@@ -274,30 +350,33 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
-#### step 4. Cross-Compile the i2c_test.c Source File for AArch64
+##### Step 3.2 Cross-Compile the I2C_TEST.c Source File for AArch64
 Prepare the cross-compilation toolchain for the AI-G board, then compile the program using the following command:
-```
-$ aarch64-none-linux-gnu-gcc -o i2c_test i2c_test.c
-$ ls
-i2c_test.c i2c_test
-```
-#### Step 5. Transfer and Execute the Program on the AI-G Board
 
+```
+$ aarch64-none-linux-gnu-gcc -o I2C_TEST I2C_TEST.c
+$ ls
+I2C_TEST.c I2C_TEST
+```
+##### Step 3.3 Transfer and Execute the program on the AI-G Board
 After cross-compiling the binary on your host system, transfer it to the AI-G board and execute it using the following commands:
 
 ```
-$ scp i2c_test root@192.168.0.100:/home/root/
+$ scp I2C_TEST root@192.168.0.100:/home/root/
 ```
+
 On the AI-G board
 ```
-$ chmod + x i2c_test
-
-$ ./i2c_test
+$ chmod + x I2C_TEST
+$ ./I2C_TEST
 ```
 
-#### Step 5. Execution Result
-
-
+#### Step 4. Execution Result
+This program initializes the 1602A I2C LCD Display and prints a test message via the I2C interface on the AI-G board. When executed, the message "test pass!" will appear on the LCD screen.  
+If the message does not appear, please check the following:
+- Ensure the SDA and SCL pins are correctly connected.
+- Confirm the I2C device address matches your LCD module.
+- Check that power (5V, GND) is properly supplied.
 
 ## 3.3 SPI
 The AI-G board supports SPI (Serial Peripheral Interface) communication through a 40-pin GPIO header, enabling data exchange between external devices and the board.  
@@ -311,11 +390,64 @@ Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicat
 
 The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK and, CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
 
-#### Step 1. Example Circuit
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20Dot%20Matrix%20connection.png" width="600"></p>
-<p align="center"><strong>Figure 3.3.1 AI-G Dot Matrix connection  </strong></p>
+#### Step 1. Hardware Requirements
+- TOPST AI-G board (x1)
+- 8x8 Dot Matrix
+- female to female jumper wire (x5)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 
-#### Step 2. Example Code
+#### Step 2. Example Circuit
+- 8x8 Dot Matrix
+    - VCC pin of the 8x8 Dot Matrix is connected to the 5V pin on the TOPST AI-G board.
+    - GND pin of the 8x8 Dot Matrix is connected to the GND on the TOPST AI-G board.
+    - DIN pin of the 8x8 Dot Matrix is connected to the 19 pin on the TOPST AI-G board.
+    - CS pin of the 8x8 Dot Matrix is connected to the 24 pin on the TOPST AI-G board.
+    - CLK pin of the 8x8 Dot Matrix is connected to the 23 pin on the TOPST AI-G board.
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.2.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure 3.3.1 AI-G SPI Dot Matrix Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of AI-G Dot Matrix</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>AI-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>2</td>
+        <td>5V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>6</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">DIN</td>
+        <td>19</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td colspan="3">CS</td>
+        <td>24</td>
+        <td>93</td>
+    </tr>
+    <tr>
+        <td colspan="3">CLK</td>
+        <td>23</td>
+        <td>92</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+To communicate with SPI devices on the AI-G board, you need to write a C program using the spidev interface and cross-compile it for the target architecture.  
+Below is a simple example (SPI_TEST.c) that sends data to a MAX7219 LED matrix display:
 
 ```
 #include <stdio.h>
@@ -396,7 +528,7 @@ int main() {
 
 
 ```
-#### step 3. Install Toolchain(gcc-arm-9.2)
+##### Step 3.1 Install Toolchain(gcc-arm-9.2)
 To build binaries for the ARM 64-bit (AArch64) architecture, especially in embedded Linux environments, you need a cross-compilation toolchain.
 This step installs the GCC ARM 9.2 toolchain for AArch64.
 ```
@@ -414,29 +546,33 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
-#### step 4. Cross-Compile the i2c_test.c Source File for AArch64
+##### Step 3.2 Cross-Compile the SPI_TEST.c Source File for AArch64
 Prepare the cross-compilation toolchain for the AI-G board, then compile the program using the following command:
-```
-$ aarch64-none-linux-gnu-gcc -o spi_test spi_test.c
-$ ls
-spi_test.c spi_test
-```
-#### Step 5. Transfer and Execute the Program on the AI-G Board
 
+```
+$ aarch64-none-linux-gnu-gcc -o SPI_TEST SPI_TEST.c
+$ ls
+SPI_TEST.c SPI_TEST
+```
+
+##### Step 3.3 Transfer and Execute the program on the AI-G Board
 After cross-compiling the binary on your host system, transfer it to the AI-G board and execute it using the following commands:
 
 ```
-$ scp spi_test root@192.168.0.100:/home/root/
+$ scp SPI_TEST root@192.168.0.100:/home/root/
 ```
+
 On the AI-G board
 ```
-$ chmod + x spi_test
-
-$ ./spi_test
+$ chmod + x SPI_TEST
+$ ./SPI_TEST
 ```
 
-#### Step 5. Execution Result
-
+#### Step 4. Execution Result
+This program initializes the MAX7219 LED dot matrix display and sends data over the SPI interface to render the character P on the display. When execution, the 8x8 LED matrix should display the letter P based on the predefined bit pattern.  
+If nothing appears or the pattern is distorted, please check the following:
+- Verify correct wiring for SPI pins (MOSI, SCK, CS).
+- Confirm the MAX7219 module is powered properly (5V, GND) and all data/clock lines are stable.
 
 ## 3.4 UART
 The AI-G board supports UART (Universal Asynchronous Receiver/Transmitter) communication through its 40-pin GPIO header, enabling serial communication with devices such as serial consoles, and other microcontrollers.  
