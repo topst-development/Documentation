@@ -34,11 +34,39 @@ The AI-G board supports digital input and output (GPIO) through its 40-pin heade
 One of the simplest and most common GPIO output examples is controlling an LED.  
 To demonstrate digital output, an LED can be connected to one of the GPIO pins on the 40 pin header. In this example, the LED's cathode (short leg) is connected to the GND pin on the AI-G board, while the anode (long leg) is directly connected to GPIO72.
 
-#### Step 1. Example Circuit
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20LED%20connection.png" width="600"></p>
-<p align="center"><strong>Figure 3.1.1 AI-G GPIO LED connection  </strong></p>
+#### Step 1. Hardware Requirements
+- TOPST AI-G board (x1)
+- Breadboard (x1)
+- LED (x1)
+- male to female jumper wire (x2)
+- DC 5V Power Adapter (x1)
+- USB Type-C to A Cable (x1)
 
-#### Step 2. Example Code  
+#### Step 2. Example Circuit
+- LED
+    - (+) pin connected to pin 26 on the TOPST AI-G board.
+    - (-) pin connected to pin 14 which acts as GND on the TOPST AI-G board.
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20LED%20connection.png" width="600"></p>
+<p align="center"><strong>Figure 3.1.1 AI-G GPIO LED Circuit Schematic  </strong></p>
+
+#### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of AI-G LED</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>AI-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">LED (+) pin</td>
+        <td>26</td>
+        <td>72</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
 To operate the LED connected to GPIO72 on the AI-G board, simply run the following code:
 
 ```bash
@@ -67,7 +95,7 @@ while true; do
 done
 ```
 
-#### Step 3. Execution Result
+#### Step 4. Execution Result
 This script configures GPIO72 as a digital output and continuously toggles its state every 1 second. When executed, the LED connected to GPIO72 will blink repeatedly-turning on for 1 second and then off for 1 second in an infinite loop.
 <br/>
 
