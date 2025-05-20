@@ -1,6 +1,10 @@
 # 1. Introduction 
-This document provides usage examples using the TOPST AI-G.  
-This document includes information on the following: 
+This document provides usage examples using the TOPST AI-G.   
+This document includes information on the following:
+- Camera Connection
+  - MIPI CSI
+- Video Output
+  - MIPI DSI
 - NN Inference Applications
 - 40 Pin GPIO Header
   - Available Sensor & Device
@@ -11,6 +15,19 @@ This document includes information on the following:
 - JTAG Connection
 - CAN Connection
 <br/><br/>
+
+# 2 Camera Connection
+The AI-G board supports camera input via a MIPI CSI2 interface.
+By default, it provides a 2-lane CSI connection through a 15-pin connector. For applications requiring higher bandwidth—such as high-resolution or high-frame-rate AI vision tasks—a 4-lane configuration is also supported via an optional 20-pin connector.
+<br/>
+
+## 2.1 MIPI CSI
+CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors. It enables high-speed, low-power transmission of image data from the camera to the processor.  
+As explained above, the AI-G board provides a 2-lane CSI connection by default, with optional support for a 4-lane configuration via a 20-pin connector for higher data throughput.  
+
+**NOTE**: Currently, the AI-G board supports only the ArduCam (5MP) and Raspberry Pi v1 Camera (5MP) modules.
+
+### 2.1.1 Ardu Cam
 
 # 2. NN Inference Applications
 
