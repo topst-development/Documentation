@@ -16,7 +16,7 @@ This document includes information on the following:
 - CAN Connection
 <br/><br/>
 
-# 2 Camera Connection
+# 2. Camera Connection
 The AI-G board supports camera input via a MIPI CSI2 interface.
 By default, it provides a 2-lane CSI connection through a 15-pin connector. For applications requiring higher bandwidth—such as high-resolution or high-frame-rate AI vision tasks—a 4-lane configuration is also supported via an optional 20-pin connector.
 <br/>
@@ -28,11 +28,124 @@ As explained above, the AI-G board provides a 2-lane CSI connection by default, 
 **NOTE**: Currently, the AI-G board supports only the ArduCam (5MP) and Raspberry Pi v1 Camera (5MP) modules.
 
 ### 2.1.1 Ardu Cam
+ArduCam is a versatile camera module designed for embedded systems and AI applications. It supports various image sensors and interfaces, including MIPI CSI, making it suitable for integration with development boards like the AI-G.  
+The AI-G board supports ArduCam modules with 2-lane or 4-lane MIPI CSI interfaces, enabling stable image input for AI vision tasks such as object detection and image classification. Thanks to its compatibility with FFC cables, the ArduCam module can be easily connected to the AI-G board's CSI connector, offering a reliable solution for real-time camera input in edge AI systems.
 
-# 2. NN Inference Applications
+Below are the specifications for the ArduCam module.
+
+| Spec                     | Description                                 |
+| ------------------------ | ------------------------------------------- |
+| Sensor                   | OV5647 (5 Megapixel)                        |
+| Resolution               | 2592 × 1944 (Full 5MP)                      |
+| Supported Output Formats | RAW, YUV, JPEG (sensor dependent)           |
+| Interface                | MIPI CSI-2                                  |
+| Frame Rate               | Up to 30fps at 1080p, 60fps at 720p         |
+| Lens Mount               | Fixed-focus lens (standard)                 |
+| FOV (Field of View)      | Approx. 54° – 70° (varies by model)         |
+| Connection Type          | FFC (Flat Flexible Cable)                   |
+| Operating Voltage        | 3.3V (typical)                              |
+| Form Factor              | Compact PCB, ~25mm x 24mm                   |
+| Compatibility            | Raspberry Pi, D3-G (via MIPI CSI-2 port)    |
+| Additional Features      | Low power consumption, plug-and-play module |
+
+You can test the Arducam by following the steps below:
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/Figure%201.%20arducam.png" width="400"></p>
+<p align="center"><strong>Figure 1. Ardu cam </strong></p>
+
+#### Step 1. Connect Ardu cam to AI-G MIPI CSI
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/Figure%202.%20Connecting%20Cam%20to%20AI-G.png" width="500"></p>
+<p align="center"><strong>Figure 2. Connecting the ArduCam to AI-G </strong></p> 
+
+#### Step 2. Verifying MIPI CSI Connection on AI-G Board
+To check if the ardu cam is properly connected to the AI-G board, enter the following command and check.  
+```
+$ dmesg | grep -i "ov5647"
+```
+
+**NOTE**: Connect the cam and power up the board, or if it is already powered up, reboot is required after connecting the cam.
+
+### 2.1.2 Raspberry Pi v1 Cam
+The Raspberry Pi Camera Module v1 is a compact 5MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board via a MIPI CSI-2 interface using an FFC (Flat Flexible Cable).  
+Originally designed for the Raspberry Pi series, this module is also compatible with the AI-G board via the 15-pin MIPI CSI connector. It provides a reliable solution for entry-level camera applications such as image capture, video streaming, and AI-powered computer vision tasks on the AI-G platform.
+
+Below are the specifications for the Raspberry pi v1 cam module.
+
+| Spec                | Description                              |
+| ------------------- | ---------------------------------------- |
+| Sensor              | OmniVision OV5647                        |
+| Resolution          | 2592 × 1944 (5MP)                        |
+| Output Formats      | RAW, YUV, JPEG                           |
+| Interface           | MIPI CSI-2                               |
+| Frame Rate          | 1080p30, 720p60, VGA90                   |
+| Lens                | Fixed-focus                              |
+| FOV (Field of View) | ~54°                                     |
+| Cable Type          | FFC (15-pin)                             |
+| Board Dimensions    | 25mm x 24mm                              |
+| Compatibility       | Raspberry Pi, D3-G (via MIPI CSI-2 port) |
+
+You can test the pi cam by following the steps below:
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/Figure%203.%20raspv1cam.png" width="400"></p>
+<p align="center"><strong>Figure 3. Raspberry pi v1 cam </strong></p>
+
+#### Step 1. Connect pi v1 cam to AI-G MIPI CSI
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/Figure%202.%20Connecting%20Cam%20to%20AI-G.png" width="500"></p>
+<p align="center"><strong>Figure 4. Connecting the Raspberry pi v1 cam to AI-G </strong></p> 
+
+#### Step 2. Verifying MIPI CSI Connection on AI-G Board
+To check if the pi cam is properly connected to the AI-G board, enter the following command and check.  
+```
+$ dmesg | grep -i "ov5647"
+```
+
+**NOTE**: Connect the cam and power up the board, or if it is already powered up, reboot is required after connecting the cam.
+
+# 3. Video Output
+The AI-G board supports video output through a MIPI DSI2 interface.
+It provides a 2-lane DSI connection via a 15-pin FFC connector, suitable for connecting to compatible MIPI DSI LCD panels. This interface enables smooth rendering of graphical user interfaces, video playback, and real-time AI visualization on embedded displays.
+
+## 3.1 MIPI DSI
+DSI stands for Display Serial Interface, a standard defined by the MIPI Alliance for transmitting display data from the processor to an external screen. It enables high-speed, low-power communication suitable for embedded LCD panels.  
+As mentioned above, the AI-G board provides a 2-lane DSI connection via a 15-pin FFC connector, allowing connection to compatible MIPI DSI display modules for GUI rendering, video playback, or real-time inference visualization.
+
+### 3.1.1 5 Inch DSI Display
+The Elecrow 5 Inch DSI Display is an 800×480 resolution LCD with an IPS panel and capacitive touch support, designed for use with the Raspberry Pi’s MIPI DSI interface. Thanks to its plug-and-play functionality, no additional driver installation is required. The display connects to the AI-G board via the 15-pin MIPI DSI connector and is powered directly through the interface, eliminating the need for an external power supply.  
+This module is suitable for GUI-based applications, real-time monitoring, and interactive AI demos on the AI-G platform.
+
+Below are the specifications for the DSI Display.
+
+| Spec                | Description                                |
+| ------------------- | -------------------------------------------|
+| Display Size        | 5 inch                                     |
+| Resolution          | 800 x 480                                  |
+| Refresh Rate        | 60 Hz                                      |
+| Interface (Display) | MIPI DSI                                   |
+| Interface (Panel)   | RGB888 Port                                |
+| Operating Voltage   | 3.3 V                                      |
+| Operating Temp Range| -20 °C to 70 °C                            |
+| Cable Type          | FFC (15-pin)                               |
+| Compatibility       | Raspberry Pi, AI-G (via MIPI DSI interface)|
+
+You can test the pi cam by following the steps below:
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/Figure%205.%20display.png" width="400"></p>
+<p align="center"><strong>Figure 5. 5 inch DSI Display </strong></p>
+
+#### Step 1. Connect Display to AI-G MIPI DSI
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/Figure%206.%20Connecting%20Display%20to%20AI-G.png" width="500"></p>
+<p align="center"><strong>Figure 6. Connecting the Display to AI-G </strong></p> 
+
+#### Step 2. Verifying MIPI DSI Connection on AI-G Board
+To check if the display is properly connected to the AI-G board, enter the following command and check.  
+```
+$ --------------------------------
+```
+
+# 4. NN Inference Applications
 
 
-# 3. 40 Pin GPIO Header
+# 5. 40 Pin GPIO Header
 The AI-G board features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
 This header is compatible with general-purpose input/output (GPIO) operations and can be used to connect sensors, LEDs, buttons, and other peripheral devices.
 
@@ -44,10 +157,10 @@ Each pin supports digital I/O, I2C, SPI, or UART functionality depending on the 
 **Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
 <br/>
 
-## 3.1 GPIO Digital In/Out
+## 5.1 GPIO Digital In/Out
 The AI-G board supports digital input and output (GPIO) through its 40-pin header, enabling users to interact with external devices such as buttons, LEDs, sensors. 
 
-### 3.1.1 LED
+### 5.1.1 LED
 One of the simplest and most common GPIO output examples is controlling an LED.  
 To demonstrate digital output, an LED can be connected to one of the GPIO pins on the 40 pin header. In this example, the LED's cathode (short leg) is connected to the GND pin on the AI-G board, while the anode (long leg) is directly connected to GPIO72.
 
@@ -128,7 +241,7 @@ When the script is terminated, GPIO72 will be automatically unexported and clean
 
 **NOTE**: This setup does not include a current-limiting resistor. While it may work for short-term testing, it is recommended to use a resistor in series with the LED to avoid potential damage to the GPIO pin.
 
-### 3.1.2 Button
+### 5.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.  
 In this example, one side of the button is connected to a 3.3V power pin on the AI-G board, while the other side is connected to GPIO79. When the button is pressed, GPIO79 reads a HIGH signal 1.
 
@@ -214,14 +327,14 @@ When the script is terminated, GPIO79 will be automatically unexported and clean
 
 **Note:** GPIO72 and GPIO79 are used here as examples. You may use any available GPIO pin on the AI-G board based on the 40-pin header pinmap. Make sure to refer to the official pinout diagram and select a GPIO number that suits your hardware configuration.
 
-## 3.2 I2C
+## 5.2 I2C
 The AI-G board provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.  
 I2C (Inter-Integrated Circuit) is a two-wire communication protocol consisting of a data line (SDA) and a clock line (SCL), enabling multiple devices to communicate over a shared bus.
 
 I2C communication follows a master-slave architecture, where one master device controls the communication and up to 127 slave devices can be connected on the same bus.  
 The SDA line is used for both transmitting and receiving data, while the SCL line synchronizes the timing of data transfer. This synchronous communication model allows devices to exchange information in a coordinated, clock-driven manner.
 
-### 3.2.1 1602A LCD Display
+### 5.2.1 1602A LCD Display
 The 1602A LCD is a character display module commonly used in embedded systems.  
 On the AI-G board, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
 
@@ -395,14 +508,14 @@ If the message does not appear, please check the following:
 - Confirm the I2C device address matches your LCD module.
 - Check that power (5V, GND) is properly supplied.
 
-## 3.3 SPI
+## 5.3 SPI
 The AI-G board supports SPI (Serial Peripheral Interface) communication through a 40-pin GPIO header, enabling data exchange between external devices and the board.  
 
 SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: MOSI (Master Out Slave In), MISO (Master In Slave Out), SCLK (Serial Clock), and SS (Slave Select).
 
 Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicated SS line for each slave device. This one-to-many structure makes SPI fast and straightforward to implement, but it can require more physical wiring when multiple devices are involved.
 
-### 3.3.1 Dot Matrix
+### 5.3.1 Dot Matrix
 8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the AI-G board, the dot matrix module can be controlled via SPI using a driver chip such as the MAX7219.
 
 The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK and, CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
@@ -591,12 +704,12 @@ If nothing appears or the pattern is distorted, please check the following:
 - Verify correct wiring for SPI pins (MOSI, SCK, CS).
 - Confirm the MAX7219 module is powered properly (5V, GND) and all data/clock lines are stable.
 
-## 3.4 UART
+## 5.4 UART
 The AI-G board supports UART (Universal Asynchronous Receiver/Transmitter) communication through its 40-pin GPIO header, enabling serial communication with devices such as serial consoles, and other microcontrollers.  
 
 UART is a widely used asynchronous communication protocol that transmits data one bit at a time over two lines: TX (transmit) and RX (receive). Unlike I2C or SPI, UART does not use a clock line. Instead, the two devices must use a common communication speed for timing.
 
-### 3.4.1 UART Loopback Test
+### 5.4.1 UART Loopback Test
 UART loopback test is a simple way to verify that UART communications is functioning correctly on the AI-G board.  
 By connecting the TX and RX pins together, any data sent from the board will be immediately received back.  
 This test can be performed using the Linux terminal by writing data to the UART device and reading it back.
@@ -690,15 +803,15 @@ This script configures the specified UART port and sends a test message. If the 
 > ```
 <br/>
 
-# 4. Storage Connection
+# 6. Storage Connection
 This chapter covers how to connect the AI-G board to various storage devices.
 Supported storage options include external storage via PCIe.
 
-## 4.1 SATA HDD
+## 6.1 SATA HDD
 
 to be continue
 
-## 4.2 NVME M.2 SSD
+## 6.2 NVME M.2 SSD
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the AI-G board’s PCIe slot. 
 <br/>
@@ -782,13 +895,111 @@ tmpfs                 137M     0  137M   0% /run/user/0
 
 </br></br>
 
-# 5. Ethernet Connection
+# 7. Ethernet Connection
+The TOPST AI-G board supports Ethernet connectivity through its onboard RJ45 Ethernet port. This allows the board to communicate with local networks or the internet using standard TCP/IP protocols. Ethernet is commonly used for deploying AI applications that require remote access, data streaming, or software updates.
 
-## 5.1 Network Connection Via Router
+## 7.1 Network Connection Via Router
+This method connects the AI-G board to a local network using a standard router. The board can obtain an IP address automatically via DHCP or be configured with a static IP address.
 
-## 5.2 Nework Sharing with the Host PC
+### 7.1.1 Remount the Root Filesystem as Read/Write
+root filesystem is mounted as read-only, remount it with write permissions to allow editing configuration files:
+
+```
+$ mount -o remount,rw /
+```
+### 7.1.2 Create the Network Configuration File
+Create or edit the /etc/systemd/network/20-wired.network file with the following content to enable DHCP on the eth0 interface
+
+```
+$ vi /etc/systemd/network/20-wired.network
  
+[Match]
+Name=eth0
+ 
+[Network]
+DHCP=yes
+ 
+```
+
+This configuration instructs systemd-networkd to use DHCP for the eth0 interface.
+
+### 7.1.3 Restart the Network Service
+Apply the new network configuration by restarting the systemd-networkd service:
+
+```
+sudo systemctl restart systemd-networkd
+```
+ 
+### 7.1.4 Verify Network Connectivity
+Test the internet connection by pinging Google's public DNS server:
+
+```
+$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: seq=0 ttl=113 time=30.208 ms
+64 bytes from 8.8.8.8: seq=1 ttl=113 time=38.143 ms
+64 bytes from 8.8.8.8: seq=2 ttl=113 time=30.969 ms
+64 bytes from 8.8.8.8: seq=3 ttl=113 time=33.586 ms
+ 
+```
+
+## 7.2 Nework Sharing with the Host PC
+You can share your PC's internet connection with the TOPST AI-G board without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
+
+### 7.2.1 Host PC Network Configuration
+Control Panel → Network and Internet → Network Connectivity → Set Ethernet
+ 
+1. Locate the network adapter connected to the internet (e.g., Wi-Fi), right-click on it, and select Properties.
+ 
+2. Navigate to the Sharing tab.
+ 
+3. Check the box labeled "Allow other network users to connect through this computer’s Internet connection".
+ 
+4. In the Home networking connection dropdown menu, select the Ethernet adapter that the AI-G board will connect to (e.g., "Ethernet").
+ 
+5. Click OK to save the settings.
+ 
+### 7.2.2 Remount the Root Filesystem as Read/Write
+root filesystem is mounted as read-only, remount it with write permissions to allow editing configuration files:
+
+```
+$ mount -o remount,rw /
+```
+ 
+### 7.2.3 Create the Network Configuration File
+Create or edit the /etc/systemd/network/20-wired.network file with the following content to enable DHCP on the eth0 interface
+
+```
+$ vi /etc/systemd/network/20-wired.network
+ 
+[Match]
+Name=eth0
+ 
+[Network]
+DHCP=yes
+```
+
+This configuration instructs systemd-networkd to use DHCP for the eth0 interface.
+ 
+### 7.2.4 Restart the Network Service
+Apply the new network configuration by restarting the systemd-networkd service:
+
+```
+sudo systemctl restart systemd-networkd
+```
+ 
+### 7.2.5 Verify Network Connectivity
+Test the internet connection by pinging Google's public DNS server:
+
+```
+$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: seq=0 ttl=113 time=30.208 ms
+64 bytes from 8.8.8.8: seq=1 ttl=113 time=38.143 ms
+64 bytes from 8.8.8.8: seq=2 ttl=113 time=30.969 ms
+64 bytes from 8.8.8.8: seq=3 ttl=113 time=33.586 ms
+```
 <br/><br/>
 
-# 6. JTAG Connection
-# 7. CAN Connection
+# 8. JTAG Connection
+# 9. CAN Connection
