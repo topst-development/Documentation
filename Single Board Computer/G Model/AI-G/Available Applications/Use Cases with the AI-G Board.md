@@ -128,8 +128,8 @@ In this example, one side of the button is connected to a 3.3V power pin on the 
     - One leg of the button switch is connected to pin 22 on the TOPST AI-G board.
     - The opposite leg above the button is connected to the 3.3V pin.  
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.1%20AI-G%20GPIO%20Button%20Circuit%20Schematic.png" width="600"></p>
-<p align="center"><strong>Figure 3.1.1 AI-G GPIO Button Circuit Schematic  </strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.1.2%20AI-G%20GPIO%20Button%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure 3.1.2 AI-G GPIO Button Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -405,7 +405,7 @@ The MAX7219 handles row and column scanning internally, allowing the microcontro
     - CS pin of the 8x8 Dot Matrix is connected to the 24 pin on the TOPST AI-G board.
     - CLK pin of the 8x8 Dot Matrix is connected to the 23 pin on the TOPST AI-G board.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.2.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
 <p align="center"><strong>Figure 3.3.1 AI-G SPI Dot Matrix Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
@@ -584,13 +584,38 @@ UART loopback test is a simple way to verify that UART communications is functio
 By connecting the TX and RX pins together, any data sent from the board will be immediately received back.  
 This test can be performed using the Linux terminal by writing data to the UART device and reading it back.
 
+#### Step 1. Hardware Requirements
+- TOPST AI-G board (x1)
+- female to female jumper wire (x1)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+#### Step 2. Example Circuit
 **Wiring:** Connect TX <-> RX
 
-#### Step 1. Example Circuit
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.4.1%20AI-G%20UART%20TX-RX%20connection.png" width="600"></p>
-<p align="center"><strong>Figure 3.4.1 AI-G UART TX-RX connection  </strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.4.1%20AI-G%20UART%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure 3.4.1 AI-G UART Circuit Schematic  </strong></p>
 
-#### Step 2. Example Code
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of AI-G UART</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="2">Pin Name</th>
+        <th>AI-G Board</th>
+    </tr>
+    <tr>
+        <td colspan="2">TX</td>
+        <td>10</td>
+    </tr>
+        <tr>
+        <td colspan="2">RX</td>
+        <td>8</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
 This script sends a test message to the UART port and checks if the same message is received back.  
 To test UART loopback on the AI-G board, simply run the following script after connecting the TX and RX pins together.
 
@@ -638,7 +663,7 @@ else
 fi
 ```
 
-#### Step 3. Execution Result
+#### Step 4. Execution Result
 This script configures the specified UART port and sends a test message. If the TX and RX pins are correctly connected, the same message will be received back and printed to the terminal, confirming that UART transmission and reception are working properly.
 
 > Make sure to give the script execute permission before running:
@@ -657,13 +682,13 @@ Supported storage options include external storage via PCIe.
 to be continue
 
 ## 4.2 NVME M.2 SSD
-#### step 1. Connect the SSD
+#### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the AI-G board’s PCIe slot. 
 <br/>
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/4.2.1%20AI-G%20NVME%20M.2%20SSD%20connection.png" width="300"></p>
 <p align="center"><strong>Figure 4.2.1 AI-G NVME M.2 SSD connection  </strong></p>
 
-#### step 2. Boot the AI-G Board
+#### Step 2. Boot the AI-G Board
 After executing the reboot command, observe the boot log to verify that the PCIe device is recognized by the system.
 Look for messages such as telechips-pcie: Link up, which indicate that the PCIe link has been successfully established.
 
@@ -680,7 +705,7 @@ Starting kernel ...
 ...
 ai-g-topst login: 
 ```
-#### step 3. Check SSD Recognition
+#### Step 3. Check SSD Recognition
 
 ```
 root@ai-g-topst:~# lspci
@@ -688,7 +713,7 @@ root@ai-g-topst:~# lspci
 01:00.0 Non-Volatile memory controller: Silicon Motion, Inc. SM2263EN SM2263XT SSD Controller (rev 03)
 ```
 
-#### step 4. mount the SSD
+#### Step 4. mount the SSD
 ```
 $ fdisk /dev/nvme0n1
 Welcome to fdisk (util-linux 2.37.4).
@@ -721,7 +746,7 @@ $ mkdir -p /mnt/nvme
 
 $ mount /dev/nvme0n1p1 /mnt/nvme
 ```
-#### step 5. Execution Result
+#### Step 5. Execution Result
 This output confirms that the NVMe SSD device (/dev/nvme0n1p1) has been successfully detected and mounted by the system at /mnt/nvme.
 ```
 $ df -h
