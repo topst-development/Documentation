@@ -246,7 +246,7 @@ By using Yocto Project, you can simultaneously build the bootloader, kernel, and
 Figure 2 shows the task process of the Yocto Project. You can download the source code from upstream repositories based on metadata and then build it. After the build is completed, package, image, and SDK are provided as results. 
 
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/2.%20Yocto%20Project.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/2.%20Yocto%20Project.png" ></p>
 
 <p align="center"><strong>Figure 2 Yocto Project Task Process</strong></p>
 
@@ -585,7 +585,7 @@ The downloading sequence of ***FWDN*** is as follows:
 
 You can transfer the built image to TCC750x by using FWDN. TCC750x provides FWDN by using Ethernet and UART. 
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/3.%20connect%20host%20pc%20to%20topst%20ai-g.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/3.%20connect%20host%20pc%20to%20topst%20ai-g.png" ></p>
 <p align="center"><strong>Figure 6 Connection between Host PC and TOPST AI-G for FWDN</strong></p>
 
 To use FWDN V8, connect the TOPST AI-G to the Host PC as follows: 
