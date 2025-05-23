@@ -272,7 +272,7 @@ This header is compatible with general-purpose input/output (GPIO) operations an
 
 Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
 
-<p align="center"><img src="../../Assets/TOPST D3-G/Software/" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
 <p align="center"><strong>Figure 10. 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
 
 **Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
@@ -284,30 +284,460 @@ The D3-G board supports digital input and output (GPIO) through its 40-pin heade
 <br/>
 
 ### 7.1.1 LED
+An LED can be tested using the board's GPIO pins.  
+The following steps demonstrate how to verify GPIO output functionality.
+
+#### Step1. LED Experiment Circuit
+The basic LED example uses GPIO pin 89.  
+Please refer to the figure below to wire the circuit correctly.
+
+<p align="center"><img src="" width="500"></p>
+<p align="center"><strong>Figure LED Basic Example Circuit </strong></p> 
+<br/>
+
+#### Step2. Example Code
+The Python script used in this example is shown below.
+
+```
+import time
+import os
+  
+def export_gpio(pin, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+
+  
+def main():
+    print("""\
+                        +--------+
+                    3P3-|-1    2-|-5P0
+       I2C_SDA / GPIO82-|-3    4-|-5P0
+       I2C_SCL / GPIO81-|-5    6-|-GND
+                 GPIO83-|-7    8-|-GPIO87 / UT_TXD
+                    GND-|-9   10-|-GPIO88 / UT_RXD
+                 GPIO84-|-11  12-|-GPIO89 / PWM 0
+                 GPIO85-|-13  14-|-GND
+                 GPIO86-|-15  16-|-GPIO90
+                    3P3-|-17  18-|-GPIO65
+     SPIO_MOSI / GPIO63-|-19  20-|-GND
+     SPIO_MISO / GPIO64-|-21  22-|-GPIO66
+     SPIO_SCLK / GPIO61-|-23  24-|-GPIO62 / SPIO_CS0
+                    GND-|-25  26-|-GPIO67 / SPIO_CS1
+              RESERVED0-|-27  28-|-RESERVED1
+                GPIO112-|-29  30-|-GND
+                GPIO113-|-31  32-|-GPIO115 / PWM 2
+         PWM1 / GPIO114-|-33  34-|-GND
+    SPI1_MISO / GPIO121-|-35  36-|-GPIO119 / SPI1_CS0
+                GPIO117-|-37  38-|-GPIO120 / SPI1_MOSI
+                    GND-|-39  40-|-GPIO118 / SPI1_SCLK
+                        +--------+""")
+  
+    LED_PIN = 89  # LED connected to GPIO 89
+  
+    try:
+        # Setup the GPIO pins
+        export_gpio(LED_PIN, direction="out")
+        print("GPIO pins initialized.")
+        
+        count = 0
+        while (count < 10):
+            write_gpio_value(LED_PIN, 1)  # Turn on the LED
+            print("LED ON.")
+            count += 1
+            time.sleep(1.0)  # Polling delay
+            write_gpio_value(LED_PIN, 0)  # Turn off the LED
+            print("LED OFF.")
+            time.sleep(1.0)  # Polling delay
+ 
+        write_gpio_value(LED_PIN, 0)  # Turn off the LED
+ 
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+  
+    finally:
+        unexport_gpio(LED_PIN) # unexport LED pin
+        print("GPIO pins unexported.")
+        print("program terminated.")
+
+if __name__ == "__main__":
+    main()
+```
+
+<br/>
+
+
+#### Step3. Expected Output and Considerations
+The LED will blink for 10 seconds and the program will exit automatically.
 
 <br/>
 
 ### 7.1.2 Button
+A push-button can be used to test digital input functionality using the board's GPIO pins.
+The following steps demonstrate how to detect button presses through GPIO input.
+<br/>
+
+### Step1. Button Experiment Circuit
+This example uses GPIO pin 88 to detect button input.  
+Connect one side of the button to GPIO88, and the other side to GND.  
+The circuit follows a pull-down resistor configuration to ensure a stable low signal when the button is not pressed.  
+Please refer to the figure below to wire the circuit correctly.
+
+<br/>
+
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure Button Basic Example Circuit</strong></p>
+<br/>
+
+### Step2. Example Code
+The Python script used in this example is shown below.
+
+```
+import time
+import os
+  
+def export_gpio(pin, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+  
+def main():
+    print("""\
+                        +--------+
+                    3P3-|-1    2-|-5P0
+       I2C_SDA / GPIO82-|-3    4-|-5P0
+       I2C_SCL / GPIO81-|-5    6-|-GND
+                 GPIO83-|-7    8-|-GPIO87 / UT_TXD
+                    GND-|-9   10-|-GPIO88 / UT_RXD
+                 GPIO84-|-11  12-|-GPIO89 / PWM 0
+                 GPIO85-|-13  14-|-GND
+                 GPIO86-|-15  16-|-GPIO90
+                    3P3-|-17  18-|-GPIO65
+     SPIO_MOSI / GPIO63-|-19  20-|-GND
+     SPIO_MISO / GPIO64-|-21  22-|-GPIO66
+     SPIO_SCLK / GPIO61-|-23  24-|-GPIO62 / SPIO_CS0
+                    GND-|-25  26-|-GPIO67 / SPIO_CS1
+              RESERVED0-|-27  28-|-RESERVED1
+                GPIO112-|-29  30-|-GND
+                GPIO113-|-31  32-|-GPIO115 / PWM 2
+         PWM1 / GPIO114-|-33  34-|-GND
+    SPI1_MISO / GPIO121-|-35  36-|-GPIO119 / SPI1_CS0
+                GPIO117-|-37  38-|-GPIO120 / SPI1_MOSI
+                    GND-|-39  40-|-GPIO118 / SPI1_SCLK
+                        +--------+""")
+  
+  
+    BUTTON_PIN = 88  # Button connected to GPIO 88
+    try:
+        export_gpio(BUTTON_PIN, direction="in")
+        print("Waiting for button press (CTRL+C to exit)...")
+ 
+        while True:
+            if read_gpio_value(BUTTON_PIN):
+                print("Button Pressed")
+            else:
+                print("Button Released")
+            time.sleep(0.5)
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+    finally:
+        unexport_gpio(BUTTON_PIN)
+        print("GPIO pins unexported.")
+        print("program terminated.")
+  
+if __name__ == "__main__":
+    main()
+```
+<br/>
+
+### Step3. Expected Output and Considerations
+The console will continuously display the button state ("Pressed" or "Released") every 0.5 seconds.
 
 <br/>
 
 ### 7.1.3 Touch Sensor
+A touch sensor can be used to detect human touch as a digital input signal via GPIO.
+This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G board.
+<br/>
 
+#### Step 1. Experiment Circuit
+<br/>
+
+#### Step 2. Example Code
+<br/>
+
+#### Step 3. Expected Output and Considerations
 <br/>
 
 ### 7.1.4 Vibration Detection Sensor
 
 <br/>
 
-### 7.1.5 Infrared Sensor
+### 7.1.5 Infrared Sensor (SZH-SSBH-002)
+This experiment explains how to use the SZH-SSBH-002 infrared sensor with the TOPST D3-G board to detect obstacles through a digital input signal.
+<br/>
+
+
+#### Step 1. Experiment Circuit
+The SZH-SSBH-002 IR sensor can detect nearby obstacles using infrared reflection.
+Connect the sensor's output to GPIO pin 89 on the D3-G.
+
+- IR Sensor (SZH-SSBH-002):
+    - VCC → 3.3V
+    - GND → GND
+    - OUT → GPIO 89 (input)
+
+
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure IR Sensor(SZH-SSBH-002) Experiment Circuit</strong></p>
+<br/>
+
+
+#### Step 2. Example Code
+The following Python script reads the IR sensor value from GPIO 89 and prints the detection result:
+
+```
+import os
+import time
+ 
+# GPIO pin numbers setting
+IR_SENSOR_PIN = 89  # IR sensor GPIO pin
+ 
+def export_gpio(pin: int, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+def main():
+    # initialize GPIO pins
+    export_gpio(IR_SENSOR_PIN, "in")  # IR sensor pin direction "in"
+    print("gpio pins initialized.")
+ 
+    try:
+        while True:
+            # IR sensor value read
+            # If the sensor value is 0, it means an obstacle is detected.
+            # If the sensor value is 1, it means no obstacle is detected.
+            sensor_value = read_gpio_value(IR_SENSOR_PIN)
+ 
+            if sensor_value == "0":  # obstacle detected
+                print("obstacle detected.")
+            else:    # obstacle undetected
+                print("obstacle undetected.")
+ 
+            time.sleep(0.5)  # 500ms delay
+
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+ 
+    finally:
+        unexport_gpio(IR_SENSOR_PIN)  # unexport the GPIO pin
+        print("GPIO pins unexported.")
+        print("program terminated.")
+         
+if __name__ == "__main__":
+    main()
+```
 
 <br/>
 
-### 7.1.6 Phtoregister
+#### Step 3. Expected Output and Considerations
+When the IR sensor detects an object in front of it (within its detection range), the terminal will display:
+```
+Obstacle detected.
+
+```
+When nothing is detected, the message will be:
+
+```
+No obstacle detected.
+```
+<br/>
+
+### 7.1.6 Phtoregister (SZH-SSBH-011)
+This experiment demonstrates how to use the SZH-SSBH-001 photoresistor (CDS sensor) with the TOPST D3-G board to detect ambient brightness and automatically control an LED.
+<br/>
+
+### Step 1. Experiment Circuit
+In this setup, we connect the SZH-SSBH-001 photoresistor module to GPIO pin 89, and an LED to GPIO pin 83.
+
+- CDS Sensor : 
+  - VCC → 3.3V
+  - GND → GND
+  - OUT → GPIO 89 (input)
+
+- LED:
+    - Anode (+) → GPIO 83 (output) via a resistor (e.g., 220Ω)
+    - Cathode (−) → GND
+
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure Photoregister(SZH-SSBH-001) Experiment Circuit</strong></p>
+<br/>
+
+### Step 2. Example Code
+The Python script used in this example is shown below.
+
+```
+import os
+import time
+
+# GPIO pin numbers setting
+LED_PIN = 83           # LED GPIO pin
+CDS_SENSOR_PIN = 89    # szh-ssbh-011 CDS sensor GPIO pin
+
+def export_gpio(pin, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+
+def main():
+    # initialize GPIO pins
+    export_gpio(LED_PIN, "out")          # LED pin direction "out"
+    export_gpio(CDS_SENSOR_PIN, "in")     # CDS sensor pin direction "in"
+    print("gpio pins initialized.")
+
+    try:
+        while True:
+            # read the sensor value
+            # If the sensor value is 0, it means light is detected.
+            # If the sensor value is 1, it means no light is detected.
+            sensor_value = read_gpio_value(CDS_SENSOR_PIN)
+            print("sensor value: {}".format(sensor_value))
+            if sensor_value == "0": # light detected
+                print("brightness detected. Turning on the LED.")
+                write_gpio_value(LED_PIN, 1)  # turn on the LED
+            else:
+                print("no brightness detected. Turning off the LED.")
+                write_gpio_value(LED_PIN, 0)  # turn off the LED
+
+            time.sleep(0.5)  #  500ms delay
+
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+
+    finally:
+        unexport_gpio(LED_PIN)          # unexport LED pin
+        unexport_gpio(CDS_SENSOR_PIN)   # unexport CDS sensor pin
+        print("GPIO pins unexported.")
+        print("program terminated.")
+
+if __name__ == "__main__":
+    main()
+```
+<br/>
+
+### Step 3. Expected Output and Consideration
+When light is detected by the photoresistor module, the terminal will display: 
+```
+sensor value: 0
+brightness detected. Turning on the LED.
+```
+and the LED turns ON.
+
+
+When light is not detected, the output will be:
+```
+sensor value: 1
+no brightness detected. Turning off the LED.
+```
+and the LED turns OFF.
 
 <br/>
 
-### 7.1.7 Air Pollution Chect Sensor
+
+
+### 7.1.7 Air Pollution Check Sensor
 
 <br/>
 
@@ -317,8 +747,8 @@ The D3-G board supports digital input and output (GPIO) through its 40-pin heade
 
 ## 7.2 I2C
 
-### 7.2.1 9-Axis Gyro
-### 7.2.2 1602A LCD Display
+### 7.2.1 1602A LCD Display
+### 7.2.2 9-Axis Gyro 
 ### 7.2.3 Photoregister(BH1750)
 
 ## 7.3 SPI
@@ -331,3 +761,4 @@ The D3-G board supports digital input and output (GPIO) through its 40-pin heade
 # 8. JTAG Connection
 
 # 9. CAN Connection
+
