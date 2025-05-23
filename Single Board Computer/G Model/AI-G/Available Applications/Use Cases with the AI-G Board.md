@@ -931,6 +931,9 @@ sudo systemctl restart systemd-networkd
 ```
  
 ### 7.1.4 Verify Network Connectivity
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet4.png" width="400"></p>
+<p align="center"><strong>Network Connection Via Router</strong></p>
+
 Test the internet connection by pinging Google's public DNS server:
 
 ```
@@ -951,19 +954,19 @@ Control Panel → Network and Internet → Network Connectivity → Set Ethernet
  
 1. Locate the network adapter connected to the internet (e.g., Wi-Fi), right-click on it, and select Properties.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="300"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="600"></p>
 <p align="center"><strong>Select properties</strong></p>
  
 2. Select sharing tab.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="300"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="400"></p>
 <p align="center"><strong>Select sharing tab</strong></p>
 
 3. Check the box labeled "Allow other network users to connect through this computer’s Internet connection".
  
 4. In the Home networking connection dropdown menu, select the Ethernet adapter that the AI-G board will connect to (e.g., "Ethernet").
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet3.png" width="300"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet3.png" width="400"></p>
 <p align="center"><strong>Select Ethernet adapter</strong></p>
  
 5. Click OK to save the settings.
@@ -998,6 +1001,9 @@ sudo systemctl restart systemd-networkd
 ```
  
 ### 7.2.5 Verify Network Connectivity
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet5.png" width="400"></p>
+<p align="center"><strong> Nework Sharing with the Host PC</strong></p>
+
 Test the internet connection by pinging Google's public DNS server:
 
 ```
