@@ -404,15 +404,13 @@ repo sync has finished successfully.
 <br/><br/>
 
 ## 3.6 Execute Build Script  
+If you run ./easy-setup_ai-g.sh script, you can see the following screen. 
 
-If you run ./easy-setup.sh script, you can see the following screen. 
 
- 
-
-Caution: If you re-run ./easy-setup.sh, be careful as the built sources will be deleted if you select yes. 
+Caution: If you re-run ./easy-setup_ai-g.sh, be careful as the built sources will be deleted if you select yes. 
 
 ```
-./easy-setup_ai-g.sh
+$ ./easy-setup_ai-g.sh
 ```
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
 <p align="center"><strong>Figure 3 End User License Agreement</strong></p>
@@ -432,6 +430,7 @@ The build image is created in the following path:
 - {TOPST_PATH}/build/ai-g-topst/tmp/deploy/images/ai-g-topst-main
 
 ```
+topst-build.sh is a shell script that sets up the core environment required to build TOPST images for D3-G and AI-G boards. Execute the following commands. By selecting option 1, you are now ready to install the main OS on the AI-G.
 
 $ . poky/meta-topst/topst-build.sh
 
@@ -502,18 +501,20 @@ The “output.fwdn.zip” including the output.fai build image and FWD
 - ~/topst-sdk/
 
 ```
-cd ~/topst-sdk/ && \ 
+$ cd ~/topst-sdk/ && \ 
 
-./stitch-fai_ai-g.sh -f output_nd
+$ ./stitch-fai_ai-g.sh -f
 ```
 If you see the following log, it means the “output.fwdn.zip” file is created. 
 ```
 $ ls
-aig.fwdn.zip        boot-firmware_d5-g  easy-setup_d3-g.sh  mktcimg             stitch-fai_d3-g.sh
+output_nd.fwdn.zip  boot-firmware_d5-g  easy-setup_d3-g.sh  mktcimg             stitch-fai_d3-g.sh
 boot-firmware_ai-g  build               fwdn_v8             poky                tools
 boot-firmware_d3-g  easy-setup_ai-g.sh  fwdn_v8_ai-g        stitch-fai_ai-g.sh
+```
+<br/>
 
-
+```
 $ bitbake telechips-topst-ai-image -f -c make_fai
 
 Loading cache: 100% |#############################################################################################| Time: 0:00:00
@@ -632,31 +633,26 @@ Before executing FWDN, you must first transfer the image and FWDN tool you creat
 
 1. Unzip "output_nd.fwdn.zip"
 ```
-cd ~/topst-sdk/ && \ 
-
-mkdir images && \ 
-
-mv ./output_nd.fwdn.zip ./images && \ 
-
-cd images && \ 
-
-unzip output_nd.fwdn.zip &&
+$ cd ~/topst-sdk/ && \ 
+$ mkdir images && \ 
+$ mv ./output_nd.fwdn.zip ./images && \ 
+$ cd images && \ 
+$ unzip output_nd.fwdn.zip &&
 ```
 
 2. Copy "images" folder to Windows C drive. 
 ```
-cd .. && \ 
-
-cp -r ./images /mnt/c/ 
+$ cd .. && \ 
+$ cp -r ./images /mnt/c/ 
 ```
 <br/>
 
 ## 4.4 FWDN in Windows Environment
 1. Execute Windows PowerShell and go to “C:\images”.  
 ```
-cd C:\images 
+$ cd C:\images 
 ```
-2. Enter .\fwdn.bat command to start the firmware download. The “fwdn_nd.bat” is an executable file that automatically downloads firmware by using FWDN V8. 
+2. Enter .\fwdn_nd.bat command to start the firmware download. The “fwdn_nd.bat” is an executable file that automatically downloads firmware by using FWDN V8. 
 
 ```
 ./fwdn_nd.bat
