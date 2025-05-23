@@ -225,7 +225,7 @@ Please proceed to **Chapter 3: Image Build Guide**.
 # 3. Image Build Guide
 This section provides guidance based on the Ubuntu OS installed on the host PC (regardless of whether it is WSL or a local Ubuntu installation). The image to be uploaded to the AI-G is built using the Yocto Project, and therefore the process must be carried out in the Ubuntu environment.
 
-<br/><br/>
+<br/>
 
 ## 3.1 SDK Build Prepration
 
@@ -273,6 +273,14 @@ The following are the components of the Yocto Project we have configured. Table 
     </tr>
   </thead>
   <tbody>
+  <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_ai-g.sh</td>
+      <td>Python script to automatically download and build the AI-G SDK</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_d3-g.sh</td>
+      <td>Python script to automatically download and build the D3-G SDK</td>
+    </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_ai-g.sh</td>
       <td>Script for making ai-g fai images (minimal + Sample Application)</td>
