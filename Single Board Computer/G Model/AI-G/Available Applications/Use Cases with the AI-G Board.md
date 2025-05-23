@@ -908,6 +908,9 @@ root filesystem is mounted as read-only, remount it with write permissions to al
 $ mount -o remount,rw /
 ```
 ### 7.1.2 Create the Network Configuration File
+
+1. Dynamic IP via DHCP
+
 Create or edit the /etc/systemd/network/20-wired.network file with the following content to enable DHCP on the eth0 interface
 
 ```
@@ -918,10 +921,25 @@ Name=eth0
  
 [Network]
 DHCP=yes
- 
 ```
 
-This configuration instructs systemd-networkd to use DHCP for the eth0 interface.
+This configuration instructs systemd-networkd to automatically obtain an IP address via DHCP for the eth0 interface.
+
+2. Static IP Configuration
+
+If you prefer to assign a static IP address (e.g., when using direct PC connection or no DHCP server is available), edit the same file with the following content:
+```
+$ vi /etc/systemd/network/20-wired.network
+
+[Match]
+Name=eth0
+
+[Network]
+Address=192.168.137.2/24
+Gateway=192.168.137.1
+DNS=8.8.8.8
+```
+This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
 
 ### 7.1.3 Restart the Network Service
 Apply the new network configuration by restarting the systemd-networkd service:
@@ -931,7 +949,7 @@ sudo systemctl restart systemd-networkd
 ```
  
 ### 7.1.4 Verify Network Connectivity
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet4.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet4.png"></p>
 <p align="center"><strong>Network Connection Via Router</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
@@ -981,6 +999,10 @@ $ mount -o remount,rw /
 ### 7.2.3 Create the Network Configuration File
 Create or edit the /etc/systemd/network/20-wired.network file with the following content to enable DHCP on the eth0 interface
 
+1. Dynamic IP via DHCP
+
+Create or edit the /etc/systemd/network/20-wired.network file with the following content to enable DHCP on the eth0 interface
+
 ```
 $ vi /etc/systemd/network/20-wired.network
  
@@ -989,9 +1011,26 @@ Name=eth0
  
 [Network]
 DHCP=yes
+
 ```
 
-This configuration instructs systemd-networkd to use DHCP for the eth0 interface.
+This configuration instructs systemd-networkd to automatically obtain an IP address via DHCP for the eth0 interface.
+
+2. Static IP Configuration
+
+If you prefer to assign a static IP address (e.g., when using direct PC connection or no DHCP server is available), edit the same file with the following content:
+```
+$ vi /etc/systemd/network/20-wired.network
+
+[Match]
+Name=eth0
+
+[Network]
+Address=192.168.137.2/24
+Gateway=192.168.137.1
+DNS=8.8.8.8
+```
+This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
  
 ### 7.2.4 Restart the Network Service
 Apply the new network configuration by restarting the systemd-networkd service:
@@ -1001,7 +1040,7 @@ sudo systemctl restart systemd-networkd
 ```
  
 ### 7.2.5 Verify Network Connectivity
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet5.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet5.png"></p>
 <p align="center"><strong> Nework Sharing with the Host PC</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
