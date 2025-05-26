@@ -260,13 +260,21 @@ Figure 2 shows composition of TOSPT D3-G SDK.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup.sh</td>
-      <td>Python script to automatically download and build the SDK</td>
+  <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_ai-g.sh</td>
+      <td>Python script to automatically download and build the AI-G SDK</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai.sh</td>
-      <td>Script for making fai images (minimal + Sample Application)</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_d3-g.sh</td>
+      <td>Python script to automatically download and build the D3-G SDK</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_ai-g.sh</td>
+      <td>Script for making ai-g fai images (minimal + Sample Application)</td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_d3-g.sh</td>
+      <td>Script for making d3-g fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_ai-g</td>
@@ -344,8 +352,8 @@ vi ~/.gitconfig
 Below is our Yocto configuration XML file. You can download the repository to get started.
 
 ```
-$ mkdir topst_dev
-$ cd topst_dev
+$ mkdir topst_sdk
+$ cd topst_sdk
 
 $ repo init -u git@gitlab.com:topst-private-release/manifests.git -m linux_yp4.0_topst_1.0.0.xml
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
@@ -383,7 +391,32 @@ repo sync has finished successfully.
 <br/><br/>
 
 ## 3.6 Execute topst-build.sh 
+If you run ./easy-setup_d3-g.sh script, you can see the following screen. 
+
+Caution: If you re-run ./easy-setup_d3-g.sh, be careful as the built sources will be deleted if you select yes.
+```
+./easy-setup_d3-g.sh
+```
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
+<p align="center"><strong>Figure 3 End User License Agreement</strong></p>
+<br/>
+Scroll down to the bottom of the screen and read this notice. After you read this notice, press the right arrow key and [Enter].
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license2.png"></p>
+<p align="center"><strong>Figure 4 Go To 'Proceed to confirm'</strong></p>
+<br/>
+
+Then you can see the following screen. 
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" ></p>
+<p align="center"><strong>Figure 5 Accept Screen </strong></p>
+<br/>
+
+The build image is created in the following path:
+
+- {TOPST_PATH}/build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main
+
 topst-build.sh is a shell script that sets up the core environment required to build TOPST images for D3-G and AI-G boards. Execute the following commands. By selecting option 2, you are now ready to install the main OS on the D3-G.
+
+
 
 ```
 $ . poky/meta-topst/topst-build.sh 
@@ -449,10 +482,12 @@ This option creates a binary into one image for TOPST D3 platform image.
 
 The **output.fwdn.zip** including **'output.fai' build image** and **fwdn tools** is created in the following path:
 
-- {TOPST_PATH}/
+-  ~/topst-sdk/
 
 ```
-$ ./stitch-fai.sh -f
+$ cd ~/topst-sdk/ && \ 
+
+$ ./stitch-fai_d3-g.sh -f
 
 Filesystem too small for a journal
 [mktcimg] v1.2.1 - Nov 15 2021 19:33:18
@@ -545,7 +580,7 @@ Complete to make fai file
 
 ```
 
-Finally, you can check **'output.zip'**.
+Finally, you can check **'output.fwdn.zip'**.
 
 Please proceed to **Chapter 4: Firmware Download**.
 
@@ -615,18 +650,21 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 <br/><br/>
 
 ## 4.3 Ready to Download FWDN
+Before executing FWDN, you must first transfer the image and FWDN tool you created after the build from Ubuntu (WSL2) to the Windows Environment.
 
-1. unzip "output.fwdn.zip" 
+
+1. Unzip "output.fwdn.zip" 
     ```
-    $ mkdir images
-    $ mv ./output.fwdn.zip ./images
-    $ cd images
-    $ unzip output.fwdn.zip
+    $ cd ~/topst-sdk/ && \ 
+    $ mkdir images && \
+    $ mv ./output.fwdn.zip ./images && \
+    $ cd images && \
+    $ unzip output.fwdn.zip && \
     ```
-2. copy "images" folder to Windows C drive.
+2. Copy "images" folder to Windows C drive.
     ```
-    $ cd ..
-    $ cp -r /images /mnt/c/
+    $ cd .. && \
+    $ cp -r /images /mnt/c/ && \
     ```
 
 <br/>
@@ -634,10 +672,12 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 ## 4.4 FWDN in Windows Environment
 
 1. Excute Powershell and go to "C:\images\".
+```
+$ cd C:\images 
+```
 
-    “fwdn.bat” is an executable file that enables automatic firmware download by using ***FWDN V8***.
+2. Enter **.\fwdn.bat** command to start the download. The “fwdn.bat” is an executable file that automatically downloads firmware by using FWDN V8. 
 
-3. Enter **.\fwdn.bat** command to start the download.
 ```
 .\fwdn.bat
 
@@ -820,34 +860,34 @@ Follow the steps below for eMMC Storage resizing.
 
 1. To resize partitions by modifying size and layout on the disk, use the following command.
      ```
-     parted
+     $ parted
      ```
 
 2. Extend GUID Partition Table(GPT). 
     ```
-    rescue
-    Fix 
-    0 
-    100%
+    $ rescue
+    $ Fix 
+    $ 0 
+    $ 100%
     ```
 3. Check that ext4 is partition by using the p (print) 
    ```
-   p
+   $ p
    ```
 4. Resize partition 4
     ```
-    resizepart 4
-    Yes
-    100%
+    $ resizepart 4
+    $ Yes
+    $ 100%
     ```
 5. Reboot 
 6. Resize the ext4 filesystem on partition 4.
     ```
-    resize2fs /dev/mmcblk0p4
+    $ resize2fs /dev/mmcblk0p4
     ```
 7. Check the changed partition size by using the following command.
    ```
-   df -h
+   $ df -h
    ```
 
 You can confirm that the available space is 27GB after resizing.
