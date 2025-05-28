@@ -517,6 +517,7 @@ To demonstrate digital output, an LED can be connected to one of the GPIO pins o
 <p align="center"><img src="" width="500"></p>
 <p align="center"><strong>Figure D3-G GPIO LED Circuit Schematic </strong></p> 
 <br/>
+
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
@@ -914,7 +915,7 @@ This section demonstrates how to connect and detect input from a basic vibration
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
-Step 2. Example Circuit
+#### Step 2. Example Circuit
 - Vibration Detection Sensor
     - VCC pin of the Vibration Detection Sensor is connected to the 3.3V pin on the TOPST D3-G board.
     - GND pin of the Vibration Detection Sensor is connected to the GND on the TOPST D3-G board.
@@ -1655,3 +1656,640 @@ $ python3 ultrasonic_sensor_test.py
 ```
 Note: GPIO82 and GPIO88 are used as examples. You may modify the pins based on your wiring and available GPIOs on the D3-G board.
 Also, ensure your ECHO pin's voltage level is safe for the board (some modules output 5V and may need a voltage divider or level shifter).
+
+## 7.2 I2C
+The D3-G board provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.
+I2C (Inter-Integrated Circuit) is a two-wire communication protocol consisting of a data line (SDA) and a clock line (SCL), enabling multiple devices to communicate over a shared bus.
+
+I2C communication follows a master-slave architecture, where one master device controls the communication and up to 127 slave devices can be connected on the same bus.
+The SDA line is used for both transmitting and receiving data, while the SCL line synchronizes the timing of data transfer. This synchronous communication model allows devices to exchange information in a coordinated, clock-driven manner.
+
+### 7.2.1 1602A LCD Display
+The 1602A LCD is a character display module commonly used in embedded systems.
+On the D3-G board, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
+
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- 1602A I2C LCD Module (x1)
+- Male to Female Jumper Wires (x4)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+Make sure the LCD module has an I2C backpack
+
+#### Step 2. Example Circuit
+- I2C LCD Module
+    - GND pin of the I2C LCD Module is connected to the GND pin on the TOPST D3-G board.
+    - VCC pin of the I2C LCD Module is connected to the 5V on the TOPST D3-G board.
+    - SDA pin of the I2C LCD Module is connected to the 82 pin on the TOPST D3-G board.
+    - SCL pin of the I2C LCD Module is connected to the 81 pin on the TOPST D3-G board.
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure D3-G I2C LCD Module Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table Pin Mapping of D3-G I2C LCD Module</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>2</td>
+        <td>5V</td>
+    </tr>
+    <tr>
+        <td colspan="3">SDA</td>
+        <td>3</td>
+        <td>82</td>
+    </tr>
+    <tr>
+        <td colspan="3">SCL</td>
+        <td>5</td>
+        <td>81</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+Install required Python libraries first:
+```
+$ pip install RPLCD smbus2
+```
+Then use the following Python code to write text to the LCD:
+```
+import smbus2
+import time
+from RPLCD.i2c import CharLCD
+ 
+# I2C bus num
+I2C_BUS = 3
+LCD_ADDRESS = 0x27
+
+lcd = CharLCD(i2c_expander='PCF8574', address=LCD_ADDRESS, port=I2C_BUS,
+              cols=16, rows=2, dotsize=8,
+              charmap='A00', auto_linebreaks=True,
+              backlight_enabled=True)
+ 
+def display_text(text):
+    lcd.clear()
+    lcd.write_string(text)
+
+def main():
+    while True:
+        user_input = input("Enter text to display on LCD: ")
+        display_text(user_input)
+        time.sleep(4)
+        lcd.clear()
+if __name__ == "__main__":
+    main()
+
+```
+
+#### Step 4. Execution Result
+This script initializes an I2C-based 1602A LCD using the RPLCD library and displays user-entered text on the screen.
+When you run the script, you’ll be prompted to enter a string. That text will be shown on the LCD for 4 seconds and then cleared. For example:
+```
+Enter text to display on LCD: Hello D3-G!
+```
+The LCD will display:
+```
+Hello D3-G!
+```
+and then clear after 4 seconds.
+
+To stop the script, press Ctrl+C.
+
+Note : GPIO82 and GPIO81 are used for I2C by default on the D3-G board.
+Make sure the I2C address (0x27) matches your specific LCD module. Use i2cdetect -y 3 to scan I2C devices if needed.
+
+## 7.3 SPI
+The D3-G board supports SPI (Serial Peripheral Interface) communication through a 40-pin GPIO header, enabling data exchange between external devices and the board.
+
+SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: MOSI (Master Out Slave In), MISO (Master In Slave Out), SCLK (Serial Clock), and CS (Chip Select).
+
+Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicated CS line for each slave device. This one-to-many structure makes SPI fast and straightforward to implement, but it can require more physical wiring when multiple devices are involved.
+
+### 7.3.1 Dot Matrix
+8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the D3-G board, the dot matrix module can be controlled via SPI using a driver chip such as the MAX7219.
+
+The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK and, CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
+
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Dot Matrix (x1)
+- Male to Female Jumper Wires (x4)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+Make sure the LCD module has an I2C backpack
+
+#### Step 2. Example Circuit
+- Dot Matrix
+    - VCC pin of the Dot Matrix is connected to the 5V on the TOPST D3-G board.
+    - GND pin of the Dot Matrix is connected to the GND on the TOPST D3-G board.
+    - DIN pin of the Dot Matrix is connected to the 120 pin on the TOPST D3-G board.
+    - CS pin of the Dot Matrix is connected to the 119 pin on the TOPST D3-G board.
+    - CLK pin of the Dot Matrix is connected to the 118 pin on the TOPST D3-G board.
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure D3-G Dot Matrix Module Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table Pin Mapping of D3-G I2C Dot Matrix</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>2</td>
+        <td>5V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>6</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">DIN</td>
+        <td>38</td>
+        <td>120</td>
+    </tr>
+    <tr>
+        <td colspan="3">CS</td>
+        <td>36</td>
+        <td>119</td>
+    </tr>
+    <tr>
+        <td colspan="3">CLK</td>
+        <td>40</td>
+        <td>118</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+The following Python script shows how to directly control the MAX7219 via /dev/spidev3.0 using low-level fcntl calls. This method is suitable for devices without external SPI libraries:
+```
+#!/usr/bin/env python3
+ 
+import os
+import fcntl
+import time
+from ctypes import Structure, addressof, create_string_buffer, c_uint64, c_uint32, c_uint16, c_uint8
+ 
+SPI_MODE = 0
+SPI_SPEED_HZ = 5000000
+SPI_BITS_PER_WORD = 8
+ 
+SPI_IOC_RD_MODE = 0x80016b01
+SPI_IOC_WR_MODE = 0x40016b01
+SPI_IOC_RD_BITS_PER_WORD = 0x80016b03
+SPI_IOC_WR_BITS_PER_WORD = 0x40016b03
+SPI_IOC_WR_MAX_SPEED_HZ = 0x40046b04
+SPI_IOC_MESSAGE_1 = 0x40206b00
+ 
+class spi_ioc_transfer(Structure):
+    _fields_ = [
+        ("tx_buf", c_uint64),
+        ("rx_buf", c_uint64),
+        ("len", c_uint32),
+        ("speed_hz", c_uint32),
+        ("delay_usecs", c_uint16),
+        ("bits_per_word", c_uint8),
+        ("cs_change", c_uint8),
+        ("pad", c_uint32)
+    ]
+ 
+def spi_transfer(fd, tx_data):
+    tx_buffer = create_string_buffer(bytes(tx_data))
+    rx_buffer = create_string_buffer(len(tx_data))
+ 
+    xfer = spi_ioc_transfer(
+        tx_buf=addressof(tx_buffer),
+        rx_buf=addressof(rx_buffer),
+        len=len(tx_data),
+        delay_usecs=0,
+        speed_hz=SPI_SPEED_HZ,
+        bits_per_word=SPI_BITS_PER_WORD,
+        cs_change=0
+    )
+ 
+    fcntl.ioctl(fd, SPI_IOC_MESSAGE_1, xfer)
+ 
+    return list(rx_buffer)
+ 
+def MAX7219_write(fd, address, data):
+    spi_transfer(fd, [address, data])
+ 
+def MAX7219_init(fd):
+    MAX7219_write(fd, 0x09, 0x00)  # Decoding mode: none
+    MAX7219_write(fd, 0x0A, 0x03)  # Intensity: 3 (range 0-15)
+    MAX7219_write(fd, 0x0B, 0x07)  # Scan limit: 8 LEDs
+    MAX7219_write(fd, 0x0C, 0x01)  # Power on
+    MAX7219_write(fd, 0x0F, 0x00)  # Display test: off
+ 
+NUMBER_CODE = [
+    [0x3C, 0x42, 0x42, 0x42, 0x42, 0x42, 0x42, 0x3C],  # 0
+    [0x10, 0x30, 0x50, 0x10, 0x10, 0x10, 0x10, 0x7C],  # 1
+    [0x3E, 0x02, 0x02, 0x3E, 0x20, 0x20, 0x3E, 0x00],  # 2
+    [0x00, 0x7C, 0x04, 0x04, 0x7C, 0x04, 0x04, 0x7C],  # 3
+    [0x08, 0x18, 0x28, 0x48, 0xFE, 0x08, 0x08, 0x08],  # 4
+    [0x3C, 0x20, 0x20, 0x3C, 0x04, 0x04, 0x3C, 0x00],  # 5
+    [0x3C, 0x20, 0x20, 0x3C, 0x24, 0x24, 0x3C, 0x00],  # 6
+    [0x3E, 0x22, 0x04, 0x08, 0x08, 0x08, 0x08, 0x08],  # 7
+    [0x00, 0x3E, 0x22, 0x22, 0x3E, 0x22, 0x22, 0x3E],  # 8
+    [0x3E, 0x22, 0x22, 0x3E, 0x02, 0x02, 0x02, 0x3E]   # 9
+]
+ 
+ALPHABET_CODE = {
+    'A': [0x08, 0x14, 0x22, 0x3E, 0x22, 0x22, 0x22, 0x22],
+    'B': [0x3C, 0x22, 0x22, 0x3E, 0x22, 0x22, 0x3C, 0x00],
+    'C': [0x3C, 0x40, 0x40, 0x40, 0x40, 0x40, 0x3C, 0x00],
+    'D': [0x7C, 0x42, 0x42, 0x42, 0x42, 0x42, 0x7C, 0x00],
+    'E': [0x7C, 0x40, 0x40, 0x7C, 0x40, 0x40, 0x40, 0x7C],
+    'F': [0x7C, 0x40, 0x40, 0x7C, 0x40, 0x40, 0x40, 0x40],
+    'G': [0x3C, 0x40, 0x40, 0x40, 0x40, 0x44, 0x44, 0x3C],
+    'H': [0x44, 0x44, 0x44, 0x7C, 0x44, 0x44, 0x44, 0x44],
+    'I': [0x7C, 0x10, 0x10, 0x10, 0x10, 0x10, 0x10, 0x7C],
+    'J': [0x3C, 0x08, 0x08, 0x08, 0x08, 0x08, 0x48, 0x30],
+    'K': [0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x7C],
+    'L': [0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x7C],
+    'M': [0x00, 0x42, 0x62, 0x52, 0x4A, 0x46, 0x42, 0x00],
+    'N': [0x00, 0x42, 0x62, 0x52, 0x4A, 0x46, 0x42, 0x00],
+    'O': [0x3C, 0x42, 0x42, 0x42, 0x42, 0x42, 0x42, 0x3C],
+    'P': [0x3C, 0x42, 0x42, 0x3E, 0x02, 0x02, 0x02, 0x3E],
+    'Q': [0x3C, 0x42, 0x42, 0x42, 0x42, 0x42, 0x42, 0x3C],
+    'R': [0x08, 0x14, 0x22, 0x3E, 0x22, 0x22, 0x22, 0x22],
+    'S': [0x7C, 0x40, 0x40, 0x7C, 0x40, 0x40, 0x40, 0x7C],
+    'T': [0x7C, 0x10, 0x10, 0x10, 0x10, 0x10, 0x10, 0x7C],
+    'U': [0x3C, 0x08, 0x08, 0x08, 0x08, 0x08, 0x48, 0x30],
+    'V': [0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x7C],
+    'W': [0x00, 0x41, 0x41, 0x41, 0x49, 0x2a, 0x2a, 0x14],
+    'X': [0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x7C],
+    'Y': [0x7C, 0x40, 0x40, 0x7C, 0x40, 0x40, 0x40, 0x7C],
+    'Z': [0x7C, 0x40, 0x40, 0x7C, 0x40, 0x40, 0x40, 0x7C],
+    'Smile': [0x3c, 0x42, 0xa5, 0x81, 0xa5, 0x99, 0x42, 0x3c],
+    'dance0': [0x10, 0x28, 0x10, 0x10, 0xfe, 0x10, 0x28, 0x28],
+    'dance1': [0x10, 0x28, 0x92, 0x54, 0x38, 0x10, 0x28, 0x44],
+    'angry': [0x00, 0x00, 0xe7, 0x00, 0x00, 0x00, 0x3c, 0x00],
+    'Good': [0x30, 0x30, 0x30, 0x3c, 0x32, 0x3c, 0x32, 0x3c]
+}
+ 
+ 
+def main():
+    print('*' * 50)
+    fd = os.open('/dev/spidev3.0', os.O_RDWR)
+ 
+    fcntl.ioctl(fd, SPI_IOC_RD_BITS_PER_WORD, bytes([SPI_BITS_PER_WORD]))
+    fcntl.ioctl(fd, SPI_IOC_WR_BITS_PER_WORD, bytes([SPI_BITS_PER_WORD]))
+    fcntl.ioctl(fd, SPI_IOC_WR_MODE, bytes([SPI_MODE]))
+    fcntl.ioctl(fd, SPI_IOC_WR_MAX_SPEED_HZ, SPI_SPEED_HZ.to_bytes(4, byteorder='little'))
+ 
+    MAX7219_init(fd)
+ 
+    try:
+        while True:
+            input_str = input("Enter a number, an uppercase letter (0-9, A-Z), 'Smile', 'Dance', 'Angry', 'Good', 'Nice', 'Emotion': ")
+            if input_str.isdigit() and 0 <= int(input_str) <= 9:
+                num = int(input_str)
+                for col in range(8):
+                    MAX7219_write(fd, col + 1, NUMBER_CODE[num][col])
+                    time.sleep(0.1)
+            elif input_str.isalpha() and input_str.isupper() and len(input_str) == 1:
+                char = input_str
+                for col in range(8):
+                    MAX7219_write(fd, col + 1, ALPHABET_CODE[char][col])
+                    time.sleep(0.1)
+            elif input_str == 'Smile':
+                smile_pattern = ALPHABET_CODE['Smile']
+                for col in range(8):
+                    MAX7219_write(fd, col + 1, smile_pattern[col])
+                    time.sleep(0.1)
+            elif input_str == 'Dance': 
+                for _ in range(10):
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['dance0'][col])
+                    time.sleep(0.5)
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['dance1'][col])
+                    time.sleep(0.5)
+            elif input_str == 'Angry': 
+                angry_pattern = ALPHABET_CODE['angry']
+                for col in range(8):
+                    MAX7219_write(fd, col + 1, angry_pattern[col])
+                    time.sleep(0.1)
+            elif input_str == 'Good':
+                good_pattern = ALPHABET_CODE['Good']
+                for col in range(8):
+                    MAX7219_write(fd, col + 1, good_pattern[col])
+                    time.sleep(0.1)
+            elif input_str == 'Nice':
+                for _ in range(3):
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['N'][col])
+                    time.sleep(0.5)
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['I'][col])
+                    time.sleep(0.5)
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['C'][col])
+                    time.sleep(0.5)
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['E'][col])
+                    time.sleep(0.5)
+            elif input_str == 'Emotion':
+                for _ in range (6):
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['Smile'][col])
+                    time.sleep(0.5)
+                    for col in range(8):
+                        MAX7219_write(fd, col + 1, ALPHABET_CODE['angry'][col])
+                    time.sleep(0.5)
+            else:
+                   print("Invalid input. Please enter a number (0-9), an uppercase letter (A-Z), 'Smile', 'Dance', 'Angry', 'Good', 'Nice', 'Emotion'.")
+ 
+    except KeyboardInterrupt:
+        os.close(fd)
+    finally:
+        os.close(fd)
+ 
+if __name__ == "__main__":
+    main()
+
+```
+#### Step 4. Execution Result
+This script initializes the SPI-connected MAX7219 dot matrix display and prompts the user to input a value. Depending on the input, a specific pattern is shown on the 8x8 LED matrix.
+
+When the script runs, you will see:
+```
+Enter a number, an uppercase letter (0-9, A-Z), 'Smile', 'Dance', 'Angry', 'Good', 'Nice', 'Emotion':
+```
+Examples:
+- Entering A will display the letter A.
+- Entering Smile will show a smiley face pattern.
+- Entering Dance will trigger alternating dance animations.
+- Entering Nice will animate the letters N-I-C-E in sequence.
+
+To stop the script, press Ctrl+C.
+On termination, the SPI device is safely closed, and the LED matrix stops updating.
+
+Note: Ensure that /dev/spidev3.0 exists and the wiring matches the pin mapping table. Also, power the MAX7219 module with a stable 5V source.
+
+## 7.4 PWM
+PWM (Pulse Width Modulation) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G board supports PWM through the sysfs interface in Linux.
+
+### 7.4.1 LED Brightness Control
+This example demonstrates controlling an LED's brightness using PWM on the D3-G board.
+
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- LED (x1)
+- Male to Female Jumper Wires (x2)
+- Breadboard
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+#### Step 2. Example Circuit
+- LED
+    - (+) pin of the LED is connected to the 89 on the TOPST D3-G board.
+    - (-) pin of the LED is connected to GND on the TOPST D3-G board.
+
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure D3-G LED Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table Pin Mapping of D3-G LED</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">(+)</td>
+        <td>12</td>
+        <td>89</td>
+    </tr>
+    <tr>
+        <td colspan="3">(-)</td>
+        <td>6</td>
+        <td>GND</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+To operate the LED(PWM) connected to GPIO89 on the D3-G board, simply run the following code:
+```
+import time
+
+PWM_CHIP = "pwmchip0"
+PWM_CHANNEL = "pwm0"
+PWM_PATH = f"/sys/class/pwm/{PWM_CHIP}/{PWM_CHANNEL}"
+EXPORT_PATH = f"/sys/class/pwm/{PWM_CHIP}/export"
+UNEXPORT_PATH = f"/sys/class/pwm/{PWM_CHIP}/unexport"
+
+PERIOD = 1000000  # 1ms = 1kHz
+STEP = 10000
+SLEEP = 0.01
+
+def pwm_setup():
+    try:
+        with open(EXPORT_PATH, "w") as f:
+            f.write("0")
+    except Exception:
+        pass  # Already exported
+    time.sleep(0.1)
+
+    with open(f"{PWM_PATH}/period", "w") as f:
+        f.write(str(PERIOD))
+        f.flush()
+
+    with open(f"{PWM_PATH}/enable", "w") as f:
+        f.write("1")
+        f.flush()
+
+def pwm_cleanup():
+    try:
+        with open(f"{PWM_PATH}/enable", "w") as f:
+            f.write("0")
+            f.flush()
+        with open(UNEXPORT_PATH, "w") as f:
+            f.write("0")
+    except Exception as e:
+        print("PWM cleanup failed:", e)
+
+try:
+    pwm_setup()
+    print("Starting LED PWM control (press Ctrl+C to stop)")
+
+    while True:
+        for duty in range(0, PERIOD, STEP):
+            with open(f"{PWM_PATH}/duty_cycle", "w") as f:
+                f.write(str(min(duty, PERIOD - 1)))
+                f.flush()
+            time.sleep(SLEEP)
+
+        for duty in range(PERIOD, 0, -STEP):
+            with open(f"{PWM_PATH}/duty_cycle", "w") as f:
+                f.write(str(min(duty, PERIOD - 1)))
+                f.flush()
+            time.sleep(SLEEP)
+
+except KeyboardInterrupt:
+    print("\nStopped by user.")
+
+finally:
+    pwm_cleanup()
+    print("PWM disabled and cleaned up.")
+
+```
+#### Step 4. Execution Result
+This script initializes PWM on the LED pin and continuously fades the LED brightness up and down.
+
+Once the script is executed, you will see output like:
+```
+Starting LED PWM control (press Ctrl+C to stop)
+```
+The LED will gradually brighten and then dim repeatedly, simulating a "breathing" effect.
+
+To stop the script, press Ctrl+C.
+
+Note: Ensure the PWM channel is not already in use and that the D3-G board supports hardware PWM on the selected GPIO. If PWM does not activate, verify the export, period, and duty_cycle settings in /sys/class/pwm/.
+
+
+### 7.4.2 Mini Servo Motor
+This example demonstrates controlling an LED's brightness using PWM on the D3-G board.
+
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Servo Motor (x1)
+- Male to Female Jumper Wires (x3)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+#### Step 2. Example Circuit
+- Servo Motor
+    - VCC pin of the Servo Motor is connected to 5V on the TOPST D3-G board.
+    - GND pin of the Servo Motor is connected to GND on the TOPST D3-G board.
+    - SIG pin of the Servo Motor is connected to the 89 on the TOPST D3-G board.
+
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center"><strong>Figure D3-G Servo Motor Circuit Schematic  </strong></p>
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table Pin Mapping of D3-G Servo Motor</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>2</td>
+        <td>5V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>6</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">SIG</td>
+        <td>12</td>
+        <td>89</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+The following Python script shows how to directly control a mini servo motor using PWM through the sysfs interface on the D3-G board. This method requires no external libraries and provides fine-grained control over angle-based positioning.
+```
+import time
+import os
+
+PWM_CHIP = "pwmchip0"
+PWM_CHANNEL = "pwm0"
+PWM_PATH = f"/sys/class/pwm/{PWM_CHIP}/{PWM_CHANNEL}"
+EXPORT_PATH = f"/sys/class/pwm/{PWM_CHIP}/export"
+UNEXPORT_PATH = f"/sys/class/pwm/{PWM_CHIP}/unexport"
+
+PERIOD = 20_000_000  # 20ms (50Hz)
+
+def angle_to_duty(angle):
+    pulse_width = 1_000_000 + (angle / 180) * _000_000
+    return int(pulse_width)
+
+def pwm_setup():
+    if not os.path.exists(PWM_PATH):
+        with open(EXPORT_PATH, "w") as f:
+            f.write("0")
+        time.sleep(0.1)
+    with open(f"{PWM_PATH}/period", "w") as f:
+        f.write(str(PERIOD))
+    with open(f"{PWM_PATH}/enable", "w") as f:
+        f.write("1")
+
+def pwm_set_angle(angle):
+    duty = angle_to_duty(angle)
+    with open(f"{PWM_PATH}/duty_cycle", "w") as f:
+        f.write(str(duty))
+
+def pwm_cleanup():
+    try:
+        with open(f"{PWM_PATH}/enable", "w") as f:
+            f.write("0")
+        with open(UNEXPORT_PATH, "w") as f:
+            f.write("0")
+    except Exception as e:
+        print("PWM cleanup failed:", e)
+
+if __name__ == "__main__":
+    pwm_setup()
+
+    try:
+        while True:
+            user_input = input("Enter 1 (CW) or 0 (CCW), q to quit: ").strip()
+            if user_input == 'q':
+                break
+            elif user_input == '1':
+                pwm_set_angle(180)  
+                time.sleep(0.5)
+            elif user_input == '0':
+                pwm_set_angle(0)   
+                time.sleep(0.5)
+            else:
+                print("Invalid input. Use 0, 1, or q.")
+    except KeyboardInterrupt:
+        print("\nInterrupted by user.")
+    finally:
+        pwm_cleanup()
+        print("PWM cleaned up.")
+```
+#### Step 4. Execution Result
+This script uses PWM to control a mini servo motor by adjusting the duty cycle based on the target angle.
+Once executed, you will be prompted with:
+```
+Enter 1 (CW) or 0 (CCW), q to quit:
+```
+Entering 1 will rotate the servo clockwise to 180°, and entering 0 will rotate it counter-clockwise to 0°. You can repeat this as many times as needed.
+
+To stop the script, enter q or press Ctrl+C. The script will then disable and unexport the PWM channel.
+
+⚠️ Note: Ensure your servo motor supports a 50Hz PWM signal and operates within the 1ms–2ms duty pulse range for safe operation.
