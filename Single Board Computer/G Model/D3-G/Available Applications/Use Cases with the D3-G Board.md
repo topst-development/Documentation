@@ -498,19 +498,44 @@ The D3-G board supports digital input and output (GPIO) through its 40-pin heade
 <br/>
 
 ### 7.1.1 LED
-An LED can be tested using the board's GPIO pins.  
-The following steps demonstrate how to verify GPIO output functionality.
+One of the simplest and most common GPIO output examples is controlling an LED.  
+To demonstrate digital output, an LED can be connected to one of the GPIO pins on the 40 pin header. In this example, the LED's cathode (short leg) is connected to the GND pin on the D3-G board, while the anode (long leg) is directly connected to GPIO89.
 
-#### Step1. LED Experiment Circuit
-The basic LED example uses GPIO pin 89.  
-Please refer to the figure below to wire the circuit correctly.
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Breadboard (x1)
+- LED (x1)
+- male to female jumper wire (x2)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+#### Step 2. Example Circuit
+- LED
+    - (+) pin connected to pin 12 on the TOPST D3-G board.
+    - (-) pin connected to pin 14 which acts as GND on the TOPST D3-G board.  
 
 <p align="center"><img src="" width="500"></p>
-<p align="center"><strong>Figure LED Basic Example Circuit </strong></p> 
+<p align="center"><strong>Figure D3-G GPIO LED Circuit Schematic </strong></p> 
 <br/>
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
 
-#### Step2. Example Code
-The Python script used in this example is shown below.
+<p align="center"><strong>Table 2.1 Pin Mapping of AI-G LED</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">LED (+) pin</td>
+        <td>12</td>
+        <td>89</td>
+    </tr>
+</table>
+
+#### Step3. How to execute
+To operate the LED connected to GPIO89 on the D3-G board, simply run the following code:
 
 ```
 import time
@@ -600,40 +625,74 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+#### Step 4. Execution Result
+This script configures GPIO89 as a digital output and toggles its state every 1 second.
+When executed, the LED connected to GPIO89 will blink 10 times—turning on for 1 second and then off for 1 second repeatedly. After 10 cycles, the script will exit and automatically unexport the GPIO.
 
+To stop the script early, press Ctrl+C.
+In either case, the pin will be properly released and cleaned up.
+
+Run the code with the following command.
+
+```
+$ python3 led_test.py
+```
+NOTE: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (e.g., 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
 <br/>
 
-
-#### Step3. Expected Output and Considerations
-The LED will blink for 10 seconds and the program will exit automatically.
 
 <br/>
 
 ### 7.1.2 Button
-A push-button can be used to test digital input functionality using the board's GPIO pins.
-The following steps demonstrate how to detect button presses through GPIO input.
+A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
+In this example, one side of the button is connected to a 3.3V power pin on the D3-G board, while the other side is connected to GPIO88. When the button is pressed, GPIO88 reads a HIGH signal 1.
+
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Breadboard (x1)
+- Button (x1)
+- male to female jumper wire (x2)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 <br/>
 
-### Step1. Button Experiment Circuit
-This example uses GPIO pin 88 to detect button input.  
-Connect one side of the button to GPIO88, and the other side to GND.  
-The circuit follows a pull-down resistor configuration to ensure a stable low signal when the button is not pressed.  
-Please refer to the figure below to wire the circuit correctly.
-
+#### Step 2. Example Circuit
+Button switch
+- One leg of the button switch is connected to pin 10 on the TOPST D3-G board.
+- The opposite leg above the button is connected to the 3.3V pin.
 <br/>
 
 <p align="center"><img src="" width="500"></p> 
-<p align="center"><strong>Figure Button Basic Example Circuit</strong></p>
+<p align="center"><strong>Figure D3-G GPIO Button Circuit Schematic</strong></p>
 <br/>
 
-### Step2. Example Code
-The Python script used in this example is shown below.
+##### Step2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Button</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">One leg pin of button</td>
+        <td>10</td>
+        <td>88</td>
+    </tr>
+</table>
+
+#### Step 3. How to excute
+
+To monitor the button input connected to GPIO88 on the D3-G board, simply run the following code:
 
 ```
-import time
 import os
-  
-def export_gpio(pin, direction: str):
+import time # GPIO pin numbers setting
+BUTTON_PIN = 88  # button sensor GPIO pin
+ 
+def export_gpio(pin: int, direction: str):
     # If the pin is already active, unexport it.
     if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
         with open("/sys/class/gpio/unexport", "w") as f:
@@ -660,59 +719,51 @@ def write_gpio_value(pin: int, value: int):
 def unexport_gpio(pin: int):
     with open("/sys/class/gpio/unexport", "w") as f:
         f.write(str(pin))
-  
 def main():
-    print("""\
-                        +--------+
-                    3P3-|-1    2-|-5P0
-       I2C_SDA / GPIO82-|-3    4-|-5P0
-       I2C_SCL / GPIO81-|-5    6-|-GND
-                 GPIO83-|-7    8-|-GPIO87 / UT_TXD
-                    GND-|-9   10-|-GPIO88 / UT_RXD
-                 GPIO84-|-11  12-|-GPIO89 / PWM 0
-                 GPIO85-|-13  14-|-GND
-                 GPIO86-|-15  16-|-GPIO90
-                    3P3-|-17  18-|-GPIO65
-     SPIO_MOSI / GPIO63-|-19  20-|-GND
-     SPIO_MISO / GPIO64-|-21  22-|-GPIO66
-     SPIO_SCLK / GPIO61-|-23  24-|-GPIO62 / SPIO_CS0
-                    GND-|-25  26-|-GPIO67 / SPIO_CS1
-              RESERVED0-|-27  28-|-RESERVED1
-                GPIO112-|-29  30-|-GND
-                GPIO113-|-31  32-|-GPIO115 / PWM 2
-         PWM1 / GPIO114-|-33  34-|-GND
-    SPI1_MISO / GPIO121-|-35  36-|-GPIO119 / SPI1_CS0
-                GPIO117-|-37  38-|-GPIO120 / SPI1_MOSI
-                    GND-|-39  40-|-GPIO118 / SPI1_SCLK
-                        +--------+""")
-  
-  
-    BUTTON_PIN = 88  # Button connected to GPIO 88
-    try:
-        export_gpio(BUTTON_PIN, direction="in")
-        print("Waiting for button press (CTRL+C to exit)...")
+    # initialize GPIO pins
+    export_gpio(BUTTON_PIN, "in")  # IR sensor pin direction "in"
+    print("gpio pins initialized.")
  
+    try:
         while True:
-            if read_gpio_value(BUTTON_PIN):
-                print("Button Pressed")
-            else:
-                print("Button Released")
-            time.sleep(0.5)
+            # button sensor value read
+            # If the sensor value is 0, it means an button pressed.
+            # If the sensor value is 1, it means no button released.
+            sensor_value = read_gpio_value(BUTTON_PIN)
+ 
+            if sensor_value == "0":  
+                print("button pressed.")
+            else:    
+                print("button released.")
+ 
+            time.sleep(0.5)  # 500ms delay
+
     except KeyboardInterrupt:
         print("program interrupted by user.")
+ 
     finally:
-        unexport_gpio(BUTTON_PIN)
+        unexport_gpio(BUTTON_PIN)  # unexport the GPIO pin
         print("GPIO pins unexported.")
         print("program terminated.")
-  
+         
 if __name__ == "__main__":
     main()
 ```
 <br/>
 
-### Step3. Expected Output and Considerations
-The console will continuously display the button state ("Pressed" or "Released") every 0.5 seconds.
+#### Step 4. Execution Result
+This script configures GPIO88 as a digital input and continuously monitors its value in real time.
+When executed, pressing the button connected to GPIO88 will print a message indicating that the button has been pressed.
 
+To stop the script, press 'Ctrl+C'.
+When the script is terminated, GPIO88 will be automatically unexported and cleand up.
+
+Run the code with the following command.
+```
+$ python3 test_button.py
+```
+Note: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
+Be sure to refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 <br/>
 
 ### 7.1.3 Touch Sensor
@@ -720,41 +771,329 @@ A touch sensor can be used to detect human touch as a digital input signal via G
 This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G board.
 <br/>
 
-#### Step 1. Experiment Circuit
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Breadboard (x1)
+- Touch sensor (x1)
+- male to female jumper wire (x3)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 <br/>
 
-#### Step 2. Example Code
+#### Step 2. Example Circuit
+- Touch sensor
+    - SIG pin of the touch sensor is connected to pin 88 on the TOPST D3-G board.
+    - VCC pin of the touch sensor is connected to the 3.3V on the TOPST D3-G board.
+    - GND pin of the touch sensor is connected to GND on the TOPST D3-G board.
 <br/>
 
-#### Step 3. Expected Output and Considerations
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure D3-G GPIO Button Circuit Schematic</strong></p>
+<br/>
+
+##### Step2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Touch sensor</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">SIG</td>
+        <td>10</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>1</td>
+        <td>3.3</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+To monitor the touch sensor connected to GPIO88 on the D3-G board, simply run the following code:
+```
+import os
+import time
+ 
+# GPIO pin numbers setting
+TOUCH_SENSOR_PIN = 88  # sensor GPIO pin
+ 
+def export_gpio(pin: int, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+def main():
+    # initialize GPIO pins
+    export_gpio(TOUCH_SENSOR_PIN, "in")  # ouch sensor pin direction "in"
+    print("gpio pins initialized.")
+ 
+    try:
+        while True:
+            # button sensor value read
+            # If the sensor value is 0, it means an touch detected.
+            # If the sensor value is 1, it means no touch released.
+            sensor_value = read_gpio_value(TOUCH_SENSOR_PIN)
+ 
+            if sensor_value == "1":  
+                print("touch detected.")
+            else:    
+                print("touch released.")
+ 
+            time.sleep(0.5)  # 500ms delay
+
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+ 
+    finally:
+        unexport_gpio(TOUCH_SENSOR_PIN)  # unexport the GPIO pin
+        print("GPIO pins unexported.")
+        print("program terminated.")
+         
+if __name__ == "__main__":
+    main()
+```
+<br/>
+
+#### Step 4. Execution Result
+This script configures GPIO88 as a digital input and continuously monitors its value in real time.
+When executed, touching the sensor connected to GPIO88 will print a message indicating that a touch has been detected.
+When the sensor is not touched, the terminal will indicate that the touch has been released.
+
+To stop the script, press Ctrl+C.
+When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
+
+Run the code with the following command.
+
+```
+$ python3 touch_test.py
+```
+Note: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
+Be sure to refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 <br/>
 
 ### 7.1.4 Vibration Detection Sensor
+A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal via GPIO.
+This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G board.
+#### Step 1. Hardware Requirements
 
+- TOPST D3-G board (x1)
+- Vibration Detection Sensor (x1)
+- female to female jumper wire (x4)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+Step 2. Example Circuit
+- Vibration Detection Sensor
+    - VCC pin of the Vibration Detection Sensor is connected to the 3.3V pin on the TOPST D3-G board.
+    - GND pin of the Vibration Detection Sensor is connected to the GND on the TOPST D3-G board.
+    - DIN pin of the Vibration Detection Sensor is connected to the 88 pin on the TOPST D3-G board.
+
+<br/>
+
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
+<br/>
+
+##### Step2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table Pin Mapping of D3-G Vibration Detection Sensor</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>1</td>
+        <td>3.3V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">DO</td>
+        <td>10</td>
+        <td>88</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+To monitor the vibration sensor connected to GPIO88 on the D3-G board, run the following code:
+```
+import os
+import time
+ 
+# GPIO pin numbers setting
+VIBRATION_SENSOR_PIN = 88  # VIBRATION_SENSOR sensor GPIO pin
+ 
+def export_gpio(pin: int, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+def main():
+    # initialize GPIO pins
+    export_gpio(VIBRATION_SENSOR_PIN, "in")  # vibration sensor pin direction "in"
+    print("gpio pins initialized.")
+ 
+    try:
+        while True:
+            # VIBRATION IR sensor value read
+            # If the sensor value is 0, it means an vibration is detected.
+            # If the sensor value is 1, it means no vibration is detected.
+            sensor_value = read_gpio_value(VIBRATION_SENSOR_PIN)
+ 
+            if sensor_value == "0":  # vibration detected
+                print("vibration detected.")
+            else:    # vibration undetected
+                print("vibration undetected.")
+ 
+            time.sleep(0.5)  # 500ms delay
+
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+ 
+    finally:
+        unexport_gpio(VIBRATION_SENSOR_PIN)  # unexport the GPIO pin
+        print("GPIO pins unexported.")
+        print("program terminated.")
+         
+if __name__ == "__main__":
+    main()
+```
+
+#### Step 4. Execution Result
+This script configures GPIO88 as a digital input and continuously monitors its value in real time.
+When executed, vibrations or shocks detected by the sensor will cause the terminal to print a message such as:
+```
+vibration detected.
+```
+When there is no vibration, the output will be:
+```
+vibration undetected.
+```
+To stop the script, press Ctrl+C.
+Upon termination, GPIO88 will be automatically unexported and cleaned up.
+
+Run the code with the following command.
+
+```
+$ python3 vibration_test.py
+```
+Note: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Be sure to check the D3-G pinout before choosing a GPIO number.
 <br/>
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
 This experiment explains how to use the SZH-SSBH-002 infrared sensor with the TOPST D3-G board to detect obstacles through a digital input signal.
 <br/>
 
+#### Step 1. Hardware Requirements
 
-#### Step 1. Experiment Circuit
-The SZH-SSBH-002 IR sensor can detect nearby obstacles using infrared reflection.
-Connect the sensor's output to GPIO pin 89 on the D3-G.
+- TOPST D3-G board (x1)
+- Breadboard (x1)
+- Button (x1)
+- male to female jumper wire (x3)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 
-- IR Sensor (SZH-SSBH-002):
-    - VCC → 3.3V
-    - GND → GND
-    - OUT → GPIO 89 (input)
+#### Step 2. Example Circuit
+- Infrared Sensor
+    - VCC pin of the Infrared Sensor is connected to the 3.3V pin on the TOPST D3-G board.
+    - GND pin of the Infrared Sensor is connected to the GND on the TOPST D3-G board.
+    - OUT pin of the Infrared Sensor is connected to the 89 pin on the TOPST D3-G board.
 
 
 <p align="center"><img src="" width="500"></p> 
 <p align="center"><strong>Figure IR Sensor(SZH-SSBH-002) Experiment Circuit</strong></p>
 <br/>
 
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
 
-#### Step 2. Example Code
-The following Python script reads the IR sensor value from GPIO 89 and prints the detection result:
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Dot Matrix</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>1</td>
+        <td>3.3V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">OUT</td>
+        <td>12</td>
+        <td>89</td>
+    </tr>
+</table>
+
+#### Step 3. How to execute
+To monitor the IR sensor connected to GPIO89 on the D3-G board, run the following code:
 
 ```
 import os
@@ -823,41 +1162,105 @@ if __name__ == "__main__":
 
 <br/>
 
-#### Step 3. Expected Output and Considerations
-When the IR sensor detects an object in front of it (within its detection range), the terminal will display:
+#### Step 4. Execution Result
+This script configures GPIO89 as a digital input and continuously monitors its state to detect obstacles.
+When an object is detected in front of the IR sensor, the terminal will display:
 ```
-Obstacle detected.
+obstacle detected.
+```
+When no object is detected, it will display:
+```
+obstacle undetected.
+```
+To stop the script, press Ctrl+C.
+When the script is terminated, GPIO89 will be automatically unexported and cleaned up.
 
+Run the code with the following command.
 ```
-When nothing is detected, the message will be:
-
+$ python ir_test.py
 ```
-No obstacle detected.
-```
+Note: GPIO89 is used as an example in this script.
+You may use any available GPIO pin based on the 40-pin header of the D3-G board. Be sure to consult the official pinout diagram for accurate pin selection.
 <br/>
+
 
 ### 7.1.6 Phtoregister (SZH-SSBH-011)
-This experiment demonstrates how to use the SZH-SSBH-001 photoresistor (CDS sensor) with the TOPST D3-G board to detect ambient brightness and automatically control an LED.
+This experiment demonstrates how to use the SZH-SSBH-011 photoresistor (CDS sensor) with the TOPST D3-G board to detect ambient light and automatically control an LED using GPIO.
 <br/>
 
-### Step 1. Experiment Circuit
-In this setup, we connect the SZH-SSBH-001 photoresistor module to GPIO pin 89, and an LED to GPIO pin 83.
 
-- CDS Sensor : 
-  - VCC → 3.3V
-  - GND → GND
-  - OUT → GPIO 89 (input)
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Photoresistor module SZH-SSBH-011 (x1)
+- LED (x1)
+- 220Ω resistor (x1)
+- Breadboard (x1)
+- Male to Female Jumper Wires (x4)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
 
-- LED:
-    - Anode (+) → GPIO 83 (output) via a resistor (e.g., 220Ω)
-    - Cathode (−) → GND
+#### Step 2. Example Circuit
+- Phtoregister (SZH-SSBH-011)
+    - VCC pin of the Phtoregister is connected to the 3.3V pin on the TOPST D3-G board.
+    - GND pin of the Phtoregister is connected to the GND on the TOPST D3-G board.
+    - DIN pin of the Phtoregister is connected to 89 pin on the TOPST D3-G board.
+- LED
+    - (+) pin of the LED is connected to the GND on the TOPST D3-G board.
+    - (-) pin of the LED is connected to 83 pin on the TOPST D3-G board.
+
 
 <p align="center"><img src="" width="500"></p> 
 <p align="center"><strong>Figure Photoregister(SZH-SSBH-001) Experiment Circuit</strong></p>
 <br/>
 
-### Step 2. Example Code
-The Python script used in this example is shown below.
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G </strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>1</td>
+        <td>3.3V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">OUT</td>
+        <td>12</td>
+        <td>89</td>
+    </tr>
+</table>
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G LED</strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">(+)</td>
+        <td>7</td>
+        <td>83</td>
+    </tr>
+    <tr>
+        <td colspan="3">(-)</td>
+        <td>14</td>
+        <td>GND</td>
+    </tr>
+</table>
+
+### Step 3. How to execute
+Run the following Python script to monitor brightness with the CDS sensor and control the LED accordingly:
 
 ```
 import os
@@ -931,48 +1334,324 @@ if __name__ == "__main__":
 ```
 <br/>
 
-### Step 3. Expected Output and Consideration
-When light is detected by the photoresistor module, the terminal will display: 
+### Step 4. Execution Result
+This script configures GPIO89 as an input for the photoresistor sensor and GPIO83 as an output for the LED.
+When ambient light is detected, the terminal will print:
 ```
 sensor value: 0
 brightness detected. Turning on the LED.
 ```
 and the LED turns ON.
-
-
-When light is not detected, the output will be:
+When no light is detected, it will print:
 ```
 sensor value: 1
 no brightness detected. Turning off the LED.
 ```
 and the LED turns OFF.
+To stop the script, press Ctrl+C.
+When the script is terminated, both GPIO pins will be automatically unexported and cleaned up.
 
+Run the code with the following command.
+```
+$ python3 CDS_test.py
+```
+Note: GPIO83 and GPIO89 are used in this example. You may use other available GPIOs as needed.
+Ensure that the pin mapping aligns with the official 40-pin header layout of the D3-G board.
 <br/>
 
 
 
-### 7.1.7 Air Pollution Check Sensor
+### 7.1.7 Air Pollution Detection Sensor
+This experiment demonstrates how to use a gas (air quality) sensor with the TOPST D3-G board to detect the presence of gas or air pollution levels through a digital input signal via GPIO.
 
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Air Pollution (Gas) Detection Sensor Module (x1)
+- Breadboard (x1)
+- Male to Female Jumper Wires (x3)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+#### Step 2. Example Circuit
+- Air Pollution Detection Sensor
+    - VCC pin of the Air Pollution Detection Sensor is connected to the 3.3V pin on the TOPST D3-G board.
+    - GND pin of the Air Pollution Detection Sensor is connected to the GND on the TOPST D3-G board.
+    - DO pin of the Air Pollution Detection Sensor is connected to 88 pin on the TOPST D3-G board.
+
+
+
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure Air Pollution Detection Sensor Experiment Circuit</strong></p>
+<br/>
+
+
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
+
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G </strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>1</td>
+        <td>3.3V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">OUT</td>
+        <td>10</td>
+        <td>88</td>
+    </tr>
+</table>
+
+#### Step 3. How to Execute
+Run the following Python script to monitor gas detection using the GPIO88 pin:
+
+```
+import os
+import time
+ 
+# GPIO pin numbers setting
+GAS_SENSOR_PIN = 88  # gas sensor GPIO pin
+ 
+def export_gpio(pin: int, direction: str):
+    # If the pin is already active, unexport it.
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+  
+    # Export the pin to activate it.
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+  
+    # Set the pin direction.
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
+
+def read_gpio_value(pin: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "r") as f:
+        return f.read().strip()
+
+def write_gpio_value(pin: int, value: int):
+    gpio_value_path = f"/sys/class/gpio/gpio{pin}/value"
+    with open(gpio_value_path, "w") as f:
+        f.write(str(value))
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+def main():
+    # initialize GPIO pins
+    export_gpio(GAS_SENSOR_PIN, "in")  # gas sensor pin direction "in"
+    print("gpio pins initialized.")
+ 
+    try:
+        while True:
+            # gas sensor value read
+            # If the sensor value is 0, it means an vibration is detected.
+            # If the sensor value is 1, it means no vibration is detected.
+            sensor_value = read_gpio_value(GAS_SENSOR_PIN)
+ 
+            if sensor_value == "0":  # gas detected
+                print("gas detected.")
+            else:    # gas undetected
+                print("gas undetected.")
+ 
+            time.sleep(0.5)  # 500ms delay
+
+    except KeyboardInterrupt:
+        print("program interrupted by user.")
+ 
+    finally:
+        unexport_gpio(GAS_SENSOR_PIN)  # unexport the GPIO pin
+        print("GPIO pins unexported.")
+        print("program terminated.")
+         
+if __name__ == "__main__":
+    main()
+```
+
+#### Step 4. Execution Result
+This script configures GPIO88 as a digital input and continuously monitors gas detection status.
+When the gas concentration reaches the sensor’s threshold, the terminal will display:
+```
+gas detected.
+```
+When no gas is detected, the terminal will show:
+```
+gas undetected.
+```
+To stop the script, press Ctrl+C.
+When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
+
+Run the code with the following command.
+```
+$ python3 gas_sensor_test.py
+```
+Note: GPIO88 is used here as an example. You may choose another available GPIO pin according to your wiring setup.
+Be sure to consult the official D3-G 40-pin header pinout before selecting GPIO numbers.
 <br/>
 
 ### 7.1.8 Ultrasonic Sensor
+This experiment demonstrates how to use an ultrasonic distance sensor (e.g., HC-SR04) with the TOPST D3-G board to measure the distance to an object using GPIO pins.
 
+#### Step 1. Hardware Requirements
+- TOPST D3-G board (x1)
+- Ultrasonic Sensor (x1)
+- Breadboard (x1)
+- Male to Female Jumper Wires (x4)
+- DC 5V Power Adapter (x1)
+- USB to TTL Serial Cable (x1)
+
+#### Step 2. Example Circuit
+- Ultrasonic Sensor
+    - VCC pin of the Ultrasonic Sensor is connected to the 5V pin on the TOPST D3-G board.
+    - GND pin of the Ultrasonic Sensor is connected to the GND on the TOPST D3-G board.
+    - TRIG pin of the Ultrasonic Sensor is connected to 82 pin on the TOPST D3-G board.
+    - ECHO pin of the Ultrasonic Sensor is connected to 88 pin on the TOPST D3-G board.
+
+
+<p align="center"><img src="" width="500"></p> 
+<p align="center"><strong>Figure Air Pollution Detection Sensor Experiment Circuit</strong></p>
 <br/>
 
-## 7.2 I2C
+##### Step 2.1 Pin Mapping
+The following table shows pin mapping.
 
-### 7.2.1 1602A LCD Display
-### 7.2.2 9-Axis Gyro 
-### 7.2.3 Photoregister(BH1750)
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G </strong></p>
+<table align="center">
+    <tr>
+        <th colspan="3">Pin Name</th>
+        <th>D3-G Board</th>
+        <th>GPIO</th>
+    </tr>
+    <tr>
+        <td colspan="3">VCC</td>
+        <td>2</td>
+        <td>5V</td>
+    </tr>
+    <tr>
+        <td colspan="3">GND</td>
+        <td>9</td>
+        <td>GND</td>
+    </tr>
+    <tr>
+        <td colspan="3">TRIG</td>
+        <td>3</td>
+        <td>82</td>
+    </tr>
+     <tr>
+        <td colspan="3">ECHO</td>
+        <td>10</td>
+        <td>88</td>
+    </tr>
+</table>
 
-## 7.3 SPI
-### 7.3.1 Dot Matrix
+#### Step 3. How to Execute
+Run the following Python script to measure distance using the ultrasonic sensor:
+```
+import os
+import time
 
-## 7.4 PWM
-### 7.4.1 LED
-### 7.4.2 Mini Servo Motor
+TRIG_PIN = 82  # GPIO 출력 (초음파 발생)
+ECHO_PIN = 88  # GPIO 입력 (초음파 반사 수신)
 
-# 8. JTAG Connection
+def export_gpio(pin: int, direction: str):
+    if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
+        with open("/sys/class/gpio/unexport", "w") as f:
+            f.write(str(pin))
+    with open("/sys/class/gpio/export", "w") as f:
+        f.write(str(pin))
+    with open(f"/sys/class/gpio/gpio{pin}/direction", "w") as f:
+        f.write(direction)
 
-# 9. CAN Connection
+def write_gpio_value(pin: int, value: int):
+    with open(f"/sys/class/gpio/gpio{pin}/value", "w") as f:
+        f.write(str(value))
 
+def read_gpio_value(pin: int) -> str:
+    with open(f"/sys/class/gpio/gpio{pin}/value", "r") as f:
+        return f.read().strip()
+
+def unexport_gpio(pin: int):
+    with open("/sys/class/gpio/unexport", "w") as f:
+        f.write(str(pin))
+
+def get_distance_cm():
+    # 1. TRIG LOW
+    write_gpio_value(TRIG_PIN, 0)
+    time.sleep(0.00002)  # 20μs 안정화
+
+    # 2. TRIG HIGH for 10μs
+    write_gpio_value(TRIG_PIN, 1)
+    time.sleep(0.00001)  # 10μs 펄스
+    write_gpio_value(TRIG_PIN, 0)
+
+    # 3. ECHO HIGH 감지 대기 (start time)
+    start = time.time()
+    while read_gpio_value(ECHO_PIN) == "0":
+        start = time.time()
+
+    # 4. ECHO LOW 감지 대기 (end time)
+    end = start
+    while read_gpio_value(ECHO_PIN) == "1":
+        end = time.time()
+
+    # 5. 거리 계산
+    duration = end - start
+    distance = (duration * 34300) / 2  # cm
+
+    return round(distance, 2)
+
+def main():
+    export_gpio(TRIG_PIN, "out")
+    export_gpio(ECHO_PIN, "in")
+    print("GPIO pins initialized.")
+
+    try:
+        while True:
+            distance = get_distance_cm()
+            print(f"Distance: {distance} cm")
+            time.sleep(1)
+
+    except KeyboardInterrupt:
+        print("Program interrupted by user.")
+
+    finally:
+        unexport_gpio(TRIG_PIN)
+        unexport_gpio(ECHO_PIN)
+        print("GPIO pins unexported.")
+        print("Program terminated.")
+
+if __name__ == "__main__":
+    main()
+
+```
+<br/>
+
+#### Step 4. Execution Result
+This script configures GPIO82 as a digital output to trigger the ultrasonic pulse, and GPIO88 as a digital input to receive the echo.
+When the script runs, the distance to the nearest object in front of the sensor will be printed every second, for example:
+```
+Distance: 23.45 cm
+Distance: 24.12 cm
+...
+```
+To stop the script, press Ctrl+C.
+When the script is terminated, GPIO82 and GPIO88 will be automatically unexported and cleaned up.
+
+Run the code with the following command.
+```
+$ python3 ultrasonic_sensor_test.py
+```
+Note: GPIO82 and GPIO88 are used as examples. You may modify the pins based on your wiring and available GPIOs on the D3-G board.
+Also, ensure your ECHO pin's voltage level is safe for the board (some modules output 5V and may need a voltage divider or level shifter).
