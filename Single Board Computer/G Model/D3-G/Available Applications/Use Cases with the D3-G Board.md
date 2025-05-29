@@ -774,9 +774,8 @@ This section demonstrates how to connect and read input from a basic touch senso
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
-- Breadboard (x1)
 - Touch sensor (x1)
-- male to female jumper wire (x3)
+- female to female jumper wire (x3)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 <br/>
@@ -1508,8 +1507,7 @@ This experiment demonstrates how to use an ultrasonic distance sensor (e.g., HC-
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
 - Ultrasonic Sensor (x1)
-- Breadboard (x1)
-- Male to Female Jumper Wires (x4)
+- Female to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
