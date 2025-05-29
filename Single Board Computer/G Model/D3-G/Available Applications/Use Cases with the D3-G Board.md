@@ -487,7 +487,7 @@ This header is compatible with general-purpose input/output (GPIO) operations an
 Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
-<p align="center"><strong>Figure 10. 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
+<p align="center"><strong>Figure 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
 
 **Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
 <br/>
@@ -513,8 +513,10 @@ To demonstrate digital output, an LED can be connected to one of the GPIO pins o
 - LED
     - (+) pin connected to pin 12 on the TOPST D3-G board.
     - (-) pin connected to pin 14 which acts as GND on the TOPST D3-G board.  
-
-<p align="center"><img src="" width="500"></p>
+    
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/led%20circuit.png"width="500">
+</p>
 <p align="center"><strong>Figure D3-G GPIO LED Circuit Schematic </strong></p> 
 <br/>
 
@@ -532,6 +534,11 @@ The following table shows pin mapping.
         <td colspan="3">LED (+) pin</td>
         <td>12</td>
         <td>89</td>
+    </tr>
+    <tr>
+        <td colspan="3">LED (-) pin</td>
+        <td>14</td>
+        <td>GND</td>
     </tr>
 </table>
 
@@ -627,22 +634,20 @@ if __name__ == "__main__":
     main()
 ```
 #### Step 4. Execution Result
+Run the code with the following command.
+
+```
+$ python3 led_test.py
+```
+
 This script configures GPIO89 as a digital output and toggles its state every 1 second.
 When executed, the LED connected to GPIO89 will blink 10 times—turning on for 1 second and then off for 1 second repeatedly. After 10 cycles, the script will exit and automatically unexport the GPIO.
 
 To stop the script early, press Ctrl+C.
 In either case, the pin will be properly released and cleaned up.
 
-Run the code with the following command.
-
-```
-$ python3 led_test.py
-```
 NOTE: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (e.g., 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
-<br/>
-
-
-<br/>
+<br/><br/>
 
 ### 7.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
@@ -663,7 +668,9 @@ Button switch
 - The opposite leg above the button is connected to the 3.3V pin.
 <br/>
 
-<p align="center"><img src="" width="500"></p> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/button_circuit.png"width="500">
+</p> 
 <p align="center"><strong>Figure D3-G GPIO Button Circuit Schematic</strong></p>
 <br/>
 
@@ -753,16 +760,16 @@ if __name__ == "__main__":
 <br/>
 
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 test_button.py
+```
 This script configures GPIO88 as a digital input and continuously monitors its value in real time.
 When executed, pressing the button connected to GPIO88 will print a message indicating that the button has been pressed.
 
 To stop the script, press 'Ctrl+C'.
 When the script is terminated, GPIO88 will be automatically unexported and cleand up.
 
-Run the code with the following command.
-```
-$ python3 test_button.py
-```
 Note: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
 Be sure to refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 <br/>
@@ -774,7 +781,7 @@ This section demonstrates how to connect and read input from a basic touch senso
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
-- Touch sensor (x1)
+- Touch Sensor (x1)
 - female to female jumper wire (x3)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
@@ -787,14 +794,16 @@ This section demonstrates how to connect and read input from a basic touch senso
     - GND pin of the touch sensor is connected to GND on the TOPST D3-G board.
 <br/>
 
-<p align="center"><img src="" width="500"></p> 
-<p align="center"><strong>Figure D3-G GPIO Button Circuit Schematic</strong></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/touch%20circuit.png"width="500">
+</p> 
+<p align="center"><strong>Figure D3-G GPIO Touch Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Touch sensor</strong></p>
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Touch Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
