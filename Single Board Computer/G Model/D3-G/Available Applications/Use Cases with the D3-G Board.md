@@ -1,7 +1,6 @@
 # 1. Introduction 
-This document provides usage examples using the TOPST D3-G.
-
-This document includes information on the following: 
+This document provides usage examples using the TOPST D3-G.   
+This document includes information on the following:
 - Input Device
   - Keyboard 
   - Mouse
@@ -257,7 +256,7 @@ $ sudo mount /dev/mmcblk1p1 /mnt
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="300"></p>
 <p align="center"><strong>Figure D3-G NVME M.2 SSD connection  </strong></p>
 
-#### Step 2. Boot the AI-G Board
+#### Step 2. Boot the D3-G Board
 After executing the reboot command, observe the boot log to verify that the PCIe device is recognized by the system.
 Look for messages such as telechips-pcie: Link up, which indicate that the PCIe link has been successfully established.
 
@@ -896,6 +895,12 @@ if __name__ == "__main__":
 <br/>
 
 #### Step 4. Execution Result
+Run the code with the following command.
+
+```
+$ python3 touch_test.py
+```
+
 This script configures GPIO88 as a digital input and continuously monitors its value in real time.
 When executed, touching the sensor connected to GPIO88 will print a message indicating that a touch has been detected.
 When the sensor is not touched, the terminal will indicate that the touch has been released.
@@ -903,11 +908,6 @@ When the sensor is not touched, the terminal will indicate that the touch has be
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
 
-Run the code with the following command.
-
-```
-$ python3 touch_test.py
-```
 Note: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
 Be sure to refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 <br/>
@@ -931,7 +931,9 @@ This section demonstrates how to connect and detect input from a basic vibration
 
 <br/>
 
-<p align="center"><img src="" width="500"></p> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/vibr%20circuit.png"width="500">
+</p>  
 <p align="center"><strong>Figure D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
 <br/>
 
@@ -1030,6 +1032,12 @@ if __name__ == "__main__":
 ```
 
 #### Step 4. Execution Result
+Run the code with the following command.
+
+```
+$ python3 vibration_test.py
+```
+
 This script configures GPIO88 as a digital input and continuously monitors its value in real time.
 When executed, vibrations or shocks detected by the sensor will cause the terminal to print a message such as:
 ```
@@ -1042,11 +1050,6 @@ vibration undetected.
 To stop the script, press Ctrl+C.
 Upon termination, GPIO88 will be automatically unexported and cleaned up.
 
-Run the code with the following command.
-
-```
-$ python3 vibration_test.py
-```
 Note: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Be sure to check the D3-G pinout before choosing a GPIO number.
 <br/>
 
@@ -1070,14 +1073,16 @@ This experiment explains how to use the SZH-SSBH-002 infrared sensor with the TO
     - OUT pin of the Infrared Sensor is connected to the 89 pin on the TOPST D3-G board.
 
 
-<p align="center"><img src="" width="500"></p> 
-<p align="center"><strong>Figure IR Sensor(SZH-SSBH-002) Experiment Circuit</strong></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-002_circuit.png"width="500">
+</p> 
+<p align="center"><strong>Figure IR Sensor Experiment Circuit</strong></p>
 <br/>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Dot Matrix</strong></p>
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G IR Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1172,6 +1177,10 @@ if __name__ == "__main__":
 <br/>
 
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python ir_test.py
+```
 This script configures GPIO89 as a digital input and continuously monitors its state to detect obstacles.
 When an object is detected in front of the IR sensor, the terminal will display:
 ```
@@ -1184,10 +1193,6 @@ obstacle undetected.
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO89 will be automatically unexported and cleaned up.
 
-Run the code with the following command.
-```
-$ python ir_test.py
-```
 Note: GPIO89 is used as an example in this script.
 You may use any available GPIO pin based on the 40-pin header of the D3-G board. Be sure to consult the official pinout diagram for accurate pin selection.
 <br/>
@@ -1218,15 +1223,17 @@ This experiment demonstrates how to use the SZH-SSBH-011 photoresistor (CDS sens
     - (-) pin of the LED is connected to 83 pin on the TOPST D3-G board.
 
 
-<p align="center"><img src="" width="500"></p> 
-<p align="center"><strong>Figure Photoregister(SZH-SSBH-001) Experiment Circuit</strong></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-011_circuit.png"width="500">
+</p> 
+<p align="center"><strong>Figure Photoregister Experiment Circuit</strong></p>
 <br/>
 
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G </strong></p>
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Photoregister</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1344,6 +1351,10 @@ if __name__ == "__main__":
 <br/>
 
 ### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 CDS_test.py
+```
 This script configures GPIO89 as an input for the photoresistor sensor and GPIO83 as an output for the LED.
 When ambient light is detected, the terminal will print:
 ```
@@ -1360,10 +1371,6 @@ and the LED turns OFF.
 To stop the script, press Ctrl+C.
 When the script is terminated, both GPIO pins will be automatically unexported and cleaned up.
 
-Run the code with the following command.
-```
-$ python3 CDS_test.py
-```
 Note: GPIO83 and GPIO89 are used in this example. You may use other available GPIOs as needed.
 Ensure that the pin mapping aligns with the official 40-pin header layout of the D3-G board.
 <br/>
@@ -1389,7 +1396,9 @@ This experiment demonstrates how to use a gas (air quality) sensor with the TOPS
 
 
 
-<p align="center"><img src="" width="500"></p> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/gas%20circuit.png"width="500">
+</p> 
 <p align="center"><strong>Figure Air Pollution Detection Sensor Experiment Circuit</strong></p>
 <br/>
 
@@ -1490,6 +1499,10 @@ if __name__ == "__main__":
 ```
 
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 gas_sensor_test.py
+```
 This script configures GPIO88 as a digital input and continuously monitors gas detection status.
 When the gas concentration reaches the sensor’s threshold, the terminal will display:
 ```
@@ -1502,10 +1515,6 @@ gas undetected.
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
 
-Run the code with the following command.
-```
-$ python3 gas_sensor_test.py
-```
 Note: GPIO88 is used here as an example. You may choose another available GPIO pin according to your wiring setup.
 Be sure to consult the official D3-G 40-pin header pinout before selecting GPIO numbers.
 <br/>
@@ -1528,14 +1537,16 @@ This experiment demonstrates how to use an ultrasonic distance sensor (e.g., HC-
     - ECHO pin of the Ultrasonic Sensor is connected to 88 pin on the TOPST D3-G board.
 
 
-<p align="center"><img src="" width="500"></p> 
-<p align="center"><strong>Figure Air Pollution Detection Sensor Experiment Circuit</strong></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"width="500">
+</p> 
+<p align="center"><strong>Figure Ultrasonic Sensor Experiment Circuit</strong></p>
 <br/>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G </strong></p>
+<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Ultrasonic Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1570,8 +1581,8 @@ Run the following Python script to measure distance using the ultrasonic sensor:
 import os
 import time
 
-TRIG_PIN = 82  # GPIO 출력 (초음파 발생)
-ECHO_PIN = 88  # GPIO 입력 (초음파 반사 수신)
+TRIG_PIN = 82  
+ECHO_PIN = 88  
 
 def export_gpio(pin: int, direction: str):
     if os.path.exists(f"/sys/class/gpio/gpio{pin}"):
@@ -1595,29 +1606,20 @@ def unexport_gpio(pin: int):
         f.write(str(pin))
 
 def get_distance_cm():
-    # 1. TRIG LOW
     write_gpio_value(TRIG_PIN, 0)
-    time.sleep(0.00002)  # 20μs 안정화
-
-    # 2. TRIG HIGH for 10μs
+    time.sleep(0.00002)  
     write_gpio_value(TRIG_PIN, 1)
-    time.sleep(0.00001)  # 10μs 펄스
+    time.sleep(0.00001)  
     write_gpio_value(TRIG_PIN, 0)
 
-    # 3. ECHO HIGH 감지 대기 (start time)
     start = time.time()
     while read_gpio_value(ECHO_PIN) == "0":
         start = time.time()
-
-    # 4. ECHO LOW 감지 대기 (end time)
     end = start
     while read_gpio_value(ECHO_PIN) == "1":
         end = time.time()
-
-    # 5. 거리 계산
     duration = end - start
     distance = (duration * 34300) / 2  # cm
-
     return round(distance, 2)
 
 def main():
@@ -1647,6 +1649,10 @@ if __name__ == "__main__":
 <br/>
 
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 ultrasonic_sensor_test.py
+```
 This script configures GPIO82 as a digital output to trigger the ultrasonic pulse, and GPIO88 as a digital input to receive the echo.
 When the script runs, the distance to the nearest object in front of the sensor will be printed every second, for example:
 ```
@@ -1657,10 +1663,6 @@ Distance: 24.12 cm
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO82 and GPIO88 will be automatically unexported and cleaned up.
 
-Run the code with the following command.
-```
-$ python3 ultrasonic_sensor_test.py
-```
 Note: GPIO82 and GPIO88 are used as examples. You may modify the pins based on your wiring and available GPIOs on the D3-G board.
 Also, ensure your ECHO pin's voltage level is safe for the board (some modules output 5V and may need a voltage divider or level shifter).
 
@@ -1690,7 +1692,9 @@ Make sure the LCD module has an I2C backpack
     - SDA pin of the I2C LCD Module is connected to the 82 pin on the TOPST D3-G board.
     - SCL pin of the I2C LCD Module is connected to the 81 pin on the TOPST D3-G board.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/lcd_circuit.png"width="600">
+</p> 
 <p align="center"><strong>Figure D3-G I2C LCD Module Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
@@ -1761,6 +1765,10 @@ if __name__ == "__main__":
 ```
 
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 lcd_test.py
+```
 This script initializes an I2C-based 1602A LCD using the RPLCD library and displays user-entered text on the screen.
 When you run the script, you’ll be prompted to enter a string. That text will be shown on the LCD for 4 seconds and then cleared. For example:
 ```
@@ -1805,7 +1813,9 @@ Make sure the LCD module has an I2C backpack
     - CS pin of the Dot Matrix is connected to the 119 pin on the TOPST D3-G board.
     - CLK pin of the Dot Matrix is connected to the 118 pin on the TOPST D3-G board.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/dot%20circuit.png"width="600">
+</p> 
 <p align="center"><strong>Figure D3-G Dot Matrix Module Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
@@ -2036,6 +2046,10 @@ if __name__ == "__main__":
 
 ```
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 dot_matrix_test.py
+```
 This script initializes the SPI-connected MAX7219 dot matrix display and prompts the user to input a value. Depending on the input, a specific pattern is shown on the 8x8 LED matrix.
 
 When the script runs, you will see:
@@ -2073,7 +2087,9 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G 
     - (-) pin of the LED is connected to GND on the TOPST D3-G board.
 
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/led%20circuit.png"width="500">
+</p> 
 <p align="center"><strong>Figure D3-G LED Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
@@ -2165,6 +2181,10 @@ finally:
 
 ```
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 led_pwm.py
+```
 This script initializes PWM on the LED pin and continuously fades the LED brightness up and down.
 
 Once the script is executed, you will see output like:
@@ -2195,7 +2215,9 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G 
     - SIG pin of the Servo Motor is connected to the 89 on the TOPST D3-G board.
 
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/3.3.1%20AI-G%20SPI%20Dot Matrix%20Circuit%20Schematic.png" width="600"></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/motor_circuit.png"width="500">
+</p> 
 <p align="center"><strong>Figure D3-G Servo Motor Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
@@ -2290,6 +2312,10 @@ if __name__ == "__main__":
         print("PWM cleaned up.")
 ```
 #### Step 4. Execution Result
+Run the code with the following command.
+```
+$ python3 motor_test.py
+```
 This script uses PWM to control a mini servo motor by adjusting the duty cycle based on the target angle.
 Once executed, you will be prompted with:
 ```
