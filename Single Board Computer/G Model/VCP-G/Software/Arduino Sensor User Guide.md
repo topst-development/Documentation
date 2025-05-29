@@ -779,6 +779,45 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
+**Note:** If you want to use the SPI pin in the center of the VCP-G board, you can use it by referring to the pin number below.
+<table align="center">
+    <tr>
+        <th colspan="3">Pin num</th>
+        <th>SPI function</th>
+        <th>Arduino IDE</th>
+    </tr>
+    <tr>
+        <td colspan="3">1</td>
+        <td>MISO</td>
+        <td>58</td>
+    </tr>
+    <tr>
+        <td colspan="3">2</td>
+        <td>5V</td>
+        <td>-</td>
+    </tr>
+        <tr>
+        <td colspan="3">3</td>
+        <td>SCK</td>
+        <td>59</td>
+    </tr>
+    <tr>
+        <td colspan="3">4</td>
+        <td>MOSI</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td colspan="3">5</td>
+        <td>CMD</td>
+        <td>61</td>
+    </tr>
+    <tr>
+        <td colspan="3">6</td>
+        <td>GND</td>
+        <td>-</td>
+    </tr>
+</table>
+ 
 </br>
 
 # 5. VCP-G I2C
