@@ -1273,6 +1273,8 @@ The following table shows pin mapping.
         <td>89</td>
     </tr>
 </table>
+<br/>
+
 <p align="center"><strong>Table 7 Pin Mapping of D3-G LED</strong></p>
 <table align="center">
     <tr>
