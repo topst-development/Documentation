@@ -250,11 +250,12 @@ $ sudo mount /dev/mmcblk1p1 /mnt
 #### Step 1. Connect the PCIe to SATA Module
 
 ## 5.4 NVME M.2 SSD
+The D3-G board supports M.2 SSD storage devices through its PCIe slot.
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G board’s PCIe slot. 
 <br/>
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="300"></p>
-<p align="center"><strong>Figure D3-G NVME M.2 SSD connection  </strong></p>
+<p align="center"><strong>Figure 10. D3-G NVME M.2 SSD connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
 After executing the reboot command, observe the boot log to verify that the PCIe device is recognized by the system.
@@ -387,7 +388,7 @@ sudo systemctl restart systemd-networkd
 ```
 ### 6.1.3 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/router%20connection.png"></p>
-<strong>Network Connection Via Router</strong></p>
+<p align="center"><strong>Figure 11. Network Connection Via Router</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
 
@@ -409,19 +410,19 @@ Control Panel → Network and Internet → Network Connectivity → Set Ethernet
 1. Locate the network adapter connected to the internet (e.g., Wi-Fi), right-click on it, and select Properties.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="600"></p>
-<p align="center"><strong>Select properties</strong></p>
+<p align="center"><strong>Figure 12. Select properties</strong></p>
  
 2. Select sharing tab.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="400"></p>
-<p align="center"><strong>Select sharing tab</strong></p>
+<p align="center"><strong>Figure 13. Select sharing tab</strong></p>
 
 3. Check the box labeled "Allow other network users to connect through this computer’s Internet connection".
  
-4. In the Home networking connection dropdown menu, select the Ethernet adapter that the AI-G board will connect to (e.g., "Ethernet").
+4. In the Home networking connection dropdown menu, select the Ethernet adapter that the D3-G board will connect to (e.g., "Ethernet").
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet3.png" width="400"></p>
-<p align="center"><strong>Select Ethernet adapter</strong></p>
+<p align="center"><strong>Figure 14. Select Ethernet adapter</strong></p>
  
 5. Click OK to save the settings.
 
@@ -460,7 +461,7 @@ sudo systemctl restart systemd-networkd
  
 ### 6.2.4 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/host%20pc%20ethernet%20connection.png"></p>
-<p align="center"><strong> Nework Sharing with the Host PC</strong></p>
+<p align="center"><strong>Figure 15. Nework Sharing with the Host PC</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
 
@@ -486,10 +487,11 @@ This header is compatible with general-purpose input/output (GPIO) operations an
 Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
-<p align="center"><strong>Figure 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
+<p align="center"><strong>Figure 16. 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
+<br/>
 
 **Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
-<br/>
+<br/><br/>
 
 ## 7.1 GPIO Digital In/Out
 
@@ -498,7 +500,7 @@ The D3-G board supports digital input and output (GPIO) through its 40-pin heade
 
 ### 7.1.1 LED
 One of the simplest and most common GPIO output examples is controlling an LED.  
-To demonstrate digital output, an LED can be connected to one of the GPIO pins on the 40 pin header. In this example, the LED's cathode (short leg) is connected to the GND pin on the D3-G board, while the anode (long leg) is directly connected to GPIO89.
+This section demonstrates how to connect and use from led sensor using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -513,16 +515,15 @@ To demonstrate digital output, an LED can be connected to one of the GPIO pins o
     - (+) pin connected to pin 12 on the TOPST D3-G board.
     - (-) pin connected to pin 14 which acts as GND on the TOPST D3-G board.  
     
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/led%20circuit.png"width="500">
-</p>
-<p align="center"><strong>Figure D3-G GPIO LED Circuit Schematic </strong></p> 
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png" width="500"></p>
+
+<p align="center"><strong>Figure 17. D3-G GPIO LED Circuit Schematic </strong></p> 
 <br/>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of AI-G LED</strong></p>
+<p align="center"><strong>Table 1 Pin Mapping of D3-G LED</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -645,12 +646,12 @@ When executed, the LED connected to GPIO89 will blink 10 times—turning on for 
 To stop the script early, press Ctrl+C.
 In either case, the pin will be properly released and cleaned up.
 
-NOTE: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (e.g., 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
+**Note**: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (e.g., 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
 <br/><br/>
 
 ### 7.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
-In this example, one side of the button is connected to a 3.3V power pin on the D3-G board, while the other side is connected to GPIO88. When the button is pressed, GPIO88 reads a HIGH signal 1.
+This section demonstrates how to connect and use from a basic button module using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -667,16 +668,14 @@ Button switch
 - The opposite leg above the button is connected to the 3.3V pin.
 <br/>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/button_circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure D3-G GPIO Button Circuit Schematic</strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/button_circuit.png" width="500"></p> 
+<p align="center"><strong>Figure 18. D3-G GPIO Button Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Button</strong></p>
+<p align="center"><strong>Table 2 Pin Mapping of D3-G Button</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -769,7 +768,7 @@ When executed, pressing the button connected to GPIO88 will print a message indi
 To stop the script, press 'Ctrl+C'.
 When the script is terminated, GPIO88 will be automatically unexported and cleand up.
 
-Note: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
+**Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
 Be sure to refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 <br/>
 
@@ -793,16 +792,14 @@ This section demonstrates how to connect and read input from a basic touch senso
     - GND pin of the touch sensor is connected to GND on the TOPST D3-G board.
 <br/>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/touch%20circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure D3-G GPIO Touch Circuit Schematic</strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/touch%20circuit.png" width="500"></p>
+<p align="center"><strong>Figure 19. D3-G GPIO Touch Sensor Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Touch Sensor</strong></p>
+<p align="center"><strong>Table 3 Pin Mapping of D3-G Touch Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -821,7 +818,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>9</td>
+        <td>20</td>
         <td>GND</td>
     </tr>
 </table>
@@ -902,13 +899,19 @@ $ python3 touch_test.py
 ```
 
 This script configures GPIO88 as a digital input and continuously monitors its value in real time.
-When executed, touching the sensor connected to GPIO88 will print a message indicating that a touch has been detected.
-When the sensor is not touched, the terminal will indicate that the touch has been released.
 
+When executed, touching the sensor will cause the terminal to print a message such as:
+```
+touch detected.
+```
+When the sensor is not touched, the output will be:
+```
+touch released.
+```
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
 
-Note: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
+**Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G board based on the 40-pin header pinout.
 Be sure to refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 <br/>
 
@@ -931,16 +934,14 @@ This section demonstrates how to connect and detect input from a basic vibration
 
 <br/>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/vibr%20circuit.png"width="500">
-</p>  
-<p align="center"><strong>Figure D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/vibr%20circuit.png" width="500"></p>
+<p align="center"><strong>Figure 20.  D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table Pin Mapping of D3-G Vibration Detection Sensor</strong></p>
+<p align="center"><strong>Table 4 Pin Mapping of D3-G Vibration Detection Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -954,7 +955,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>9</td>
+        <td>20</td>
         <td>GND</td>
     </tr>
     <tr>
@@ -1050,19 +1051,20 @@ vibration undetected.
 To stop the script, press Ctrl+C.
 Upon termination, GPIO88 will be automatically unexported and cleaned up.
 
-Note: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Be sure to check the D3-G pinout before choosing a GPIO number.
+**Note**: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Be sure to check the D3-G pinout before choosing a GPIO number.
 <br/>
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
-This experiment explains how to use the SZH-SSBH-002 infrared sensor with the TOPST D3-G board to detect obstacles through a digital input signal.
+An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal via GPIO.
+This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G board.
 <br/>
 
 #### Step 1. Hardware Requirements
 
 - TOPST D3-G board (x1)
 - Breadboard (x1)
-- Button (x1)
-- male to female jumper wire (x3)
+- Infrared Sensor (x1)
+- male to female jumper wire (x5)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -1076,13 +1078,13 @@ This experiment explains how to use the SZH-SSBH-002 infrared sensor with the TO
 <p align="center">
   <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-002_circuit.png"width="500">
 </p> 
-<p align="center"><strong>Figure IR Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>Figure 21. IR Sensor Experiment Circuit</strong></p>
 <br/>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G IR Sensor</strong></p>
+<p align="center"><strong>Table 5 Pin Mapping of D3-G IR Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1096,7 +1098,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>9</td>
+        <td>6</td>
         <td>GND</td>
     </tr>
     <tr>
@@ -1193,15 +1195,16 @@ obstacle undetected.
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO89 will be automatically unexported and cleaned up.
 
-Note: GPIO89 is used as an example in this script.
+**Note**: GPIO89 is used as an example in this script.
 You may use any available GPIO pin based on the 40-pin header of the D3-G board. Be sure to consult the official pinout diagram for accurate pin selection.
 <br/>
 
 
 ### 7.1.6 Phtoregister (SZH-SSBH-011)
-This experiment demonstrates how to use the SZH-SSBH-011 photoresistor (CDS sensor) with the TOPST D3-G board to detect ambient light and automatically control an LED using GPIO.
-<br/>
+A photoregister can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold via GPIO.
+This section demonstrates how to connect and read input from the SZH-SSBH-011 photoregister sensor using the D3-G board.
 
+<br/>
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1209,7 +1212,7 @@ This experiment demonstrates how to use the SZH-SSBH-011 photoresistor (CDS sens
 - LED (x1)
 - 220Ω resistor (x1)
 - Breadboard (x1)
-- Male to Female Jumper Wires (x4)
+- Male to Female Jumper Wires (x7)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -1223,17 +1226,15 @@ This experiment demonstrates how to use the SZH-SSBH-011 photoresistor (CDS sens
     - (-) pin of the LED is connected to 83 pin on the TOPST D3-G board.
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-011_circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure Photoregister Experiment Circuit</strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/circuit.png" width="500"></p>
+<p align="center"><strong>Figure 22. Photoregister Experiment Circuit</strong></p>
 <br/>
 
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Photoregister</strong></p>
+<p align="center"><strong>Table 6 Pin Mapping of D3-G Photoregister</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1247,7 +1248,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>9</td>
+        <td>6</td>
         <td>GND</td>
     </tr>
     <tr>
@@ -1256,7 +1257,7 @@ The following table shows pin mapping.
         <td>89</td>
     </tr>
 </table>
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G LED</strong></p>
+<p align="center"><strong>Table 7 Pin Mapping of D3-G LED</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1371,14 +1372,15 @@ and the LED turns OFF.
 To stop the script, press Ctrl+C.
 When the script is terminated, both GPIO pins will be automatically unexported and cleaned up.
 
-Note: GPIO83 and GPIO89 are used in this example. You may use other available GPIOs as needed.
+**Note**: GPIO83 and GPIO89 are used in this example. You may use other available GPIOs as needed.
 Ensure that the pin mapping aligns with the official 40-pin header layout of the D3-G board.
 <br/>
 
 
 
 ### 7.1.7 Air Pollution Detection Sensor
-This experiment demonstrates how to use a gas (air quality) sensor with the TOPST D3-G board to detect the presence of gas or air pollution levels through a digital input signal via GPIO.
+An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal via GPIO.
+This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1396,17 +1398,15 @@ This experiment demonstrates how to use a gas (air quality) sensor with the TOPS
 
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/gas%20circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure Air Pollution Detection Sensor Experiment Circuit</strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/gas%20circuit.png" width="500"></p>
+<p align="center"><strong>Figure 23. Air Pollution Detection Sensor Experiment Circuit</strong></p>
 <br/>
 
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G </strong></p>
+<p align="center"><strong>Table 8 Pin Mapping of D3-G Air Pollution Detection Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1420,7 +1420,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>9</td>
+        <td>20</td>
         <td>GND</td>
     </tr>
     <tr>
@@ -1515,12 +1515,13 @@ gas undetected.
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
 
-Note: GPIO88 is used here as an example. You may choose another available GPIO pin according to your wiring setup.
+**Note**: GPIO88 is used here as an example. You may choose another available GPIO pin according to your wiring setup.
 Be sure to consult the official D3-G 40-pin header pinout before selecting GPIO numbers.
 <br/>
 
 ### 7.1.8 Ultrasonic Sensor
-This experiment demonstrates how to use an ultrasonic distance sensor (e.g., HC-SR04) with the TOPST D3-G board to measure the distance to an object using GPIO pins.
+An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal via GPIO.
+This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1537,16 +1538,14 @@ This experiment demonstrates how to use an ultrasonic distance sensor (e.g., HC-
     - ECHO pin of the Ultrasonic Sensor is connected to 88 pin on the TOPST D3-G board.
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure Ultrasonic Sensor Experiment Circuit</strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"></p>
+<p align="center"><strong>Figure 24. Ultrasonic Sensor Experiment Circuit</strong></p>
 <br/>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of D3-G Ultrasonic Sensor</strong></p>
+<p align="center"><strong>Table 9 Pin Mapping of D3-G Ultrasonic Sensor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1663,7 +1662,7 @@ Distance: 24.12 cm
 To stop the script, press Ctrl+C.
 When the script is terminated, GPIO82 and GPIO88 will be automatically unexported and cleaned up.
 
-Note: GPIO82 and GPIO88 are used as examples. You may modify the pins based on your wiring and available GPIOs on the D3-G board.
+**Note**: GPIO82 and GPIO88 are used as examples. You may modify the pins based on your wiring and available GPIOs on the D3-G board.
 Also, ensure your ECHO pin's voltage level is safe for the board (some modules output 5V and may need a voltage divider or level shifter).
 
 ## 7.2 I2C
@@ -1680,7 +1679,7 @@ On the D3-G board, the LCD's SDA and SCL lines can be connected to GPIO pins con
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
 - 1602A I2C LCD Module (x1)
-- Male to Female Jumper Wires (x4)
+- Female to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 Make sure the LCD module has an I2C backpack
@@ -1692,15 +1691,13 @@ Make sure the LCD module has an I2C backpack
     - SDA pin of the I2C LCD Module is connected to the 82 pin on the TOPST D3-G board.
     - SCL pin of the I2C LCD Module is connected to the 81 pin on the TOPST D3-G board.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/lcd_circuit.png"width="600">
-</p> 
-<p align="center"><strong>Figure D3-G I2C LCD Module Circuit Schematic  </strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/lcd%20circuit.png"></p>
+<p align="center"><strong>Figure 25. D3-G I2C LCD Module Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table Pin Mapping of D3-G I2C LCD Module</strong></p>
+<p align="center"><strong>Table 10 Pin Mapping of D3-G I2C LCD Module</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1709,7 +1706,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>9</td>
+        <td>20</td>
         <td>GND</td>
     </tr>
     <tr>
@@ -1782,7 +1779,7 @@ and then clear after 4 seconds.
 
 To stop the script, press Ctrl+C.
 
-Note : GPIO82 and GPIO81 are used for I2C by default on the D3-G board.
+**Note** : GPIO82 and GPIO81 are used for I2C by default on the D3-G board.
 Make sure the I2C address (0x27) matches your specific LCD module. Use i2cdetect -y 3 to scan I2C devices if needed.
 
 ## 7.3 SPI
@@ -1813,15 +1810,13 @@ Make sure the LCD module has an I2C backpack
     - CS pin of the Dot Matrix is connected to the 119 pin on the TOPST D3-G board.
     - CLK pin of the Dot Matrix is connected to the 118 pin on the TOPST D3-G board.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/dot%20circuit.png"width="600">
-</p> 
-<p align="center"><strong>Figure D3-G Dot Matrix Module Circuit Schematic  </strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/dot%20circuit.png"></p>
+<p align="center"><strong>Figure 26. D3-G Dot Matrix Module Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table Pin Mapping of D3-G I2C Dot Matrix</strong></p>
+<p align="center"><strong>Table 11 Pin Mapping of D3-G Dot Matrix</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -1840,18 +1835,18 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">DIN</td>
-        <td>38</td>
-        <td>120</td>
+        <td>19</td>
+        <td>63</td>
     </tr>
     <tr>
         <td colspan="3">CS</td>
-        <td>36</td>
-        <td>119</td>
+        <td>24</td>
+        <td>62</td>
     </tr>
     <tr>
         <td colspan="3">CLK</td>
-        <td>40</td>
-        <td>118</td>
+        <td>23</td>
+        <td>61</td>
     </tr>
 </table>
 
@@ -2065,7 +2060,7 @@ Examples:
 To stop the script, press Ctrl+C.
 On termination, the SPI device is safely closed, and the LED matrix stops updating.
 
-Note: Ensure that /dev/spidev3.0 exists and the wiring matches the pin mapping table. Also, power the MAX7219 module with a stable 5V source.
+**Note**: Ensure that /dev/spidev3.0 exists and the wiring matches the pin mapping table. Also, power the MAX7219 module with a stable 5V source.
 
 ## 7.4 PWM
 PWM (Pulse Width Modulation) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G board supports PWM through the sysfs interface in Linux.
@@ -2087,15 +2082,13 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G 
     - (-) pin of the LED is connected to GND on the TOPST D3-G board.
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/led%20circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure D3-G LED Circuit Schematic  </strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led%20circuit.png"></p>
+<p align="center"><strong>Figure 27. D3-G LED Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table Pin Mapping of D3-G LED</strong></p>
+<p align="center"><strong>Table 12 Pin Mapping of D3-G LED</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -2109,7 +2102,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">(-)</td>
-        <td>6</td>
+        <td>14</td>
         <td>GND</td>
     </tr>
 </table>
@@ -2195,11 +2188,12 @@ The LED will gradually brighten and then dim repeatedly, simulating a "breathing
 
 To stop the script, press Ctrl+C.
 
-Note: Ensure the PWM channel is not already in use and that the D3-G board supports hardware PWM on the selected GPIO. If PWM does not activate, verify the export, period, and duty_cycle settings in /sys/class/pwm/.
+**Note**: Ensure the PWM channel is not already in use and that the D3-G board supports hardware PWM on the selected GPIO. If PWM does not activate, verify the export, period, and duty_cycle settings in /sys/class/pwm/.
 
 
 ### 7.4.2 Mini Servo Motor
-This example demonstrates controlling an LED's brightness using PWM on the D3-G board.
+A mini servo motor can be used to control precise angular movement based on a PWM (Pulse Width Modulation) signal via GPIO.
+This section demonstrates how to connect and control a mini servo motor using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -2215,15 +2209,13 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G 
     - SIG pin of the Servo Motor is connected to the 89 on the TOPST D3-G board.
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/motor_circuit.png"width="500">
-</p> 
-<p align="center"><strong>Figure D3-G Servo Motor Circuit Schematic  </strong></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/motor_circuit.png" width="500"></p>
+<p align="center"><strong>Figure 28. D3-G Servo Motor Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table Pin Mapping of D3-G Servo Motor</strong></p>
+<p align="center"><strong>Table 13 Pin Mapping of D3-G Servo Motor</strong></p>
 <table align="center">
     <tr>
         <th colspan="3">Pin Name</th>
@@ -2237,7 +2229,7 @@ The following table shows pin mapping.
     </tr>
     <tr>
         <td colspan="3">GND</td>
-        <td>6</td>
+        <td>20</td>
         <td>GND</td>
     </tr>
     <tr>
@@ -2325,4 +2317,4 @@ Entering 1 will rotate the servo clockwise to 180°, and entering 0 will rotate 
 
 To stop the script, enter q or press Ctrl+C. The script will then disable and unexport the PWM channel.
 
-⚠️ Note: Ensure your servo motor supports a 50Hz PWM signal and operates within the 1ms–2ms duty pulse range for safe operation.
+**Note**: Ensure your servo motor supports a 50Hz PWM signal and operates within the 1ms–2ms duty pulse range for safe operation.
