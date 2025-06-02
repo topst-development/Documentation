@@ -50,33 +50,35 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs o
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 2.1 Pin Mapping of vcp4LED</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">LED01 (-) pin</td>
-        <td>47</td>
-        <td>47</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED02 (-) pin</td>
-        <td>17</td>
-        <td>17</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED03 (-) pin</td>
-        <td>50</td>
-        <td>50</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED04 (-) pin</td>
-        <td>48</td>
-        <td>48</td>
-    </tr>
-</table>
+<div align="center">	
+	<table>
+		<tr>
+			<th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LED01 (-) pin</td>
+	        <td>47</td>
+	        <td>47</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED02 (-) pin</td>
+	        <td>17</td>
+	        <td>17</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED03 (-) pin</td>
+	        <td>50</td>
+	        <td>50</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED04 (-) pin</td>
+	        <td>48</td>
+	        <td>48</td>
+	    </tr>
+	</table>
+</div>
 
 ### 2.1.3 How to execute
 1. Open the "vcp4ELD.ino"file  
@@ -170,39 +172,41 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs a
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 2.2 Pin Mapping of vcp4LED_Button</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">LED01 (-) pin</td>
-        <td>47</td>
-        <td>47</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED02 (-) pin</td>
-        <td>17</td>
-        <td>17</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED03 (-) pin</td>
-        <td>50</td>
-        <td>50</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED04 (-) pin</td>
-        <td>48</td>
-        <td>48</td>
-    </tr>
-    </tr>
-        <tr>
-        <td colspan="3">one leg pin of button</td>
-        <td>45</td>
-        <td>45</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LED01 (-) pin</td>
+	        <td>47</td>
+	        <td>47</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED02 (-) pin</td>
+	        <td>17</td>
+	        <td>17</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED03 (-) pin</td>
+	        <td>50</td>
+	        <td>50</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED04 (-) pin</td>
+	        <td>48</td>
+	        <td>48</td>
+	    </tr>
+	    </tr>
+	        <tr>
+	        <td colspan="3">one leg pin of button</td>
+	        <td>45</td>
+	        <td>45</td>
+	    </tr>
+	</table>
+</div>
 
 ### 2.1.3 How to execute
 1. Open the "vcp4ELD_Button.ino"file  
@@ -302,33 +306,35 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 3.1 Pin Mapping of AnalogInOutSerial</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">Potentiometer Center pin</td>
-        <td>A5</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">Potentiometer GND pin</td>
-        <td>43</td>
-        <td>43</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED (+) pin</td>
-        <td>3.3V</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED (-) pin</td>
-        <td>A5</td>
-        <td>A5</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Potentiometer Center pin</td>
+	        <td>A5</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">Potentiometer GND pin</td>
+	        <td>43</td>
+	        <td>43</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED (+) pin</td>
+	        <td>3.3V</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED (-) pin</td>
+	        <td>A5</td>
+	        <td>A5</td>
+	    </tr>
+	</table>
+</div>
 
 ### 3.1.3 How to execute
 1. Open the "AnalogInOutSerial.ino"file  
@@ -420,38 +426,40 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 3.2 Pin Mapping of AnalogInput</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">Potentiometer VCC pin</td>
-        <td>3.3V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Potentiometer Center pin</td>
-        <td>A5</td>
-        <td>A5</td>
-    </tr>
-        <tr>
-        <td colspan="3">Potentiometer GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED (+) pin</td>
-        <td>3.3V</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED (-) pin</td>
-        <td>5</td>
-        <td>5</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Potentiometer VCC pin</td>
+	        <td>3.3V</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Potentiometer Center pin</td>
+	        <td>A5</td>
+	        <td>A5</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">Potentiometer GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED (+) pin</td>
+	        <td>3.3V</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED (-) pin</td>
+	        <td>5</td>
+	        <td>5</td>
+	    </tr>
+	</table>
+</div>
 
 ### 3.2.3 How to execute
 1. Open the "AnalogInput.ino"file  
@@ -532,23 +540,25 @@ This example program demonstrates how the TOPST VCP board controls an LED on the
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 3.3 Pin Mapping of pwmFade</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">LED (+) pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">LED (-) pin</td>
-        <td>9</td>
-        <td>9</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LED (+) pin</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LED (-) pin</td>
+	        <td>9</td>
+	        <td>9</td>
+	    </tr>
+	</table>
+</div>
 
 ### 3.3.3 How to execute
 1. Open the "pwmFade.ino"file  
@@ -638,38 +648,40 @@ This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED 
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 4.1 Pin Mapping of vcpSPI_Dot8x8</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">8x8 Dot Matrix VCC pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">8x8 Dot Matrix GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">8x8 Dot Matrix DIN pin</td>
-        <td>11</td>
-        <td>11</td>
-    </tr>
-    <tr>
-        <td colspan="3">8x8 Dot Matrix CS pin</td>
-        <td>10</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td colspan="3">8x8 Dot Matrix CLK pin</td>
-        <td>13</td>
-        <td>13</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">8x8 Dot Matrix VCC pin</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">8x8 Dot Matrix GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">8x8 Dot Matrix DIN pin</td>
+	        <td>11</td>
+	        <td>11</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">8x8 Dot Matrix CS pin</td>
+	        <td>10</td>
+	        <td>10</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">8x8 Dot Matrix CLK pin</td>
+	        <td>13</td>
+	        <td>13</td>
+	    </tr>
+	</table>
+</div>
 
 ### 4.1.3 How to execute
 1. Open the "vcpSPI_Dot8x8.ino"file  
@@ -780,44 +792,46 @@ The following table shows pin mapping.
     ```
 
 **Note:** If you want to use the SPI pin in the center of the VCP-G board, you can use it by referring to the pin number below.
-<table align="center">
-    <tr>
-        <th colspan="3">Pin num</th>
-        <th>SPI function</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">1</td>
-        <td>MISO</td>
-        <td>58</td>
-    </tr>
-    <tr>
-        <td colspan="3">2</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">3</td>
-        <td>SCK</td>
-        <td>59</td>
-    </tr>
-    <tr>
-        <td colspan="3">4</td>
-        <td>MOSI</td>
-        <td>60</td>
-    </tr>
-    <tr>
-        <td colspan="3">5</td>
-        <td>CMD</td>
-        <td>61</td>
-    </tr>
-    <tr>
-        <td colspan="3">6</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
- 
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin num</th>
+	        <th>SPI function</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">1</td>
+	        <td>MISO</td>
+	        <td>58</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">2</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">3</td>
+	        <td>SCK</td>
+	        <td>59</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">4</td>
+	        <td>MOSI</td>
+	        <td>60</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">5</td>
+	        <td>CMD</td>
+	        <td>61</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">6</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div> 
+
 </br>
 
 # 5. VCP-G I2C
@@ -853,33 +867,35 @@ In this example, the LCD is initialized, and the backlight is enabled for clear 
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 5.1 Pin Mapping of vcpI2C_LCD1602</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">LCD1602 VCC pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-        <tr>
-        <td colspan="3">LCD1602 GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">LCD1602 SDA pin</td>
-        <td>48</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">LCD1602 SCL pin</td>
-        <td>49</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LCD1602 VCC pin</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">LCD1602 GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LCD1602 SDA pin</td>
+	        <td>48</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LCD1602 SCL pin</td>
+	        <td>49</td>
+		    <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 ### 5.1.3 How to execute
 1. Open the "vcpI2C_LCD1602.ino"file  
@@ -1068,28 +1084,30 @@ This example program demonstrates how the TOPST VCP-G board reads analog value o
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 6.1 Pin Mapping of vcpGraph</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">Potentiometer Center pin</td>
-        <td>A5</td>
-        <td>A5</td>
-    </tr>
-        <tr>
-        <td colspan="3">Potentiometer GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Potentiometer VCC pin</td>
-        <td>3.3V</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Potentiometer Center pin</td>
+	        <td>A5</td>
+	        <td>A5</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">Potentiometer GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Potentiometer VCC pin</td>
+	        <td>3.3V</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 ### 6.2.3 How to execute
 1. Open the "vcpGraph.ino"file  
@@ -1274,48 +1292,50 @@ This example demonstrates how the TOPST VCP-G board controls an IR sensor and tw
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 7.1 Pin Mapping of irSensor_LED</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">IR Sensor OUT pin </td>
-        <td>50</td>
-        <td>50</td>
-    </tr>
-        <tr>
-        <td colspan="3">IR Sensor VCC pin </td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">IR Sensor GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Red LED (+) pin</td>
-        <td>48</td>
-        <td>48</td>
-    </tr>
-    <tr>
-        <td colspan="3">Red LED (-) pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Green LED (+) pin</td>
-        <td>17</td>
-        <td>17</td>
-    </tr>
-    <tr>
-        <td colspan="3">Green LED (-) pin </td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">IR Sensor OUT pin </td>
+	        <td>50</td>
+	        <td>50</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">IR Sensor VCC pin </td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">IR Sensor GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Red LED (+) pin</td>
+	        <td>48</td>
+	        <td>48</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Red LED (-) pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Green LED (+) pin</td>
+	        <td>17</td>
+	        <td>17</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Green LED (-) pin </td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 #### 7.1.1.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "irSensor_LED.ino"  
@@ -1394,28 +1414,30 @@ Transceiver value is LOW, it indicates there is an obstacle, and the red LED tur
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 7.2 Pin Mapping of irTransceiver</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">IR Transceiver Sensor OUT pin</td>
-        <td>8</td>
-        <td>8</td>
-    </tr>
-        <tr>
-        <td colspan="3">IR Transceiver Sensor VCC pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">IR Transceiver Sensor GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">IR Transceiver Sensor OUT pin</td>
+	        <td>8</td>
+	        <td>8</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">IR Transceiver Sensor VCC pin</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">IR Transceiver Sensor GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 #### 7.1.2.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "irTransceiver.ino"  
@@ -1492,38 +1514,40 @@ This example shows how the TOPST VCP-G board reads joystick inputs and prints th
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 7.3 Pin Mapping of Joystick</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">VRx</td>
-        <td>A5</td>
-        <td>A5</td>
-    </tr>
-        <tr>
-        <td colspan="3">VRy</td>
-        <td>A4</td>
-        <td>A4</td>
-    </tr>
-    <tr>
-        <td colspan="3">SW</td>
-        <td>2</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td colspan="3">5V</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">GND</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">VRx</td>
+	        <td>A5</td>
+	        <td>A5</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">VRy</td>
+	        <td>A4</td>
+	        <td>A4</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">SW</td>
+	        <td>2</td>
+	        <td>2</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">5V</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">GND</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 ### 7.2.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "joystick.ino"  
@@ -1601,28 +1625,30 @@ This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) t
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 7.4 Pin Mapping of Gas Sensor</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">Gas Sensor A0 pin</td>
-        <td>A5</td>
-        <td>A5</td>
-    </tr>
-        <tr>
-        <td colspan="3">Gas Sensor VCC pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Gas Sensor GND pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Gas Sensor A0 pin</td>
+	        <td>A5</td>
+	        <td>A5</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">Gas Sensor VCC pin</td>
+	        <td>5V</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Gas Sensor GND pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 ### 7.3.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "GasSensor.ino"  
@@ -1698,43 +1724,45 @@ When a touch is detected, the module outputs relevant digital/analog values to t
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 7.5 Pin Mapping of Metal Touch Sensor</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">Metal Touch sensor module A0 pin</td>
-        <td>A5</td>
-        <td>A5</td>
-    </tr>
-        <tr>
-        <td colspan="3">Metal Touch sensor module G pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Metal Touch sensor module (+) pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Metal Touch sensor module D0 pin</td>
-        <td>30</td>
-        <td>30</td>
-    </tr>
-    <tr>
-        <td colspan="3">LED (+) pin</td>
-        <td>13</td>
-        <td>13</td>
-    </tr>
-    <tr>
-        <td colspan="3">LED (+) pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Metal Touch sensor module A0 pin</td>
+	        <td>A5</td>
+	        <td>A5</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">Metal Touch sensor module G pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Metal Touch sensor module (+) pin</td>
+	        <td>5V</td>
+		    <td>-</td>
+		</tr>
+	    <tr>
+	        <td colspan="3">Metal Touch sensor module D0 pin</td>
+	        <td>30</td>
+	        <td>30</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LED (+) pin</td>
+	        <td>13</td>
+	        <td>13</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">LED (+) pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 ### 7.4.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "vcp_touch.ino"  
@@ -1826,43 +1854,45 @@ This example demonstrates how the TOPST VCP-G board controls 4-wire stepper moto
 The following table shows pin mapping.
 
 <p align="center"><strong>Table 7.6 Pin Mapping of Motor Driver</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>VCP-G Board</th>
-        <th>Arduino IDE</th>
-    </tr>
-    <tr>
-        <td colspan="3">Motor Driver IN1 pin</td>
-        <td>8</td>
-        <td>8</td>
-    </tr>
-        <tr>
-        <td colspan="3">Motor Driver IN2 pin</td>
-        <td>9</td>
-        <td>9</td>
-    </tr>
-    <tr>
-        <td colspan="3">Motor Driver IN3 pin</td>
-        <td>10</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td colspan="3">Motor Driver IN4 pin</td>
-        <td>11</td>
-        <td>11</td>
-    </tr>
-    <tr>
-        <td colspan="3">Motor Driver (+) pin</td>
-        <td>5V</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td colspan="3">Motor Driver (-) pin</td>
-        <td>GND</td>
-        <td>-</td>
-    </tr>
-</table>
+<div align="center">
+	<table>
+	    <tr>
+	        <th colspan="3">Pin Name</th>
+	        <th>VCP-G Board</th>
+	        <th>Arduino IDE</th>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Motor Driver IN1 pin</td>
+	        <td>8</td>
+	        <td>8</td>
+	    </tr>
+	        <tr>
+	        <td colspan="3">Motor Driver IN2 pin</td>
+	        <td>9</td>
+	        <td>9</td>
+	    </tr>
+	    <tr>
+	        <td colspan="3">Motor Driver IN3 pin</td>
+	        <td>10</td>
+	        <td>10</td>
+		</tr>
+	    <tr>
+	        <td colspan="3">Motor Driver IN4 pin</td>
+		    <td>11</td>
+			<td>11</td>
+	    </tr>
+		<tr>
+			<td colspan="3">Motor Driver (+) pin</td>
+	        <td>5V</td>
+	        <td>-</td>
+		</tr>
+	    <tr>
+	        <td colspan="3">Motor Driver (-) pin</td>
+	        <td>GND</td>
+	        <td>-</td>
+	    </tr>
+	</table>
+</div>
 
 ### 7.5.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "motordriver.ino"  
