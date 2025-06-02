@@ -47,9 +47,9 @@ When you access Ubuntu, it starts in the /mnt/c/Users/[user name] directory by d
 wsl  // access ubuntu 
 ls   // check contents in your directory
 ```
-Refer to the figure 1.1 below to check the result (may vary depending on the user).
+Refer to the figure 2.1 below to check the result (may vary depending on the user).
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/1.1%20wsl%20linux.png" width="500"></p>
-<p align="center"><strong>Figure 1.1 WSL2 Screenshot </strong></p>
+<p align="center"><strong>Figure 2.1 WSL2 Screenshot </strong></p>
 
 <br/>
 
@@ -231,21 +231,21 @@ By using Yocto Project, you can simultaneously build the bootloader, kernel, and
 
 ## 3.3 Task Process of Yocto Project
 
-Figure 1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
+Figure 3.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/2.1%20yocto%20project%20task%20process.png", width="700">
 </p>
-<p align="center"><strong>Figure 1 Yocto Project Task Process</strong></p>
+<p align="center"><strong>Figure 3.1 Yocto Project Task Process</strong></p>
 
 <br/>
 
 ## 3.4 Composition of TOPST D3-G SDK
 The following are the components of the Yocto Project we have configured.
-Figure 2 shows composition of TOSPT D3-G SDK.
+Figure 3.1 shows composition of TOSPT D3-G SDK.
 
 
-**Table 1 Composition of TOPST SDK:**
+**Table 3.1 Composition of TOPST SDK:**
 <table border="1" cellspacing="0" cellpadding="5">
   <colgroup>
     <col style="width: 10%">
@@ -398,16 +398,16 @@ Caution: If you re-run ./easy-setup_d3-g.sh, be careful as the built sources wil
 ./easy-setup_d3-g.sh
 ```
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
-<p align="center"><strong>Figure 3 End User License Agreement</strong></p>
+<p align="center"><strong>Figure 3.2 End User License Agreement</strong></p>
 <br/>
 Scroll down to the bottom of the screen and read this notice. After you read this notice, press the right arrow key and [Enter].
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license2.png"></p>
-<p align="center"><strong>Figure 4 Go To 'Proceed to confirm'</strong></p>
+<p align="center"><strong>Figure 3.3 Go To 'Proceed to confirm'</strong></p>
 <br/>
 
 Then you can see the following screen. 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" ></p>
-<p align="center"><strong>Figure 5 Accept Screen </strong></p>
+<p align="center"><strong>Figure 3.4 Accept Screen </strong></p>
 <br/>
 
 The build image is created in the following path:
@@ -628,22 +628,22 @@ To use FWDN, connect the TOPST D3-G to the Host PC as follows:
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Hardware/connect%20to%20d3g%20to%20host%20pc%20using%20c%20type.png">
 </p>
-<p align="center"><strong>Figure 6 Connection to D3-G to Host PC Using USB C-Type Cable </strong></p>
+<p align="center"><strong>Figure 4.1 Connection to D3-G to Host PC Using USB C-Type Cable </strong></p>
 
 <br/>
 
 ### 4.2.1 How to install VTC Driver (Windows/Ubuntu)
-Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 3.2 and Figure 3.3.
+Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 4.2 and Figure 4.3.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Windows%20Environment.png", width="700">
 </p>
-<p align="center"><strong>Figure 7 USB Connection in Windows Environment</strong></p>
+<p align="center"><strong>Figure 4.2 USB Connection in Windows Environment</strong></p>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Linux%20System.png", width="700">
 </p>
-<p align="center"><strong>Figure 8 USB Connection in Linux Environment</strong></p>  
+<p align="center"><strong>Figure 4.3 USB Connection in Linux Environment</strong></p>  
 
 **Note**: Use the VTC Driver V5.0.0.14 or higher. To check the version, confirm the device manager in Windows environment.  
 
@@ -809,16 +809,16 @@ Perform the following steps and verify that the firmware download is successfull
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20to%20TTL%20Connection.png", width="700">
 </p>
-<p align="center"><strong>Figure 9 UART Connection with host PC</strong></p>  
+<p align="center"><strong>Figure 5.1 UART Connection with host PC</strong></p>  
 
 
-The figure 10 below shows a successful login.  
+The figure 5.2 below shows a successful login.  
 Both the username and password for login are set to **root**.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/d3-g%20login%20as%20root.png", width="700">
 </p>
-<p align="center"><strong>Figure 10 Connected Screen (ID and Password are topst)</strong></p>  
+<p align="center"><strong>Figure 5.2 Connected Screen (ID and Password are topst)</strong></p>  
 
 <br/><br/>
 

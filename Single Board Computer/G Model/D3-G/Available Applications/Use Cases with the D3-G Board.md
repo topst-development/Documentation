@@ -27,7 +27,7 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users 
 ***Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
-<p align="center"><strong>Figure 1. Connect input device to D3-G </strong></p>
+<p align="center"><strong>Figure 2.1 Connect input device to D3-G </strong></p>
 <br/><br/> 
 
 # 3. Video Output
@@ -36,7 +36,7 @@ It also supports multi-display output using a daisy chain setup, allowing connec
 
 **Note**: To use HDMI, a separate active converter adapter is required.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
-<p align="center"><strong>Figure 2. Connect Monitor to D3-G </strong></p>
+<p align="center"><strong>Figure 3.1 Connect Monitor to D3-G </strong></p>
 <br/><br/>
 
 # 4. Camera Connection
@@ -49,7 +49,7 @@ The D3-G board supports USB webcams, with resolutions up to Full HD (FHD).
 You can test the webcam by following the steps below:
 1. Connect the USB camera to a USB port on the board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
-<p align="center"><strong>Figure 3. Connect webcam to D3-G </strong></p>
+<p align="center"><strong>Figure 4.1 Connect webcam to D3-G </strong></p>
 
 2. Connect the input devices(mouse&keyboard)and monitor to D3-G.
    
@@ -132,12 +132,12 @@ Below are the specifications for the ArduCam module.
 
 You can test the Arducam by following the steps below:
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/arducam.png" width="400"></p>
-<p align="center"><strong>Figure 4. Ardu cam </strong></p>
+<p align="center"><strong>Figure 4.2 Ardu cam </strong></p>
 
-1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 5.
+1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 4.3
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/Arducam%20to%20D3G.png" width="500"></p>
-<p align="center"><strong>Figure 5. Connecting the ArduCam to the D3-G </strong></p> 
+<p align="center"><strong>Figure 4.3 Connecting the ArduCam to the D3-G </strong></p> 
 
 2. 
 
@@ -189,13 +189,13 @@ Below are the specifications for the ArduCam module.
 You can test the Arducam by following the steps below:
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam.jpg" width="400"></p>
-<p align="center"><strong>Figure 6. Raspberry pi v1 cam </strong></p>
+<p align="center"><strong>Figure 4.4. Raspberry pi v1 cam </strong></p>
 
 
-1. Connect Raspbery pi v1 cam to D3-G MIPI CSI 1 below figure 7.
+1. Connect Raspbery pi v1 cam to D3-G MIPI CSI 1 below figure 4.5
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 7. Connecting the Raspberry pi v1 cam to the D3-G </strong></p> 
+<p align="center"><strong>Figure 4.5 Connecting the Raspberry pi v1 cam to the D3-G </strong></p> 
 
 
 <br/><br/>
@@ -211,7 +211,7 @@ To connect a USB drive:
 
 1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/usb%20storage%20connection%20with%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 8. Connecting the usb storage to the D3-G </strong></p> 
+<p align="center"><strong>Figure 5.1 Connecting the usb storage to the D3-G </strong></p> 
 
 1. Once connected, the device will typically be recognized as /dev/sda1, /dev/sdb1, etc., depending on the system state.
 
@@ -230,7 +230,7 @@ To use an SD card with the board:
 
 1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 9. Connecting the SD Card to the D3-G </strong></p> 
+<p align="center"><strong>Figure 5.2 Connecting the SD Card to the D3-G </strong></p> 
 
 1. Once inserted, the system will typically recognize the SD card as /dev/mmcblk1p1 or a similar device node.
   ```
@@ -254,7 +254,7 @@ The D3-G board supports M.2 SSD storage devices through its PCIe slot.
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G board’s PCIe slot. 
 <br/>
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="300"></p>
-<p align="center"><strong>Figure 10. D3-G NVME M.2 SSD connection  </strong></p>
+<p align="center"><strong>Figure 5.4 D3-G NVME M.2 SSD connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
 After executing the reboot command, observe the boot log to verify that the PCIe device is recognized by the system.
@@ -389,7 +389,7 @@ sudo systemctl restart systemd-networkd
 ```
 ### 6.1.3 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/router%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 11. Network Connection Via Router</strong></p>
+<p align="center"><strong>Figure 6.1 Network Connection Via Router</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
 
@@ -413,19 +413,19 @@ Control Panel → Network and Internet → Network Connectivity → Set Ethernet
 1. Locate the network adapter connected to the internet (e.g., Wi-Fi), right-click on it, and select Properties.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="600"></p>
-<p align="center"><strong>Figure 12. Select properties</strong></p>
+<p align="center"><strong>Figure 6.2 Select properties</strong></p>
  
 2. Select sharing tab.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="400"></p>
-<p align="center"><strong>Figure 13. Select sharing tab</strong></p>
+<p align="center"><strong>Figure 6.3 Select sharing tab</strong></p>
 
 3. Check the box labeled "Allow other network users to connect through this computer’s Internet connection".
  
 4. In the Home networking connection dropdown menu, select the Ethernet adapter that the D3-G board will connect to (e.g., "Ethernet").
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet3.png" width="400"></p>
-<p align="center"><strong>Figure 14. Select Ethernet adapter</strong></p>
+<p align="center"><strong>Figure 6.4 Select Ethernet adapter</strong></p>
  
 5. Click OK to save the settings.
 
@@ -464,7 +464,7 @@ sudo systemctl restart systemd-networkd
  
 ### 6.2.4 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/host%20pc%20ethernet%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 15. Nework Sharing with the Host PC</strong></p>
+<p align="center"><strong>Figure 6.5 Nework Sharing with the Host PC</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
 
@@ -490,7 +490,7 @@ This header is compatible with general-purpose input/output (GPIO) operations an
 Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
-<p align="center"><strong>Figure 16. 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
+<p align="center"><strong>Figure 7.1 40 Pin GPIO Header Pinmap of D3-G </strong></p> 
 <br/>
 
 **Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
@@ -519,7 +519,7 @@ This section demonstrates how to connect and use from led sensor using the D3-G 
     
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png"></p>
 
-<p align="center"><strong>Figure 17. D3-G GPIO LED Circuit Schematic </strong></p> 
+<p align="center"><strong>Figure 7.2 D3-G GPIO LED Circuit Schematic </strong></p> 
 <br/>
 
 ##### Step 2.1 Pin Mapping
@@ -673,7 +673,7 @@ This section demonstrates how to connect and use from a basic button module usin
 <br/>
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/button_circuit.png"></p> 
-<p align="center"><strong>Figure 18. D3-G GPIO Button Circuit Schematic</strong></p>
+<p align="center"><strong>Figure 7.3 D3-G GPIO Button Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
@@ -799,7 +799,7 @@ This section demonstrates how to connect and read input from a basic touch senso
 <br/>
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/touch%20circuit.png"></p>
-<p align="center"><strong>Figure 19. D3-G GPIO Touch Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>Figure 7.4 D3-G GPIO Touch Sensor Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
@@ -945,7 +945,7 @@ This section demonstrates how to connect and detect input from a basic vibration
 <br/>
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/vibr%20circuit.png"></p>
-<p align="center"><strong>Figure 20.  D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>Figure 7.5  D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
 <br/>
 
 ##### Step2.1 Pin Mapping
@@ -1091,7 +1091,7 @@ This section demonstrates how to connect and read input from the SZH-SSBH-002 in
 <p align="center">
   <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-002_circuit.png">
 </p> 
-<p align="center"><strong>Figure 21. IR Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>Figure 7.6 IR Sensor Experiment Circuit</strong></p>
 <br/>
 
 ##### Step 2.1 Pin Mapping
@@ -1243,56 +1243,61 @@ This section demonstrates how to connect and read input from the SZH-SSBH-011 ph
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/circuit.png"></p>
-<p align="center"><strong>Figure 22. Photoregister Experiment Circuit</strong></p>
+<p align="center"><strong>Figure 7.7 Photoregister Experiment Circuit</strong></p>
 <br/>
 
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 6 Pin Mapping of D3-G Photoregister</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>D3-G Board</th>
-        <th>GPIO</th>
-    </tr>
-    <tr>
-        <td colspan="3">VCC</td>
-        <td>1</td>
-        <td>3.3V</td>
-    </tr>
-    <tr>
-        <td colspan="3">GND</td>
-        <td>6</td>
-        <td>GND</td>
-    </tr>
-    <tr>
-        <td colspan="3">OUT</td>
-        <td>12</td>
-        <td>89</td>
-    </tr>
-</table>
+<div align="center">
+  <p><strong>Table 6 Pin Mapping of D3-G Photoregister</strong></p>
+  <table>
+      <tr>
+          <th colspan="3">Pin Name</th>
+          <th>D3-G Board</th>
+          <th>GPIO</th>
+      </tr>
+      <tr>
+          <td colspan="3">VCC</td>
+          <td>1</td>
+          <td>3.3V</td>
+      </tr>
+      <tr>
+          <td colspan="3">GND</td>
+          <td>6</td>
+          <td>GND</td>
+      </tr>
+      <tr>
+          <td colspan="3">OUT</td>
+          <td>12</td>
+          <td>89</td>
+      </tr>
+  </table>
+</div>
+
 <br/>
 
-<p align="center"><strong>Table 7 Pin Mapping of D3-G LED</strong></p>
-<table align="center">
-    <tr>
-        <th colspan="3">Pin Name</th>
-        <th>D3-G Board</th>
-        <th>GPIO</th>
-    </tr>
-    <tr>
-        <td colspan="3">(+)</td>
-        <td>7</td>
-        <td>83</td>
-    </tr>
-    <tr>
-        <td colspan="3">(-)</td>
-        <td>14</td>
-        <td>GND</td>
-    </tr>
-</table>
+<div align="center">
+  <p><strong>Table 7 Pin Mapping of D3-G LED</strong></p>
+  <table>
+      <tr>
+          <th colspan="3">Pin Name</th>
+          <th>D3-G Board</th>
+          <th>GPIO</th>
+      </tr>
+      <tr>
+          <td colspan="3">(+)</td>
+          <td>7</td>
+          <td>83</td>
+      </tr>
+      <tr>
+          <td colspan="3">(-)</td>
+          <td>14</td>
+          <td>GND</td>
+      </tr>
+  </table>
+</div>
 
 ### Step 3. How to execute
 Run the following Python script to monitor brightness with the CDS sensor and control the LED accordingly:
@@ -1417,7 +1422,7 @@ This section demonstrates how to connect and read input from an air pollution de
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/gas%20circuit.png"></p>
-<p align="center"><strong>Figure 23. Air Pollution Detection Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>Figure 7.8 Air Pollution Detection Sensor Experiment Circuit</strong></p>
 <br/>
 
 
@@ -1561,7 +1566,7 @@ This section demonstrates how to connect and read input from an ultrasonic senso
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"></p>
-<p align="center"><strong>Figure 24. Ultrasonic Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>Figure 7.9 Ultrasonic Sensor Experiment Circuit</strong></p>
 <br/>
 
 ##### Step 2.1 Pin Mapping
@@ -1719,7 +1724,7 @@ Make sure the LCD module has an I2C backpack
     - SCL pin of the I2C LCD Module is connected to the 81 pin on the TOPST D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/lcd%20circuit.png"></p>
-<p align="center"><strong>Figure 25. D3-G I2C LCD Module Circuit Schematic  </strong></p>
+<p align="center"><strong>Figure 7.10 D3-G I2C LCD Module Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -1843,7 +1848,7 @@ Make sure the LCD module has an I2C backpack
     - CLK pin of the Dot Matrix is connected to the 118 pin on the TOPST D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/dot%20circuit.png"></p>
-<p align="center"><strong>Figure 26. D3-G Dot Matrix Module Circuit Schematic  </strong></p>
+<p align="center"><strong>Figure 7.11 D3-G Dot Matrix Module Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -2119,7 +2124,7 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G 
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led%20circuit.png"></p>
-<p align="center"><strong>Figure 27. D3-G LED Circuit Schematic  </strong></p>
+<p align="center"><strong>Figure 7.12 D3-G LED Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -2249,7 +2254,7 @@ This section demonstrates how to connect and control a mini servo motor using th
 <br/>
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/motor_circuit.png"p>
-<p align="center"><strong>Figure 28. D3-G Servo Motor Circuit Schematic  </strong></p>
+<p align="center"><strong>Figure 7.13 D3-G Servo Motor Circuit Schematic  </strong></p>
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
