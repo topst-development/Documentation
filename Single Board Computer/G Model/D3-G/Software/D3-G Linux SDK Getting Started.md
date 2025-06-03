@@ -7,17 +7,19 @@ This document includes information on the following:
 - Firmware Download Guide 
 - Connecting the D3-G with a PC
 
+<br/><br/><br/><br/>
 
 # 2. Setting Host Environment
 This chapter provides instructions on how to set up the host PC environment, with separate guides for setting up on Windows PC and Ubuntu PC.
-</br>
+</br><br/><br/>
 
 ## 2.1 Windows Environment 
 This document provides instructions on how to set up WSL (Windows Subsystem for Linux) to use Linux on a Windows PC.
 Since TOPST D3 Linux SDK is based on the Yocto Project, Linux version of TOPST D3 SDK follows the Yocto project.
 You can install another version of Linux, but in this document, TOPST D3 Linux SDK is described based on Ubuntu 22.04.
 If the host OS is Ubuntu, please proceed to Section 2.2.
-</br>
+
+</br><br/>
 
 ### 2.1.1 Install WSL2 Ubuntu
 1. Excute Windows PowerShell with "**Run with administrator privileges**"
@@ -38,7 +40,7 @@ If the host OS is Ubuntu, please proceed to Section 2.2.
     * If you need to download the Linux kernel update package, download the latest package [here](https://learn.microsoft.com/ko-kr/windows/wsl/install-manual).
 
 6. You may choose any user name during the Ubuntu installation
-</br>
+</br><br/>
 
 ### 2.1.2 Accessing Ubuntu via WSL2
 Open the Windows Command Prompt and enter the following command to access Ubuntu.
@@ -51,7 +53,7 @@ Refer to the figure 2.1 below to check the result (may vary depending on the use
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/1.1%20wsl%20linux.png" width="500"></p>
 <p align="center"><strong>Figure 2.1 WSL2 Screenshot </strong></p>
 
-
+<br/><br/>
 
 ### 2.1.3 Install SSH and Samba
 
@@ -72,7 +74,7 @@ $ sudo apt-get update
 $ sudo apt install -y net-tools openssh-server samba
 ```
 After downloading SSH and Samba, you should set each program to your environment.
-</br>
+</br><br/>
 
 ### 2.1.4 Install Utilities
 
@@ -90,7 +92,7 @@ $ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa l
 $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
 ```
 
-
+<br/><br/>
 
 ### 2.1.5 Install Repo
 
@@ -122,13 +124,15 @@ $ sudo mv ~/bin/repo /usr/bin/repo
 ```
 Please proceed to **Chapter 3: Image Build Guide**.
 
+<br/><br/><br/>
 
 ## 2.2 Linux Environment
 This section explains the setup process for Ubuntu as the host OS.
-</br>
+</br><br/>
 
 ### 2.2.1 Setting Environment
 The following steps are to be executed in the Ubuntu terminal. (Shortcut: Ctrl+Alt+T)
+<br/><br/>
 
 ### 2.2.2 Install SSH and Samba
 
@@ -150,7 +154,7 @@ $ sudo apt install -y openssh-server samba
 ```
 After downloading SSH and Samba, you should set each program to your environment.
 
-
+<br/><br/>
 
 ### 2.2.3 Install Utilities
 
@@ -168,6 +172,7 @@ $ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa l
 $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
 ```
 
+<br/><br/>
 
 ### 2.2.4 Install Repo
 
@@ -198,6 +203,7 @@ $ chmod a+x ~/bin/repo
 $ sudo mv ~/bin/repo /usr/bin/repo
 ```
 
+<br/><br/>
 
 ### 2.2.5 Udev Rules for Telechips USB Device
 After you excute following command, You don't need to use 'sudo' command when you download FWDN in Linux.
@@ -207,7 +213,7 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 Please proceed to **Chapter 3: Image Build Guide**.
 
-
+<br/><br/><br/><br/>
 
 # 3. Image Build Guide
 This section provides guidance based on the Ubuntu OS installed on the host PC (regardless of whether it is WSL or a local Ubuntu installation). The image to be uploaded to the D3-G is built using the Yocto Project, and therefore the process must be carried out in the Ubuntu environment.
@@ -216,7 +222,8 @@ This section provides guidance based on the Ubuntu OS installed on the host PC (
 ## 3.1 SDK Build Prepration
 
 TOPST D3 Linux SDK is based on Yocto Project 3.1 Dunfell. Therefore, the Yocto Project environment must be set on the host PC to use TOPST D3 Linux SDK. To download SDK, source-mirror, and tools, you must install utilities. To build the image smoothly, the user's PC must have **at least 60 GB of available storage** and **a minimum of 16 GB of RAM**.
-</br>   
+
+</br><br/>  
 
 ## 3.2 Yocto Project  
 
@@ -224,6 +231,7 @@ The Yocto Project is an open source project focuses on embedded Linux developmen
 It uses a combination of Open Embedded project, which is Poky, and ***bitbake*** as the build system to make Linux images.  
 By using Yocto Project, you can simultaneously build the bootloader, kernel, and rootfs.  
 
+<br/><br/>
 
 ## 3.3 Task Process of Yocto Project
 
@@ -234,6 +242,7 @@ Figure 3.1 shows the task process of Yocto Project. You can download source from
 </p>
 <p align="center"><strong>Figure 3.1 Yocto Project Task Process</strong></p>
 
+<br/><br/>
 
 ## 3.4 Composition of TOPST D3-G SDK
 The following are the components of the Yocto Project we have configured.
@@ -325,10 +334,13 @@ Figure 3.1 shows composition of TOSPT D3-G SDK.
   </tbody>
 </table>
 
+<br/><br/><br/>
+
 
 ## 3.5 Ready to build
 The following sections provide instructions on how to configure the Yocto Project to build the D3-G image.
 
+<br/><br/>
 
 ### 3.5.1 Set User Email and User Name in .gitconfig
 To download TOPST D3-G from the TOSPT official git, configure your email and name.
@@ -341,6 +353,8 @@ vi ~/.gitconfig
     email = User email
     name = User name
 ```
+
+<br/><br/>
 
 ### 3.5.2 Get TOPST-D3 with Git
 Below is our Yocto configuration XML file. You can download the repository to get started.
@@ -381,6 +395,8 @@ Checking out:  57% (8/14), done in 0.898s
 Checking out:  42% (6/14), done in 0.365s
 repo sync has finished successfully.
 ```
+
+<br/><br/><br/>
 
 ## 3.6 Execute topst-build.sh 
 If you run ./easy-setup_d3-g.sh script, you can see the following screen. 
@@ -467,6 +483,8 @@ Run the following command to start building the main OS.
 ```
 $ bitbake telechips-topst-image
 ```
+
+<br/><br/><br/>
 
 ## 3.7 Make FWDN Image
 
@@ -576,11 +594,13 @@ Finally, you can check **'output.fwdn.zip'**.
 
 Please proceed to **Chapter 4: Firmware Download**.
 
-</br></br>
+</br></br><br/><br/>
 
 # 4. Firmware Download
 This chapter describes how to download ***FWDN*** to the TOPST D3-G and login the Linux console.  
 The ***FWDN V8*** is a PC tool for downloading firmware in Windows 10(11) 64-bit and Linux environments. This chapter describes the case of downloading in Windows and Linux environments.
+
+<br/><br/><br/>
 
 ## 4.1 Firmware Download Sequence
 
@@ -591,7 +611,7 @@ The downloading sequence of ***FWDN*** is as follows:
 3. Connect ***FWDN V8*** to board.
 4. Download fai file.
 
-
+<br/><br/><br/>
 
 ## 4.2 Connect TOPST D3 and Host PC with USB Boot
 Firmware Downloader (FWDN) writes a ROM image to the TOPST D3-G through USB communication on the Host PC. 
@@ -622,7 +642,7 @@ To use FWDN, connect the TOPST D3-G to the Host PC as follows:
 </p>
 <p align="center"><strong>Figure 4.1 Connection to D3-G to Host PC Using USB C-Type Cable </strong></p>
 
-
+<br/><br/>
 
 ### 4.2.1 How to install VTC Driver (Windows/Ubuntu)
 Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 4.2 and Figure 4.3.
@@ -639,7 +659,7 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 
 **Note**: Use the VTC Driver V5.0.0.14 or higher. To check the version, confirm the device manager in Windows environment.  
 
-
+<br/><br/><br/>
 
 ## 4.3 Ready to Download FWDN
 Before executing FWDN, you must first transfer the image and FWDN tool you created after the build from Ubuntu (WSL2) to the Windows Environment.
@@ -659,7 +679,7 @@ Before executing FWDN, you must first transfer the image and FWDN tool you creat
     $ cp -r /images /mnt/c/ && \
     ```
 
-
+<br/><br/><br/>
 
 ## 4.4 FWDN in Windows Environment
 
@@ -767,6 +787,8 @@ C:\images>fwdn.exe -w "output.fai" --storage emmc --area user
 ** When writing FAI files without low-format, there may be garbage values in partition where data is not written.
 ```
 
+<br/><br/><br/>
+
 ## 4.5  FWDN in Linux Environment
 
 In a Linux environment, you can download TOPST image with command "./fwdn.sh".
@@ -779,11 +801,13 @@ You’re now all set to boot the D3-G. Please refer to Chapter 4 to start commun
 
 Please proceed to **Chapter 5: Connecting the D3-G with a host PC**.
 
+<br/><br/><br/><br/>
 
 # 5. Connecting the D3-G with a host PC
 
 This chapter provides instructions on how to set up the host PC environment, with separate guides for setting up on Windows PC and Ubuntu PC.
 
+<br/><br/><br/>
 
 ## 5.1 D3-G Connection with UART 
 
@@ -800,7 +824,7 @@ Perform the following steps and verify that the firmware download is successfull
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20to%20TTL%20Connection.png", width="700">
 </p>
-<p align="center"><strong>Figure 5.1 UART Connection with host PC</strong></p>  
+<p align="center"><strong>Figure 5.1 UART Connection with host PC</strong></p><br/>  
 
 
 The figure 5.2 below shows a successful login.  
@@ -809,14 +833,15 @@ Both the username and password for login are set to **root**.
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/d3-g%20login%20as%20root.png", width="700">
 </p>
-<p align="center"><strong>Figure 5.2 Connected Screen (ID and Password are topst)</strong></p>  
+<p align="center"><strong>Figure 5.2 Connected Screen (ID and Password are topst)</strong></p><br/>
 
-
+<br/><br/><br/>
 
 # 6. Ubuntu OS partition resize
 We also provide an Ubuntu OS.
 By following this section, you can download the Ubuntu image, upload it to the board, and expand the allocated eMMC storage capacity.
 
+<br/><br/><br/>
 
 ## 6.1 Download Ubuntu Image
 Official of TOPST D3-G is based on Ubuntu 22.04.  
@@ -838,11 +863,14 @@ You can download the image file here.
 TOPST team is also preparing other official OS versions.  
 For information on releases of other OS, please refer to the TOPST community.  
 
+<br/><br/><br/>
+
 ## 6.2 Firmware upload to D3-G
 Run “fwdn_ubuntu.batch” file. 
 Refer to Section 5 to upload the Ubuntu image to the D3-G board.
 After FWDN is completed, remove the USB Type-C cable from the FWDN port and remove the power cable. 
 
+<br/><br/><br/>
 
 ## 6.3 Resize eMMC storage (Only D3-G)
 When you log in after booting the board, you must resize the eMMC storage first.
@@ -882,6 +910,7 @@ Follow the steps below for eMMC Storage resizing.
 
 You can confirm that the available space is 27GB after resizing.
 
+<br/><br/><br/><br/>
 
 # 7. References
 - Contact TOPST for more details: topst@topst.ai
