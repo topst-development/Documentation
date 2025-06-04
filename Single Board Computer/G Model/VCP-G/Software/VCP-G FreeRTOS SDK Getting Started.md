@@ -153,10 +153,10 @@ The TOPST VCP-G source code is now available locally for building and developmen
 ## 4.2 Source Code Structure
 After cloning, enter the ls command to list the directory contents and review key files to understand the source code structure.
 ```
-ls -al
+ls
+
+build  documents  easy-setup_vcp.sh  scripts  sources  tools
 ```
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Source%20Code%20Structure.png"></p>
-<p align="center"><strong>Figure 4.4 Source Code Structure</strong></p>
 
 </br>
 
@@ -164,16 +164,34 @@ ls -al
 
 </br>
 
-## 5.1 Makefiles and Build Systems
+## 5.1 Execute easy-setup_vcp-g.sh
+If you run ./easy-setup_vcp-g.sh script, you can see the following screen.
+
+Caution: If you re-run ./easy-setup_vcp-g.sh, be careful as the built sources will be deleted if you select yes.
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
+<p align="center"><strong>Figure 5.1 End User License Agreement</strong></p>
+
+Scroll down to the bottom of the screen and read this notice. After you read this notice, press the right arrow key and [Enter].
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license2.png"></p>
+<p align="center"><strong>Figure 5.2 Go To 'Proceed to confirm'</strong></p>
+
+
+Then you can see the following screen. 
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" ></p>
+<p align="center"><strong>Figure 5.3 Accept Screen </strong></p>
+
+</br>
+
+## 5.2 Makefiles and Build Systems
 A Makefile is a key component of many build systems. It contains rules and directives for the **make** utility to compile and link programs. By utilizing a Makefile, you can automate the build process, ensuring consistency and efficiency.
 
 </br>
 
-## 5.2 Initiate Build Process
+## 5.3 Initiate Build Process
 To build the source code, follow these steps:  
 1. **Navigate to the Build Directory:**
     ```
-    cd build/tcc70xx/gcc/
+    cd build/tcc70xx/gcc/https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Source%20Code%20Structure.pnghttps://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Source%20Code%20Structure.png
     ```
 2. **Run the make command:**
     ```
@@ -181,20 +199,20 @@ To build the source code, follow these steps:
     ```
     The **make** command reads the Makefile in the current directory and executes the build process.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Run%20make%20Command.png"></p>
-    <p align="center"><strong>Figure 5.1 Run make Command </strong></p>
+    <p align="center"><strong>Figure 5.4 Run make Command </strong></p>
 3. **Verify the Build Output:** After the build process is complete, the following output files should be listed in the terminal.
     - output/tcc70xx_pflash_boot.rom
     - output/tcc70xx_pflash_boot_2M_ECC.rom
     - output/tcc70xx_pflash_boot_3M_ECC.rom
     - output/tcc70xx_pflash_boot_4M_ECC.rom
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Verify%20Build%20Output.png"></p>
-    <p align="center"><strong>Figure 5.2 Verify Build Output</strong></p>
+    <p align="center"><strong>Figure 5.5 Verify Build Output</strong></p>
     To check the list of output files, use the following command:
     ```
     ls output/ -al
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Build%20Output%20File.png"></p>
-    <p align="center"><strong>Figure 5.3 Build Output File</strong></p>
+    <p align="center"><strong>Figure 5.6 Build Output File</strong></p>
 
 </br>
 
