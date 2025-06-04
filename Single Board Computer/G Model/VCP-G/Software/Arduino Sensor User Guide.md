@@ -9,6 +9,11 @@ Specifically, this document provides guidance on Arduino IDE examples for the VC
 - VCP-G UART
 - Additional Example
 
+Refer to Figure 1.1 before using the VCP-G.
+
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp-g%20pinout%20Diagram.png"></p>
+<p align="center"><strong>Figure 1.1 VCP-G Pinout Diagram</strong></p>
+
 </br>
 
 # 2. VCP-G Digital
