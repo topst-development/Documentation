@@ -143,31 +143,15 @@ You can test the Arducam by following the steps below:
 
 1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 4.3
  
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/Arducam%20to%20D3G.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 4.3 Connecting the ArduCam to the D3-G </strong></p> <br/>
 
-2. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+2. Once the ArduCam is connected, you can verify the video stream using the following GStreamer command on the D3-G:
+```
+$ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
+```
+This command captures video from the CSI-connected ArduCam, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
+Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
 <br/><br/>
 
@@ -201,8 +185,15 @@ You can test the Arducam by following the steps below:
 
 1. Connect Raspbery pi v1 cam to D3-G MIPI CSI 1 below figure 4.5
  
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p><br/>
-<p align="center"><strong>Figure 4.5 Connecting the Raspberry pi v1 cam to the D3-G </strong></p> 
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
+<p align="center"><strong>Figure 4.5 Connecting the Raspberry pi v1 cam to the D3-G </strong></p> <br/>
+
+2. Once the Raspberry pi cam is connected, you can verify the video stream using the following GStreamer command on the D3-G:
+```
+$ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
+```
+This command captures video from the CSI-connected Raspberry pi cam, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
+Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
 <br/><br/><br/><br/>
 
