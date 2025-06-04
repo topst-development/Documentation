@@ -244,13 +244,106 @@ $ sudo mount /dev/mmcblk1p1 /mnt
 
 ## 5.3 SATA HDD
 
+The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, via its PCIe slot using a compatible SATA controller.
+
 #### Step 1. Connect the PCIe to SATA Module
 
+To use a SATA HDD with the D3-G board via PCIe, you must first connect a PCIe-to-SATA adapter module to the board's PCIe slot.
+Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
+
+#### Step 2. Boot the D3-G Board
+After executing the boot, observe the boot log to verify that the PCIe device is recognized by the system.
+Look for messages such as telechips-pcie: Link up, which indicate that the PCIe link has been successfully established.
+
+```
+Starting kernel ...
+
+[    1.191696] telechips-pcie 11000000.pcie: invalid resource
+[    1.230423] telechips-pcie 11000000.pcie: Link up
+[    1.693516] debugfs: Directory '16680000.udma' with parent 'dmaengine' already present!
+[    1.702282] debugfs: Directory '16681000.udma' with parent 'dmaengine' already present!
+[    1.711022] debugfs: Directory '16682000.udma' with parent 'dmaengine' already present!
+[    1.719799] debugfs: Directory '16683000.udma' with parent 'dmaengine' already present!
+[    1.728562] debugfs: Directory '16684000.udma' with parent 'dmaengine' already present!
+[    1.737308] debugfs: Directory '16685000.udma' with parent 'dmaengine' already present!
+[    1.746084] debugfs: Directory '16686000.udma' with parent 'dmaengine' already present!
+[    1.754824] debugfs: Directory '16687000.udma' with parent 'dmaengine' already present!
+ 
+...
+Ubuntu 22.04.5 LTS TOPST ttyAMA0
+
+TOPST login: 
+```
+#### Step 3. Check SSD Recognition
+
+```
+root@TOPST:~# lspci
+00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
+01:00.0 SATA controller: ASMedia Technology Inc. Device 1064 (rev 02)
+```
+If the lspci command is not available, please install pciutils.
+
+```
+$ sudo apt-get install pciutils
+```
+
+#### Step 4. mount the SSD
+```
+$ fdisk /dev/sdb1
+Welcome to fdisk (util-linux 2.37.4).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Command (m for help): 
+```
+
+Type the following keys in order inside the fdisk prompt:
+
+- o — Create a new empty DOS partition table (optional, clears existing table)
+
+- n — Add a new partition
+
+- p — Choose a primary partition
+
+- 1 — Set partition number to 1
+
+- Press Enter — Accept default first sector
+
+- Press Enter — Accept default last sector (uses full disk)
+
+- w — Write the partition table and exit
+
+```
+$ mkfs.ext4 /dev/sdb
+
+$ mkdir -p /mnt/sata
+
+$ mount /dev/sdb1 /mnt/sata
+```
+#### Step 5. Execution Result
+This output confirms that the SATA SSD partition (/dev/sdb1) has been successfully formatted with the ext4 file system and mounted at /mnt/sata.
+The df -h command shows that the device is now recognized and available for use by the system.
+
+```
+$ df -h
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p4   29G  4.0G   25G  14% /
+tmpfs           100M     0  100M   0% /dev/shm
+tmpfs           592M  976K  591M   1% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           1.5G  4.0K  1.5G   1% /tmp
+tmpfs           1.5G     0  1.5G   0% /var/volatile
+tmpfs           296M  4.0K  296M   1% /run/user/0
+/dev/sdb1       234G   28K  222G   1% /mnt/sata
+```
 
 <br/><br/><br/>
 
 ## 5.4 NVME M.2 SSD
-The D3-G board supports M.2 SSD storage devices through its PCIe slot.
+
+The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, via its PCIe slot using a compatible SATA controller.
+
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G board’s PCIe slot. 
 
