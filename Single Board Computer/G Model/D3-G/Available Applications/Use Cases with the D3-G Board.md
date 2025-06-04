@@ -636,7 +636,7 @@ This section demonstrates how to connect and use from led sensor using the D3-G 
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 1 Pin Mapping of D3-G LED</strong></p>
+  <p><strong>Table 7.1 Pin Mapping of D3-G LED</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -789,7 +789,7 @@ This section demonstrates how to connect and use from a basic button module usin
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 2 Pin Mapping of D3-G Button</strong></p>
+  <p><strong>Table 7.2 Pin Mapping of D3-G Button</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -916,7 +916,7 @@ This section demonstrates how to connect and read input from a basic touch senso
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 3 Pin Mapping of D3-G Touch Sensor</strong></p>
+  <p><strong>Table 7.3 Pin Mapping of D3-G Touch Sensor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1062,7 +1062,7 @@ This section demonstrates how to connect and detect input from a basic vibration
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 4 Pin Mapping of D3-G Vibration Detection Sensor</strong></p>
+  <p><strong>Table 7.4 Pin Mapping of D3-G Vibration Detection Sensor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1208,7 +1208,7 @@ This section demonstrates how to connect and read input from the SZH-SSBH-002 in
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 5 Pin Mapping of D3-G IR Sensor</strong></p>
+  <p><strong>Table 7.5 Pin Mapping of D3-G IR Sensor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1359,7 +1359,7 @@ This section demonstrates how to connect and read input from the SZH-SSBH-011 ph
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 6 Pin Mapping of D3-G Photoregister</strong></p>
+  <p><strong>Table 7.6 Pin Mapping of D3-G Photoregister</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1386,7 +1386,7 @@ The following table shows pin mapping.
 
 
 <div align="center">
-  <p><strong>Table 7 Pin Mapping of D3-G LED</strong></p>
+  <p><strong>Table 7.7 Pin Mapping of D3-G LED</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1537,7 +1537,7 @@ This section demonstrates how to connect and read input from an air pollution de
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 8 Pin Mapping of D3-G Air Pollution Detection Sensor</strong></p>
+  <p><strong>Table 7.8 Pin Mapping of D3-G Air Pollution Detection Sensor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1681,7 +1681,7 @@ This section demonstrates how to connect and read input from an ultrasonic senso
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 9 Pin Mapping of D3-G Ultrasonic Sensor</strong></p>
+  <p><strong>Table 7.9 Pin Mapping of D3-G Ultrasonic Sensor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1841,7 +1841,7 @@ Make sure the LCD module has an I2C backpack
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 10 Pin Mapping of D3-G I2C LCD Module</strong></p>
+  <p><strong>Table 7.10 Pin Mapping of D3-G I2C LCD Module</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1967,7 +1967,7 @@ Make sure the LCD module has an I2C backpack
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 <div align="center">
-  <p><strong>Table 11 Pin Mapping of D3-G Dot Matrix</strong></p>
+  <p><strong>Table 7.11 Pin Mapping of D3-G Dot Matrix</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -2247,7 +2247,7 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G 
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 12 Pin Mapping of D3-G LED</strong></p>
+  <p><strong>Table 7.12 Pin Mapping of D3-G LED</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -2378,7 +2378,7 @@ This section demonstrates how to connect and control a mini servo motor using th
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 13 Pin Mapping of D3-G Servo Motor</strong></p>
+  <p><strong>Table 7.13 Pin Mapping of D3-G Servo Motor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
