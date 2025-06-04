@@ -587,10 +587,6 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 64 bytes from 8.8.8.8: seq=3 ttl=113 time=33.586 ms
 ```
 
-<br/><br/><br/>
-
-## 6.3 WIFI Device Connection 
-
 
 <br/><br/><br/><br/>
 
