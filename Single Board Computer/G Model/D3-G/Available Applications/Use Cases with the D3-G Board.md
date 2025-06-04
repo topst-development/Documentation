@@ -274,7 +274,7 @@ Ubuntu 22.04.5 LTS TOPST ttyAMA0
 
 TOPST login: 
 ```
-#### Step 3. Check SSD Recognition
+#### Step 3. Check SATA HDD Recognition
 
 ```
 root@TOPST:~# lspci
@@ -287,7 +287,7 @@ If the lspci command is not available, please install pciutils.
 $ sudo apt-get install pciutils
 ```
 
-#### Step 4. mount the SSD
+#### Step 4. mount the SATA HDD
 ```
 $ fdisk /dev/sdb1
 Welcome to fdisk (util-linux 2.37.4).
