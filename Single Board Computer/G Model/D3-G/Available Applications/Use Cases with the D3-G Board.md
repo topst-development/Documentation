@@ -16,8 +16,6 @@ This document includes information on the following:
 - Ethernet Connection
 - 40 Pin GPIO Header
   - Available Sensor & Device
-- JTAG Connection
-- CAN Connection
 
 <br/><br/><br/><br/>
 
@@ -252,7 +250,7 @@ To use a SATA HDD with the D3-G board via PCIe, you must first connect a PCIe-to
 
 Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="700"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="500"></p>
 <p align="center"><strong>Figure 5.3 D3-G PCIe to SATA Module connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
@@ -351,7 +349,7 @@ The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, v
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G board’s PCIe slot. 
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="300"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="400"></p>
 <p align="center"><strong>Figure 5.4 D3-G NVME M.2 SSD connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
@@ -2487,6 +2485,8 @@ Entering 1 will rotate the servo clockwise to 180°, and entering 0 will rotate 
 To stop the script, enter q or press Ctrl+C. The script will then disable and unexport the PWM channel.
 
 **Note**: Ensure your servo motor supports a 50Hz PWM signal and operates within the 1ms–2ms duty pulse range for safe operation.
+
+<br/><br/><br/><br/>
 
 
 
