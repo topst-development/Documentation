@@ -252,7 +252,7 @@ To use a SATA HDD with the D3-G board via PCIe, you must first connect a PCIe-to
 
 Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="500"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="700"></p>
 <p align="center"><strong>Figure 5.3 D3-G PCIe to SATA Module connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
