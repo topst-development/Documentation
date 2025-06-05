@@ -7,15 +7,15 @@ This document includes information on the following:
 - Video Output
 - Camera Connection
   - MIPI CSI
-  - USB WebCam
+  - USB Webcam
 - Storage Connection
   - SD Card
   - SATA HDD
   - NVME M.2 SSD
   - USB Storage
 - Ethernet Connection
-- 40 Pin GPIO Header
-  - Available Sensor & Device
+- 40-pin GPIO Header
+  - Available Sensor and Device
 
 <br/><br/><br/><br/>
 
@@ -26,13 +26,13 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users 
 ***Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
-<p align="center"><strong>Figure 2.1 Connect input device to D3-G </strong></p>
+<p align="center"><strong>Figure 2.1 Connect Input Device to D3-G </strong></p>
 
 <br/><br/><br/><br/>
 
 # 3. Video Output
-The D3-G board supports FHD monitors via its only DisplayPort (DP) output.
-It also supports multi-display output using a daisy chain setup, allowing connection of up to two FHD monitors and one HD monitor simultaneously.
+The D3-G board supports FHD monitors only through its  DisplayPort (DP) output.
+It also supports multi-display output by using a daisy chain setup, allowing a connection of up to two FHD monitors and one HD monitor simultaneously.
 
 **Note**: To use HDMI, a separate active converter adapter is required.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
@@ -48,12 +48,12 @@ You can connect either a MIPI CSI camera or a USB webcam, depending on your proj
 
 ## 4.1 USB Webcam
 The D3-G board supports USB webcams, with resolutions up to Full HD (FHD).
-You can test the webcam by following the steps below:
+You can test the webcam by following these steps:
 1. Connect the USB camera to a USB port on the board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
-<p align="center"><strong>Figure 4.1 Connect webcam to D3-G </strong></p><br/>
+<p align="center"><strong>Figure 4.1 Connect Webcam to D3-G </strong></p><br/>
 
-2. Connect the input devices(mouse&keyboard)and monitor to D3-G.
+2. Connect the input devices (mouse and keyboard) and monitor to D3-G.
    
 3. Boot the D3-G board.
 
@@ -61,14 +61,14 @@ You can test the webcam by following the steps below:
 ```
 ls /dev/video*
 ```
-5. Verify the video output using OpenCV (or vutils).
+5. Verify the video output by using OpenCV (or vutils).
 ```
 touch webcam.py
 chmod a+x webcam.py
 ```
 ```
-# You can edit the script file using vim or nano editor
-# This is camera application python code using OpenCV
+# You can edit the script file by using vim or nano editor
+# The following is camera application python code using OpenCV
 import cv2
 
 cap = cv2.VideoCapture(0)
@@ -106,43 +106,43 @@ python3 webcam.py
 CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
 It enables high-speed, low-power transmission of image data from the camera to the processor.
 
-The D3-G board features two MIPI CSI channels(ch0, ch1), allowing users to attach camera modules that support FFC (Flat Flexible Cable) connections.
-Currently, the D3-G board supports only the ArduCam (5MP) and Raspberry Pi v1 Camera (5MP) modules. 
+The D3-G board features two MIPI CSI channels (ch0 and ch1), allowing users to attach camera modules that support Flat Flexible Cable (FFC) connections.
+Currently, the D3-G board supports only the ArduCam (5 MP) and Raspberry Pi v1 Camera (5 MP) modules. 
 
 **Note** : Currently, the D3-G board does not support simultaneous use of CSI channel 0 and CSI channel 1.
 
 <br/><br/>
 
-### 4.2.1 Ardu cam
+### 4.2.1 ArduCam
 ArduCam is a versatile camera module designed for embedded systems and IoT applications. It supports various image sensors and interfaces, including MIPI CSI, making it suitable for integration with development boards like the D3-G.
-The 5MP ArduCam module supported by the D3-G offers decent image quality and is commonly used for basic computer vision tasks, streaming, and camera-based AI applications. Its compatibility with FFC cables makes it easy to connect to the D3-G’s CSI interface. 
+The 5 MP ArduCam module supported by the D3-G offers decent image quality and is commonly used for basic computer vision tasks, streaming, and camera-based AI applications. Its compatibility with FFC cables makes it easy to connect to the D3-G’s CSI interface. 
 
-Below are the specifications for the ArduCam module.
+The specifications for the ArduCam module are as follows.
 
 | Spec                     | Description                                 |
 | ------------------------ | ------------------------------------------- |
 | Sensor                   | OV5647 (5 Megapixel)                        |
-| Resolution               | 2592 × 1944 (Full 5MP)                      |
+| Resolution               | 2592 × 1944 (Full 5 MP)                      |
 | Supported Output Formats | RAW, YUV, JPEG (sensor dependent)           |
 | Interface                | MIPI CSI-2                                  |
 | Frame Rate               | Up to 30fps at 1080p, 60fps at 720p         |
 | Lens Mount               | Fixed-focus lens (standard)                 |
-| FOV (Field of View)      | Approx. 54° – 70° (varies by model)         |
-| Connection Type          | FFC (Flat Flexible Cable)                   |
+| Field of View (FOV)      | Approx. 54° – 70° (varies by model)         |
+| Connection Type          | Flat Flexible Cable (FFC)                   |
 | Operating Voltage        | 3.3V (typical)                              |
-| Form Factor              | Compact PCB, ~25mm x 24mm                   |
-| Compatibility            | Raspberry Pi, D3-G (via MIPI CSI-2 port)    |
+| Form Factor              | Compact PCB, ~25 mm x 24 mm                   |
+| Compatibility            | Raspberry Pi, D3-G (through MIPI CSI-2 port)    |
 | Additional Features      | Low power consumption, plug-and-play module |
 
 
-You can test the Arducam by following the steps below:
+You can test the ArduCam by following these steps:
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/arducam.png" width="400"></p>
-<p align="center"><strong>Figure 4.2 Ardu cam </strong></p><br/>
+<p align="center"><strong>Figure 4.2 ArduCam </strong></p><br/>
 
-1. Connect Ardu cam to D3-G MIPI CSI 0 below figure 4.3
+1. Connect ArduCam to D3-G MIPI CSI 0 as shown in Figure 4.3.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 4.3 Connecting the ArduCam to the D3-G </strong></p> <br/>
+<p align="center"><strong>Figure 4.3 Connect ArduCam to D3-G </strong></p> <br/>
 
 2. Once the ArduCam is connected, you can verify the video stream using the following GStreamer command on the D3-G:
 ```
@@ -155,49 +155,49 @@ Make sure that the camera module is securely connected before running the comman
 
 ### 4.2.2 Raspberry Pi v1 Camera
 
-The Raspberry Pi Camera Module v1 is a compact 5MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board via a MIPI CSI-2 interface using an FFC (Flat Flexible Cable).
+The Raspberry Pi Camera Module v1 is a compact 5 MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board through a MIPI CSI-2 interface using an Flat Flexible Cable (FFC).
 
 Designed originally for the Raspberry Pi series, this module is also compatible with the D3-G board, making it a reliable choice for basic camera applications such as image capture, video recording, and computer vision projects.
 
-Below are the specifications for the ArduCam module.
+The specifications for the ArduCam module are as follows.
 
 | Spec                | Description                              |
 | ------------------- | ---------------------------------------- |
 | Sensor              | OmniVision OV5647                        |
-| Resolution          | 2592 × 1944 (5MP)                        |
+| Resolution          | 2592 × 1944 (5 MP)                        |
 | Output Formats      | RAW, YUV, JPEG                           |
 | Interface           | MIPI CSI-2                               |
 | Frame Rate          | 1080p30, 720p60, VGA90                   |
 | Lens                | Fixed-focus                              |
-| FOV (Field of View) | ~54°                                     |
+| Field of View (FOV) | ~54°                                     |
 | Cable Type          | FFC (15-pin)                             |
-| Board Dimensions    | 25mm x 24mm                              |
-| Compatibility       | Raspberry Pi, D3-G (via MIPI CSI-2 port) |
+| Board Dimensions    | 25 mm x 24 mm                              |
+| Compatibility       | Raspberry Pi, D3-G (through MIPI CSI-2 port) |
 
 
-You can test the Arducam by following the steps below:
+You can test the Arducam by following these steps:
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam.jpg" width="400"></p>
-<p align="center"><strong>Figure 4.4. Raspberry pi v1 cam </strong></p><br/>
+<p align="center"><strong>Figure 4.4. Raspberry Pi v1 Camera </strong></p><br/>
 
 
-1. Connect Raspbery pi v1 cam to D3-G MIPI CSI 1 below figure 4.5
+1. Connect Raspbery pi v1 camera to D3-G MIPI CSI 1 as shown in Figure 4.5.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 4.5 Connecting the Raspberry pi v1 cam to the D3-G </strong></p> <br/>
+<p align="center"><strong>Figure 4.5 Connect Raspberry Pi v1 Camera to D3-G </strong></p> <br/>
 
-2. Once the Raspberry pi cam is connected, you can verify the video stream using the following GStreamer command on the D3-G:
+2. Once the Raspberry pi camera is connected, you can verify the video stream by using the following GStreamer command on the D3-G:
 ```
 $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
 ```
-This command captures video from the CSI-connected Raspberry pi cam, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
+This command captures video from the CSI-connected Raspberry pi camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
 Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
 <br/><br/><br/><br/>
 
 # 5. Storage Connection
-This chapter covers how to connect the D3-G board to various storage devices.
-Supported storage options include USB drives, SD cards, and external storage via PCIe.
+This chapter describes how to connect the D3-G board to various storage devices.
+Supported storage options include USB drives, SD cards, and external storage through PCIe.
 
 <br/><br/><br/>
 
@@ -207,11 +207,11 @@ To connect a USB drive:
 
 1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/usb%20storage%20connection%20with%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 5.1 Connecting the usb storage to the D3-G </strong></p> <br/>
+<p align="center"><strong>Figure 5.1 Connect USB Storage to D3-G </strong></p> <br/>
 
-1. Once connected, the device will typically be recognized as /dev/sda1, /dev/sdb1, etc., depending on the system state.
+2. Once connected, the device will typically be recognized as /dev/sda1, /dev/sdb1, and so on, depending on the system state.
 
-2. You can manually mount the USB drive using the following command:
+3. You can manually mount the USB drive using the following command:
    ```
    sudo mount /dev/sda1 /mnt
    ```
@@ -224,34 +224,34 @@ To use an SD card with the board:
 
 1. Insert the microSD card into the SD card slot on the D3-G.
 
-1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
+2. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 5.2 Connecting the SD Card to the D3-G </strong></p> <br/>
+<p align="center"><strong>Figure 5.2 Connect SD Card to D3-G </strong></p> <br/>
 
-1. Once inserted, the system will typically recognize the SD card as /dev/mmcblk1p1 or a similar device node.
+3. Once inserted, the system will typically recognize the SD card as /dev/mmcblk1p1 or a similar device node.
   ```
   $ls /dev/mmcblk*
   ```
-2. To mount the SD card manually, use the following command:
+4. To mount the SD card manually, use the following command:
 ```
 $ sudo mount /dev/mmcblk1p1 /mnt 
 ```
-3. After mounting, you can access the SD card contents under the /mnt directory.
+5. After mounting, you can access the SD card contents under the /mnt directory.
 
 <br/><br/><br/>
 
 ## 5.3 SATA HDD
 
-The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, via its PCIe slot using a compatible SATA controller.
+The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot by using a compatible SATA controller.
 
 #### Step 1. Connect the PCIe to SATA Module
 
-To use a SATA HDD with the D3-G board via PCIe, you must first connect a PCIe-to-SATA adapter module to the board's PCIe slot.
+To use a SATA HDD with the D3-G board through PCIe, you must first connect a PCIe-to-SATA adapter module to the board's PCIe slot.
 
 Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="500"></p>
-<p align="center"><strong>Figure 5.3 D3-G PCIe to SATA Module connection  </strong></p>
+<p align="center"><strong>Figure 5.3 D3-G PCIe to SATA Module Connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
 After executing the boot, observe the boot log to verify that the PCIe device is recognized by the system.
@@ -283,13 +283,13 @@ root@TOPST:~# lspci
 00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
 01:00.0 SATA controller: ASMedia Technology Inc. Device 1064 (rev 02)
 ```
-If the lspci command is not available, please install pciutils.
+If the lspci command is not available, install pciutils.
 
 ```
 $ sudo apt-get install pciutils
 ```
 
-#### Step 4. mount the SATA HDD
+#### Step 4. Mount the SATA HDD
 ```
 $ fdisk /dev/sdb1
 Welcome to fdisk (util-linux 2.37.4).
@@ -344,13 +344,13 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 
 ## 5.4 NVME M.2 SSD
 
-The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, via its PCIe slot using a compatible SATA controller.
+The D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot by using a compatible SATA controller.
 
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G board’s PCIe slot. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="400"></p>
-<p align="center"><strong>Figure 5.4 D3-G NVME M.2 SSD connection  </strong></p>
+<p align="center"><strong>Figure 5.4 D3-G NVME M.2 SSD Connection  </strong></p>
 
 #### Step 2. Boot the D3-G Board
 After executing the reboot command, observe the boot log to verify that the PCIe device is recognized by the system.
@@ -384,13 +384,13 @@ root@TOPST:~# lspci
 00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
 01:00.0 Non-Volatile memory controller: Solid State Storage Technology Corporation Device 1007 (rev 03)
 ```
-If the lspci command is not available, please install pciutils.
+If the lspci command is not available, install pciutils.
 
 ```
 $ sudo apt-get install pciutils
 ```
 
-#### Step 4. mount the SSD
+#### Step 4. Mount the SSD
 ```
 $ fdisk /dev/nvme0n1
 Welcome to fdisk (util-linux 2.37.4).
@@ -447,22 +447,22 @@ The TOPST D3-G board supports Ethernet connectivity through its onboard J2C Ethe
 
 <br/><br/><br/>
 
-## 6.1 Network Connection Via Router
-This method connects the D3-G board to a local network using a standard router. The board can obtain an IP address automatically via DHCP or be configured with a static IP address.
+## 6.1 Network Connection Through Router
+This method connects the D3-G board to a local network by using a standard router. The board can obtain an IP address automatically through DHCP or be configured with a static IP address.
 
 <br/><br/>
 
 ### 6.1.1 Create the Network Configuration File
 
-1. Dynamic IP via DHCP
+1. Dynamic IP through DHCP
 
-If your network provides a DHCP server (e.g., a router or ICS-enabled Windows PC), no file editing is necessary. The system will automatically obtain an IP address as soon as the Ethernet cable is connected.
+If your network provides a DHCP server (for example, a router or ICS-enabled Windows PC), no file editing is necessary. The system will automatically obtain an IP address as soon as the Ethernet cable is connected.
 
-You can simply plug in the cable and start using the network right away. Proceed to 6.1.3  verify the ip connection.
+You can simply plug in the cable and start using the network right away. Proceed to 6.1.3  Verify the IP Connection.
 
 2. Static IP Configuration
 
-If you prefer to assign a static IP address (e.g., when using direct PC connection or no DHCP server is available), edit the same file with the following content:
+If you prefer to assign a static IP address (for example, when using direct PC connection or no DHCP server is available), edit the same file with the following content:
 ```
 $ vi /etc/systemd/network/20-wired.network
 
@@ -490,7 +490,7 @@ sudo systemctl restart systemd-networkd
 
 ### 6.1.3 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/router%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 6.1 Network Connection Via Router</strong></p>
+<p align="center"><strong>Figure 6.1 Network Connection Through Router</strong></p>
 
 Test the internet connection by pinging Google's public DNS server:
 
@@ -514,22 +514,22 @@ You can share your PC's internet connection with the TOPST D3-G board without us
 ### 6.2.1 Host PC Network Configuration
 Control Panel → Network and Internet → Network Connectivity → Set Ethernet
  
-1. Locate the network adapter connected to the internet (e.g., Wi-Fi), right-click on it, and select Properties.
+1. Locate the network adapter connected to the internet (for example, Wi-Fi), right-click on it, and select Properties.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="600"></p>
-<p align="center"><strong>Figure 6.2 Select properties</strong></p><br/>
+<p align="center"><strong>Figure 6.2 Select Properties</strong></p><br/>
  
 2. Select sharing tab.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="400"></p>
-<p align="center"><strong>Figure 6.3 Select sharing tab</strong></p><br/>
+<p align="center"><strong>Figure 6.3 Select Sharing Tab</strong></p><br/>
 
 3. Check the box labeled "Allow other network users to connect through this computer’s Internet connection".
  
-4. In the Home networking connection dropdown menu, select the Ethernet adapter that the D3-G board will connect to (e.g., "Ethernet").
+4. In the Home networking connection dropdown menu, select the Ethernet adapter that the D3-G board will connect to (for example, "Ethernet").
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet3.png" width="400"></p>
-<p align="center"><strong>Figure 6.4 Select Ethernet adapter</strong></p><br/>
+<p align="center"><strong>Figure 6.4 Select Ethernet Adapter</strong></p><br/>
  
 5. Click OK to save the settings.
 
@@ -538,16 +538,16 @@ Control Panel → Network and Internet → Network Connectivity → Set Ethernet
 
 ### 6.2.2 Create the Network Configuration File 
 
-1. Dynamic IP via DHCP
+1. Dynamic IP through DHCP
 
-If your network provides a DHCP server (e.g., a router or ICS-enabled Windows PC), no file editing is necessary. The system will automatically obtain an IP address as soon as the Ethernet cable is connected.
+If your network provides a DHCP server (for example, a router or ICS-enabled Windows PC), no file editing is necessary. The system will automatically obtain an IP address as soon as the Ethernet cable is connected.
 
-You can simply plug in the cable and start using the network right away. Proceed to 6.2.4  verify the ip connection.
+You can simply plug in the cable and start using the network right away. Proceed to 6.2.4  Verify the IP Connection.
 
 
 2. Static IP Configuration
 
-If you prefer to assign a static IP address (e.g., when using direct PC connection or no DHCP server is available), edit the same file with the following content:
+If you prefer to assign a static IP address (for example, when using direct PC connection or no DHCP server is available), edit the same file with the following content:
 ```
 $ vi /etc/systemd/network/20-wired.network
 
@@ -575,7 +575,7 @@ sudo systemctl restart systemd-networkd
 
 ### 6.2.4 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/host%20pc%20ethernet%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 6.5 Nework Sharing with the Host PC</strong></p>
+<p align="center"><strong>Figure 6.5 Nework Sharing with Host PC</strong></p>
 <br/>
 
 Test the internet connection by pinging Google's public DNS server:
@@ -592,35 +592,35 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 
 <br/><br/><br/><br/>
 
-# 7. 40 Pin GPIO Header
+# 7. 40-pin GPIO Header
 The D3-G board features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
 This header is compatible with general-purpose input/output (GPIO) operations and can be used to connect sensors, LEDs, buttons, and other peripheral devices.
 
 Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
-<p align="center"><strong>Figure 7.1 40 Pin GPIO Header Pinmap of D3-G </strong></p> <br/>
+<p align="center"><strong>Figure 7.1 40-pin GPIO Header Pinmap of D3-G </strong></p> <br/>
 
 
-**Note**: Please refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
+**Note**: Refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
 
 <br/><br/><br/>
 
 ## 7.1 GPIO Digital In/Out
 
-The D3-G board supports digital input and output (GPIO) through its 40-pin header, enabling users to interact with external devices such as buttons, LEDs, sensors. 
+The D3-G board supports digital input and output (GPIO) through its 40-pin header, enabling users to interact with external devices such as buttons, LEDs, and sensors. 
 
 <br/><br/>
 
 ### 7.1.1 LED
 One of the simplest and most common GPIO output examples is controlling an LED.  
-This section demonstrates how to connect and use from led sensor using the D3-G board.
+This section demonstrates how to connect and use the LED sensor by using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
 - Breadboard (x1)
 - LED (x1)
-- male to female jumper wire (x2)
+- Male to female jumper wire (x2)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -659,7 +659,7 @@ The following table shows pin mapping.
 </div>
 
 #### Step3. How to execute
-To operate the LED connected to GPIO89 on the D3-G board, simply run the following code:
+To operate the LED connected to GPIO89 on the D3-G board, run the following code:
 
 ```
 import time
@@ -757,24 +757,24 @@ $ python3 led_test.py
 ```
 
 This script configures GPIO89 as a digital output and toggles its state every 1 second.
-When executed, the LED connected to GPIO89 will blink 10 times—turning on for 1 second and then off for 1 second repeatedly. After 10 cycles, the script will exit and automatically unexport the GPIO.
+When executed, the LED connected to GPIO89 will blink 10 times, turning on for 1 second and then off for 1 second repeatedly. After 10 cycles, the script will exit and automatically unexport the GPIO.
 
 To stop the script early, press Ctrl+C.
 In either case, the pin will be properly released and cleaned up.
 
-**Note**: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (e.g., 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
+**Note**: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (for example, 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
 
 <br/><br/><br/>
 
 ### 7.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
-This section demonstrates how to connect and use from a basic button module using the D3-G board.
+This section demonstrates how to connect and use from a basic button module by using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
 - Breadboard (x1)
 - Button (x1)
-- male to female jumper wire (x2)
+- Male to female jumper wire (x2)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -809,7 +809,7 @@ The following table shows pin mapping.
 
 #### Step 3. How to excute
 
-To monitor the button input connected to GPIO88 on the D3-G board, simply run the following code:
+To monitor the button input connected to GPIO88 on the D3-G board, run the following code:
 
 ```
 import os
@@ -892,13 +892,13 @@ Be sure to refer to the official pinout diagram and select a GPIO number that ma
 <br/><br/><br/>
 
 ### 7.1.3 Touch Sensor
-A touch sensor can be used to detect human touch as a digital input signal via GPIO.
-This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G board.
+A touch sensor can be used to detect human touch as a digital input signal through GPIO.
+This section demonstrates how to connect and read input from a basic touch sensor module by using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
 - Touch Sensor (x1)
-- female to female jumper wire (x3)
+- Female to female jumper wire (x3)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -945,7 +945,7 @@ The following table shows pin mapping.
 
 
 #### Step 3. How to execute
-To monitor the touch sensor connected to GPIO88 on the D3-G board, simply run the following code:
+To monitor the touch sensor connected to GPIO88 on the D3-G board, run the following code:
 ```
 import os
 import time
@@ -1038,13 +1038,13 @@ Be sure to refer to the official pinout diagram and select a GPIO number that ma
 <br/><br/><br/>
 
 ### 7.1.4 Vibration Detection Sensor
-A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal via GPIO.
-This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G board.
+A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal through GPIO.
+This section demonstrates how to connect and detect input from a basic vibration sensor module by using the D3-G board.
 #### Step 1. Hardware Requirements
 
 - TOPST D3-G board (x1)
 - Vibration Detection Sensor (x1)
-- female to female jumper wire (x4)
+- Female to female jumper wire (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -1180,15 +1180,15 @@ Upon termination, GPIO88 will be automatically unexported and cleaned up.
 <br/><br/><br/>
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
-An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal via GPIO.
-This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G board.
+An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal through GPIO.
+This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor by using the D3-G board.
 
 #### Step 1. Hardware Requirements
 
 - TOPST D3-G board (x1)
 - Breadboard (x1)
 - Infrared Sensor (x1)
-- male to female jumper wire (x5)
+- Male to female jumper wire (x5)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
@@ -1326,9 +1326,9 @@ You may use any available GPIO pin based on the 40-pin header of the D3-G board.
 
 <br/><br/><br/>
 
-### 7.1.6 Phtoregister (SZH-SSBH-011)
-A photoregister can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold via GPIO.
-This section demonstrates how to connect and read input from the SZH-SSBH-011 photoregister sensor using the D3-G board.
+### 7.1.6 Photoresistor (SZH-SSBH-011)
+A photoresistor can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold through GPIO.
+This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor by using the D3-G board.
 
 
 #### Step 1. Hardware Requirements
@@ -1342,17 +1342,17 @@ This section demonstrates how to connect and read input from the SZH-SSBH-011 ph
 - USB to TTL Serial Cable (x1)
 
 #### Step 2. Example Circuit
-- Phtoregister (SZH-SSBH-011)
-    - VCC pin of the Phtoregister is connected to the 3.3V pin on the TOPST D3-G board.
-    - GND pin of the Phtoregister is connected to the GND on the TOPST D3-G board.
-    - DIN pin of the Phtoregister is connected to 89 pin on the TOPST D3-G board.
+- Photoresistor (SZH-SSBH-011)
+    - VCC pin of the Photoresistor is connected to the 3.3V pin on the TOPST D3-G board.
+    - GND pin of the Photoresistor is connected to the GND on the TOPST D3-G board.
+    - DIN pin of the Photoresistor is connected to 89 pin on the TOPST D3-G board.
 - LED
     - (+) pin of the LED is connected to the GND on the TOPST D3-G board.
     - (-) pin of the LED is connected to 83 pin on the TOPST D3-G board.
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/circuit.png"></p>
-<p align="center"><strong>Figure 7.7 Photoregister Experiment Circuit</strong></p>
+<p align="center"><strong>Figure 7.7 Photoresistor Experiment Circuit</strong></p>
 
 
 
@@ -1361,7 +1361,7 @@ This section demonstrates how to connect and read input from the SZH-SSBH-011 ph
 The following table shows pin mapping.
 
 <div align="center">
-  <p><strong>Table 7.6 Pin Mapping of D3-G Photoregister</strong></p>
+  <p><strong>Table 7.6 Pin Mapping of D3-G Photoresistor</strong></p>
   <table>
       <tr>
           <th colspan="3">Pin Name</th>
@@ -1511,8 +1511,8 @@ Ensure that the pin mapping aligns with the official 40-pin header layout of the
 <br/><br/><br/>
 
 ### 7.1.7 Air Pollution Detection Sensor
-An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal via GPIO.
-This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G board.
+An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal through GPIO.
+This section demonstrates how to connect and read input from an air pollution detection sensor by using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1566,7 +1566,7 @@ The following table shows pin mapping.
 
 
 #### Step 3. How to Execute
-Run the following Python script to monitor gas detection using the GPIO88 pin:
+Run the following Python script to monitor gas detection by using the GPIO88 pin:
 
 ```
 import os
@@ -1656,8 +1656,8 @@ Be sure to consult the official D3-G 40-pin header pinout before selecting GPIO 
 <br/><br/><br/>
 
 ### 7.1.8 Ultrasonic Sensor
-An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal via GPIO.
-This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G board.
+An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves, receiving the reflected signal, and then outputting a digital (or pulse-based) signal through GPIO.
+This section demonstrates how to connect and read input from an ultrasonic sensor by using the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1715,7 +1715,7 @@ The following table shows pin mapping.
 
 
 #### Step 3. How to Execute
-Run the following Python script to measure distance using the ultrasonic sensor:
+Run the following Python script to measure distance by using the ultrasonic sensor:
 ```
 import os
 import time
@@ -1809,7 +1809,7 @@ Also, ensure your ECHO pin's voltage level is safe for the board (some modules o
 
 ## 7.2 I2C
 The D3-G board provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.
-I2C (Inter-Integrated Circuit) is a two-wire communication protocol consisting of a data line (SDA) and a clock line (SCL), enabling multiple devices to communicate over a shared bus.
+Inter-integrated Circuit (I2C) is a two-wire communication protocol consisting of a data line (SDA) and a clock line (SCL), enabling multiple devices to communicate over a shared bus.
 
 I2C communication follows a master-slave architecture, where one master device controls the communication and up to 127 slave devices can be connected on the same bus.
 The SDA line is used for both transmitting and receiving data, while the SCL line synchronizes the timing of data transfer. This synchronous communication model allows devices to exchange information in a coordinated, clock-driven manner.
@@ -1818,7 +1818,7 @@ The SDA line is used for both transmitting and receiving data, while the SCL lin
 
 ### 7.2.1 1602A LCD Display
 The 1602A LCD is a character display module commonly used in embedded systems.
-On the D3-G board, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
+On the D3-G board, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled by using the Linux I2C tools or custom software.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1826,7 +1826,7 @@ On the D3-G board, the LCD's SDA and SCL lines can be connected to GPIO pins con
 - Female to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
-Make sure the LCD module has an I2C backpack
+Make sure the LCD module has an I2C backpack.
 
 
 #### Step 2. Example Circuit
@@ -1915,7 +1915,7 @@ Run the code with the following command.
 $ python3 lcd_test.py
 ```
 This script initializes an I2C-based 1602A LCD using the RPLCD library and displays user-entered text on the screen.
-When you run the script, you’ll be prompted to enter a string. That text will be shown on the LCD for 4 seconds and then cleared. For example:
+When you run the script, you will be prompted to enter a string. That text will be shown on the LCD for 4 seconds and then cleared. For example:
 ```
 Enter text to display on LCD: Hello D3-G!
 ```
@@ -1933,18 +1933,18 @@ Make sure the I2C address (0x27) matches your specific LCD module. Use i2cdetect
 <br/><br/><br/>
 
 ## 7.3 SPI
-The D3-G board supports SPI (Serial Peripheral Interface) communication through a 40-pin GPIO header, enabling data exchange between external devices and the board.
+The D3-G board supports Serial Peripheral Interface (SPI) communication through a 40-pin GPIO header, enabling data exchange between external devices and the board.
 
-SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: MOSI (Master Out Slave In), MISO (Master In Slave Out), SCLK (Serial Clock), and CS (Chip Select).
+SPI is a synchronous serial communication protocol that enables full-duplex communication, meaning data can be transmitted and received simultaneously. SPI uses four main lines: Master Out Slave In (MOSI), Master In Slave Out (MISO), Serial Clock (SCLK), and Chip Select (CS).
 
 Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicated CS line for each slave device. This one-to-many structure makes SPI fast and straightforward to implement, but it can require more physical wiring when multiple devices are involved.
 
 <br/><br/><br/>
 
 ### 7.3.1 Dot Matrix
-8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the D3-G board, the dot matrix module can be controlled via SPI using a driver chip such as the MAX7219.
+8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the D3-G board, the dot matrix module can be controlled through SPI by using a driver chip such as the MAX7219.
 
-The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK and, CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
+The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display by using only a few SPI signals: MOSI (DIN), SCLK, and CS (LOAD). Once connected, the display can be controlled by using SPI communication through user-defined scripts or libraries.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1952,7 +1952,7 @@ The MAX7219 handles row and column scanning internally, allowing the microcontro
 - Male to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
-Make sure the LCD module has an I2C backpack
+Make sure the LCD module has an I2C backpack.
 
 
 #### Step 2. Example Circuit
@@ -2006,7 +2006,7 @@ The following table shows pin mapping.
 
 
 #### Step 3. How to execute
-The following Python script shows how to directly control the MAX7219 via /dev/spidev3.0 using low-level fcntl calls. This method is suitable for devices without external SPI libraries:
+The following Python script shows how to directly control the MAX7219 through /dev/spidev3.0 using low-level fcntl calls. This method is suitable for devices without external SPI libraries:
 ```
 #!/usr/bin/env python3
  
@@ -2220,12 +2220,12 @@ On termination, the SPI device is safely closed, and the LED matrix stops updati
 <br/><br/><br/>
 
 ## 7.4 PWM
-PWM (Pulse Width Modulation) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G board supports PWM through the sysfs interface in Linux.
+Pulse Width Modulation (PWM) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G board supports PWM through the sysfs interface in Linux.
 
 <br/><br/><br/>
 
 ### 7.4.1 LED Brightness Control
-This example demonstrates controlling an LED's brightness using PWM on the D3-G board.
+This example demonstrates controlling an LED's brightness by using PWM on the D3-G board.
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -2271,7 +2271,7 @@ The following table shows pin mapping.
 
 
 #### Step 3. How to execute
-To operate the LED(PWM) connected to GPIO89 on the D3-G board, simply run the following code:
+To operate the LED (PWM) connected to GPIO89 on the D3-G board, run the following code:
 ```
 import time
 
@@ -2356,7 +2356,7 @@ To stop the script, press Ctrl+C.
 <br/><br/><br/>
 
 ### 7.4.2 Mini Servo Motor
-A mini servo motor can be used to control precise angular movement based on a PWM (Pulse Width Modulation) signal via GPIO.
+A mini servo motor can be used to control precise angular movement based on a Pulse Width Modulation (PWM) signal through GPIO.
 This section demonstrates how to connect and control a mini servo motor using the D3-G board.
 
 #### Step 1. Hardware Requirements
@@ -2484,7 +2484,7 @@ Entering 1 will rotate the servo clockwise to 180°, and entering 0 will rotate 
 
 To stop the script, enter q or press Ctrl+C. The script will then disable and unexport the PWM channel.
 
-**Note**: Ensure your servo motor supports a 50Hz PWM signal and operates within the 1ms–2ms duty pulse range for safe operation.
+**Note**: Ensure your servo motor supports a 50 Hz PWM signal and operates within the 1 ms–2 ms duty pulse range for safe operation.
 
 <br/><br/><br/><br/>
 
