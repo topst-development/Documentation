@@ -191,7 +191,7 @@ A Makefile is a key component of many build systems. It contains rules and direc
 To build the source code, follow these steps:  
 1. **Navigate to the Build Directory:**
     ```
-    cd build/tcc70xx/gcc/https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Source%20Code%20Structure.pnghttps://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Source%20Code%20Structure.png
+    cd build/tcc70xx/gcc/
     ```
 2. **Run the make command:**
     ```
