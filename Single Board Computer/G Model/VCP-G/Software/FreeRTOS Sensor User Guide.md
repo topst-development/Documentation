@@ -328,7 +328,6 @@ The following table shows pin mapping.
 ### 3.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
-#include <i2c.h>
 #include <lcd.h>
 static void Main_StartTask(void * pArg)
 {
@@ -459,6 +458,7 @@ The following table shows pin mapping.
 ### 4.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <dot_matrix.h>
 static void Main_StartTask(void * pArg)
 {
     {
@@ -476,6 +476,31 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
+#### Additional Configuration Notes
+To enable Dot Matrix testing via SPI, follow these steps:  
+**1. Enable dot_matrix.c in the Build System**  
+- Navigate to the following path:
+```
+$ vi ~/vcp/sources/dev.drivers/gpsb/rules.mk
+```
+- Locate the line:
+```
+#SRCS += dot_matrix.c
+```
+- Unannotate to activate the file:
+```
+SRCS += dot_matrix.c
+```
+**2. Check or Modify Dot Matrix Function Logic**  
+If you need to inspect or edit the logic for Dot Matrix initialization, control commands, or display patterns, refer to:
+```
+$ vi ~/vcp/sources/dev.drivers/gpsb/dot_matrix.c
+```
+**3. Configure SPI Channel and GPIOs**  
+The SPI channel and associated GPIO pins used by the Dot Matrix can be configured in:
+```
+$ vi ~/vcp/sources/dev.drivers/gpsb/dot_matrix.h
+```
 After editing the code, go to the following directory and run the build command:  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
@@ -483,9 +508,6 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the 8x8 LED dot matrix will display the letter "X", confirming that SPI communication with the MAX7219 driver is working correctly. 
-
-**NOTE**: If you need to change the SPI GPIO port or channel, make sure to update the definitions at the bottom of `gpsb.h`.
-To check the predefined display patterns or SPI transfer functions used for the dot matrix output, refer to the implementation at the bottom of `gpsb.c`.
 </br>
 
 # 5. VCP-G UART
