@@ -9,16 +9,16 @@ Specifically, this document provides guidance on FreeRTOS-based example applicat
 - PWM
 - Additional Example
 
+Refer to Figure 1.1 before using the VCP-G.
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp-g%20pinout%20Diagram.png"></p>
+<p align="center"><strong>Figure 1.1 VCP-G Pinout Diagram</strong></p>
+</br>
+
 To run each example, users should modify the `main.c` file located at:
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-After making the necessary changes, compile the project using the provided Makefile to generate the firmware binary.  
-For peripherals such as I2C or SPI, if you need to change the channel, port, or GPIO pin assignments, refer to the corresponding driver source files under the following directory:
-```
-$ ~/vcp/sources/dev.drivers/
-```
-Each peripheral module (e.g., i2c.c, i2c.h, spi.c, spi.h) contains the relevant configuration and initialization logic to help you adapt the code to your hardware setup.
+After making the necessary changes, compile the project using the provided Makefile to generate the firmware binary.
 </br>
 
 # 2. Digital In/Out
@@ -328,6 +328,8 @@ The following table shows pin mapping.
 ### 3.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <i2c.h>
+#include <lcd.h>
 static void Main_StartTask(void * pArg)
 {
     {
@@ -351,6 +353,32 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
+#### Additional Configuration Notes
+To enable LCD testing via I2C, follow these steps:  
+**1. Enable lcd.c in the Build System**  
+- Navigate to the following path:
+```
+~/vcp/sources/dev.drivers/i2c/rules.mk
+```
+- Locate the line:
+```
+#SRCS += lcd.c
+```
+- Unannotate to activate the file:
+```
+SRCS += lcd.c
+```
+**2. Check or Modify LCD Function Logic**
+If you need to inspect or edit the logic for LCD initialization, commands, or print functions, refer to:
+```
+~/vcp/sources/dev.drivers/i2c/lcd.c
+```
+**3. Configure I2C Channel and Port**
+The I2C channel number and associated port used by the LCD can be changed in:
+```
+~/vcp/sources/dev.drivers/i2c/lcd.h
+```
+
 After editing the code, go to the following directory and run the build command:  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
@@ -358,8 +386,6 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the LCD will display the message Hello TOPST on the screen, confirming that I2C communication is working properly.  
-
-**NOTE**: If you need to change the I2C channel or port, make sure to update the definitions at the bottom of `i2c.h`. For GPIO-to-channel mappings, refer to the implementation in `i2c.c`.
 </br>
 
 # 4. VCP SPI
