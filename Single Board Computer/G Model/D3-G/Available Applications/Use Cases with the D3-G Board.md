@@ -21,7 +21,7 @@ This document includes the following information:
 
 # 2. Input Device
 The D3-G supports two USB ports for connecting input devices.
-It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users to connect a mouse or keyboard to directly control the board. 
+It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to connect a mouse or keyboard to directly control the board. 
 
 **Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
@@ -106,7 +106,7 @@ python3 webcam.py
 CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
 It enables high-speed, low-power transmission of image data from the camera to the processor.
 
-The D3-G board features two MIPI CSI channels(ch0, ch1), allowing users to attach camera modules that support FFC (Flat Flexible Cable) connections.
+The D3-G board features two MIPI CSI channels(ch0, ch1), allowing you to attach camera modules that support FFC (Flat Flexible Cable) connections.
 Currently, the D3-G board supports only the ArduCam (5MP) and Raspberry Pi v1 Camera (5MP) modules. 
 
 **Note** : Currently, the D3-G board does not support simultaneous use of CSI channel 0 and CSI channel 1.
@@ -608,7 +608,7 @@ Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UAR
 
 ## 7.1 GPIO Digital In/Out
 
-The D3-G board supports digital input and output (GPIO) through its 40-pin header, enabling users to interact with external devices such as buttons, LEDs, sensors. 
+The D3-G board supports digital input and output (GPIO) through its 40-pin header, enabling you to interact with external devices such as buttons, LEDs, sensors. 
 
 <br/><br/>
 
@@ -2200,7 +2200,7 @@ Run the code with the following command.
 ```
 $ python3 dot_matrix_test.py
 ```
-This script initializes the SPI-connected MAX7219 dot matrix display and prompts the user to input a value. Depending on the input, a specific pattern is shown on the 8x8 LED matrix.
+This script initializes the SPI-connected MAX7219 dot matrix display and prompts you to input a value. Depending on the input, a specific pattern is shown on the 8x8 LED matrix.
 
 When the script runs, you will see:
 ```
