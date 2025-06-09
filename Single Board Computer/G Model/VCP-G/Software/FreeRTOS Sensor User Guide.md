@@ -97,6 +97,7 @@ The following table shows pin mapping.
 ### 2.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
 static void Main_StartTask(void * pArg)
 {
     (void)pArg;
@@ -217,6 +218,7 @@ The following table shows pin mapping.
 ### 2.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
 static void Main_StartTask(void *pArg)
 {
     (void)pArg;
@@ -328,6 +330,7 @@ The following table shows pin mapping.
 ### 3.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <i2c.h>
 #include <lcd.h>
 static void Main_StartTask(void * pArg)
 {
@@ -564,6 +567,7 @@ The following table shows pin mapping.
 ### 5.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <uart_example.h>
 void Main_StartTask(void *pArg)
 {
     (void)pArg;
@@ -655,6 +659,8 @@ The following table shows pin mapping.
 ### 6.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
+#include <pdm.h>
 void Main_StartTask(void * pArg)
 {
     PDMModeConfig_t pwm_cfg;
@@ -833,6 +839,7 @@ The following table shows pin mapping.
 ### 7.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
 #define PIR_SENSOR_PIN   GPIO_GPK(13)
 static void Main_StartTask(void * pArg)
 {
@@ -938,6 +945,7 @@ The following table shows pin mapping.
 ### 7.2.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
 #define PIR_SENSOR_PIN   GPIO_GPK(11)
 static void Main_StartTask(void * pArg)
 {
@@ -1035,6 +1043,7 @@ The following table shows pin mapping.
 ### 7.3.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
 #define GAS_SENSOR_PIN  GPIO_GPK(15)
 static void Main_StartTask(void * pArg)
 {
@@ -1130,6 +1139,7 @@ The following table shows pin mapping.
 ### 7.4.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
+#include <gpio.h>
 #define TOUCH_SENSOR_PIN GPIO_GPK(12) 
 void Main_StartTask(void * pArg)
 {
