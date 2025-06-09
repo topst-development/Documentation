@@ -576,6 +576,31 @@ void Main_StartTask(void *pArg)
     }
 }
 ```
+#### Additional Configuration Notes
+To enable UART testing, follow these steps:  
+**1. Enable uart_example.c in the Build System**  
+- Navigate to the following path:
+```
+$ vi ~/vcp/sources/dev.drivers/uart/rules.mk
+```
+- Locate the line:
+```
+#SRCS += uart_example.c
+```
+- Unannotate to activate the file:
+```
+SRCS += uart_example.c
+```
+**2. Check or Modify UART Function Logic**  
+If you need to inspect or edit the logic for UART initialization, data transmission/reception, or interrupt handling, refer to:
+```
+$ vi ~/vcp/sources/dev.drivers/uart/tcc70xx/uart_example.c
+```
+**3. Configure UART Channel and GPIOs**  
+The UART channel, baud rate, and associated TX/RX GPIO pins used for the UART test can be configured in:
+```
+$ vi ~/vcp/sources/dev.drivers/uart/uart_example.h
+```
 After editing the code, go to the following directory and run the build command:  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
@@ -583,9 +608,6 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the message "[UART] Hello from UART!" will appear once on the serial terminal, confirming that UART transmission from the VCP-G board is working properly via the FT232BL USB to TTL module.
-
-**NOTE**: If you want to review or modify the UART transmission logic, refer to the implementation at the bottom of `uart.c`.
-To change the TX or RX pin configuration, update the relevant definitions located at the bottom of `uart.h`.
 </br>
 
 # 6. VCP-G PWM
