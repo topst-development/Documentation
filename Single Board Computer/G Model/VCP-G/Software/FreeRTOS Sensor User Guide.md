@@ -358,7 +358,7 @@ To enable LCD testing via I2C, follow these steps:
 **1. Enable lcd.c in the Build System**  
 - Navigate to the following path:
 ```
-~/vcp/sources/dev.drivers/i2c/rules.mk
+$ vi ~/vcp/sources/dev.drivers/i2c/rules.mk
 ```
 - Locate the line:
 ```
@@ -371,12 +371,12 @@ SRCS += lcd.c
 **2. Check or Modify LCD Function Logic**
 If you need to inspect or edit the logic for LCD initialization, commands, or print functions, refer to:
 ```
-~/vcp/sources/dev.drivers/i2c/lcd.c
+$ vi ~/vcp/sources/dev.drivers/i2c/lcd.c
 ```
 **3. Configure I2C Channel and Port**
 The I2C channel number and associated port used by the LCD can be changed in:
 ```
-~/vcp/sources/dev.drivers/i2c/lcd.h
+$ vi ~/vcp/sources/dev.drivers/i2c/lcd.h
 ```
 
 After editing the code, go to the following directory and run the build command:  
