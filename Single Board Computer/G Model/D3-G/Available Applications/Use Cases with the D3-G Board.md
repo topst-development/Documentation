@@ -1,20 +1,20 @@
 # 1. Introduction 
-This document provides usage examples using the TOPST D3-G.   
-This document includes information on the following:
+This document provides examples of using TOPST D3-G.   
+This document includes the following information:
 - Input Device
   - Keyboard 
   - Mouse
 - Video Output
 - Camera Connection
   - MIPI CSI
-  - USB WebCam
+  - USB Webcam
 - Storage Connection
   - SD Card
   - SATA HDD
   - NVME M.2 SSD
   - USB Storage
 - Ethernet Connection
-- 40 Pin GPIO Header
+- 40-Pin GPIO Header
   - Available Sensor & Device
 
 <br/><br/><br/><br/>
@@ -23,7 +23,7 @@ This document includes information on the following:
 The D3-G supports two USB ports for connecting input devices.
 It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users to connect a mouse or keyboard to directly control the board. 
 
-***Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
+**Note**: The USB Type-C port on the board is reserved for firmware downloads and cannot be used to connect input devices.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
 <p align="center"><strong>Figure 2.1 Connect input device to D3-G </strong></p>
@@ -31,7 +31,7 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing users 
 <br/><br/><br/><br/>
 
 # 3. Video Output
-The D3-G board supports FHD monitors via its only DisplayPort (DP) output.
+The D3-G board supports FHD monitors through its only DisplayPort (DP) output.
 It also supports multi-display output using a daisy chain setup, allowing connection of up to two FHD monitors and one HD monitor simultaneously.
 
 **Note**: To use HDMI, a separate active converter adapter is required.
@@ -42,7 +42,7 @@ It also supports multi-display output using a daisy chain setup, allowing connec
 
 # 4. Camera Connection
 The D3-G board supports camera functionality, offering flexibility for various applications.
-You can connect either a MIPI CSI camera or a USB webcam, depending on your project requirements.
+You can connect either a MIPI CSI camera or a USB webcam depending on your project requirements.
 
 <br/><br/><br/>
 
@@ -53,7 +53,7 @@ You can test the webcam by following the steps below:
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
 <p align="center"><strong>Figure 4.1 Connect webcam to D3-G </strong></p><br/>
 
-2. Connect the input devices(mouse&keyboard)and monitor to D3-G.
+2. Connect the input devices (mouse and keyboard) and monitor to D3-G.
    
 3. Boot the D3-G board.
 
