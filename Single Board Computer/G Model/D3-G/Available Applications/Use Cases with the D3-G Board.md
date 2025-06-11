@@ -1,5 +1,5 @@
 # 1. Introduction 
-This document provides examples of using TOPST D3-G.   
+This document provides examples of using the TOPST D3-G.   
 This document includes the following information:
 - Input Device
   - Keyboard 
@@ -19,6 +19,7 @@ This document includes the following information:
 
 <br/><br/><br/><br/>
 
+
 # 2. Input Device
 The TOPST D3-G supports two USB ports for connecting input devices.
 It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to connect a mouse or keyboard to directly control the board. 
@@ -28,7 +29,6 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
 <p align="center"><strong>Figure 2.1 Connect Input Device to TOPST D3-G </strong></p>
 
-<br/><br/><br/><br/>
 
 # 3. Video Output
 The TOPST D3-G board supports FHD monitors only through its DisplayPort (DP) output.
@@ -38,30 +38,29 @@ It also supports multi-display output using a daisy chain setup, allowing a conn
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
 <p align="center"><strong>Figure 3.1 Connect Monitor to TOPST D3-G </strong></p>
 
-<br/><br/><br/><br/>
 
 # 4. Camera Connection
 The TOPST D3-G board supports camera functionality, offering flexibility for various applications.
 You can connect either a MIPI CSI camera or a USB webcam depending on your project requirements.
 
-<br/><br/><br/>
-
 ## 4.1 USB Webcam
 The TOPST D3-G board supports USB webcams, with resolutions up to Full HD (FHD).
 You can test the webcam by following these steps:
-1. Connect the USB camera to a USB port on the board.
+
+
+### Step 1. Connect the USB camera to a USB port on the board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
 <p align="center"><strong>Figure 4.1 Connect Webcam to TOPST D3-G </strong></p><br/>
 
-2. Connect the input devices (mouse and keyboard) and monitor to TOPST D3-G.
+### Step 2. Connect the input devices (mouse and keyboard) and monitor to TOPST D3-G.
    
-3. Boot the TOPST D3-G board.
+### Step 3. Boot the TOPST D3-G board.
 
-4. Check the available /dev/video devices.
+### Step 4. Check the available /dev/video devices.
 ```
 ls /dev/video*
 ```
-5. Verify the video output using OpenCV (or vutils).
+### Step 5. Verify the video output using OpenCV (or vutils).
 ```
 touch webcam.py
 chmod a+x webcam.py
@@ -93,14 +92,12 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
 ```
 ```
 # run webcom.py
 python3 webcam.py
 ```
 
-<br/><br/><br/>
 
 ## 4.2 MIPI CSI
 CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
@@ -111,15 +108,13 @@ Currently, the TOPST D3-G board supports only the ArduCam (5 MP) and Raspberry P
 
 **Note** : Currently, the TOPST D3-G board does not support simultaneous use of CSI channel 0 and CSI channel 1.
 
-<br/><br/>
-
 ### 4.2.1 ArduCam
 ArduCam is a versatile camera module designed for embedded systems and IoT applications. It supports various image sensors and interfaces, including MIPI CSI, making it suitable for integration with development boards like the TOPST D3-G.
 The 5 MP ArduCam module supported by the TOPST D3-G offers decent image quality and is commonly used for basic computer vision tasks, streaming, and camera-based AI applications. Its compatibility with FFC cables makes it easy to connect to the TOPST D3-G’s CSI interface. 
 
 The specifications for the ArduCam module are as follows.
 
-| Spec                     | Description                                 |
+| Specification                     | Description                                 |
 | ------------------------ | ------------------------------------------- |
 | Sensor                   | OV5647 (5 Megapixel)                        |
 | Resolution               | 2592 × 1944 (Full 5 MP)                      |
@@ -127,10 +122,10 @@ The specifications for the ArduCam module are as follows.
 | Interface                | MIPI CSI-2                                  |
 | Frame Rate               | Up to 30fps at 1080p, 60fps at 720p         |
 | Lens Mount               | Fixed-focus lens (standard)                 |
-| Field of View (FOV)      | Approx. 54° – 70° (varies by model)         |
+| Field of View (FOV)      | Approximately 54° – 70° (varies by model)         |
 | Connection Type          | Flat Flexible Cable (FFC)                   |
 | Operating Voltage        | 3.3V (typical)                              |
-| Form Factor              | Compact PCB, up to 25 mm x 24 mm                   |
+| Form Factor              | Compact PCB, approximately 25 mm x 24 mm                   |
 | Compatibility            | Raspberry Pi and TOPST D3-G (through MIPI CSI-2 port)    |
 | Additional Features      | Low power consumption, plug-and-play module |
 
@@ -139,29 +134,28 @@ You can test the ArduCam by following these steps:
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/arducam.png" width="400"></p>
 <p align="center"><strong>Figure 4.2 ArduCam </strong></p><br/>
 
-1. Connect ArduCam to TOPST D3-G MIPI CSI 0 as shown in Figure 4.3.
+#### Step 1. Connect ArduCam to TOPST D3-G MIPI CSI 0 as shown in Figure 4.3.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 4.3 Connect ArduCam to TOPST D3-G </strong></p> <br/>
 
-2. After the ArduCam is connected, you can verify the video stream using the following GStreamer command on the TOPST D3-G:
+#### Step 2. After the ArduCam is connected, you can verify the video stream using the following GStreamer command on the TOPST D3-G:
 ```
 $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
 ```
+
 This command captures video from the CSI-connected ArduCam, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
 Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
-<br/><br/>
 
 ### 4.2.2 Raspberry Pi v1 Camera
-
 The Raspberry Pi v1 Camera Module is a compact 5 MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board through a MIPI CSI-2 interface using a Flat Flexible Cable (FFC).
 
 Designed originally for the Raspberry Pi series, this module is also compatible with the TOPST D3-G board, making it a reliable choice for basic camera applications such as image capture, video recording, and computer vision projects.
 
-The specifications for the ArduCam module are as follows.
+The specifications for the Raspberry Pi v1 camera module are as follows.
 
-| Spec                | Description                              |
+| Specification                | Description                              |
 | ------------------- | ---------------------------------------- |
 | Sensor              | OmniVision OV5647                        |
 | Resolution          | 2592 × 1944 (5 MP)                        |
@@ -174,30 +168,27 @@ The specifications for the ArduCam module are as follows.
 | Board Dimensions    | 25 mm x 24 mm                              |
 | Compatibility       | Raspberry Pi and TOPST D3-G (through MIPI CSI-2 port) |
 
-
-You can test the ArduCam by following these steps:
+You can test the Raspberry Pi v1 camera by following these steps:
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam.jpg" width="400"></p>
 <p align="center"><strong>Figure 4.4. Raspberry Pi v1 Camera </strong></p><br/>
 
-
-1. Connect Raspbery pi v1 camera to TOPST D3-G MIPI CSI 1 as shown in Figure 4.5.
+#### Step 1. Connect Raspbery Pi v1 camera to TOPST D3-G MIPI CSI 1 as shown in Figure 4.5.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 4.5 Connect Raspberry Pi v1 Camera to TOPST D3-G </strong></p> <br/>
 
-2. After the Raspberry pi camera is connected, you can verify the video stream using the following GStreamer command on the TOPST D3-G:
+#### Step 2. After the Raspberry Pi camera is connected, you can verify the video stream using the following GStreamer command on the TOPST D3-G:
 ```
 $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
 ```
-This command captures video from the CSI-connected Raspberry pi camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
+
+This command captures video from the CSI-connected Raspberry Pii camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
 Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
-<br/><br/><br/><br/>
 
 # 5. Storage Connection
-This chapter covers how to connect the TOPST D3-G board to various storage devices.
-Supported storage options include USB drives, SD cards, and external storage through PCIe.
+This chapter covers how to connect the TOPST D3-G board to various storage devices. Supported storage options include USB drives, SD cards, and external storage through PCIe.
 
 <br/><br/><br/>
 
@@ -205,40 +196,38 @@ Supported storage options include USB drives, SD cards, and external storage thr
 The TOPST D3-G board supports USB storage devices through its USB 2.0 and USB 3.0 Type-A ports.
 To connect a USB drive:
 
-1. Plug the USB drive into one of the available USB Type-A ports on the TOPST D3-G.
+### Step 1. Plug the USB drive into one of the available USB Type-A ports on the TOPST D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/usb%20storage%20connection%20with%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 5.1 Connect USB Storage to TOPST D3-G </strong></p> <br/>
 
-2. After it is connected, the device is typically recognized as /dev/sda1, /dev/sdb1, and so on, depending on the system state.
+### Step 2. After it is connected, the device is typically recognized as /dev/sda1, /dev/sdb1, and so on, depending on the system state.
 
-3. You can manually mount the USB drive using the following command:
+### Step 3. You can manually mount the USB drive using the following command:
    ```
    sudo mount /dev/sda1 /mnt
    ```
 
-<br/><br/><br/>
 
 ## 5.2 SD Card
 The TOPST D3-G board includes a microSD card slot that supports standard SDHC/SDXC cards.
 To use an SD card with the board:
 
-1. Insert the microSD card into the SD card slot on the TOPST D3-G.
+### Step 1. Insert the microSD card into the SD card slot on the TOPST D3-G.
 
-2. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
+### Step 2. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 5.2 Connect SD Card to TOPST D3-G </strong></p> <br/>
 
-3. After it is inserted, the system typically recognizes the SD card as /dev/mmcblk1p1 or a similar device node.
+### Step 3. After it is inserted, the system typically recognizes the SD card as /dev/mmcblk1p1 or a similar device node.
   ```
   $ls /dev/mmcblk*
   ```
-4. To mount the SD card manually, use the following command:
+### Step 4. To mount the SD card manually, use the following command:
 ```
 $ sudo mount /dev/mmcblk1p1 /mnt 
 ```
-5. After mounting, you can access the SD card contents under the /mnt directory.
+### Step 5. After mounting, you can access the SD card contents under the /mnt directory.
 
-<br/><br/><br/>
 
 ## 5.3 SATA HDD
 
@@ -276,8 +265,8 @@ Ubuntu 22.04.5 LTS TOPST ttyAMA0
 
 TOPST login: 
 ```
-#### Step 3. Check SATA HDD Recognition
 
+#### Step 3. Check SATA HDD Recognition
 ```
 root@TOPST:~# lspci
 00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
@@ -322,6 +311,7 @@ $ mkdir -p /mnt/sata
 
 $ mount /dev/sdb1 /mnt/sata
 ```
+
 #### Step 5. Execution Result
 This output confirms that the SATA SSD partition (/dev/sdb1) has been successfully formatted with the ext4 file system and mounted at /mnt/sata.
 The **df -h** command shows that the device is now recognized and available for use by the system.
@@ -340,10 +330,8 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 /dev/sdb1       234G   28K  222G   1% /mnt/sata
 ```
 
-<br/><br/><br/>
 
 ## 5.4 NVME M.2 SSD
-
 The TOPST D3-G board supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
 
 #### Step 1. Connect the SSD
@@ -377,8 +365,8 @@ Ubuntu 22.04.5 LTS TOPST ttyAMA0
 
 TOPST login: 
 ```
-#### Step 3. Check SSD Recognition
 
+#### Step 3. Check SSD Recognition
 ```
 root@TOPST:~# lspci
 00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
@@ -423,6 +411,7 @@ $ mkdir -p /mnt/nvme
 
 $ mount /dev/nvme0n1p1 /mnt/nvme
 ```
+
 #### Step 5. Execution Result
 This output confirms that the NVMe SSD device (/dev/nvme0n1p1) has been successfully detected and mounted by the system at /mnt/nvme.
 ```
@@ -439,8 +428,6 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 /dev/nvme0n1p1  234G   28K  222G   1% /mnt/nvme
 ```
 
-</br></br><br/><br/>
-
 
 # 6. Ethernet Connection
 The TOPST D3-G board supports Ethernet connectivity through its onboard J2C Ethernet port. This allows the board to communicate with local networks or the internet using standard TCP/IP protocols. Ethernet is commonly used for deploying applications that require remote access, data streaming, or software updates.
@@ -450,18 +437,14 @@ The TOPST D3-G board supports Ethernet connectivity through its onboard J2C Ethe
 ## 6.1 Network Connection Through Router
 This method connects the TOPST D3-G board to a local network using a standard router. The board can obtain an IP address automatically through DHCP or be configured with a static IP address.
 
-<br/><br/>
-
-### 6.1.1 Create the Network Configuration File
+### 6.1.1 Create Network Configuration File
 
 1. Dynamic IP through DHCP
-
 If your network provides a DHCP server (for example, a router or ICS-enabled Windows PC), no file editing is necessary. The system automatically obtains an IP address as soon as the Ethernet cable is connected.
 
-You can simply plug in the cable and start using the network right away. Proceed to Chatper 6.1.3 Verify Network Connectivity.
+You can simply plug in the cable and start using the network right away. Proceed to Chapter 6.1.3 Verify Network Connectivity.
 
 2. Static IP Configuration
-
 If you prefer to assign a static IP address (for example, when using direct PC connection or no DHCP server is available), edit the same file with the following content:
 ```
 $ vi /etc/systemd/network/20-wired.network
@@ -477,16 +460,14 @@ DNS=8.8.8.8
 
 This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
 
-<br/><br/>
 
-### 6.1.2 Restart the Network Service
+### 6.1.2 Restart Network Service
 Apply the new network configuration by restarting the systemd-networkd service:
 
 ```
 sudo systemctl restart systemd-networkd
 ```
 
-<br/><br/>
 
 ### 6.1.3 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/router%20connection.png"width="500"></p>
@@ -504,15 +485,12 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
  
 ```
 
-<br/><br/><br/>
 
-## 6.2 Network Sharing with the Host PC
+## 6.2 Network Sharing with Host PC
 You can share your PC's internet connection with the TOPST D3-G board without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
 
-<br/><br/>
-
 ### 6.2.1 Host PC Network Configuration
-Control Panel → Network and Internet → Network Connectivity → Set Ethernet
+- Control Panel → Network and Internet → Network Connectivity → Set Ethernet
  
 1. Locate the network adapter connected to the internet (for example, Wi-Fi), right-click on it, and select **Properties**.
 
@@ -533,20 +511,14 @@ Control Panel → Network and Internet → Network Connectivity → Set Ethernet
  
 5. Click **OK** to save the settings.
 
- 
-<br/><br/>
 
 ### 6.2.2 Create Network Configuration File 
-
 1. Dynamic IP Through DHCP
-
 If your network provides a DHCP server (for example, a router or ICS-enabled Windows PC), no file editing is necessary. The system automatically obtains an IP address as soon as the Ethernet cable is connected.
 
 You can simply plug in the cable and start using the network right away. Proceed to Chapter 6.2.4 Verify Network Connection.
 
-
 2. Static IP Configuration
-
 If you prefer to assign a static IP address (for example, when using direct PC connection or no DHCP server is available), edit the same file with the following content:
 ```
 $ vi /etc/systemd/network/20-wired.network
@@ -560,9 +532,7 @@ Gateway=192.168.137.1
 DNS=8.8.8.8
 ```
 This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
- 
 
-<br/><br/>
 
 ### 6.2.3 Restart Network Service
 Apply the new network configuration by restarting the systemd-networkd service:
@@ -570,12 +540,11 @@ Apply the new network configuration by restarting the systemd-networkd service:
 ```
 sudo systemctl restart systemd-networkd
 ```
- 
-<br/><br/>
+
 
 ### 6.2.4 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/host%20pc%20ethernet%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 6.5 Nework Sharing with Host PC</strong></p>
+<p align="center"><strong>Figure 6.5 Network Sharing with Host PC</strong></p>
 <br/>
 
 Test the internet connection by pinging Google's public DNS server:
@@ -590,8 +559,6 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 ```
 
 
-<br/><br/><br/><br/>
-
 # 7. 40-pin GPIO Header
 The TOPST D3-G board features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
 This header is compatible with general-purpose input/output (GPIO) operations and can be used to connect sensors, LEDs, buttons, and other peripheral devices.
@@ -601,16 +568,10 @@ Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UAR
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
 <p align="center"><strong>Figure 7.1 40-pin GPIO Header Pinmap of TOPST D3-G </strong></p> <br/>
 
-
 **Note**: Refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
 
-<br/><br/><br/>
-
 ## 7.1 GPIO Digital In/Out
-
 The TOPST D3-G board supports digital input and output (GPIO) through its 40-pin header, enabling you to interact with external devices such as buttons, LEDs, and sensors. 
-
-<br/><br/>
 
 ### 7.1.1 LED
 One of the simplest and most common GPIO output examples is controlling an LED.  
@@ -632,7 +593,6 @@ This section demonstrates how to connect and use from LED sensor using the TOPST
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png"></p>
 
 <p align="center"><strong>Figure 7.2 TOPST D3-G GPIO LED Circuit Schematic </strong></p> <br/>
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -749,6 +709,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 #### Step 4. Execution Result
 Run the code with the following command.
 
@@ -764,7 +725,6 @@ In either case, the pin will be properly released and cleaned up.
 
 **Note**: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (for example, 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
 
-<br/><br/><br/>
 
 ### 7.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
@@ -786,7 +746,6 @@ This section demonstrates how to connect and use from a basic button module usin
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/button_circuit.png"></p> 
 <p align="center"><strong>Figure 7.3 TOPST D3-G GPIO Button Circuit Schematic</strong></p>
 
-
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
 
@@ -806,9 +765,7 @@ The following table shows pin mapping.
   </table>
 </div>
 
-
 #### Step 3. How to excute
-
 To monitor the button input connected to GPIO88 on the TOPST D3-G board, run the following code:
 
 ```
@@ -874,7 +831,6 @@ if __name__ == "__main__":
     main()
 ```
 
-
 #### Step 4. Execution Result
 Run the code with the following command.
 ```
@@ -889,7 +845,6 @@ When the script is terminated, GPIO88 will be automatically unexported and clean
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the TOPST D3-G board based on the 40-pin header pinout.
 Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 
-<br/><br/><br/>
 
 ### 7.1.3 Touch Sensor
 A touch sensor can be used to detect human touch as a digital input signal through GPIO.
@@ -902,7 +857,6 @@ This section demonstrates how to connect and read input from a basic touch senso
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
-
 #### Step 2. Example Circuit
 - Touch sensor
     - SIG pin of the touch sensor is connected to pin 88 on the TOPST D3-G board.
@@ -912,7 +866,6 @@ This section demonstrates how to connect and read input from a basic touch senso
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/touch%20circuit.png"></p>
 <p align="center"><strong>Figure 7.4 TOPST D3-G GPIO Touch Sensor Circuit Schematic</strong></p>
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -942,7 +895,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to execute
 To monitor the touch sensor connected to GPIO88 on the D3-G board, simply run the following code:
@@ -1011,7 +963,6 @@ if __name__ == "__main__":
     main()
 ```
 
-
 #### Step 4. Execution Result
 Run the code with the following command.
 
@@ -1035,20 +986,17 @@ When the script is terminated, GPIO88 will be automatically unexported and clean
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the TOPST D3-G board based on the 40-pin header pinout.
 Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 
-<br/><br/><br/>
 
 ### 7.1.4 Vibration Detection Sensor
 A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal through GPIO.
 This section demonstrates how to connect and detect input from a basic vibration sensor module using the TOPST D3-G board.
 
 #### Step 1. Hardware Requirements
-
 - TOPST D3-G board (x1)
 - Vibration Detection Sensor (x1)
 - Female to female jumper wire (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
-
 
 #### Step 2. Example Circuit
 - Vibration Detection Sensor
@@ -1056,10 +1004,8 @@ This section demonstrates how to connect and detect input from a basic vibration
     - GND pin of the Vibration Detection Sensor is connected to the GND on the TOPST D3-G board.
     - DIN pin of the Vibration Detection Sensor is connected to the 88 pin on the TOPST D3-G board.
 
-
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/vibr%20circuit.png"></p>
 <p align="center"><strong>Figure 7.5 TOPST D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -1178,21 +1124,18 @@ Upon termination, GPIO88 is automatically unexported and cleaned up.
 
 **Note**: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Refer to the TOPST D3-G pinout before choosing a GPIO number.
 
-<br/><br/><br/>
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
 An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal through GPIO.
 This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the TOPST D3-G board.
 
 #### Step 1. Hardware Requirements
-
 - TOPST D3-G board (x1)
 - Breadboard (x1)
 - Infrared Sensor (x1)
 - Male to female jumper wire (x5)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
-
 
 #### Step 2. Example Circuit
 - Infrared Sensor
@@ -1205,7 +1148,6 @@ This section demonstrates how to connect and read input from the SZH-SSBH-002 in
   <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-002_circuit.png">
 </p> 
 <p align="center"><strong>Figure 7.6 IR Sensor Experiment Circuit</strong></p>
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -1235,7 +1177,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to execute
 To monitor the IR sensor connected to GPIO89 on the TOPST D3-G board, run the following code:
@@ -1325,12 +1266,10 @@ When the script is terminated, GPIO89 is automatically unexported and cleaned up
 **Note**: GPIO89 is used as an example in this script.
 You may use any available GPIO pin based on the 40-pin header of the TOPST D3-G board. Refer to the official pinout diagram for accurate pin selection.
 
-<br/><br/><br/>
 
 ### 7.1.6 Photoresistor (SZH-SSBH-011)
 A photoresistor can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold through GPIO.
 This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor using the TOPST D3-G board.
-
 
 #### Step 1. Hardware Requirements
 - TOPST D3-G board (x1)
@@ -1351,12 +1290,8 @@ This section demonstrates how to connect and read input from the SZH-SSBH-011 ph
     - (+) pin of the LED is connected to the GND on the TOPST D3-G board.
     - (-) pin of the LED is connected to 83 pin on the TOPST D3-G board.
 
-
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/circuit.png"></p>
 <p align="center"><strong>Figure 7.7 Photoresistor Experiment Circuit</strong></p>
-
-
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -1483,7 +1418,6 @@ if __name__ == "__main__":
     main()
 ```
 
-
 ### Step 4. Execution Result
 Run the code with the following command.
 ```
@@ -1508,8 +1442,6 @@ When the script is terminated, both GPIO pins are automatically unexported and c
 **Note**: GPIO83 and GPIO89 are used in this example. You may use any available GPIO pin based on the 40-pin header layout of the TOPST D3-G board. Refer to the official pinout diagram for accurate pin selection.
 
 
-<br/><br/><br/>
-
 ### 7.1.7 Air Pollution Detection Sensor
 An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal through GPIO.
 This section demonstrates how to connect and read input from an air pollution detection sensor using the TOPST D3-G board.
@@ -1528,12 +1460,8 @@ This section demonstrates how to connect and read input from an air pollution de
     - GND pin of the Air Pollution Detection Sensor is connected to the GND on the TOPST D3-G board.
     - DO pin of the Air Pollution Detection Sensor is connected to 88 pin on the TOPST D3-G board.
 
-
-
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/gas%20circuit.png"></p>
 <p align="center"><strong>Figure 7.8 Air Pollution Detection Sensor Experiment Circuit</strong></p>
-
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -1563,7 +1491,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to Execute
 Run the following Python script to monitor gas detection using the GPIO88 pin:
@@ -1652,7 +1579,6 @@ When the script is terminated, GPIO88 is automatically unexported and cleaned up
 
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin based on the 40-pin header layout of the TOPST D3-G board. Refer to the official pinout diagram for accurate pin selection.
 
-<br/><br/><br/>
 
 ### 7.1.8 Ultrasonic Sensor
 An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal through GPIO.
@@ -1665,7 +1591,6 @@ This section demonstrates how to connect and read input from an ultrasonic senso
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
-
 #### Step 2. Example Circuit
 - Ultrasonic Sensor
     - VCC pin of the Ultrasonic Sensor is connected to the 5V pin on the TOPST D3-G board.
@@ -1673,10 +1598,8 @@ This section demonstrates how to connect and read input from an ultrasonic senso
     - TRIG pin of the Ultrasonic Sensor is connected to 82 pin on the TOPST D3-G board.
     - ECHO pin of the Ultrasonic Sensor is connected to 88 pin on the TOPST D3-G board.
 
-
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"></p>
 <p align="center"><strong>Figure 7.9 Ultrasonic Sensor Experiment Circuit</strong></p>
-
 
 ##### Step 2.1 Pin Mapping
 The following table shows pin mapping.
@@ -1711,7 +1634,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to Execute
 Run the following Python script to measure distance using the ultrasonic sensor:
@@ -1782,9 +1704,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
-
 
 #### Step 4. Execution Result
 Run the code with the following command.
@@ -1803,7 +1723,6 @@ When the script is terminated, GPIO82 and GPIO88 are automatically unexported an
 
 **Note**: GPIO82 and GPIO88 are used as examples. You may use any available GPIO pin based on the 40-pin header layout of the TOPST D3-G board. Refer to the official pinout diagram for accurate pin selection. Also, ensure your ECHO pin's voltage level is safe for the board (some modules output 5V and may need a voltage divider or level shifter).
 
-<br/><br/><br/>
 
 ## 7.2 I2C
 The TOPST D3-G board provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.
@@ -1811,8 +1730,6 @@ Inter-integrated Circuit (I2C) is a two-wire communication protocol consisting o
 
 I2C communication follows a master-slave architecture, where one master device controls the communication and up to 127 slave devices can be connected on the same bus.
 The SDA line is used for both transmitting and receiving data, while the SCL line synchronizes the timing of data transfer. This synchronous communication model allows devices to exchange information in a coordinated, clock-driven manner.
-
-<br/><br/><br/>
 
 ### 7.2.1 1602A LCD Display
 The 1602A LCD is a character display module commonly used in embedded systems.
@@ -1825,7 +1742,6 @@ On the TOPST D3-G board, the LCD's SDA and SCL lines can be connected to GPIO pi
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 Make sure the LCD module has an I2C backpack
-
 
 #### Step 2. Example Circuit
 - I2C LCD Module
@@ -1871,7 +1787,6 @@ The following table shows pin mapping.
   </table>
 </div>
 
-
 #### Step 3. How to execute
 Install required Python libraries first:
 ```
@@ -1904,7 +1819,6 @@ def main():
         lcd.clear()
 if __name__ == "__main__":
     main()
-
 ```
 
 #### Step 4. Execution Result
@@ -1928,7 +1842,6 @@ To stop the script, press **[Ctrl+C]**.
 **Note** : GPIO82 and GPIO81 are used for I2C by default on the TOPST D3-G board.
 Make sure the I2C address (0x27) matches your specific LCD module. Use **i2cdetect -y 3** to scan I2C devices if needed.
 
-<br/><br/><br/>
 
 ## 7.3 SPI
 The TOPST D3-G board supports Serial Peripheral Interface (SPI) communication through a 40-pin GPIO header, enabling data exchange between external devices and the board.
@@ -1936,8 +1849,6 @@ The TOPST D3-G board supports Serial Peripheral Interface (SPI) communication th
 SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: Master Out Slave In (MOSI), Master In Slave Out (MISO), Serial Clock (SCLK), and Chip Select (CS).
 
 Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicated CS line for each slave device. This one-to-many structure makes SPI fast and straightforward to implement, but it can require more physical wiring when multiple devices are involved.
-
-<br/><br/><br/>
 
 ### 7.3.1 Dot Matrix
 8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the TOPST D3-G board, the dot matrix module can be controlled through SPI using a driver chip such as the MAX7219.
@@ -1951,7 +1862,6 @@ The MAX7219 handles row and column scanning internally, allowing the microcontro
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 Make sure the LCD module has an I2C backpack
-
 
 #### Step 2. Example Circuit
 - Dot Matrix
@@ -2001,7 +1911,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to execute
 The following Python script shows how to directly control the MAX7219 through /dev/spidev3.0 using low-level fcntl calls. This method is suitable for devices without external SPI libraries:
@@ -2191,8 +2100,8 @@ def main():
  
 if __name__ == "__main__":
     main()
-
 ```
+
 #### Step 4. Execution Result
 Run the code with the following command.
 ```
@@ -2215,12 +2124,9 @@ On termination, the SPI device is safely closed, and the LED matrix stops updati
 
 **Note**: Ensure that /dev/spidev3.0 exists and the wiring matches the pin mapping table. Also, power the MAX7219 module with a stable 5V source.
 
-<br/><br/><br/>
 
 ## 7.4 PWM
 Pulse Width Modulation (PWM) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The TOPST D3-G board supports PWM through the sysfs interface in Linux.
-
-<br/><br/><br/>
 
 ### 7.4.1 LED Brightness Control
 This example demonstrates controlling an LED's brightness using PWM on the TOPST D3-G board.
@@ -2233,12 +2139,10 @@ This example demonstrates controlling an LED's brightness using PWM on the TOPST
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
 
-
 #### Step 2. Example Circuit
 - LED
     - (+) pin of the LED is connected to the 89 on the TOPST D3-G board.
     - (-) pin of the LED is connected to GND on the TOPST D3-G board.
-
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png"></p>
 <p align="center"><strong>Figure 7.12 TOPST D3-G LED Circuit Schematic  </strong></p>
@@ -2266,7 +2170,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to execute
 To operate the LED (PWM) connected to GPIO89 on the TOPST D3-G board, run the following code:
@@ -2332,8 +2235,8 @@ except KeyboardInterrupt:
 finally:
     pwm_cleanup()
     print("PWM disabled and cleaned up.")
-
 ```
+
 #### Step 4. Execution Result
 Run the code with the following command.
 ```
@@ -2351,7 +2254,6 @@ To stop the script, press **[Ctrl+C]**.
 
 **Note**: Ensure the PWM channel is not already in use and that the TOPST D3-G board supports hardware PWM on the selected GPIO. If PWM does not activate, verify the export, period, and duty_cycle settings in /sys/class/pwm/.
 
-<br/><br/><br/>
 
 ### 7.4.2 Mini Servo Motor
 A mini servo motor can be used to control precise angular movement based on a Pulse Width Modulation (PWM) signal through GPIO.
@@ -2369,7 +2271,6 @@ This section demonstrates how to connect and control a mini servo motor using th
     - VCC pin of the Servo Motor is connected to 5V on the TOPST D3-G board.
     - GND pin of the Servo Motor is connected to GND on the TOPST D3-G board.
     - SIG pin of the Servo Motor is connected to the 89 on the TOPST D3-G board.
-
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/motor_circuit.png"p>
 <p align="center"><strong>Figure 7.13 TOPST D3-G Servo Motor Circuit Schematic  </strong></p>
@@ -2402,7 +2303,6 @@ The following table shows pin mapping.
       </tr>
   </table>
 </div>
-
 
 #### Step 3. How to execute
 The following Python script shows how to directly control a mini servo motor using PWM through the sysfs interface on the TOPST D3-G board. This method requires no external libraries and provides fine-grained control over angle-based positioning.
@@ -2468,6 +2368,7 @@ if __name__ == "__main__":
         pwm_cleanup()
         print("PWM cleaned up.")
 ```
+
 #### Step 4. Execution Result
 Run the code with the following command.
 ```
@@ -2483,9 +2384,3 @@ Entering 1 rotates the servo clockwise to 180°, and entering 0 rotates the serv
 To stop the script, enter **[q]** or press **[Ctrl+C]**. The script will then disable and unexport the PWM channel.
 
 **Note**: Ensure your servo motor supports a 50 Hz PWM signal and operates within the 1 ms to 2 ms duty pulse range for safe operation.
-
-<br/><br/><br/><br/>
-
-
-
-
