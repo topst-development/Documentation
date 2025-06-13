@@ -22,7 +22,7 @@ If your host OS is Ubuntu, proceed to Chapter 2.2.
 </br><br/>
 
 ### 2.1.1 Install WSL2 Ubuntu
-1. Excute Windows PowerShell with "**Run with administrator privileges**"
+1. Excute Windows PowerShell with "**Run with administrator privileges**".
 2. Enable the WSL2 System.
     ```
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -39,7 +39,7 @@ If your host OS is Ubuntu, proceed to Chapter 2.2.
 
     * If you need to download the Linux kernel update package, download the latest package [here](https://learn.microsoft.com/ko-kr/windows/wsl/install-manual).
 
-6. Choose any username during the Ubuntu installation
+6. Choose any username during the Ubuntu installation.
 </br><br/>
 
 ### 2.1.2 Accessing Ubuntu via WSL2
@@ -78,7 +78,7 @@ After installing SSH and Samba, configure each program as needed for your enviro
 
 ### 2.1.4 Install Utilities
 
-Use the folling commands to install all required utilities at once. To use Yocto Project, the following utilities must be installed on the Host PC  (individual computer or development server).
+Use the following commands to install all required utilities at once. To use Yocto Project, the following utilities must be installed on the Host PC  (individual computer or development server).
 
 
 ```
@@ -419,7 +419,7 @@ topst-build.sh is a shell script that sets up the core environment required to b
 
 
 ```
-$ . poky/meta-topst/topst-build.sh 
+$ source poky/meta-topst/topst-build.sh 
 Choose MACHINE
   1. ai-g-topst
   2. d3-g-topst-main
@@ -478,7 +478,7 @@ $ bitbake telechips-topst-image
 
 <br/><br/><br/>
 
-## 3.7 Make FWDN Image
+## 3.7 Make Firmware Downloader (FWDN) Image 
 
 This option combines the binaries into a single image for the D3-G platform image.
 
