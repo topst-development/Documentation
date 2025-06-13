@@ -5,7 +5,7 @@ This document includes information on the following:
 - Setting Host Environment  
 - Image Build Guide  
 - Firmware Download Guide 
-- Connecting the D3-G with a PC
+- Connecting the D3-G board with a PC
 
 <br/><br/><br/><br/>
 
@@ -414,7 +414,7 @@ The build image is created in the following path:
 
 - {TOPST_PATH}/build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main
 
-topst-build.sh is a shell script that sets up the core environment required to build images for D3-G and AI-G boards. Execute the following commands, and select option 2 to prepare the build environment for installing the main OS on the D3-G.
+topst-build.sh is a shell script that sets up the core environment required to build images for D3-G and AI-G boards. Execute the following commands, and select option 2 to prepare the build environment for installing the main OS on the D3-G board.
 
 
 
@@ -462,7 +462,7 @@ Telechips common targets are:
     meta-toolchain-topst(Application Development Toolkit)
 
 
-You can also run generated TOSPT images on TOPST board
+You can also run generated TOSPT images on D3-G board
 
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
@@ -602,7 +602,7 @@ The downloading sequence of ***FWDN*** is as follows:
 
 <br/><br/><br/>
 
-## 4.2 Connect D3-G and Host PC with USB Boot Mode
+## 4.2 Connect D3-G board and Host PC with USB Boot Mode
 Firmware Downloader (FWDN) writes a ROM image to the D3-G through USB communication with the Host PC. 
 
 The D3-G has one Boot Mode button and supports two types of boot modes. This guide focuses on the FWDN mode.
@@ -615,13 +615,13 @@ The D3-G has one Boot Mode button and supports two types of boot modes. This gui
 
 
 
-To use FWDN, connect the D3-G to the Host PC as follows: 
+To use FWDN, connect the D3-G board to the Host PC as follows: 
 
 1. Check that VTC driver is installed on the Host PC. If the VTC driver is not installed, install it as shown in Chapter 1.2.1.  
 
 2. Prepare one USB Type-C cable. 
 
-3. To enter USB boot mode, connect the power cable to the D3-G while pressing the FWDN switch.
+3. To enter USB boot mode, connect the power cable to the D3-G board while pressing the FWDN switch.
    - For more details, see **"2. Boot Mode"** under the Hardware section of the sidebar.
 
 4. Connect the USB Type-C cable to the USB Type-C FWDN port on the D3-G board and the Host PC. 
@@ -629,7 +629,7 @@ To use FWDN, connect the D3-G to the Host PC as follows:
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Hardware/connect%20to%20d3g%20to%20host%20pc%20using%20c%20type.png">
 </p>
-<p align="center"><strong>Figure 4.1 Connection to D3-G to Host PC Using USB C-Type Cable </strong></p>
+<p align="center"><strong>Figure 4.1 Connection to D3-G board to Host PC Using USB C-Type Cable </strong></p>
 
 <br/><br/>
 
@@ -791,13 +791,13 @@ You’re ready to boot the D3-G. Refer to Chapter 4 to start communicating with 
 
 <br/><br/><br/><br/>
 
-# 5. Connecting the D3-G with a host PC
+# 5. Connecting the D3-G board with a host PC
 
 This chapter explains how to connect the host PC to the D3-G board through UART for firmware download and serial communication.
 
 <br/><br/><br/>
 
-## 5.1 D3-G Connection with UART 
+## 5.1 D3-G board Connection with UART 
 
 Follow these steps and verify that the firmware download is successfully completed by using the UART connection. 
 
@@ -855,7 +855,7 @@ For information on releases of other OS, refer to the TOPST community.  
 
 ## 6.2 Firmware Upload to D3-G
 Run the “fwdn_ubuntu.batch” file. 
-Refer to Chapter 5 for how to upload the Ubuntu image to the D3-G board.
+Refer to Chapter 5 for how to upload the Ubuntu image to the D3-G.
 After completing FWDN, remove the USB Type-C cable from the FWDN port and remove the power cable. 
 
 <br/><br/><br/>
