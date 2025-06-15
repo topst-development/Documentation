@@ -27,7 +27,7 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to
 **Note**: The USB Type-C port on the D3-G is reserved for firmware downloads and cannot be used to connect input devices.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
-<p align="center"><strong>Figure 2.1 Connect Input Device to D3-G board </strong></p>
+<p align="center"><strong>Figure 2.1 Connect Input Device to D3-G board </strong></p><br/><br/><br/><br/>
 
 
 # 3. Video Output
@@ -38,10 +38,13 @@ It also supports multi-display output using a daisy chain setup, allowing a conn
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
 <p align="center"><strong>Figure 3.1 Connect Monitor to D3-G board </strong></p>
 
+<br/><br/><br/><br/>
 
 # 4. Camera Connection
 The D3-G supports camera functionality, offering flexibility for various applications.
 You can connect either a MIPI CSI camera or a USB webcam depending on your project requirements.
+
+<br/><br/><br/>
 
 ## 4.1 USB Webcam
 The D3-G supports USB webcams, with resolutions up to Full HD (FHD).
@@ -54,12 +57,19 @@ You can test the webcam by following these steps:
 
 ### Step 2. Connect the input devices (mouse and keyboard) and monitor to D3-G.
    
+<br/>
+
 ### Step 3. Boot the D3-G.
+
+<br/>
 
 ### Step 4. Check the available /dev/video devices.
 ```
 ls /dev/video*
 ```
+
+<br/>
+
 ### Step 5. Verify the video output using OpenCV (or vutils).
 ```
 touch webcam.py
@@ -98,6 +108,7 @@ cv2.destroyAllWindows()
 python3 webcam.py
 ```
 
+<br/><br/><br/>
 
 ## 4.2 MIPI CSI
 CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
@@ -107,6 +118,8 @@ The D3-G features two MIPI CSI channels (ch0 and ch1), allowing you to attach ca
 Currently, the D3-G supports only the ArduCam (5 MP) and Raspberry Pi v1 Camera (5 MP) modules. 
 
 **Note** : Currently, the D3-G does not support simultaneous use of CSI channel 0 and CSI channel 1.
+
+<br/><br/>
 
 ### 4.2.1 ArduCam
 ArduCam is a versatile camera module designed for embedded systems and IoT applications. It supports various image sensors and interfaces, including MIPI CSI, making it suitable for integration with development boards like the D3-G.
@@ -147,6 +160,7 @@ $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,
 This command captures video from the CSI-connected ArduCam, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
 Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
+<br/><br/>
 
 ### 4.2.2 Raspberry Pi v1 Camera
 The Raspberry Pi v1 Camera Module is a compact 5 MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board through a MIPI CSI-2 interface using a Flat Flexible Cable (FFC).
@@ -186,6 +200,7 @@ $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,
 This command captures video from the CSI-connected Raspberry Pii camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
 Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
+<br/><br/><br/><br/>
 
 # 5. Storage Connection
 This chapter covers how to connect the D3-G to various storage devices. Supported storage options include USB drives, SD cards, and external storage through PCIe.
@@ -202,17 +217,24 @@ To connect a USB drive:
 
 ### Step 2. After it is connected, the device is typically recognized as /dev/sda1, /dev/sdb1, and so on, depending on the system state.
 
+<br/>
+
 ### Step 3. You can manually mount the USB drive using the following command:
    ```
    sudo mount /dev/sda1 /mnt
    ```
 
+<br/><br/><br/>
 
 ## 5.2 SD Card
 The D3-G includes a microSD card slot that supports standard SDHC/SDXC cards.
 To use an SD card with the D3-G:
 
+<br/>
+
 ### Step 1. Insert the microSD card into the SD card slot on the D3-G board.
+
+<br/>
 
 ### Step 2. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
@@ -222,16 +244,22 @@ To use an SD card with the D3-G:
   ```
   $ls /dev/mmcblk*
   ```
+
+<br/>
+
 ### Step 4. To mount the SD card manually, use the following command:
 ```
 $ sudo mount /dev/mmcblk1p1 /mnt 
 ```
 ### Step 5. After mounting, you can access the SD card contents under the /mnt directory.
 
+<br/><br/><br/>
 
 ## 5.3 SATA HDD
 
 The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
+
+<br/>
 
 #### Step 1. Connect the PCIe to SATA Module
 
@@ -240,7 +268,7 @@ To use a SATA HDD with the D3-G through PCIe, you must first connect a PCIe-to-S
 Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="500"></p>
-<p align="center"><strong>Figure 5.3 Connect D3-G board PCIe to SATA Module </strong></p>
+<p align="center"><strong>Figure 5.3 Connect D3-G board PCIe to SATA Module </strong></p><br/>
 
 #### Step 2. Boot the D3-G 
 After executing the boot, observe the boot log to verify that the PCIe device is recognized by the system.
@@ -266,6 +294,8 @@ Ubuntu 22.04.5 LTS TOPST ttyAMA0
 TOPST login: 
 ```
 
+<br/>
+
 #### Step 3. Check SATA HDD Recognition
 ```
 root@TOPST:~# lspci
@@ -277,6 +307,8 @@ If the **lspci** command is not available, install pciutils by using the followi
 ```
 $ sudo apt-get install pciutils
 ```
+
+<br/>
 
 #### Step 4. Mount the SATA HDD
 ```
@@ -312,6 +344,8 @@ $ mkdir -p /mnt/sata
 $ mount /dev/sdb1 /mnt/sata
 ```
 
+<br/>
+
 #### Step 5. Execution Result
 This output confirms that the SATA SSD partition (/dev/sdb1) has been successfully formatted with the ext4 file system and mounted at /mnt/sata.
 The **df -h** command shows that the device is now recognized and available for use by the system.
@@ -330,15 +364,18 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 /dev/sdb1       234G   28K  222G   1% /mnt/sata
 ```
 
+<br/><br/><br/>
 
 ## 5.4 NVME M.2 SSD
 The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
+
+<br/>
 
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G’s PCIe slot. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="400"></p>
-<p align="center"><strong>Figure 5.4 Connect NVME M.2 SSD to D3-G board</strong></p>
+<p align="center"><strong>Figure 5.4 Connect NVME M.2 SSD to D3-G board</strong></p><br/>
 
 #### Step 2. Boot the D3-G
 After executing the **reboot** command, observe the boot log to verify that the PCIe device is recognized by the system.
@@ -366,6 +403,8 @@ Ubuntu 22.04.5 LTS TOPST ttyAMA0
 TOPST login: 
 ```
 
+<br/>
+
 #### Step 3. Check SSD Recognition
 ```
 root@TOPST:~# lspci
@@ -377,6 +416,8 @@ If the **lspci** command is not available, install pciutils by using the followi
 ```
 $ sudo apt-get install pciutils
 ```
+
+<br/>
 
 #### Step 4. Mount the SSD
 ```
@@ -412,6 +453,7 @@ $ mkdir -p /mnt/nvme
 $ mount /dev/nvme0n1p1 /mnt/nvme
 ```
 
+<br/>
 
 #### Step 5. Execution Result
 This output confirms that the NVMe SSD device (/dev/nvme0n1p1) has been successfully detected and mounted by the system at /mnt/nvme.
@@ -441,6 +483,8 @@ The D3-G supports Ethernet connectivity through its onboard J2C Ethernet port. T
 ## 6.1 Network Connection Through Router
 This method connects the D3-G to a local network using a standard router. The D3-G can obtain an IP address automatically through DHCP or be configured with a static IP address.
 
+<br/><br/>
+
 ### 6.1.1 Create Network Configuration File
 
 1. Dynamic IP through DHCP
@@ -464,6 +508,7 @@ DNS=8.8.8.8
 
 This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
 
+<br/><br/>
 
 ### 6.1.2 Restart Network Service
 Apply the new network configuration by restarting the systemd-networkd service:
@@ -472,6 +517,7 @@ Apply the new network configuration by restarting the systemd-networkd service:
 sudo systemctl restart systemd-networkd
 ```
 
+<br/><br/>
 
 ### 6.1.3 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/router%20connection.png"width="500"></p>
@@ -489,9 +535,12 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
  
 ```
 
+<br/><br/><br/>
 
 ## 6.2 Network Sharing with Host PC
 You can share your PC's internet connection with the D3-G without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
+
+<br/><br/>
 
 ### 6.2.1 Host PC Network Configuration
 - Control Panel → Network and Internet → Network Connectivity → Set Ethernet
@@ -515,6 +564,7 @@ You can share your PC's internet connection with the D3-G without using a router
  
 5. Click **OK** to save the settings.
 
+<br/><br/>
 
 ### 6.2.2 Create Network Configuration File 
 1. Dynamic IP Through DHCP
@@ -537,6 +587,7 @@ DNS=8.8.8.8
 ```
 This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
 
+<br/><br/>
 
 ### 6.2.3 Restart Network Service
 Apply the new network configuration by restarting the systemd-networkd service:
@@ -545,6 +596,7 @@ Apply the new network configuration by restarting the systemd-networkd service:
 sudo systemctl restart systemd-networkd
 ```
 
+<br/><br/>
 
 ### 6.2.4 Verify Network Connectivity
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/host%20pc%20ethernet%20connection.png"width="500"></p>
@@ -562,6 +614,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 64 bytes from 8.8.8.8: seq=3 ttl=113 time=33.586 ms
 ```
 
+<br/><br/><br/><br/>
 
 # 7. 40-pin GPIO Header
 The D3-G features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
@@ -573,6 +626,8 @@ Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UAR
 <p align="center"><strong>Figure 7.1 40-pin GPIO Header Pinmap of D3-G </strong></p> <br/>
 
 **Note**: Refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
+
+<br/><br/><br/>
 
 ## 7.1 GPIO Digital In/Out
 The D3-G supports digital input and output (GPIO) through its 40-pin header, enabling you to interact with external devices such as buttons, LEDs, and sensors. 
@@ -729,6 +784,7 @@ In either case, the pin will be properly released and cleaned up.
 
 **Note**: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (for example, 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
 
+<br/><br/><br/><br/>
 
 ### 7.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
@@ -849,6 +905,7 @@ When the script is terminated, GPIO88 will be automatically unexported and clean
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G based on the 40-pin header pinout.
 Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 
+<br/><br/><br/><br/>
 
 ### 7.1.3 Touch Sensor
 A touch sensor can be used to detect human touch as a digital input signal through GPIO.
@@ -990,6 +1047,7 @@ When the script is terminated, GPIO88 will be automatically unexported and clean
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G based on the 40-pin header pinout.
 Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
 
+<br/><br/><br/><br/>
 
 ### 7.1.4 Vibration Detection Sensor
 A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal through GPIO.
@@ -1128,6 +1186,7 @@ Upon termination, GPIO88 is automatically unexported and cleaned up.
 
 **Note**: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Refer to the D3-G pinout before choosing a GPIO number.
 
+<br/><br/><br/><br/>
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
 An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal through GPIO.
@@ -1270,6 +1329,7 @@ When the script is terminated, GPIO89 is automatically unexported and cleaned up
 **Note**: GPIO89 is used as an example in this script.
 You may use any available GPIO pin based on the 40-pin header of the D3-G. Refer to the official pinout diagram for accurate pin selection.
 
+<br/><br/><br/><br/>
 
 ### 7.1.6 Photoresistor (SZH-SSBH-011)
 A photoresistor can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold through GPIO.
@@ -1445,6 +1505,7 @@ When the script is terminated, both GPIO pins are automatically unexported and c
 
 **Note**: GPIO83 and GPIO89 are used in this example. You may use any available GPIO pin based on the 40-pin header layout of the D3-G. Refer to the official pinout diagram for accurate pin selection.
 
+<br/><br/><br/><br/>
 
 ### 7.1.7 Air Pollution Detection Sensor
 An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal through GPIO.
@@ -1583,6 +1644,7 @@ When the script is terminated, GPIO88 is automatically unexported and cleaned up
 
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin based on the 40-pin header layout of the D3-G. Refer to the official pinout diagram for accurate pin selection.
 
+<br/><br/><br/><br/>
 
 ### 7.1.8 Ultrasonic Sensor
 An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal through GPIO.
@@ -1727,6 +1789,7 @@ When the script is terminated, GPIO82 and GPIO88 are automatically unexported an
 
 **Note**: GPIO82 and GPIO88 are used as examples. You may use any available GPIO pin based on the 40-pin header layout of the D3-G. Refer to the official pinout diagram for accurate pin selection. Also, ensure your ECHO pin's voltage level is safe for the D3-G (some modules output 5V and may need a voltage divider or level shifter).
 
+<br/><br/><br/><br/>
 
 ## 7.2 I2C
 The D3-G provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.
@@ -1734,6 +1797,8 @@ Inter-integrated Circuit (I2C) is a two-wire communication protocol consisting o
 
 I2C communication follows a master-slave architecture, where one master device controls the communication and up to 127 slave devices can be connected on the same bus.
 The SDA line is used for both transmitting and receiving data, while the SCL line synchronizes the timing of data transfer. This synchronous communication model allows devices to exchange information in a coordinated, clock-driven manner.
+
+<br/><br/><br/><br/>
 
 ### 7.2.1 1602A LCD Display
 The 1602A LCD is a character display module commonly used in embedded systems.
@@ -1846,6 +1911,7 @@ To stop the script, press **[Ctrl+C]**.
 **Note** : GPIO82 and GPIO81 are used for I2C by default on the D3-G.
 Make sure the I2C address (0x27) matches your specific LCD module. Use **i2cdetect -y 3** to scan I2C devices if needed.
 
+<br/><br/><br/><br/>
 
 ## 7.3 SPI
 The D3-G supports Serial Peripheral Interface (SPI) communication through a 40-pin GPIO header, enabling data exchange between external devices and the D3-G.
@@ -1853,6 +1919,8 @@ The D3-G supports Serial Peripheral Interface (SPI) communication through a 40-p
 SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: Master Out Slave In (MOSI), Master In Slave Out (MISO), Serial Clock (SCLK), and Chip Select (CS).
 
 Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicated CS line for each slave device. This one-to-many structure makes SPI fast and straightforward to implement, but it can require more physical wiring when multiple devices are involved.
+
+<br/><br/><br/><br/>
 
 ### 7.3.1 Dot Matrix
 8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the D3-G, the dot matrix module can be controlled through SPI using a driver chip such as the MAX7219.
@@ -2128,6 +2196,7 @@ On termination, the SPI device is safely closed, and the LED matrix stops updati
 
 **Note**: Ensure that /dev/spidev3.0 exists and the wiring matches the pin mapping table. Also, power the MAX7219 module with a stable 5V source.
 
+<br/><br/><br/><br/>
 
 ## 7.4 PWM
 Pulse Width Modulation (PWM) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G supports PWM through the sysfs interface in Linux.
@@ -2258,6 +2327,7 @@ To stop the script, press **[Ctrl+C]**.
 
 **Note**: Ensure the PWM channel is not already in use and that the D3-G supports hardware PWM on the selected GPIO. If PWM does not activate, verify the export, period, and duty_cycle settings in /sys/class/pwm/.
 
+<br/><br/><br/><br/>
 
 ### 7.4.2 Mini Servo Motor
 A mini servo motor can be used to control precise angular movement based on a Pulse Width Modulation (PWM) signal through GPIO.
