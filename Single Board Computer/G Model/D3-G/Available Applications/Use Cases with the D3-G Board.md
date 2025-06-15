@@ -188,7 +188,7 @@ Make sure that the camera module is securely connected before running the comman
 
 
 # 5. Storage Connection
-This chapter covers how to connect the D3-G board to various storage devices. Supported storage options include USB drives, SD cards, and external storage through PCIe.
+This chapter covers how to connect the D3-G to various storage devices. Supported storage options include USB drives, SD cards, and external storage through PCIe.
 
 <br/><br/><br/>
 
@@ -235,7 +235,7 @@ The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through
 
 #### Step 1. Connect the PCIe to SATA Module
 
-To use a SATA HDD with the D3-G through PCIe, you must first connect a PCIe-to-SATA adapter module to the board's PCIe slot.
+To use a SATA HDD with the D3-G through PCIe, you must first connect a PCIe-to-SATA adapter module to the D3-G's PCIe slot.
 
 Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
 
@@ -335,7 +335,7 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
 
 #### Step 1. Connect the SSD
-- NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G board’s PCIe slot. 
+- NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G’s PCIe slot. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="400"></p>
 <p align="center"><strong>Figure 5.4 Connect NVME M.2 SSD to D3-G board</strong></p>
@@ -439,7 +439,7 @@ The D3-G supports Ethernet connectivity through its onboard J2C Ethernet port. T
 <br/><br/><br/>
 
 ## 6.1 Network Connection Through Router
-This method connects the D3-G board to a local network using a standard router. The D3-G can obtain an IP address automatically through DHCP or be configured with a static IP address.
+This method connects the D3-G to a local network using a standard router. The D3-G can obtain an IP address automatically through DHCP or be configured with a static IP address.
 
 ### 6.1.1 Create Network Configuration File
 
@@ -491,7 +491,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 
 
 ## 6.2 Network Sharing with Host PC
-You can share your PC's internet connection with the D3-G board without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
+You can share your PC's internet connection with the D3-G without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
 
 ### 6.2.1 Host PC Network Configuration
 - Control Panel → Network and Internet → Network Connectivity → Set Ethernet
@@ -579,7 +579,7 @@ The D3-G supports digital input and output (GPIO) through its 40-pin header, ena
 
 ### 7.1.1 LED
 One of the simplest and most common GPIO output examples is controlling an LED.  
-This section demonstrates how to connect and use from LED sensor using the D3-G board.
+This section demonstrates how to connect and use from LED sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -732,7 +732,7 @@ In either case, the pin will be properly released and cleaned up.
 
 ### 7.1.2 Button
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
-This section demonstrates how to connect and use from a basic button module using the D3-G board.
+This section demonstrates how to connect and use from a basic button module using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -852,7 +852,7 @@ Refer to the official pinout diagram and select a GPIO number that matches your 
 
 ### 7.1.3 Touch Sensor
 A touch sensor can be used to detect human touch as a digital input signal through GPIO.
-This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G board.
+This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -993,7 +993,7 @@ Refer to the official pinout diagram and select a GPIO number that matches your 
 
 ### 7.1.4 Vibration Detection Sensor
 A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal through GPIO.
-This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G board.
+This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -1131,7 +1131,7 @@ Upon termination, GPIO88 is automatically unexported and cleaned up.
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
 An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal through GPIO.
-This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G board.
+This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -1273,7 +1273,7 @@ You may use any available GPIO pin based on the 40-pin header of the D3-G. Refer
 
 ### 7.1.6 Photoresistor (SZH-SSBH-011)
 A photoresistor can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold through GPIO.
-This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor using the D3-G board.
+This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -1448,7 +1448,7 @@ When the script is terminated, both GPIO pins are automatically unexported and c
 
 ### 7.1.7 Air Pollution Detection Sensor
 An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal through GPIO.
-This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G board.
+This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -1586,7 +1586,7 @@ When the script is terminated, GPIO88 is automatically unexported and cleaned up
 
 ### 7.1.8 Ultrasonic Sensor
 An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal through GPIO.
-This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G board.
+This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
@@ -2261,7 +2261,7 @@ To stop the script, press **[Ctrl+C]**.
 
 ### 7.4.2 Mini Servo Motor
 A mini servo motor can be used to control precise angular movement based on a Pulse Width Modulation (PWM) signal through GPIO.
-This section demonstrates how to connect and control a mini servo motor using the D3-G board.
+This section demonstrates how to connect and control a mini servo motor using the D3-G.
 
 #### Step 1. Hardware Requirements
 - D3-G (x1)
