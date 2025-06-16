@@ -1,4 +1,5 @@
 # 1. Introduction
+---
 This document provides guidelines for building the D3-G SDK, including setting up the host environment, building the SDK, using the firmware downloader, and downloading Ubuntu.  
 
 This document includes information on the following: 
@@ -10,6 +11,7 @@ This document includes information on the following:
 <br/><br/><br/><br/>
 
 # 2. Setting Host Environment
+---
 This chapter provides instructions on how to set up the host PC environment, with separate guides for Windows and Ubuntu.
 </br><br/><br/>
 
@@ -215,6 +217,7 @@ Please proceed to **Chapter 3: Image Build Guide**.
 <br/><br/><br/><br/>
 
 # 3. Image Build Guide
+---
 This chapter provides guidance based on the Ubuntu OS installed on the host PC (regardless of whether it is WSL or a local Ubuntu installation). The image to be uploaded to the D3-G is built using the Yocto Project, so the build process must be performed in the Ubuntu environment.
 </br></br>
 
@@ -586,6 +589,7 @@ Complete to make fai file
 </br></br><br/><br/>
 
 # 4. Firmware Download
+---
 This chapter describes how to download ***FWDN*** to the D3-G and log in to the Linux console.  
 ***FWDN V8*** is a PC tool for downloading firmware in both Windows 10(11) 64-bit and Linux environments. This chapter describes the case of downloading in Windows and Linux environments.
 
@@ -792,7 +796,7 @@ You’re ready to boot the D3-G. Refer to Chapter 4 to start communicating with 
 <br/><br/><br/><br/>
 
 # 5. Connecting the D3-G board with a host PC
-
+---
 This chapter explains how to connect the host PC to the D3-G board through UART for firmware download and serial communication.
 
 <br/><br/><br/>
@@ -826,6 +830,7 @@ Both the username and password for login are set to **root**.
 <br/><br/><br/>
 
 # 6. Ubuntu OS partition resize
+---
 We also provide an Ubuntu OS.
 By following this chapter, you can download the Ubuntu image, upload it to the board, and expand the allocated eMMC storage capacity.
 
@@ -901,6 +906,7 @@ You can confirm that the available space is 27GB after resizing.
 <br/><br/><br/><br/>
 
 # 7. References
+---
 - Contact TOPST for more details: topst@topst.ai
 
 **Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference

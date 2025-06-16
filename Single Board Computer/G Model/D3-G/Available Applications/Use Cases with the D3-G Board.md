@@ -1,4 +1,5 @@
 # 1. Introduction 
+---
 This document provides examples of using the D3-G.   
 This document includes the following information:
 - Input Device
@@ -21,6 +22,7 @@ This document includes the following information:
 
 
 # 2. Input Device
+---
 The D3-G supports two USB ports for connecting input devices.
 It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to connect a mouse or keyboard to directly control the D3-G. 
 
@@ -31,6 +33,7 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to
 
 
 # 3. Video Output
+---
 The D3-G supports FHD monitors only through its DisplayPort (DP) output.
 It also supports multi-display output using a daisy chain setup, allowing a connection of up to two FHD monitors and one HD monitor simultaneously.
 
@@ -41,6 +44,7 @@ It also supports multi-display output using a daisy chain setup, allowing a conn
 <br/><br/><br/><br/>
 
 # 4. Camera Connection
+---
 The D3-G supports camera functionality, offering flexibility for various applications.
 You can connect either a MIPI CSI camera or a USB webcam depending on your project requirements.
 
@@ -203,6 +207,7 @@ Make sure that the camera module is securely connected before running the comman
 <br/><br/><br/><br/>
 
 # 5. Storage Connection
+---
 This chapter covers how to connect the D3-G to various storage devices. Supported storage options include USB drives, SD cards, and external storage through PCIe.
 
 <br/><br/><br/>
@@ -476,6 +481,7 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 
 
 # 6. Ethernet Connection
+---
 The D3-G supports Ethernet connectivity through its onboard J2C Ethernet port. This allows the D3-G to communicate with local networks or the internet using standard TCP/IP protocols. Ethernet is commonly used for deploying applications that require remote access, data streaming, or software updates.
 
 <br/><br/><br/>
@@ -617,6 +623,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 <br/><br/><br/><br/>
 
 # 7. 40-pin GPIO Header
+---
 The D3-G features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
 This header is compatible with general-purpose input/output (GPIO) operations and can be used to connect sensors, LEDs, buttons, and other peripheral devices.
 
