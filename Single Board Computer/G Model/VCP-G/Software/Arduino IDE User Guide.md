@@ -5,13 +5,13 @@ This document describes how to use Arduino IDE for the TOPST Vehicle Control Pro
 This document includes information on the following:  
 - Installation Guide
 
-</br>
+</br></br></br></br>
 
 # 2. Installation Guide
 ---
 This chapter describes how to download and install the TOPST VCP-G Arduino packageto use with the Arduino Integrated Development Environment (IDE).
 
-</br>
+</br></br></br>
 
 ## 2.1 Installation Guide
 ---
@@ -63,14 +63,14 @@ Test if your setup works by uploading a simple sketch:
     **Note:** If the upload process gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. Disconnect the power cable, press and hold the FWDN switch, reconnect the power cable, and then release the button. If the issue persists, try running the Arduino IDE with administrator privileges.
 5.	If the onboard LED starts blinking, the board is set up correctly.
 
-</br>
+</br></br></br>
 
 ## 2.2 Troubleshooting
 ---
 If you encounter any issues during the setup, refer to the [Arduino Troubleshooting Guide](https://www.arduino.cc/en/Guide/Troubleshooting).  
 For more information and advanced features, refer to TOPST VCP documentation or visit [Arduino Help Center](https://support.arduino.cc/hc/en-us).
 
-</br>
+</br></br></br></br>
 
 # 3. References
 ---

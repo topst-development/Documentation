@@ -2,12 +2,12 @@
 ---
 This document provides guidelines for setting up a software development environment for the TOPST VCP-G board on a Linux system. It outlines the required tools, configurations, and toolchain.
 
-</br>
+</br></br></br></br>
 
 # 2. Setting Host Environment
 ---
 
-</br>
+</br></br></br>
 
 ## 2.1 Ubuntu Installation
 ---
@@ -16,7 +16,7 @@ It is recommended to set up your development environment on Ubuntu 22.04. This U
 Linux distribution version:  
 - Ubuntu 22.04 (LTS)
 
-</br>
+</br></br></br>
 
 ## 2.2 Install WSL2 Ubuntu (Windows Environment Only)
 ---
@@ -47,7 +47,7 @@ Linux distribution version:
     ```
 9.	Search for WSL2 in the Windows search box and execute it. 
 
-</br>
+</br></br></br>
 
 ## 2.3 Setting Linux Envirionment
 ---
@@ -73,14 +73,14 @@ Before installing any new software, update the list of available packages to ens
     ```
 **Note:** This command installs both the build-essential package and git.
 
-</br>
+</br></br></br></br>
 
 # 3. Toolcahin
 ---
 The TOPST VCP-G board uses the **gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi** toolchain.  
 This toolchain is optimized for the ARM architecture and ensures compatibility with the TCT7045 chip on the TOPST VCP-G board.
 
-</br>
+</br></br></br>
 
 ## 3.1 Install and Set Up Toolchain
 ---
@@ -104,7 +104,7 @@ Follow the steps below to download, extract, and set up the toolchain:
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Move%20Toolchain.png"></p>
     <p align="center"><strong>Figure 3.3 Move Toolchain</strong></p>
 
-</br>
+</br></br></br>
 
 ## 3.2 Verify Toolchain
 ---
@@ -124,13 +124,13 @@ To ensure that the toolchain is installed correctly.
 
 After the successful installation, verify the installed GCC compiler version to ensure it matches **gcc-linaro-7.2.1-2017.11.**
 
-</br>
+</br></br></br></br>
 
 # 4. Clone Source Code
 ---
 This chapter describes how to clone the source code using Git.
 
-</br>
+</br></br></br>
 
 ## 4.1 Clone TOPST VCP-G Source Code
 ---
@@ -158,7 +158,7 @@ Follow these steps to clone the TOPST VCP-G source code:
     <p align="center"><strong>Figure 4.3 Navigate to Cloned Directory</strong></p>
 The TOPST VCP-G source code is now available locally for building and development.
 
-</br>
+</br></br></br>
 
 ## 4.2 Source Code Structure
 ---
@@ -169,12 +169,12 @@ ls
 build  documents  easy-setup_vcp.sh  scripts  sources  tools
 ```
 
-</br>
+</br></br></br></br>
 
 # 5. Build Guide
 ---
 
-</br>
+</br></br></br>
 
 ## 5.1 Execute easy-setup_vcp-g.sh
 ---
@@ -193,13 +193,13 @@ Then you can see the following screen.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" ></p>
 <p align="center"><strong>Figure 5.3 Accept Screen </strong></p>
 
-</br>
+</br></br></br>
 
 ## 5.2 Makefiles and Build Systems
 ---
 A Makefile is a key component of many build systems. It contains rules and directives for the **make** utility to compile and link programs. By utilizing a Makefile, you can automate the build process, ensuring consistency and efficiency.
 
-</br>
+</br></br></br>
 
 ## 5.3 Initiate Build Process
 ---
@@ -229,19 +229,19 @@ To build the source code, follow these steps:
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Build%20Output%20File.png"></p>
     <p align="center"><strong>Figure 5.6 Build Output File</strong></p>
 
-</br>
+</br></br></br></br>
 
 # 6. Firmware Download
 ---
 This chapter describes how to download ***FWDN*** to the TOPST VCP-G board in a Linux-based development environment.
 
-</br>
+</br></br></br>
 
 ## 6.1 Prepare TOPST VCP-G
 ---
 Before beginning the download process, ensure that the TOPST VCP-G board is in a stable position and free from any potential disturbances. Ensure that all switches and connectors are easily accessible and 3.3V power cable should be connect correctly.
 
-</br>
+</br></br></br>
 
 ## 6.2 Connect Hardware to Host PC
 ---
@@ -271,7 +271,7 @@ If you use Ubuntu host, proceed directly to step 3.
     <p align="center"><strong>Figure 6.1 Verify USB Connection</strong></p>
 If the output displayed in Figure 6.1 appears, the connection is successfully established.
 
-</br>
+</br></br></br>
 
 ## 6.3 Download Software on TOPST VCP-G Board
 ---
@@ -288,7 +288,7 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
     <p align="center"><strong>Figure 6.4 Reset the Board</strong></p>
 
-    </br>
+</br></br></br>
 
 ## 6.4 Verify Software on Board
 ---
@@ -310,7 +310,7 @@ After completing steps 1 and 2, the following output appears on the terminal. If
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Figure%206.7%20Open%20Serial%20Connection.png"></p>
 <p align="center"><strong>Figure 6.7 Open Serial Connection</strong></p>
 
-</br>
+</br></br></br>
 
 ## 6.5 Troubleshooting Common Issues
 ---
@@ -347,7 +347,7 @@ This chapter provides solutions to common issues encountered while working with 
     <p align="center"><strong>Figure 6.12 Save and Exit</strong></p>
 
 **Note:** If you are using a different serial communication tool instead of minicom, ensure its flow control setting is also set to **no** for proper operation.
-
+</br></br></br></br>
 
 # 7. References
 ---

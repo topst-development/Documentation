@@ -20,14 +20,14 @@ To run each example, users should modify the `main.c` file located at:
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
 After making the necessary changes, compile the project using the provided Makefile to generate the firmware binary.
-</br>
+</br></br></br></br>
 
 # 2. Digital In/Out
 ---
 This chapter provides examples of controlling LEDs using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
 
 This chapter contains two example projects that demonstrate how to control LEDs and button using digital outputs and inputs, giving you a basic understanding of digital pin functions.
-</br>
+</br></br></br>
 
 ## 2.1 Digital Out
 ---
@@ -37,6 +37,7 @@ Assuming you have already set up the VCP-G FreeRTOS SDK, you can find the releva
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
 To implement this example, modify main.c to configure the GPIO pins connected to the LEDs as digital outputs. A FreeRTOS task should be created to turn on four LEDs one by one in order, then turn them off in reverse order. Each LED transition should include a 500 ms delay to clearly observe the sequence.
+</br></br>
 
 ### 2.1.1 Hardware Reqirements  
 - TOPST VCP-G board (x1)
@@ -45,6 +46,7 @@ To implement this example, modify main.c to configure the GPIO pins connected to
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1) 
 - Male to male jumper wire (x9)
+</br></br>
 
 ### 2.1.2 Circuit
 - LED01
@@ -96,6 +98,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 2.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -137,7 +140,7 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the four connected LEDs will turn on sequentially from LED01 to LED04, then turn off in reverse order. Each transition occurs with a 500 ms delay, creating a smooth blinking pattern.
-</br>
+</br></br></br>
 
 ## 2.2 Digital In
 ---
@@ -149,6 +152,7 @@ $ ~/vcp/sources/app.sample/app.base/main.c
 To implement this example, modify main.c to configure one GPIO pin as a digital input (connected to a button) and four GPIO pins as digital outputs (connected to LEDs).  
 A FreeRTOS task continuously monitors the button state and when the button is pressed, LED1 and LED3 turn on.
 When the button is not pressed, LED2 and LED4 turn on instead.
+</br></br>
 
 ### 2.2.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -158,6 +162,7 @@ When the button is not pressed, LED2 and LED4 turn on instead.
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x11)
+</br></br>
 
 ### 2.2.2 Circuit
 - LED01
@@ -218,6 +223,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 2.2.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -268,19 +274,19 @@ $ make
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, pressing the button will turn on LED01 and LED03, while releasing the button will turn on LED02 and LED04.
 The system continuously monitors the button state and updates the LED status in real time with a 50 ms polling interval.
-
-</br>
+</br></br></br></br>
 
 # 3. VCP-G I2C
 ---
 This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the TOPST VCP-G board running FreeRTOS.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
-</br>
+</br></br></br>
 
 ## 3.1 vcpI2C_LCD1602
 ---
 This example program demonstrates how the TOPST VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
 In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text Hello TOPST on the screen.
+</br></br>
 
 ### 3.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -288,6 +294,7 @@ In this example, the LCD is initialized and the backlight is enabled for clear v
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x4)
+</br></br>
 
 ### 3.1.2 Circuit
 - LCD1602
@@ -332,6 +339,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 3.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -394,19 +402,20 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the LCD will display the message Hello TOPST on the screen, confirming that I2C communication is working properly.  
-</br>
+</br></br></br></br>
 
 # 4. VCP SPI
 ---
 This chapter provides instructions for configuring Serial Peripheral Interface (SPI) communication on the TOPST VCP-G board.  
 SPI is a high-speed, synchronous communication protocol used to exchange data between microcontrollers and peripherals. It operates with separate lines for data transmission (MOSI and MISO), clock synchronization (SCK), and device selection (SS), ensuring efficient and reliable communication.  
-</br>
+</br></br></br>
 
 ## 4.1 vcpSPI_Dot8x8
 ---
 This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver via SPI.
 In this example, a predefined binary array is used to display the letter "X" on the dot matrix. The display is updated through SPI communication, and the MAX7219 handles row and column control internally.
 This example helps illustrate how to send data patterns over SPI to control external display devices like LED matrices.
+</br></br>
 
 ### 4.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -415,6 +424,7 @@ This example helps illustrate how to send data patterns over SPI to control exte
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x2)
 - Female to female jumper wire (x3)
+</br></br>
 
 ### 4.1.2 Circuit
 - 8x8 Dot Matrix
@@ -465,6 +475,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 4.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -519,20 +530,21 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the 8x8 LED dot matrix will display the letter "X", confirming that SPI communication with the MAX7219 driver is working correctly. 
-</br>
+</br></br></br></br>
 
 # 5. VCP-G UART
 ---
 This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the TOPST VCP-G board.  
 UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
 The following chapters describe how to send and receive data through UART.
-</br>
+</br></br></br>
 
 ## 5.1 Uart Communication Test (FT232BL)
 ---
 This example demonstrates how to verify UART communication on the TOPST VCP-G board using the FT232BL USB to TTL serial module.
 The UART TX and RX pins of the VCP-G board are connected to the FT232BL module, which is in turn connected to a PC via USB.
 A terminal program such as MobaXterm is used on the PC to view the transmitted messages.
+</br></br>
 
 ### 5.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -541,6 +553,7 @@ A terminal program such as MobaXterm is used on the PC to view the transmitted m
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x2)
+</br></br>
 
 ### 5.1.2 Circuit
 - FT232BL
@@ -573,6 +586,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 5.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -622,16 +636,17 @@ $ make
 ```
 This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G board.  
 Once the code is successfully flashed and executed, the message "[UART] Hello from UART!" will appear once on the serial terminal, confirming that UART transmission from the VCP-G board is working properly via the FT232BL USB to TTL module.
-</br>
+</br></br></br></br>
 
 # 6. VCP-G PWM
 ---
 This chapter provides instructions for configuring Pulse Width Modulation (PWM) on the TOPST VCP-G board. PWM is a technique used to control the amount of power delivered to devices such as motors, LEDs, and buzzers by varying the duty cycle of a digital signal. It operates by switching the output pin on and off at a high frequency, where the ratio of on-time to the total period determines the effective output level. The following chapters describe how to generate PWM signals using FreeRTOS on the VCP-G board and how to apply them to control external components.
-</br>
+</br></br></br>
 
 ## 6.1 pwmFade
 ---
 This example program demonstrates how the TOPST VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
+</br></br>
 
 ### 6.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -640,6 +655,7 @@ This example program demonstrates how the TOPST VCP board controls an LED on the
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x2)
+</br></br>
 
 ### 6.1.2 Circuit
 - LED
@@ -667,6 +683,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 6.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -765,16 +782,17 @@ This will generate a firmware image and use the FWDN tool to flash the generated
 Once the code is successfully flashed and executed, you will observe a gradual LED fade-in and fade-out effect driven by PWM on GPIO A10, confirming that the PDM-based PWM output from the VCP-G board is functioning correctly.
 
 **NOTE**: If you need to change the GPIO port used for PWM output, refer to the configuration in `pdm.c`.
-</br>
+</br></br></br></br>
 
 # 7. Additional Examples
 ---
 This chapter introduces additional sensor examples using FreeRTOS on the TOPST VCP-G board. It provides example guides on how to use commonly used Arduino sensors with freertos on the TOPST VCP-G board, helping users effectively integrate various sensors into their projects.
-</br>
+</br></br></br>
 
 ## 7.1 Infrared (IR) Sensor (Transceiver)
 ---
 This example demonstrates how the TOPST VCP-G board controls an IR sensor and two LEDs on a breadboard. When the IR sensor detects an object (sensor value is LOW), the first LED turns on, and the second LED turns off. Conversely, when no object is detected (sensor value is HIGH), the second LED turns on while the first LED turns off. The presence or absence of an object is also printed to the serial monitor.
+</br></br>
 
 ### 7.1.1 Hardware Requirements
 - TOPST VCP-G Board (x1)
@@ -785,6 +803,7 @@ This example demonstrates how the TOPST VCP-G board controls an IR sensor and tw
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x5)
 - Male to female jumper wire (x3)
+</br></br>
 
 ### 7.1.2 Circuit
 - IR Transceiver sensor
@@ -849,6 +868,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.1.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -890,11 +910,12 @@ This will generate a firmware image and use the FWDN tool to flash the generated
 Once the code is successfully flashed and executed, the IR sensor will detect the presence or absence of an object and control two LEDs accordingly. When an object is detected, the first LED turns on; when no object is detected, the second LED turns on. This behavior confirms that the IR sensor input and GPIO output on the VCP-G board are working properly.
 
 **NOTE**: If you need to change the GPIO pins used for the IR sensor or LEDs, refer to the configuration section inside the source code.
-</br>
+</br></br></br>
 
 ## 7.2 Infrared (IR) Sensor (Receiver)
 ---
 This example demonstrates how the TOPST VCP-G board uses an IR receiver sensor to detect signals from a remote control. When an IR signal is received, the onboard logic turns on an LED connected to the breadboard. This confirms that the IR receiver module is correctly decoding incoming signals, and the VCP-G board is responding as expected. The reception status is also printed to the serial monitor.
+</br></br>
 
 ### 7.2.1 Hardware Requirements
 - TOPST VCP-G Board (x1)
@@ -905,6 +926,7 @@ This example demonstrates how the TOPST VCP-G board uses an IR receiver sensor t
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x5)
+</br></br>
 
 ### 7.2.2 Circuit
 - IR Receiver sensor
@@ -956,6 +978,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.2.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -1002,13 +1025,14 @@ This will generate a firmware image and use the FWDN tool to flash the generated
 Once the code is successfully flashed and executed, the IR receiver detects signals from a remote control and turns on an LED for a short duration. This confirms that the VCP-G board is correctly reading IR input and controlling the GPIO output in response to received signals.
 
 **NOTE**: If you need to change the GPIO pins used for the IR sensor or LED, refer to the configuration section inside the source code.
-</br>
+</br></br></br>
 
 ## 7.3 Gas Sensor
 ---
 This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the TOPST VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
 
 **Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
+</br></br>
 
 ### 7.3.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1016,6 +1040,7 @@ This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) t
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x3)
+</br></br>
 
 ### 7.3.2 Circuit
 - Gas sensor
@@ -1055,6 +1080,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.3.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -1086,12 +1112,13 @@ This will generate a firmware image and use the FWDN tool to flash the generated
 Once the code is successfully flashed and executed, the gas sensor continuously monitors the surrounding air quality. When gas is detected (sensor output is LOW), a message indicating gas detection is printed to the serial monitor; otherwise, it reports clean air. This confirms that the VCP-G board is correctly reading digital input from the gas sensor.
 
 **NOTE**: If you need to change the GPIO pin used for the gas sensor, refer to the configuration section inside the source code. Most gas sensor modules include a small adjustment screw (potentiometer) for sensitivity control. If the sensor does not respond reliably, try adjusting this screw to fine-tune the gas detection threshold.
-</br>
+</br></br></br>
 
 ## 7.4 Capacitive Touch Sensor
 ---
 This example demonstrates how the TOPST VCP-G board interfaces with a capacitive touch sensor and controls an LED on a breadboard. The capacitive touch sensor detects physical contact from a finger by sensing changes in capacitance.  
 When a touch is detected, the sensor outputs a digital HIGH signal to the VCP-G board, which in turn turns on an LED. This example confirms that the touch input is correctly recognized and that the GPIO output responds accordingly. The touch detection status is also printed to the serial monitor.
+</br></br>
 
 ### 7.4.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1101,6 +1128,7 @@ When a touch is detected, the sensor outputs a digital HIGH signal to the VCP-G 
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x6)
+</br></br>
 
 ### 7.4.2 Circuit
 - Touch Sensor 
@@ -1152,6 +1180,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.4.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
@@ -1190,7 +1219,7 @@ This will generate a firmware image and use the FWDN tool to flash the generated
 Once the code is successfully flashed and executed, the capacitive touch sensor monitors touch input from a human finger. When a touch is detected (sensor output is HIGH), a message is printed to the serial monitor and an LED is turned on. When no touch is detected, the LED is turned off. This confirms that the VCP-G board is correctly reading input from the touch sensor and controlling GPIO output accordingly.
 
 **NOTE**: If you need to change the GPIO pin used for the touch sensor or LED, refer to the configuration section inside the source code.
-</br>
+</br></br></br></br>
 
 # 8. References
 ---

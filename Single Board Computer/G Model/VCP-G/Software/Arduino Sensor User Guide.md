@@ -15,7 +15,7 @@ Refer to Figure 1.1 before using the VCP-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp-g%20pinout%20Diagram.png"></p>
 <p align="center"><strong>Figure 1.1 VCP-G Pinout Diagram</strong></p>
 
-</br>
+</br></br></br></br>
 
 # 2. VCP-G Digital
 ---
@@ -23,11 +23,12 @@ This chapter provides examples of controlling LEDs using the digital pins of the
 
 This chapter includes two example projects that demonstrate how to use digital output to control multiple LEDs, providing a foundational understanding of digital pin functionality.
 
-</br>
+</br></br></br>
 
 ## 2.1 vcp4LED
 ---
 This example program demonstrates how the TOPST VCP-G board controls four LEDs on the breadboard. The example code is provided in the “vcp4LED.ino”. When this file is uploaded to the TOPST VCP-G board, the LEDs turn on and off sequentially in both forward and reverse patterns with a 500 ms delay between each transition. 
+</br></br>
 
 ### 2.1.1 Hardware Reqirements  
 - TOPST VCP-G board (x1)
@@ -36,6 +37,7 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs o
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1) 
 - Male to male jumper wire (x9)
+</br></br>
 
 ### 2.1.2 Circuit
 - LED01
@@ -87,6 +89,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 2.1.3 How to execute
 1. Open the "vcp4ELD.ino"file  
@@ -142,11 +145,12 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br>
 
 ## 2.2 vcp4LED_Button
 ---
 This example program demonstrates how the TOPST VCP-G board controls four LEDs and a button on the breadboard. When the button is pressed, the right two LEDs turn off, and the left two LEDs turn on. When the button is released, the LEDs change state. The ones that were on turn off, and the ones that were off turn on. The program continuously checks the button state and adjusts the LEDs accordingly.
+</br></br>
 
 ### 2.2.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -156,6 +160,7 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs a
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x12)
+</br></br>
 
 ### 2.2.2 Circuit
 1.	LED01
@@ -216,6 +221,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 2.1.3 How to execute
 1. Open the "vcp4ELD_Button.ino"file  
@@ -280,17 +286,18 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br></br>
 
 # 3. VCP-G Analog
 ---
 This chapter provides examples of using the Analog pins on the TOPST VCP-G board. In VCP-G, analog pins receive continuous voltage signals from sensors, allowing precise measurement of varying input values. Chapter 3.1, Chapter 3.2, and Chapter 3.3 demonstrate how to use analog pins to read sensor data and control outputs, providing a foundational understanding of analog input handling.
 
-</br>
+</br></br></br>
 
 ## 3.1 AnalogInOutSerial
 ---
 This example program demonstrates how the TOPST VCP-G board controls a potentiometer and an LED on the breadboard. TOPST VCP-G reads a value from an analog input pin, maps the result to a range from 0 to 1000, and uses this value to set the pulse width modulation (PWM) of an output pin (connected to an LED). The results are also printed to the Serial Monitor.
+</br></br>
 
 ### 3.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -301,6 +308,7 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x4)
+</br></br>
 
 ### 3.1.2 Circuit
 - Potentiometer
@@ -346,6 +354,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 3.1.3 How to execute
 1. Open the "AnalogInOutSerial.ino"file  
@@ -406,11 +415,12 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br>
 
 ## 3.2 AnalogInput
 ---
 This example program demonstrates how the TOPST VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is below 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
+</br></br>
 
 ### 3.2.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -421,6 +431,7 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x6)
+</br></br>
 
 ### 3.2.2 Circuit
 - Potentiometer
@@ -472,6 +483,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 3.2.3 How to execute
 1. Open the "AnalogInput.ino"file  
@@ -526,11 +538,12 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br>
 
 ## 3.3 pwmFade
 ---
 This example program demonstrates how the TOPST VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
+</br></br>
 
 ### 3.3.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -540,6 +553,7 @@ This example program demonstrates how the TOPST VCP board controls an LED on the
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x2)
+</br></br>
 
 ### 3.3.2 Circuit
 - LED
@@ -572,6 +586,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 3.3.3 How to execute
 1. Open the "pwmFade.ino"file  
@@ -627,7 +642,7 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br></br>
 
 # 4. VCP SPI
 ---
@@ -635,11 +650,12 @@ This chapter provides instructions for configuring Serial Peripheral Interface (
 SPI is a high-speed, synchronous communication protocol used to exchange data between microcontrollers and peripherals. It operates with separate lines for data transmission (MOSI and MISO), clock synchronization (SCK), and device selection (SS), ensuring efficient and reliable communication.  
 The following chapters describes how to set up and use SPI to interface with external devices.
 
-</br>
+</br></br></br>
 
 ## 4.1 vcpSPI_Dot8x8
 ---
 This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver. It displays patterns like a heart shape and the letter "R" by setting rows with pre-defined binary arrays. The intensity of the LEDs is adjusted to create a pulsing effect, adding dynamic visuals. Additional features include inverting and clearing the display to enhance functionality.
+</br></br>
 
 ### 4.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -647,6 +663,7 @@ This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED 
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x5)
+</br></br>
 
 ### 4.1.2 Circuit
 - 8x8 Dot Matrix
@@ -697,6 +714,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 4.1.3 How to execute
 1. Open the "vcpSPI_Dot8x8.ino"file  
@@ -847,20 +865,21 @@ The following table shows pin mapping.
 	</table>
 </div> 
 
-</br>
+</br></br></br></br>
 
 # 5. VCP-G I2C
 ---
 This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the TOPST VCP-G board.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 
-</br>
+</br></br></br>
 
 ## 5.1 vcpI2C_LCD1602
 ---
 This example program demonstrates how the TOPST VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.
 
 In this example, the LCD is initialized, and the backlight is enabled for clear visibility. The program then positions the cursor to display the text TOPST VCP-G on the first row and I2C Test! on the second row. With I2C communication, multiple devices can be controlled using minimal wiring, making it an effective solution for compact projects.
+</br></br>
 
 ### 5.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -868,7 +887,7 @@ In this example, the LCD is initialized, and the backlight is enabled for clear 
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x4)
-
+</br></br>
 
 ### 5.1.2 Circuit
 - LCD1602
@@ -913,6 +932,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 5.1.3 How to execute
 1. Open the "vcpI2C_LCD1602.ino"file  
@@ -959,7 +979,7 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br></br>
 
 # 6. VCP-G UART
 ---
@@ -967,16 +987,18 @@ This chapter provides instructions for configuring Universal Asynchronous Receiv
 UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
 The following chapters describe how to send and receive data through UART.
 
-</br>
+</br></br></br>
 
 ## 6.1 vcpASCIITable
 ---
 This example program demonstrates how the TOPST VCP-G board prints the ASCII values of characters in various formats: decimal, hexadecimal, octal, and binary. It starts from the character '!' (ASCII value 33) and increments through all visible ASCII characters, printing each in the different formats. The program continues until it reaches the character '~' (ASCII value 126).
+</br></br>
 
 ### 6.1.1 Hardware Requirements
 - VCP-G Board (x1)
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
+</br></br>
 
 ### 6.1.3 How to execute
 1. Open the "vcpASCIITable.ino"file  
@@ -1077,11 +1099,12 @@ This example program demonstrates how the TOPST VCP-G board prints the ASCII val
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br>
 
 ## 6.2 vcpGraph
 ---
 This example program demonstrates how the TOPST VCP-G board reads analog value of potentiometer on the bread board and transmits the data to host PC through UART. The Arduino code continuously reads the value of the analog sensor (potentiometer) connected to pin A5 and sends it through the serial port. The accompanying processing code visualizes these values in a dynamic graph in real time, showing the change in sensor input over time. .
+</br></br>
 
 ### 6.2.1 Hardware Requirements
 - VCP-G Board (x1)Breadboard (x1)
@@ -1090,6 +1113,7 @@ This example program demonstrates how the TOPST VCP-G board reads analog value o
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x4)
+</br></br>
 
 ### 6.2.2 Circuit
 - Potentiometer
@@ -1128,6 +1152,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 6.2.3 How to execute
 1. Open the "vcpGraph.ino"file  
@@ -1269,18 +1294,21 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br></br>
 
 # 7. Additional Examples
 ---
 This chapter provides additional sensor examples not included in the "Examples for TOPST VCP Rev G" in the Arduino IDE.  
 It provides example guides for using commonly used Arduino sensors with the TOPST VCP-G board, helping users integrate various sensors into their projects effectively.
 
-</br>
+</br></br></br>
 
 ## 7.1 Infrared (IR) Sensor (Transceiver)
 ---
+</br></br>
+
 ### 7.1.1 Infrared (IR) Sensor 1
+---
 This example demonstrates how the TOPST VCP-G board controls an IR sensor and two LEDs on the breadboard. After reading the IR sensor value, if the IR sensor value is HIGH, it is considered that there is no obstacle, and the green LED turns on while the red LED turns off. Conversely, if the IR sensor value is LOW, it is considered that there is an obstacle, and the red LED turns on while the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
 
 #### 7.1.1.1 Hardware Requirements
@@ -1409,8 +1437,10 @@ The following table shows pin mapping.
 
     [main:155] Complete FWDN
     ```
+</br></br>
 
 ### 7.1.2 Infrared (IR) Sensor 2
+---
 This example demonstrates how the TOPST VCP-G board controls an IR sensor to detect objects and print the detection status to the Serial Monitor. The IR Transceiver reads the presence of an obstacle. If the IR Transceiver value is HIGH, it indicates no obstacle, and the green LED turns on and the red LED turns off. Conversely, if the IR  
 Transceiver value is LOW, it indicates there is an obstacle, and the red LED turns on and the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
 
@@ -1506,13 +1536,14 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br>
 
 ## 7.2 Joystick
 ---
 This example shows how the TOPST VCP-G board reads joystick inputs and prints their value to the Serial Monitor. You can receive three inputs: X-axis, Y-axis, and buttons. The serial monitor verifies the received signals. The movements made on the X and Y axes change the value of the port, which corresponds to the numeric value of the analog output. In allows for precise control for applications that require fine adjustment.
 
 **Note:** Dual Axis Joystick Module (KY-023) is a product of Joy-IT. All rights to its design, trademark, and related intellectual property are owned by Joy-IT.
+</br></br>
 
 ### 7.2.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1520,6 +1551,7 @@ This example shows how the TOPST VCP-G board reads joystick inputs and prints th
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x5)
+</br></br>
 
 ### 7.2.2 Circuit
 - KY-023 (Dual Axis Joystick Module)
@@ -1570,6 +1602,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.2.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "joystick.ino"  
@@ -1617,15 +1650,14 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-</br>
+</br></br></br>
 
 ## 7.3 Gas Sensor
 ---
 This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the TOPST VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
 
 **Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
-
-
+</br></br>
 
 ### 7.3.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1633,6 +1665,7 @@ This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) t
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x3)
+</br></br>
 
 ### 7.3.2 Circuit
 - Gas sensor
@@ -1672,6 +1705,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.3.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "GasSensor.ino"  
@@ -1708,8 +1742,7 @@ The following table shows pin mapping.
 
     [main:155] Complete FWDN
     ```
-
-</br>
+</br></br></br>
 
 ## 7.4 Metal Touch Sensor Module
 ---
@@ -1717,6 +1750,7 @@ This example program demonstrates how the TOPST VCP-G board controls touch senso
 When a touch is detected, the module outputs relevant digital/analog values to the serial monitor. You can also control an LED based on the touch status. 
 
 **Note:** Metal Touch Sensor Module (KY-036) has a built-in potentiometer for adjusting sensitivity. You can turn this potentiometer to increase or decrease the sensitivity.
+</br></br>
 
 ### 7.4.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1728,6 +1762,7 @@ When a touch is detected, the module outputs relevant digital/analog values to t
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x4)
 - Male to female jumper wire (x4)
+</br></br>
 
 ### 7.4.2 Circuit
 - Metal Touch Sensor Module
@@ -1787,6 +1822,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.4.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "vcp_touch.ino"  
@@ -1846,14 +1882,14 @@ The following table shows pin mapping.
     ```
 **Note:** Set an appropriate baud rate for serial communication.
 
-</br>
+</br></br></br>
 
 ## 7.5 Step Motor with Motor Driver
 ---
 This example demonstrates how the TOPST VCP-G board controls 4-wire stepper motor (28BYJ-48 (5VDC)) and Motor Driver (ULN2003 (5V–12V)). The code in Chapter 7.5.3 defines the pins connected to the motor driver and sets the number of steps per revolution. The motor rotates forward for one full revolution, pauses, then rotates backward for one full revolution, and pauses again. The motor speed is controlled by the delay between steps, and the direction is controlled by the order in which the coils are activated.
 
 **Note:** The 28BYJ-48 motor requires 4096 signals for one full rotation in Half step mode and 2048 signals for one full rotation in Full step mode. For precise motor control, the number of signals required depending on the mode should be considered. 
-
+</br></br>
 
 ### 7.5.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1862,6 +1898,7 @@ This example demonstrates how the TOPST VCP-G board controls 4-wire stepper moto
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x6)
+</br></br>
 
 ### 7.5.2 Circuit
 - Motor Driver
@@ -1918,6 +1955,7 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+</br></br>
 
 ### 7.5.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "motordriver.ino"  
@@ -2004,8 +2042,7 @@ The following table shows pin mapping.
 
     [main:155] Complete FWDN
     ```
-
-</br>
+</br></br></br></br>
 
 # 8. References
 ---
