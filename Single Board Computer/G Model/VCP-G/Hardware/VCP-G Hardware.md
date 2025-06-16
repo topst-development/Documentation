@@ -148,6 +148,7 @@ Table 1.1 describes the features of the TCC7045.
 </br>
 
 ## 2.1 System Block Diagram
+---
 Figure 2.1 shows the system block diagram of TOPST VCP-G board.
 <p align="center"><img src= "https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/2.1%20VCP-G%20System%20Block%20Diagram.png"></p>
 <p align="center"><strong>Figure 2.1 System Block Diagram</strong></p>
