@@ -1,4 +1,5 @@
 # 1. Introduction
+---
 This document provides guidelines on using the TOPST VCP-G board with FreeRTOS. It includes configuration instructions and example codes to help you easily develop embedded applications using the VCP-G board under the FreeRTOS environment.
 
 Specifically, this document provides guidance on FreeRTOS-based example applications for the VCP-G board, including: 
@@ -22,6 +23,7 @@ After making the necessary changes, compile the project using the provided Makef
 </br>
 
 # 2. Digital In/Out
+---
 This chapter provides examples of controlling LEDs using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
 
 This chapter contains two example projects that demonstrate how to control LEDs and button using digital outputs and inputs, giving you a basic understanding of digital pin functions.
@@ -268,6 +270,7 @@ The system continuously monitors the button state and updates the LED status in 
 </br>
 
 # 3. VCP-G I2C
+---
 This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the TOPST VCP-G board running FreeRTOS.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 </br>
@@ -391,6 +394,7 @@ Once the code is successfully flashed and executed, the LCD will display the mes
 </br>
 
 # 4. VCP SPI
+---
 This chapter provides instructions for configuring Serial Peripheral Interface (SPI) communication on the TOPST VCP-G board.  
 SPI is a high-speed, synchronous communication protocol used to exchange data between microcontrollers and peripherals. It operates with separate lines for data transmission (MOSI and MISO), clock synchronization (SCK), and device selection (SS), ensuring efficient and reliable communication.  
 </br>
@@ -514,6 +518,7 @@ Once the code is successfully flashed and executed, the 8x8 LED dot matrix will 
 </br>
 
 # 5. VCP-G UART
+---
 This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the TOPST VCP-G board.  
 UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
 The following chapters describe how to send and receive data through UART.
@@ -615,6 +620,7 @@ Once the code is successfully flashed and executed, the message "[UART] Hello fr
 </br>
 
 # 6. VCP-G PWM
+---
 This chapter provides instructions for configuring Pulse Width Modulation (PWM) on the TOPST VCP-G board. PWM is a technique used to control the amount of power delivered to devices such as motors, LEDs, and buzzers by varying the duty cycle of a digital signal. It operates by switching the output pin on and off at a high frequency, where the ratio of on-time to the total period determines the effective output level. The following chapters describe how to generate PWM signals using FreeRTOS on the VCP-G board and how to apply them to control external components.
 </br>
 
@@ -756,6 +762,7 @@ Once the code is successfully flashed and executed, you will observe a gradual L
 </br>
 
 # 7. Additional Examples
+---
 This chapter introduces additional sensor examples using FreeRTOS on the TOPST VCP-G board. It provides example guides on how to use commonly used Arduino sensors with freertos on the TOPST VCP-G board, helping users effectively integrate various sensors into their projects.
 </br>
 
@@ -1176,6 +1183,7 @@ Once the code is successfully flashed and executed, the capacitive touch sensor 
 </br>
 
 # 8. References
+---
 - Contact TOPST for more details: topst@topst.ai
 
 **Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference

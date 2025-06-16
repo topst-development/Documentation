@@ -1,9 +1,11 @@
 # 1. Introduction
+---
 This document provides guidelines for setting up a software development environment for the TOPST VCP-G board on a Linux system. It outlines the required tools, configurations, and toolchain.
 
 </br>
 
 # 2. Setting Host Environment
+---
 
 </br>
 
@@ -71,6 +73,7 @@ Before installing any new software, update the list of available packages to ens
 </br>
 
 # 3. Toolcahin
+---
 The TOPST VCP-G board uses the **gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi** toolchain.  
 This toolchain is optimized for the ARM architecture and ensures compatibility with the TCT7045 chip on the TOPST VCP-G board.
 
@@ -119,6 +122,7 @@ After the successful installation, verify the installed GCC compiler version to 
 </br>
 
 # 4. Clone Source Code
+---
 This chapter describes how to clone the source code using Git.
 
 </br>
@@ -161,6 +165,7 @@ build  documents  easy-setup_vcp.sh  scripts  sources  tools
 </br>
 
 # 5. Build Guide
+---
 
 </br>
 
@@ -217,6 +222,7 @@ To build the source code, follow these steps:
 </br>
 
 # 6. Firmware Download
+---
 This chapter describes how to download ***FWDN*** to the TOPST VCP-G board in a Linux-based development environment.
 
 </br>
@@ -329,6 +335,7 @@ This chapter provides solutions to common issues encountered while working with 
 
 
 # 7. References
+---
 - Contact TOPST for more details: topst@topst.ai
 
 **Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference

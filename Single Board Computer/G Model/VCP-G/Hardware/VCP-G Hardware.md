@@ -1,4 +1,5 @@
 # 1. Introduction
+---
 This document is a hardware user guide for the TOPST VCP-G based on the TCC7045 application processor. This document describes system installation, debugging, and detailed information on overall design and usage of the TOPST VCP-G board.
 
 Table 1.1 describes the features of the TCC7045.
@@ -141,6 +142,7 @@ Table 1.1 describes the features of the TCC7045.
 </br></br>
 
 # 2. Block Diagram
+---
 
 </br>
 
@@ -152,6 +154,7 @@ Figure 2.1 shows the system block diagram of TOPST VCP-G board.
 </br></br>
 
 # 3. TOPST VCP-G Overview
+---
 The TOPST VCP-G board can used for the following purposes:
   - System development
   - Training  
@@ -283,7 +286,7 @@ Figure 3.2 shows the bottom view of the TOPST VCP-G board.
 </br></br>
 
 # 4. Specifications
-
+---
 </br>
 
 ## 4.1 Quad SPI Flash Memory (U101)

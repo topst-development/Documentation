@@ -1,4 +1,5 @@
 # 1. Introduction
+---
 This document provides guidelines on using various Arduino sensors with the VCP-G board. It includes connection instructions and example codes to help you easily develop projects by using the VCP-G board.
 
 Specifically, this document provides guidance on Arduino IDE examples for the VCP-G board, including:  
@@ -17,6 +18,7 @@ Refer to Figure 1.1 before using the VCP-G.
 </br>
 
 # 2. VCP-G Digital
+---
 This chapter provides examples of controlling LEDs using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
 
 This chapter includes two example projects that demonstrate how to use digital output to control multiple LEDs, providing a foundational understanding of digital pin functionality.
@@ -279,6 +281,7 @@ The following table shows pin mapping.
 </br>
 
 # 3. VCP-G Analog
+---
 This chapter provides examples of using the Analog pins on the TOPST VCP-G board. In VCP-G, analog pins receive continuous voltage signals from sensors, allowing precise measurement of varying input values. Chapter 3.1, Chapter 3.2, and Chapter 3.3 demonstrate how to use analog pins to read sensor data and control outputs, providing a foundational understanding of analog input handling.
 
 </br>
@@ -622,6 +625,7 @@ The following table shows pin mapping.
 </br>
 
 # 4. VCP SPI
+---
 This chapter provides instructions for configuring Serial Peripheral Interface (SPI) communication on the TOPST VCP-G board.  
 SPI is a high-speed, synchronous communication protocol used to exchange data between microcontrollers and peripherals. It operates with separate lines for data transmission (MOSI and MISO), clock synchronization (SCK), and device selection (SS), ensuring efficient and reliable communication.  
 The following chapters describes how to set up and use SPI to interface with external devices.
@@ -840,6 +844,7 @@ The following table shows pin mapping.
 </br>
 
 # 5. VCP-G I2C
+---
 This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the TOPST VCP-G board.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 
@@ -950,6 +955,7 @@ The following table shows pin mapping.
 </br>
 
 # 6. VCP-G UART
+---
 This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the TOPST VCP-G board.  
 UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
 The following chapters describe how to send and receive data through UART.
@@ -1257,6 +1263,7 @@ The following table shows pin mapping.
 </br>
 
 # 7. Additional Examples
+---
 This chapter provides additional sensor examples not included in the "Examples for TOPST VCP Rev G" in the Arduino IDE.  
 It provides example guides for using commonly used Arduino sensors with the TOPST VCP-G board, helping users integrate various sensors into their projects effectively.
 
@@ -1988,6 +1995,7 @@ The following table shows pin mapping.
 </br>
 
 # 8. References
+---
 - Contact TOPST for more details: topst@topst.ai
 
 **Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference
