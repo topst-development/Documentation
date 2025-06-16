@@ -56,26 +56,20 @@ The D3-G supports USB webcams, with resolutions up to Full HD (FHD).
 You can test the webcam by following these steps:
 
 
-### Step 1. Connect the USB camera to a USB port on the board.
+#### Step 1. Connect the USB camera to a USB port on the board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
 <p align="center"><strong>Figure 4.1 Connect Webcam to D3-G board</strong></p><br/>
 
-### Step 2. Connect the input devices (mouse and keyboard) and monitor to D3-G.
+#### Step 2. Connect the input devices (mouse and keyboard) and monitor to D3-G.
    
-<br/>
+#### Step 3. Boot the D3-G.
 
-### Step 3. Boot the D3-G.
-
-<br/>
-
-### Step 4. Check the available /dev/video devices.
+#### Step 4. Check the available /dev/video devices.
 ```
 ls /dev/video*
 ```
 
-<br/>
-
-### Step 5. Verify the video output using OpenCV (or vutils).
+#### Step 5. Verify the video output using OpenCV (or vutils).
 ```
 touch webcam.py
 chmod a+x webcam.py
@@ -482,8 +476,6 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 /dev/nvme0n1p1  234G   28K  222G   1% /mnt/nvme
 ```
 <br/><br/><br/><br/>
-
-
 
 
 # 6. Ethernet Connection

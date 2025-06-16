@@ -6,9 +6,6 @@ This document provides guidelines for setting up a software development environm
 
 # 2. Setting Host Environment
 ---
-
-</br></br></br>
-
 ## 2.1 Ubuntu Installation
 ---
 It is recommended to set up your development environment on Ubuntu 22.04. This Ubuntu version offers a stable platform with wide community support, ensuring compatibility and ease of use with the TOPST VCP-G board and associated toolchain.
@@ -173,9 +170,6 @@ build  documents  easy-setup_vcp.sh  scripts  sources  tools
 
 # 5. Build Guide
 ---
-
-</br></br></br>
-
 ## 5.1 Execute easy-setup_vcp-g.sh
 ---
 If you run ./easy-setup_vcp-g.sh script, you can see the following screen.

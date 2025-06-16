@@ -144,9 +144,6 @@ Table 1.1 describes the features of the TCC7045.
 
 # 2. Block Diagram
 ---
-
-</br></br></br>
-
 ## 2.1 System Block Diagram
 ---
 Figure 2.1 shows the system block diagram of TOPST VCP-G board.
@@ -290,8 +287,6 @@ Figure 3.2 shows the bottom view of the TOPST VCP-G board.
 
 # 4. Specifications
 ---
-</br></br></br>
-
 ## 4.1 Quad SPI Flash Memory (U101)
 ---
 The information on the Quad SPI flash memory is as follows:
