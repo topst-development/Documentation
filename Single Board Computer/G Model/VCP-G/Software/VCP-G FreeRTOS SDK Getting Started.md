@@ -10,6 +10,7 @@ This document provides guidelines for setting up a software development environm
 </br>
 
 ## 2.1 Ubuntu Installation
+---
 It is recommended to set up your development environment on Ubuntu 22.04. This Ubuntu version offers a stable platform with wide community support, ensuring compatibility and ease of use with the TOPST VCP-G board and associated toolchain.
 
 Linux distribution version:  
@@ -18,6 +19,7 @@ Linux distribution version:
 </br>
 
 ## 2.2 Install WSL2 Ubuntu (Windows Environment Only)
+---
 **Notd:** If you using Ubuntu host, you can skip installing WSL2.  
 
 1.	Set Windows Features by clicking **Control Panel -> Programs -> Windows Features On/Off -> Enable Virtual Machine Platform & Hyper-V**
@@ -48,6 +50,7 @@ Linux distribution version:
 </br>
 
 ## 2.3 Setting Linux Envirionment
+---
 To set up a Linux environment on your host PC, follow these steps: 
 1.	Execute WSL2 (Windows Environment Only)
     If you are using Windows, start WSL2 by executing one of the following commands in Windows PowerShell.
@@ -80,6 +83,7 @@ This toolchain is optimized for the ARM architecture and ensures compatibility w
 </br>
 
 ## 3.1 Install and Set Up Toolchain
+---
 Follow the steps below to download, extract, and set up the toolchain:  
 1. **Download the Toolchain:** Enter **wget** command to download the toolchain form the Linaro website:
     ```
@@ -103,6 +107,7 @@ Follow the steps below to download, extract, and set up the toolchain:
 </br>
 
 ## 3.2 Verify Toolchain
+---
 To ensure that the toolchain is installed correctly.  
 1. **Navigate to the Toolchain Directory**
     ```
@@ -128,6 +133,7 @@ This chapter describes how to clone the source code using Git.
 </br>
 
 ## 4.1 Clone TOPST VCP-G Source Code
+---
 To obtain the source code for the TOPST VCP-G board, enter the **git clone** command. This command creates a copy of the remote repository on your local machine, allowing you to work with the code directly.
 
 Follow these steps to clone the TOPST VCP-G source code:
@@ -155,6 +161,7 @@ The TOPST VCP-G source code is now available locally for building and developmen
 </br>
 
 ## 4.2 Source Code Structure
+---
 After cloning, enter the ls command to list the directory contents and review key files to understand the source code structure.
 ```
 ls
@@ -170,6 +177,7 @@ build  documents  easy-setup_vcp.sh  scripts  sources  tools
 </br>
 
 ## 5.1 Execute easy-setup_vcp-g.sh
+---
 If you run ./easy-setup_vcp-g.sh script, you can see the following screen.
 
 Caution: If you re-run ./easy-setup_vcp-g.sh, be careful as the built sources will be deleted if you select yes.
@@ -188,11 +196,13 @@ Then you can see the following screen.
 </br>
 
 ## 5.2 Makefiles and Build Systems
+---
 A Makefile is a key component of many build systems. It contains rules and directives for the **make** utility to compile and link programs. By utilizing a Makefile, you can automate the build process, ensuring consistency and efficiency.
 
 </br>
 
 ## 5.3 Initiate Build Process
+---
 To build the source code, follow these steps:  
 1. **Navigate to the Build Directory:**
     ```
@@ -228,11 +238,13 @@ This chapter describes how to download ***FWDN*** to the TOPST VCP-G board in a 
 </br>
 
 ## 6.1 Prepare TOPST VCP-G
+---
 Before beginning the download process, ensure that the TOPST VCP-G board is in a stable position and free from any potential disturbances. Ensure that all switches and connectors are easily accessible and 3.3V power cable should be connect correctly.
 
 </br>
 
 ## 6.2 Connect Hardware to Host PC
+---
 If you use Ubuntu host, proceed directly to step 3.  
 1. **Download usbipd-win:** usbipd-win project is required to use USB in WSL2.   
     Download usbipd-win from https://learn.microsoft.com/ko-kr/windows/wsl/connect-usb#attach-a-usb-device.
@@ -262,6 +274,7 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 </br>
 
 ## 6.3 Download Software on TOPST VCP-G Board
+---
 1. **Set the Board to Download Mode:** Connect the power cable to the TOPST VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.2 Set Board to Download Mode</strong></p>
@@ -278,6 +291,7 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
     </br>
 
 ## 6.4 Verify Software on Board
+---
 After downloading the software to the board, follow these steps to verify that it is operating correctly.
 1. **Install Minicom**
     ```
@@ -299,6 +313,7 @@ After completing steps 1 and 2, the following output appears on the terminal. If
 </br>
 
 ## 6.5 Troubleshooting Common Issues
+---
 This chapter provides solutions to common issues encountered while working with the TOPST VCP-G board.
 
 **Issue:** The ***FWDN*** reports a lack of permission to access the ttyUSB0 device.  

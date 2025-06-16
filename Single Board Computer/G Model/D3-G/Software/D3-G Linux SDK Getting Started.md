@@ -16,6 +16,7 @@ This chapter provides instructions on how to set up the host PC environment, wit
 </br><br/><br/>
 
 ## 2.1 Windows Environment 
+---
 This document describes how to set up Windows Subsystem for Linux (WSL) to use Linux on a Windows PC.
 The D3-G Linux SDK is based on the Yocto Project, so Linux version of D3-G SDK follows the Yocto project.
 You can install another version of Linux, but this document describes, the D3-G Linux SDK based on Ubuntu 22.04.
@@ -128,6 +129,7 @@ Please proceed to **Chapter 3: Image Build Guide**.
 <br/><br/><br/>
 
 ## 2.2 Linux Environment
+---
 This chapter explains the setup process for Ubuntu as the host OS.
 </br><br/>
 
@@ -222,13 +224,13 @@ This chapter provides guidance based on the Ubuntu OS installed on the host PC (
 </br></br>
 
 ## 3.1 SDK Build Prepration
-
+---
 The D3-G Linux SDK is based on Yocto Project 3.1 Dunfell. Therefore, you must configure the Yocto Project environment on the host PC to use the D3-G Linux SDK. To download SDK, source-mirror, and tools, you need to install the required utilities. To build the image smoothly, your PC must have **at least 60 GB of available storage** and **a minimum of 16 GB of RAM**.
 
 </br><br/>  
 
 ## 3.2 Yocto Project  
-
+---
 The Yocto Project is an open source project focuses on embedded Linux development.  
 It uses a combination of Open Embedded project, which is Poky, and ***bitbake*** as the build system to make Linux images.  
 By using Yocto Project, you can simultaneously build the bootloader, kernel, and rootfs.  
@@ -236,7 +238,7 @@ By using Yocto Project, you can simultaneously build the bootloader, kernel, and
 <br/><br/>
 
 ## 3.3 Task Process of Yocto Project
-
+---
 Figure 3.1 shows the task process of Yocto Project. You can download source from upstream based on metadata and build it. After the build is completed, package, image, and SDK are provided as results.
 
 <p align="center">
@@ -247,6 +249,7 @@ Figure 3.1 shows the task process of Yocto Project. You can download source from
 <br/><br/>
 
 ## 3.4 Composition of D3-G SDK
+---
 The following are the components of the Yocto Project we have configured.
 Figure 3.1 shows composition of D3-G SDK.
 
@@ -333,6 +336,7 @@ Figure 3.1 shows composition of D3-G SDK.
 
 
 ## 3.5 Ready to build
+---
 The following chapters describes how to configure the Yocto Project to build the D3-G image.
 
 <br/><br/>
@@ -394,6 +398,7 @@ repo sync has finished successfully.
 <br/><br/><br/>
 
 ## 3.6 Execute topst-build.sh 
+---
 If you run ./easy-setup_d3-g.sh script, you can see the following screen. 
 
 **Caution: If you re-run ./easy-setup_d3-g.sh, be careful as the built sources will be deleted if you select yes.**
@@ -482,7 +487,7 @@ $ bitbake telechips-topst-image
 <br/><br/><br/>
 
 ## 3.7 Make Firmware Downloader (FWDN) Image 
-
+---
 This option combines the binaries into a single image for the D3-G platform image.
 
 The **output.fwdn.zip** file, which includes the **'output.fai' build image** and **FWDN tools**, is created in the following path:
@@ -596,7 +601,7 @@ This chapter describes how to download ***FWDN*** to the D3-G and log in to the 
 <br/><br/><br/>
 
 ## 4.1 Firmware Download Sequence
-
+---
 The downloading sequence of ***FWDN*** is as follows:
 
 1. Set the boot mode switch to USB boot mode.
@@ -607,6 +612,7 @@ The downloading sequence of ***FWDN*** is as follows:
 <br/><br/><br/>
 
 ## 4.2 Connect D3-G board and Host PC with USB Boot Mode
+---
 Firmware Downloader (FWDN) writes a ROM image to the D3-G through USB communication with the Host PC. 
 
 The D3-G has one Boot Mode button and supports two types of boot modes. This guide focuses on the FWDN mode.
@@ -655,6 +661,7 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 <br/><br/><br/>
 
 ## 4.3 Ready to Download FWDN
+---
 Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2) environment to the Windows environment.
 
 
@@ -675,7 +682,7 @@ Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2)
 <br/><br/><br/>
 
 ## 4.4 FWDN in Windows Environment
-
+---
 1. Excute Powershell and go to "C:\images\".
 ```
 $ cd C:\images 
@@ -783,7 +790,7 @@ C:\images>fwdn.exe -w "output.fai" --storage emmc --area user
 <br/><br/><br/>
 
 ## 4.5  FWDN in Linux Environment
-
+---
 To download the D3-G image in Linux, execute the following command: "./fwdn.sh".
 
 ```
@@ -802,7 +809,7 @@ This chapter explains how to connect the host PC to the D3-G board through UART 
 <br/><br/><br/>
 
 ## 5.1 D3-G board Connection with UART 
-
+---
 Follow these steps and verify that the firmware download is successfully completed by using the UART connection. 
 
 1. Install the serial port driver (CP210x Universal Windows Driver) and PL2303_prolific driver in the Windows environment. (CP210x Universal Windows Driver: Download link, PL2303_prolific Driver: Download link) 
@@ -837,6 +844,7 @@ By following this chapter, you can download the Ubuntu image, upload it to the b
 <br/><br/><br/>
 
 ## 6.1 Download Ubuntu Image
+---
 Official of D3-G is based on Ubuntu 22.04.  
 You can download the image file here.  
 
@@ -859,6 +867,7 @@ For information on releases of other OS, refer to the TOPST community.  
 <br/><br/><br/>
 
 ## 6.2 Firmware Upload to D3-G
+---
 Run the “fwdn_ubuntu.batch” file. 
 Refer to Chapter 5 for how to upload the Ubuntu image to the D3-G.
 After completing FWDN, remove the USB Type-C cable from the FWDN port and remove the power cable. 
@@ -866,6 +875,7 @@ After completing FWDN, remove the USB Type-C cable from the FWDN port and remove
 <br/><br/><br/>
 
 ## 6.3 Resize eMMC Storage (Only D3-G)
+---
 After logging in and booting the board, it is recommended to resize the eMMC storage first.
 Follow the steps below for eMMC Storage resizing.
 

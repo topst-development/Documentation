@@ -30,6 +30,7 @@ This chapter contains two example projects that demonstrate how to control LEDs 
 </br>
 
 ## 2.1 Digital Out
+---
 This example demonstrates how to control LEDs on a breadboard using the TOPST VCP-G board under FreeRTOS.  
 Assuming you have already set up the VCP-G FreeRTOS SDK, you can find the relevant source file at:  
 ```
@@ -139,6 +140,7 @@ Once the code is successfully flashed and executed, the four connected LEDs will
 </br>
 
 ## 2.2 Digital In
+---
 This example demonstrates how to read input from a push-button and use it to control an LED using the TOPST VCP-G board under FreeRTOS.
 Assuming you have already set up the VCP-G FreeRTOS SDK, the relevant source file can be found at:
 ``` 
@@ -217,7 +219,7 @@ The following table shows pin mapping.
 	</table>
 </div>
 
-### 2.1.3 How to execute
+### 2.2.3 How to execute
 To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
 ```
 #include <gpio.h>
@@ -276,6 +278,7 @@ I2C is a two-wire, synchronous communication protocol designed for efficient dat
 </br>
 
 ## 3.1 vcpI2C_LCD1602
+---
 This example program demonstrates how the TOPST VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
 In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text Hello TOPST on the screen.
 
@@ -400,6 +403,7 @@ SPI is a high-speed, synchronous communication protocol used to exchange data be
 </br>
 
 ## 4.1 vcpSPI_Dot8x8
+---
 This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver via SPI.
 In this example, a predefined binary array is used to display the letter "X" on the dot matrix. The display is updated through SPI communication, and the MAX7219 handles row and column control internally.
 This example helps illustrate how to send data patterns over SPI to control external display devices like LED matrices.
@@ -525,6 +529,7 @@ The following chapters describe how to send and receive data through UART.
 </br>
 
 ## 5.1 Uart Communication Test (FT232BL)
+---
 This example demonstrates how to verify UART communication on the TOPST VCP-G board using the FT232BL USB to TTL serial module.
 The UART TX and RX pins of the VCP-G board are connected to the FT232BL module, which is in turn connected to a PC via USB.
 A terminal program such as MobaXterm is used on the PC to view the transmitted messages.
@@ -625,6 +630,7 @@ This chapter provides instructions for configuring Pulse Width Modulation (PWM) 
 </br>
 
 ## 6.1 pwmFade
+---
 This example program demonstrates how the TOPST VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
 
 ### 6.1.1 Hardware Requirements
@@ -767,6 +773,7 @@ This chapter introduces additional sensor examples using FreeRTOS on the TOPST V
 </br>
 
 ## 7.1 Infrared (IR) Sensor (Transceiver)
+---
 This example demonstrates how the TOPST VCP-G board controls an IR sensor and two LEDs on a breadboard. When the IR sensor detects an object (sensor value is LOW), the first LED turns on, and the second LED turns off. Conversely, when no object is detected (sensor value is HIGH), the second LED turns on while the first LED turns off. The presence or absence of an object is also printed to the serial monitor.
 
 ### 7.1.1 Hardware Requirements
@@ -886,6 +893,7 @@ Once the code is successfully flashed and executed, the IR sensor will detect th
 </br>
 
 ## 7.2 Infrared (IR) Sensor (Receiver)
+---
 This example demonstrates how the TOPST VCP-G board uses an IR receiver sensor to detect signals from a remote control. When an IR signal is received, the onboard logic turns on an LED connected to the breadboard. This confirms that the IR receiver module is correctly decoding incoming signals, and the VCP-G board is responding as expected. The reception status is also printed to the serial monitor.
 
 ### 7.2.1 Hardware Requirements
@@ -997,6 +1005,7 @@ Once the code is successfully flashed and executed, the IR receiver detects sign
 </br>
 
 ## 7.3 Gas Sensor
+---
 This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the TOPST VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
 
 **Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
@@ -1080,6 +1089,7 @@ Once the code is successfully flashed and executed, the gas sensor continuously 
 </br>
 
 ## 7.4 Capacitive Touch Sensor
+---
 This example demonstrates how the TOPST VCP-G board interfaces with a capacitive touch sensor and controls an LED on a breadboard. The capacitive touch sensor detects physical contact from a finger by sensing changes in capacitance.  
 When a touch is detected, the sensor outputs a digital HIGH signal to the VCP-G board, which in turn turns on an LED. This example confirms that the touch input is correctly recognized and that the GPIO output responds accordingly. The touch detection status is also printed to the serial monitor.
 

@@ -51,6 +51,7 @@ You can connect either a MIPI CSI camera or a USB webcam depending on your proje
 <br/><br/><br/>
 
 ## 4.1 USB Webcam
+---
 The D3-G supports USB webcams, with resolutions up to Full HD (FHD).
 You can test the webcam by following these steps:
 
@@ -115,6 +116,7 @@ python3 webcam.py
 <br/><br/><br/>
 
 ## 4.2 MIPI CSI
+---
 CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
 It enables high-speed, low-power transmission of image data from the camera to the processor.
 
@@ -213,6 +215,7 @@ This chapter covers how to connect the D3-G to various storage devices. Supporte
 <br/><br/><br/>
 
 ## 5.1 USB Drive
+---
 The D3-G supports USB storage devices through its USB 2.0 and USB 3.0 Type-A ports.
 To connect a USB drive:
 
@@ -232,6 +235,7 @@ To connect a USB drive:
 <br/><br/><br/>
 
 ## 5.2 SD Card
+---
 The D3-G includes a microSD card slot that supports standard SDHC/SDXC cards.
 To use an SD card with the D3-G:
 
@@ -261,6 +265,7 @@ $ sudo mount /dev/mmcblk1p1 /mnt
 <br/><br/><br/>
 
 ## 5.3 SATA HDD
+---
 
 The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
 
@@ -372,6 +377,7 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 <br/><br/><br/>
 
 ## 5.4 NVME M.2 SSD
+---
 The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
 
 <br/>
@@ -487,6 +493,7 @@ The D3-G supports Ethernet connectivity through its onboard J2C Ethernet port. T
 <br/><br/><br/>
 
 ## 6.1 Network Connection Through Router
+---
 This method connects the D3-G to a local network using a standard router. The D3-G can obtain an IP address automatically through DHCP or be configured with a static IP address.
 
 <br/><br/>
@@ -544,6 +551,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 <br/><br/><br/>
 
 ## 6.2 Network Sharing with Host PC
+---
 You can share your PC's internet connection with the D3-G without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
 
 <br/><br/>
@@ -637,9 +645,11 @@ Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UAR
 <br/><br/><br/>
 
 ## 7.1 GPIO Digital In/Out
+---
 The D3-G supports digital input and output (GPIO) through its 40-pin header, enabling you to interact with external devices such as buttons, LEDs, and sensors. 
 
 ### 7.1.1 LED
+---
 One of the simplest and most common GPIO output examples is controlling an LED.  
 This section demonstrates how to connect and use from LED sensor using the D3-G.
 
@@ -794,6 +804,7 @@ In either case, the pin will be properly released and cleaned up.
 <br/><br/><br/><br/>
 
 ### 7.1.2 Button
+---
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
 This section demonstrates how to connect and use from a basic button module using the D3-G.
 
@@ -915,6 +926,7 @@ Refer to the official pinout diagram and select a GPIO number that matches your 
 <br/><br/><br/><br/>
 
 ### 7.1.3 Touch Sensor
+---
 A touch sensor can be used to detect human touch as a digital input signal through GPIO.
 This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G.
 
@@ -1057,6 +1069,7 @@ Refer to the official pinout diagram and select a GPIO number that matches your 
 <br/><br/><br/><br/>
 
 ### 7.1.4 Vibration Detection Sensor
+---
 A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal through GPIO.
 This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G.
 
@@ -1196,6 +1209,7 @@ Upon termination, GPIO88 is automatically unexported and cleaned up.
 <br/><br/><br/><br/>
 
 ### 7.1.5 Infrared Sensor (SZH-SSBH-002)
+---
 An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal through GPIO.
 This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G.
 
@@ -1339,6 +1353,7 @@ You may use any available GPIO pin based on the 40-pin header of the D3-G. Refer
 <br/><br/><br/><br/>
 
 ### 7.1.6 Photoresistor (SZH-SSBH-011)
+---
 A photoresistor can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold through GPIO.
 This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor using the D3-G.
 
@@ -1515,6 +1530,7 @@ When the script is terminated, both GPIO pins are automatically unexported and c
 <br/><br/><br/><br/>
 
 ### 7.1.7 Air Pollution Detection Sensor
+---
 An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal through GPIO.
 This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G.
 
@@ -1654,6 +1670,7 @@ When the script is terminated, GPIO88 is automatically unexported and cleaned up
 <br/><br/><br/><br/>
 
 ### 7.1.8 Ultrasonic Sensor
+---
 An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal through GPIO.
 This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G.
 
@@ -1799,6 +1816,7 @@ When the script is terminated, GPIO82 and GPIO88 are automatically unexported an
 <br/><br/><br/><br/>
 
 ## 7.2 I2C
+---
 The D3-G provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.
 Inter-integrated Circuit (I2C) is a two-wire communication protocol consisting of a data line (SDA) and a clock line (SCL), enabling multiple devices to communicate over a shared bus.
 
@@ -1808,6 +1826,7 @@ The SDA line is used for both transmitting and receiving data, while the SCL lin
 <br/><br/><br/><br/>
 
 ### 7.2.1 1602A LCD Display
+---
 The 1602A LCD is a character display module commonly used in embedded systems.
 On the D3-G, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
 
@@ -1921,6 +1940,7 @@ Make sure the I2C address (0x27) matches your specific LCD module. Use **i2cdete
 <br/><br/><br/><br/>
 
 ## 7.3 SPI
+---
 The D3-G supports Serial Peripheral Interface (SPI) communication through a 40-pin GPIO header, enabling data exchange between external devices and the D3-G.
 
 SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: Master Out Slave In (MOSI), Master In Slave Out (MISO), Serial Clock (SCLK), and Chip Select (CS).
@@ -1930,6 +1950,7 @@ Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicat
 <br/><br/><br/><br/>
 
 ### 7.3.1 Dot Matrix
+---
 8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the D3-G, the dot matrix module can be controlled through SPI using a driver chip such as the MAX7219.
 
 The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK, and CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
@@ -2206,9 +2227,11 @@ On termination, the SPI device is safely closed, and the LED matrix stops updati
 <br/><br/><br/><br/>
 
 ## 7.4 PWM
+---
 Pulse Width Modulation (PWM) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G supports PWM through the sysfs interface in Linux.
 
 ### 7.4.1 LED Brightness Control
+---
 This example demonstrates controlling an LED's brightness using PWM on the D3-G.
 
 #### Step 1. Hardware Requirements
@@ -2337,6 +2360,7 @@ To stop the script, press **[Ctrl+C]**.
 <br/><br/><br/><br/>
 
 ### 7.4.2 Mini Servo Motor
+---
 A mini servo motor can be used to control precise angular movement based on a Pulse Width Modulation (PWM) signal through GPIO.
 This section demonstrates how to connect and control a mini servo motor using the D3-G.
 

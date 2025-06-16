@@ -14,6 +14,7 @@ This chapter describes how to download and install the TOPST VCP-G Arduino packa
 </br>
 
 ## 2.1 Installation Guide
+---
 **Step 1: Download the Arduino IDE**
 
 First, you need the Arduino IDE which serves as the platform to program your Arduino boards.  
@@ -65,6 +66,7 @@ Test if your setup works by uploading a simple sketch:
 </br>
 
 ## 2.2 Troubleshooting
+---
 If you encounter any issues during the setup, refer to the [Arduino Troubleshooting Guide](https://www.arduino.cc/en/Guide/Troubleshooting).  
 For more information and advanced features, refer to TOPST VCP documentation or visit [Arduino Help Center](https://support.arduino.cc/hc/en-us).
 

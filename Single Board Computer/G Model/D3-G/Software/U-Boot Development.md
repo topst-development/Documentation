@@ -28,6 +28,7 @@ In recovery scenarios, it allows the system to boot with initramfs instead of th
 <br/><br/><br/>
 
 ## 3.1 Prepare Bootable USB
+---
 - Format a USB memory stick as ext4
 
 - Copy the following files to the USB:
@@ -37,7 +38,7 @@ In recovery scenarios, it allows the system to boot with initramfs instead of th
   -  d3g.dtb (compiled device tree blob)
 
 ## 3.2 Boot Steps in U-Boot Mode
-
+---
 Insert the USB into the D3-G and power it on. Enter U-Boot mode and execute the following commands:
 
 ```
@@ -73,6 +74,7 @@ Once in the initramfs shell, follow the steps below to reset the root password s
 
 
 ## 4.1 Mount eMMC Partition
+---
 Mount the root filesystem partition (commonly /dev/mmcblk0p4) to a temporary mount point:
 
 ```
@@ -81,7 +83,7 @@ $ mount /dev/mmcblk0p4 /mnt/part4
 ```
 
 ## 4.2 Modify shadow File
-
+---
 The root password is stored in hashed form in the /etc/shadow file. To clear the password:
 
 ```
@@ -89,6 +91,7 @@ $ sed -i 's/$1$U8sW0tMW$vLdJQg290HdAcqkJe1`dMM1//g' /mnt/part4/etc/shadow
 ```
 
 ## 4.3 Finalize and Reboot
+---
 To ensure changes are written to disk:
 
 ```

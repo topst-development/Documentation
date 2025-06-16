@@ -26,6 +26,7 @@ This chapter includes two example projects that demonstrate how to use digital o
 </br>
 
 ## 2.1 vcp4LED
+---
 This example program demonstrates how the TOPST VCP-G board controls four LEDs on the breadboard. The example code is provided in the “vcp4LED.ino”. When this file is uploaded to the TOPST VCP-G board, the LEDs turn on and off sequentially in both forward and reverse patterns with a 500 ms delay between each transition. 
 
 ### 2.1.1 Hardware Reqirements  
@@ -144,6 +145,7 @@ The following table shows pin mapping.
 </br>
 
 ## 2.2 vcp4LED_Button
+---
 This example program demonstrates how the TOPST VCP-G board controls four LEDs and a button on the breadboard. When the button is pressed, the right two LEDs turn off, and the left two LEDs turn on. When the button is released, the LEDs change state. The ones that were on turn off, and the ones that were off turn on. The program continuously checks the button state and adjusts the LEDs accordingly.
 
 ### 2.2.1 Hardware Requirements
@@ -287,6 +289,7 @@ This chapter provides examples of using the Analog pins on the TOPST VCP-G board
 </br>
 
 ## 3.1 AnalogInOutSerial
+---
 This example program demonstrates how the TOPST VCP-G board controls a potentiometer and an LED on the breadboard. TOPST VCP-G reads a value from an analog input pin, maps the result to a range from 0 to 1000, and uses this value to set the pulse width modulation (PWM) of an output pin (connected to an LED). The results are also printed to the Serial Monitor.
 
 ### 3.1.1 Hardware Requirements
@@ -406,6 +409,7 @@ The following table shows pin mapping.
 </br>
 
 ## 3.2 AnalogInput
+---
 This example program demonstrates how the TOPST VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is below 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
 
 ### 3.2.1 Hardware Requirements
@@ -525,6 +529,7 @@ The following table shows pin mapping.
 </br>
 
 ## 3.3 pwmFade
+---
 This example program demonstrates how the TOPST VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
 
 ### 3.3.1 Hardware Requirements
@@ -633,6 +638,7 @@ The following chapters describes how to set up and use SPI to interface with ext
 </br>
 
 ## 4.1 vcpSPI_Dot8x8
+---
 This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver. It displays patterns like a heart shape and the letter "R" by setting rows with pre-defined binary arrays. The intensity of the LEDs is adjusted to create a pulsing effect, adding dynamic visuals. Additional features include inverting and clearing the display to enhance functionality.
 
 ### 4.1.1 Hardware Requirements
@@ -851,6 +857,7 @@ I2C is a two-wire, synchronous communication protocol designed for efficient dat
 </br>
 
 ## 5.1 vcpI2C_LCD1602
+---
 This example program demonstrates how the TOPST VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.
 
 In this example, the LCD is initialized, and the backlight is enabled for clear visibility. The program then positions the cursor to display the text TOPST VCP-G on the first row and I2C Test! on the second row. With I2C communication, multiple devices can be controlled using minimal wiring, making it an effective solution for compact projects.
@@ -963,6 +970,7 @@ The following chapters describe how to send and receive data through UART.
 </br>
 
 ## 6.1 vcpASCIITable
+---
 This example program demonstrates how the TOPST VCP-G board prints the ASCII values of characters in various formats: decimal, hexadecimal, octal, and binary. It starts from the character '!' (ASCII value 33) and increments through all visible ASCII characters, printing each in the different formats. The program continues until it reaches the character '~' (ASCII value 126).
 
 ### 6.1.1 Hardware Requirements
@@ -1072,6 +1080,7 @@ This example program demonstrates how the TOPST VCP-G board prints the ASCII val
 </br>
 
 ## 6.2 vcpGraph
+---
 This example program demonstrates how the TOPST VCP-G board reads analog value of potentiometer on the bread board and transmits the data to host PC through UART. The Arduino code continuously reads the value of the analog sensor (potentiometer) connected to pin A5 and sends it through the serial port. The accompanying processing code visualizes these values in a dynamic graph in real time, showing the change in sensor input over time. .
 
 ### 6.2.1 Hardware Requirements
@@ -1270,7 +1279,7 @@ It provides example guides for using commonly used Arduino sensors with the TOPS
 </br>
 
 ## 7.1 Infrared (IR) Sensor (Transceiver)
-
+---
 ### 7.1.1 Infrared (IR) Sensor 1
 This example demonstrates how the TOPST VCP-G board controls an IR sensor and two LEDs on the breadboard. After reading the IR sensor value, if the IR sensor value is HIGH, it is considered that there is no obstacle, and the green LED turns on while the red LED turns off. Conversely, if the IR sensor value is LOW, it is considered that there is an obstacle, and the red LED turns on while the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
 
@@ -1500,6 +1509,7 @@ The following table shows pin mapping.
 </br>
 
 ## 7.2 Joystick
+---
 This example shows how the TOPST VCP-G board reads joystick inputs and prints their value to the Serial Monitor. You can receive three inputs: X-axis, Y-axis, and buttons. The serial monitor verifies the received signals. The movements made on the X and Y axes change the value of the port, which corresponds to the numeric value of the analog output. In allows for precise control for applications that require fine adjustment.
 
 **Note:** Dual Axis Joystick Module (KY-023) is a product of Joy-IT. All rights to its design, trademark, and related intellectual property are owned by Joy-IT.
@@ -1610,6 +1620,7 @@ The following table shows pin mapping.
 </br>
 
 ## 7.3 Gas Sensor
+---
 This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the TOPST VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
 
 **Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
@@ -1701,6 +1712,7 @@ The following table shows pin mapping.
 </br>
 
 ## 7.4 Metal Touch Sensor Module
+---
 This example program demonstrates how the TOPST VCP-G board controls touch sensor and an LED on the breadboard. The metal touch sensor module (KY-036) is a versatile analog/digital sensor designed to detect touch on metal surfaces or human skin. This module uses a transistor to sense changes in electrical conductivity when touched, and it outputs both digital and analog signals for interaction with VCP-G board.  
 When a touch is detected, the module outputs relevant digital/analog values to the serial monitor. You can also control an LED based on the touch status. 
 
@@ -1837,6 +1849,7 @@ The following table shows pin mapping.
 </br>
 
 ## 7.5 Step Motor with Motor Driver
+---
 This example demonstrates how the TOPST VCP-G board controls 4-wire stepper motor (28BYJ-48 (5VDC)) and Motor Driver (ULN2003 (5V–12V)). The code in Chapter 7.5.3 defines the pins connected to the motor driver and sets the number of steps per revolution. The motor rotates forward for one full revolution, pauses, then rotates backward for one full revolution, and pauses again. The motor speed is controlled by the delay between steps, and the direction is controlled by the order in which the coils are activated.
 
 **Note:** The 28BYJ-48 motor requires 4096 signals for one full rotation in Half step mode and 2048 signals for one full rotation in Full step mode. For precise motor control, the number of signals required depending on the mode should be considered. 

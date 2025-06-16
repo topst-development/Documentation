@@ -101,6 +101,7 @@ Table 1.1 describes the features of the TCC7045.
 </br>
 
 ## 1.1 Terminology
+---
 <p align="center"><strong>Table 1.2 Features of TCC7045</strong></p>
 <div align="center">
 	<table>
@@ -176,7 +177,8 @@ Table 3.1 describes the default configuration of the TOPST VCP-G board.
 
 </br>
 
-# 3.1 TOPST VCP-G
+## 3.1 TOPST VCP-G
+---
 Figure 3.1 shows the top view of TOPST VCP-G board
 <p align="center"><img src= "https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/3.1%20TOPST%20VCP-G%20Board%20(Top%20View)%20.png"></p>
 <p align="center"><strong>Figure 3.1 TOPST VCP-G Board (Top View)</strong></p>
@@ -290,6 +292,7 @@ Figure 3.2 shows the bottom view of the TOPST VCP-G board.
 </br>
 
 ## 4.1 Quad SPI Flash Memory (U101)
+---
 The information on the Quad SPI flash memory is as follows:
   - Density : 64 Mb  
   
@@ -298,6 +301,7 @@ The information on the Quad SPI flash memory is as follows:
 </br>
 
 ## 4.2 Power In Connector (J101)
+---
 DC 12V is supplied to the TOPST VCP-G through the DC jack of J101 from a 12V adaptor.  
 Figure 4.1 shows the location of J101.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.1%20Power%20In%20Connector%20(J101).png"></p>
@@ -306,6 +310,7 @@ Figure 4.1 shows the location of J101.
 </br>
 
 ## 4.3 Connector for JTAG (J100)
+---
 A JTAG emulator can be connected to the TOPST VCP-G through J100 for debugging. Figure 4.2 shows the location of J100.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.2%20Connector%20for%20JTAG%20(J100).png"></p>
 <p align="center"><strong>Figure 4.2 Connector for JTAG (J100)</strong><p>
@@ -415,6 +420,7 @@ Table 4.2 describes the setting of JTAG Disable/Enable.
 </br>
 
 ## 4.4 FWDN Switch (SW101)
+---
 The TOPST VCP-G board has one pin for boot configuration using Boot Mode (BM) and supports 2 modes: UART FWDN mode and normal mode.   
 Figure 4.3 shows the location of FWDN tact switch (SW101) and is used to select the boot modes of the TOPST VCP-G board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.3%20FWDN%20Tact%20Switch%20(SW101).png"></p>
@@ -463,6 +469,7 @@ Figure 4.5 shows the FWDN mode by using method 2.
 </br>
 
 ## 4.5 RESET Switch (SW100)
+---
 The TOPST VCP-G board has one RESET switch for power of RESET using PORN pin.  
 Figure 4.6 shows the RESET tact switch (SW100).
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.6%20RESET%20Tact%20Switch%20(SW100).png"></p>
@@ -478,6 +485,7 @@ The function of this button is as follows:
 </br>
 
 ## 4.6 Connector for Debugging and FWDN (JC100)
+---
 The JC100 is a standard USB Type-C connector. On the TOPST VCP-G board, JC100 is used for debugging or FWDN via UART.  
 Figure 4.7 shows the location of JC100.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.7%20USB%20Type-C%20Connector%20(JC100).png"></p>
@@ -489,6 +497,7 @@ JC100 on the TOPST VCP-G board includes a built-in USB-to-UART bridge controller
 </br>
 
 ## 4.7 Pin Headers for GPIO, ADC, Power, CAN, SPI
+---
 The TOPST VCP-G board have nine 2.54mm pin headers for power, GPIO, ADC, CAN, and SPI to connect others such as sensor or sub-board.  
 Table 4.4 describes purpose of nine pin headers on the TOPST VCP-G board.
 <p align="center"><strong>Table 4.4 Pin Headers on TOPST VCP-G Board</strong></p>
