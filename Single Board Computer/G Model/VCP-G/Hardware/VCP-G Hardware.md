@@ -98,7 +98,7 @@ Table 1.1 describes the features of the TCC7045.
 	</table>
 </div>
 
-</br>
+</br></br></br>
 
 ## 1.1 Terminology
 ---
@@ -140,12 +140,12 @@ Table 1.1 describes the features of the TCC7045.
 	</table>
 </div>
 
-</br></br>
+</br></br></br></br>
 
 # 2. Block Diagram
 ---
 
-</br>
+</br></br></br>
 
 ## 2.1 System Block Diagram
 ---
@@ -153,7 +153,7 @@ Figure 2.1 shows the system block diagram of TOPST VCP-G board.
 <p align="center"><img src= "https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/2.1%20VCP-G%20System%20Block%20Diagram.png"></p>
 <p align="center"><strong>Figure 2.1 System Block Diagram</strong></p>
 
-</br></br>
+</br></br></br></br>
 
 # 3. TOPST VCP-G Overview
 ---
@@ -176,7 +176,7 @@ Table 3.1 describes the default configuration of the TOPST VCP-G board.
 	</table>
 </div>
 
-</br>
+</br></br></br>
 
 ## 3.1 TOPST VCP-G
 ---
@@ -286,11 +286,11 @@ Figure 3.2 shows the bottom view of the TOPST VCP-G board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/3.2%20TOPST%20VCP-G%20Board%20(Bottom%20View).png"></p>
 <p align="center"><strong>Figure 3.2 TOPST VCP-G Board (Bottom View)</strong></p>
 
-</br></br>
+</br></br></br></br>
 
 # 4. Specifications
 ---
-</br>
+</br></br></br>
 
 ## 4.1 Quad SPI Flash Memory (U101)
 ---
@@ -299,7 +299,7 @@ The information on the Quad SPI flash memory is as follows:
   
 **Note:** SNOR is not mounted on the TOPST VCP-G board as default.
 
-</br>
+</br></br></br>
 
 ## 4.2 Power In Connector (J101)
 ---
@@ -308,7 +308,7 @@ Figure 4.1 shows the location of J101.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.1%20Power%20In%20Connector%20(J101).png"></p>
 <p align="center"><strong>Figure 4.1 Power In Connector (J101)</strong><p>
 
-</br>
+</br></br></br>
 
 ## 4.3 Connector for JTAG (J100)
 ---
@@ -418,7 +418,7 @@ Table 4.2 describes the setting of JTAG Disable/Enable.
 	</table>
 </div>
 
-</br>
+</br></br></br>
 
 ## 4.4 FWDN Switch (SW101)
 ---
@@ -448,6 +448,7 @@ Table 4.3 describes the boot mode selection using the FWDN tact switch (SW101).
 	  </tr>
 	</table>
 </div>
+</br></br>
 
 ### 4.4.1 FWDN Mode Method
 There are two methods to enter FWDN mode.
@@ -467,7 +468,7 @@ Figure 4.5 shows the FWDN mode by using method 2.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.5%20Entering%20FWDN%20Mode%20by%20Using%20Method%202.png"></p>
 <p align="center"><strong>Figure 4.5 Entering FWDN Mode by Using Method 2</strong><p>
 
-</br>
+</br></br></br>
 
 ## 4.5 RESET Switch (SW100)
 ---
@@ -475,6 +476,7 @@ The TOPST VCP-G board has one RESET switch for power of RESET using PORN pin.
 Figure 4.6 shows the RESET tact switch (SW100).
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.6%20RESET%20Tact%20Switch%20(SW100).png"></p>
 <p align="center"><strong>Figure 4.6 RESET Tact Switch (SW100)</strong><p>
+</br></br>
 
 ### 4.5.1 4.5.1	RESET Tact Switch (SW100) Function
 SW100 is a tact switch to reset the power block and system block in TCC7045.  
@@ -483,7 +485,7 @@ The function of this button is as follows:
 
 **Important:** Be careful when pressing the tack switch as the power suddenly turns off and data may be corrupted.
 
-</br>
+</br></br></br>
 
 ## 4.6 Connector for Debugging and FWDN (JC100)
 ---
@@ -495,7 +497,7 @@ Figure 4.7 shows the location of JC100.
 You can perform FWDN or check debugging message of the TCC7045 through JC100.
 JC100 on the TOPST VCP-G board includes a built-in USB-to-UART bridge controller, so you can directly connect JC100 to PC by using the USB Type-C cable.
 
-</br>
+</br></br></br>
 
 ## 4.7 Pin Headers for GPIO, ADC, Power, CAN, SPI
 ---
