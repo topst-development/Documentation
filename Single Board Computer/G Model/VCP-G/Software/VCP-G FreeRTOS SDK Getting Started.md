@@ -1,6 +1,6 @@
 # 1. Introduction
 ---
-This document provides guidelines for setting up a software development environment for the TOPST VCP-G board on a Linux system. It outlines the required tools, configurations, and toolchain.
+This document provides guidelines for setting up a software development environment for the VCP-G on a Linux system. It outlines the required tools, configurations, and toolchain.
 
 </br></br></br></br>
 
@@ -8,7 +8,7 @@ This document provides guidelines for setting up a software development environm
 ---
 ## 2.1 Ubuntu Installation
 ---
-It is recommended to set up your development environment on Ubuntu 22.04. This Ubuntu version offers a stable platform with wide community support, ensuring compatibility and ease of use with the TOPST VCP-G board and associated toolchain.
+It is recommended to set up your development environment on Ubuntu 22.04. This Ubuntu version offers a stable platform with wide community support, ensuring compatibility and ease of use with the VCP-G and associated toolchain.
 
 Linux distribution version:  
 - Ubuntu 22.04 (LTS)
@@ -74,8 +74,8 @@ Before installing any new software, update the list of available packages to ens
 
 # 3. Toolcahin
 ---
-The TOPST VCP-G board uses the **gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi** toolchain.  
-This toolchain is optimized for the ARM architecture and ensures compatibility with the TCT7045 chip on the TOPST VCP-G board.
+The VCP-G uses the **gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi** toolchain.  
+This toolchain is optimized for the ARM architecture and ensures compatibility with the TCT7045 chip on the VCP-G.
 
 </br></br></br>
 
@@ -129,11 +129,11 @@ This chapter describes how to clone the source code using Git.
 
 </br></br></br>
 
-## 4.1 Clone TOPST VCP-G Source Code
+## 4.1 Clone VCP-G Source Code
 ---
-To obtain the source code for the TOPST VCP-G board, enter the **git clone** command. This command creates a copy of the remote repository on your local machine, allowing you to work with the code directly.
+To obtain the source code for the VCP-G, enter the **git clone** command. This command creates a copy of the remote repository on your local machine, allowing you to work with the code directly.
 
-Follow these steps to clone the TOPST VCP-G source code:
+Follow these steps to clone the VCP-G source code:
 1. **Open Terminal:** Launch the terminal application on your Ubuntu 22.04 system.
 2. **Navigate to the desired directory:** Choose a suitable location to save the source code. For example, if you want to save the repository in the home directory, use the following command.
     ```
@@ -141,7 +141,7 @@ Follow these steps to clone the TOPST VCP-G source code:
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Navigate%20to%20Desired%20Directory.png"></p>
     <p align="center"><strong>Figure 4.1 Navigate to Desired Directory</strong></p>
-3. **Clone the Repository:** Use the following command to clone the TOPST VCP-G source code from the provided git address.
+3. **Clone the Repository:** Use the following command to clone the VCP-G source code from the provided git address.
     ```
     git clone git@gitlab.com:topst-private-release/vcp.git topst-vcp
     ```
@@ -153,7 +153,7 @@ Follow these steps to clone the TOPST VCP-G source code:
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Navigate%20to%20Cloned%20Directory.png"></p>
     <p align="center"><strong>Figure 4.3 Navigate to Cloned Directory</strong></p>
-The TOPST VCP-G source code is now available locally for building and development.
+The VCP-G source code is now available locally for building and development.
 
 </br></br></br>
 
@@ -227,13 +227,13 @@ To build the source code, follow these steps:
 
 # 6. Firmware Download
 ---
-This chapter describes how to download ***FWDN*** to the TOPST VCP-G board in a Linux-based development environment.
+This chapter describes how to download ***FWDN*** to the VCP-G in a Linux-based development environment.
 
 </br></br></br>
 
-## 6.1 Prepare TOPST VCP-G
+## 6.1 Prepare VCP-G
 ---
-Before beginning the download process, ensure that the TOPST VCP-G board is in a stable position and free from any potential disturbances. Ensure that all switches and connectors are easily accessible and 3.3V power cable should be connect correctly.
+Before beginning the download process, ensure that the VCP-G is in a stable position and free from any potential disturbances. Ensure that all switches and connectors are easily accessible and 3.3V power cable should be connect correctly.
 
 </br></br></br>
 
@@ -253,7 +253,7 @@ If you use Ubuntu host, proceed directly to step 3.
     ```
     usbipd attach --wsl --busid <busid>
     ```
-3. **Connect USB Type-C Cable:** Use a USB Type-C cable to connect the TOPST VCP-G board to the development host PC.
+3. **Connect USB Type-C Cable:** Use a USB Type-C cable to connect the VCP-G board to the development host PC.
 4. **Verify USB Connection:** In WSL2, execute the following commands.
     ```
     sudo apt-get install usbutils && lsusb
@@ -267,12 +267,12 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 
 </br></br></br>
 
-## 6.3 Download Software on TOPST VCP-G Board
+## 6.3 Download Software on VCP-G
 ---
-1. **Set the Board to Download Mode:** Connect the power cable to the TOPST VCP-G board while pressing the FWDN switch.
+1. **Set the Board to Download Mode:** Connect the power cable to the VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.2 Set Board to Download Mode</strong></p>
-2. **Execute the Download Command:** Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G board.
+2. **Execute the Download Command:** Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
     ```
     sudo ~/topst-vcp/tools/fwdn_vcp/fwdn --fwdn ~/topst-vcp/tools/fwdn_vcp/vcp_fwdn.rom -w output/tcc70xx_pflash_boot_4M_ECC.rom
     ```
@@ -300,7 +300,7 @@ After downloading the software to the board, follow these steps to verify that i
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Open%20Serial%20Connection.png"></p>
     <p align="center"><strong>Figure 6.6 Open Serial Connection</strong></p>
 
-After completing steps 1 and 2, the following output appears on the terminal. If the connection is successful, the board should respond to interactions, confirming that the software is downloaded and is operating correctly on the TOPST VCP-G board.
+After completing steps 1 and 2, the following output appears on the terminal. If the connection is successful, the board should respond to interactions, confirming that the software is downloaded and is operating correctly on the VCP-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Figure%206.7%20Open%20Serial%20Connection.png"></p>
 <p align="center"><strong>Figure 6.7 Open Serial Connection</strong></p>
 
@@ -308,7 +308,7 @@ After completing steps 1 and 2, the following output appears on the terminal. If
 
 ## 6.5 Troubleshooting Common Issues
 ---
-This chapter provides solutions to common issues encountered while working with the TOPST VCP-G board.
+This chapter provides solutions to common issues encountered while working with the VCP-G.
 
 **Issue:** The ***FWDN*** reports a lack of permission to access the ttyUSB0 device.  
 **Solution:** This issue occurs when your user account (**$USER**) does not have the necessary permissions to access serial devices. To resolve this, add the user account to the dialout group.
@@ -321,7 +321,7 @@ This chapter provides solutions to common issues encountered while working with 
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Modify%20User%20Group%20Permissions.png"></p>
     <p align="center"><strong>Figure 6.8 Modify User Group Permissions </strong></p>
 
-**Issue:** When using minicom, there is no proper communication or irregular behavior with the TOPST VCP-G board  
+**Issue:** When using minicom, there is no proper communication or irregular behavior with the VCP-G.  
 **Solution:** This issue may occur if minicom’s default flow control setting is set to **hardware**. The hardware flow control must be set to No for proper operation 
 1. **Start Minicom:** Use the following command.
     ```
@@ -336,7 +336,7 @@ This chapter provides solutions to common issues encountered while working with 
 4. **Modify Flow Control:** Inside the serial port setup, press **F** to set the hardware flow control to **No**.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Modify%20Flow%20Control.png"></p>
     <p align="center"><strong>Figure 6.11 Modify Flow Control</strong></p>
-5. **Exit and Save:** Exit the setup and save the configuration. Minicom should now communicate properly with the TOPST VCP-G board.
+5. **Exit and Save:** Exit the setup and save the configuration. Minicom should now communicate properly with the VCP-G.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Save%20and%20Exit.png"></p>
     <p align="center"><strong>Figure 6.12 Save and Exit</strong></p>
 

@@ -1,9 +1,9 @@
 # 1. Introduction
 ---
-This document provides guidelines on using various Arduino sensors with the VCP-G board. It includes connection instructions and example codes to help you easily develop projects by using the VCP-G board.
+This document provides guidelines on using various Arduino sensors with the VCP-G board. It includes connection instructions and example codes to help you easily develop projects by using the VCP-G.
 
-Specifically, this document provides guidance on Arduino IDE examples for the VCP-G board, including:  
-- VCPDigital
+Specifically, this document provides guidance on Arduino IDE examples for the VCP-G, including:  
+- VCP-G Digital
 - VCP-G Analog
 - VCP-G SPI
 - VCP-G I2C
@@ -27,11 +27,11 @@ This chapter includes two example projects that demonstrate how to use digital o
 
 ## 2.1 vcp4LED
 ---
-This example program demonstrates how the TOPST VCP-G board controls four LEDs on the breadboard. The example code is provided in the “vcp4LED.ino”. When this file is uploaded to the TOPST VCP-G board, the LEDs turn on and off sequentially in both forward and reverse patterns with a 500 ms delay between each transition. 
+This example program demonstrates how the VCP-G board controls four LEDs on the breadboard. The example code is provided in the “vcp4LED.ino”. When this file is uploaded to the VCP-G, the LEDs turn on and off sequentially in both forward and reverse patterns with a 500 ms delay between each transition. 
 </br></br>
 
 ### 2.1.1 Hardware Reqirements  
-- TOPST VCP-G board (x1)
+- VCP-G board (x1)
 - Breadboard (x1)
 - LED (x4)
 - 12V 1A Power Adapter (x1)
@@ -41,17 +41,17 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs o
 
 ### 2.1.2 Circuit
 - LED01
-    - (+) pin is connected to the 5V power rail on the breadboard, which is supplied by the TOPST VCP-G board.
-    - (-) pin is connected to pin 47 on the TOPST VCP-G board.
+    - (+) pin is connected to the 5V power rail on the breadboard, which is supplied by the VCP-G board.
+    - (-) pin is connected to pin 47 on the VCP-G board.
 - LED02
     - (+) pin is connected to the 5V power rail on the breadboard.
-    - (-) pin is connected to pin 17 on the TOPST VCP-G board.
+    - (-) pin is connected to pin 17 on the VCP-G board.
 - LED03
     - (+) pin is connected to the 5V power rail on the breadboard.
-    - (-) pin is connected to pin 50 on the TOPST VCP-G board.
+    - (-) pin is connected to pin 50 on the VCP-G board.
 - LED04
     - (+) pin is connected to the 5V power rail on the breadboard.
-    - (-) pin is connected to pin 48 on the TOPST VCP-G board.  
+    - (-) pin is connected to pin 48 on the VCP-G board.  
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp4LED%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 2.1 vcp4LED Circuit Schematic</strong></p>
@@ -130,10 +130,10 @@ The following table shows pin mapping.
     
     }
     ```
-2. Verify and upload the "vcp4LED.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcp4LED.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -149,7 +149,7 @@ The following table shows pin mapping.
 
 ## 2.2 vcp4LED_Button
 ---
-This example program demonstrates how the TOPST VCP-G board controls four LEDs and a button on the breadboard. When the button is pressed, the right two LEDs turn off, and the left two LEDs turn on. When the button is released, the LEDs change state. The ones that were on turn off, and the ones that were off turn on. The program continuously checks the button state and adjusts the LEDs accordingly.
+This example program demonstrates how the VCP-G board controls four LEDs and a button on the breadboard. When the button is pressed, the right two LEDs turn off, and the left two LEDs turn on. When the button is released, the LEDs change state. The ones that were on turn off, and the ones that were off turn on. The program continuously checks the button state and adjusts the LEDs accordingly.
 </br></br>
 
 ### 2.2.1 Hardware Requirements
@@ -164,19 +164,19 @@ This example program demonstrates how the TOPST VCP-G board controls four LEDs a
 
 ### 2.2.2 Circuit
 1.	LED01
-    - (+) pin is connected to the 5V power rail on the breadboard, which is supplied by the TOPST VCP-G board.
-    - (-) pin is connected to pin 47 on the TOPST VCP-G board.
+    - (+) pin is connected to the 5V power rail on the breadboard, which is supplied by the VCP-G board.
+    - (-) pin is connected to pin 47 on the VCP-G board.
 2.	LED02
     - (+) pin is connected to the 5V power rail on the breadboard.
-    - (-) pin is connected to pin 17 on the TOPST VCP-G board.
+    - (-) pin is connected to pin 17 on the VCP-G board.
 3.	LED03
     - (+) pin is connected to the 5V power rail on the breadboard.
-    - (-) pin is connected to pin 50 on the TOPST VCP-G board.
+    - (-) pin is connected to pin 50 on the VCP-G board.
 4.	LED04
     - (+) pin is connected to the 5V power rail on the breadboard.
-    - (-) pin is connected to pin 48 on the TOPST VCP-G board.
+    - (-) pin is connected to pin 48 on the VCP-G board.
 5.	Button switch
-    - One leg of the button switch is connected to pin 45 on the TOPST VCP-G board.
+    - One leg of the button switch is connected to pin 45 on the VCP-G board.
     - The diagonally opposite leg of the button is connected to the GND pin.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp4LED_Button%20Circuit%20Schematic.png"></p>
@@ -271,10 +271,10 @@ The following table shows pin mapping.
     }
 
     ```
-2. Verify and upload the "vcp4LED_Button.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcp4LED_Button.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -290,13 +290,13 @@ The following table shows pin mapping.
 
 # 3. VCP-G Analog
 ---
-This chapter provides examples of using the Analog pins on the TOPST VCP-G board. In VCP-G, analog pins receive continuous voltage signals from sensors, allowing precise measurement of varying input values. Chapter 3.1, Chapter 3.2, and Chapter 3.3 demonstrate how to use analog pins to read sensor data and control outputs, providing a foundational understanding of analog input handling.
+This chapter provides examples of using the Analog pins on the VCP-G board. In VCP-G, analog pins receive continuous voltage signals from sensors, allowing precise measurement of varying input values. Chapter 3.1, Chapter 3.2, and Chapter 3.3 demonstrate how to use analog pins to read sensor data and control outputs, providing a foundational understanding of analog input handling.
 
 </br></br></br>
 
 ## 3.1 AnalogInOutSerial
 ---
-This example program demonstrates how the TOPST VCP-G board controls a potentiometer and an LED on the breadboard. TOPST VCP-G reads a value from an analog input pin, maps the result to a range from 0 to 1000, and uses this value to set the pulse width modulation (PWM) of an output pin (connected to an LED). The results are also printed to the Serial Monitor.
+This example program demonstrates how the VCP-G board controls a potentiometer and an LED on the breadboard. VCP-G reads a value from an analog input pin, maps the result to a range from 0 to 1000, and uses this value to set the pulse width modulation (PWM) of an output pin (connected to an LED). The results are also printed to the Serial Monitor.
 </br></br>
 
 ### 3.1.1 Hardware Requirements
@@ -312,10 +312,10 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
 
 ### 3.1.2 Circuit
 - Potentiometer
-    - Center pin of the potentiometer is connected to the analog pin A5 on the TOPST VCP-G board.
-    - GND pin of the potentiometer is connected to pin 43 on the TOPST VCP-G board and is connected to GND pin on the TOPST VCP-G board with a 220Ω resistor.
+    - Center pin of the potentiometer is connected to the analog pin A5 on the VCP-G board.
+    - GND pin of the potentiometer is connected to pin 43 on the VCP-G board and is connected to GND pin on the VCP-G board with a 220Ω resistor.
 - LED
-    - (+) pin of the LED is connected to 3.3V on the TOPST VCP-G board with a 220Ω resistor.
+    - (+) pin of the LED is connected to 3.3V on the VCP-G board with a 220Ω resistor.
     - (-) pin of the LED is connected to center pin of the potentiometer.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/AnalogInOutSerial%20Circuit%20Schematic.png"></p>
@@ -400,10 +400,10 @@ The following table shows pin mapping.
     #include <HardwareSerial.h>
     HardwareSerial Serial;
     ```
-2. Verify and upload the "AnalogInOutSerial.ino" file to the TOPST VCP-G board.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+2. Verify and upload the "AnalogInOutSerial.ino" file to the VCP-G.
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -419,7 +419,7 @@ The following table shows pin mapping.
 
 ## 3.2 AnalogInput
 ---
-This example program demonstrates how the TOPST VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is below 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
+This example program demonstrates how the VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is below 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
 </br></br>
 
 ### 3.2.1 Hardware Requirements
@@ -435,12 +435,12 @@ This example program demonstrates how the TOPST VCP-G board controls a potentiom
 
 ### 3.2.2 Circuit
 - Potentiometer
-    - VCC pin of the potentiometer is connected to 3.3V on the TOPST VCP-G board with a 220Ω resistor.
-    - Center pin of the potentiometer is connected to the analog pin A5 on the TOPST VCP-G board.
-    - GND pin of the potentiometer is connected to GND pin on the TOPST VCP-G board with a 220Ω resistor.
+    - VCC pin of the potentiometer is connected to 3.3V on the VCP-G board with a 220Ω resistor.
+    - Center pin of the potentiometer is connected to the analog pin A5 on the VCP-G board.
+    - GND pin of the potentiometer is connected to GND pin on the VCP-G board with a 220Ω resistor.
 - LED
-    - (+) pin of the LED is connected to 3.3V on the TOPST VCP-G board with a 220Ω resistor.
-    - (-) pin of the LED is connected to pin 5 on the TOPST VCP-G board.
+    - (+) pin of the LED is connected to 3.3V on the VCP-G board with a 220Ω resistor.
+    - (-) pin of the LED is connected to pin 5 on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/AnalogInput%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 3.2 AnalogInput Circuit Schematic</strong></p>
@@ -523,10 +523,10 @@ The following table shows pin mapping.
     ```
     **Note 1:** To check **sensorValue** in the Serial Monitor, add **Serial.println()** to the source code.  
     **Note 2:** A fixed resistor is used along with a variable resistor (potentiometer) to adjust the sensor value. The sensor value changes depending on how much the potentiometer is turned, and the amount you need to turn the potentiometer varies based on the value of the fixed resistor.
-2. Verify and upload the "AnalogInput.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "AnalogInput.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -542,7 +542,7 @@ The following table shows pin mapping.
 
 ## 3.3 pwmFade
 ---
-This example program demonstrates how the TOPST VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
+This example program demonstrates how the VCP-G board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
 </br></br>
 
 ### 3.3.1 Hardware Requirements
@@ -557,8 +557,8 @@ This example program demonstrates how the TOPST VCP board controls an LED on the
 
 ### 3.3.2 Circuit
 - LED
-    - (+) pin of the LED is connected to 5V on the TOPST VCP-G board.
-    - (-) pin of the LED is connected to pin 9 on the TOPST VCP-G board with a 220Ω resistor.
+    - (+) pin of the LED is connected to 5V on the VCP-G board.
+    - (-) pin of the LED is connected to pin 9 on the VCP-G board with a 220Ω resistor.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/pwmFade%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 3.3 pwmFade Circuit Schematic</strong></p>
@@ -627,10 +627,10 @@ The following table shows pin mapping.
         delay(30);
     }
     ```
-2. Verify and upload the "pwmFade.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "pwmFade.ino" file to the VCP-G board.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -646,7 +646,7 @@ The following table shows pin mapping.
 
 # 4. VCP SPI
 ---
-This chapter provides instructions for configuring Serial Peripheral Interface (SPI) communication on the TOPST VCP-G board.  
+This chapter provides instructions for configuring Serial Peripheral Interface (SPI) communication on the VCP-G.  
 SPI is a high-speed, synchronous communication protocol used to exchange data between microcontrollers and peripherals. It operates with separate lines for data transmission (MOSI and MISO), clock synchronization (SCK), and device selection (SS), ensuring efficient and reliable communication.  
 The following chapters describes how to set up and use SPI to interface with external devices.
 
@@ -654,7 +654,7 @@ The following chapters describes how to set up and use SPI to interface with ext
 
 ## 4.1 vcpSPI_Dot8x8
 ---
-This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver. It displays patterns like a heart shape and the letter "R" by setting rows with pre-defined binary arrays. The intensity of the LEDs is adjusted to create a pulsing effect, adding dynamic visuals. Additional features include inverting and clearing the display to enhance functionality.
+This example program demonstrates how the VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver. It displays patterns like a heart shape and the letter "R" by setting rows with pre-defined binary arrays. The intensity of the LEDs is adjusted to create a pulsing effect, adding dynamic visuals. Additional features include inverting and clearing the display to enhance functionality.
 </br></br>
 
 ### 4.1.1 Hardware Requirements
@@ -667,11 +667,11 @@ This example program demonstrates how the TOPST VCP-G board controls an 8x8 LED 
 
 ### 4.1.2 Circuit
 - 8x8 Dot Matrix
-    - VCC pin of the 8x8 Dot Matrix is connected to the analog pin 5V on the TOPST VCP-G board.
-    - GND pin of the 8x8 Dot Matrix is connected to GND on the TOPST VCP-G board.
-    - DIN pin of the 8x8 Dot Matrix is connected to pin 11 on the TOPST VCP-G board.
-    - CS pin of the 8x8 Dot Matrix is connected to pin 10 on the TOPST VCP-G board.
-    - CLS pin of the 8x8 Dot Matrix is connected to pin 13 on the TOPST VCP-G board.
+    - VCC pin of the 8x8 Dot Matrix is connected to the analog pin 5V on the VCP-G board.
+    - GND pin of the 8x8 Dot Matrix is connected to GND on the VCP-G board.
+    - DIN pin of the 8x8 Dot Matrix is connected to pin 11 on the VCP-G board.
+    - CS pin of the 8x8 Dot Matrix is connected to pin 10 on the VCP-G board.
+    - CLS pin of the 8x8 Dot Matrix is connected to pin 13 on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcpSPI_Dot8x8%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 4.1 vcpSPI_Dot8x8 Circuit Schematic</strong></p>
@@ -809,10 +809,10 @@ The following table shows pin mapping.
         delay(1000);
     }
     ```
-2. Verify and upload the "vcpSPI_Dot8x8.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcpSPI_Dot8x8.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -869,16 +869,16 @@ The following table shows pin mapping.
 
 # 5. VCP-G I2C
 ---
-This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the TOPST VCP-G board.  
+This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the VCP-G.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 
 </br></br></br>
 
 ## 5.1 vcpI2C_LCD1602
 ---
-This example program demonstrates how the TOPST VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.
+This example program demonstrates how the VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.
 
-In this example, the LCD is initialized, and the backlight is enabled for clear visibility. The program then positions the cursor to display the text TOPST VCP-G on the first row and I2C Test! on the second row. With I2C communication, multiple devices can be controlled using minimal wiring, making it an effective solution for compact projects.
+In this example, the LCD is initialized, and the backlight is enabled for clear visibility. The program then positions the cursor to display the text VCP-G on the first row and I2C Test! on the second row. With I2C communication, multiple devices can be controlled using minimal wiring, making it an effective solution for compact projects.
 </br></br>
 
 ### 5.1.1 Hardware Requirements
@@ -891,10 +891,10 @@ In this example, the LCD is initialized, and the backlight is enabled for clear 
 
 ### 5.1.2 Circuit
 - LCD1602
-    - VCC pin of the LCD1602 is connected to the analog pin 5V on the TOPST VCP-G board.
-    - GND pin of the LCD1602 is connected to GND on the TOPST VCP-G board.
-    - SDA pin of the LCD1602 is connected to pin 48 on the TOPST VCP-G board.
-    - SCL pin of the LCD1602 is connected to pin 49 on the TOPST VCP-G board.
+    - VCC pin of the LCD1602 is connected to the analog pin 5V on the VCP-G board.
+    - GND pin of the LCD1602 is connected to GND on the VCP-G board.
+    - SDA pin of the LCD1602 is connected to pin 48 on the VCP-G board.
+    - SCL pin of the LCD1602 is connected to pin 49 on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcpI2C_LCD1602%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 5.1 vcpI2C_LCD1602 Circuit Schematic</strong></p>
@@ -964,10 +964,10 @@ The following table shows pin mapping.
 
     }
     ```
-2. Verify and upload the "vcpI2C_LCD1602.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcpI2C_LCD1602.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -983,7 +983,7 @@ The following table shows pin mapping.
 
 # 6. VCP-G UART
 ---
-This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the TOPST VCP-G board.  
+This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the VCP-G.  
 UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
 The following chapters describe how to send and receive data through UART.
 
@@ -991,7 +991,7 @@ The following chapters describe how to send and receive data through UART.
 
 ## 6.1 vcpASCIITable
 ---
-This example program demonstrates how the TOPST VCP-G board prints the ASCII values of characters in various formats: decimal, hexadecimal, octal, and binary. It starts from the character '!' (ASCII value 33) and increments through all visible ASCII characters, printing each in the different formats. The program continues until it reaches the character '~' (ASCII value 126).
+This example program demonstrates how the VCP-G prints the ASCII values of characters in various formats: decimal, hexadecimal, octal, and binary. It starts from the character '!' (ASCII value 33) and increments through all visible ASCII characters, printing each in the different formats. The program continues until it reaches the character '~' (ASCII value 126).
 </br></br>
 
 ### 6.1.1 Hardware Requirements
@@ -1084,10 +1084,10 @@ This example program demonstrates how the TOPST VCP-G board prints the ASCII val
         thisByte++;
     }
     ```
-2. Verify and upload the "vcpASCIITable.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcpASCIITable.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1103,11 +1103,12 @@ This example program demonstrates how the TOPST VCP-G board prints the ASCII val
 
 ## 6.2 vcpGraph
 ---
-This example program demonstrates how the TOPST VCP-G board reads analog value of potentiometer on the bread board and transmits the data to host PC through UART. The Arduino code continuously reads the value of the analog sensor (potentiometer) connected to pin A5 and sends it through the serial port. The accompanying processing code visualizes these values in a dynamic graph in real time, showing the change in sensor input over time. .
+This example program demonstrates how the VCP-G reads analog value of potentiometer on the bread board and transmits the data to host PC through UART. The Arduino code continuously reads the value of the analog sensor (potentiometer) connected to pin A5 and sends it through the serial port. The accompanying processing code visualizes these values in a dynamic graph in real time, showing the change in sensor input over time. .
 </br></br>
 
 ### 6.2.1 Hardware Requirements
-- VCP-G Board (x1)Breadboard (x1)
+- VCP-G Board (x1)
+- Breadboard (x1)
 - Potentiometer (x1)
 - 10kΩ resistor (x1)
 - 12V 1A Power Adapter (x1)
@@ -1117,9 +1118,9 @@ This example program demonstrates how the TOPST VCP-G board reads analog value o
 
 ### 6.2.2 Circuit
 - Potentiometer
-    - Center pin of the potentiometer is connected to the analog pin A5 on the TOPST VCP-G board.
-    - GND pin of the potentiometer is connected to GND on the TOPST VCP-G board with a 10kΩ resistor.
-    - VCC pin of the potentiometer is connected to 3.3V on the TOPST VCP-G board.
+    - Center pin of the potentiometer is connected to the analog pin A5 on the VCP-G board.
+    - GND pin of the potentiometer is connected to GND on the VCP-G board with a 10kΩ resistor.
+    - VCC pin of the potentiometer is connected to 3.3V on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcpGraph%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 6.1 vcpGraph Circuit Schematic</strong></p>
@@ -1279,10 +1280,10 @@ The following table shows pin mapping.
 
     */
     ```
-2. Verify and upload the "vcpGraph.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcpGraph.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1299,20 +1300,18 @@ The following table shows pin mapping.
 # 7. Additional Examples
 ---
 This chapter provides additional sensor examples not included in the "Examples for TOPST VCP Rev G" in the Arduino IDE.  
-It provides example guides for using commonly used Arduino sensors with the TOPST VCP-G board, helping users integrate various sensors into their projects effectively.
+It provides example guides for using commonly used Arduino sensors with the VCP-G board, helping users integrate various sensors into their projects effectively.
 
 </br></br></br>
 
 ## 7.1 Infrared (IR) Sensor (Transceiver)
 ---
-</br></br>
-
 ### 7.1.1 Infrared (IR) Sensor 1
 ---
-This example demonstrates how the TOPST VCP-G board controls an IR sensor and two LEDs on the breadboard. After reading the IR sensor value, if the IR sensor value is HIGH, it is considered that there is no obstacle, and the green LED turns on while the red LED turns off. Conversely, if the IR sensor value is LOW, it is considered that there is an obstacle, and the red LED turns on while the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
+This example demonstrates how the VCP-G board controls an IR sensor and two LEDs on the breadboard. After reading the IR sensor value, if the IR sensor value is HIGH, it is considered that there is no obstacle, and the green LED turns on while the red LED turns off. Conversely, if the IR sensor value is LOW, it is considered that there is an obstacle, and the red LED turns on while the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
 
 #### 7.1.1.1 Hardware Requirements
-- TOPST VCP-G Board (x1)
+- VCP-G Board (x1)
 - Breadboard (x1)
 - IR transceiver sensor (x1)
 - LED (x2: Different colors are recommended)
@@ -1324,15 +1323,15 @@ This example demonstrates how the TOPST VCP-G board controls an IR sensor and tw
 
 #### 7.1.1.2 Circuit
 - IR Transceiver sensor
-    - OUT pin of the IR sensor is connected to pin 50 on the TOPST VCP-G board.
-    - VCC pin of the IR sensor is connected to 5V on the TOPST VCP-G board.
-    - GND pin of the IR sensor is connected to GND on the TOPST VCP-G board.
+    - OUT pin of the IR sensor is connected to pin 50 on the VCP-G board.
+    - VCC pin of the IR sensor is connected to 5V on the VCP-G board.
+    - GND pin of the IR sensor is connected to GND on the VCP-G board.
 - Red LED
-    - (-) of LED is connected to the resistor, and the resistor is connected to GND on the TOPST VCP-G board.
-    - (+) of LED is connected to pin 48 on the TOPST VCP-G board.
+    - (-) of LED is connected to the resistor, and the resistor is connected to GND on the VCP-G board.
+    - (+) of LED is connected to pin 48 on the VCP-G board.
 - Green LED
-    - (-) of LED is connected to the resistor, and the resistor is connected to GND on the TOPST VCP-G board.
-    - (+) of LED is connected to pin 17 on the TOPST VCP-G board.
+    - (-) of LED is connected to the resistor, and the resistor is connected to GND on the VCP-G board.
+    - (+) of LED is connected to pin 17 on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Infrared%20(IR)%20Sensor%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 7.1 Infrared (IR) Sensor Circuit Schematic</strong></p>
@@ -1423,10 +1422,10 @@ The following table shows pin mapping.
         } 
     }
     ```
-2. Verify and upload the "irSensor_LED.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "irSensor_LED.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1441,7 +1440,7 @@ The following table shows pin mapping.
 
 ### 7.1.2 Infrared (IR) Sensor 2
 ---
-This example demonstrates how the TOPST VCP-G board controls an IR sensor to detect objects and print the detection status to the Serial Monitor. The IR Transceiver reads the presence of an obstacle. If the IR Transceiver value is HIGH, it indicates no obstacle, and the green LED turns on and the red LED turns off. Conversely, if the IR  
+This example demonstrates how the VCP-G board controls an IR sensor to detect objects and print the detection status to the Serial Monitor. The IR Transceiver reads the presence of an obstacle. If the IR Transceiver value is HIGH, it indicates no obstacle, and the green LED turns on and the red LED turns off. Conversely, if the IR  
 Transceiver value is LOW, it indicates there is an obstacle, and the red LED turns on and the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
 
 #### 7.1.2.1 Hardware Requirements
@@ -1451,12 +1450,11 @@ Transceiver value is LOW, it indicates there is an obstacle, and the red LED tur
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x3)
 
-
 #### 7.1.2.2 Circuit
 - IR Transceiver sensor
-    - Out pin of the IR Transceiver sensor is connected to pin 8 on the TOPST VCP-G board. 
-    - VCC pin of the IR Transceiver sensor is connected to 5V on the TOPST VCP-G board.
-    - GND pin of the IR Transceiver sensor is connected to GND to the TOPST VCP-G board.
+    - Out pin of the IR Transceiver sensor is connected to pin 8 on the VCP-G board. 
+    - VCC pin of the IR Transceiver sensor is connected to 5V on the VCP-G board.
+    - GND pin of the IR Transceiver sensor is connected to GND to the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Infrared%20(IR)%20Sensor%20(Transceiver)%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 7.2 Infrared (IR) Sensor (Transceiver) Circuit Schematic</strong></p>
@@ -1521,10 +1519,10 @@ The following table shows pin mapping.
         }  
     }  
     ```
-2. Verify and upload the "irTransceiver.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "irTransceiver.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1540,7 +1538,7 @@ The following table shows pin mapping.
 
 ## 7.2 Joystick
 ---
-This example shows how the TOPST VCP-G board reads joystick inputs and prints their value to the Serial Monitor. You can receive three inputs: X-axis, Y-axis, and buttons. The serial monitor verifies the received signals. The movements made on the X and Y axes change the value of the port, which corresponds to the numeric value of the analog output. In allows for precise control for applications that require fine adjustment.
+This example shows how the VCP-G reads joystick inputs and prints their value to the Serial Monitor. You can receive three inputs: X-axis, Y-axis, and buttons. The serial monitor verifies the received signals. The movements made on the X and Y axes change the value of the port, which corresponds to the numeric value of the analog output. In allows for precise control for applications that require fine adjustment.
 
 **Note:** Dual Axis Joystick Module (KY-023) is a product of Joy-IT. All rights to its design, trademark, and related intellectual property are owned by Joy-IT.
 </br></br>
@@ -1555,11 +1553,11 @@ This example shows how the TOPST VCP-G board reads joystick inputs and prints th
 
 ### 7.2.2 Circuit
 - KY-023 (Dual Axis Joystick Module)
-    - 5V pin of KY-023 is connected to the 5V on the TOPST VCP-G board.
-    - GND pin of KY-023 is connected to GND on the TOPST VCP-G board. 
-    - VRx pin of KY-023 is connected to the analog pin A5 on the TOPST VCP-G board. 
-    - VRy pin of KY-023 is connected to the analog pin A4 on the TOPST VCP-G board. 
-    - SW pin of KY-023 is connected to pin 2 on the TOPST VCP-G board.
+    - 5V pin of KY-023 is connected to the 5V on the VCP-G board.
+    - GND pin of KY-023 is connected to GND on the VCP-G board. 
+    - VRx pin of KY-023 is connected to the analog pin A5 on the VCP-G board. 
+    - VRy pin of KY-023 is connected to the analog pin A4 on the VCP-G board. 
+    - SW pin of KY-023 is connected to pin 2 on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Joystick%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 7.3 Joystick Circuit Schematic</strong></p>
@@ -1635,10 +1633,10 @@ The following table shows pin mapping.
         delay(100);  
     } 
     ```
-2. Verify and upload the "joystick.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "joystick.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1654,7 +1652,7 @@ The following table shows pin mapping.
 
 ## 7.3 Gas Sensor
 ---
-This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the TOPST VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
+This example demonstrates how the VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
 
 **Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
 </br></br>
@@ -1669,9 +1667,9 @@ This example demonstrates how the TOPST VCP-G board uses a Gas sensor (MQ 135) t
 
 ### 7.3.2 Circuit
 - Gas sensor
-    - A0 pin of the gas sensor is connected to the analog pin A5 on the TOPST VCP-G board. 
-    - VCC pin of the gas sensor is connected to 5V on the TOPST VCP-G board.
-    - GND pin of the gas sensor is connected to GND on the TOPST VCP-G board.
+    - A0 pin of the gas sensor is connected to the analog pin A5 on the VCP-G board. 
+    - VCC pin of the gas sensor is connected to 5V on the VCP-G board.
+    - GND pin of the gas sensor is connected to GND on the VCP-G board.
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Gas%20Sensor%20Circuit%20Schematic.png"></p>
@@ -1728,10 +1726,10 @@ The following table shows pin mapping.
         Serial.print(vol, 1);      
     }
      ```
-2. Verify and upload the "GasSensor.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "GasSensor.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1746,7 +1744,7 @@ The following table shows pin mapping.
 
 ## 7.4 Metal Touch Sensor Module
 ---
-This example program demonstrates how the TOPST VCP-G board controls touch sensor and an LED on the breadboard. The metal touch sensor module (KY-036) is a versatile analog/digital sensor designed to detect touch on metal surfaces or human skin. This module uses a transistor to sense changes in electrical conductivity when touched, and it outputs both digital and analog signals for interaction with VCP-G board.  
+This example program demonstrates how the VCP-G board controls touch sensor and an LED on the breadboard. The metal touch sensor module (KY-036) is a versatile analog/digital sensor designed to detect touch on metal surfaces or human skin. This module uses a transistor to sense changes in electrical conductivity when touched, and it outputs both digital and analog signals for interaction with VCP-G.  
 When a touch is detected, the module outputs relevant digital/analog values to the serial monitor. You can also control an LED based on the touch status. 
 
 **Note:** Metal Touch Sensor Module (KY-036) has a built-in potentiometer for adjusting sensitivity. You can turn this potentiometer to increase or decrease the sensitivity.
@@ -1757,7 +1755,7 @@ When a touch is detected, the module outputs relevant digital/analog values to t
 - Breadboard (x1)
 - Metal Touch sensor module (KY-036) (x1)
 - LED (x1)
-- 110kΩ resistor (x1)
+- 220Ω resistor (x1)
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x4)
@@ -1766,14 +1764,14 @@ When a touch is detected, the module outputs relevant digital/analog values to t
 
 ### 7.4.2 Circuit
 - Metal Touch Sensor Module
-    - A0 pin of the Metal Touch Sensor Module is connected to the analog pin A5 on the TOPST VCP-G board.
-    - G pin of the Metal Touch Sensor Module is connected to GND on the TOPST VCP-G board.
-    - (+) pin of the Metal Touch Sensor Module is connected to 5V on the TOPST VCP-G board.
-    - D0 pin of the Metal Touch Sensor Module is connected to pin 30 on the TOPST VCP-G board.
+    - A0 pin of the Metal Touch Sensor Module is connected to the analog pin A5 on the VCP-G board.
+    - G pin of the Metal Touch Sensor Module is connected to GND on the VCP-G board.
+    - (+) pin of the Metal Touch Sensor Module is connected to 5V on the VCP-G board.
+    - D0 pin of the Metal Touch Sensor Module is connected to pin 30 on the VCP-G board.
 
 - LED
-    - (+) pin of the LED is connected to pin 13 on the TOPST VCP-G board.
-    - (-) pin of the LED is connected to GND on the TOPST VCP-G board with a 10kΩ resistor.
+    - (+) pin of the LED is connected to pin 13 on the VCP-G board.
+    - (-) pin of the LED is connected to GND on the VCP-G board with a 220Ω resistor.
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Metal%20Touch%20Sensor%20Circuit%20Schematic.png"></p>
@@ -1866,10 +1864,10 @@ The following table shows pin mapping.
         delay(500);
     }
      ```
-2. Verify and upload the "vcp_touch.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "vcp_touch.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
@@ -1886,7 +1884,7 @@ The following table shows pin mapping.
 
 ## 7.5 Step Motor with Motor Driver
 ---
-This example demonstrates how the TOPST VCP-G board controls 4-wire stepper motor (28BYJ-48 (5VDC)) and Motor Driver (ULN2003 (5V–12V)). The code in Chapter 7.5.3 defines the pins connected to the motor driver and sets the number of steps per revolution. The motor rotates forward for one full revolution, pauses, then rotates backward for one full revolution, and pauses again. The motor speed is controlled by the delay between steps, and the direction is controlled by the order in which the coils are activated.
+This example demonstrates how the VCP-G board controls 4-wire stepper motor (28BYJ-48 (5VDC)) and Motor Driver (ULN2003 (5V–12V)). The code in Chapter 7.5.3 defines the pins connected to the motor driver and sets the number of steps per revolution. The motor rotates forward for one full revolution, pauses, then rotates backward for one full revolution, and pauses again. The motor speed is controlled by the delay between steps, and the direction is controlled by the order in which the coils are activated.
 
 **Note:** The 28BYJ-48 motor requires 4096 signals for one full rotation in Half step mode and 2048 signals for one full rotation in Full step mode. For precise motor control, the number of signals required depending on the mode should be considered. 
 </br></br>
@@ -1902,12 +1900,12 @@ This example demonstrates how the TOPST VCP-G board controls 4-wire stepper moto
 
 ### 7.5.2 Circuit
 - Motor Driver
-- IN1 pin is connected to pin 8 on the TOPST VCP-G board.
-- IN2 pin is connected to pin 9 on the TOPST VCP-G board.
-- IN3 pin is connected to pin 10 on the TOPST VCP-G board.
-- IN4 pin is connected to pin 11 on the TOPST VCP-G board.
-- (+) pin is connected to 5V on the TOPST VCP-G board.
-- (-) pin is connected to GND on the TOPST VCP-G board.
+- IN1 pin is connected to pin 8 on the VCP-G board.
+- IN2 pin is connected to pin 9 on the VCP-G board.
+- IN3 pin is connected to pin 10 on the VCP-G board.
+- IN4 pin is connected to pin 11 on the VCP-G board.
+- (+) pin is connected to 5V on the VCP-G board.
+- (-) pin is connected to GND on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Step%20Motor%20with%20Motor%20Driver%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 7.6 Step Motor with Motor Driver Circuit Schematic</strong></p>
@@ -2028,10 +2026,10 @@ The following table shows pin mapping.
         }
     }
      ```
-2. Verify and upload the "motordriver.ino" file to the TOPST VCP-G board.
+2. Verify and upload the "motordriver.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the TOPST VCP-G board
-    2. Press and hold the FWDn switch
+    1. Disconnect the power calbe from the VCP-G board
+    2. Press and hold the FWDN switch
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch  
         If the issue persists, try running the Arduino IDE with administrator privileges.
