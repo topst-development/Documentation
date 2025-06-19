@@ -366,7 +366,7 @@ $ repo init -u git@gitlab.com:topst-private-release/manifests.git -m linux_yp4.0
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
 
 ... A new version of repo (2.54) is available.
-... New version is available at: /home/sooyong/topst_dev/.repo/repo/repo
+... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
@@ -375,14 +375,14 @@ Downloading Repo source from https://gerrit.googlesource.com/git-repo
 Your identity is: sooyong <adrenalin7237@gmail.com>
 If you want to change this, please re-run 'repo init' with --config-name
 
-repo has been initialized in /home/sooyong/topst_dev
+repo has been initialized in /home/topst/topst_sdk
 ```
 
 ```
 $ repo sync
 
 ... A new version of repo (2.54) is available.
-... New version is available at: /home/sooyong/topst_dev/.repo/repo/repo
+... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
@@ -437,13 +437,13 @@ Choose MACHINE
 select number(1-5) => 2
 machine(d3-g-topst-main) selected.
 You had no conf/local.conf file. This configuration file has therefore been
-created for you from /home/sooyong/topst_dev/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
+created for you from /home/topst/topst_sdk/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
 You may wish to edit it to, for example, select a different MACHINE (target
 hardware). See conf/local.conf for more information as common configuration
 options are commented.
 
 You had no conf/bblayers.conf file. This configuration file has therefore been
-created for you from /home/sooyong/topst_dev/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
+created for you from /home/topst/topst_sdk/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
 To add additional metadata layers into your configuration please add entries
 to conf/bblayers.conf.
 
@@ -498,95 +498,78 @@ The **output.fwdn.zip** file, which includes the **'output.fai' build image** an
 $ cd ~/topst-sdk/ && \ 
 
 $ ./stitch-fai_d3-g.sh -f
-
 Filesystem too small for a journal
 [mktcimg] v1.2.1 - Nov 15 2021 19:33:18
-location : bl3_ca72_a 
+location : bl3_ca72_a
 location : 4096 sector(2097152 byte)
-location : build-main/tmp/deploy/images/tcc8050-main/ca72_bl3.rom 
-location : boot 
+location : build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main/ca72_bl3.rom
+location : boot
 location : 122880 sector(62914560 byte)
-location : build-main/tmp/deploy/images/tcc8050-main/tc-boot-tcc8050-main.img 
-location : system 
-location : 11534336 sector(5905580032 byte)
-location : build-main/tmp/deploy/images/tcc8050-main/topst-tcc8050-main.ext4 
-location : dtb 
+location : build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main/tc-boot-d3-g-topst-main.img
+location : system
+location : 33554432 sector(17179869184 byte)
+location : build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main/telechips-topst-image-d3-g-topst-main.ext4
+location : dtb
 location : 400 sector(204800 byte)
-location : build-main/tmp/deploy/images/tcc8050-main/tcc8050-linux-topst-d3-pre-v0.1.dtb 
-location : env 
-location : 2048 sector(1048576 byte)
-location : misc 
-location : 2048 sector(1048576 byte)
-location : splash 
-location : 81920 sector(41943040 byte)
-location : home 
-location : 3516416 sector(1800404992 byte)
-location : /home/ben/topst/.stitch_XXRNlst/home-directory.ext4 
-location : data 
-location : 2048 sector(1048576 byte)
-location : /home/ben/topst/.stitch_XXRNlst/user-data.ext4 
-path : build-main/tmp/deploy/images/tcc8050-main/ca72_bl3.rom 
-uuid : 372cbca7-25e2-480b-b8ec-2736ed1f02d0 , part-name : bl3_ca72_a 
-uuid : b12c0ebc-2802-4d04-92ae-a52bbc3082e5 , part-name : boot 
-uuid : bbd5770e-1f3d-4bc6-ac17-4abeecf14a1e , part-name : system 
-uuid : 541d9405-8d40-43cf-9255-74fc5c0fbef7 , part-name : dtb 
-uuid : d71a2a08-9ffe-4690-8b27-c6c371f5b4a8 , part-name : env 
-uuid : e9e9b9f3-27b9-4822-9ab5-bb09554dfde2 , part-name : misc 
-uuid : 49578c16-ea11-4f27-bc82-c1f9a60ce33b , part-name : splash 
-uuid : 2cf93985-4ae4-4ea0-bc67-6c991ac8eb7d , part-name : home 
-uuid : ccc4aaaa-92a1-4e02-b55d-215a0ad92d29 , part-name : data 
-crc32 of header : f33d4c30 
-crc32 of partition array : a65980dc 
-idx : 0  bl3_ca72_a 
-idx : 1  boot 
-idx : 2  system 
-idx : 3  dtb 
-idx : 7  home 
-idx : 8  data 
-crc32 of header : f33d4c30 
-crc32 of partition array : 61f17e08 
+location : build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main/tcc8050-topst-d3-g.dtb
+path : build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main/ca72_bl3.rom
+uuid : 7eb23c82-ccc0-44ce-8237-3315fc34e3f5 , part-name : bl3_ca72_a
+uuid : 1c76ef36-314d-4548-8207-5ab1d1376ca2 , part-name : boot
+uuid : b32eb80f-e014-4f17-b140-77bf3e137ba0 , part-name : system
+uuid : 429d8444-87b0-4c1d-8b3f-278dec2616f3 , part-name : dtb
+crc32 of header : 2a7c0194
+crc32 of partition array : b181e432
+idx : 0  bl3_ca72_a
+idx : 1  boot
+idx : 2  system
+idx : 3  dtb
+crc32 of header : 2a7c0194
+crc32 of partition array : 990446d3
 Complete to make fai file
-
+ 
 ===== arguments info =====
-
---storage_size : 7818182656
+ 
+--storage_size : 17818182656
 --parttype : gpt
 --area_name : "SD Data"
---outfile : /home/ben/topst/.stitch_XXRNlst/output.fai
---gptfile : /home/ben/topst/.stitch_XXRNlst/output.gpt
---fplist : /home/ben/topst/.stitch_XXRNlst/partition.single.list
+--outfile : /home/topst/topst_sdk/.stitch_tOPE26E/output_d3g.fai
+--gptfile : /home/topst/topst_sdk/.stitch_tOPE26E/output_d3g.gpt
+--fplist : /home/topst/topst_sdk/.stitch_tOPE26E/partition.single.list
 --sector_size : 512
 --sparse_fill : 0
-
+ 
 ===========================
-
+ 
 [+] Packaging FWDN binaries
-  adding: output.fai (deflated 97%)
-  adding: VtcUsbPort.dll (deflated 64%)
   adding: boot-firmware/ (stored 0%)
-  adding: fwdn (deflated 63%)
+  adding: boot-firmware/boot.dual.json (deflated 87%)
+  adding: boot-firmware/prebuilt/ (stored 0%)
+  adding: boot-firmware/prebuilt/subcore_optee.rom (deflated 93%)
+  adding: boot-firmware/prebuilt/mcert.bin (deflated 96%)
+  adding: boot-firmware/prebuilt/fwdn.rom (deflated 49%)
+  adding: boot-firmware/prebuilt/bconf.dual.bin (deflated 95%)
+  adding: boot-firmware/prebuilt/ca72_bl1.rom (deflated 53%)
+  adding: boot-firmware/prebuilt/dram_params.bin (deflated 81%)
+  adding: boot-firmware/prebuilt/hsm.cs.bin (deflated 13%)
+  adding: boot-firmware/prebuilt/ca72_bl2.rom (deflated 54%)
+  adding: boot-firmware/prebuilt/ca53_bl1.rom (deflated 53%)
+  adding: boot-firmware/prebuilt/optee.rom (deflated 93%)
+  adding: boot-firmware/prebuilt/ca53_bl2.rom (deflated 52%)
+  adding: boot-firmware/prebuilt/hsm.bin (deflated 49%)
+  adding: boot-firmware/prebuilt/bconf.single.bin (deflated 93%)
+  adding: boot-firmware/prebuilt/scfw.rom (deflated 57%)
+  adding: boot-firmware/prebuilt/tcc8050_snor.cs.rom (deflated 93%)
+  adding: boot-firmware/boot.single.json (deflated 87%)
+  adding: boot-firmware/fwdn.json (deflated 50%)
+  adding: fwdn (deflated 69%)
   adding: fwdn.bat (deflated 40%)
-  adding: fwdn.exe (deflated 57%)
-  adding: fwdn.sh (deflated 44%)
-  adding: output.gpt (deflated 98%)
-  adding: output.gpt.back (deflated 97%)
-  adding: output.gpt.prim (deflated 97%)
-  adding: boot-firmware/bconf.dual.bin (deflated 94%)
-  adding: boot-firmware/bconf.single.bin (deflated 93%)
-  adding: boot-firmware/boot.dual.json (deflated 86%)
-  adding: boot-firmware/boot.single.json (deflated 86%)
-  adding: boot-firmware/ca53_bl1.rom (deflated 51%)
-  adding: boot-firmware/ca53_bl2.rom (deflated 50%)
-  adding: boot-firmware/ca72_bl1.rom (deflated 51%)
-  adding: boot-firmware/ca72_bl2.rom (deflated 49%)
-  adding: boot-firmware/dram_params.bin (deflated 78%)
-  adding: boot-firmware/fwdn.json (deflated 41%)
-  adding: boot-firmware/fwdn.rom (deflated 46%)
-  adding: boot-firmware/hsm.bin (deflated 51%)
-  adding: boot-firmware/hsm.cs.bin (deflated 13%)
-  adding: boot-firmware/mcert.bin (deflated 96%)
-  adding: boot-firmware/optee.rom (deflated 92%)
-  adding: boot-firmware/scfw.rom (deflated 53%)
+  adding: fwdn.exe (deflated 62%)
+  adding: fwdn.sh (deflated 40%)
+  adding: output_d3g.fai (deflated 73%)
+  adding: output_d3g.gpt (deflated 99%)
+  adding: output_d3g.gpt.back (deflated 98%)
+  adding: output_d3g.gpt.prim (deflated 98%)
+  adding: VtcUsbPort.dll (deflated 68%)
 
 ```
 
