@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e8eb105c-c8bd-43bc-b888-2d6b55722156)![image](https://github.com/user-attachments/assets/e3e208f5-1070-4bb7-bb10-12ec1add6439)# 1. Introduction
+# 1. Introduction
 ---
 This document provides guidelines on using various Arduino sensors with the VCP-G board. It includes connection instructions and example codes to help you easily develop projects by using the VCP-G.
 
