@@ -31,11 +31,14 @@ In recovery scenarios, it allows the system to boot with initramfs instead of th
 ---
 - Format a USB memory stick as ext4
 
-- Copy the following files to the USB:
+- Go to the path and format the USB memory stick to ext4
+ 
+     : {build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main}
 
-  -  initramfs (built for D3-G)
+  -  Image-initramts--5.10.205-r0-d3-g-topst-main-{build_date}.bin
 
-  -  d3g.dtb (compiled device tree blob)
+  -  tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_data}.dtb
+
 
 ## 3.2 Boot Steps in U-Boot Mode
 ---
@@ -59,18 +62,51 @@ scanning bus dwc3 for devices... 2 USB Device(s) found
   Device 0: Vendor: SanDisk Rev: 1.00 Prod: Cruzer Blade
             Type: Removable Hard Disk
             Capacity: 29340.0 MB = 28.6 GB (60088320 x 512)
-=> ext4load usb 0:1 0x20000000 /initramfs
+=> ext4load usb 0:1 0x20000000 /Image-initramts--5.10.205-r0-d3-g-topst-main-{build_date}.bin
 21069832 bytes read in 678 ms (29.6 MiB/s)
-=> ext4load usb 0:1 0x30000000 /d3g.dtb
+=> ext4load usb 0:1 0x30000000 /tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_data}.dtb
 97110 bytes read in 5 ms (18.5 MiB/s)
 => booti 0x20000000 - 0x30000000
+```
+Boot the Linux kernel image in the u-boot environment via booti 0x20000000 - 0x30000000.
+```
+[8.560615] IPVS: Registered protocols ()
+[8.565843] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[8.575847] IPVS: ipvs loaded.
+[8.581231] NET: Registered protocol family 10
+[8.590681] Segment Routing with IPv6
+[8.593723] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[8.601037] NET: Registered protocol family 17
+[8.608263] Bridge firewalling registered
+[8.614380] Loading compiled-in X.509 certificates
+[8.621180] debug_vm_pgtable: [debug_vm_pgtable        ]: Validating architecture page table helpers
+[8.630343] Btrfs loaded, crc32c=crc32c-generic
+[8.648452] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[8.660142] cfg80211: Loaded X.509 cert 'sforshee: 00b28dd47aef9cea7'
+[8.668043] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[8.679621] cfg80211: failed to load regulatory.db
+[8.694746] ALSA device list:
+[8.694746]   #0: TCC805x EVM Card
+[8.703987] tcc-uart-p[011 16600000.serial: no DMA platform data
+[8.705060] [INFO][PL011][UART0] baud_rate 115200, uart_clk 24000000
+[8.715421] Freeing unused kernel memory: 4160K
+[8.715536] scsi 0:0:0:0: Direct-Access     SanDisk  Cruzer Blade     1.00 PQ: 0 ANSI: 6
+[8.733979] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[8.734972] sd 0:0:0:0: [sda] 60088320 512-byte logical blocks: (30.8 GB/28.7 GiB)
+[8.752128] sd 0:0:0:0: [sda] Write Protect is off
+[8.759421] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+[8.764487] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[8.774482] Run /init as init process
+[8.785700] ======= set rootfs partition failed ======
+/bin/sh: can't access tty; job control turned off
+[    8.801293] sd 0:0:0:0: [sda] Attached SCSI removable disk
 ```
 
 <br/><br/><br/><br/>
 
 # 4. Resetting Root Password
 ---
-Once in the initramfs shell, follow the steps below to reset the root password stored in the eMMC.
+Once you are in the initramfs shell, follow the steps below to mount eMMC and reset the stored root password.
 
 
 ## 4.1 Mount eMMC Partition
