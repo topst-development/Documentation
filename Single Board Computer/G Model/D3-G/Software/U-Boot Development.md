@@ -16,7 +16,7 @@ This guide covers the following topics:
 
 # 2. U-Boot Recovery Principle
 ---
-Instead of booting from the eMMC file system, the system is started via an initramfs image using U-Boot. This approach is especially useful when the root file system is corrupted or inaccessible. After the system is booted into initramfs, the eMMC root file system is mounted, allowing administrators to perform recovery tasks, such as modifying files or resetting credentials.
+Instead of boot from the eMMC file system, the system is started via an initramfs image using U-Boot. This approach is especially useful when the root file system is corrupted or inaccessible. After the system is booted into initramfs, the eMMC root file system is mounted, allowing administrators to perform recovery tasks, such as modifying files or resetting credentials.
 </br><br/><br/><br/>
 
 # 3. Booting with U-Boot and initramfs
@@ -31,9 +31,11 @@ In recovery scenarios, it allows the system to boot with initramfs instead of th
 ---
 - Format a USB memory stick as ext4
 
-- Go to the path and format the USB memory stick to ext4
- 
+- Navigate to the following directory where the D3-G YP build output is located:
+
      : {build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main}
+
+- Copy the following two files to a USB memory stick
 
   -  Image-initramts--5.10.205-r0-d3-g-topst-main-{build_date}.bin
 
@@ -113,11 +115,12 @@ Once you are in the initramfs shell, follow the steps below to mount eMMC and re
 
 ## 4.1 Mount eMMC Partition
 ---
-Mount the root filesystem partition (commonly /dev/mmcblk0p4) to a temporary mount point:
+Mount the root filesystem partition (commonly /dev/mmcblk0p3) to a temporary mount point:
 
+**Be sure to verify the correct partition using lsblk or blkid.**
 ```
-$ mkdir -p /mnt/part4
-$ mount /dev/mmcblk0p4 /mnt/part4
+$ mkdir -p /mnt/part3
+$ mount /dev/mmcblk0p3 /mnt/part3
 ```
 
 ## 4.2 Modify shadow File
@@ -125,7 +128,7 @@ $ mount /dev/mmcblk0p4 /mnt/part4
 The root password is stored in hashed form in the /etc/shadow file. To clear the password:
 
 ```
-$ sed -i 's/$1$U8sW0tMW$vLdJQg290HdAcqkJe1`dMM1//g' /mnt/part4/etc/shadow
+$ sed -i 's/###root passwd signagure###//g' /mnt/part4/etc/shadow
 ```
 
 ## 4.3 Finalize and Reboot
