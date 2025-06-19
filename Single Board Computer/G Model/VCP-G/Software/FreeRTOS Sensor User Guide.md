@@ -1,6 +1,6 @@
 # 1. Introduction
 ---
-This document provides guidelines on using the VCP-G with FreeRTOS. It includes configuration instructions and example codes to help you easily develop embedded applications using the VCP-G under the FreeRTOS environment.
+This document provides guidelines on using the VCP-G with FreeRTOS. It includes configuration instructions and example codes to help you easily develop embedded applications by using the VCP-G under the FreeRTOS environment.
 
 Specifically, this document provides guidance on FreeRTOS-based example applications for the VCP-G, including: 
 - Digital Out/In
@@ -15,28 +15,32 @@ Refer to Figure 1.1 before using the VCP-G.
 <p align="center"><strong>Figure 1.1 VCP-G Pinout Diagram</strong></p>
 </br>
 
-To run each example, users should modify the `main.c` file located at:
+To run each example, you should modify the `main.c` file located at:
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-After making the necessary changes, compile the project using the provided Makefile to generate the firmware binary.
+After making the necessary changes, compile the project by using the provided Makefile to generate the firmware binary.
 </br></br></br></br>
 
 # 2. Digital In/Out
 ---
-This chapter provides examples of controlling LEDs using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
+This chapter provides examples of controlling LEDs by using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
 
-This chapter contains two example projects that demonstrate how to control LEDs and button using digital outputs and inputs, giving you a basic understanding of digital pin functions.
+This chapter contains two example projects that demonstrate how to control LEDs and button by using digital outputs and inputs, giving you a basic understanding of digital pin functions.
 </br></br></br>
 
 ## 2.1 Digital Out
+>!(정정필요)! vcp4LED로 수정해야 하나요? (아래 figure 및 table 모두 vcp4LED)
 ---
-This example demonstrates how to control LEDs on a breadboard using the VCP-G board under FreeRTOS.  
-Assuming you have already set up the VCP-G FreeRTOS SDK, you can find the relevant source file at:  
+This example demonstrates how to control LEDs on a breadboard by using the VCP-G board under FreeRTOS.  
+You can find the relevant source file at:  
+
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-To implement this example, modify main.c to configure the GPIO pins connected to the LEDs as digital outputs. A FreeRTOS task should be created to turn on four LEDs one by one in order, then turn them off in reverse order. Each LED transition should include a 500 ms delay to clearly observe the sequence.
+>!(정정필요)! VCP-G FreeRTOS SDK 설치에 대한 내용을 읽기 위해 VCP-G FreeRTOS SDK Getting Started을 참고하라는 문구 추가 필요
+
+To implement this example, modify the main.c file to configure the GPIO pins connected to the LEDs as digital outputs. A FreeRTOS task should be created to turn on four LEDs one by one in order, then turn them off in reverse order. Each LED transition should include a 500 ms delay to clearly observe the sequence.
 </br></br>
 
 ### 2.1.1 Hardware Reqirements  
@@ -101,7 +105,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 2.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 static void Main_StartTask(void * pArg)
@@ -138,14 +142,15 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the four connected LEDs will turn on sequentially from LED01 to LED04, then turn off in reverse order. Each transition occurs with a 500 ms delay, creating a smooth blinking pattern.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the four connected LEDs turn on sequentially from LED01 to LED04, then turn off in reverse order. Each transition occurs with a 500 ms delay, creating a smooth blinking pattern.
 </br></br></br>
 
 ## 2.2 Digital In
+>!(정정필요)! vcp4LED_Button으로 수정해야 하나요?
 ---
-This example demonstrates how to read input from a push-button and use it to control an LED using the VCP-G board under FreeRTOS.
-Assuming you have already set up the VCP-G FreeRTOS SDK, the relevant source file can be found at:
+This example demonstrates how to read input from a push button and use it to control an LED by using the VCP-G board under FreeRTOS.
+The relevant source file can be found at:
 ``` 
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
@@ -226,7 +231,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 2.2.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 static void Main_StartTask(void *pArg)
@@ -271,21 +276,21 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, pressing the button will turn on LED01 and LED03, while releasing the button will turn on LED02 and LED04.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, pressing the button turns on LED01 and LED03, while releasing the button turns on LED02 and LED04.
 The system continuously monitors the button state and updates the LED status in real time with a 50 ms polling interval.
 </br></br></br></br>
 
 # 3. VCP-G I2C
 ---
-This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the VCP-G running FreeRTOS.  
+This chapter provides instructions for configuring Inter-integrated Circuit (I2C) communication on the VCP-G running FreeRTOS.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 </br></br></br>
 
 ## 3.1 vcpI2C_LCD1602
 ---
-This example program demonstrates how the VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
-In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text Hello TOPST on the screen.
+This example program demonstrates how the VCP-G board controls an LCD1602 display by using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
+In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text "Hello TOPST" on the screen.
 </br></br>
 
 ### 3.1.1 Hardware Requirements
@@ -309,6 +314,7 @@ In this example, the LCD is initialized and the backlight is enabled for clear v
 #### 3.1.2.1 Pin Mapping
 The following table shows pin mapping.
 
+>!(정정필요)! AnalogInOutSerial이 아닌 vcpI2C_LCD1602 아닌지 확인 부탁드립니다
 <p align="center"><strong>Table 3.1 Pin Mapping of AnalogInOutSerial</strong></p>
 <div align="center">
 	<table>
@@ -342,7 +348,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 3.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <i2c.h>
 #include <lcd.h>
@@ -370,17 +376,17 @@ static void Main_StartTask(void * pArg)
 }
 ```
 #### Additional Configuration Notes
-To enable LCD testing via I2C, follow these steps:  
+To enable LCD testing through I2C, follow these steps:  
 **1. Enable lcd.c in the Build System**  
 - Navigate to the following path:
 ```
 $ vi ~/vcp/sources/dev.drivers/i2c/rules.mk
 ```
-- Locate the line:
+- Find the following line:
 ```
 #SRCS += lcd.c
 ```
-- Unannotate to activate the file:
+- Unannotate the line to activate the file:
 ```
 SRCS += lcd.c
 ```
@@ -395,13 +401,13 @@ The I2C channel number and associated port used by the LCD can be changed in:
 $ vi ~/vcp/sources/dev.drivers/i2c/lcd.h
 ```
 
-After editing the code, go to the following directory and run the build command:  
+After editing the code, go to the following directory and run the following build command:  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the LCD will display the message Hello TOPST on the screen, confirming that I2C communication is working properly.  
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the LCD displays the message "Hello TOPST" on the screen, confirming that I2C communication is working properly.  
 </br></br></br></br>
 
 # 4. VCP SPI
