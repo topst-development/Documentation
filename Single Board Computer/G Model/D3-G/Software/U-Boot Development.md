@@ -44,6 +44,8 @@ In recovery scenarios, it allows the system to boot with initramfs instead of th
 ---
 Insert the USB into the D3-G and power it on. Enter U-Boot mode and execute the following commands:
 
+**To enter u-boot mode, power on the device and press enter within 3 seconds.**
+
 ```
 =>
 =>
