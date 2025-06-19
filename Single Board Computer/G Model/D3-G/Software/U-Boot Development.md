@@ -137,3 +137,10 @@ $ sync
 $ reboot
 ```
 You can now log in as root without a password and use passwd to set a new one.
+
+```
+$ passwd
+New password:
+Retype new password:
+passwd: password updated successfully
+```
