@@ -1,4 +1,4 @@
-# 1. Introduction
+![image](https://github.com/user-attachments/assets/e8eb105c-c8bd-43bc-b888-2d6b55722156)![image](https://github.com/user-attachments/assets/e3e208f5-1070-4bb7-bb10-12ec1add6439)# 1. Introduction
 ---
 This document provides guidelines on using various Arduino sensors with the VCP-G board. It includes connection instructions and example codes to help you easily develop projects by using the VCP-G.
 
@@ -17,9 +17,9 @@ Refer to Figure 1.1 before using the VCP-G.
 
 </br></br></br></br>
 
-# 2. VCP-G Digital
+# 2. VCP-G Digital Pins
 ---
-This chapter provides examples of controlling LEDs using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
+This chapter provides examples of controlling LEDs by using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
 
 This chapter includes two example projects that demonstrate how to use digital output to control multiple LEDs, providing a foundational understanding of digital pin functionality.
 
@@ -27,7 +27,9 @@ This chapter includes two example projects that demonstrate how to use digital o
 
 ## 2.1 vcp4LED
 ---
-This example program demonstrates how the VCP-G board controls four LEDs on the breadboard. The example code is provided in the “vcp4LED.ino”. When this file is uploaded to the VCP-G, the LEDs turn on and off sequentially in both forward and reverse patterns with a 500 ms delay between each transition. 
+This example program demonstrates how the VCP-G board controls four LEDs on the breadboard. The example code is provided in the “vcp4LED.ino” file. When this file is uploaded to the VCP-G, the LEDs turn on and off sequentially in both forward and reverse patterns with a 500 ms delay between each transition. 
+>!(정정필요)! vcp4LED는 example program 이름인가요?
+>!(정정필요)! example program == example code인가요?
 </br></br>
 
 ### 2.1.1 Hardware Reqirements  
@@ -92,9 +94,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 2.1.3 How to execute
-1. Open the "vcp4ELD.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [01.VCP-G Digital] -> [vcp4LED]**
+1. Open the "vcp4LED.ino" file.  
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [01.VCP-G Digital] -> [vcp4LED]**.
     ```
     /*
     *  TOPST VCP : 4 LED Control
@@ -131,14 +133,15 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "vcp4LED.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
-    **Note:** The message should include **vcp4LED.ino.rom**.
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
+     **Note:** The message should include **vcp4LED.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\C05357299384CE5734F0E696C5A4DA3B/vcp4LED.ino.rom
 
@@ -149,7 +152,7 @@ The following table shows pin mapping.
 
 ## 2.2 vcp4LED_Button
 ---
-This example program demonstrates how the VCP-G board controls four LEDs and a button on the breadboard. When the button is pressed, the right two LEDs turn off, and the left two LEDs turn on. When the button is released, the LEDs change state. The ones that were on turn off, and the ones that were off turn on. The program continuously checks the button state and adjusts the LEDs accordingly.
+This example program demonstrates how the VCP-G board controls four LEDs and a button on the breadboard. When the button is pressed, the right two LEDs turn off, and the left two LEDs turn on. When the button is released, the LEDS that were on turn off, and the LEDs that were off turn on. The program continuously checks the button state and adjusts the LEDs accordingly.
 </br></br>
 
 ### 2.2.1 Hardware Requirements
@@ -224,9 +227,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 2.1.3 How to execute
-1. Open the "vcp4ELD_Button.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [01.VCP-G Digital] -> [vcp4LED_Button]**
+1. Open the "vcp4LED_Button.ino" file.
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [01.VCP-G Digital] -> [vcp4LED_Button]**.
     ```
     /*
     *  TOPST VCP : 4 LED and Button Control
@@ -272,13 +275,14 @@ The following table shows pin mapping.
 
     ```
 2. Verify and upload the "vcp4LED_Button.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch. 
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
     **Note:** The message should include **vcp4LED_Button.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\5CC1DB4CA216E2BC009504FAA3D06456/vcp4LED_Button.ino.rom
@@ -288,9 +292,9 @@ The following table shows pin mapping.
 
 </br></br></br></br>
 
-# 3. VCP-G Analog
+# 3. VCP-G Analog Pins
 ---
-This chapter provides examples of using the Analog pins on the VCP-G board. In VCP-G, analog pins receive continuous voltage signals from sensors, allowing precise measurement of varying input values. Chapter 3.1, Chapter 3.2, and Chapter 3.3 demonstrate how to use analog pins to read sensor data and control outputs, providing a foundational understanding of analog input handling.
+This chapter provides examples of using the Analog pins on the VCP-G board. In VCP-G, analog pins receive continuous voltage signals from sensors, allowing precise measurement of varying input values. Chapter 3.1, Chapter 3.2, and Chapter 3.3 describe how to use analog pins to read sensor data and control outputs, providing a foundational understanding of analog input handling.
 
 </br></br></br>
 
@@ -357,9 +361,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 3.1.3 How to execute
-1. Open the "AnalogInOutSerial.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [AnalogInOutSerial]**
+1. Open the "AnalogInOutSerial.ino" file.  
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [AnalogInOutSerial]**.
     ```
     #include <HardwareSerial.h>
     HardwareSerial Serial;
@@ -395,19 +399,22 @@ The following table shows pin mapping.
         delay(2);
     }
     ```
+ 
     **Note:** If you encounter the error 'Serial' was not declared in this scope, ensure that the following library and object declaration are correctly included.
+   >!(정정필요)! 국문 의미 확인 부탁드립니다.
     ```
     #include <HardwareSerial.h>
     HardwareSerial Serial;
     ```
 2. Verify and upload the "AnalogInOutSerial.ino" file to the VCP-G.
 3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+ 
     **Note:** The message should include **AnalogInOutSerial.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\EB016432EF98DEF0B9102FD77148DD5D/AnalogInOutSerial.ino.rom
@@ -419,7 +426,7 @@ The following table shows pin mapping.
 
 ## 3.2 AnalogInput
 ---
-This example program demonstrates how the VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is below 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
+This example program demonstrates how the VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is lower than 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
 </br></br>
 
 ### 3.2.1 Hardware Requirements
@@ -486,9 +493,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 3.2.3 How to execute
-1. Open the "AnalogInput.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [AnalogInput]**
+1. Open the "AnalogInput.ino" file.  
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [AnalogInput]**.
     ```
     #include <HardwareSerial.h>
     HardwareSerial Serial;
@@ -521,17 +528,21 @@ The following table shows pin mapping.
         }
     }
     ```
+ 
     **Note 1:** To check **sensorValue** in the Serial Monitor, add **Serial.println()** to the source code.  
     **Note 2:** A fixed resistor is used along with a variable resistor (potentiometer) to adjust the sensor value. The sensor value changes depending on how much the potentiometer is turned, and the amount you need to turn the potentiometer varies based on the value of the fixed resistor.
+>!(정정필요)! potentiometer 다이얼을 얼마나 돌리냐에 따라 sensor 값이 변한다라는 의미여서 turn인가요?
+
 2. Verify and upload the "AnalogInput.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.  
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
-    **Note:** The message should include **AnalogInput.ino.rom**.
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
+   **Note:** The message should include **AnalogInput.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\C3FDEE51354320EA689DFEB4EDCF2ECD/AnalogInput.ino.rom
 
@@ -542,7 +553,7 @@ The following table shows pin mapping.
 
 ## 3.3 pwmFade
 ---
-This example program demonstrates how the VCP-G board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
+This example program demonstrates how the VCP-G board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop by using PWM. After the LED reaches its maximum brightness, the brightness of the LED begins to decrease. The program continuously adjusts the LED's brightness, creating a fading effect.
 </br></br>
 
 ### 3.3.1 Hardware Requirements
@@ -589,9 +600,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 3.3.3 How to execute
-1. Open the "pwmFade.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [pwmFade]**
+1. Open the "pwmFade.ino" file.
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [pwmFade]**.
     ```
     /*
     Fade
@@ -628,14 +639,15 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "pwmFade.ino" file to the VCP-G board.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
-    **Note:** The message should include **pwmFade.ino.rom**.
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
+     **Note:** The message should include **pwmFade.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\69446E8A7F6616A7D5466014BDF759FC/pwmFade.ino.rom 
 
@@ -654,7 +666,7 @@ The following chapters describes how to set up and use SPI to interface with ext
 
 ## 4.1 vcpSPI_Dot8x8
 ---
-This example program demonstrates how the VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver. It displays patterns like a heart shape and the letter "R" by setting rows with pre-defined binary arrays. The intensity of the LEDs is adjusted to create a pulsing effect, adding dynamic visuals. Additional features include inverting and clearing the display to enhance functionality.
+This example program demonstrates how the VCP-G board controls an 8x8 LED dot matrix by using the MAX7219 driver. The 8x8 LED dot matrix displays patterns like a heart shape and the letter "R" by setting rows with pre-defined binary arrays. The intensity of the LEDs is adjusted to create a pulsing effect, adding dynamic visuals. Additional features include inverting and clearing the display to enhance functionality.
 </br></br>
 
 ### 4.1.1 Hardware Requirements
@@ -717,9 +729,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 4.1.3 How to execute
-1. Open the "vcpSPI_Dot8x8.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [03.VCP-G SPI] -> [vcpSPI_Dot8x8]**
+1. Open the "vcpSPI_Dot8x8.ino" file.  
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [03.VCP-G SPI] -> [vcpSPI_Dot8x8]**.
     ```
     #include <MAX7219.h>
 
@@ -810,13 +822,14 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "vcpSPI_Dot8x8.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
     **Note:** The message should include **vcpSPI_Dot8x8.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\567805554B5B9F915DCC80B38483AE07/vcpSPI_Dot8x8.ino.rom
@@ -824,12 +837,12 @@ The following table shows pin mapping.
     [main:155] Complete FWDN
     ```
 
-**Note:** If you want to use the SPI pin in the center of the VCP-G board, you can use it by referring to the pin number below.
+**Note:** If you want to use the SPI pin in the center of the VCP-G board, you can use it by referring to the following pin number.
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin num</th>
-	        <th>SPI function</th>
+	        <th colspan="3">Pin Number</th>
+	        <th>SPI Function</th>
 	        <th>Arduino IDE</th>
 	    </tr>
 	    <tr>
@@ -869,16 +882,16 @@ The following table shows pin mapping.
 
 # 5. VCP-G I2C
 ---
-This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the VCP-G.  
-I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
+This chapter provides instructions for configuring Inter-integrated Circuit (I2C) communication on the VCP-G.  
+I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller by using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 
 </br></br></br>
 
 ## 5.1 vcpI2C_LCD1602
 ---
-This example program demonstrates how the VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.
+This example program demonstrates how the VCP-G board controls an LCD1602 display by using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.
 
-In this example, the LCD is initialized, and the backlight is enabled for clear visibility. The program then positions the cursor to display the text VCP-G on the first row and I2C Test! on the second row. With I2C communication, multiple devices can be controlled using minimal wiring, making it an effective solution for compact projects.
+In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text "VCP-G" in the first row and "I2C Test!" in the second row. With I2C communication, multiple devices can be controlled using minimal wiring, making it an effective solution for compact projects.
 </br></br>
 
 ### 5.1.1 Hardware Requirements
@@ -935,9 +948,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 5.1.3 How to execute
-1. Open the "vcpI2C_LCD1602.ino"file  
+1. Open the "vcpI2C_LCD1602.ino" file.  
     1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [04.VCP-G I2C] -> [vcpI2C_LCD1602]**
+    2. Click **[File] -> [Examples] -> [04.VCP-G I2C] -> [vcpI2C_LCD1602]**.
     ```
     #include <LiquidCrystal_I2C.h>
   
@@ -965,13 +978,14 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "vcpI2C_LCD1602.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
+   
     **Note:** The message should include **vcpI2C_LCD1602.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file -         C:\Users\topst\AppData\Local\arduino\sketches\C8D91A6857B651D6C665B0EF18B7EE53/vcpI2C_LCD1602.ino.rom
@@ -984,7 +998,7 @@ The following table shows pin mapping.
 # 6. VCP-G UART
 ---
 This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the VCP-G.  
-UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
+UART is a widely used serial communication protocol that transmits data asynchronously by using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
 The following chapters describe how to send and receive data through UART.
 
 </br></br></br>
@@ -1001,9 +1015,9 @@ This example program demonstrates how the VCP-G prints the ASCII values of chara
 </br></br>
 
 ### 6.1.3 How to execute
-1. Open the "vcpASCIITable.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [05.VCP-G UART] -> [vcpASCIITable]**
+1. Open the "vcpASCIITable.ino" file.
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [05.VCP-G UART] -> [vcpASCIITable]**.
     ```
     /*
     ASCII table
@@ -1085,13 +1099,14 @@ This example program demonstrates how the VCP-G prints the ASCII values of chara
     }
     ```
 2. Verify and upload the "vcpASCIITable.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
     **Note:** The message should include **vcpASCIITable.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topstAppData\Local\arduino\sketches\487F45098412336AA9D73C50C17E07D8/vcpASCIITable.ino.rom
@@ -1103,14 +1118,14 @@ This example program demonstrates how the VCP-G prints the ASCII values of chara
 
 ## 6.2 vcpGraph
 ---
-This example program demonstrates how the VCP-G reads analog value of potentiometer on the bread board and transmits the data to host PC through UART. The Arduino code continuously reads the value of the analog sensor (potentiometer) connected to pin A5 and sends it through the serial port. The accompanying processing code visualizes these values in a dynamic graph in real time, showing the change in sensor input over time. .
+This example program demonstrates how the VCP-G reads analog value of potentiometer on the breadboard and transmits the data to host PC through UART. The Arduino code continuously reads the value of the analog sensor (potentiometer) connected to pin A5 and sends it through the serial port. The accompanying processing code visualizes these values in a dynamic graph in real time, showing the change in sensor input over time.
 </br></br>
 
 ### 6.2.1 Hardware Requirements
 - VCP-G Board (x1)
 - Breadboard (x1)
 - Potentiometer (x1)
-- 10kΩ resistor (x1)
+- 10 kΩ resistor (x1)
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x4)
@@ -1119,7 +1134,7 @@ This example program demonstrates how the VCP-G reads analog value of potentiome
 ### 6.2.2 Circuit
 - Potentiometer
     - Center pin of the potentiometer is connected to the analog pin A5 on the VCP-G board.
-    - GND pin of the potentiometer is connected to GND on the VCP-G board with a 10kΩ resistor.
+    - GND pin of the potentiometer is connected to GND on the VCP-G board with a 10 kΩ resistor.
     - VCC pin of the potentiometer is connected to 3.3V on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcpGraph%20Circuit%20Schematic.png"></p>
@@ -1156,9 +1171,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 6.2.3 How to execute
-1. Open the "vcpGraph.ino"file  
-    1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [05.VCP-G UART] -> [vcpGraph]**
+1. Open the "vcpGraph.ino" file.
+    1. Open the Arduino IDE.
+    2. Click **[File] -> [Examples] -> [05.VCP-G UART] -> [vcpGraph]**.
     ```
     /*
     Graph
@@ -1281,13 +1296,14 @@ The following table shows pin mapping.
     */
     ```
 2. Verify and upload the "vcpGraph.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power calbe from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
+
     **Note:** The message should include **vcpGraph.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\F59E4532EC3A529F5910F376F809A5E5/vcpGraph.ino.rom
@@ -1300,7 +1316,8 @@ The following table shows pin mapping.
 # 7. Additional Examples
 ---
 This chapter provides additional sensor examples not included in the "Examples for TOPST VCP Rev G" in the Arduino IDE.  
-It provides example guides for using commonly used Arduino sensors with the VCP-G board, helping users integrate various sensors into their projects effectively.
+>!(정정필요)! Arduino IDE 내에 "Examples for TOPST VCP Rev G"라는 파일이 있나요?
+It provides example guides for using commonly used Arduino sensors with the VCP-G board, enabling you to integrate various sensors into your projects effectively.
 
 </br></br></br>
 
@@ -1308,7 +1325,7 @@ It provides example guides for using commonly used Arduino sensors with the VCP-
 ---
 ### 7.1.1 Infrared (IR) Sensor 1
 ---
-This example demonstrates how the VCP-G board controls an IR sensor and two LEDs on the breadboard. After reading the IR sensor value, if the IR sensor value is HIGH, it is considered that there is no obstacle, and the green LED turns on while the red LED turns off. Conversely, if the IR sensor value is LOW, it is considered that there is an obstacle, and the red LED turns on while the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
+This example demonstrates how the VCP-G board controls an IR sensor and two LEDs on the breadboard. After reading the IR sensor value, if the IR sensor value is HIGH, it is considered that there is no obstacle, and the green LED turns on while the red LED turns off. Conversely, if the IR sensor value is LOW, it is considered that there is an obstacle, and the red LED turns on while the green LED turns off. Additionally, the presence or absence of an obstacle is displayed on the serial monitor.
 
 #### 7.1.1.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1386,7 +1403,8 @@ The following table shows pin mapping.
 </div>
 
 #### 7.1.1.3 How to execute
-1. Copy the following source code into the Arduino IDE and save the file as "irSensor_LED.ino"  
+1. Copy the following source code into the Arduino IDE and save the file as "irSensor_LED.ino".
+    
    **Note:** The following source code is provided only in this document. 
 
     ```
@@ -1423,13 +1441,14 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "irSensor_LED.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
+ 
     **Note:** The message should include **irSensor_LED.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\1D003A72AB3391D6D60FD7993380F8CD/irSensor_LED.ino.rom 
@@ -1440,8 +1459,7 @@ The following table shows pin mapping.
 
 ### 7.1.2 Infrared (IR) Sensor 2
 ---
-This example demonstrates how the VCP-G board controls an IR sensor to detect objects and print the detection status to the Serial Monitor. The IR Transceiver reads the presence of an obstacle. If the IR Transceiver value is HIGH, it indicates no obstacle, and the green LED turns on and the red LED turns off. Conversely, if the IR  
-Transceiver value is LOW, it indicates there is an obstacle, and the red LED turns on and the green LED turns off. Additionally, the presence or absence of an obstacle is printed to the serial monitor.
+This example demonstrates how the VCP-G board controls an IR sensor to detect objects and print the detection status to the Serial Monitor. The IR Transceiver reads the presence of an obstacle. If the IR Transceiver value is HIGH, it indicates no obstacle, and the green LED turns on and the red LED turns off. Conversely, if the IR Transceiver value is LOW, it indicates there is an obstacle, and the red LED turns on and the green LED turns off. Additionally, the presence or absence of an obstacle is displayed on the serial monitor.
 
 #### 7.1.2.1 Hardware Requirements
 - VCP-G Board (x1)
@@ -1489,7 +1507,8 @@ The following table shows pin mapping.
 </div>
 
 #### 7.1.2.3 How to execute
-1. Copy the following source code into the Arduino IDE and save the file as "irTransceiver.ino"  
+1. Copy the following source code into the Arduino IDE and save the file as "irTransceiver.ino".
+   
    **Note:** The following source code is provided only in this document. 
 
     ```
@@ -1520,13 +1539,14 @@ The following table shows pin mapping.
     }  
     ```
 2. Verify and upload the "irTransceiver.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
+   
     **Note:** The message should include **irTransceiver.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\1D003A72AB3391D6D60FD7993380F8CD/irTransceiver.ino.rom 
@@ -1538,7 +1558,8 @@ The following table shows pin mapping.
 
 ## 7.2 Joystick
 ---
-This example shows how the VCP-G reads joystick inputs and prints their value to the Serial Monitor. You can receive three inputs: X-axis, Y-axis, and buttons. The serial monitor verifies the received signals. The movements made on the X and Y axes change the value of the port, which corresponds to the numeric value of the analog output. In allows for precise control for applications that require fine adjustment.
+This example shows how the VCP-G reads joystick inputs and displays their value on the Serial Monitor. You can receive three inputs: X-axis, Y-axis, and buttons. The serial monitor verifies the received signals. The movements made on the X and Y axes change the value of the port, which corresponds to the numeric value of the analog output. In allows for precise control for applications that require fine adjustment.
+>!(정정필요)! In allows에서 in이 무슨 의미인가요?
 
 **Note:** Dual Axis Joystick Module (KY-023) is a product of Joy-IT. All rights to its design, trademark, and related intellectual property are owned by Joy-IT.
 </br></br>
@@ -1603,7 +1624,8 @@ The following table shows pin mapping.
 </br></br>
 
 ### 7.2.3 How to execute
-1. Copy the following source code into the Arduino IDE and save the file as "joystick.ino"  
+1. Copy the following source code into the Arduino IDE and save the file as "joystick.ino".
+   
    **Note:** The following source code is provided only in this document. 
 
     ```
@@ -1634,13 +1656,14 @@ The following table shows pin mapping.
     } 
     ```
 2. Verify and upload the "joystick.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.  
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
+   
     **Note:** The message should include **joystick.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\1D003A72AB3391D6D60FD7993380F8CD/joystick.ino.rom 
@@ -1653,6 +1676,7 @@ The following table shows pin mapping.
 ## 7.3 Gas Sensor
 ---
 This example demonstrates how the VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
+>!(정정필요)! It이 무엇을 가리키나요?
 
 **Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
 </br></br>
@@ -1706,7 +1730,8 @@ The following table shows pin mapping.
 </br></br>
 
 ### 7.3.3 How to execute
-1. Copy the following source code into the Arduino IDE and save the file as "GasSensor.ino"  
+1. Copy the following source code into the Arduino IDE and save the file as "GasSensor.ino".
+  
    **Note:** The following source code is provided only in this document. 
 
     ```
@@ -1727,13 +1752,14 @@ The following table shows pin mapping.
     }
      ```
 2. Verify and upload the "GasSensor.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power calbe from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.  
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
+   
     **Note:** The message should include **GasSensor.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\1D003A72AB3391D6D60FD7993380F8CD/joystick.ino.rom 
@@ -1745,7 +1771,7 @@ The following table shows pin mapping.
 ## 7.4 Metal Touch Sensor Module
 ---
 This example program demonstrates how the VCP-G board controls touch sensor and an LED on the breadboard. The metal touch sensor module (KY-036) is a versatile analog/digital sensor designed to detect touch on metal surfaces or human skin. This module uses a transistor to sense changes in electrical conductivity when touched, and it outputs both digital and analog signals for interaction with VCP-G.  
-When a touch is detected, the module outputs relevant digital/analog values to the serial monitor. You can also control an LED based on the touch status. 
+When a touch is detected, the metal touch sensor module outputs relevant digital/analog values to the serial monitor. You can also control an LED based on the touch status. 
 
 **Note:** Metal Touch Sensor Module (KY-036) has a built-in potentiometer for adjusting sensitivity. You can turn this potentiometer to increase or decrease the sensitivity.
 </br></br>
@@ -1824,6 +1850,7 @@ The following table shows pin mapping.
 
 ### 7.4.3 How to execute
 1. Copy the following source code into the Arduino IDE and save the file as "vcp_touch.ino"  
+
    **Note:** The following source code is provided only in this document. 
 
     ```
@@ -1865,26 +1892,28 @@ The following table shows pin mapping.
     }
      ```
 2. Verify and upload the "vcp_touch.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.  
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After a successful upload, check the Arduino IDE output console for the following message:
+   
     **Note:** The message should include **vcp_touch.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\567805554B5B9F915DCC80B38483AE07/vcp_touch.ino.rom
 
     [main:155] Complete FWDN
     ```
-**Note:** Set an appropriate baud rate for serial communication.
 
+**Note:** Set an appropriate baud rate for serial communication.
+>!(정정필요)! baud rate을 적절한 값으로 설정하지 않으면 serial communication이 불가능한가요? 
 </br></br></br>
 
 ## 7.5 Step Motor with Motor Driver
 ---
-This example demonstrates how the VCP-G board controls 4-wire stepper motor (28BYJ-48 (5VDC)) and Motor Driver (ULN2003 (5V–12V)). The code in Chapter 7.5.3 defines the pins connected to the motor driver and sets the number of steps per revolution. The motor rotates forward for one full revolution, pauses, then rotates backward for one full revolution, and pauses again. The motor speed is controlled by the delay between steps, and the direction is controlled by the order in which the coils are activated.
+This example demonstrates how the VCP-G board controls 4-wire stepper motor (28BYJ-48 (5VDC)) and Motor Driver (ULN2003 (5V–12V)). The code in Chapter 7.5.3 defines the pins connected to the motor driver and sets the number of steps per revolution. The motor rotates forward for one full revolution, pauses,  rotates backward for one full revolution, and pauses again. The motor speed is controlled by the delay between steps, and the direction is controlled by the order in which the coils are activated.
 
 **Note:** The 28BYJ-48 motor requires 4096 signals for one full rotation in Half step mode and 2048 signals for one full rotation in Full step mode. For precise motor control, the number of signals required depending on the mode should be considered. 
 </br></br>
@@ -1956,8 +1985,9 @@ The following table shows pin mapping.
 </br></br>
 
 ### 7.5.3 How to execute
-1. Copy the following source code into the Arduino IDE and save the file as "motordriver.ino"  
-   **Note:** The following source code is provided only in this document. 
+1. Copy the following source code into the Arduino IDE and save the file as "motordriver.ino".
+
+    **Note:** The following source code is provided only in this document. 
 
     ```
     /*
@@ -2027,13 +2057,14 @@ The following table shows pin mapping.
     }
      ```
 2. Verify and upload the "motordriver.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due th the FWDN mode not being activated. To resolve this:  
-    1. Disconnect the power calbe from the VCP-G board
-    2. Press and hold the FWDN switch
+3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+    1. Disconnect the power cable from the VCP-G board.
+    2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
-    4. Release the FWDN switch  
+    4. Release the FWDN switch.  
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:  
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:  
+
     **Note:** The message should include **motordriver.ino.rom**.
     ```
     [FWDN_VCP::WriteFile:577] Complete to send file - C:\Users\topst\AppData\Local\arduino\sketches\567805554B5B9F915DCC80B38483AE07/motordriver.rom
