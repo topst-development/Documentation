@@ -223,7 +223,7 @@ Please proceed to **Chapter 3: Image Build Guide**.
 This chapter provides guidance based on the Ubuntu OS installed on the host PC (regardless of whether it is WSL or a local Ubuntu installation). The image to be uploaded to the D3-G is built using the Yocto Project, so the build process must be performed in the Ubuntu environment.
 </br></br>
 
-## 3.1 SDK Build Prepration
+## 3.1 SDK Build Preparation
 ---
 The D3-G Linux SDK is based on Yocto Project 3.1 Dunfell. Therefore, you must configure the Yocto Project environment on the host PC to use the D3-G Linux SDK. To download SDK, source-mirror, and tools, you need to install the required utilities. To build the image smoothly, your PC must have **at least 60 GB of available storage** and **a minimum of 16 GB of RAM**.
 
@@ -254,7 +254,8 @@ The following are the components of the Yocto Project we have configured.
 Figure 3.1 shows composition of D3-G SDK.
 
 
-**Table 3.1 Composition of D3-G SDK:**
+
+**Table 3.1 Composition of TOPST SDK**
 <table border="1" cellspacing="0" cellpadding="5">
   <colgroup>
     <col style="width: 10%">
@@ -270,39 +271,23 @@ Figure 3.1 shows composition of D3-G SDK.
   </thead>
   <tbody>
   <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_ai-g.sh</td>
-      <td>Python script to automatically download and build the AI-G SDK</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup.sh</td>
+      <td>Python script to automatically download and build SDK</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_d3-g.sh</td>
-      <td>Python script to automatically download and build the D3-G SDK</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_ai-g.sh</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-ai-g.sh</td>
       <td>Script for creating AI-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_d3-g.sh</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-d3-g.sh</td>
       <td>Script for creating D3-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_ai-g</td>
-      <td rowspan="6">Tools related to the build process and <strong>FWDN</strong></td>
-    </tr>
-     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_d3-g</td>
-    </tr>
-     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_d5-g</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">fwdn v8_ai-g</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">fwdn v8</td>
-    </tr>
-    <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">mktcimg</td>
+      <td rowspan="2">Tools related to the build process and <strong>FWDN</strong></td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">tools</td>
     </tr>
     <tr>
       <td rowspan="8"style="text-align: center; vertical-align: middle;">poky</td>
@@ -331,7 +316,6 @@ Figure 3.1 shows composition of D3-G SDK.
     </tr>
   </tbody>
 </table>
-
 <br/><br/><br/>
 
 
@@ -355,43 +339,57 @@ vi ~/.gitconfig
 
 <br/><br/>
 
-### 3.5.2 Get D3-G with Git
-Below is our Yocto configuration XML file. You can download the repository to get started.
+### 3.5.2 Get D3-G from Git
+
+1. Create a new directory named **topst-sdk** and change the current directory to **topst-sdk**.
 
 ```
-$ mkdir topst_sdk
-$ cd topst_sdk
+$ mkdir topst-sdk
+$ cd topst-sdk
+```
 
-$ repo init -u git@gitlab.com:topst-private-release/manifests.git -m linux_yp4.0_topst_1.0.0.xml
+2. Execute the following command to initialize the repository.
+
+```
+$ repo init -u https://github.com/topst-development/manifests.git -m linux_yp4.0_topst.xml
+```
+
+After running the command, the following output is displayed.
+
+```
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
 
 ... A new version of repo (2.54) is available.
-... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
+... New version is available at: /home/topst/topst-sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
 
 
-Your identity is: sooyong <adrenalin7237@gmail.com>
+Your identity is: TopstDeveloper <topstdeveloper@gmail.com>
 If you want to change this, please re-run 'repo init' with --config-name
 
-repo has been initialized in /home/topst/topst_sdk
+repo has been initialized in /home/topst/topst-sdk
 ```
+
+3. Execute the following command to synchronize the repository.
 
 ```
 $ repo sync
+```
 
+After running the command, the following output is displayed.
+
+```
 ... A new version of repo (2.54) is available.
-... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
+... New version is available at: /home/topst/topst-sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
 
-Fetching: 100% (14/14), done in 33.045s
-boot-firmware_ai-g: Shared project bsp/boot-firmware found, disabling pruning.
-fwdn_v8: Shared project tools/fwdn_v8 found, disabling pruning.
-Checking out:  57% (8/14), done in 0.898s
-Checking out:  42% (6/14), done in 0.365s
+Fetching: 100% (12/12), done in 33.103s
+Checking out:  25% (3/12), done in 0.863s
+Checking out:  75% (9/12), done in 0.415s
 repo sync has finished successfully.
 ```
 
@@ -399,11 +397,11 @@ repo sync has finished successfully.
 
 ## 3.6 Execute topst-build.sh 
 ---
-If you run ./easy-setup_d3-g.sh script, you can see the following screen. 
+If you run ./easy-setup.sh script, you can see the following screen. 
 
-**Caution: If you re-run ./easy-setup_d3-g.sh, be careful as the built sources will be deleted if you select yes.**
+**Caution: If you re-run ./easy-setup.sh, be careful as the built sources will be deleted if you select yes.**
 ```
-./easy-setup_d3-g.sh
+./easy-setup.sh
 ```
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
 <p align="center"><strong>Figure 3.2 End User License Agreement</strong></p>
@@ -437,13 +435,13 @@ Choose MACHINE
 select number(1-5) => 2
 machine(d3-g-topst-main) selected.
 You had no conf/local.conf file. This configuration file has therefore been
-created for you from /home/topst/topst_sdk/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
+created for you from /home/topst/topst-sdk/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
 You may wish to edit it to, for example, select a different MACHINE (target
 hardware). See conf/local.conf for more information as common configuration
 options are commented.
 
 You had no conf/bblayers.conf file. This configuration file has therefore been
-created for you from /home/topst/topst_sdk/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
+created for you from /home/topst/topst-sdk/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
 To add additional metadata layers into your configuration please add entries
 to conf/bblayers.conf.
 
@@ -497,7 +495,7 @@ The **output.fwdn.zip** file, which includes the **'output.fai' build image** an
 ```
 $ cd ~/topst-sdk/ && \ 
 
-$ ./stitch-fai_d3-g.sh -f
+$ ./stitch-fai-d3-g.sh -f
 Filesystem too small for a journal
 [mktcimg] v1.2.1 - Nov 15 2021 19:33:18
 location : bl3_ca72_a
@@ -532,9 +530,9 @@ Complete to make fai file
 --storage_size : 17818182656
 --parttype : gpt
 --area_name : "SD Data"
---outfile : /home/topst/topst_sdk/.stitch_tOPE26E/output_d3g.fai
---gptfile : /home/topst/topst_sdk/.stitch_tOPE26E/output_d3g.gpt
---fplist : /home/topst/topst_sdk/.stitch_tOPE26E/partition.single.list
+--outfile : /home/topst/topst-sdk/.stitch_tOPE26E/output_d3g.fai
+--gptfile : /home/topst/topst-sdk/.stitch_tOPE26E/output_d3g.gpt
+--fplist : /home/topst/topst-sdk/.stitch_tOPE26E/partition.single.list
 --sector_size : 512
 --sparse_fill : 0
  
@@ -573,6 +571,11 @@ Complete to make fai file
 
 ```
 
+If you see the following log, it means the "output.fwdn.zip" file is created. 
+```
+$ ls
+build  easy-setup.sh  mktcimg  output_nd.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
+```
 
 </br></br><br/><br/>
 
@@ -650,16 +653,16 @@ Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2)
 
 1. Unzip "output.fwdn.zip" 
     ```
-    $ cd ~/topst-sdk/ && \ 
-    $ mkdir images && \
-    $ mv ./output.fwdn.zip ./images && \
-    $ cd images && \
-    $ unzip output.fwdn.zip && \
+    $ cd ~/topst-sdk
+    $ mkdir images
+    $ mv ./output.fwdn.zip ./images
+    $ cd images
+    $ unzip output.fwdn.zip
     ```
 2. Copy "images" folder to Windows C drive.
     ```
-    $ cd .. && \
-    $ cp -r /images /mnt/c/ && \
+    $ cd ..
+    $ cp -r /images /mnt/c/
     ```
 
 <br/><br/><br/>
@@ -795,8 +798,7 @@ This chapter explains how to connect the host PC to the D3-G board through UART 
 ---
 Follow these steps and verify that the firmware download is successfully completed by using the UART connection. 
 
-1. Install the serial port driver (CP210x Universal Windows Driver) and PL2303_prolific driver in the Windows environment. (CP210x Universal Windows Driver: Download link, PL2303_prolific Driver: Download link) 
-
+1. Install the serial port driver (for example, CP210x Universal Windows Driver) and PL2303_prolific driver in the Windows environment. 
 2. Install a terminal emulator such as Tera Term or PuTTY. 
 3. Connect the Host PC and the A72 UART Pin on the D3-G board. Use a USB-to-TTL cable. 
 4. Connect the black cable to the GND pin. 

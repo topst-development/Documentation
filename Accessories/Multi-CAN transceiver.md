@@ -3,6 +3,7 @@
 
 Professional-grade 3-channel CAN transceiver module for embedded and automotive applications.
 
+
 This compact and robust CAN transceiver board integrates three independent CAN channels using Texas Instruments’ TCAN334GD/GDR high-speed transceivers(Figure 1). Designed for developers working with real-time control systems, industrial automation, and automotive ECU simulation, it offers both flexibility and performance for multi-channel CAN applications.
 
 **Note:** Component availability and configurations are provided on a made-to-order basis depending on specific project requirements.
