@@ -1,13 +1,13 @@
 # MIPI Expansion Board
 ----
 
-The MIPI Expansion Board utilizes GMSL2 high-speed serial communication to support MIPI CSI and MIPI DSI interfaces. Each board integrates serializer and deserializer chipsets to handle camera input and display output, ensuring reliable high-resolution data transfer. Individual components and configurations are available on a made-to-order basis depending on specific project requirements.
+The MIPI Expansion Board utilizes GMSL2 high-speed serial communication to support MIPI CSI and MIPI DSI interfaces. Each board integrates serializer and deserializer chipsets to handle camera input and display output, ensuring reliable high-resolution data transfer. 
+**Note:** Component availability and configurations are provided on a made-to-order basis depending on specific project requirements.
 
-<br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/Assets/accessories/mipi_expansion_board.png" width="600"></p>
+<br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/accessories/mipi_expansion_board.png" width="600"></p>
 <p align="center"></p><br/>
 
 ## MIPI CSI (Camera Serial Interface)
-
 
 ### Board Info
 - **Size**: 71.5 mm × 73.5 mm × 1.6 t / 4 Layer
