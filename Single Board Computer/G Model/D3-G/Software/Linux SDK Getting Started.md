@@ -254,7 +254,8 @@ The following are the components of the Yocto Project we have configured.
 Figure 3.1 shows composition of D3-G SDK.
 
 
-**Table 3.1 Composition of D3-G SDK:**
+
+**Table 3.1 Composition of TOPST SDK**
 <table border="1" cellspacing="0" cellpadding="5">
   <colgroup>
     <col style="width: 10%">
@@ -270,39 +271,23 @@ Figure 3.1 shows composition of D3-G SDK.
   </thead>
   <tbody>
   <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_ai-g.sh</td>
-      <td>Python script to automatically download and build the AI-G SDK</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup.sh</td>
+      <td>Python script to automatically download and build SDK</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup_d3-g.sh</td>
-      <td>Python script to automatically download and build the D3-G SDK</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-ai-g.sh</td>
+      <td>Script for making AI-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_ai-g.sh</td>
-      <td>Script for creating AI-G fai images (minimal + Sample Application)</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai_d3-g.sh</td>
-      <td>Script for creating D3-G fai images (minimal + Sample Application)</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_ai-g</td>
-      <td rowspan="6">Tools related to the build process and <strong>FWDN</strong></td>
-    </tr>
-     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_d3-g</td>
-    </tr>
-     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">boot-firmware_d5-g</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">fwdn v8_ai-g</td>
-    </tr>
-    <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">fwdn v8</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-d3-g.sh</td>
+      <td>Script for making D3-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">mktcimg</td>
+      <td rowspan="2">Tools related to the build process and <strong>FWDN</strong></td>
+    </tr>
+    <tr>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">tools</td>
     </tr>
     <tr>
       <td rowspan="8"style="text-align: center; vertical-align: middle;">poky</td>
@@ -311,19 +296,19 @@ Figure 3.1 shows composition of D3-G SDK.
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-openembedded</td>
-      <td>Layer that supports OE-Core</td>
+      <td>Support OE-Core Layer</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-arm</td>
-      <td>Layer that supports ARM toolchain</td>
+      <td>Support ARM toolchain Layer</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst-bsp</td>
-      <td>Layer that supports TOPST BSP</td>
+      <td>Support TOPST BSP Layer</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-gplv2</td>
-      <td>Layer that includes packages avoiding the GPLv3 license</td>
+      <td>Support packages that avoid GPLv3 license</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst</td>
@@ -331,7 +316,6 @@ Figure 3.1 shows composition of D3-G SDK.
     </tr>
   </tbody>
 </table>
-
 <br/><br/><br/>
 
 
@@ -355,14 +339,24 @@ vi ~/.gitconfig
 
 <br/><br/>
 
-### 3.5.2 Get D3-G with Git
-Below is our Yocto configuration XML file. You can download the repository to get started.
+### 3.5.2 Get D3-G from Git
+
+1. Create a new directory named **topst-sdk** and change the current directory to **topst-sdk**.
 
 ```
 $ mkdir topst_sdk
 $ cd topst_sdk
+```
 
-$ repo init -u git@gitlab.com:topst-private-release/manifests.git -m linux_yp4.0_topst_1.0.0.xml
+2. Execute the following command to initialize the repository.
+
+```
+$ repo init -u https://github.com/topst-development/manifests.git -m linux_yp4.0_topst.xml
+```
+
+After running the command, the following output is displayed.
+
+```
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
 
 ... A new version of repo (2.54) is available.
@@ -372,26 +366,30 @@ Downloading Repo source from https://gerrit.googlesource.com/git-repo
 !!! to get an update installed.
 
 
-Your identity is: sooyong <adrenalin7237@gmail.com>
+Your identity is: TopstDeveloper <topstdeveloper@gmail.com>
 If you want to change this, please re-run 'repo init' with --config-name
 
 repo has been initialized in /home/topst/topst_sdk
 ```
 
+3. Execute the following command to synchronize the repository.
+
 ```
 $ repo sync
+```
 
+After running the command, the following output is displayed.
+
+```
 ... A new version of repo (2.54) is available.
 ... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
 
-Fetching: 100% (14/14), done in 33.045s
-boot-firmware_ai-g: Shared project bsp/boot-firmware found, disabling pruning.
-fwdn_v8: Shared project tools/fwdn_v8 found, disabling pruning.
-Checking out:  57% (8/14), done in 0.898s
-Checking out:  42% (6/14), done in 0.365s
+Fetching: 100% (12/12), done in 33.103s
+Checking out:  25% (3/12), done in 0.863s
+Checking out:  75% (9/12), done in 0.415s
 repo sync has finished successfully.
 ```
 
@@ -399,11 +397,11 @@ repo sync has finished successfully.
 
 ## 3.6 Execute topst-build.sh 
 ---
-If you run ./easy-setup_d3-g.sh script, you can see the following screen. 
+If you run ./easy-setup.sh script, you can see the following screen. 
 
-**Caution: If you re-run ./easy-setup_d3-g.sh, be careful as the built sources will be deleted if you select yes.**
+**Caution: If you re-run ./easy-setup.sh, be careful as the built sources will be deleted if you select yes.**
 ```
-./easy-setup_d3-g.sh
+./easy-setup.sh
 ```
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
 <p align="center"><strong>Figure 3.2 End User License Agreement</strong></p>
@@ -497,7 +495,7 @@ The **output.fwdn.zip** file, which includes the **'output.fai' build image** an
 ```
 $ cd ~/topst-sdk/ && \ 
 
-$ ./stitch-fai_d3-g.sh -f
+$ ./stitch-fai-d3-g.sh -f
 Filesystem too small for a journal
 [mktcimg] v1.2.1 - Nov 15 2021 19:33:18
 location : bl3_ca72_a
@@ -573,6 +571,12 @@ Complete to make fai file
 
 ```
 
+If you see the following log, it means the "output.fwdn.zip" file is created. 
+```
+$ ls
+output.fwdn.zip  build                  easy-setup.sh       mktcimg             poky                   stitch-fai-ai.sh
+stitch-fai-d3.sh    tools
+```
 
 </br></br><br/><br/>
 
