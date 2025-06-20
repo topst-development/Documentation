@@ -344,8 +344,8 @@ vi ~/.gitconfig
 1. Create a new directory named **topst-sdk** and change the current directory to **topst-sdk**.
 
 ```
-$ mkdir topst_sdk
-$ cd topst_sdk
+$ mkdir topst-sdk
+$ cd topst-sdk
 ```
 
 2. Execute the following command to initialize the repository.
@@ -360,7 +360,7 @@ After running the command, the following output is displayed.
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
 
 ... A new version of repo (2.54) is available.
-... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
+... New version is available at: /home/topst/topst-sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
@@ -369,7 +369,7 @@ Downloading Repo source from https://gerrit.googlesource.com/git-repo
 Your identity is: TopstDeveloper <topstdeveloper@gmail.com>
 If you want to change this, please re-run 'repo init' with --config-name
 
-repo has been initialized in /home/topst/topst_sdk
+repo has been initialized in /home/topst/topst-sdk
 ```
 
 3. Execute the following command to synchronize the repository.
@@ -382,7 +382,7 @@ After running the command, the following output is displayed.
 
 ```
 ... A new version of repo (2.54) is available.
-... New version is available at: /home/topst/topst_sdk/.repo/repo/repo
+... New version is available at: /home/topst/topst-sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
@@ -435,13 +435,13 @@ Choose MACHINE
 select number(1-5) => 2
 machine(d3-g-topst-main) selected.
 You had no conf/local.conf file. This configuration file has therefore been
-created for you from /home/topst/topst_sdk/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
+created for you from /home/topst/topst-sdk/poky/meta-topst/template/d3-g-topst-main/local.conf.sample
 You may wish to edit it to, for example, select a different MACHINE (target
 hardware). See conf/local.conf for more information as common configuration
 options are commented.
 
 You had no conf/bblayers.conf file. This configuration file has therefore been
-created for you from /home/topst/topst_sdk/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
+created for you from /home/topst/topst-sdk/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
 To add additional metadata layers into your configuration please add entries
 to conf/bblayers.conf.
 
@@ -530,9 +530,9 @@ Complete to make fai file
 --storage_size : 17818182656
 --parttype : gpt
 --area_name : "SD Data"
---outfile : /home/topst/topst_sdk/.stitch_tOPE26E/output_d3g.fai
---gptfile : /home/topst/topst_sdk/.stitch_tOPE26E/output_d3g.gpt
---fplist : /home/topst/topst_sdk/.stitch_tOPE26E/partition.single.list
+--outfile : /home/topst/topst-sdk/.stitch_tOPE26E/output_d3g.fai
+--gptfile : /home/topst/topst-sdk/.stitch_tOPE26E/output_d3g.gpt
+--fplist : /home/topst/topst-sdk/.stitch_tOPE26E/partition.single.list
 --sector_size : 512
 --sparse_fill : 0
  
@@ -574,8 +574,7 @@ Complete to make fai file
 If you see the following log, it means the "output.fwdn.zip" file is created. 
 ```
 $ ls
-output.fwdn.zip  build                  easy-setup.sh       mktcimg             poky                   stitch-fai-ai.sh
-stitch-fai-d3.sh    tools
+build  easy-setup.sh  mktcimg  output_nd.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
 ```
 
 </br></br><br/><br/>
@@ -654,16 +653,16 @@ Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2)
 
 1. Unzip "output.fwdn.zip" 
     ```
-    $ cd ~/topst-sdk/ && \ 
-    $ mkdir images && \
-    $ mv ./output.fwdn.zip ./images && \
-    $ cd images && \
-    $ unzip output.fwdn.zip && \
+    $ cd ~/topst-sdk
+    $ mkdir images
+    $ mv ./output.fwdn.zip ./images
+    $ cd images
+    $ unzip output.fwdn.zip
     ```
 2. Copy "images" folder to Windows C drive.
     ```
-    $ cd .. && \
-    $ cp -r /images /mnt/c/ && \
+    $ cd ..
+    $ cp -r /images /mnt/c/
     ```
 
 <br/><br/><br/>
