@@ -103,7 +103,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 ```
-# run webcom.py
+# run webcam.py
 python3 webcam.py
 ```
 
@@ -187,7 +187,7 @@ You can test the Raspberry Pi v1 camera by following these steps:
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam.jpg" width="400"></p>
 <p align="center"><strong>Figure 4.4. Raspberry Pi v1 Camera </strong></p><br/>
 
-#### Step 1. Connect Raspbery Pi v1 camera to D3-G board MIPI CSI 1 as shown in Figure 4.5.
+#### Step 1. Connect Raspberry Pi v1 camera to D3-G board MIPI CSI 1 as shown in Figure 4.5.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 4.5 Connect Raspberry Pi v1 Camera to D3-G board</strong></p> <br/>
@@ -197,7 +197,7 @@ You can test the Raspberry Pi v1 camera by following these steps:
 $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
 ```
 
-This command captures video from the CSI-connected Raspberry Pii camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
+This command captures video from the CSI-connected Raspberry Pi camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
 Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
 
 <br/><br/><br/><br/>
@@ -239,7 +239,7 @@ To use an SD card with the D3-G:
 
 <br/>
 
-### Step 2. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
+### Step 2. Insert the microSD card into the SD card slot on the D3-G board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 5.2 Connect SD Card to D3-G board</strong></p> <br/>
 
@@ -316,7 +316,7 @@ $ sudo apt-get install pciutils
 
 #### Step 4. Mount the SATA HDD
 ```
-$ fdisk /dev/sdb1
+$ fdisk /dev/sda
 Welcome to fdisk (util-linux 2.37.4).
 Changes will remain in memory only, until you decide to write them.
 Be careful before using the write command.
@@ -341,11 +341,11 @@ Type the following keys in order inside the fdisk prompt:
 - w — Write the partition table and exit
 
 ```
-$ mkfs.ext4 /dev/sdb
+$ mkfs.ext4 /dev/sda1
 
 $ mkdir -p /mnt/sata
 
-$ mount /dev/sdb1 /mnt/sata
+$ mount /dev/sda1 /mnt/sata
 ```
 
 <br/>
@@ -835,7 +835,7 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to excute
+#### Step 3. How to execute
 To monitor the button input connected to GPIO88 on the D3-G board, run the following code:
 
 ```
@@ -910,7 +910,7 @@ This script configures GPIO88 as a digital input and continuously monitors its v
 When executed, pressing the button connected to GPIO88 prints a message indicating that the button has been pressed.
 
 To stop the script, press **[Ctrl+C]**.
-When the script is terminated, GPIO88 will be automatically unexported and cleand up.
+When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
 
 **Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G based on the 40-pin header pinout.
 Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
@@ -1006,7 +1006,7 @@ def unexport_gpio(pin: int):
         f.write(str(pin))
 def main():
     # initialize GPIO pins
-    export_gpio(TOUCH_SENSOR_PIN, "in")  # ouch sensor pin direction "in"
+    export_gpio(TOUCH_SENSOR_PIN, "in")  # touch sensor pin direction "in"
     print("gpio pins initialized.")
  
     try:
@@ -1153,15 +1153,15 @@ def main():
  
     try:
         while True:
-            # VIBRATION IR sensor value read
+            # VIBRATION sensor value read
             # If the sensor value is 0, it means an vibration is detected.
             # If the sensor value is 1, it means no vibration is detected.
             sensor_value = read_gpio_value(VIBRATION_SENSOR_PIN)
  
             if sensor_value == "0":  # vibration detected
                 print("vibration detected.")
-            else:    # vibration undetected
-                print("vibration undetected.")
+            else:    # vibration no detected
+                print("vibration no detected.")
  
             time.sleep(0.5)  # 500ms delay
 
@@ -1191,7 +1191,7 @@ vibration detected.
 ```
 When there is no vibration, the output will be:
 ```
-vibration undetected.
+vibration no detected.
 ```
 To stop the script, press **[Ctrl+C]**.
 Upon termination, GPIO88 is automatically unexported and cleaned up.
@@ -1305,8 +1305,8 @@ def main():
  
             if sensor_value == "0":  # obstacle detected
                 print("obstacle detected.")
-            else:    # obstacle undetected
-                print("obstacle undetected.")
+            else:    # obstacle no detected
+                print("obstacle no detected.")
  
             time.sleep(0.5)  # 500ms delay
 
@@ -1334,7 +1334,7 @@ obstacle detected.
 ```
 When no object is detected, it displays:
 ```
-obstacle undetected.
+obstacle no detected.
 ```
 To stop the script, press **[Ctrl+C]**.
 When the script is terminated, GPIO89 is automatically unexported and cleaned up.
@@ -1617,14 +1617,12 @@ def main():
     try:
         while True:
             # gas sensor value read
-            # If the sensor value is 0, it means an vibration is detected.
-            # If the sensor value is 1, it means no vibration is detected.
             sensor_value = read_gpio_value(GAS_SENSOR_PIN)
  
             if sensor_value == "0":  # gas detected
                 print("gas detected.")
-            else:    # gas undetected
-                print("gas undetected.")
+            else:    # gas no detected
+                print("gas no detected.")
  
             time.sleep(0.5)  # 500ms delay
 
@@ -1652,7 +1650,7 @@ gas detected.
 ```
 When no gas is detected, the terminal shows:
 ```
-gas undetected.
+gas no detected.
 ```
 To stop the script, press **[Ctrl+C]**.
 When the script is terminated, GPIO88 is automatically unexported and cleaned up.
@@ -1827,7 +1825,7 @@ On the D3-G, the LCD's SDA and SCL lines can be connected to GPIO pins configure
 - 1602A I2C LCD Module (x1)
 - Female to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+- USB to TTL Serial Cable (x1) 
 Make sure the LCD module has an I2C backpack
 
 #### Step 2. Example Circuit
@@ -1953,7 +1951,6 @@ The MAX7219 handles row and column scanning internally, allowing the microcontro
 - Male to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
 - USB to TTL Serial Cable (x1)
-Make sure the LCD module has an I2C backpack
 
 #### Step 2. Example Circuit
 - Dot Matrix
@@ -2416,7 +2413,7 @@ UNEXPORT_PATH = f"/sys/class/pwm/{PWM_CHIP}/unexport"
 PERIOD = 20_000_000  # 20ms (50Hz)
 
 def angle_to_duty(angle):
-    pulse_width = 1_000_000 + (angle / 180) * _000_000
+    pulse_width = 1_000_000 + (angle / 180) * 1_000_000
     return int(pulse_width)
 
 def pwm_setup():

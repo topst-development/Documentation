@@ -25,7 +25,7 @@ If your host OS is Ubuntu, proceed to Chapter 2.2.
 </br><br/>
 
 ### 2.1.1 Install WSL2 Ubuntu
-1. Excute Windows PowerShell with "**Run with administrator privileges**".
+1. Execute Windows PowerShell with "**Run with administrator privileges**".
 2. Enable the WSL2 System.
     ```
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -60,7 +60,7 @@ Refer to figure 2.1 to check the result (may vary depending on the user).
 
 ### 2.1.3 Install SSH and Samba
 
-After entering Ununtu, you can use additional utilities such as SSH and Samba for more convenient development environment. SSH and Samba allows you to execute commands on remote computers and copy files to other computers.
+After entering Ubuntu, you can use additional utilities such as SSH and Samba for more convenient development environment. SSH and Samba allows you to execute commands on remote computers and copy files to other computers.
  - The following steps require the Host PC to be connected to the network. Check your network condition by using the following commands.
   ```
   $ sudo apt-get update
@@ -468,7 +468,7 @@ Telechips common targets are:
     meta-toolchain-topst(Application Development Toolkit)
 
 
-You can also run generated TOSPT images on D3-G board
+You can also run generated TOPST images on D3-G board
 
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
@@ -490,10 +490,10 @@ This option combines the binaries into a single image for the D3-G platform imag
 
 The **output.fwdn.zip** file, which includes the **'output.fai' build image** and **FWDN tools**, is created in the following path:
 
--  ~/topst-sdk/
+-  ~/topst-sdk
 
 ```
-$ cd ~/topst-sdk/ && \ 
+$ cd ~/topst-sdk
 
 $ ./stitch-fai-d3-g.sh -f
 Filesystem too small for a journal
@@ -574,7 +574,7 @@ Complete to make fai file
 If you see the following log, it means the "output.fwdn.zip" file is created. 
 ```
 $ ls
-build  easy-setup.sh  mktcimg  output_nd.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
+build  easy-setup.sh  mktcimg  output.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
 ```
 
 </br></br><br/><br/>
@@ -669,7 +669,7 @@ Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2)
 
 ## 4.4 FWDN in Windows Environment
 ---
-1. Excute Powershell and go to "C:\images\".
+1. Execute Powershell and go to "C:\images\".
 ```
 $ cd C:\images 
 ```
@@ -783,7 +783,7 @@ To download the D3-G image in Linux, execute the following command: "./fwdn.sh".
 $ ./fwdn.sh
 ```
 
-You’re ready to boot the D3-G. Refer to Chapter 4 to start communicating with the device.
+You’re ready to boot the D3-G. Refer to Chapter 5 to start communicating with the device.
 
 
 <br/><br/><br/><br/>

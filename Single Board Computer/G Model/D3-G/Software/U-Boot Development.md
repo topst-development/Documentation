@@ -37,9 +37,9 @@ In recovery scenarios, it allows the system to boot with initramfs instead of th
 
 - Copy the following two files to a USB memory stick
 
-  -  Image-initramts--5.10.205-r0-d3-g-topst-main-{build_date}.bin
+  -  Image-initramfs--5.10.205-r0-d3-g-topst-main-{build_date}.bin
 
-  -  tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_data}.dtb
+  -  tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_date}.dtb
 
 
 ## 3.2 Boot Steps in U-Boot Mode
@@ -68,7 +68,7 @@ scanning bus dwc3 for devices... 2 USB Device(s) found
             Capacity: 29340.0 MB = 28.6 GB (60088320 x 512)
 => ext4load usb 0:1 0x20000000 /Image-initramts--5.10.205-r0-d3-g-topst-main-{build_date}.bin
 21069832 bytes read in 678 ms (29.6 MiB/s)
-=> ext4load usb 0:1 0x30000000 /tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_data}.dtb
+=> ext4load usb 0:1 0x30000000 /tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_date}.dtb
 97110 bytes read in 5 ms (18.5 MiB/s)
 => booti 0x20000000 - 0x30000000
 ```
@@ -128,7 +128,7 @@ $ mount /dev/mmcblk0p3 /mnt/part3
 The root password is stored in hashed form in the /etc/shadow file. To clear the password:
 
 ```
-$ sed -i 's/###root passwd signagure###//g' /mnt/part4/etc/shadow
+$ sed -i 's/###root passwd signature###//g' /mnt/part3/etc/shadow
 ```
 
 ## 4.3 Finalize and Reboot
