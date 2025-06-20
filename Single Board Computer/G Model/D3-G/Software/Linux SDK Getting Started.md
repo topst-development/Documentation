@@ -276,11 +276,11 @@ Figure 3.1 shows composition of D3-G SDK.
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-ai-g.sh</td>
-      <td>Script for making AI-G fai images (minimal + Sample Application)</td>
+      <td>Script for creating AI-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-d3-g.sh</td>
-      <td>Script for making D3-G fai images (minimal + Sample Application)</td>
+      <td>Script for creating D3-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">mktcimg</td>
@@ -296,19 +296,19 @@ Figure 3.1 shows composition of D3-G SDK.
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-openembedded</td>
-      <td>Support OE-Core Layer</td>
+      <td>Layer that supports OE-Core</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-arm</td>
-      <td>Support ARM toolchain Layer</td>
+      <td>Layer that supports ARM toolchain</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst-bsp</td>
-      <td>Support TOPST BSP Layer</td>
+      <td>Layer that supports TOPST BSP</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-gplv2</td>
-      <td>Support packages that avoid GPLv3 license</td>
+      <td>Layer that includes packages avoiding the GPLv3 license</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst</td>
