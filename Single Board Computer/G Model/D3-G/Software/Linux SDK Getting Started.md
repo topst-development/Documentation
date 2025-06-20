@@ -798,8 +798,7 @@ This chapter explains how to connect the host PC to the D3-G board through UART 
 ---
 Follow these steps and verify that the firmware download is successfully completed by using the UART connection. 
 
-1. Install the serial port driver (CP210x Universal Windows Driver) and PL2303_prolific driver in the Windows environment. (CP210x Universal Windows Driver: Download link, PL2303_prolific Driver: Download link) 
-
+1. Install the serial port driver (for example, CP210x Universal Windows Driver) and PL2303_prolific driver in the Windows environment. 
 2. Install a terminal emulator such as Tera Term or PuTTY. 
 3. Connect the Host PC and the A72 UART Pin on the D3-G board. Use a USB-to-TTL cable. 
 4. Connect the black cable to the GND pin. 
