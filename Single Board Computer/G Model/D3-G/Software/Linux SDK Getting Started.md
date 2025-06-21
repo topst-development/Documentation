@@ -251,7 +251,7 @@ Figure 3.1 shows the task process of Yocto Project. You can download source from
 ## 3.4 Composition of D3-G SDK
 ---
 The following are the components of the Yocto Project we have configured.
-Figure 3.1 shows composition of D3-G SDK.
+Figure 3.1 shows composition of the D3-G SDK.
 
 
 
@@ -275,11 +275,11 @@ Figure 3.1 shows composition of D3-G SDK.
       <td>Python script to automatically download and build SDK</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-ai-g.sh</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-ai.sh</td>
       <td>Script for creating AI-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
-      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-d3-g.sh</td>
+      <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-d3.sh</td>
       <td>Script for creating D3-G fai images (minimal + Sample Application)</td>
     </tr>
     <tr>
@@ -495,7 +495,7 @@ The **output.fwdn.zip** file, which includes the **'output.fai' build image** an
 ```
 $ cd ~/topst-sdk
 
-$ ./stitch-fai-d3-g.sh -f
+$ ./stitch-fai-d3.sh -f
 Filesystem too small for a journal
 [mktcimg] v1.2.1 - Nov 15 2021 19:33:18
 location : bl3_ca72_a
@@ -800,9 +800,14 @@ Follow these steps and verify that the firmware download is successfully complet
 
 1. Install the serial port driver (for example, CP210x Universal Windows Driver) and PL2303_prolific driver in the Windows environment. 
 2. Install a terminal emulator such as Tera Term or PuTTY. 
-3. Connect the Host PC and the A72 UART Pin on the D3-G board. Use a USB-to-TTL cable. 
+3. Connect the Host PC and UART Pin on the D3-G board. Use a USB-to-TTL cable. 
 4. Connect the black cable to the GND pin. 
-5. Connect the RXD cable to the TX pin of the A72 UART pins and the TXD cable to the RX pin of the UART pins. 
+5. Connect the white cable (RXD) to TX pin of the UART pins and the green cable (TXD) to RX pin of UART pins.
+6. Run the terminal emulator application.
+7. Open Device Manager on your PC and check the port number that is being used for UART.
+8. Enter the Verified Port number in Device Manager into Serial line field in the terminal emulator. Set Speed (bsp) to 115200 and Flow control to None.
+9. Connect the power cable. Then, the D3-G boots in the default eMMC boot mode.
+
 
  
 <p align="center">
