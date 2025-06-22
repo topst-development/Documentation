@@ -66,7 +66,7 @@ scanning bus dwc3 for devices... 2 USB Device(s) found
   Device 0: Vendor: SanDisk Rev: 1.00 Prod: Cruzer Blade
             Type: Removable Hard Disk
             Capacity: 29340.0 MB = 28.6 GB (60088320 x 512)
-=> ext4load usb 0:1 0x20000000 /Image-initramts--5.10.205-r0-d3-g-topst-main-{build_date}.bin
+=> ext4load usb 0:1 0x20000000 /Image-initramfs--5.10.205-r0-d3-g-topst-main-{build_date}.bin
 21069832 bytes read in 678 ms (29.6 MiB/s)
 => ext4load usb 0:1 0x30000000 /tcc8050-topst-d3-g--5.10.205-r0-d3-g-topst-main-{build_date}.dtb
 97110 bytes read in 5 ms (18.5 MiB/s)
