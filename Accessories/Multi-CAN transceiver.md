@@ -7,7 +7,7 @@ This compact and robust CAN transceiver board integrates three independent CAN c
 
 **Note:** Component availability and configurations are provided on a made-to-order basis depending on specific project requirements.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/accessary_2nd/Assets/accessories/CAN_transceiver_resize.png" width="360"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/accessories/CAN_transceiver_resize.png" width="350"></p>
 <p align="center"><strong>Figure 1. Multi-CAN Transceiver</strong></p><br/>
 
 
