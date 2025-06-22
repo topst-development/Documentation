@@ -489,7 +489,7 @@ $ bitbake telechips-topst-image
 ---
 This option combines the binaries into a single image for the D3-G platform image.
 
-The **output.fwdn.zip** file, which includes the **'output.fai' build image** and **FWDN tools**, is created in the following path:
+The **output_d3g.fwdn.zip** file, which includes the **'output_d3g.fai' build image** and **FWDN tools**, is created in the following path:
 
 -  ~/topst-sdk
 
@@ -572,10 +572,10 @@ Complete to make fai file
 
 ```
 
-If you see the following log, it means the "output.fwdn.zip" file is created. 
+If you see the following log, it means the "output_d3g.fwdn.zip" file is created. 
 ```
 $ ls
-build  easy-setup.sh  mktcimg  output.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
+build  easy-setup.sh  mktcimg  output_d3g.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
 ```
 
 </br></br><br/><br/>
@@ -652,13 +652,13 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2) environment to the Windows environment.
 
 
-1. Unzip "output.fwdn.zip" 
+1. Unzip "output_d3g.fwdn.zip" 
     ```
     $ cd ~/topst-sdk
     $ mkdir images
-    $ mv ./output.fwdn.zip ./images
+    $ mv ./output_d3g.fwdn.zip ./images
     $ cd images
-    $ unzip output.fwdn.zip
+    $ unzip output_d3g.fwdn.zip
     ```
 2. Copy "images" folder to Windows C drive.
     ```
@@ -762,11 +762,11 @@ C:\images>fwdn.exe -w boot-firmware\boot.single.json
 [main:142] Complete FWDN
 [FWDNLogger::PrintCurTime:111] 24/04/25-09:57:53
 100% [||||||||||||||||||||||||||||||] 859264/859264
-C:\images>fwdn.exe -w "output.fai" --storage emmc --area user
+C:\images>fwdn.exe -w "output_d3g.fai" --storage emmc --area user
 [main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
 [FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
 [main:117] Start write command
-[FWDN_V8::GetFileAndWriteCommand:748] output.fai
+[FWDN_V8::GetFileAndWriteCommand:748] output_d3g.fai
 [main:125] Complete write command
 [main:142] Complete FWDN
 [FWDNLogger::PrintCurTime:111] 24/04/25-10:05:21
