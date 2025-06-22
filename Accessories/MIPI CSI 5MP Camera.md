@@ -6,7 +6,7 @@ This compact camera module integrates a 5 MP OV5645 image sensor with high-quali
 
 **Note:** Component availability and configurations are provided on a made-to-order basis depending on specific project requirements.
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/accessory_4rd/Assets/accessories/Tsolution_5mp_camera_crop.png" width="300"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/accessories/Tsolution_5mp_camera_crop.png" width="300"></p>
 <p align="center"><strong>Figure 1. MIPI CSI 5 MP Camera</strong></p><br/>
 
 ## Key Features
