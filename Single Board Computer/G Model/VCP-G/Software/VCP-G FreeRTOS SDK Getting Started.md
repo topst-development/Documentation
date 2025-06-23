@@ -143,7 +143,7 @@ Follow these steps to clone the VCP-G source code:
     <p align="center"><strong>Figure 4.1 Navigate to Desired Directory</strong></p>
 3. **Clone the Repository:** Use the following command to clone the VCP-G source code from the provided git address.
     ```
-    git clone git@gitlab.com:topst-private-release/vcp.git topst-vcp
+    git clone https://github.com/topst-development/FreeRTOS-VCP.git
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Clone%20Repository.png"></p>
     <p align="center"><strong>Figure 4.2 Clone Repository</strong></p>
@@ -237,18 +237,19 @@ Before beginning the download process, ensure that the VCP-G is in a stable posi
 
 </br></br></br>
 
-## 6.2 Connect Hardware to Host PC
+## 6.2 Connect VCP-G to Host PC
 ---
 If you use Ubuntu host, proceed directly to step 3.  
 1. **Download usbipd-win:** usbipd-win project is required to use USB in WSL2.   
-    Download usbipd-win from https://learn.microsoft.com/ko-kr/windows/wsl/connect-usb#attach-a-usb-device.
-2. **Run PowerShell and attach the VCP-G (recognized as a COM port in Windows) to WSL2:**   
-    Execute the following commands in Windows PowerShell (not Linux).
+    Download usbipd-win from https://learn.microsoft.com/ko-kr/windows/wsl/connect-usb#attach-a-usb-device. Please download **version 5.10 or later** of **usbipd**.
+2. **Run PowerShell as administrator and attach the VCP-G (recognized as a COM port in Windows) to WSL2:**   
+    Execute the following commands in Windows PowerShell as administrator (not Linux).
     ```
     usbipd list
     ```
+    Check the item of the newly connected usb in the list, , and check the busid.
     ```
-    usbipd bind --busid 4-X
+    usbipd bind --busid <busid>
     ```
     ```
     usbipd attach --wsl --busid <busid>

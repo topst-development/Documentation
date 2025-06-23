@@ -32,9 +32,10 @@ Follow these steps based on your operating system to install the Arduino IDE:
     1. Open the .dmg file
     2. Drag the Arduino application to your Applications folder
 - Linux:
-    1. unpack the .tar.xz file.
-    2. Open a terminal in the extracted directory.
-    3. Run ./install.sh to install.
+    1. Find the downloaded AppImage file in your file manager.
+    2. Make the AppImage file executable:
+        - Right-click the file -> Choose Properties -> Select the Permissions -> Tick the Allow executing file as program box
+    3. Double-click the AppImage file to launch Arduino IDE.
 
 **Step 3: Adding the VCP-G**  
 To program the VCP-G, you need to add the VCP-G .json file to the Arduino IDE Through the Board Manager.

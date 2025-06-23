@@ -34,6 +34,7 @@ This example program demonstrates how the VCP-G board controls four LEDs on the 
 - VCP-G board (x1)
 - Breadboard (x1)
 - LED (x4)
+- 220Ω resistor (x4)
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1) 
 - Male to male jumper wire (x9)
@@ -41,16 +42,16 @@ This example program demonstrates how the VCP-G board controls four LEDs on the 
 
 ### 2.1.2 Circuit
 - LED01
-    - (+) pin is connected to the 5V power rail on the breadboard, which is supplied by the VCP-G board.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor, which is supplied by the VCP-G board.
     - (-) pin is connected to pin 47 on the VCP-G board.
 - LED02
-    - (+) pin is connected to the 5V power rail on the breadboard.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor.
     - (-) pin is connected to pin 17 on the VCP-G board.
 - LED03
-    - (+) pin is connected to the 5V power rail on the breadboard.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor.
     - (-) pin is connected to pin 50 on the VCP-G board.
 - LED04
-    - (+) pin is connected to the 5V power rail on the breadboard.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor.
     - (-) pin is connected to pin 48 on the VCP-G board.  
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp4LED%20Circuit%20Schematic.png"></p>
@@ -157,6 +158,7 @@ This example program demonstrates how the VCP-G board controls four LEDs and a b
 - Breadboard (x1)
 - LED (x4)
 - Button switch (sensor) (x1)
+- 220Ω resistor (x4)
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to male jumper wire (x12)
@@ -164,16 +166,16 @@ This example program demonstrates how the VCP-G board controls four LEDs and a b
 
 ### 2.2.2 Circuit
 1.	LED01
-    - (+) pin is connected to the 5V power rail on the breadboard, which is supplied by the VCP-G board.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor, which is supplied by the VCP-G board.
     - (-) pin is connected to pin 47 on the VCP-G board.
 2.	LED02
-    - (+) pin is connected to the 5V power rail on the breadboard.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor.
     - (-) pin is connected to pin 17 on the VCP-G board.
 3.	LED03
-    - (+) pin is connected to the 5V power rail on the breadboard.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor.
     - (-) pin is connected to pin 50 on the VCP-G board.
 4.	LED04
-    - (+) pin is connected to the 5V power rail on the breadboard.
+    - (+) pin is connected to the 5V power rail on the breadboard with a 220Ω resistor.
     - (-) pin is connected to pin 48 on the VCP-G board.
 5.	Button switch
     - One leg of the button switch is connected to pin 45 on the VCP-G board.
