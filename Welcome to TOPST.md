@@ -21,8 +21,8 @@ The TOPST Documentation is the place for tutorials and guides for supporting TOP
 ## Problems encountered
 
 If you have any questions or issues while using this documentation, feel free to submit your inquiry on our community site or github repository. We will get back to you as soon as possible.
-- TOPST GitHub : [Github](https://github.com/topst-development)
-- TOPST Community : [Community](https://community.topst.ai/)
+- TOPST GitHub : [https://github.com/topst-development](https://github.com/topst-development)
+- TOPST Community : [https://community.topst.ai/](https://community.topst.ai/)
 
 <br/><br/><br/>
 
@@ -30,8 +30,8 @@ If you have any questions or issues while using this documentation, feel free to
 
   •	TOPST Community : https://community.topst.ai/ - Main technical support channel, both English and Korean are supported
 
-  •	TOPST official e-mail : topst@topst.ai 
-    – If interested in business partnerships or other inquiries, please email us
+  •	TOPST official E-mail : topst@topst.ai 
+    – If interested in business partnerships or other inquiries, please send mail to us
 
 <br/><br/><br/>
 
