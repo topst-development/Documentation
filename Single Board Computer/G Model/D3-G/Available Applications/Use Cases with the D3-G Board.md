@@ -24,7 +24,7 @@ This document includes the following information:
 # 2. Input Device
 ---
 The D3-G supports two USB ports for connecting input devices.
-It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to connect a mouse or keyboard to directly control the D3-G. 
+It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to connect a mouse or keyboard to control the D3-G directly. 
 
 **Note**: The USB Type-C port on the D3-G is reserved for firmware downloads and cannot be used to connect input devices.
 
@@ -34,8 +34,8 @@ It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to
 
 # 3. Video Output
 ---
-The D3-G supports FHD monitors only through its DisplayPort (DP) output.
-It also supports multi-display output using a daisy chain setup, allowing a connection of up to two FHD monitors and one HD monitor simultaneously.
+The D3-G supports FHD monitors through its DisplayPort (DP) output only.
+It also supports multi-display output using a daisy chain setup, allowing  connection of up to two FHD monitors and one HD monitor simultaneously.
 
 **Note**: To use HDMI, a separate active converter adapter is required.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
@@ -66,17 +66,17 @@ You can test the webcam by following these steps:
 
 #### Step 4. Check the available /dev/video devices.
 ```
-ls /dev/video*
+$ ls /dev/video*
 ```
 
 #### Step 5. Verify the video output using OpenCV (or vutils).
 ```
-touch webcam.py
-chmod a+x webcam.py
+$ touch webcam.py
+$ chmod a+x webcam.py
 ```
 ```
 # You can edit the script file using vim or nano editor
-# This is camera application python code using OpenCV
+# This is a Python camera application using OpenCV
 import cv2
 
 cap = cv2.VideoCapture(0)
@@ -103,8 +103,8 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 ```
-# run webcam.py
-python3 webcam.py
+# Run the script
+$ python3 webcam.py
 ```
 
 <br/><br/><br/>
@@ -117,7 +117,7 @@ It enables high-speed, low-power transmission of image data from the camera to t
 The D3-G features two MIPI CSI channels (ch0 and ch1), allowing you to attach camera modules that support Flat Flexible Cable (FFC) connections.
 Currently, the D3-G supports only the ArduCam (5 MP) and Raspberry Pi v1 Camera (5 MP) modules. 
 
-**Note** : Currently, the D3-G does not support simultaneous use of CSI channel 0 and CSI channel 1.
+**Note**: Currently, the D3-G does not support simultaneous use of CSI channel 0 and CSI channel 1.
 
 <br/><br/>
 
@@ -223,7 +223,7 @@ To connect a USB drive:
 
 ### Step 3. You can manually mount the USB drive using the following command:
    ```
-   sudo mount /dev/sda1 /mnt
+   $ sudo mount /dev/sda1 /mnt
    ```
 
 <br/><br/><br/>
@@ -236,25 +236,20 @@ To use an SD card with the D3-G:
 <br/>
 
 ### Step 1. Insert the microSD card into the SD card slot on the D3-G board.
-
-<br/>
-
-### Step 2. Insert the microSD card into the SD card slot on the D3-G board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
 <p align="center"><strong>Figure 5.2 Connect SD Card to D3-G board</strong></p> <br/>
 
-### Step 3. After it is inserted, the system typically recognizes the SD card as /dev/mmcblk1p1 or a similar device node.
+### Step 2. After it is inserted, the system typically recognizes the SD card as /dev/mmcblk1p1 or a similar device node.
   ```
-  $ls /dev/mmcblk*
+  $ ls /dev/mmcblk*
   ```
-
 <br/>
 
-### Step 4. To mount the SD card manually, use the following command:
+### Step 3. To mount the SD card manually, use the following command:
 ```
 $ sudo mount /dev/mmcblk1p1 /mnt 
 ```
-### Step 5. After mounting, you can access the SD card contents under the /mnt directory.
+### Step 4. After mounting, you can access the SD card contents under the /mnt directory.
 
 <br/><br/><br/>
 
@@ -275,8 +270,8 @@ Then, connect the HDD to the SATA module and ensure that the HDD is powered by a
 <p align="center"><strong>Figure 5.3 Connect D3-G board PCIe to SATA Module </strong></p><br/>
 
 #### Step 2. Boot the D3-G 
-After executing the boot, observe the boot log to verify that the PCIe device is recognized by the system.
-Look for messages such as telechips-pcie: Link up, which indicate that the PCIe link has been successfully established.
+After booting the D3-G, observe the boot log to verify that the PCIe device is recognized by the system.
+Look for messages such as **telechips-pcie: Link up**, which indicate that the PCIe link has been successfully established.
 
 ```
 Starting kernel ...
@@ -372,8 +367,7 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 
 ## 5.4 NVME M.2 SSD
 ---
-The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
-
+The D3-G supports direct connections of NVMe M.2 SSDs through its PCIe slot.
 <br/>
 
 #### Step 1. Connect the SSD
@@ -384,7 +378,7 @@ The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through
 
 #### Step 2. Boot the D3-G
 After executing the **reboot** command, observe the boot log to verify that the PCIe device is recognized by the system.
-Look for messages such as telechips-pcie: Link up, which indicate that the PCIe link has been successfully established.
+Look for messages such as **telechips-pcie: Link up**, which indicate that the PCIe link has been successfully established.
 
 ```
 $ reboot
@@ -556,7 +550,7 @@ You can share your PC's internet connection with the D3-G without using a router
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="600"></p>
 <p align="center"><strong>Figure 6.2 Select Properties</strong></p><br/>
  
-2. Select sharing tab.
+2. Select the sharing tab.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="400"></p>
 <p align="center"><strong>Figure 6.3 Select Sharing Tab</strong></p><br/>
@@ -643,10 +637,10 @@ The D3-G supports digital input and output (GPIO) through its 40-pin header, ena
 ### 7.1.1 LED
 ---
 One of the simplest and most common GPIO output examples is controlling an LED.  
-This section demonstrates how to connect and use from LED sensor using the D3-G.
+This section demonstrates how to connect and use a LED sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Breadboard (x1)
 - LED (x1)
 - Male to female jumper wire (x2)
@@ -767,12 +761,12 @@ def main():
         write_gpio_value(LED_PIN, 0)  # Turn off the LED
  
     except KeyboardInterrupt:
-        print("program interrupted by user.")
+        print("Program interrupted by user.")
   
     finally:
         unexport_gpio(LED_PIN) # unexport LED pin
         print("GPIO pins unexported.")
-        print("program terminated.")
+        print("Program terminated.")
 
 if __name__ == "__main__":
     main()
@@ -798,10 +792,10 @@ In either case, the pin will be properly released and cleaned up.
 ### 7.1.2 Button
 ---
 A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
-This section demonstrates how to connect and use from a basic button module using the D3-G.
+This section demonstrates how to connect and use a basic button module with the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Breadboard (x1)
 - Button (x1)
 - Male to female jumper wire (x2)
@@ -840,7 +834,7 @@ To monitor the button input connected to GPIO88 on the D3-G board, run the follo
 
 ```
 import os
-import time # GPIO pin numbers setting
+import time
 BUTTON_PIN = 88  # button sensor GPIO pin
  
 def export_gpio(pin: int, direction: str):
@@ -872,14 +866,11 @@ def unexport_gpio(pin: int):
         f.write(str(pin))
 def main():
     # initialize GPIO pins
-    export_gpio(BUTTON_PIN, "in")  # IR sensor pin direction "in"
+    export_gpio(BUTTON_PIN, "in")  
     print("gpio pins initialized.")
  
     try:
         while True:
-            # button sensor value read
-            # If the sensor value is 0, it means an button pressed.
-            # If the sensor value is 1, it means no button released.
             sensor_value = read_gpio_value(BUTTON_PIN)
  
             if sensor_value == "0":  
@@ -890,12 +881,12 @@ def main():
             time.sleep(0.5)  # 500ms delay
 
     except KeyboardInterrupt:
-        print("program interrupted by user.")
+        print("Program interrupted by user.")
  
     finally:
         unexport_gpio(BUTTON_PIN)  # unexport the GPIO pin
         print("GPIO pins unexported.")
-        print("program terminated.")
+        print("Program terminated.")
          
 if __name__ == "__main__":
     main()
@@ -923,7 +914,7 @@ A touch sensor can be used to detect human touch as a digital input signal throu
 This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Touch Sensor (x1)
 - Female to female jumper wire (x3)
 - DC 5V Power Adapter (x1)
@@ -1066,7 +1057,7 @@ A vibration sensor can be used to detect physical shocks or vibrations and outpu
 This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Vibration Detection Sensor (x1)
 - Female to female jumper wire (x4)
 - DC 5V Power Adapter (x1)
@@ -1115,8 +1106,6 @@ To monitor the vibration sensor connected to GPIO88 on the D3-G board, run the f
 ```
 import os
 import time
- 
-# GPIO pin numbers setting
 VIBRATION_SENSOR_PIN = 88  # VIBRATION_SENSOR sensor GPIO pin
  
 def export_gpio(pin: int, direction: str):
@@ -1153,9 +1142,6 @@ def main():
  
     try:
         while True:
-            # VIBRATION sensor value read
-            # If the sensor value is 0, it means an vibration is detected.
-            # If the sensor value is 1, it means no vibration is detected.
             sensor_value = read_gpio_value(VIBRATION_SENSOR_PIN)
  
             if sensor_value == "0":  # vibration detected
@@ -1166,12 +1152,12 @@ def main():
             time.sleep(0.5)  # 500ms delay
 
     except KeyboardInterrupt:
-        print("program interrupted by user.")
+        print("Program interrupted by user.")
  
     finally:
         unexport_gpio(VIBRATION_SENSOR_PIN)  # unexport the GPIO pin
         print("GPIO pins unexported.")
-        print("program terminated.")
+        print("Program terminated.")
          
 if __name__ == "__main__":
     main()
@@ -1206,7 +1192,7 @@ An infrared sensor can be used to detect nearby obstacles by sensing reflected i
 This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Breadboard (x1)
 - Infrared Sensor (x1)
 - Male to female jumper wire (x5)
@@ -1298,15 +1284,12 @@ def main():
  
     try:
         while True:
-            # IR sensor value read
-            # If the sensor value is 0, it means an obstacle is detected.
-            # If the sensor value is 1, it means no obstacle is detected.
             sensor_value = read_gpio_value(IR_SENSOR_PIN)
  
             if sensor_value == "0":  # obstacle detected
                 print("obstacle detected.")
-            else:    # obstacle no detected
-                print("obstacle no detected.")
+            else: 
+                print("No obstacle detected.")
  
             time.sleep(0.5)  # 500ms delay
 
@@ -1350,7 +1333,7 @@ A photoresistor can be used to detect ambient light levels and output a digital 
 This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Photoresistor module (SZH-SSBH-011) (x1)
 - LED (x1)
 - 220Ω resistor (x1)
@@ -1363,10 +1346,10 @@ This section demonstrates how to connect and read input from the SZH-SSBH-011 ph
 - Photoresistor (SZH-SSBH-011)
     - VCC pin of the Photoresistor is connected to the 3.3V pin on the D3-G board.
     - GND pin of the Photoresistor is connected to the GND on the D3-G board.
-    - DIN pin of the Photoresistor is connected to 89 pin on the D3-G board.
+    - DO pin of the Photoresistor is connected to pin 89 on the D3-G board.
 - LED
     - (+) pin of the LED is connected to the GND on the D3-G board.
-    - (-) pin of the LED is connected to 83 pin on the D3-G board.
+    - (-) pin of the LED is connected to pin 83 on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/circuit.png"></p>
 <p align="center"><strong>Figure 7.7 Photoresistor Experiment Circuit</strong></p>
@@ -1393,7 +1376,7 @@ The following table shows pin mapping.
           <td>GND</td>
       </tr>
       <tr>
-          <td colspan="3">OUT</td>
+          <td colspan="3">DO</td>
           <td>12</td>
           <td>89</td>
       </tr>
@@ -1428,8 +1411,6 @@ Run the following Python script to monitor brightness with the CDS sensor and co
 ```
 import os
 import time
-
-# GPIO pin numbers setting
 LED_PIN = 83           # LED GPIO pin
 CDS_SENSOR_PIN = 89    # szh-ssbh-011 CDS sensor GPIO pin
 
@@ -1469,9 +1450,6 @@ def main():
 
     try:
         while True:
-            # read the sensor value
-            # If the sensor value is 0, it means light is detected.
-            # If the sensor value is 1, it means no light is detected.
             sensor_value = read_gpio_value(CDS_SENSOR_PIN)
             print("sensor value: {}".format(sensor_value))
             if sensor_value == "0": # light detected
@@ -1527,7 +1505,7 @@ An air pollution detection sensor can be used to monitor the presence of harmful
 This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Air Pollution (Gas) Detection Sensor Module (x1)
 - Breadboard (x1)
 - Male to Female Jumper Wires (x3)
@@ -1538,7 +1516,7 @@ This section demonstrates how to connect and read input from an air pollution de
 - Air Pollution Detection Sensor
     - VCC pin of the Air Pollution Detection Sensor is connected to the 3.3V pin on the D3-G board.
     - GND pin of the Air Pollution Detection Sensor is connected to the GND on the D3-G board.
-    - DO pin of the Air Pollution Detection Sensor is connected to 88 pin on the D3-G board.
+    - DO pin of the Air Pollution Detection Sensor is connected to pin 88 on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/gas%20circuit.png"></p>
 <p align="center"><strong>Figure 7.8 Air Pollution Detection Sensor Experiment Circuit</strong></p>
@@ -1578,8 +1556,6 @@ Run the following Python script to monitor gas detection using the GPIO88 pin:
 ```
 import os
 import time
- 
-# GPIO pin numbers setting
 GAS_SENSOR_PIN = 88  # gas sensor GPIO pin
  
 def export_gpio(pin: int, direction: str):
@@ -1621,7 +1597,7 @@ def main():
  
             if sensor_value == "0":  # gas detected
                 print("gas detected.")
-            else:    # gas no detected
+            else:
                 print("gas no detected.")
  
             time.sleep(0.5)  # 500ms delay
@@ -1665,7 +1641,7 @@ An ultrasonic sensor can be used to measure the distance to nearby objects by em
 This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Ultrasonic Sensor (x1)
 - Female to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
@@ -1675,8 +1651,8 @@ This section demonstrates how to connect and read input from an ultrasonic senso
 - Ultrasonic Sensor
     - VCC pin of the Ultrasonic Sensor is connected to the 5V pin on the D3-G board.
     - GND pin of the Ultrasonic Sensor is connected to the GND on the D3-G board.
-    - TRIG pin of the Ultrasonic Sensor is connected to 82 pin on the D3-G board.
-    - ECHO pin of the Ultrasonic Sensor is connected to 88 pin on the D3-G board.
+    - TRIG pin of the Ultrasonic Sensor is connected to pin 82 on the D3-G board.
+    - ECHO pin of the Ultrasonic Sensor is connected to pin 88 on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"></p>
 <p align="center"><strong>Figure 7.9 Ultrasonic Sensor Experiment Circuit</strong></p>
@@ -1821,19 +1797,20 @@ The 1602A LCD is a character display module commonly used in embedded systems.
 On the D3-G, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - 1602A I2C LCD Module (x1)
 - Female to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1) 
+- USB to TTL Serial Cable (x1)  
+
 Make sure the LCD module has an I2C backpack
 
 #### Step 2. Example Circuit
 - I2C LCD Module
     - GND pin of the I2C LCD Module is connected to the GND pin on the D3-G board.
     - VCC pin of the I2C LCD Module is connected to the 5V on the D3-G board.
-    - SDA pin of the I2C LCD Module is connected to the 82 pin on the D3-G board.
-    - SCL pin of the I2C LCD Module is connected to the 81 pin on the D3-G board.
+    - SDA pin of the I2C LCD Module is connected to pin 82 on the D3-G board.
+    - SCL pin of the I2C LCD Module is connected to pin 81 pin on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/lcd_circuit.png"></p>
 <p align="center"><strong>Figure 7.10 D3-G I2C LCD Module Circuit Schematic  </strong></p>
@@ -1946,7 +1923,7 @@ Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicat
 The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK, and CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Dot Matrix (x1)
 - Male to Female Jumper Wires (x4)
 - DC 5V Power Adapter (x1)
@@ -1954,11 +1931,11 @@ The MAX7219 handles row and column scanning internally, allowing the microcontro
 
 #### Step 2. Example Circuit
 - Dot Matrix
-    - VCC pin of the Dot Matrix is connected to the 5V on the D3-G board.
-    - GND pin of the Dot Matrix is connected to the GND on the D3-G board.
-    - DIN pin of the Dot Matrix is connected to the 120 pin on the D3-G board.
-    - CS pin of the Dot Matrix is connected to the 119 pin on the D3-G board.
-    - CLK pin of the Dot Matrix is connected to the 118 pin on the D3-G board.
+    - VCC pin of the Dot Matrix is connected to the 5V pin on the D3-G board.
+    - GND pin of the Dot Matrix is connected to the GND pin on the D3-G board.
+    - DIN pin of the Dot Matrix is connected to the pin 120 on the D3-G board.
+    - CS pin of the Dot Matrix is connected to the pin 119 on the D3-G board.
+    - CLK pin of the Dot Matrix is connected to the pin 118 on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/dot%20circuit.png"></p>
 <p align="center"><strong>Figure 7.11 D3-G Dot Matrix Module Circuit Schematic  </strong></p>
@@ -2224,7 +2201,7 @@ Pulse Width Modulation (PWM) is used to control devices like LEDs, motors, and b
 This example demonstrates controlling an LED's brightness using PWM on the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - LED (x1)
 - Male to Female Jumper Wires (x2)
 - Breadboard
@@ -2233,8 +2210,8 @@ This example demonstrates controlling an LED's brightness using PWM on the D3-G.
 
 #### Step 2. Example Circuit
 - LED
-    - (+) pin of the LED is connected to the 89 on the D3-G board.
-    - (-) pin of the LED is connected to GND on the D3-G board.
+    - (+) pin of the LED is connected to pin 89 on the D3-G board.
+    - (-) pin of the LED is connected to the GND pin on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png"></p>
 <p align="center"><strong>Figure 7.12 D3-G LED Circuit Schematic  </strong></p>
@@ -2354,7 +2331,7 @@ A mini servo motor can be used to control precise angular movement based on a Pu
 This section demonstrates how to connect and control a mini servo motor using the D3-G.
 
 #### Step 1. Hardware Requirements
-- D3-G (x1)
+- D3-G board (x1)
 - Servo Motor (x1)
 - Male to Female Jumper Wires (x3)
 - DC 5V Power Adapter (x1)
@@ -2362,9 +2339,9 @@ This section demonstrates how to connect and control a mini servo motor using th
 
 #### Step 2. Example Circuit
 - Servo Motor
-    - VCC pin of the Servo Motor is connected to 5V on the D3-G board.
-    - GND pin of the Servo Motor is connected to GND on the D3-G board.
-    - SIG pin of the Servo Motor is connected to the 89 on the D3-G board.
+    - VCC pin of the Servo Motor is connected to the 5V on the D3-G board.
+    - GND pin of the Servo Motor is connected to the GND on the D3-G board.
+    - SIG pin of the Servo Motor is connected to pin 89 on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/motor_circuit.png"p>
 <p align="center"><strong>Figure 7.13 D3-G Servo Motor Circuit Schematic  </strong></p>
