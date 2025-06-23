@@ -2,9 +2,10 @@
 ---
 This document is a hardware user guide for the VCP-G based on the TCC7045 application processor. This document describes system installation, debugging, and detailed information on overall design and usage of the VCP-G.
 
-Table 1.1 describes the features of the TCC7045.
 
-<p align="center"><strong>Table 1.1 Features of TCC7045</strong></p>
+Table 1.1 describes the features of the VCP-G.
+
+<p align="center"><strong>Table 1.1 Features of VCP-G</strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -13,7 +14,7 @@ Table 1.1 describes the features of the TCC7045.
 	  </tr>
 	  <tr>
 	    <td colspan="3">Package</td>
-	    <td>Package	Pin to Pin Compatible FBGA-196pin (12BD)</td>
+	    <td>Package	Pin to Pin Compatible FBGA 196-pin (12BD)</td>
 	  </tr>
 	    <tr>
 	    <td colspan="3">CPU Frequency</td>
@@ -34,7 +35,7 @@ Table 1.1 describes the features of the TCC7045.
 	  </tr>
 	  <tr>
 	    <td colspan="2">DMA Channel</td>
-	    <td colspan="3">16-channel</td>
+	    <td colspan="3">16 channels</td>
 	  </tr>
 	  <tr>
 	    <td rowspan="13">Peripheral</td>
@@ -47,20 +48,20 @@ Table 1.1 describes the features of the TCC7045.
 	  </tr>
 	  <tr>
 	    <td colspan="2">Dedicated LIN / UART</td>
-	    <td>3-channel (Maximum 6-channel)</td>
+	    <td>3 channels (Maximum 6 channels)</td>
 	  </tr>
 	  <tr>
 	    <td colspan="2">Dedicated I2C</td>
-	    <td>3-channel (Maximum 6-channel)</td>
+	    <td>3 channels (Maximum 6 channels)</td>
 	  </tr>
 	  <tr>
 	  <tr>
 	    <td colspan="2">Dedicated GPSB (SPI)</td>
-	    <td>2-channel (Maximum 5-channel)</td>
+	    <td>2 channels (Maximum 5 channels)</td>
 	  </tr>
 	    <tr>
 	    <td colspan="2">MFIO (Allocated UART, I2C, GPSB)</td>
-	    <td>3-channel</td>
+	    <td>3 channels</td>
 	  </tr>
 	  <tr>
 	    <td rowspan="4">ADC</td> 
@@ -93,7 +94,7 @@ Table 1.1 describes the features of the TCC7045.
 	  </tr>
 	  <tr>
 	    <td colspan="3">Temperature</td>
-	    <td>-40 to 105℃</td>
+	    <td>-40 ℃ to 105 ℃</td>
 	  </tr>
 	</table>
 </div>
@@ -102,16 +103,12 @@ Table 1.1 describes the features of the TCC7045.
 
 ## 1.1 Terminology
 ---
-<p align="center"><strong>Table 1.2 Features of TCC7045</strong></p>
+<p align="center"><strong>Table 1.2 Features of VCP-G</strong></p>
 <div align="center">
 	<table>
 	  <tr>
 	    <td clospan="2"><strong>Terminology</strong></td>
 	    <td><strong>Definition</strong></td>
-	  </tr>
-	  <tr>
-	    <td clospan="2">ADC</td>
-	    <td>Analog to Digital Converter</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">ADC</td>
@@ -127,7 +124,7 @@ Table 1.1 describes the features of the TCC7045.
 	  </tr>
 	  <tr>
 	    <td clospan="2">MCU</td>
-	    <td>Micro-Controller Unit</td>
+	    <td>Micro-controller Unit</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">TOPST</td>
@@ -156,7 +153,8 @@ Figure 2.1 shows the system block diagram of VCP-G.
 ---
 The VCP-G can used for the following purposes:
   - System development
-  - Training  
+  - Training
+
 Table 3.1 describes the default configuration of the VCP-G.
 
 <p align="center"><strong>Table 3.1 Default Configuration of VCP-G </strong></p>
@@ -168,7 +166,7 @@ Table 3.1 describes the default configuration of the VCP-G.
 	  </tr>
 	  <tr>
 	    <td colspan="2">TOPST_VCP_V2.1.1</td>
-	    <td>MCU (TCC7045) board for TOPST</td>
+	    <td>MCU board for TOPST</td>
 	  </tr>
 	</table>
 </div>
@@ -177,12 +175,12 @@ Table 3.1 describes the default configuration of the VCP-G.
 
 ## 3.1 VCP-G
 ---
-Figure 3.1 shows the top view of VCP-G
+Figure 3.1 shows the top view of VCP-G.
 <p align="center"><img src= "https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/3.1%20TOPST%20VCP-G%20Board%20(Top%20View)%20.png"></p>
 <p align="center"><strong>Figure 3.1 VCP-G (Top View)</strong></p>
 
-Table 3.2 describes connectors of VCP-G (top view).
-<p align="center"><strong>Table 3.2 Description of VCP-G (Top View)</strong></p>
+Table 3.2 describes the connectors of VCP-G (top view).
+<p align="center"><strong>Table 3.2 Connectors of VCP-G (Top View)</strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -194,50 +192,50 @@ Table 3.2 describes connectors of VCP-G (top view).
 	  <tr>
 	    <td colspan="4">1</td>
 	    <td>J18D100</td>
-	    <td>36-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>36-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">2</td>
 	    <td>J5D100</td>
-	    <td>10-Pin Header Male</td>
+	    <td>10-pin Male Header</td>
 	    <td>Header for CAN</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">3</td>
 	    <td>J3D100</td>
-	    <td>6-Pin Header Male</td>
+	    <td>6-pin Male Header</td>
 	    <td>Header for SPI</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">4</td>
 	    <td>J8D104</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">5</td>
 	    <td>J8D102</td>
-	    <td>8-Pin Header Female</td>
+	    <td>8-pin Female Header</td>
 	    <td>Header for GPIO</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">6</td>
 	    <td>J10D100</td>
-	    <td>10-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>10-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">7</td>
 	    <td>J100</td>
-	    <td>10-Pin Header Male</td>
+	    <td>10-pin Male Header</td>
 	    <td>Header for JTAG</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">8</td>
 	    <td>SW100</td>
-	    <td>Tact Switch</td>
-	    <td>PORN: Initializes the system and the power management of TCC7045</td>
+	    <td>RESET Tact Switch</td>
+	    <td>GRESETn: Initializes the system and the power management of VCP-G</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">9</td>
@@ -249,7 +247,7 @@ Table 3.2 describes connectors of VCP-G (top view).
 	    <td colspan="4">10</td>
 	    <td>SW101</td>
 	    <td>Tact Switch</td>
-	    <td>FWDN: Enter the Firmware download mode of TCC7045</td>
+	    <td>FWDN: Enter the Firmware download mode of VCP-G</td>
 	  </tr>  
 	  <tr>
 	    <td colspan="4">11</td>
@@ -260,20 +258,20 @@ Table 3.2 describes connectors of VCP-G (top view).
 	  <tr>
 	    <td colspan="4">12</td>
 	    <td>J8D100</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for Power & Reset</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for Power and Reset</td>
 	  </tr>  
 	  <tr>
 	    <td colspan="4">13</td>
 	    <td>J8D101</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>  
 	  <tr>
 	    <td colspan="4">14</td>
 	    <td>J8D103</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>    
 	</table>
 </div>
@@ -292,16 +290,16 @@ Figure 3.2 shows the bottom view of the VCP-G.
 The information on the Quad SPI flash memory is as follows:
   - Density : 64 Mb  
   
-**Note:** SNOR is not mounted on the VCP-G as default.
+**Note:** SNOR is not mounted on the VCP-G by default.
 
 </br></br></br>
 
-## 4.2 Power In Connector (J101)
+## 4.2 Power-in Connector (J101)
 ---
 DC 12V is supplied to the VCP-G through the DC jack of J101 from a 12V adaptor.  
 Figure 4.1 shows the location of J101.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.1%20Power%20In%20Connector%20(J101).png"></p>
-<p align="center"><strong>Figure 4.1 Power In Connector (J101)</strong><p>
+<p align="center"><strong>Figure 4.1 Power-in Connector (J101)</strong><p>
 
 </br></br></br>
 
@@ -310,7 +308,7 @@ Figure 4.1 shows the location of J101.
 A JTAG emulator can be connected to the VCP-G through J100 for debugging. Figure 4.2 shows the location of J100.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.2%20Connector%20for%20JTAG%20(J100).png"></p>
 <p align="center"><strong>Figure 4.2 Connector for JTAG (J100)</strong><p>
-Basically, JTAG is disabled. To enable JTAG, you must change the connections of R178 and R179. If TRSRn is set to high by R178, the MCU enters JTAG mode.
+JTAG is disabled by default. To enable JTAG, you must change the connections of R178 and R179. If TRSRn is set to high by R178, the MCU enters JTAG mode.
 
 Table 4.1 describes the pins of J100.
 <p align="center"><strong>Table 4.1 J100 Pin Description</strong></p>
@@ -399,7 +397,7 @@ Table 4.2 describes the setting of JTAG Disable/Enable.
 	    <th><strong>R179</strong></th>
 	  </tr>
 	  <tr>
-	    <td colspan="4">Jtag Disable (Default)</td>
+	    <td colspan="4">JTAG Disable (Default)</td>
 	    <td>Low (1)</td>
 	    <td>N.C</td>
 	    <td>1K</td>
@@ -418,11 +416,11 @@ Table 4.2 describes the setting of JTAG Disable/Enable.
 ## 4.4 FWDN Switch (SW101)
 ---
 The VCP-G has one pin for boot configuration using Boot Mode (BM) and supports 2 modes: UART FWDN mode and normal mode.   
-Figure 4.3 shows the location of FWDN tact switch (SW101) and is used to select the boot modes of the VCP-G.
+Figure 4.3 shows the location of FWDN tact switch (SW101), which is used to select the boot mode of the VCP-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.3%20FWDN%20Tact%20Switch%20(SW101).png"></p>
 <p align="center"><strong>Figure 4.3 FWDN Tact Switch (SW101)</strong><p>
 
-Table 4.3 describes the boot mode selection using the FWDN tact switch (SW101).
+Table 4.3 describes how to use the FWDN tact switch (SW101) to select the boot mode.
 <p align="center"><strong>Table 4.3 Description of Tact Switch (SW101) for Boot Mode</strong></p>
 <div align="center">
 	<table>
@@ -446,37 +444,37 @@ Table 4.3 describes the boot mode selection using the FWDN tact switch (SW101).
 </br></br>
 
 ### 4.4.1 FWDN Mode Method
-There are two methods to enter FWDN mode.
+There are two methods to enter FWDN mode as follows.
 
 #### 4.4.1.1 Method 1
 While pressing the FWDN switch (SW101), connect the 12V power supply to turn on the VCP-G board.  
-The FWDN red indicator  turns on when power is applied while the FWDN switch is pressed. After releasing FWDN switch (SW101), the MCU enters FWDN mode.  
+The FWDN red indicator turns on when power is applied while the FWDN switch is pressed. After releasing the FWDN switch (SW101), the MCU enters FWDN mode.  
 Figure 4.4 shows how to enter FWDN mode by using method 1.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.4%20Entering%20FWDN%20Mode%20by%20Using%20Method%201.png"></p>
-<p align="center"><strong>Figure 4.4 Entering FWDN Mode by Using Method 1</strong><p>
+<p align="center"><strong>Figure 4.4 Enter FWDN Mode by using Method 1</strong><p>
 
 #### 4.4.1.2 Method 2
-While connecting the 12V power supply, press the FWDN switch (SW101) and then press the RESET switch (SW100).  
-The FWDN red indicator turns on when the power is applied while the FWDN switch is pressed. The 3.3V green indicator turns off while the RESET switch is pressed. After releasing the FWDN switch (SW101), the MCU enters FWDN mode.  
+While the VCP-G board is connected to the 12V power supply, press the FWDN switch (SW101) and then press the RESET tact switch (SW100).  
+The FWDN red indicator turns on when the power is applied while the FWDN switch is pressed. The 3.3V green indicator turns off while the RESET tact switch is pressed. After releasing the FWDN switch (SW101), the MCU enters FWDN mode.  
 Figure 4.5 shows the FWDN mode by using method 2.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.5%20Entering%20FWDN%20Mode%20by%20Using%20Method%202.png"></p>
-<p align="center"><strong>Figure 4.5 Entering FWDN Mode by Using Method 2</strong><p>
+<p align="center"><strong>Figure 4.5 Enter FWDN Mode by using Method 2</strong><p>
 
 </br></br></br>
 
-## 4.5 RESET Switch (SW100)
+## 4.5 RESET Tact Switch (SW100)
 ---
-The VCP-G has one RESET switch for power of RESET using PORN pin.  
+The VCP-G has one RESET switch for power of RESET using GRESETn pin.  
 Figure 4.6 shows the RESET tact switch (SW100).
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.6%20RESET%20Tact%20Switch%20(SW100).png"></p>
 <p align="center"><strong>Figure 4.6 RESET Tact Switch (SW100)</strong><p>
 </br></br>
 
-### 4.5.1 4.5.1	RESET Tact Switch (SW100) Function
-SW100 is a tact switch to reset the power block and system block in TCC7045.  
+### 4.5.1 RESET Tact Switch (SW100) Function
+SW100 is a tact switch to reset the power block and system block in VCP-G.  
 The function of this button is as follows:
-  - Pressing the tack switch (SW100) while the power is on forces the power block to reset and the system of the TCC7045.
+  - Pressing the RESET tack switch (SW100) while the power is on forces the power block and the system of the VCP-G to reset.
 
 **Important:** Be careful when pressing the tack switch as the power suddenly turns off and data may be corrupted.
 
@@ -484,20 +482,21 @@ The function of this button is as follows:
 
 ## 4.6 Connector for Debugging and FWDN (JC100)
 ---
-The JC100 is a standard USB Type-C connector. On the VCP-G, JC100 is used for debugging or FWDN via UART.  
+The JC100 is a standard USB Type-C connector. On the VCP-G, JC100 is used for debugging or FWDN through UART.  
 Figure 4.7 shows the location of JC100.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.7%20USB%20Type-C%20Connector%20(JC100).png"></p>
 <p align="center"><strong>Figure 4.7 USB Type-C Connector (JC100)</strong><p>
 
-You can perform FWDN or check debugging message of the TCC7045 through JC100.
+You can perform FWDN or check debugging message of the VCP-G through JC100.
 JC100 on the VCP-G includes a built-in USB-to-UART bridge controller, so you can directly connect JC100 to PC by using the USB Type-C cable.
 
 </br></br></br>
 
-## 4.7 Pin Headers for GPIO, ADC, Power, CAN, SPI
+## 4.7 Pin Headers for GPIO, ADC, Power, CAN, and SPI
 ---
-The VCP-G have nine 2.54mm pin headers for power, GPIO, ADC, CAN, and SPI to connect others such as sensor or sub-board.  
-Table 4.4 describes purpose of nine pin headers on the VCP-G.
+The VCP-G has nine 2.54 mm pin headers for power, GPIO, ADC, CAN, and SPI to connect to other peripherals such as sensors or sub-boards.  
+
+Table 4.4 describes the purpose of the nine pin headers on the VCP-G.
 <p align="center"><strong>Table 4.4 Pin Headers on VCP-G </strong></p>
 <div align="center">
 	<table>
@@ -510,56 +509,56 @@ Table 4.4 describes purpose of nine pin headers on the VCP-G.
 	  <tr>
 	    <td colspan="4">1</td>
 	    <td>J18D100</td>
-	    <td>36-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>36-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">2</td>
 	    <td>J5D100</td>
-	    <td>10-Pin Header Male</td>
+	    <td>10-pin Male Header</td>
 	    <td>Header for CAN</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">3</td>
 	    <td>J3D100</td>
-	    <td>6-Pin Header Male</td>
+	    <td>6-pin Male Header</td>
 	    <td>Header for SPI</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">4</td>
 	    <td>J8D104</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">5</td>
 	    <td>J8D102</td>
-	    <td>8-Pin Header Female</td>
+	    <td>8-pin Female Header</td>
 	    <td>Header for GPIO</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">6</td>
 	    <td>J10D100</td>
-	    <td>10-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>10-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">7</td>
 	    <td>J8D100</td>
-	    <td>8-Pin Header FeMale</td>
-	    <td>Header for Power & Reset</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for Power and Reset</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">8</td>
 	    <td>J8D101</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">9</td>
 	    <td>J8D103</td>
-	    <td>8-Pin Header Female</td>
-	    <td>Header for GPIO & ADC</td>
+	    <td>8-pin Female Header</td>
+	    <td>Header for GPIO and ADC</td>
 	  </tr>
 	</table>
 </div>
@@ -1464,7 +1463,7 @@ Table 4.13 shows the pin description of J5D100.
 
 Figure 4.9 shows the total pin assignment of ten pin headers on the VCP-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.9%20Total%20Pin%20Assignment%20of%20Pin%20Headers%20on%20TOPST%20VCP-G%20Board.png"></p>
-<p align="center"><strong>Figure 4.9 Total Pin Assignment of Pin Headers on  VCP-G </strong><p>
+<p align="center"><strong>Figure 4.9 Total Pin Assignment of Pin Headers on VCP-G </strong><p>
 
 # References
   - Contact TOPST for more details: topst@topst.ai
