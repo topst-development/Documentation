@@ -12,7 +12,7 @@ This document includes the following information:
 - Storage Connection
   - SD Card
   - SATA HDD
-  - NVME M.2 SSD
+  - NVMe M.2 SSD
   - USB Storage
 - Ethernet Connection
 - 40-pin GPIO Header
@@ -365,7 +365,7 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 
 <br/><br/><br/>
 
-## 5.4 NVME M.2 SSD
+## 5.4 NVMe M.2 SSD
 ---
 The D3-G supports direct connections of NVMe M.2 SSDs through its PCIe slot.
 <br/>
@@ -374,7 +374,7 @@ The D3-G supports direct connections of NVMe M.2 SSDs through its PCIe slot.
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G’s PCIe slot. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="400"></p>
-<p align="center"><strong>Figure 5.4 Connect NVME M.2 SSD to D3-G board</strong></p><br/>
+<p align="center"><strong>Figure 5.4 Connect NVMe M.2 SSD to D3-G board</strong></p><br/>
 
 #### Step 2. Boot the D3-G
 After executing the **reboot** command, observe the boot log to verify that the PCIe device is recognized by the system.
