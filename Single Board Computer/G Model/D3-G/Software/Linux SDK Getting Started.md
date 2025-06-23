@@ -255,7 +255,7 @@ Figure 3.1 shows composition of the D3-G SDK.
 
 
 
-**Table 3.1 Composition of TOPST SDK**
+**Table 3.1 Composition of D3-G SDK**
 <table border="1" cellspacing="0" cellpadding="5">
   <colgroup>
     <col style="width: 10%">
@@ -469,7 +469,7 @@ Telechips common targets are:
     meta-toolchain-topst(Application Development Toolkit)
 
 
-You can also run generated TOPST images on TOPST board
+You can also run generated TOPST images on D3-G board
 
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
@@ -806,7 +806,7 @@ Follow these steps and verify that the firmware download is successfully complet
 5. Connect the white cable (RXD) to TX pin of the UART pins and the green cable (TXD) to RX pin of UART pins.
 6. Run the terminal emulator application.
 7. Open Device Manager on your PC and check the port number that is being used for UART.
-8. Enter the Verified Port number in Device Manager into Serial line field in the terminal emulator. Set Speed (bps) to 115200 and Flow control to None.
+8. Enter the Verified Port number in Device Manager into Serial line field in the terminal emulator. Set **Speed** (bps) to 115200 and **Flow control to None.**
 9. Connect the power cable. Then, the D3-G boots in the default eMMC boot mode.
 
 
