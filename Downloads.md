@@ -9,7 +9,7 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 #### Image 
 - Yocto Image : in progress
 
-- Ubuntu Weston Desktop Image : [v1.0.0, 2025-06-23, 1.88 GB](https://drive.google.com/file/d/1oc2qwaXUt6-QDME3s5WXKVHzAg4xqVyc/view?usp=drive_link)
+- Ubuntu Western Desktop Image : [v1.0.0, 2025-06-23, 1.88 GB](https://drive.google.com/file/d/1oc2qwaXUt6-QDME3s5WXKVHzAg4xqVyc/view?usp=drive_link)
 
 - Ubuntu Headless Image : [v1.0.0, 2025-06-23, 1.16 GB](https://drive.google.com/file/d/1YjVdUuMcJSEO7zIeP3GuFgBLsnyBkdJT/view?usp=drive_link-)
 
