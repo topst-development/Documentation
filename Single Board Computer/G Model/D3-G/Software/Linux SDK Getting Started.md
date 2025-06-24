@@ -209,7 +209,7 @@ $ sudo mv ~/bin/repo /usr/bin/repo
 <br/><br/>
 
 ### 2.2.5 Udev Rules for Telechips USB Device
-After you execute following commands, you no longer need to use 'sudo' command when downloading FWDN in Linux.
+After you execute the following commands, you no longer need to use 'sudo' command when downloading FWDN in Linux.
 ```
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
 $ sudo udevadm control --reload-rules && sudo udevadm trigger
@@ -231,7 +231,7 @@ The D3-G Linux SDK is based on Yocto Project 3.1 Dunfell. Therefore, you must co
 
 ## 3.2 Yocto Project  
 ---
-The Yocto Project is an open source project focuses on embedded Linux development.  
+The Yocto Project is an open source project that focuses on embedded Linux development.  
 It uses a combination of Open Embedded project, which is Poky, and ***bitbake*** as the build system to make Linux images.  
 By using Yocto Project, you can simultaneously build the bootloader, kernel, and rootfs.  
 
@@ -398,7 +398,7 @@ repo sync has finished successfully.
 
 ## 3.6 Execute topst-build.sh 
 ---
-If you run ./easy-setup.sh script, you can see the following screen. 
+If you run the ./easy-setup.sh script, you can see the following screen. 
 
 **Caution: If you re-run ./easy-setup.sh, be careful as the built sources will be deleted if you select yes.**
 ```
@@ -582,7 +582,7 @@ build  easy-setup.sh  mktcimg  output_d3g.fwdn.zip  poky  stitch-fai-ai.sh  stit
 
 # 4. Firmware Download
 ---
-This chapter describes how to download ***FWDN*** to the D3-G and log in to the Linux console.  
+This chapter describes how to use ***FWDN*** to download firmware to the D3-G and login to the Linux console.  
 ***FWDN V8*** is a PC tool for downloading firmware in both Windows 10(11) 64-bit and Linux environments. This chapter describes the case of downloading in Windows and Linux environments.
 
 <br/><br/><br/>
