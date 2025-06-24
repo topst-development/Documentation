@@ -1,6 +1,6 @@
 # 1. Introduction
 ---
-This document provides guidelines on using the VCP-G with FreeRTOS. It includes configuration instructions and example codes to help you easily develop embedded applications using the VCP-G under the FreeRTOS environment.
+This document provides guidelines on using the VCP-G with FreeRTOS. It includes configuration instructions and example codes to help you easily develop embedded applications by using the VCP-G under the FreeRTOS environment.
 
 Specifically, this document provides guidance on FreeRTOS-based example applications for the VCP-G, including: 
 - Digital Out/In
@@ -15,28 +15,31 @@ Refer to Figure 1.1 before using the VCP-G.
 <p align="center"><strong>Figure 1.1 VCP-G Pinout Diagram</strong></p>
 </br>
 
-To run each example, users should modify the `main.c` file located at:
+To run each example, you should modify the `main.c` file located at:
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-After making the necessary changes, compile the project using the provided Makefile to generate the firmware binary.
+After making the necessary changes, compile the project by using the provided Makefile to generate the firmware binary.
 </br></br></br></br>
 
 # 2. Digital In/Out
 ---
-This chapter provides examples of controlling LEDs using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
+This chapter provides examples of controlling LEDs by using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
 
-This chapter contains two example projects that demonstrate how to control LEDs and button using digital outputs and inputs, giving you a basic understanding of digital pin functions.
+This chapter contains two example projects that demonstrate how to control LEDs and button by using digital outputs and inputs, giving you a basic understanding of digital pin functions.
 </br></br></br>
 
 ## 2.1 Digital Out
 ---
-This example demonstrates how to control LEDs on a breadboard using the VCP-G board under FreeRTOS.  
-Assuming you have already set up the VCP-G FreeRTOS SDK, you can find the relevant source file at:  
+This example demonstrates how to control LEDs on a breadboard by using the VCP-G board under FreeRTOS.  
+You can find the relevant source file at:  
+
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-To implement this example, modify main.c to configure the GPIO pins connected to the LEDs as digital outputs. A FreeRTOS task should be created to turn on four LEDs one by one in order, then turn them off in reverse order. Each LED transition should include a 500 ms delay to clearly observe the sequence.
+Before proceeding, ensure that the VCP-G FreeRTOS SDK is correctly installed. For installation and setup instructions, please refer to the VCP-G FreeRTOS SDK Getting Started guide.
+
+To implement this example, modify the main.c file to configure the GPIO pins connected to the LEDs as digital outputs. A FreeRTOS task should be created to turn on four LEDs one by one in order, then turn them off in reverse order. Each LED transition should include a 500 ms delay to clearly observe the sequence.
 </br></br>
 
 ### 2.1.1 Hardware Reqirements  
@@ -101,7 +104,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 2.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 static void Main_StartTask(void * pArg)
@@ -138,14 +141,14 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the four connected LEDs will turn on sequentially from LED01 to LED04, then turn off in reverse order. Each transition occurs with a 500 ms delay, creating a smooth blinking pattern.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the four connected LEDs turn on sequentially from LED01 to LED04, then turn off in reverse order. Each transition occurs with a 500 ms delay, creating a smooth blinking pattern.
 </br></br></br>
 
 ## 2.2 Digital In
 ---
-This example demonstrates how to read input from a push-button and use it to control an LED using the VCP-G board under FreeRTOS.
-Assuming you have already set up the VCP-G FreeRTOS SDK, the relevant source file can be found at:
+This example demonstrates how to read input from a push button and use it to control an LED by using the VCP-G board under FreeRTOS.
+The relevant source file can be found at:
 ``` 
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
@@ -226,7 +229,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 2.2.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 static void Main_StartTask(void *pArg)
@@ -271,21 +274,21 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, pressing the button will turn on LED01 and LED03, while releasing the button will turn on LED02 and LED04.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, pressing the button turns on LED01 and LED03, while releasing the button turns on LED02 and LED04.
 The system continuously monitors the button state and updates the LED status in real time with a 50 ms polling interval.
 </br></br></br></br>
 
 # 3. VCP-G I2C
 ---
-This chapter provides instructions for configuring Inter-Integrated Circuit (I2C) communication on the VCP-G running FreeRTOS.  
+This chapter provides instructions for configuring Inter-integrated Circuit (I2C) communication on the VCP-G running FreeRTOS.  
 I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
 </br></br></br>
 
 ## 3.1 vcpI2C_LCD1602
 ---
-This example program demonstrates how the VCP-G board controls an LCD1602 display using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
-In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text Hello TOPST on the screen.
+This example program demonstrates how the VCP-G board controls an LCD1602 display by using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
+In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text "Hello TOPST" on the screen.
 </br></br>
 
 ### 3.1.1 Hardware Requirements
@@ -309,7 +312,7 @@ In this example, the LCD is initialized and the backlight is enabled for clear v
 #### 3.1.2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 3.1 Pin Mapping of AnalogInOutSerial</strong></p>
+<p align="center"><strong>Table 3.1 Pin Mapping of vcpI2C_LCD1602</strong></p>
 <div align="center">
 	<table>
 	    <tr>
@@ -339,10 +342,11 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+
 </br></br>
 
 ### 3.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <i2c.h>
 #include <lcd.h>
@@ -370,17 +374,17 @@ static void Main_StartTask(void * pArg)
 }
 ```
 #### Additional Configuration Notes
-To enable LCD testing via I2C, follow these steps:  
+To enable LCD testing through I2C, follow these steps:  
 **1. Enable lcd.c in the Build System**  
 - Navigate to the following path:
 ```
 $ vi ~/vcp/sources/dev.drivers/i2c/rules.mk
 ```
-- Locate the line:
+- Find the following line:
 ```
 #SRCS += lcd.c
 ```
-- Unannotate to activate the file:
+- Unannotate the line to activate the file:
 ```
 SRCS += lcd.c
 ```
@@ -395,13 +399,13 @@ The I2C channel number and associated port used by the LCD can be changed in:
 $ vi ~/vcp/sources/dev.drivers/i2c/lcd.h
 ```
 
-After editing the code, go to the following directory and run the build command:  
+After editing the code, go to the following directory and run the following build command:  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the LCD will display the message Hello TOPST on the screen, confirming that I2C communication is working properly.  
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the LCD displays the message "Hello TOPST" on the screen, confirming that I2C communication is working properly.  
 </br></br></br></br>
 
 # 4. VCP SPI
@@ -412,9 +416,9 @@ SPI is a high-speed, synchronous communication protocol used to exchange data be
 
 ## 4.1 vcpSPI_Dot8x8
 ---
-This example program demonstrates how the VCP-G board controls an 8x8 LED dot matrix using the MAX7219 driver via SPI.
-In this example, a predefined binary array is used to display the letter "X" on the dot matrix. The display is updated through SPI communication, and the MAX7219 handles row and column control internally.
-This example helps illustrate how to send data patterns over SPI to control external display devices like LED matrices.
+This example program demonstrates how the VCP-G board controls an 8x8 LED dot matrix by using the MAX7219 driver through SPI.
+In this example, a predefined binary array is used to display the letter "X" on the dot matrix. The display is updated through SPI communication, and the MAX7219 internally handles row and column control.
+This example helps illustrate how to send data patterns over SPI to control external display devices such as LED matrices.
 </br></br>
 
 ### 4.1.1 Hardware Requirements
@@ -478,7 +482,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 4.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <dot_matrix.h>
 static void Main_StartTask(void * pArg)
@@ -499,13 +503,13 @@ static void Main_StartTask(void * pArg)
 }
 ```
 #### Additional Configuration Notes
-To enable Dot Matrix testing via SPI, follow these steps:  
+To enable Dot Matrix testing through SPI, follow these steps:  
 **1. Enable dot_matrix.c in the Build System**  
 - Navigate to the following path:
 ```
 $ vi ~/vcp/sources/dev.drivers/gpsb/rules.mk
 ```
-- Locate the line:
+- Find the line:
 ```
 #SRCS += dot_matrix.c
 ```
@@ -514,12 +518,12 @@ $ vi ~/vcp/sources/dev.drivers/gpsb/rules.mk
 SRCS += dot_matrix.c
 ```
 **2. Check or Modify Dot Matrix Function Logic**  
-If you need to inspect or edit the logic for Dot Matrix initialization, control commands, or display patterns, refer to:
+To inspect or edit the logic for Dot Matrix initialization, control commands, or display patterns, refer to the following source file:
 ```
 $ vi ~/vcp/sources/dev.drivers/gpsb/dot_matrix.c
 ```
 **3. Configure SPI Channel and GPIOs**  
-The SPI channel and associated GPIO pins used by the Dot Matrix can be configured in:
+The SPI channel and associated GPIO pins used by the Dot Matrix can be configured in the following header file:
 ```
 $ vi ~/vcp/sources/dev.drivers/gpsb/dot_matrix.h
 ```
@@ -528,8 +532,8 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the 8x8 LED dot matrix will display the letter "X", confirming that SPI communication with the MAX7219 driver is working correctly. 
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the 8x8 LED dot matrix displays the letter "X", confirming that SPI communication with the MAX7219 driver is working correctly. 
 </br></br></br></br>
 
 # 5. VCP-G UART
@@ -541,15 +545,15 @@ The following chapters describe how to send and receive data through UART.
 
 ## 5.1 Uart Communication Test (FT232BL)
 ---
-This example demonstrates how to verify UART communication on the VCP-G board using the FT232BL USB to TTL serial module.
-The UART TX and RX pins of the VCP-G board are connected to the FT232BL module, which is in turn connected to a PC via USB.
+This example demonstrates how to verify UART communication on the VCP-G board by using the FT232BL USB to TTL serial module.
+The UART TX and RX pins of the VCP-G board are connected to the FT232BL module, which is in turn connected to a PC through USB.
 A terminal program such as MobaXterm is used on the PC to view the transmitted messages.
 </br></br>
 
 ### 5.1.1 Hardware Requirements
 - VCP-G Board (x1)
 - FT232BL USB to TTL serial module (x1)
-- mini USB Cable (x1)
+- Mini USB Cable (x1)
 - 12V 1A Power Adapter (x1)
 - USB Type-C to A Cable (x1)
 - Male to female jumper wire (x2)
@@ -566,7 +570,7 @@ A terminal program such as MobaXterm is used on the PC to view the transmitted m
 #### 5.1.2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 4.1 Pin Mapping of vcpSPI_Dot8x8</strong></p>
+<p align="center"><strong>Table 4.1 Pin Mapping of vcpUART</strong></p>
 <div align="center">
 	<table>
 	    <tr>
@@ -589,7 +593,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 5.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <uart_example.h>
 void Main_StartTask(void *pArg)
@@ -611,7 +615,7 @@ To enable UART testing, follow these steps:
 ```
 $ vi ~/vcp/sources/dev.drivers/uart/rules.mk
 ```
-- Locate the line:
+- Find the line:
 ```
 #SRCS += uart_example.c
 ```
@@ -620,12 +624,12 @@ $ vi ~/vcp/sources/dev.drivers/uart/rules.mk
 SRCS += uart_example.c
 ```
 **2. Check or Modify UART Function Logic**  
-If you need to inspect or edit the logic for UART initialization, data transmission/reception, or interrupt handling, refer to:
+To inspect or edit the logic for UART initialization, data transmission/reception, or interrupt handling, refer to the following source file:
 ```
 $ vi ~/vcp/sources/dev.drivers/uart/tcc70xx/uart_example.c
 ```
 **3. Configure UART Channel and GPIOs**  
-The UART channel, baud rate, and associated TX/RX GPIO pins used for the UART test can be configured in:
+The UART channel, baud rate, and associated TX/RX GPIO pins used for the UART test can be configured in the following header file:
 ```
 $ vi ~/vcp/sources/dev.drivers/uart/uart_example.h
 ```
@@ -634,8 +638,8 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the message "[UART] Hello from UART!" will appear once on the serial terminal, confirming that UART transmission from the VCP-G board is working properly via the FT232BL USB to TTL module.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the message "[UART] Hello from UART!" appears once on the serial terminal, confirming that UART transmission from the VCP-G board is working properly through the FT232BL USB to TTL module.
 </br></br></br></br>
 
 # 6. VCP-G PWM
@@ -645,7 +649,7 @@ This chapter provides instructions for configuring Pulse Width Modulation (PWM) 
 
 ## 6.1 pwmFade
 ---
-This example program demonstrates how the VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop using PWM. When the brightness reaches its limits, the direction of fading reverses. The program continuously adjusts the LED's brightness, creating a fading effect.
+This example program demonstrates how the VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop by using PWM. After the LED reaches its maximum brightness, the brightness of the LED begins to decrease. The program continuously adjusts the LED's brightness, creating a fading effect.
 </br></br>
 
 ### 6.1.1 Hardware Requirements
@@ -663,12 +667,12 @@ This example program demonstrates how the VCP board controls an LED on the bread
     - (–) pin is connected to the GND rail on the breadboard.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_pwm.png" width="600"></p>
-<p align="center"><strong>Figure 5.1 vcpPWM Circuit Schematic</strong></p>
+<p align="center"><strong>Figure 5.1 pwmFade Circuit Schematic</strong></p>
 
 #### 6.1.2.1 Pin Mapping
 The following table shows pin mapping.
 
-<p align="center"><strong>Table 4.1 Pin Mapping of vcpSPI_Dot8x8</strong></p>
+<p align="center"><strong>Table 4.1 Pin Mapping of pwmFade</strong></p>
 <div align="center">
 	<table>
 	    <tr>
@@ -686,7 +690,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 6.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 #include <pdm.h>
@@ -778,15 +782,15 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, you will observe a gradual LED fade-in and fade-out effect driven by PWM on GPIO A10, confirming that the PDM-based PWM output from the VCP-G is functioning correctly.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, you can observe a gradual LED fade-in and fade-out effect driven by PWM on GPIO A10, confirming that the PDM-based PWM output from the VCP-G is functioning correctly.
 
-**NOTE**: If you need to change the GPIO port used for PWM output, refer to the configuration in `pdm.c`.
+**Note**: To change the GPIO port used for PWM output, refer to the configuration in the pdm.c file.
 </br></br></br></br>
 
 # 7. Additional Examples
 ---
-This chapter introduces additional sensor examples using FreeRTOS on the VCP-G board. It provides example guides on how to use commonly used Arduino sensors with freertos on the VCP-G board, helping users effectively integrate various sensors into their projects.
+This chapter introduces additional sensor examples using FreeRTOS on the VCP-G board. It provides example guides on how to use commonly used Arduino sensors with FreeRTOS on the VCP-G board, enabling you to integrate various sensors into your projects effectively.
 </br></br></br>
 
 ## 7.1 Infrared (IR) Sensor (Transceiver)
@@ -818,7 +822,7 @@ This example demonstrates how the VCP-G board controls an IR sensor and two LEDs
     - (–) pin is connected to the GND rail on the breadboard.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_irsensor1.png" width="600"></p>
-<p align="center"><strong>Figure 7.1 IR Transceiver Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>Figure 7.1 Infrared (IR) Sensor Circuit Schematic</strong></p>
 
 ##### 7.1.2.1 Pin Mapping
 The following table shows pin mapping.
@@ -871,7 +875,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 7.1.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 #define PIR_SENSOR_PIN   GPIO_GPK(13)
@@ -906,15 +910,15 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the IR sensor will detect the presence or absence of an object and control two LEDs accordingly. When an object is detected, the first LED turns on; when no object is detected, the second LED turns on. This behavior confirms that the IR sensor input and GPIO output on the VCP-G board are working properly.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the IR sensor detects the presence or absence of an object and controls two LEDs accordingly. When an object is detected, the first LED turns on; when no object is detected, the second LED turns on. This behavior confirms that the IR sensor input and GPIO output on the VCP-G board are working properly.
 
-**NOTE**: If you need to change the GPIO pins used for the IR sensor or LEDs, refer to the configuration section inside the source code.
+**Note**: If you need to change the GPIO pins used for the IR sensor or LEDs, refer to the configuration section inside the source code.
 </br></br></br>
 
 ## 7.2 Infrared (IR) Sensor (Receiver)
 ---
-This example demonstrates how the VCP-G board uses an IR receiver sensor to detect signals from a remote control. When an IR signal is received, the onboard logic turns on an LED connected to the breadboard. This confirms that the IR receiver module is correctly decoding incoming signals, and the VCP-G is responding as expected. The reception status is also printed to the serial monitor.
+This example demonstrates how the VCP-G board uses an IR receiver sensor to detect signals from a remote control. When an IR signal is received, the onboard logic turns on an LED connected to the breadboard. This confirms that the IR receiver module is correctly decoding incoming signals, and the VCP-G is responding as expected. The reception status is also displayed on the serial monitor.
 </br></br>
 
 ### 7.2.1 Hardware Requirements
@@ -978,10 +982,11 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+
 </br></br>
 
 ### 7.2.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 #define PIR_SENSOR_PIN   GPIO_GPK(11)
@@ -1021,10 +1026,10 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the IR receiver detects signals from a remote control and turns on an LED for a short duration. This confirms that the VCP-G is correctly reading IR input and controlling the GPIO output in response to received signals.
+This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the IR receiver detects signals from a remote control and turns on an LED for a short time. This confirms that the VCP-G is correctly reading IR input and controlling the GPIO output in response to received signals.
 
-**NOTE**: If you need to change the GPIO pins used for the IR sensor or LED, refer to the configuration section inside the source code.
+**Note**: To change the GPIO pins used for the IR sensor or LED, refer to the configuration section inside the source code.
 </br></br></br>
 
 ## 7.3 Gas Sensor
@@ -1047,7 +1052,6 @@ This example demonstrates how the VCP-G board uses a Gas sensor (MQ 135) to dete
     - A0 pin of the gas sensor is connected to the analog pin 55 on the VCP-G board. 
     - VCC pin of the gas sensor is connected to 5V on the VCP-G board.
     - GND pin of the gas sensor is connected to GND on the VCP-G board.
-
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_gassensor.png" width="600"></p>
 <p align="center"><strong>Figure 7.3 Gas Sensor Circuit Schematic</strong></p>
@@ -1083,7 +1087,7 @@ The following table shows pin mapping.
 </br></br>
 
 ### 7.3.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 #define GAS_SENSOR_PIN  GPIO_GPK(15)
@@ -1108,16 +1112,16 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the gas sensor continuously monitors the surrounding air quality. When gas is detected (sensor output is LOW), a message indicating gas detection is printed to the serial monitor; otherwise, it reports clean air. This confirms that the VCP-G is correctly reading digital input from the gas sensor.
+This generates a firmware image and uses the **FWDN** tool to flash the generated image to the VCP-G.  
+After the code is successfully flashed and executed, the gas sensor continuously monitors the surrounding air quality. When gas is detected (sensor output is LOW), a message indicating gas detection is displayed on the serial monitor; otherwise, it reports clean air. This confirms that the VCP-G is correctly reading digital input from the gas sensor.
 
-**NOTE**: If you need to change the GPIO pin used for the gas sensor, refer to the configuration section inside the source code. Most gas sensor modules include a small adjustment screw (potentiometer) for sensitivity control. If the sensor does not respond reliably, try adjusting this screw to fine-tune the gas detection threshold.
+**Note**: To change the GPIO pin used for the gas sensor, refer to the configuration section inside the source code. Most gas sensor modules include a small adjustment screw (potentiometer) for sensitivity control. If the sensor does not respond reliably, try adjusting this screw to fine-tune the gas detection threshold.
 </br></br></br>
 
 ## 7.4 Capacitive Touch Sensor
 ---
 This example demonstrates how the VCP-G board interfaces with a capacitive touch sensor and controls an LED on a breadboard. The capacitive touch sensor detects physical contact from a finger by sensing changes in capacitance.  
-When a touch is detected, the sensor outputs a digital HIGH signal to the VCP-G, which in turn turns on an LED. This example confirms that the touch input is correctly recognized and that the GPIO output responds accordingly. The touch detection status is also printed to the serial monitor.
+When a touch is detected, the sensor outputs a digital HIGH signal to the VCP-G, which in turn turns on an LED. This example confirms that the touch input is correctly recognized and that the GPIO output responds accordingly. The touch detection status is also displayed on the serial monitor.
 </br></br>
 
 ### 7.4.1 Hardware Requirements
@@ -1180,10 +1184,11 @@ The following table shows pin mapping.
 	    </tr>
 	</table>
 </div>
+
 </br></br>
 
 ### 7.4.3 How to execute
-To run this example, simply modify the `Main_StartTask()` function in the `main.c` file as shown below.
+To run this example, modify **Main_StartTask()** in the main.c file as shown.
 ```
 #include <gpio.h>
 #define TOUCH_SENSOR_PIN GPIO_GPK(12) 
@@ -1215,10 +1220,10 @@ After editing the code, go to the following directory and run the build command:
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This will generate a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
+This generates a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
 Once the code is successfully flashed and executed, the capacitive touch sensor monitors touch input from a human finger. When a touch is detected (sensor output is HIGH), a message is printed to the serial monitor and an LED is turned on. When no touch is detected, the LED is turned off. This confirms that the VCP-G is correctly reading input from the touch sensor and controlling GPIO output accordingly.
 
-**NOTE**: If you need to change the GPIO pin used for the touch sensor or LED, refer to the configuration section inside the source code.
+**Note**: To change the GPIO pin used for the touch sensor or LED, refer to the configuration section inside the source code.
 </br></br></br></br>
 
 # 8. References
