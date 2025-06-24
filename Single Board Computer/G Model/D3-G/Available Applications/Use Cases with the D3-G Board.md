@@ -1067,7 +1067,7 @@ This section demonstrates how to connect and detect input from a basic vibration
 - Vibration Detection Sensor
     - VCC pin of the Vibration Detection Sensor is connected to the 3.3V pin on the D3-G board.
     - GND pin of the Vibration Detection Sensor is connected to the GND on the D3-G board.
-    - DIN pin of the Vibration Detection Sensor is connected to the 88 pin on the D3-G board.
+    - DO pin of the Vibration Detection Sensor is connected to the 88 pin on the D3-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/vibr%20circuit.png"></p>
 <p align="center"><strong>Figure 7.5 D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
@@ -1146,8 +1146,8 @@ def main():
  
             if sensor_value == "0":  # vibration detected
                 print("vibration detected.")
-            else:    # vibration no detected
-                print("vibration no detected.")
+            else:    # no vibration detected
+                print("no vibration detected.")
  
             time.sleep(0.5)  # 500ms delay
 
@@ -1177,7 +1177,7 @@ vibration detected.
 ```
 When there is no vibration, the output will be:
 ```
-vibration no detected.
+no vibration detected.
 ```
 To stop the script, press **[Ctrl+C]**.
 Upon termination, GPIO88 is automatically unexported and cleaned up.
@@ -1308,7 +1308,7 @@ if __name__ == "__main__":
 #### Step 4. Execution Result
 Run the code with the following command.
 ```
-$ python ir_test.py
+$ python3 ir_test.py
 ```
 This script configures GPIO89 as a digital input and continuously monitors its state to detect obstacles.
 When an object is detected in front of the IR sensor, the terminal displays:
@@ -1317,7 +1317,7 @@ obstacle detected.
 ```
 When no object is detected, it displays:
 ```
-obstacle no detected.
+no obstacle detected.
 ```
 To stop the script, press **[Ctrl+C]**.
 When the script is terminated, GPIO89 is automatically unexported and cleaned up.
@@ -1543,7 +1543,7 @@ The following table shows pin mapping.
           <td>GND</td>
       </tr>
       <tr>
-          <td colspan="3">OUT</td>
+          <td colspan="3">DO</td>
           <td>10</td>
           <td>88</td>
       </tr>
@@ -1598,7 +1598,7 @@ def main():
             if sensor_value == "0":  # gas detected
                 print("gas detected.")
             else:
-                print("gas no detected.")
+                print("no gas detected.")
  
             time.sleep(0.5)  # 500ms delay
 
@@ -1626,7 +1626,7 @@ gas detected.
 ```
 When no gas is detected, the terminal shows:
 ```
-gas no detected.
+no gas detected.
 ```
 To stop the script, press **[Ctrl+C]**.
 When the script is terminated, GPIO88 is automatically unexported and cleaned up.

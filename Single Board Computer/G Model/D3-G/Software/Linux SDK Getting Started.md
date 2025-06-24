@@ -251,7 +251,7 @@ Figure 3.1 shows the task process of Yocto Project. You can download source from
 ## 3.4 Composition of D3-G SDK
 ---
 The following are the components of the Yocto Project we have configured.
-Figure 3.1 shows composition of the D3-G SDK.
+Table 3.1 shows composition of the D3-G SDK.
 
 
 
@@ -663,7 +663,7 @@ Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2)
 2. Copy "images" folder to Windows C drive.
     ```
     $ cd ..
-    $ cp -r /images /mnt/c/
+    $ cp -r ./images /mnt/c/
     ```
 
 <br/><br/><br/>
@@ -842,9 +842,9 @@ You can download the image file here.
 <img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
 
 **Download :**  
--	[Download Link here](https://drive.google.com/file/d/1hDoKRjrKDnP5lGk1c1pXN73kgdZN4TGv/view?usp=sharing)
+-	[Download Link here](https://drive.google.com/file/d/1oc2qwaXUt6-QDME3s5WXKVHzAg4xqVyc/view?usp=drive_link)
 <br>
--	For more information, visit our github page (경로 추가)
+-	For more information, visit our github page
 
 **Release note :**  
 
