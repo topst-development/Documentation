@@ -133,7 +133,7 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "vcp4LED.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -276,7 +276,7 @@ The following table shows pin mapping.
 
     ```
 2. Verify and upload the "vcp4LED_Button.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -407,7 +407,7 @@ The following table shows pin mapping.
     HardwareSerial Serial;
     ```
 2. Verify and upload the "AnalogInOutSerial.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -533,7 +533,7 @@ The following table shows pin mapping.
     **Note 2:** A fixed resistor is used along with a variable resistor (potentiometer) to adjust the sensor value. The sensor value changes depending on how much the potentiometer is turned, and the amount you need to turn the potentiometer varies based on the value of the fixed resistor.
 
 2. Verify and upload the "AnalogInput.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -638,7 +638,7 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "pwmFade.ino" file to the VCP-G board.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -821,7 +821,7 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "vcpSPI_Dot8x8.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -978,7 +978,7 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "vcpI2C_LCD1602.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1100,7 +1100,7 @@ This example program demonstrates how the VCP-G prints the ASCII values of chara
     }
     ```
 2. Verify and upload the "vcpASCIITable.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1297,7 +1297,7 @@ The following table shows pin mapping.
     */
     ```
 2. Verify and upload the "vcpGraph.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power calbe from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1441,7 +1441,7 @@ The following table shows pin mapping.
     }
     ```
 2. Verify and upload the "irSensor_LED.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1539,7 +1539,7 @@ The following table shows pin mapping.
     }  
     ```
 2. Verify and upload the "irTransceiver.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1655,7 +1655,7 @@ The following table shows pin mapping.
     } 
     ```
 2. Verify and upload the "joystick.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1750,7 +1750,7 @@ The following table shows pin mapping.
     }
      ```
 2. Verify and upload the "GasSensor.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power calbe from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -1890,7 +1890,7 @@ The following table shows pin mapping.
     }
      ```
 2. Verify and upload the "vcp_touch.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
@@ -2055,7 +2055,7 @@ The following table shows pin mapping.
     }
      ```
 2. Verify and upload the "motordriver.ino" file to the VCP-G.
-3. If the upload gets stuck in an infinite uploading state, it may be due to the FWDN mode not being activated. To resolve this:  
+3. If the upload process gets stuck in an infinite uploading state, it is because the FWDN mode is not activated. To resolve this:  
     1. Disconnect the power cable from the VCP-G board.
     2. Press and hold the FWDN switch.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
