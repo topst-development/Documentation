@@ -17,7 +17,7 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 ## AI-G
 
 #### Image
-- Yocto Image : [v1.0.0, 2025-06-23, 90 MB](https://drive.google.com/file/d/128uuM6AzivaPEtl8U8K4miWNOtzRtxJa/view?usp=drive_link)
+- Yocto Image : [v1.0.0, 2025-06-23, 90 MB](https://drive.google.com/file/d/128uuM6AzivaPEtl8U8K4miWNOtzRtxJa/view?usp=drive_link)  
 <br/><br/>
 
 
