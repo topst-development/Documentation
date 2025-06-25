@@ -28,6 +28,6 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 ## VCP-G
 
 #### Image
-- FreeRTOS Image : [v1.0.0, 2025-06-23, 3 MB](https://drive.google.com/file/d/160Sfj0-GPbi-hqWutwdk7D2u6tauypKM/view?usp=drive_link)
+- FreeRTOS Image : [v1.0.0, 2025-06-23, 3 MB](https://drive.google.com/file/d/1cjn_rAQxBwd35YzI2pFO07adrUTaiydk/view?usp=drive_link)
 #### Schematic
 - [v2.2.4, 2025-05-12, 479 KB](https://drive.google.com/file/d/1XWfCEQZRnzRFQ3fhbGwtYpQWOb17TOus/view?usp=drive_link)
