@@ -297,10 +297,106 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 
 ## 6.3 Download Software on VCP-G
 ---
+
+### 6.3.1 Execute FWDN in Windows Environment
 1. Set the Board to Download Mode
    Connect the power cable to the VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.2 Set Board to Download Mode</strong></p>
+
+2. Copy tcc70xx_pflash_boot_2M_ECC.rom to fwdn_vcp folder
+```
+cp ~/topst-vcp/build/tcc70xx/gcc/output/tcc70xx_pflash_boot_2M_ECC.rom ~/topst-vcp/tools/fwdn_vcp/
+```
+
+3. Copy fwdn_vcp folder to C Drive
+```
+cp -r ~/topst-vcp/tools/fwdn_vcp /mnt/c/
+```
+
+4. Click fwdn_vcp.bat
+    Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
+    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Click%20fwdn_vcp.bat.png"></p>
+    <p align="center"><strong>Figure 6.3 Click fwdn_vcp.bat</strong></p>
+```
+[main:27] FWDN VCP v0.1.1 - 2022.8.12 11:38:19
+Com port num : 10
+[FWDNWindowsUART::OpenPort:34] Complete open port(\\.\COM10)
+[ProtocolCB::StartVCPFWDN:45] Complete to receive start res
+[FWDN_VCP::LoadFwdnFW:144] Complete to send start msg
+[ProtocolCB::CheckResPacket:172] Complete to receive ack for cmd(0xFFFF0000(RECEIVE_HSM_CMD))
+[FWDN_VCP::WriteFile:284] Complete to send command(0xFFFF0000(RECEIVE_HSM_CMD))
+[ProtocolCB::SendFile:151] Complete to send file
+[ProtocolCB::CheckResPacket:172] Complete to receive ack for cmd(0xFFFF0000(RECEIVE_HSM_CMD))
+[FWDN_VCP::WriteFile:295] Complete to send file - .\tcc70xx_pflash_boot_2M_ECC.rom
+[FWDN_VCP::LoadFwdnFW:163] Complete to send hsm
+[ProtocolCB::CheckResPacket:172] Complete to receive ack for cmd(0xFFFF0001(RECEIVE_FWDN_CMD))
+[FWDN_VCP::WriteFile:284] Complete to send command(0xFFFF0001(RECEIVE_FWDN_CMD))
+[ProtocolCB::SendFile:126] uiRemainSize = 43136
+[ProtocolCB::SendFile:151] Complete to send file
+[ProtocolCB::CheckResPacket:172] Complete to receive ack for cmd(0xFFFF0001(RECEIVE_FWDN_CMD))
+[FWDN_VCP::WriteFile:295] Complete to send file - .\vcp_fwdn.rom
+[FWDN_VCP::LoadFwdnFW:173] Complete to send fwdn
+[FWDN_VCP::LoadFwdnFW:179] Complete to load FWDN F/W
+RM=00000000
+MT
+MR0=0000a042
+MR1=00020018
+MR2=00000000
+[ProtocolFW::CheckResPacket:260] Complete to receive ack for cmd(0xAAAA0016(VERSION_CMD))
+[FWDN_VCP::GetDeviceVersion:77]  FWDN Firmware Version(20230728)
+[ProtocolFW::CheckResPacket:260] Complete to receive ack for cmd(0xAAAA0014(STORAGE_INFO_CMD))
+[FWDN_VCP::InfoStorage:56]
+#### SNOR Info ####
+Manufacture ID: 0x9d
+Device ID: 0x6015
+Name: ISSI-IS25LP016D
+Sector Size: 4 KiB (4096 Byte)
+Total Capacity: 2 MiB (2097152 Byte)
+4Byte Address Mode: Unsupported
+#### EFLASH Info ####
+DCYCRDCON 0x1e0002
+DCYCWRCON 0x20100
+Sector Size: 8 KiB
+Page Size: 2 KiB
+
+-----Storage init info-----
+O : Init success
+X : Init failed or not exist
+SNOR : O
+eFlash : O
+
+[ProtocolFW::CheckResPacket:260] Complete to receive ack for cmd(0xAAAA0017(CHIP_INFO_CMD))
+[FWDN_VCP::GetChipInfo:121] ---chip info---
+Chip Number : 0x57045
+Dual Bank : false
+Expand Flash : true
+ECC : true
+[FWDN_VCP::PrintBankInfo:468] ---bank info---
+bank - 0
+eFlash offset : 0x0
+eFlash size : 2097152 byte
+SNOR offset : 0x0
+SNOR size : 2097152 byte
+[FWDN_VCP::PrintStorageOption:451] ---storage info---
+eflash
+offset : 0x0
+size : 2097152 byte
+[ProtocolFW::CheckResPacket:260] Complete to receive ack for cmd(0xAAAA0011(WRITE_CMD))
+[FWDN_VCP::WriteFile:284] Complete to send command(0xAAAA0011(WRITE_CMD))
+ 100% [||||||||||||||||||||||||||||||] 2097152/2097152
+```
+
+5. Reset the board  
+    After the download process is completed, disconnect and reconnect the power cable.
+    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
+    <p align="center"><strong>Figure 6.4 Reset Board</strong></p>
+
+### 6.3.2 Execute FWDN in Linux Environment
+1. Set the Board to Download Mode
+   Connect the power cable to the VCP-G board while pressing the FWDN switch.
+    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
+    <p align="center"><strong>Figure 6.5 Set Board to Download Mode</strong></p>
     
 2. Execute the Download Command
    Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
@@ -325,18 +421,18 @@ After downloading the software to the board, follow these steps to verify that i
     sudo apt install minicom
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Install%20Minicom.png"></p>
-    <p align="center"><strong>Figure 6.5 Install minicom</strong></p>
+    <p align="center"><strong>Figure 6.8 Install minicom</strong></p>
 2. Open a Serial Connection  
     Use the following command to initiate a serial connection.
     ```
     minicom -D /dev/ttyUSB0 -b 115200 -8
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Open%20Serial%20Connection.png"></p>
-    <p align="center"><strong>Figure 6.6 Open Serial Connection</strong></p>
+    <p align="center"><strong>Figure 6.9 Open Serial Connection</strong></p>
 
 After completing steps 1 and 2, the following output appears on the terminal. If the connection is successful, the board should respond to interactions, confirming that the software is downloaded and is operating correctly on the VCP-G.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Figure%206.7%20Open%20Serial%20Connection.png"></p>
-<p align="center"><strong>Figure 6.7 Open Serial Connection</strong></p>
+<p align="center"><strong>Figure 6.10 Open Serial Connection</strong></p>
 
 </br></br></br>
 
@@ -355,7 +451,7 @@ This chapter provides solutions to common issues encountered while working with 
 2. Log Out and Log Back In  
     Log out of the current session and log back in to apply the changes. After this, try accessing the ttyUSB0 device again.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Modify%20User%20Group%20Permissions.png"></p>
-    <p align="center"><strong>Figure 6.8 Modify User Group Permissions </strong></p>
+    <p align="center"><strong>Figure 6.11 Modify User Group Permissions </strong></p>
 
 **Issue:** When using minicom, there is no proper communication or irregular behavior with the VCP-G.  
 **Solution:** This issue may occur if minicom’s default flow control setting is set to **hardware**. The hardware flow control must be set to No for proper operation. 
@@ -365,21 +461,21 @@ This chapter provides solutions to common issues encountered while working with 
     minicom -D /dev/ttyUSB0 -b 115200 -8
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Launch%20Minicom.png"></p>
-    <p align="center"><strong>Figure 6.9 Launch minicom</strong></p>
+    <p align="center"><strong>Figure 6.12 Launch minicom</strong></p>
 2. Access the Setup Screen  
     While in minicom, press **[Ctrl+A]** then press **[o]** to open the setup menu.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Access%20Set%20up%20Screen.png"></p>
-    <p align="center"><strong>Figure 6.10 Access Setup Screen</strong></p>
+    <p align="center"><strong>Figure 6.13 Access Setup Screen</strong></p>
 3. Navigate to Serial Port Setup  
     Select **Serial port setup** from the options.
 4. Modify Flow Control  
     Inside the serial port setup, press **[F]** to set the hardware flow control to **No**.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Modify%20Flow%20Control.png"></p>
-    <p align="center"><strong>Figure 6.11 Modify Flow Control</strong></p>
+    <p align="center"><strong>Figure 6.14 Modify Flow Control</strong></p>
 5. Exit and Save  
     Exit the setup and save the configuration. minicom should now communicate properly with the VCP-G.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Save%20and%20Exit.png"></p>
-    <p align="center"><strong>Figure 6.12 Save and Exit</strong></p>
+    <p align="center"><strong>Figure 6.15 Save and Exit</strong></p>
 
 **Note:** If you are using a different serial communication tool other than minicom, ensure its flow control setting is also set to **No** for proper operation.
 </br></br></br></br>
