@@ -404,7 +404,7 @@ Table 4.2 describes the setting of JTAG Disable/Enable.
 	    <td>1K</td>
 	  </tr>
 	  <tr>
-	    <td colspan="4">JTAG Disable (Default)</td>
+	    <td colspan="4">JTAG Enable (Option)</td>
 	    <td>High (1)</td>
 	    <td>1K</td>
 	    <td>N.C</td>
