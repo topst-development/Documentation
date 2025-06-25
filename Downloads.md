@@ -12,12 +12,16 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 
 - Ubuntu Headless Image : [v1.0.0, 2025-06-23, 1.16 GB](https://drive.google.com/file/d/1YjVdUuMcJSEO7zIeP3GuFgBLsnyBkdJT/view?usp=drive_link)
 
+#### Schematic
+- [v2.2.4, 2025-05-15, 968 KB](https://drive.google.com/file/d/1l9x0NgVwzv3BHJeC89vAJ408oyVOUxcN/view?usp=drive_link)
 <br/><br/>
 
 ## AI-G
 
 #### Image
-- Yocto Image : [v1.0.0, 2025-06-23, 90 MB](https://drive.google.com/file/d/128uuM6AzivaPEtl8U8K4miWNOtzRtxJa/view?usp=drive_link)  
+- Yocto Image : [v1.0.0, 2025-06-23, 90 MB](https://drive.google.com/file/d/1Q4MO5H9YwNzUOjCfg4_MKtsH1YELGUmG/view?usp=drive_link)
+#### Schematic
+- [v2.2.4, 2025-05-20, 811 KB](https://drive.google.com/file/d/13xBPH0fMfpG7h9z0GIvlOoeMTBa_c_Fx/view?usp=drive_link)
 <br/><br/>
 
 
@@ -25,3 +29,5 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 
 #### Image
 - FreeRTOS Image : [v1.0.0, 2025-06-23, 3 MB](https://drive.google.com/file/d/160Sfj0-GPbi-hqWutwdk7D2u6tauypKM/view?usp=drive_link)
+#### Schematic
+- [v2.2.4, 2025-05-12, 479 KB](https://drive.google.com/file/d/1XWfCEQZRnzRFQ3fhbGwtYpQWOb17TOus/view?usp=drive_link)

@@ -297,23 +297,23 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 
 ## 6.3 Download Software on VCP-G
 ---
-1. Set the Board to Download Mode  
-    Connect the power cable to the VCP-G board while pressing the FWDN switch.
+1. Set the Board to Download Mode
+   Connect the power cable to the VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.2 Set Board to Download Mode</strong></p>
     
-2. Execute the Download Command  
-    Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
+2. Execute the Download Command
+   Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
     ```
-    sudo ~/topst-vcp/tools/fwdn_vcp/fwdn --fwdn ~/topst-vcp/tools/fwdn_vcp/vcp_fwdn.rom -w output/tcc70xx_pflash_boot_4M_ECC.rom
+    sudo ~/topst-vcp/tools/fwdn_vcp/fwdn --fwdn ~/topst-vcp/tools/fwdn_vcp/vcp_fwdn.rom -w output/tcc70xx_pflash_boot_2M_ECC.rom
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Execute%20Download%20Command.png"></p>
-    <p align="center"><strong>Figure 6.3 Execute Download Command</strong></p>
+    <p align="center"><strong>Figure 6.6 Execute Download Command</strong></p>
     
 3. Reset the board  
     After the download process is completed, disconnect and reconnect the power cable.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
-    <p align="center"><strong>Figure 6.4 Reset Board</strong></p>
+    <p align="center"><strong>Figure 6.7 Reset Board</strong></p>
 
 </br></br></br>
 

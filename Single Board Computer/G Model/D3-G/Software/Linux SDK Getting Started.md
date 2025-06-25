@@ -614,7 +614,7 @@ The D3-G has one Boot Mode button and supports two types of boot modes. This gui
 
 To use FWDN, connect the D3-G board to the Host PC as follows: 
 
-1. Check that VTC driver is installed on the Host PC. If the VTC driver is not installed, install it as shown in Chapter 1.2.1.  
+1. Check that VTC driver is installed on the Host PC. If the VTC driver is not installed, install it as shown in Chapter 4.2.1.  
 
 2. Prepare one USB Type-C cable. 
 
