@@ -358,7 +358,7 @@ This chapter provides solutions to common issues encountered while working with 
     <p align="center"><strong>Figure 6.8 Modify User Group Permissions </strong></p>
 
 **Issue:** When using minicom, there is no proper communication or irregular behavior with the VCP-G.  
-**Solution:** This issue may occur if minicom’s default flow control setting is set to **hardware**. The hardware flow control must be set to No for proper operation 
+**Solution:** This issue may occur if minicom’s default flow control setting is set to **hardware**. The hardware flow control must be set to No for proper operation. 
 1. Start minicom  
     Use the following command.
     ```

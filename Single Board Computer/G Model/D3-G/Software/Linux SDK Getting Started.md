@@ -52,7 +52,7 @@ When you access Ubuntu, it starts in the /mnt/c/Users/[username] directory by de
 wsl  // access ubuntu 
 ls   // check contents in your directory
 ```
-Refer to figure 2.1 to check the result (may vary depending on the user).
+Refer to Figure 2.1 to check the result (results may vary depending on your system).
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/1.1%20wsl%20linux.png" width="500"></p>
 <p align="center"><strong>Figure 2.1 WSL2 Screenshot </strong></p>
 
@@ -101,7 +101,7 @@ $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
 You can download the D3-G SDK through Android Repo.  
 To install Repo, refer to the following website: https://source.android.com/source/downloading.html.  
 If Repo is already installed, you can use it without re-installing.  
-Before installing Repo, ensure that Python version (3.6 or higher) installed.
+Before installing Repo, ensure that Python version 3.6 or higher is installed.
 
 Use the following command to install Repo.
 ```
@@ -124,7 +124,7 @@ $ chmod a+x ~/bin/repo
 
 $ sudo mv ~/bin/repo /usr/bin/repo
 ```
-Please proceed to **Chapter 3: Image Build Guide**.
+Proceed to **Chapter 3: Image Build Guide**.
 
 <br/><br/><br/>
 
@@ -161,7 +161,7 @@ After installing SSH and Samba, configure each program as needed for your enviro
 
 ### 2.2.3 Install Utilities
 
-Use the following commands to install all required utilities at once. To use Yocto Project, the following utilities **must** be installed on the Host PC(individual computer or development server).
+Use the following commands to install all required utilities at once. To use Yocto Project, the following utilities **must** be installed on the Host PC (individual computer or development server).
 ****
 
 
@@ -214,7 +214,7 @@ After you execute the following commands, you no longer need to use 'sudo' comma
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
 $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
-Please proceed to **Chapter 3: Image Build Guide**.
+Proceed to **Chapter 3: Image Build Guide**.
 
 <br/><br/><br/><br/>
 
@@ -421,7 +421,7 @@ The build image is created in the following path:
 
 - {TOPST_PATH}/build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main
 
-topst-build.sh is a shell script that sets up the core environment required to build images for D3-G and AI-G boards. Execute the following commands, and select option 2 to prepare the build environment for installing the main OS on the D3-G board.
+topst-build.sh is a shell script that sets up the core environment required to build images for D3-G and AI-G. Execute the following commands, and select option 2 to prepare the build environment for installing the main OS on the D3-G.
 
 
 
@@ -626,12 +626,12 @@ To use FWDN, connect the D3-G board to the Host PC as follows:
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Hardware/connect%20to%20d3g%20to%20host%20pc%20using%20c%20type.png">
 </p>
-<p align="center"><strong>Figure 4.1 Connection to D3-G board to Host PC Using USB C-Type Cable </strong></p>
+<p align="center"><strong>Figure 4.1 Connection to D3-G Board to Host PC Using USB C-Type Cable </strong></p>
 
 <br/><br/>
 
 ### 4.2.1 How to install VTC Driver (Windows/Ubuntu)
-Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in the Figure 4.2 and Figure 4.3.
+Install the Vendor Telechips Certification (VTC) driver (found on [telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)) on the host PC by running as administrator. When you connect the USB in the FWDN mode as shown above, the Telechips VTC USB driver is set as shown in Figure 4.2 and Figure 4.3.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Windows%20Environment.png", width="700">
@@ -652,7 +652,7 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2) environment to the Windows environment.
 
 
-1. Unzip "output_d3g.fwdn.zip" 
+1. Unzip "output_d3g.fwdn.zip".   
     ```
     $ cd ~/topst-sdk
     $ mkdir images
@@ -660,7 +660,7 @@ Before executing FWDN, transfer the image and tools created in the Ubuntu (WSL2)
     $ cd images
     $ unzip output_d3g.fwdn.zip
     ```
-2. Copy "images" folder to Windows C drive.
+2. Copy "images" folder to Windows C drive.  
     ```
     $ cd ..
     $ cp -r ./images /mnt/c/
@@ -805,16 +805,16 @@ Follow these steps and verify that the firmware download is successfully complet
 4. Connect the black cable to the GND pin. 
 5. Connect the white cable (RXD) to TX pin of the UART pins and the green cable (TXD) to RX pin of UART pins.
 6. Run the terminal emulator application.
-7. Open Device Manager on your PC and check the port number that is being used for UART.
-8. Enter the Verified Port number in Device Manager into Serial line field in the terminal emulator. Set **Speed** (bps) to 115200 and **Flow control to None.**
-9. Connect the power cable. Then, the D3-G boots in the default eMMC boot mode.
+7. Open Device Manager on your PC and check the port number assigned to the UART device.
+8. In the terminal emulator, enter the verified port number into the Serial line field. Set **Speed** (bps) to 115200 and **Flow control** to **None.**
+9. Connect the power cable. Then, the D3-G board boots in the default eMMC boot mode.
 
 
  
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20to%20TTL%20Connection.png", width="700">
 </p>
-<p align="center"><strong>Figure 5.1 UART Connection with host PC</strong></p><br/>  
+<p align="center"><strong>Figure 5.1 UART Connection with Host PC</strong></p><br/>  
 
 
 Figure 5.2 shows a successful login.  
@@ -844,7 +844,7 @@ You can download the image file here.
 **Download :**  
 -	[Download Link here](https://drive.google.com/file/d/1oc2qwaXUt6-QDME3s5WXKVHzAg4xqVyc/view?usp=drive_link)
 <br>
--	For more information, visit our github page
+-	For more information, visit our [github page](https://github.com/topst-development).
 
 **Release note :**  
 
@@ -882,7 +882,7 @@ Follow the steps below for eMMC Storage resizing.
     $ 0 
     $ 100%
     ```
-3. Use the p(print) command to check that the partition type is ext4. 
+3. Use the p (print) command to check that the partition type is ext4. 
    ```
    $ p
    ```
