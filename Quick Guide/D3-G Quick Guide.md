@@ -231,11 +231,11 @@ C:\d3g-ubuntu.fwdn>fwdn.exe -w "d3g.fai" --storage emmc --area user
 
 2. Download D3-G Ubuntu Headless Image
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20Ubuntu%20Headless%20Image.png" width="550"></p>
-<p align="center"><strong>Figure 1.4 Download D3-G Ubuntu Headless Image</strong></p> <br/>
+<p align="center"><strong>Figure 1.8 Download D3-G Ubuntu Headless Image</strong></p> <br/>
 
 3. Click fwdn.bat. The “fwdn.bat” is an executable file that automatically downloads firmware by using ***FWDN V8***. 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_ubuntu_headless.bat.png" width="550"></p>
-<p align="center"><strong>Figure 1.5 Click fwdn.bat</strong></p> <br/>
+<p align="center"><strong>Figure 1.9 Click fwdn.bat</strong></p> <br/>
 
 ```
 C:\d3g-ubuntu-headless>fwdn.exe --fwdn boot-firmware\fwdn.json
