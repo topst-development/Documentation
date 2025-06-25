@@ -48,24 +48,27 @@ Linux distribution version:
 
 </br></br></br>
 
-## 2.3 Setting Linux Envirionment
+## 2.3 Setting Linux Environment
 ---
-To set up a Linux environment on your host PC, follow these steps: 
-1.	Execute WSL2 (Windows Environment Only)
-    If you are using Windows, start WSL2 by executing one of the following commands in Windows PowerShell.
+To set up a Linux environment on your host PC, follow these steps:  
+
+1. Execute WSL2 (Windows Environment Only)  
+    If you are using Windows, start WSL2 by executing one of the following commands in Windows PowerShell.  
     ```
     wsl
     ```
     ```
     ubuntu
     ```
-2.	Update Package List
+
+2.	Update Package List  
 Before installing any new software, update the list of available packages to ensure you get the latest versions and dependencies. The following command fetches the latest list of available packages from the repositories.
     ```
     sudo apt update && /
     sudo apt upgrade
     ```
-3.	Install Common Development Tools
+
+3.	Install Common Development Tools  
     Install common development tools by entering the following command:
     ```
     sudo apt install build-essential git
@@ -85,7 +88,7 @@ This toolchain is optimized for the ARM architecture and ensures compatibility w
 ## 3.1 Install and Set Up Toolchain
 ---
 Follow these steps to download, extract, and set up the toolchain:  
-1. Download the Toolchain
+1. Download the Toolchain  
    Enter **wget** command to download the toolchain form the Linaro website:
     ```
     wget https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-eabi/gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz
@@ -93,16 +96,16 @@ Follow these steps to download, extract, and set up the toolchain:
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Download%20Toolchain.png"></p>
     <p align="center"><strong>Figure 3.1 Download Toolchain</strong></p>
     
-2. Extract the Toolchain
-   After the download is complete, extract the contents of the .tar.xz file.
+2. Extract the Toolchain  
+    After the download is complete, extract the contents of the .tar.xz file.
     ```
     tar -xvf gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Extract%20Toolchain.png"></p>
     <p align="center"><strong>Figure 3.2 Extract Toolchain</strong></p>
     
-3. Move the Toolchain to /opt
-   The /opt directory is a standard location for optional software on Linux. Move the extracted toolchain to this directory.
+3. Move the Toolchain to /opt  
+    The /opt directory is a standard location for optional software on Linux. Move the extracted toolchain to this directory.
     ```
     sudo mv gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi /opt/
     ```
@@ -143,29 +146,33 @@ This chapter describes how to clone the source code using Git.
 To obtain the source code for the VCP-G, enter the **git clone** command. This command creates a copy of the remote repository on your local machine, allowing you to work with the code directly.
 
 Follow these steps to clone the VCP-G source code:
-1. Open Terminal
-   Launch the terminal application on your Ubuntu 22.04 system.
-2. Navigate to the desired directory
-   Choose a suitable location to save the source code. For example, if you want to save the repository in the home directory, use the following command.
+1. Open Terminal  
+    Launch the terminal application on your Ubuntu 22.04 system.
+
+2. Navigate to the desired directory  
+    Choose a suitable location to save the source code. For example, if you want to save the repository in the home directory, use the following command.
     ```
     cd ~
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Navigate%20to%20Desired%20Directory.png"></p>
     <p align="center"><strong>Figure 4.1 Navigate to Desired Directory</strong></p>
-3. Clone the Repository
-   Use the following command to clone the VCP-G source code from the provided git address.
+
+3. Clone the Repository  
+    Use the following command to clone the VCP-G source code from the provided git address.
     ```
     git clone https://github.com/topst-development/FreeRTOS-VCP.git topst-vcp
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Clone%20Repository.png"></p>
     <p align="center"><strong>Figure 4.2 Clone Repository</strong></p>
-4. Navigate to the Cloned Directory
-   After the cloning process is complete, use the following command to navigate to the directory containing the source code.
+
+4. Navigate to the Cloned Directory  
+    After the cloning process is complete, use the following command to navigate to the directory containing the source code.
     ```
     cd topst-vcp
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Navigate%20to%20Cloned%20Directory.png"></p>
     <p align="center"><strong>Figure 4.3 Navigate to Cloned Directory</strong></p>
+
 The VCP-G source code is now available locally for building and development.
 
 </br></br></br>
@@ -216,7 +223,7 @@ To build the source code, follow these steps:
     ```
     cd build/tcc70xx/gcc/
     ```
-2. Run the **make** command.
+2. Run the **make** command.  
     ```
     make
     ```
@@ -224,8 +231,8 @@ To build the source code, follow these steps:
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Run%20make%20Command.png"></p>
     <p align="center"><strong>Figure 5.4 Run make Command </strong></p>
     
-3. Verify the Build Output
-   After the build process is completed, the following output files should be listed in the terminal.
+3. Verify the Build Output  
+    After the build process is completed, the following output files should be listed in the terminal.
     - output/tcc70xx_pflash_boot.rom
     - output/tcc70xx_pflash_boot_2M_ECC.rom
     - output/tcc70xx_pflash_boot_3M_ECC.rom
@@ -258,9 +265,9 @@ Before beginning the download process, ensure that the VCP-G is in a stable posi
 ---
 If you use Ubuntu host, proceed directly to step 3.  
 1. Download usbipd-win
-   usbipd-win project is required to use USB in WSL2.   
+    usbipd-win project is required to use USB in WSL2.   
     Download usbipd-win from https://learn.microsoft.com/ko-kr/windows/wsl/connect-usb#attach-a-usb-device.
-2. Run PowerShell and attach the VCP-G (recognized as a COM port in Windows) to WSL2 
+2. Run PowerShell and attach the VCP-G (recognized as a COM port in Windows) to WSL2  
     Execute the following commands in Windows PowerShell (not Linux).
     ```
     usbipd list
@@ -271,10 +278,10 @@ If you use Ubuntu host, proceed directly to step 3.
     ```
     usbipd attach --wsl --busid <busid>
     ```
-3. Connect USB Type-C Cable
-   Use a USB Type-C cable to connect the VCP-G board to the development host PC.
-4. Verify USB Connection
-   In WSL2, execute the following commands.
+3. Connect USB Type-C Cable  
+    Use a USB Type-C cable to connect the VCP-G board to the development host PC.
+4. Verify USB Connection  
+    In WSL2, execute the following commands.
     ```
     sudo apt-get install usbutils && lsusb
     ```
@@ -290,21 +297,21 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 
 ## 6.3 Download Software on VCP-G
 ---
-1. Set the Board to Download Mode
-   Connect the power cable to the VCP-G board while pressing the FWDN switch.
+1. Set the Board to Download Mode  
+    Connect the power cable to the VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.2 Set Board to Download Mode</strong></p>
     
-2. Execute the Download Command
-   Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
+2. Execute the Download Command  
+    Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
     ```
     sudo ~/topst-vcp/tools/fwdn_vcp/fwdn --fwdn ~/topst-vcp/tools/fwdn_vcp/vcp_fwdn.rom -w output/tcc70xx_pflash_boot_4M_ECC.rom
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Execute%20Download%20Command.png"></p>
     <p align="center"><strong>Figure 6.3 Execute Download Command</strong></p>
     
-3. Reset the board
-   After the download process is completed, disconnect and reconnect the power cable.
+3. Reset the board  
+    After the download process is completed, disconnect and reconnect the power cable.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
     <p align="center"><strong>Figure 6.4 Reset Board</strong></p>
 
@@ -313,14 +320,14 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 ## 6.4 Verify Software on Board
 ---
 After downloading the software to the board, follow these steps to verify that it is operating correctly.
-1. Install minicom
+1. Install minicom  
     ```
     sudo apt install minicom
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Install%20Minicom.png"></p>
     <p align="center"><strong>Figure 6.5 Install minicom</strong></p>
-2. Open a Serial Connection
-   Use the following command to initiate a serial connection.
+2. Open a Serial Connection  
+    Use the following command to initiate a serial connection.
     ```
     minicom -D /dev/ttyUSB0 -b 115200 -8
     ```
@@ -340,37 +347,37 @@ This chapter provides solutions to common issues encountered while working with 
 **Issue:** The ***FWDN*** reports a lack of permission to access the ttyUSB0 device.  
 **Solution:** This issue occurs when your user account (**$USER**) does not have the necessary permissions to access serial devices. To resolve this, add the user account to the dialout group.
 
-1. Modify User Group Permissions
-   Execute the following command.
+1. Modify User Group Permissions  
+    Execute the following command.
     ```
     sudo usermod -aG dialout $USER
     ```
-2. Log Out and Log Back In
-   Log out of the current session and log back in to apply the changes. After this, try accessing the ttyUSB0 device again.
+2. Log Out and Log Back In  
+    Log out of the current session and log back in to apply the changes. After this, try accessing the ttyUSB0 device again.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Modify%20User%20Group%20Permissions.png"></p>
     <p align="center"><strong>Figure 6.8 Modify User Group Permissions </strong></p>
 
 **Issue:** When using minicom, there is no proper communication or irregular behavior with the VCP-G.  
 **Solution:** This issue may occur if minicom’s default flow control setting is set to **hardware**. The hardware flow control must be set to No for proper operation 
-1. Start minicom
-   Use the following command.
+1. Start minicom  
+    Use the following command.
     ```
     minicom -D /dev/ttyUSB0 -b 115200 -8
     ```
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Launch%20Minicom.png"></p>
     <p align="center"><strong>Figure 6.9 Launch minicom</strong></p>
-2. Access the Setup Screen
-   While in minicom, press **[Ctrl+A]** then press **[o]** to open the setup menu.
+2. Access the Setup Screen  
+    While in minicom, press **[Ctrl+A]** then press **[o]** to open the setup menu.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Access%20Set%20up%20Screen.png"></p>
     <p align="center"><strong>Figure 6.10 Access Setup Screen</strong></p>
-3. Navigate to Serial Port Setup
-   Select **Serial port setup** from the options.
-4. Modify Flow Control
-   Inside the serial port setup, press **[F]** to set the hardware flow control to **No**.
+3. Navigate to Serial Port Setup  
+    Select **Serial port setup** from the options.
+4. Modify Flow Control  
+    Inside the serial port setup, press **[F]** to set the hardware flow control to **No**.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Modify%20Flow%20Control.png"></p>
     <p align="center"><strong>Figure 6.11 Modify Flow Control</strong></p>
-5. Exit and Save
-   Exit the setup and save the configuration. minicom should now communicate properly with the VCP-G.
+5. Exit and Save  
+    Exit the setup and save the configuration. minicom should now communicate properly with the VCP-G.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Save%20and%20Exit.png"></p>
     <p align="center"><strong>Figure 6.12 Save and Exit</strong></p>
 

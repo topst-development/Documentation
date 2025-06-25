@@ -103,7 +103,7 @@ Table 1.1 describes the features of the VCP-G.
 
 ## 1.1 Terminology
 ---
-<p align="center"><strong>Table 1.2 Features of VCP-G</strong></p>
+<p align="center"><strong>Table 1.2 Terminology </strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -277,6 +277,7 @@ Table 3.2 describes the connectors of VCP-G (top view).
 </div>
 
 Figure 3.2 shows the bottom view of the VCP-G.  
+
 **Note:** Figure 3.2 currently shows the TOPST_VCP-G_V1.1.1 board. This image will be updated to the TOPST_VCP-G_V2.1.1 board.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/3.2%20TOPST%20VCP-G%20Board%20(Bottom%20View).png"></p>
 <p align="center"><strong>Figure 3.2 VCP-G (Bottom View)</strong></p>
