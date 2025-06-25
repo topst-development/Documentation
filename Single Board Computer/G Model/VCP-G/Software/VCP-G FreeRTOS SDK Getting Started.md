@@ -264,7 +264,7 @@ Before beginning the download process, ensure that the VCP-G is in a stable posi
 ## 6.2 Connect Hardware to Host PC
 ---
 If you use Ubuntu host, proceed directly to step 3.  
-1. Download usbipd-win
+1. Download usbipd-win  
     usbipd-win project is required to use USB in WSL2.   
     Download usbipd-win from https://learn.microsoft.com/ko-kr/windows/wsl/connect-usb#attach-a-usb-device.
 2. Run PowerShell and attach the VCP-G (recognized as a COM port in Windows) to WSL2  
