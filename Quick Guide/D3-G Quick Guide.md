@@ -22,7 +22,6 @@ To use FWDN, connect the D3-G board to the Host PC as follows:
 2. Prepare one USB Type-C cable. 
 
 3. To enter USB boot mode, connect the power cable to the D3-G board while pressing the FWDN switch.
-   - For more details, see **"2. Boot Mode"** under the Hardware section of the sidebar.
 
 4. Connect the USB Type-C cable to the USB Type-C FWDN port on the D3-G board and the Host PC. 
 
