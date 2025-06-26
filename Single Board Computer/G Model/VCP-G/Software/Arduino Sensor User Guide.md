@@ -1896,7 +1896,7 @@ The following table shows pin mapping.
     3. Reconnect the power cable while continuing to hold the FWDN switch.
     4. Release the FWDN switch.  
         If the issue persists, try running the Arduino IDE with administrator privileges.
-4. After a successful upload, check the Arduino IDE output console for the following message:
+4. After successfully uploading the file, check the Arduino IDE output console for the following message:
    
     **Note:** The message should include **vcp_touch.ino.rom**.
     ```
@@ -1927,12 +1927,12 @@ This example demonstrates how the VCP-G board controls 4-wire stepper motor (28B
 
 ### 7.5.2 Circuit
 - Motor Driver
-- IN1 pin is connected to pin 8 on the VCP-G board.
-- IN2 pin is connected to pin 9 on the VCP-G board.
-- IN3 pin is connected to pin 10 on the VCP-G board.
-- IN4 pin is connected to pin 11 on the VCP-G board.
-- (+) pin is connected to 5V on the VCP-G board.
-- (-) pin is connected to GND on the VCP-G board.
+    - IN1 pin is connected to pin 8 on the VCP-G board.
+    - IN2 pin is connected to pin 9 on the VCP-G board.
+    - IN3 pin is connected to pin 10 on the VCP-G board.
+    - IN4 pin is connected to pin 11 on the VCP-G board.
+    - (+) pin is connected to 5V on the VCP-G board.
+    - (-) pin is connected to GND on the VCP-G board.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Step%20Motor%20with%20Motor%20Driver%20Circuit%20Schematic.png"></p>
 <p align="center"><strong>Figure 7.6 Step Motor with Motor Driver Circuit Schematic</strong></p>
