@@ -89,7 +89,7 @@ This toolchain is optimized for the ARM architecture and ensures compatibility w
 ---
 Follow these steps to download, extract, and set up the toolchain:  
 1. Download the Toolchain  
-   Enter **wget** command to download the toolchain form the Linaro website:
+   Enter **wget** command to download the toolchain from the Linaro website:
     ```
     wget https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-eabi/gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz
     ```
@@ -162,7 +162,7 @@ Follow these steps to clone the VCP-G source code:
     ```
     git clone https://github.com/topst-development/FreeRTOS-VCP.git topst-vcp
     ```
-    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Clone%20Repository.png"></p>
+    <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Figure%204.2%20Clone%20Repository.png"></p>
     <p align="center"><strong>Figure 4.2 Clone Repository</strong></p>
 
 4. Navigate to the Cloned Directory  
@@ -183,7 +183,7 @@ After cloning, enter the **ls** command to list the directory contents and revie
 ```
 ls
 
-build  documents  easy-setup_vcp.sh  scripts  sources  tools
+build  documents  easy-setup_vcp.sh  LICENSE  scripts  sources  tools
 ```
 
 </br></br></br></br>
@@ -273,7 +273,7 @@ If you use Ubuntu host, proceed directly to step 3.
     usbipd list
     ```
     ```
-    usbipd bind --busid 4-X
+    usbipd bind --busid <busid>
     ```
     ```
     usbipd attach --wsl --busid <busid>
@@ -299,7 +299,7 @@ If the output displayed in Figure 6.1 appears, the connection is successfully es
 ---
 
 ### 6.3.1 Execute FWDN in Windows Environment
-1. Set the Board to Download Mode
+1. Set the Board to Download Mode  
    Connect the power cable to the VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.2 Set Board to Download Mode</strong></p>
@@ -314,8 +314,9 @@ cp ~/topst-vcp/build/tcc70xx/gcc/output/tcc70xx_pflash_boot_2M_ECC.rom ~/topst-v
 cp -r ~/topst-vcp/tools/fwdn_vcp /mnt/c/
 ```
 
-4. Click fwdn_vcp.bat
+4. Click fwdn_vcp.bat  
     Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
+
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Click%20fwdn_vcp.bat.png"></p>
     <p align="center"><strong>Figure 6.3 Click fwdn_vcp.bat</strong></p>
 ```
@@ -393,12 +394,12 @@ size : 2097152 byte
     <p align="center"><strong>Figure 6.4 Reset Board</strong></p>
 
 ### 6.3.2 Execute FWDN in Linux Environment
-1. Set the Board to Download Mode
+1. Set the Board to Download Mode  
    Connect the power cable to the VCP-G board while pressing the FWDN switch.
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>Figure 6.5 Set Board to Download Mode</strong></p>
     
-2. Execute the Download Command
+2. Execute the Download Command  
    Use ***FWDN*** to download the built software to the 4 MB flash on the VCP-G.
     ```
     sudo ~/topst-vcp/tools/fwdn_vcp/fwdn --fwdn ~/topst-vcp/tools/fwdn_vcp/vcp_fwdn.rom -w output/tcc70xx_pflash_boot_2M_ECC.rom
