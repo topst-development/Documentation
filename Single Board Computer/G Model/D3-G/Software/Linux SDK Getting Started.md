@@ -58,7 +58,24 @@ Refer to Figure 2.1 to check the result (results may vary depending on your syst
 
 <br/><br/>
 
-### 2.1.3 Install SSH and Samba
+### 2.1.3 Set Locale
+
+After executing Ubuntu on WSL, you should set the locale to ensure proper language and regional settings. It is recommended to use en_US.UTF-8. Execute the following commands to use en_US.UTF-8. 
+
+```
+sudo locale-gen en_US.UTF-8 && sudo update-locale LANG=en_US.UTF-8 
+```
+
+After setting locale, you can check the locale type by using the following commands. 
+
+```
+echo 'LANG=en_US.UTF-8' | sudo tee -a /etc/default/locale && \  
+
+echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/default/locale 
+```
+<br/><br/>
+
+### 2.1.4 Install SSH and Samba
 
 After entering Ubuntu, you can use additional utilities such as SSH and Samba for more convenient development environment. SSH and Samba allows you to execute commands on remote computers and copy files to other computers.
  - The following steps require the Host PC to be connected to the network. Check your network condition by using the following commands.
@@ -79,7 +96,7 @@ $ sudo apt install -y net-tools openssh-server samba
 After installing SSH and Samba, configure each program as needed for your environment.
 </br><br/>
 
-### 2.1.4 Install Utilities
+### 2.1.5 Install Utilities
 
 Use the following commands to install all required utilities at once. To use Yocto Project, the following utilities must be installed on the Host PC  (individual computer or development server).
 
@@ -96,7 +113,7 @@ $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
 
 <br/><br/>
 
-### 2.1.5 Install Repo
+### 2.1.6 Install Repo
 
 You can download the D3-G SDK through Android Repo.  
 To install Repo, refer to the following website: https://source.android.com/source/downloading.html.  
@@ -137,7 +154,24 @@ This chapter explains the setup process for Ubuntu as the host OS.
 The following chapters (2.2.2 to 2.2.5) must be executed in the Ubuntu terminal. To open the terminal, use the shortcut: [Ctrl + Alt + T].
 <br/><br/>
 
-### 2.2.2 Install SSH and Samba
+### 2.2.2 Set Locale
+
+After executing Ubuntu on WSL, you should set the locale to ensure proper language and regional settings. It is recommended to use en_US.UTF-8. Execute the following commands to use en_US.UTF-8. 
+
+```
+sudo locale-gen en_US.UTF-8 && sudo update-locale LANG=en_US.UTF-8 
+```
+
+After setting locale, you can check the locale type by using the following commands. 
+
+```
+echo 'LANG=en_US.UTF-8' | sudo tee -a /etc/default/locale && \  
+
+echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/default/locale 
+```
+<br/><br/>
+
+### 2.2.3 Install SSH and Samba
 
 After entering Ubuntu, you can use additional utilities such as SSH and Samba for more convenient development environment. SSH and Samba allows you to execute commands on remote computers and copy files to other computers.
  - The following steps require the Host PC to be connected to the network. Check your network condition by using the following commands
@@ -159,7 +193,7 @@ After installing SSH and Samba, configure each program as needed for your enviro
 
 <br/><br/>
 
-### 2.2.3 Install Utilities
+### 2.2.4 Install Utilities
 
 Use the following commands to install all required utilities at once. To use Yocto Project, the following utilities **must** be installed on the Host PC (individual computer or development server).
 ****
@@ -177,7 +211,7 @@ $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
 
 <br/><br/>
 
-### 2.2.4 Install Repo
+### 2.2.5 Install Repo
 
 You can download the D3-G SDK through Android Repo.  
 To install Repo, refer to the following website: https://source.android.com/source/downloading.html.  
@@ -208,7 +242,7 @@ $ sudo mv ~/bin/repo /usr/bin/repo
 
 <br/><br/>
 
-### 2.2.5 Udev Rules for Telechips USB Device
+### 2.2.6 Udev Rules for Telechips USB Device
 After you execute the following commands, you no longer need to use 'sudo' command when downloading FWDN in Linux.
 ```
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
