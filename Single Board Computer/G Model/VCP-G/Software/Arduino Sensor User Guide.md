@@ -96,7 +96,7 @@ The following table shows pin mapping.
 ### 2.1.3 How to execute
 1. Open the "vcp4LED.ino" file.  
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [01.VCP-G Digital] -> [vcp4LED]**.
+    2. Click **File -> Examples -> 01.VCP-G Digital -> vcp4LED**.
     ```
     /*
     *  TOPST VCP : 4 LED Control
@@ -230,7 +230,7 @@ The following table shows pin mapping.
 ### 2.1.3 How to execute
 1. Open the "vcp4LED_Button.ino" file.
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [01.VCP-G Digital] -> [vcp4LED_Button]**.
+    2. Click **File -> Examples -> 01.VCP-G Digital -> vcp4LED_Button**.
     ```
     /*
     *  TOPST VCP : 4 LED and Button Control
@@ -364,7 +364,7 @@ The following table shows pin mapping.
 ### 3.1.3 How to execute
 1. Open the "AnalogInOutSerial.ino" file.  
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [AnalogInOutSerial]**.
+    2. Click **File -> Examples -> 02.VCP-G Analog -> AnalogInOutSerial**.
     ```
     #include <HardwareSerial.h>
     HardwareSerial Serial;
@@ -426,7 +426,7 @@ The following table shows pin mapping.
 
 ## 3.2 AnalogInput
 ---
-This example program demonstrates how the VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is lower than 3000, the LED turns off. If the sensor value is above 3000, the LED turns on.
+This example program demonstrates how the VCP-G board controls a potentiometer and an LED on the breadboard. It reads a value from an analog input pin and uses this value to control an LED. If the sensor value is lower than 3000, the LED turns on. If the sensor value is above 3000 or higher, the LED turns off.
 </br></br>
 
 ### 3.2.1 Hardware Requirements
@@ -495,7 +495,7 @@ The following table shows pin mapping.
 ### 3.2.3 How to execute
 1. Open the "AnalogInput.ino" file.  
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [AnalogInput]**.
+    2. Click **File -> Examples -> 02.VCP-G Analog -> AnalogInput**.
     ```
     #include <HardwareSerial.h>
     HardwareSerial Serial;
@@ -601,7 +601,7 @@ The following table shows pin mapping.
 ### 3.3.3 How to execute
 1. Open the "pwmFade.ino" file.
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [02.VCP-G Analog] -> [pwmFade]**.
+    2. Click **File -> Examples -> 02.VCP-G Analog -> pwmFade**.
     ```
     /*
     Fade
@@ -730,7 +730,7 @@ The following table shows pin mapping.
 ### 4.1.3 How to execute
 1. Open the "vcpSPI_Dot8x8.ino" file.  
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [03.VCP-G SPI] -> [vcpSPI_Dot8x8]**.
+    2. Click **File -> Examples -> 03.VCP-G SPI -> vcpSPI_Dot8x8**.
     ```
     #include <MAX7219.h>
 
@@ -837,6 +837,7 @@ The following table shows pin mapping.
     ```
 
 **Note:** If you want to use the SPI pin in the center of the VCP-G board, you can use it by referring to the following pin number.
+<p align="center"><strong>Table 4.2 Mapping of the center SPI pin on the VCP-G</strong></p>
 <div align="center">
 	<table>
 	    <tr>
@@ -950,7 +951,7 @@ The following table shows pin mapping.
 ### 5.1.3 How to execute
 1. Open the "vcpI2C_LCD1602.ino" file.  
     1. Open the Arduino IDE  
-    2. Click **[File] -> [Examples] -> [04.VCP-G I2C] -> [vcpI2C_LCD1602]**.
+    2. Click **File -> Examples -> 04.VCP-G I2C -> vcpI2C_LCD1602**.
     ```
     #include <LiquidCrystal_I2C.h>
   
@@ -1017,7 +1018,7 @@ This example program demonstrates how the VCP-G prints the ASCII values of chara
 ### 6.1.3 How to execute
 1. Open the "vcpASCIITable.ino" file.
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [05.VCP-G UART] -> [vcpASCIITable]**.
+    2. Click **File -> Examples -> 05.VCP-G UART -> vcpASCIITable**.
     ```
     /*
     ASCII table
@@ -1174,7 +1175,7 @@ The following table shows pin mapping.
 ### 6.2.3 How to execute
 1. Open the "vcpGraph.ino" file.
     1. Open the Arduino IDE.
-    2. Click **[File] -> [Examples] -> [05.VCP-G UART] -> [vcpGraph]**.
+    2. Click **File -> Examples -> 05.VCP-G UART -> vcpGraph**.
     ```
     /*
     Graph
