@@ -259,7 +259,7 @@ This chapter provides guidance based on the Ubuntu OS installed on the host PC (
 
 ## 3.1 SDK Build Preparation
 ---
-The D3-G Linux SDK is based on Yocto Project 3.1 Dunfell. Therefore, you must configure the Yocto Project environment on the host PC to use the D3-G Linux SDK. To download SDK, source-mirror, and tools, you need to install the required utilities. To build the image smoothly, your PC must have **at least 60 GB of available storage** and **a minimum of 16 GB of RAM**.
+The D3-G Linux SDK is based on Yocto Project 4.0 Kirkstone . Therefore, you must configure the Yocto Project environment on the host PC to use the D3-G Linux SDK. To download SDK, source-mirror, and tools, you need to install the required utilities. To build the image smoothly, your PC must have **at least 60 GB of available storage** and **a minimum of 16 GB of RAM**.
 
 </br><br/>  
 
