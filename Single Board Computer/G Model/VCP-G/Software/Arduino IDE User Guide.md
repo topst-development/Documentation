@@ -42,7 +42,7 @@ To program the VCP-G, you need to add the VCP-G .json file to the Arduino IDE th
 2. Navigate to **File > Preferences**.
 3. In the **"Additional Board Manager URLs"** field, add the following URL:
     ```
-    https://raw.githubusercontent.com/topst-vcp/topst-vcp-board-manager/main/package_topst_vcp_index.json
+    https://raw.githubusercontent.com/topst-development/VCP-Arduino_Board_Manager/develop/package_topst_vcp_index.json
     ```
 4. Click **OK** to save your changes.
 5. Go to **Tools > Board > Boards Manager.**
