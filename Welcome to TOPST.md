@@ -13,9 +13,22 @@ The TOPST Documentation is the place for tutorials and guides for supporting TOP
 
 ## Introduction of TOPST Product
 
-- TOPST P Model Introduction Video : [Introduction Video](https://www.youtube.com/watch?v=H92SjCPh5eA)
+### P Model
 
-- The TOPST G model introduction video is coming soon.
+<br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/others/pmodel_introduction.png" width="800"></p>
+<p align="center" ><strong> Left to right: D3-P, AI-P, VCP-P </strong></p><br/>
+
+- TOPST P Model Introduction Video : [Youtube Link](https://www.youtube.com/watch?v=H92SjCPh5eA)
+- Please refer to the **P Model section** in the Single Board Computer menu.
+
+### G Model
+
+<br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/others/gmodel_introduction.png" width="800"></p>
+<p align="center" ><strong> Left to right: D3-G, AI-G, VCP-G </strong></p><br/>
+
+- The TOPST G Model introduction video will be available soon.
+- Please refer to the **G Model section** in the Single Board Computer menu.
+
 <br/><br/><br/>
 
 ## Problems encountered
