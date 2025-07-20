@@ -19,7 +19,7 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 ## D3-P
 
 #### Image 
-- D3P-TOPST-Yocto-image-v1.0.0 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/D3P-TOPST-Yocto-image-v1.0.0.zip.zip)
+- D3P-TOPST-Yocto-image-v1.0.0 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/D3P-TOPST-Yocto-image-v1.0.0.zip)
 
 - D3P-ubuntu-22.04-topst-weston_desktop-v1.0.0 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Ubuntu/22.04/topst.d3.pre.20240425001.zip)
 
