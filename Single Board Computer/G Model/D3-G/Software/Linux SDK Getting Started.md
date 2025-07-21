@@ -115,8 +115,6 @@ $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
 
 ### 2.1.6 Install Repo
 
-You can download the D3-G SDK through Android Repo.  
-To install Repo, refer to the following website: https://source.android.com/source/downloading.html.  
 If Repo is already installed, you can use it without re-installing.  
 Before installing Repo, ensure that Python version 3.6 or higher is installed.
 
