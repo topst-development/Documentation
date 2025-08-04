@@ -373,7 +373,7 @@ The D3-G supports direct connections of NVMe M.2 SSDs through its PCIe slot.
 #### Step 1. Connect the SSD
 - NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G’s PCIe slot. 
 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="600"></p>
 <p align="center"><strong>Figure 5.4 Connect NVMe M.2 SSD to D3-G board</strong></p><br/>
 
 #### Step 2. Boot the D3-G
