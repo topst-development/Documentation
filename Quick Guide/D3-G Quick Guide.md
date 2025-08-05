@@ -310,7 +310,7 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 <br/><br/><br/>
 
-### 1.4.3
+### 1.4.3 Flashing the D3-G Image with fwdn.sh
 ---
 To download the D3-G image in Linux, execute the following command: "./fwdn.sh".
 
