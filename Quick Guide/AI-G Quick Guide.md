@@ -365,7 +365,7 @@ TOPST AI-G FWDN is complete!
 
 ## 1.6 Execute FWDN in Linux Environment
 
-### 1.6.1
+### 1.6.1 Extracting the AI-G Image
 ---
 Extract the AI-G image that you downloaded in Section 1.5 on your Linux system.
 <br/><br/><br/>
