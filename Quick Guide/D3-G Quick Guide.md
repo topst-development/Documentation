@@ -318,7 +318,7 @@ To download the D3-G image in Linux, execute the following command: "./fwdn.sh".
 $ ./fwdn.sh
 ```
 
-You’re ready to boot the D3-G. Refer to Chapter 1.4 to start communicating with the device.
+You’re ready to boot the D3-G. Refer to Chapter 1.5 to start communicating with the device.
 
 
 <br/><br/><br/><br/>
