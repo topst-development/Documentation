@@ -299,6 +299,7 @@ After you execute the following commands, you no longer need to use 'sudo' comma
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
 $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
+<br/><br/><br/>
 
 ### 1.5 FWDN in Linux Environment
 ---
