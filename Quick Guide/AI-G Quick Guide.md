@@ -364,6 +364,7 @@ TOPST AI-G FWDN is complete!
 <br/><br/>
 
 ## 1.6 Udev Rules for Telechips USB Device
+---
 After you execute the following commands, you no longer need to use 'sudo' command when downloading FWDN in Linux.
 ```
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
