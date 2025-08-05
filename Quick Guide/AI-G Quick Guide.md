@@ -363,7 +363,14 @@ TOPST AI-G FWDN is complete!
 ```
 <br/><br/>
 
-## 1.6 Execute FWDN in Linux Environment 
+## 1.6 Udev Rules for Telechips USB Device
+After you execute the following commands, you no longer need to use 'sudo' command when downloading FWDN in Linux.
+```
+$ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
+$ sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+## 1.7 Execute FWDN in Linux Environment 
 
 In a Linux environment, you can download AI-G image by entering the following command. 
 
@@ -376,7 +383,7 @@ After ***FWDN*** is completed, remove the USB Type-C cable from the FWDN port an
 
 
 
-## 1.7 AI-G board Connection with UART
+## 1.8 AI-G board Connection with UART
 --- 
 Perform the following steps and verify that the firmware download is successfully completed by using the UART connection.  
 

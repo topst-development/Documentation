@@ -293,7 +293,14 @@ C:\d3g-ubuntu-headless>fwdn.exe -w "d3g.fai" --storage emmc --area user
 
 <br/><br/><br/>
 
-### 1.4 FWDN in Linux Environment
+### 1.4 Udev Rules for Telechips USB Device
+After you execute the following commands, you no longer need to use 'sudo' command when downloading FWDN in Linux.
+```
+$ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
+$ sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+### 1.5 FWDN in Linux Environment
 ---
 To download the D3-G image in Linux, execute the following command: "./fwdn.sh".
 
@@ -306,13 +313,13 @@ You’re ready to boot the D3-G. Refer to Chapter 1.4 to start communicating wit
 
 <br/><br/><br/><br/>
 
-### 1.5 Connecting the D3-G board with a host PC
+### 1.6 Connecting the D3-G board with a host PC
 ---
 This chapter explains how to connect the host PC to the D3-G board through UART for firmware download and serial communication.
 
 <br/><br/><br/>
 
-### 1.6 D3-G board Connection with UART 
+### 1.7 D3-G board Connection with UART 
 ---
 Follow these steps and verify that the firmware download is successfully completed by using the UART connection. 
 
