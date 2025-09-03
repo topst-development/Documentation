@@ -1,4 +1,4 @@
-# D3G Release Note - v2.0.0
+# D3G Release Note - v1.1.0
 
 ## New Features
 - Ubuntu Gnome Desktop is enabled.
