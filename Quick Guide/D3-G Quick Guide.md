@@ -158,13 +158,13 @@ C:\output_d3g.fwdn>fwdn.exe -w "output_d3g.fai" --storage emmc --area user
 ** When writing FAI files without low-format, there may be garbage values in partition where data is not written.
 ```
 
-### 1.3.2 D3-G Ubuntu
+### 1.3.2 D3-G Ubuntu Desktop
 ---
 1. Go to Downloads Page
 
-2. Download D3-G Ubuntu Image
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20Ubuntu%20Image.png" width="550"></p>
-<p align="center"><strong>Figure 1.6 Download D3-G Ubuntu Image</strong></p> <br/>
+2. Download D3-G Ubuntu Desktop Image
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20Ubuntu%20Desktop%20Image.png" width="550"></p>
+<p align="center"><strong>Figure 1.6 Download D3-G Ubuntu Desktop Image</strong></p> <br/>
 
 3. Click fwdn.bat. The “fwdn.bat” is an executable file that automatically downloads firmware by using ***FWDN V8***. 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_ubuntu.bat.png" width="550"></p>
