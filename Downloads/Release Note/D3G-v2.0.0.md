@@ -1,4 +1,4 @@
-# Release Note - v2.0.0
+# D3G Release Note - v2.0.0
 
 ## New Features
 - Ubuntu Gnome Desktop is enabled.
@@ -26,7 +26,7 @@
 	  </tr>
 	  <tr>
 	    <td rowspan="16">RealTek</td>
-        <td>rtl8192<td>
+        <td>rtl8192</td>
 	  </tr>
 	  <tr>
 	    <td>rtl8723</td>
@@ -110,7 +110,7 @@
 	  </tr>
 	  <tr>
 	    <td>RealTek</td>
-        <td>rtl88x2bu (8812bu, 8822bu)<td>
+        <td>rtl88x2bu (8812bu, 8822bu)</td>
 	  </tr>
 	  <tr>
 	    <td>MediaTek</td>
