@@ -8,7 +8,7 @@
 - [manifests](https://github.com/topst-development/manifests/tree/release/1.1.0)
 
 ## New Features
-- Ubuntu Gnome Desktop is enabled.
+- Now supports Ubuntu Gnome Desktop.
 - VPU-HEVC encoder/decoder can be utilized by gstreamer
 - Activated Kernel features
     - netfilter for docker
@@ -30,6 +30,8 @@
 ## Guides
 - VLC Player
     - video output should be set to **'X11 video output(XCB)'** in property settings before playing contents.
+- firefox
+	- reinstall Firefox by 'sudo apt install --reinstall firefox' if required.
 
 ## Appendix.
 <p align="center"><strong>Table 1.1 USB Bluetooth dongles</strong></p>
