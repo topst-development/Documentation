@@ -1,4 +1,11 @@
-# D3G Release Note - v1.1.0
+# D3-G Release Note - v1.1.0
+
+## Updated repositories
+- [kernel-5.10](https://github.com/topst-development/kernel-5.10/tree/release/d3/1.1.0)
+- [meta-topst](https://github.com/topst-development/meta-topst/tree/release/1.1.0)
+- [meta-topst-bsp](https://github.com/topst-development/meta-topst-bsp/tree/release/1.1.0)
+- [tools](https://github.com/topst-development/tools/tree/release/1.1.0)
+- [manifests](https://github.com/topst-development/manifests/tree/release/1.1.0)
 
 ## New Features
 - Ubuntu Gnome Desktop is enabled.
@@ -8,7 +15,7 @@
     - swap partition
     - USB wifi dongle drivers
     - USB BT dongle drivers
-
+ 
 ## Improvement
 - High-speed IO bus outstanding param has been adjusted for PCIe data transfer.
 
