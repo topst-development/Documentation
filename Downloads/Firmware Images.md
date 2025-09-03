@@ -1,4 +1,4 @@
-# Downloads
+# Firmware Downloads
 ---
 Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 <br/><br/>
