@@ -2,7 +2,7 @@
 
 ## New Features
 - Ubuntu Gnome Desktop is enabled.
-- VPU-HEVC encoder/decoders can be utilized by gstreamer
+- VPU-HEVC encoder/decoder can be utilized by gstreamer
 - Activated Kernel features
     - netfilter for docker
     - swap partition
@@ -14,7 +14,7 @@
 
 ## Guides
 - VLC Player
-    - video output should be set to 'xcb' in property settings before playing contents.
+    - video output should be set to **'X11 video output(XCB)'** in property settings before playing contents.
 
 ## Appendix.
 <p align="center"><strong>Table 1.1 USB Bluetooth dongles</strong></p>
