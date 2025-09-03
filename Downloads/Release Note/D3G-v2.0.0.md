@@ -9,8 +9,16 @@
     - USB wifi dongle drivers
     - USB BT dongle drivers
 
+## Improvement
+- High-speed IO bus outstanding param has been adjusted for PCIe data transfer.
+
 ## Bug Fixes
 - Memory Leakage from PowerVR GPU Driver
+
+## Known Issues
+- VPU-HEVC encoder doesn't support encoding content into 4K yet (will support in the next release)
+- warm reboot takes long (around 40 seconds) from time to time when sdcard is inserted.
+- external camera, connected to MIPI, support up to 30fps for now (will support up to 60fps in the next release)
 
 ## Guides
 - VLC Player
