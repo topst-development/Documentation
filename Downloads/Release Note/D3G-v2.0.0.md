@@ -18,7 +18,7 @@
 ## Known Issues
 - VPU-HEVC encoder doesn't support encoding content into 4K yet (will support in the next release)
 - warm reboot takes long (around 40 seconds) from time to time when sdcard is inserted.
-- external camera, connected to MIPI, support up to 30fps for now (will support up to 60fps in the next release)
+- external camera, connected to MIPI, supports up to 30fps for now (will support up to 60fps in the next release)
 
 ## Guides
 - VLC Player
