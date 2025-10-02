@@ -384,7 +384,7 @@ $ cd topst-sdk
 2. Execute the following command to initialize the repository.
 
 ```
-$ repo init -u https://github.com/topst-development/manifests.git -b release/1.1.0 -m linux_yp4.0_topst.xml
+$ repo init -u https://github.com/topst-development/manifests.git -b release/1.2.0 -m linux_yp4.0_topst.xml
 ```
 
 After running the command, the following output is displayed.
