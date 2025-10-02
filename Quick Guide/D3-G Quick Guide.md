@@ -56,7 +56,7 @@ Install the Vendor Telechips Certification (VTC) driver (found on [telechips dri
 1. Go to Downloads Page
 
 2. Download D3-G Yocto Image
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20Yocto%20Image.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20v1.2.0%20Yocto%20Image.png" width="550"></p>
 <p align="center"><strong>Figure 1.4 Download D3-G Yocto Image</strong></p> <br/>
 
 3. Click fwdn.bat. The “fwdn.bat” is an executable file that automatically downloads firmware by using ***FWDN V8***. 
@@ -163,7 +163,7 @@ C:\output_d3g.fwdn>fwdn.exe -w "output_d3g.fai" --storage emmc --area user
 1. Go to Downloads Page
 
 2. Download D3-G Ubuntu Desktop Image
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20Ubuntu%20Desktop%20Image.png" width="550"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20v1.2.0%20Ubuntu%20Desktop%20Image.png" width="550"></p>
 <p align="center"><strong>Figure 1.6 Download D3-G Ubuntu Desktop Image</strong></p> <br/>
 
 3. Click fwdn.bat. The “fwdn.bat” is an executable file that automatically downloads firmware by using ***FWDN V8***. 
