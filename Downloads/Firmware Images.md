@@ -7,12 +7,18 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 
 #### Image
 ##### Yocto
+###### v1.2.0
+- D3G-TOPST-Yocto-image-v1.2.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.2.0/d3g-yp4-v1.2.0-r01.zip)
 ###### v1.1.0
 - D3G-TOPST-Yocto-image-v1.1.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.1.0/d3g-yp4-v1.1.0-r01.zip)
 ###### v1.0.0
 - D3G-TOPST-Yocto-image-v1.0.0 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/D3G-TOPST-Yocto-image-v1.0.0.zip)
 
 ##### Ubuntu
+###### v1.2.0
+- D3G-ubuntu-22.04-topst-gnome_desktop-v1.2.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Ubuntu/22.04/v1.2.0/d3g-ubuntu-22.04-gnome-v1.2.0-r01.zip)  
+
+- D3G-ubuntu-22.04-topst-headless-v1.2.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Ubuntu/22.04/v1.2.0/d3g-ubuntu-headless-v1.2.0-r01.zip)
 ###### v1.1.0
 - D3G-ubuntu-22.04-topst-gnome_desktop-v1.1.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Ubuntu/22.04/v1.1.0/d3g-ubuntu-22.04-gnome_desktop-v1.1.0-r01.zip)
 
