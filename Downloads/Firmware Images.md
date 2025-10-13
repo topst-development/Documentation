@@ -29,7 +29,7 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 - D3G-ubuntu-22.04-topst-headless-v1.0.0 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Ubuntu/22.04/ubuntu-22.04-topst-headless-v1.0.0.zip)
 
 #### Schematic
-- [v2.2.4, 2025-05-15, 968 KB](https://drive.google.com/file/d/1l9x0NgVwzv3BHJeC89vAJ408oyVOUxcN/view?usp=drive_link)
+- [v2.2.4, 2025-05-15, 968 KB](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Schematic/TOPST_D3-G_V224_251002.pdf)
 <br/><br/>
 
 ## D3-P
@@ -47,7 +47,7 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 #### Image
 - AIG-TOPST-Yocto-image-v1.0.0 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/AIG-TOPST-Yocto-image-v1.0.0.zip)
 #### Schematic
-- [v2.2.4, 2025-05-20, 811 KB](https://drive.google.com/file/d/13xBPH0fMfpG7h9z0GIvlOoeMTBa_c_Fx/view?usp=drive_link)
+- [v2.2.4, 2025-05-20, 811 KB](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Schematic/TOPST_AI-G_V224_251002.pdf)
 <br/><br/>
 
 
