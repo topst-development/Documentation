@@ -106,9 +106,9 @@ $ sudo apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib buil
 
 $ sudo apt-get install -y socat cpio python3 python3-pip python3-pexpect xz-utils debianutils
 
-$ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint
+$ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa-dev libsdl1.2-dev pylint
 
-$ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
+$ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip lz4
 ```
 
 <br/><br/>
@@ -202,9 +202,9 @@ $ sudo apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib buil
 
 $ sudo apt-get install -y socat cpio python3 python3-pip python3-pexpect xz-utils debianutils
 
-$ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint
+$ sudo apt-get install -y iputils-ping python3-git python3-jinja2 libegl1-mesa-dev libsdl1.2-dev pylint
 
-$ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip
+$ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip lz4
 ```
 
 <br/><br/>
