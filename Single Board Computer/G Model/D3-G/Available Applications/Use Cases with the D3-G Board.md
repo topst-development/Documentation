@@ -87,6 +87,9 @@ if not cap.isOpened():
 
 print("Press 'q' to exit the camera window.")
 
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
 while True:
     ret, frame = cap.read()
     if not ret:
