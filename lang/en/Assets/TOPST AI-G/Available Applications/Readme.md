@@ -1,0 +1,1 @@
+This folder contains AI-G available applications Figure files.
