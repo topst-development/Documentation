@@ -58,7 +58,7 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 - AIG-TOPST-Yocto-image-v1.0.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/AIG-TOPST-Yocto-image-v1.0.0.zip)
 ##### Ubuntu
 ###### v1.0.0
-- AIG-ubuntu-22.04-topst-headless-v1.0.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/AIG-TOPST-Yocto-image-v1.0.0.zip)
+- AIG-ubuntu-22.04-topst-headless-v1.0.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Ubuntu/22.04/v1.0.0/aig-ubuntu-headless-v1.0.0-r01.zip)
 #### Schematic
 - [v2.2.4, 2025-05-20, 811 KB](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Schematic/TOPST_AI-G_V224_251002.pdf)
 <br/><br/>
