@@ -15,7 +15,7 @@
 - supports h.265 encoder
 - supports a basic camera isp tuning tool
 - supports the PIv2 camera via build configuration
-- supports pcie-to-usb external board
+- supports PCIe-to-usb external board
 
 ## Improvement
 - eliminated flickering from tc-nn-app
