@@ -580,7 +580,27 @@ For the initial build, follow the steps below to enable the IMX219 and proceed w
     ```
     $ bitbake telechips-topst-image
     ```
-    
+##### 4.1.2.2.2 Enable IMX219 After the Build Has Already Been Completed
+The existing build is configured with the OV5647 sensor enabled by default. Follow the steps below to enable the IMX219.
+1. Open the local.conf file located at the path below
+    ```
+    ${build_dir}/build/d3-g-topst-main/conf/local.conf
+    ```
+2. Comment out the TOPST_CAM_MODULE entry for ov5647 and enable the entry for imx219
+    ```
+    #TOPST_CAM_MODULE = "ov5647"
+    TOPST_CAM_MODULE = "imx219"
+    ```
+3. Run a cleansstate operation for isp-server and isp-firmware
+    ```
+    $ bitbake -c cleansstate isp-firmware
+    $ bitbake -c cleansstate isp-server
+    ```
+4. Run the build process
+    ```
+    $ bitbake telechips-topst-image
+
+
 #### 4.1.2.3 IMX219 Resolution Configuration in Yocto: Driver
 To modify the resolution of the IMX219 sensor during the Yocto build process, follow the instructions below.
 
@@ -1001,7 +1021,7 @@ $ ./stitch-fai-ai.sh
 
 Afterwards, flash the generated output_aig.fai to the board using FWDN, and you will be able to use the OV5647 sensor with the desired resolution.
 
-### 4.1.4 AI-G IMX219 Sensor User Guide
+### 4.1.4 AI-G IMX219 Sensor Setup Guide
 #### 4.1.4.1 IMX219 Sensor Overview
 ##### 4.1.4.1.1 Introduction
 The IMX219 is a high-performance 8-megapixel CMOS image sensor from Sony, well-known for delivering excellent image quality, low power consumption, and stable capture performance in compact camera modules. It is also the sensor used in the Raspberry Pi Camera Module v2 and is widely adopted in embedded vision systems, robotics, and AI-based camera applications.
