@@ -24,7 +24,7 @@
 
 ## Guides
  - VLC Player
-   Before playing contents, the video output should be set to 'X11 video output(XCB)' in the preference.
+   - Before playing contents, the video output should be set to 'X11 video output(XCB)' in the preference.
  - Vulkan driver
-   run 'vkcube' command to execute the vulkan example.
-   refer to [https://github.com/krh/vkcube.git](https://github.com/krh/vkcube.git) to learn how to program your own vulkan application.
+   - run 'vkcube' command to execute the vulkan example.
+   - refer to [https://github.com/krh/vkcube.git](https://github.com/krh/vkcube.git) to learn how to program your own vulkan application.
