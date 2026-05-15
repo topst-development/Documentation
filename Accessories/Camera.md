@@ -1,3 +1,93 @@
+## Supported Camera Modules
+<div align="center">
+    <table>
+        <tr>
+            <td colspan="8" align="center"><strong>Board</strong></td>
+            <td align="center"><strong>Model</strong></td>
+            <td align="center"><strong>Sensor</strong></td>
+            <td align="center"><strong>Sensor Resolution</strong></td>
+            <td align="center"><strong>Default Resolution</strong></td>
+            <td align="center"><strong>Frame Rate</strong></td>
+            <td align="cebter"><strong>Default Video Path</strong></td>
+            <td align="cebter"><strong>Remark</strong></td>
+        </tr>
+        <tr>
+            <td rowspan="4" align="center"><strong>D3-G</strong></td>
+            <td colspan="8" align="center">Arducam OV5647</td>
+            <td align="center">OV5647</td>
+            <td align="center">2592x1944 pixels(5MP)</td>
+            <td align="center">1296x972</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video0</td>
+            <td align="center">Default selected camera</td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">Raspberry Pi Camera v1</td>
+            <td align="center">OV5647</td>
+            <td align="center">2592x1944 pixels(5MP)</td>
+            <td align="center">1296x972</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video0</td>
+            <td align="center">Default selected camera</td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">Raspberry Pi Camera v2</td>
+            <td align="center">IMX219</td>
+            <td align="center">3280x2464 pixels(8MP)</td>
+            <td align="center">1640x1232</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video0</td>
+            <td align="center">Disabled by default. See the guide below to enable.</td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">SEKONIX CXD5700</td>
+            <td align="center">CXD5700</td>
+            <td align="center">1920x1080 pixels(2MP)</td>
+            <td align="center">1920x1080</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video0,1,2,3</td>
+            <td align="center">Disabled by default. See the guide below to enable.</td>
+        </tr>
+        <tr>
+            <td rowspan="4" align="center"><strong>AI-G</strong></td>
+            <td colspan="8" align="center">Arducam OV5647</td>
+            <td align="center">OV5647</td>
+            <td align="center">2592x1944 pixels(5MP)</td>
+            <td align="center">1296x972</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video2</td>
+            <td align="center">Default selected camera</td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">Raspberry Pi Camera v1</td>
+            <td align="center">OV5647</td>
+            <td align="center">2592x1944 pixels(5MP)</td>
+            <td align="center">1296x972</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video2</td>
+            <td align="center">Default selected camera</td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">Raspberry Pi Camera v2</td>
+            <td align="center">IMX219</td>
+            <td align="center">3280x2464 pixels(8MP)</td>
+            <td align="center">1640x1232</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video2</td>
+            <td align="center">Disabled by default. See the guide below to enable.</td>
+        </tr>
+        <tr>
+            <td colspan="8" align="center">SEKONIX CXD5700</td>
+            <td align="center">CXD5700</td>
+            <td align="center">1920x1080 pixels(2MP)</td>
+            <td align="center">1920x1080</td>
+            <td align="center">30FPS</td>
+            <td align="center">/dev/video0,1,2</td>
+            <td align="center">Disabled by default. See the guide below to enable.</td>
+        </tr>
+    </table>
+</div>
+
 # 1. Introduction
 This guide is designed to help engineers quickly bring up camera inputs on the TOPST D3-G and AI-G platforms and perform rapid preliminary validation for AI vision workloads. It aims to reduce the complexity of initial setup including hardware connections, device tree configuration, drivers, and pipeline preparation and provide a clear, reproducible path from power-on to the first video frame and ultimately the first inference.
 
