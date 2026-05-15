@@ -8,82 +8,82 @@
             <td align="center"><strong>Sensor Resolution</strong></td>
             <td align="center"><strong>Default Resolution</strong></td>
             <td align="center"><strong>Frame Rate</strong></td>
-            <td align="cebter"><strong>Default Video Path</strong></td>
-            <td align="cebter"><strong>Remark</strong></td>
+            <td align="center"><strong>Default Video Path</strong></td>
+            <td align="center"><strong>Remark</strong></td>
         </tr>
         <tr>
             <td rowspan="4" align="center"><strong>D3-G</strong></td>
-            <td colspan="8" align="center">Arducam OV5647</td>
-            <td align="center">OV5647</td>
-            <td align="center">2592x1944 pixels(5MP)</td>
-            <td align="center">1296x972</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video0</td>
-            <td align="center">Default selected camera</td>
+            <td colspan="8">Arducam OV5647</td>
+            <td>OV5647</td>
+            <td>2592x1944 pixels(5MP)</td>
+            <td>1296x972</td>
+            <td>30FPS</td>
+            <td>/dev/video0</td>
+            <td>Default selected camera</td>
         </tr>
         <tr>
-            <td colspan="8" align="center">Raspberry Pi Camera v1</td>
-            <td align="center">OV5647</td>
-            <td align="center">2592x1944 pixels(5MP)</td>
-            <td align="center">1296x972</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video0</td>
-            <td align="center">Default selected camera</td>
+            <td colspan="8">Raspberry Pi Camera v1</td>
+            <td>OV5647</td>
+            <td>2592x1944 pixels(5MP)</td>
+            <td>1296x972</td>
+            <td>30FPS</td>
+            <td>/dev/video0</td>
+            <td>Default selected camera</td>
         </tr>
         <tr>
-            <td colspan="8" align="center">Raspberry Pi Camera v2</td>
-            <td align="center">IMX219</td>
-            <td align="center">3280x2464 pixels(8MP)</td>
-            <td align="center">1640x1232</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video0</td>
-            <td align="center">Disabled by default. See the guide below to enable.</td>
+            <td colspan="8">Raspberry Pi Camera v2</td>
+            <td>IMX219</td>
+            <td>3280x2464 pixels(8MP)</td>
+            <td>1640x1232</td>
+            <td>30FPS</td>
+            <td>/dev/video0</td>
+            <td>Disabled by default. See the guide below to enable.</td>
         </tr>
         <tr>
-            <td colspan="8" align="center">SEKONIX CXD5700</td>
-            <td align="center">CXD5700</td>
-            <td align="center">1920x1080 pixels(2MP)</td>
-            <td align="center">1920x1080</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video0,1,2,3</td>
-            <td align="center">Disabled by default. See the guide below to enable.</td>
+            <td colspan="8">SEKONIX CXD5700</td>
+            <td>CXD5700</td>
+            <td>1920x1080 pixels(2MP)</td>
+            <td>1920x1080</td>
+            <td>30FPS</td>
+            <td>/dev/video0,1,2,3</td>
+            <td>Disabled by default. See the guide below to enable.</td>
         </tr>
         <tr>
             <td rowspan="4" align="center"><strong>AI-G</strong></td>
-            <td colspan="8" align="center">Arducam OV5647</td>
-            <td align="center">OV5647</td>
-            <td align="center">2592x1944 pixels(5MP)</td>
-            <td align="center">1296x972</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video2</td>
-            <td align="center">Default selected camera</td>
+            <td colspan="8">Arducam OV5647</td>
+            <td>OV5647</td>
+            <td>2592x1944 pixels(5MP)</td>
+            <td>1296x972</td>
+            <td>30FPS</td>
+            <td>/dev/video2</td>
+            <td>Default selected camera</td>
         </tr>
         <tr>
-            <td colspan="8" align="center">Raspberry Pi Camera v1</td>
-            <td align="center">OV5647</td>
-            <td align="center">2592x1944 pixels(5MP)</td>
-            <td align="center">1296x972</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video2</td>
-            <td align="center">Default selected camera</td>
+            <td colspan="8">Raspberry Pi Camera v1</td>
+            <td>OV5647</td>
+            <td>2592x1944 pixels(5MP)</td>
+            <td>1296x972</td>
+            <td>30FPS</td>
+            <td>/dev/video2</td>
+            <td>Default selected camera</td>
         </tr>
         <tr>
-            <td colspan="8" align="center">Raspberry Pi Camera v2</td>
-            <td align="center">IMX219</td>
-            <td align="center">3280x2464 pixels(8MP)</td>
-            <td align="center">1640x1232</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video2</td>
-            <td align="center">Disabled by default. See the guide below to enable.</td>
+            <td colspan="8">Raspberry Pi Camera v2</td>
+            <td>IMX219</td>
+            <td>3280x2464 pixels(8MP)</td>
+            <td>1640x1232</td>
+            <td>30FPS</td>
+            <td>/dev/video2</td>
+            <td>Disabled by default. See the guide below to enable.</td>
         </tr>
         <tr>
-            <td colspan="8" align="center">SEKONIX CXD5700</td>
-            <td align="center">CXD5700</td>
-            <td align="center">1920x1080 pixels(2MP)</td>
-            <td align="center">1920x1080</td>
-            <td align="center">30FPS</td>
-            <td align="center">/dev/video0,1,2</td>
-            <td align="center">Disabled by default. See the guide below to enable.</td>
+            <td colspan="8">SEKONIX CXD5700</td>
+            <td>CXD5700</td>
+            <td>1920x1080 pixels(2MP)</td>
+            <td>1920x1080</td>
+            <td>30FPS</td>
+            <td>/dev/video0,1,2</td>
+            <td>Disabled by default. See the guide below to enable.</td>
         </tr>
     </table>
 </div>
