@@ -1,32 +1,32 @@
 # 1. はじめに
 ---
-このドキュメントでは、ホスト環境のセットアップ、SDKのビルド、ファームウェアダウンローダーの使用、Ubuntuのダウンロードなど、D3-G SDKをビルドするためのガイドラインを提供します。
+本書では、ホスト環境の設定、SDK のビルド、ファームウェアダウンローダーの使用、Ubuntu のダウンロードなど、D3-G SDK をビルドするためのガイドラインを説明します。  
 
-このドキュメントには、以下の情報が含まれています。
-- ホスト環境の設定
-- イメージビルドガイド
-- ファームウェアダウンロードガイド
-- D3-GボードとPCの接続
+本書には次の内容が含まれています。 
+- ホスト環境の設定  
+- イメージビルドガイド  
+- ファームウェアダウンロードガイド 
+- D3-G ボードと PC の接続
 
 <br/><br/><br/><br/>
 
 # 2. ホスト環境の設定
 ---
-この章では、ホストPC環境をセットアップする方法について説明します。WindowsとUbuntuのガイドは別々に記載されています。
+この章では、ホスト PC 環境を設定する方法について、Windows と Ubuntu に分けて説明します。
 </br><br/><br/>
 
-## 2.1 Windows環境
+## 2.1 Windows 環境 
 ---
-このドキュメントでは、Windows PCでLinuxを使用するためにWindows Subsystem for Linux (WSL) をセットアップする方法について説明します。
-D3-G Linux SDKはYocto Projectに基づいているため、D3-G SDKのLinuxバージョンはYocto Projectに従います。
-別のバージョンのLinuxをインストールすることもできますが、このドキュメントでは、Ubuntu 22.04に基づいたD3-G Linux SDKについて説明します。
-ホストOSがUbuntuの場合は、2.2章に進んでください。
+本書では、Windows PC で Linux を使用するために Windows Subsystem for Linux (WSL) を設定する方法を説明します。
+D3-G Linux SDK は Yocto Project をベースとしているため、D3-G SDK の Linux バージョンは Yocto Project に準拠します。
+別のバージョンの Linux をインストールすることもできますが、本書では Ubuntu 22.04 をベースとした D3-G Linux SDK について説明します。
+ホスト OS が Ubuntu の場合は、第 2.2 章に進んでください。
 
 </br><br/>
 
-### 2.1.1 WSL2 Ubuntuのインストール
-1. "**管理者権限で実行**"でWindows PowerShellを実行します。
-2. WSL2システムを有効にします。
+### 2.1.1 WSL2 Ubuntu のインストール
+1. "**管理者権限で実行**" で Windows PowerShell を実行します。
+2. WSL2 システムを有効にします。
     ```
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     ```
@@ -34,39 +34,39 @@ D3-G Linux SDKはYocto Projectに基づいているため、D3-G SDKのLinuxバ�
     ```
     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     ```
-4. WSL 2をデフォルトバージョンに設定します。
+4. WSL 2 をデフォルトバージョンに設定します。
     ```
     wsl --set-default-version 2
     ```
-5. Microsoft StoreでUbuntu 22.04.3 LTSを検索してダウンロードします。
+5. Microsoft Store で Ubuntu 22.04.3 LTS を検索してダウンロードします。
 
-    * Linuxカーネル更新パッケージをダウンロードする必要がある場合は、[こちら](https://learn.microsoft.com/ko-kr/windows/wsl/install-manual)から最新のパッケージをダウンロードしてください。
+    * Linux カーネル更新パッケージをダウンロードする必要がある場合は、[こちら](https://learn.microsoft.com/ko-kr/windows/wsl/install-manual)から最新のパッケージをダウンロードしてください。
 
-6. Ubuntuのインストール中に任意のユーザー名を選択します。
+6. Ubuntu のインストール中に任意のユーザー名を指定します。
 </br><br/>
 
-### 2.1.2 WSL2経由でのUbuntuへのアクセス
-Windowsコマンドプロンプトを開き、次のコマンドを入力してUbuntuにアクセスします。
-Ubuntuにアクセスすると、デフォルトで/mnt/c/Users/[username]ディレクトリで起動します。
+### 2.1.2 WSL2 による Ubuntu へのアクセス
+Windows のコマンドプロンプトを開き、次のコマンドを入力して Ubuntu にアクセスします。
+Ubuntu にアクセスすると、デフォルトで /mnt/c/Users/[username] ディレクトリから開始します。
 ```
-wsl  // ubuntuにアクセス
-ls   // ディレクトリ内のコンテンツを確認
+wsl  // access ubuntu 
+ls   // check contents in your directory
 ```
-結果を確認するには、図 2.1を参照してください (結果はシステムによって異なる場合があります)。
+結果を確認するには図 2.1 を参照してください (結果はシステムによって異なる場合があります)。
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/1.1%20wsl%20linux.png" width="500"></p>
-<p align="center"><strong>図 2.1 WSL2スクリーンショット </strong></p>
+<p align="center"><strong>図 2.1 WSL2 スクリーンショット </strong></p>
 
 <br/><br/>
 
 ### 2.1.3 ロケールの設定
 
-WSLでUbuntuを実行した後、適切な言語と地域の設定を確保するためにロケールを設定する必要があります。en_US.UTF-8を使用することをお勧めします。en_US.UTF-8を使用するには、次のコマンドを実行します。
+WSL で Ubuntu を実行した後は、言語および地域の設定が正しく適用されるようにロケールを設定する必要があります。en_US.UTF-8 の使用を推奨します。en_US.UTF-8 を使用するには、次のコマンドを実行してください。 
 
 ```
 sudo locale-gen en_US.UTF-8 && sudo update-locale LANG=en_US.UTF-8 
 ```
 
-ロケールを設定した後、次のコマンドを使用してロケールタイプを確認できます。
+ロケールを設定した後は、次のコマンドを使用してロケールの種類を確認できます。 
 
 ```
 echo 'LANG=en_US.UTF-8' | sudo tee -a /etc/default/locale && \  
@@ -75,30 +75,30 @@ echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/default/locale
 ```
 <br/><br/>
 
-### 2.1.4 SSHとSambaのインストール
+### 2.1.4 SSH と Samba のインストール
 
-Ubuntuに入った後、SSHやSambaなどの追加ユーティリティを使用して、より便利な開発環境を構築できます。SSHとSambaを使用すると、リモートコンピュータでコマンドを実行したり、他のコンピュータにファイルをコピーしたりできます。
- - 次の手順では、ホストPCがネットワークに接続されている必要があります。次のコマンドを使用してネットワークの状態を確認してください。
+Ubuntu にアクセスした後は、SSH や Samba などの追加ユーティリティを使用して、より便利な開発環境を構築できます。SSH と Samba を使用すると、リモートコンピュータでコマンドを実行したり、他のコンピュータにファイルをコピーしたりできます。
+ - 以下の手順では、ホスト PC がネットワークに接続されている必要があります。次のコマンドを使用してネットワークの状態を確認してください。
   ```
   $ sudo apt-get update
   $ sudo apt-get install -y net-tools
   $ ifconfig 
   ```
 
-SSHとSambaがすでにインストールされている場合、またはそれらを使用しない場合は、この章をスキップできます。
+SSH と Samba が既にインストールされている場合、または使用しない場合は、この章をスキップできます。
 
-次のコマンドを使用して、net-tools、SSH、Sambaをインストールします。
+次のコマンドを使用して net-tools、SSH、Samba をインストールします。
 
 ```
 $ sudo apt-get update 
 $ sudo apt install -y net-tools openssh-server samba
 ```
-SSHとSambaをインストールした後、環境に合わせて各プログラムを構成します。
+SSH と Samba をインストールした後、ご使用の環境に合わせて各プログラムを設定してください。
 </br><br/>
 
 ### 2.1.5 ユーティリティのインストール
 
-次のコマンドを使用して、必要なすべてのユーティリティを一度にインストールします。Yocto Projectを使用するには、ホストPC (個々のコンピュータまたは開発サーバー) に次のユーティリティをインストールする必要があります。
+次のコマンドを使用して、必要なユーティリティを一度にすべてインストールします。Yocto Project を使用するには、ホスト PC (個人のコンピュータまたは開発サーバー) に以下のユーティリティがインストールされている必要があります。
 
 
 ```
@@ -113,22 +113,22 @@ $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip lz4
 
 <br/><br/>
 
-### 2.1.6 Repoのインストール
+### 2.1.6 Repo のインストール
 
-Repoがすでにインストールされている場合は、再インストールせずに使用できます。
-Repoをインストールする前に、Pythonバージョン3.6以降がインストールされていることを確認してください。
+Repo が既にインストールされている場合は、再インストールせずにそのまま使用できます。  
+Repo をインストールする前に、Python 3.6 以上のバージョンがインストールされていることを確認してください。
 
-次のコマンドを使用してRepoをインストールします。
+次のコマンドを使用して Repo をインストールします。
 ```
 $ sudo apt-get install repo
 ```
 
-'/usr/bin/env 'python' no such file or directory' というエラーメッセージが表示された場合は、次のコマンドを使用して 'python' を 'python3' にリンクします。
+'/usr/bin/env 'python' no such file or directory' というエラーメッセージが表示された場合は、次のコマンドを使用して 'python' を 'python3' にリンクしてください。
 
 ```
 $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 ```
-Repoエラーが発生した場合は、次のコマンドを使用して最新バージョンをダウンロードし、/usr/bin/ フォルダに配置します。
+Repo のエラーが発生した場合は、次のコマンドを使用して最新バージョンをダウンロードし、/usr/bin/ フォルダに配置してください。
 
 ```
 $ mkdir -p ~/bin
@@ -139,28 +139,28 @@ $ chmod a+x ~/bin/repo
 
 $ sudo mv ~/bin/repo /usr/bin/repo
 ```
-**第3章: イメージビルドガイド**に進みます。
+**第 3 章: イメージビルドガイド** に進んでください。
 
 <br/><br/><br/>
 
-## 2.2 Linux環境
+## 2.2 Linux 環境
 ---
-この章では、ホストOSとしてのUbuntuのセットアッププロセスについて説明します。
+この章では、ホスト OS として Ubuntu を使用する場合の設定手順を説明します。
 </br><br/>
 
-### 2.2.1 環境設定
-次の章 (2.2.2〜2.2.5) は、Ubuntuターミナルで実行する必要があります。ターミナルを開くには、ショートカット [Ctrl + Alt + T] を使用します。
+### 2.2.1 環境の設定
+以下の章 (2.2.2 から 2.2.5) は Ubuntu のターミナルで実行する必要があります。ターミナルを開くには、ショートカット [Ctrl + Alt + T] を使用してください。
 <br/><br/>
 
 ### 2.2.2 ロケールの設定
 
-WSLでUbuntuを実行した後、適切な言語と地域の設定を確保するためにロケールを設定する必要があります。en_US.UTF-8を使用することをお勧めします。en_US.UTF-8を使用するには、次のコマンドを実行します。
+WSL で Ubuntu を実行した後は、言語および地域の設定が正しく適用されるようにロケールを設定する必要があります。en_US.UTF-8 の使用を推奨します。en_US.UTF-8 を使用するには、次のコマンドを実行してください。 
 
 ```
 sudo locale-gen en_US.UTF-8 && sudo update-locale LANG=en_US.UTF-8 
 ```
 
-ロケールを設定した後、次のコマンドを使用してロケールタイプを確認できます。
+ロケールを設定した後は、次のコマンドを使用してロケールの種類を確認できます。 
 
 ```
 echo 'LANG=en_US.UTF-8' | sudo tee -a /etc/default/locale && \  
@@ -169,31 +169,31 @@ echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/default/locale
 ```
 <br/><br/>
 
-### 2.2.3 SSHとSambaのインストール
+### 2.2.3 SSH と Samba のインストール
 
-Ubuntuに入った後、SSHやSambaなどの追加ユーティリティを使用して、より便利な開発環境を構築できます。SSHとSambaを使用すると、リモートコンピュータでコマンドを実行したり、他のコンピュータにファイルをコピーしたりできます。
- - 次の手順では、ホストPCがネットワークに接続されている必要があります。次のコマンドを使用してネットワークの状態を確認してください。
+Ubuntu にアクセスした後は、SSH や Samba などの追加ユーティリティを使用して、より便利な開発環境を構築できます。SSH と Samba を使用すると、リモートコンピュータでコマンドを実行したり、他のコンピュータにファイルをコピーしたりできます。
+ - 以下の手順では、ホスト PC がネットワークに接続されている必要があります。次のコマンドを使用してネットワークの状態を確認してください
   ```
   $ sudo apt-get update
   $ sudo apt-get install -y net-tools
   $ ifconfig 
   ```
 
-SSHとSambaがすでにインストールされている場合、またはそれらを使用しない場合は、この章をスキップできます。
+SSH と Samba が既にインストールされている場合、または使用しない場合は、この章をスキップできます。
 
-次のコマンドを使用して、SSH、Sambaをインストールします。
+次のコマンドを使用して SSH、Samba をインストールします。
 
 ```
 $ sudo apt-get update 
 $ sudo apt install -y openssh-server samba
 ```
-SSHとSambaをインストールした後、環境に合わせて各プログラムを構成します。
+SSH と Samba をインストールした後、ご使用の環境に合わせて各プログラムを設定してください。
 
 <br/><br/>
 
 ### 2.2.4 ユーティリティのインストール
 
-次のコマンドを使用して、必要なすべてのユーティリティを一度にインストールします。Yocto Projectを使用するには、ホストPC (個々のコンピュータまたは開発サーバー) に次のユーティリティをインストールする**必要があります**。
+次のコマンドを使用して、必要なユーティリティを一度にすべてインストールします。Yocto Project を使用するには、以下のユーティリティをホスト PC (個人のコンピュータまたは開発サーバー) に**必ず**インストールする必要があります。
 ****
 
 
@@ -209,24 +209,24 @@ $ sudo apt-get install -y xterm zstd ncftp curl git-lfs vim zip lz4
 
 <br/><br/>
 
-### 2.2.5 Repoのインストール
+### 2.2.5 Repo のインストール
 
-Android Repoを介してD3-G SDKをダウンロードできます。
-Repoをインストールするには、次のWebサイトを参照してください: https://source.android.com/source/downloading.html。
-Repoがすでにインストールされている場合は、再インストールせずに使用できます。
-Repoをインストールする前に、Pythonバージョン3.6以降がインストールされていることを確認してください。
+Android Repo を通じて D3-G SDK をダウンロードできます。  
+Repo をインストールするには、次の Web サイトを参照してください: https://source.android.com/source/downloading.html.  
+Repo が既にインストールされている場合は、再インストールせずにそのまま使用できます。  
+Repo をインストールする前に、Python 3.6 以上のバージョンがインストールされていることを確認してください。
 
-次のコマンドを使用してRepoをインストールします。
+次のコマンドを使用して Repo をインストールします。
 ```
 $ sudo apt-get install repo
 ```
 
-'/usr/bin/env 'python' no such file or directory' というエラーメッセージが表示された場合は、次のコマンドを使用して 'python' を 'python3' にリンクします。
+'/usr/bin/env 'python' no such file or directory' というエラーメッセージが表示された場合は、次のコマンドを使用して 'python' を 'python3' にリンクしてください。
 
 ```
 $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 ```
-Repoエラーが発生した場合は、次のコマンドを使用して最新バージョンをダウンロードし、/usr/bin/ フォルダに配置します。
+Repo のエラーが発生した場合は、次のコマンドを使用して最新バージョンをダウンロードし、/usr/bin/ フォルダに配置してください。
 
 ```
 $ mkdir -p ~/bin
@@ -240,54 +240,54 @@ $ sudo mv ~/bin/repo /usr/bin/repo
 
 <br/><br/>
 
-### 2.2.6 Telechips USBデバイスのUdevルール
-次のコマンドを実行すると、LinuxでFWDNをダウンロードするときに 'sudo' コマンドを使用する必要がなくなります。
+### 2.2.6 Telechips USB デバイス用の Udev Rules
+次のコマンドを実行すると、Linux で FWDN をダウンロードする際に 'sudo' コマンドを使用する必要がなくなります。
 ```
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
 $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
-**第3章: イメージビルドガイド**に進みます。
+**第 3 章: イメージビルドガイド** に進んでください。
 
 <br/><br/><br/><br/>
 
 # 3. イメージビルドガイド
 ---
-この章では、ホストPCにインストールされているUbuntu OS (WSLかローカルUbuntuインストールかに関係なく) に基づいたガイダンスを提供します。D3-GにアップロードするイメージはYocto Projectを使用してビルドされるため、ビルドプロセスはUbuntu環境で実行する必要があります。
+この章では、ホスト PC にインストールされた Ubuntu OS（WSL かローカルの Ubuntu インストールかを問わず）に基づいて説明します。D3-G にアップロードするイメージは Yocto Project を使用してビルドされるため、ビルド作業は Ubuntu 環境で実行する必要があります。
 </br></br>
 
-## 3.1 SDKビルドの準備
+## 3.1 SDK ビルドの準備
 ---
-D3-G Linux SDKはYocto Project 4.0 Kirkstoneに基づいています。したがって、D3-G Linux SDKを使用するには、ホストPCでYocto Project環境を構成する必要があります。SDK、ソースミラー、およびツールをダウンロードするには、必要なユーティリティをインストールする必要があります。イメージをスムーズにビルドするには、PCに**少なくとも60 GBの空きストレージ**と**最低16 GBのRAM**が必要です。
+D3-G Linux SDK は Yocto Project 4.0 Kirkstone をベースとしています。したがって、D3-G Linux SDK を使用するには、ホスト PC に Yocto Project 環境を構成する必要があります。SDK、source-mirror、およびツールをダウンロードするには、必要なユーティリティをインストールする必要があります。イメージを問題なくビルドするには、PC に **60 GB 以上の空きストレージ**と **16 GB 以上の RAM** が必要です。
 
 </br><br/>  
 
 ## 3.2 Yocto Project  
 ---
-Yocto Projectは、組み込みLinux開発に焦点を当てたオープンソースプロジェクトです。
-Linuxイメージを作成するためのビルドシステムとして、PokyであるOpen Embeddedプロジェクトと***bitbake***の組み合わせを使用します。
-Yocto Projectを使用することで、ブートローダー、カーネル、rootfsを同時にビルドできます。
+Yocto Project は、組み込み Linux 開発に重点を置いたオープンソースプロジェクトです。  
+Linux イメージを作成するために、Open Embedded プロジェクトである Poky と ***bitbake*** をビルドシステムとして組み合わせて使用します。  
+Yocto Project を使用すると、ブートローダー、カーネル、rootfs を同時にビルドできます。  
 
 <br/><br/>
 
-## 3.3 Yocto Projectのタスクプロセス
+## 3.3 Yocto Project の作業プロセス
 ---
-図 3.1は、Yocto Projectのタスクプロセスを示しています。メタデータに基づいてアップストリームからソースをダウンロードしてビルドできます。ビルドが完了すると、パッケージ、イメージ、およびSDKが結果として提供されます。
+図 3.1 は Yocto Project のタスクプロセスを示しています。メタデータに基づいてアップストリームからソースをダウンロードし、ビルドできます。ビルドが完了すると、パッケージ、イメージ、SDK が結果として提供されます。
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/2.1%20yocto%20project%20task%20process.png", width="700">
 </p>
-<p align="center"><strong>図 3.1 Yocto Projectタスクプロセス</strong></p>
+<p align="center"><strong>図 3.1 Yocto Project の作業プロセス</strong></p>
 
 <br/><br/>
 
-## 3.4 D3-G SDKの構成
+## 3.4 D3-G SDK の構成
 ---
-以下は、構成したYocto Projectのコンポーネントです。
-表 3.1は、D3-G SDKの構成を示しています。
+以下は、当社が構成した Yocto Project の構成要素です。
+表 3.1 は D3-G SDK の構成を示しています。
 
 
 
-**表 3.1 D3-G SDKの構成**
+**表 3.1 D3-G SDK の構成**
 <table border="1" cellspacing="0" cellpadding="5">
   <colgroup>
     <col style="width: 10%">
@@ -304,19 +304,19 @@ Yocto Projectを使用することで、ブートローダー、カーネル、r
   <tbody>
   <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">easy-setup.sh</td>
-      <td>SDKを自動的にダウンロードしてビルドするためのPythonスクリプト</td>
+      <td>SDK を自動的にダウンロードしてビルドする Python スクリプト</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-ai.sh</td>
-      <td>AI-G faiイメージ (最小 + サンプルアプリケーション) を作成するためのスクリプト</td>
+      <td>AI-G の fai イメージを作成するスクリプト (minimal + サンプルアプリケーション)</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">stitch-fai-d3.sh</td>
-      <td>D3-G faiイメージ (最小 + サンプルアプリケーション) を作成するためのスクリプト</td>
+      <td>D3-G の fai イメージを作成するスクリプト (minimal + サンプルアプリケーション)</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">mktcimg</td>
-      <td rowspan="2">ビルドプロセスおよび<strong>FWDN</strong>に関連するツール</td>
+      <td rowspan="2">ビルドプロセスおよび <strong>FWDN</strong> に関連するツール</td>
     </tr>
     <tr>
       <td colspan="3"style="text-align: center; vertical-align: middle;">tools</td>
@@ -324,139 +324,139 @@ Yocto Projectを使用することで、ブートローダー、カーネル、r
     <tr>
       <td rowspan="8"style="text-align: center; vertical-align: middle;">poky</td>
       <td colspan="2"style="text-align: center; vertical-align: middle;">poky</td>
-      <td>Yocto Project 4.0 Kirkstoneビルドシステム</td>
+      <td>Yocto Project 4.0 Kirkstone ビルドシステム</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-openembedded</td>
-      <td>OE-Coreをサポートするレイヤー</td>
+      <td>OE-Core をサポートするレイヤ</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-arm</td>
-      <td>ARMツールチェーンをサポートするレイヤー</td>
+      <td>ARM ツールチェーンをサポートするレイヤー</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst-bsp</td>
-      <td>TOPST BSPをサポートするレイヤー</td>
+      <td>TOPST BSP をサポートするレイヤ</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-gplv2</td>
-      <td>GPLv3ライセンスを回避するパッケージを含むレイヤー</td>
+      <td>GPLv3 ライセンスを回避するパッケージを含むレイヤー</td>
     </tr>
     <tr>
       <td colspan="2"style="text-align: center; vertical-align: middle;">meta-topst</td>
-      <td>TOPSTレシピ</td>
+      <td>TOPST レシピ</td>
     </tr>
   </tbody>
 </table>
 <br/><br/><br/>
- 
- 
+
+
 ## 3.5 ビルドの準備
 ---
-次の章では、D3-GイメージをビルドするためにYocto Projectを構成する方法について説明します。
- 
+以降の章では、D3-G イメージをビルドするために Yocto Project を構成する方法を説明します。
+
 <br/><br/>
- 
-### 3.5.1 .gitconfigでのユーザーメールとユーザー名の設定
-公式TOPST gitからD3-G SDKをダウンロードするには、メールと名前を設定します。
+
+### 3.5.1 .gitconfig にユーザーのメールアドレスとユーザー名を設定する
+公式 TOPST git から D3-G SDK をダウンロードするには、メールアドレスと名前を設定してください。
 1. 次のコマンドを入力します。
 ```
 vi ~/.gitconfig
 ```
-2. 次の情報を入力します。
+2. 次の情報を入力してください
 ```
 [user]
     email = User email
     name = User name
 ```
- 
+
 <br/><br/>
- 
-### 3.5.2 GitからD3-Gを取得
- 
-1. **topst-sdk**という名前の新しいディレクトリを作成し、現在のディレクトリを**topst-sdk**に変更します。
- 
+
+### 3.5.2 Git から D3-G を取得する
+
+1. **topst-sdk** という名前の新しいディレクトリを作成し、カレントディレクトリを **topst-sdk** に変更します。
+
 ```
 $ mkdir topst-sdk
 $ cd topst-sdk
 ```
- 
-2. 次のコマンドを実行して、リポジトリを初期化します。
- 
+
+2. 次のコマンドを実行してリポジトリを初期化します。
+
 ```
-$ repo init -u https://github.com/topst-development/manifests.git -b release/1.2.0 -m linux_yp4.0_topst.xml
+$ repo init -u https://github.com/topst-development/manifests.git -b release/1.3.0 -m linux_yp4.0_topst.xml
 ```
- 
+
 コマンドを実行すると、次の出力が表示されます。
- 
+
 ```
 Downloading Repo source from https://gerrit.googlesource.com/git-repo
- 
+
 ... A new version of repo (2.54) is available.
 ... New version is available at: /home/topst/topst-sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
- 
- 
+
+
 Your identity is: TopstDeveloper <topstdeveloper@gmail.com>
 If you want to change this, please re-run 'repo init' with --config-name
- 
+
 repo has been initialized in /home/topst/topst-sdk
 ```
- 
-3. 次のコマンドを実行して、リポジトリを同期します。
- 
+
+3. 次のコマンドを実行してリポジトリを同期します。
+
 ```
 $ repo sync
 ```
- 
+
 コマンドを実行すると、次の出力が表示されます。
- 
+
 ```
 ... A new version of repo (2.54) is available.
 ... New version is available at: /home/topst/topst-sdk/.repo/repo/repo
 ... The launcher is run from: /usr/bin/repo
 !!! The launcher is not writable.  Please talk to your sysadmin or distro
 !!! to get an update installed.
- 
+
 Fetching: 100% (12/12), done in 33.103s
 Checking out:  25% (3/12), done in 0.863s
 Checking out:  75% (9/12), done in 0.415s
 repo sync has finished successfully.
 ```
- 
+
 <br/><br/><br/>
- 
-## 3.6 topst-build.shの実行
+
+## 3.6 topst-build.sh の実行 
 ---
-./easy-setup.shスクリプトを実行すると、次の画面が表示されます。
- 
-**注意: ./easy-setup.shを再実行する場合、yesを選択するとビルドされたソースが削除されるため注意してください。**
+./easy-setup.sh スクリプトを実行すると、次の画面が表示されます。 
+
+**注意: ./easy-setup.sh を再実行する場合、yes を選択するとビルド済みのソースが削除されるため注意してください。**
 ```
 ./easy-setup.sh
 ```
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license1.png"></p>
-<p align="center"><strong>図 3.2 エンドユーザー使用許諾契約</strong></p>
- 
-画面の一番下までスクロールして、この通知を読んでください。この通知を読んだ後、右矢印キーを押して [Enter] を押します。
+<p align="center"><strong>図 3.2 エンドユーザーライセンス契約</strong></p>
+
+画面の一番下までスクロールして、この注意事項をお読みください。お読みになった後、右矢印キーを押して [Enter] を押してください。
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license2.png"></p>
-<p align="center"><strong>図 3.3 'Proceed to confirm' に移動</strong></p>
- 
- 
-すると、次の画面が表示されます。
+<p align="center"><strong>図 3.3 'Proceed to confirm' へ移動</strong></p>
+
+
+すると、次の画面が表示されます。 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/license3.png" ></p>
 <p align="center"><strong>図 3.4 同意画面 </strong></p>
- 
- 
-ビルドイメージは次のパスに作成されます。
- 
+
+
+ビルドイメージは次のパスに作成されます:
+
 - {TOPST_PATH}/build/d3-g-topst-main/tmp/deploy/images/d3-g-topst-main
- 
-topst-build.shは、D3-GおよびAI-Gのイメージをビルドするために必要なコア環境をセットアップするシェルスクリプトです。次のコマンドを実行し、オプション2を選択して、D3-GにメインOSをインストールするためのビルド環境を準備します。
- 
- 
- 
+
+topst-build.sh は、D3-G および AI-G 用のイメージをビルドするために必要なコア環境を設定するシェルスクリプトです。次のコマンドを実行し、D3-G にメイン OS をインストールするためのビルド環境を準備するには、オプション 2 を選択してください。
+
+
+
 ```
 $ source poky/meta-topst/topst-build.sh 
 Choose MACHINE
@@ -472,62 +472,62 @@ created for you from /home/topst/topst-sdk/poky/meta-topst/template/d3-g-topst-m
 You may wish to edit it to, for example, select a different MACHINE (target
 hardware). See conf/local.conf for more information as common configuration
 options are commented.
- 
+
 You had no conf/bblayers.conf file. This configuration file has therefore been
 created for you from /home/topst/topst-sdk/poky/meta-topst/template/d3-g-topst-main/bblayers.conf.sample
 To add additional metadata layers into your configuration please add entries
 to conf/bblayers.conf.
- 
+
 The Yocto Project has extensive documentation about OE including a reference
 manual which can be found at:
     https://docs.yoctoproject.org
- 
+
 For more information about OpenEmbedded see the website:
     https://www.openembedded.org/
- 
+
 Yocto Project common targets are:
     core-image-minimal
     core-image-sato
     meta-toolchain
     adt-installer
     meta-ide-support
- 
- 
+
+
 Telechips common targets are:
     telechips-topst-image-minimal
     telechips-topst-image-multimedia
     telechips-topst-image
- 
+
     meta-toolchain-topst(Application Development Toolkit)
- 
- 
+
+
 You can also run generated TOPST images on D3-G board
- 
+
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
  - 'bitbake-layers' handles common layer tasks
  - 'oe-pkgdata-util' handles common target package tasks
- 
+
 ```
- 
-次のコマンドを実行して、メインOSのビルドを開始します。
+
+メイン OS のビルドを開始するには、次のコマンドを実行してください。
 ```
 $ bitbake telechips-topst-image
 ```
- 
+
 <br/><br/><br/>
- 
-## 3.7 ファームウェアダウンローダー (FWDN) イメージの作成
+
+## 3.7 Firmware Downloader (FWDN) イメージの作成 
 ---
-このオプションは、バイナリをD3-Gプラットフォームイメージ用の単一のイメージに結合します。
- 
-**'output_d3g.fai' ビルドイメージ**と**FWDNツール**を含む**output_d3g.fwdn.zip**ファイルは、次のパスに作成されます。
- 
+このオプションは、D3-G プラットフォームイメージ用にバイナリを 1 つのイメージに結合します。
+
+**'output_d3g.fai' ビルドイメージ**と **FWDN ツール**を含む **output_d3g.fwdn.zip** ファイルが、次のパスに作成されます:
+
 -  ~/topst-sdk
- 
+
 ```
 $ cd ~/topst-sdk
- 
+
 $ ./stitch-fai-d3.sh -f
 Filesystem too small for a journal
 [mktcimg] v1.2.1 - Nov 15 2021 19:33:18
@@ -601,88 +601,90 @@ Complete to make fai file
   adding: output_d3g.gpt.back (deflated 98%)
   adding: output_d3g.gpt.prim (deflated 98%)
   adding: VtcUsbPort.dll (deflated 68%)
- 
-次のログが表示された場合、"output_d3g.fwdn.zip" ファイルが作成されたことを意味します。
+
+```
+
+次のログが表示された場合、"output_d3g.fwdn.zip" ファイルが作成されたことを意味します。 
 ```
 $ ls
 build  easy-setup.sh  mktcimg  output_d3g.fwdn.zip  poky  stitch-fai-ai.sh  stitch-fai-d3.sh  tools
 ```
- 
+
 </br></br><br/><br/>
- 
+
 # 4. ファームウェアのダウンロード
 ---
-この章では、***FWDN***を使用してファームウェアをD3-Gにダウンロードし、Linuxコンソールにログインする方法について説明します。
-***FWDN V8***は、Windows 10(11) 64ビットおよびLinux環境の両方でファームウェアをダウンロードするためのPCツールです。この章では、WindowsおよびLinux環境でのダウンロードのケースについて説明します。
- 
+この章では、***FWDN*** を使用して D3-G にファームウェアをダウンロードし、Linux コンソールにログインする方法を説明します。  
+***FWDN V8*** は、Windows 10(11) 64 ビットおよび Linux 環境の両方でファームウェアをダウンロードするための PC ツールです。この章では、Windows および Linux 環境でダウンロードする場合について説明します。
+
 <br/><br/><br/>
- 
-## 4.1 ファームウェアダウンロードシーケンス
+
+## 4.1 ファームウェアダウンロードの手順
 ---
-***FWDN***のダウンロードシーケンスは次のとおりです。
- 
-1. ブートモードスイッチをUSBブートモードに設定します。
-2. WindowsプロンプトまたはLinuxコンソールを開きます。
-3. ***FWDN V8***をボードに接続します。
-4. faiファイルをダウンロードします。
- 
+***FWDN*** のダウンロード手順は次のとおりです:
+
+1. 起動モードスイッチを USB 起動モードに設定してください。
+2. Windows のプロンプトまたは Linux のコンソールを開いてください。
+3. ***FWDN V8*** をボードに接続してください。
+4. fai ファイルをダウンロードしてください。
+
 <br/><br/><br/>
- 
-## 4.2 USBブートモードでのD3-GボードとホストPCの接続
+
+## 4.2 USB 起動モードで D3-G ボードとホスト PC を接続する
 ---
-ファームウェアダウンローダー (FWDN) は、ホストPCとのUSB通信を介してD3-GにROMイメージを書き込みます。
- 
-D3-Gには1つのブートモードボタンがあり、2種類のブートモードをサポートしています。このガイドではFWDNモードに焦点を当てています。
- 
-- USBブートモード (FWDNモード) : ホストPC上のFWDNツールを使用してROMイメージを書き込むために使用されます
- 
-- eMMCブートモード : eMMCデバイスに保存されているROMイメージを使用してD3-Gを起動するために使用されます
- 
-**注**: USB Type-C FWDNポートは、ファームウェアダウンローダー (FWDN) に使用されます。
- 
- 
- 
-FWDNを使用するには、次のようにD3-GボードをホストPCに接続します。
- 
-1. ホストPCにVTCドライバーがインストールされていることを確認します。VTCドライバーがインストールされていない場合は、4.2.1章に示すようにインストールしてください。
- 
-2. USB Type-Cケーブルを1本用意します。
- 
-3. USBブートモードに入るには、FWDNスイッチを押しながら電源ケーブルをD3-Gボードに接続します。
-   - 詳細については、サイドバーのハードウェアセクションの**「2. ブートモード」**を参照してください。
- 
-4. USB Type-CケーブルをD3-GボードのUSB Type-C FWDNポートとホストPCに接続します。
- 
+Firmware Downloader (FWDN) は、ホスト PC との USB 通信を通じて D3-G に ROM イメージを書き込みます。 
+
+D3-G には Boot Mode ボタンが 1 つあり、2 種類の起動モードをサポートしています。本ガイドでは FWDN モードを中心に説明します。
+
+- USB Boot Mode (FWDN Mode) : ホスト PC の FWDN ツールを使用して ROM イメージを書き込む際に使用します 
+
+- eMMC Boot Mode : eMMC デバイスに保存された ROM イメージを使用して D3-G を起動する際に使用します 
+
+**注**: USB Type-C FWDN ポートは firmware downloader (FWDN) に使用されます。 
+
+
+
+FWDN を使用するには、次のように D3-G ボードをホスト PC に接続してください: 
+
+1. ホスト PC に VTC ドライバがインストールされていることを確認します。VTC ドライバがインストールされていない場合は、第 4.2.1 章のようにインストールしてください。  
+
+2. USB Type-C ケーブルを 1 本準備してください。 
+
+3. USB 起動モードに入るには、FWDN スイッチを押しながら D3-G ボードに電源ケーブルを接続してください。
+   - 詳細については、サイドバーの Hardware セクションにある **"2. Boot Mode"** を参照してください。
+
+4. USB Type-C ケーブルを D3-G ボードの USB Type-C FWDN ポートとホスト PC に接続してください。 
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Hardware/connect%20to%20d3g%20to%20host%20pc%20using%20c%20type.png">
 </p>
-<p align="center"><strong>図 4.1 USB Cタイプケーブルを使用したD3-GボードとホストPCの接続 </strong></p>
- 
+<p align="center"><strong>図 4.1 USB C-Type ケーブルを使用した D3-G ボードとホスト PC の接続 </strong></p>
+
 <br/><br/>
- 
-### 4.2.1 VTCドライバーのインストール方法 (Windows/Ubuntu)
-管理者として実行して、ホストPCにVendor Telechips Certification (VTC) ドライバー ([telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)にあります) をインストールします。上記のようにFWDNモードでUSBを接続すると、Telechips VTC USBドライバーが図 4.2および図 4.3に示すように設定されます。
- 
+
+### 4.2.1 VTC ドライバのインストール方法 (Windows/Ubuntu)
+ホスト PC で管理者として実行し、Vendor Telechips Certification (VTC) ドライバ（[telechips driver](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing) にあります）をインストールしてください。上記のように FWDN モードで USB を接続すると、図 4.2 および図 4.3 のように Telechips VTC USB ドライバが設定されます。
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Windows%20Environment.png", width="700">
 </p>
-<p align="center"><strong>図 4.2 Windows環境でのUSB接続</strong></p>
- 
+<p align="center"><strong>図 4.2 Windows 環境での USB 接続</strong></p>
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Linux%20System.png", width="700">
 </p>
-<p align="center"><strong>図 4.3 Linux環境でのUSB接続</strong></p>
- 
-**注**: VTC Driver V5.0.0.14以降を使用してください。バージョンを確認するには、Windows環境のデバイスマネージャーを確認してください。
- 
+<p align="center"><strong>図 4.3 Linux 環境での USB 接続</strong></p>  
+
+**注**: VTC ドライバ V5.0.0.14 以上を使用してください。バージョンを確認するには、Windows 環境でデバイスマネージャーを確認してください。  
+
 <br/><br/><br/>
- 
-## 4.3 FWDNダウンロードの準備
+
+## 4.3 FWDN ダウンロードの準備
 ---
-FWDNを実行する前に、Ubuntu (WSL2) 環境で作成されたイメージとツールをWindows環境に転送します。
- 
- 
-1. "output_d3g.fwdn.zip" を解凍します。
+FWDN を実行する前に、Ubuntu (WSL2) 環境で作成したイメージとツールを Windows 環境に転送してください。
+
+
+1. "output_d3g.fwdn.zip" を解凍してください。   
     ```
     $ cd ~/topst-sdk
     $ mkdir images
@@ -690,26 +692,26 @@ FWDNを実行する前に、Ubuntu (WSL2) 環境で作成されたイメージ�
     $ cd images
     $ unzip output_d3g.fwdn.zip
     ```
-2. "images" フォルダをWindows Cドライブにコピーします。
+2. "images" フォルダを Windows の C ドライブにコピーしてください。  
     ```
     $ cd ..
     $ cp -r ./images /mnt/c/
     ```
- 
+
 <br/><br/><br/>
- 
-## 4.4 Windows環境でのFWDN
+
+## 4.4 Windows 環境での FWDN
 ---
-1. Powershellを実行し、"C:\images\" に移動します。
+1. Powershell を実行し、"C:\images\" に移動してください。
 ```
 $ cd C:\images 
 ```
- 
-2. **.\fwdn.bat** コマンドを入力して、ファームウェアのダウンロードを開始します。“fwdn.bat” は、FWDN V8を使用してファームウェアを自動的にダウンロードする実行可能ファイルです。
- 
+
+2. ファームウェアのダウンロードを開始するには、**.\fwdn.bat** コマンドを入力してください。「fwdn.bat」は、FWDN V8 を使用してファームウェアを自動的にダウンロードする実行ファイルです。 
+
 ```
 .\fwdn.bat
- 
+
 C:\images>fwdn.exe --fwdn boot-firmware\fwdn.json
 [main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
 [FWDN_V8::LoadFWDNRom:403] Start to load FWDN rom
@@ -722,7 +724,7 @@ C:\images>fwdn.exe --fwdn boot-firmware\fwdn.json
 [FWDN_V8::GetFileAndWriteCommand:748] C:\images\boot-firmware\dram_params.bin
 [FWDN_V8::PrintDeviceInfo:1183] --------------Device info-------------
 [FWDN_V8::PrintDeviceInfo:1184]
- 
+
 ----- Detail of Storages -----
 #### eMMC Info ####
 Manufacture ID: 0x15
@@ -739,22 +741,22 @@ Name: MXIC-MX25L3233F
 Sector Size: 4 KiB (4096 Byte)
 Total Capacity: 4 MiB (4194304 Byte)
 4Byte Address Mode: Unsupported
- 
+
 ----- Summary of Storages -----
 eMMC : O
 SNOR : O
 UFS : X
 - O : Init success
 - X : Init failed or not exist
- 
+
 ----- Summary of DRAM Init -----
 DRAM Init : Success (Result 0x0 )
 DRAM Size : 4096MB
- 
+
 [FWDN_V8::PrintDeviceInfo:1185] --------------------------------------
 [main:142] Complete FWDN
 [FWDNLogger::PrintCurTime:111] 24/04/25-09:57:47
- 
+
 C:\images>fwdn.exe --storage emmc --low-format
 [main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
 [FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
@@ -763,7 +765,7 @@ C:\images>fwdn.exe --storage emmc --low-format
 [FWDN_V8::LowformatCommand:1382] Complete low-format
 [main:142] Complete FWDN
 [FWDNLogger::PrintCurTime:111] 24/04/25-09:57:50
- 
+
 C:\images>fwdn.exe -w boot-firmware\boot.single.json
 [main:30] FWDN V8 v1.4.6 - 2021.12.13 13:42:37
 [FWDN_V8::GetFWDNRomVersion:1526] fwdn.rom version : 21.9.29
@@ -801,143 +803,144 @@ C:\images>fwdn.exe -w "output_d3g.fai" --storage emmc --area user
 [main:142] Complete FWDN
 [FWDNLogger::PrintCurTime:111] 24/04/25-10:05:21
 100% [||||||||||||||||||||||||||||||] 7238688960/7238688960
-** ローフォーマットなしでFAIファイルを書き込むと、データが書き込まれていないパーティションにガベージ値が含まれる場合があります。
+** When writing FAI files without low-format, there may be garbage values in partition where data is not written.
 ```
- 
+
 <br/><br/><br/>
- 
-## 4.5 Linux環境でのFWDN
+
+## 4.5  Linux 環境での FWDN
 ---
-LinuxでD3-Gイメージをダウンロードするには、次のコマンドを実行します: "./fwdn.sh"。
- 
+Linux で D3-G イメージをダウンロードするには、次のコマンドを実行してください: "./fwdn.sh"。
+
 ```
 $ ./fwdn.sh
 ```
- 
-D3-Gを起動する準備が整いました。デバイスとの通信を開始するには、第5章を参照してください。
- 
- 
+
+これで D3-G を起動する準備が整いました。デバイスとの通信を開始するには、第 5 章を参照してください。
+
+
 <br/><br/><br/><br/>
- 
-# 5. D3-GボードとホストPCの接続
+
+# 5. D3-G ボードとホスト PC の接続
 ---
-この章では、ファームウェアのダウンロードとシリアル通信のために、UARTを介してホストPCをD3-Gボードに接続する方法について説明します。
- 
+この章では、ファームウェアのダウンロードとシリアル通信のために、UART を通じてホスト PC を D3-G ボードに接続する方法を説明します。
+
 <br/><br/><br/>
- 
-## 5.1 UARTを使用したD3-Gボードの接続
+
+## 5.1 UART による D3-G ボードの接続 
 ---
-次の手順に従い、UART接続を使用してファームウェアのダウンロードが正常に完了したことを確認します。
- 
-1. Windows環境にシリアルポートドライバー (CP210x Windows Driverなど) とPL2303_prolificドライバーをインストールします。
-2. Tera TermやPuTTYなどのターミナルエミュレータをインストールします。
-3. ホストPCとD3-GボードのUARTピンを接続します。USB-to-TTLケーブルを使用します。
-4. 黒いケーブルをGNDピンに接続します。
-5. 白いケーブル (RXD) をUARTピンのTXピンに接続し、緑色のケーブル (TXD) をUARTピンのRXピンに接続します。
+次の手順に従い、UART 接続を使用してファームウェアのダウンロードが正常に完了したことを確認してください。 
+
+1. Windows 環境でシリアルポートドライバ（例: CP210x Windows Driver）と PL2303_prolific ドライバをインストールしてください。 
+2. Tera Term や PuTTY などのターミナルエミュレータをインストールします。 
+3. ホスト PC と D3-G ボードの UART ピンを接続してください。USB-to-TTL ケーブルを使用してください。 
+4. 黒色のケーブルを GND ピンに接続してください。 
+5. 白色のケーブル(RXD)を UART ピンの TX ピンに、緑色のケーブル(TXD)を UART ピンの RX ピンに接続します。
 6. ターミナルエミュレータアプリケーションを実行します。
-7. PCでデバイスマネージャーを開き、UARTデバイスに割り当てられているポート番号を確認します。
-8. ターミナルエミュレータで、確認したポート番号をシリアルラインフィールドに入力します。**Speed** (bps) を115200に設定し、**Flow control**を**None**に設定します。
-9. 電源ケーブルを接続します。すると、D3-GボードがデフォルトのeMMCブートモードで起動します。
- 
- 
+7. PC でデバイスマネージャーを開き、UART デバイスに割り当てられたポート番号を確認してください。
+8. ターミナルエミュレータで、確認したポート番号を Serial line フィールドに入力してください。**Speed** (bps) を 115200 に、**Flow control** を **None** に設定してください。
+9. 電源ケーブルを接続してください。すると、D3-G ボードはデフォルトの eMMC 起動モードで起動します。
+
+
  
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20to%20TTL%20Connection.png", width="700">
 </p>
-<p align="center"><strong>図 5.1 ホストPCとのUART接続</strong></p><br/>
- 
- 
-図 5.2は、ログインの成功を示しています。
-ログイン用のユーザー名とパスワードはどちらも**root**に設定されています。
- 
+<p align="center"><strong>図 5.1 ホスト PC との UART 接続</strong></p><br/>  
+
+
+図 5.2 はログインが成功した状態を示しています。  
+ログイン用のユーザー名とパスワードは、どちらも **root** に設定されています。
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/d3-g%20login%20as%20root.png", width="700">
 </p>
-<p align="center"><strong>図 5.2 接続画面 (IDとパスワードはtopst)</strong></p><br/>
- 
+<p align="center"><strong>図 5.2 接続された画面 (ID とパスワードは topst です)</strong></p><br/>
+
 <br/><br/><br/>
- 
-# 6. Ubuntu OSパーティションのサイズ変更
+
+# 6. Ubuntu OS パーティションのサイズ変更
 ---
-Ubuntu OSも提供しています。
-この章に従うことで、Ubuntuイメージをダウンロードしてボードにアップロードし、割り当てられたeMMCストレージ容量を拡張できます。
- 
+当社は Ubuntu OS も提供しています。
+この章に従うことで、Ubuntu イメージをダウンロードしてボードにアップロードし、割り当てられた eMMC のストレージ容量を拡張できます。
+
 <br/><br/><br/>
- 
-## 6.1 Ubuntuイメージのダウンロード
+
+## 6.1 Ubuntu イメージのダウンロード
 ---
-D3-Gの公式はUbuntu 22.04に基づいています。
-イメージファイルはこちらからダウンロードできます。
- 
+D3-G の公式 OS は Ubuntu 22.04 をベースとしています。  
+イメージファイルはこちらからダウンロードできます。  
+
 <img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
- 
-**ダウンロード :**
--	[ダウンロードリンクはこちら](https://drive.google.com/file/d/1oc2qwaXUt6-QDME3s5WXKVHzAg4xqVyc/view?usp=drive_link)
+
+**ダウンロード :**  
+-	[こちらからダウンロード](https://drive.google.com/file/d/1oc2qwaXUt6-QDME3s5WXKVHzAg4xqVyc/view?usp=drive_link)
 <br>
--	詳細については、[githubページ](https://github.com/topst-development)をご覧ください。
- 
-**リリースノート :**
- 
+-	詳細については、当社の [github ページ](https://github.com/topst-development) をご覧ください。
+
+**リリースノート :**  
+
 |Ver|   日付   |
 |:-:|:--------:|
-|1.0|2024.04.25|
- 
-TOPSTチームは、他の公式OSバージョンも準備しています。
-他のOSのリリースに関する情報については、TOPSTコミュニティを参照してください。
- 
+|1.0|2024.04.25|  
+
+TOPST チームは、他の公式 OS バージョンも準備しています。  
+他の OS のリリースに関する情報は、TOPST コミュニティを参照してください。  
+
 <br/><br/><br/>
- 
-## 6.2 D3-Gへのファームウェアのアップロード
+
+## 6.2 D3-G へのファームウェアのアップロード
 ---
-“fwdn_ubuntu.batch” ファイルを実行します。
-UbuntuイメージをD3-Gにアップロードする方法については、第5章を参照してください。
-FWDNが完了したら、FWDNポートからUSB Type-Cケーブルを取り外し、電源ケーブルを取り外します。
- 
+「fwdn_ubuntu.batch」ファイルを実行してください。 
+Ubuntu イメージを D3-G にアップロードする方法については、第 5 章を参照してください。
+FWDN が完了したら、FWDN ポートから USB Type-C ケーブルを取り外し、電源ケーブルを取り外してください。 
+
 <br/><br/><br/>
- 
-## 6.3 eMMCストレージのサイズ変更 (D3-Gのみ)
+
+## 6.3 eMMC ストレージのサイズ変更 (D3-G のみ)
 ---
-ログインしてボードを起動した後、最初にeMMCストレージのサイズを変更することをお勧めします。
-eMMCストレージのサイズ変更については、以下の手順に従ってください。
- 
-1. パーティションサイズとレイアウトを変更するには、次のコマンドを使用します。
+ボードにログインして起動した後は、まず eMMC ストレージのサイズを変更することをお勧めします。
+eMMC ストレージのサイズ変更については、以下の手順に従ってください。
+
+1. パーティションのサイズとレイアウトを変更するには、次のコマンドを使用してください。
      ```
      $ parted
      ```
- 
-2. GUIDパーティションテーブル (GPT) を拡張します。
+
+2. GUID Partition Table(GPT) を拡張してください。 
     ```
     $ rescue
     $ Fix 
     $ 0 
     $ 100%
     ```
-3. p (print) コマンドを使用して、パーティションタイプがext4であることを確認します。
+3. p (print) コマンドを使用して、パーティションタイプが ext4 であることを確認してください。 
    ```
    $ p
    ```
-4. パーティション4のサイズを変更します。
+4. パーティション 4 のサイズを変更してください。
     ```
     $ resizepart 4
     $ Yes
     $ 100%
     ```
-5. ボードを再起動します。
-6. パーティション4のext4ファイルシステムのサイズを変更します。
+5. ボードを再起動してください。
+6. パーティション 4 の ext4 ファイルシステムのサイズを変更してください。
     ```
     $ resize2fs /dev/mmcblk0p4
     ```
-7. 次のコマンドを使用して、変更されたパーティションサイズを確認します。
+7. 次のコマンドを使用して、変更後のパーティションサイズを確認してください。
    ```
    $ df -h
    ```
- 
-サイズ変更後、使用可能なスペースが27GBであることを確認できます。
- 
+
+サイズ変更後、利用可能な容量が 27GB になっていることを確認できます。
+
 <br/><br/><br/><br/>
- 
-# 7. 参考文献
+
+# 7. 参考資料
 ---
-- 詳細については、TOPSTにお問い合わせください: topst@topst.ai
- 
-**注:** 参照ドキュメントは、契約条件に応じて、利用可能な場合にいつでも提供できます。参照ドキュメントが利用できない場合は、開発に直接関連するコンテンツを案内できます。
+- 詳細については TOPST にお問い合わせください: topst@topst.ai
+
+**注意:** 参考文書は、契約条件に応じて提供可能な場合に提供されます。参考
+文書が入手できない場合は、お客様の開発に直接関連する内容をご案内できます。

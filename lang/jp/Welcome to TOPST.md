@@ -1,7 +1,8 @@
-# TOPSTドキュメントへようこそ
+
+# TOPST ドキュメントへようこそ
 ----
 
-TOPSTドキュメントは、TOPSTのボードやアクセサリをサポートするためのチュートリアルやガイドを提供する場所であり、TOPSTチームとコミュニティによって維持されています。
+TOPST ドキュメントは、TOPST のボードおよびアクセサリをサポートするためのチュートリアルとガイドを提供する場であり、TOPST チームとコミュニティによって維持されています。
 
 
 <br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/others/TOPST_new_logo.png" width="800"></p>
@@ -10,46 +11,46 @@ TOPSTドキュメントは、TOPSTのボードやアクセサリをサポート�
 
 <br/><br/><br/>
 
-## TOPST製品の紹介
+## TOPST 製品の紹介
 
-### Pモデル
+### P モデル
 
 <br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/others/pmodel_introduction.png" width="800"></p>
-<p align="center" ><strong> 左から右へ: D3-P, AI-P, VCP-P </strong></p><br/>
+<p align="center" ><strong> 左から順に: D3-P, AI-P, VCP-P </strong></p><br/>
 
-- TOPST Pモデル紹介動画 : [Youtubeリンク](https://www.youtube.com/watch?v=H92SjCPh5eA)
-- シングルボードコンピュータメニューの**Pモデルセクション**を参照してください。
+- TOPST P モデル紹介動画 : [Youtube リンク](https://www.youtube.com/watch?v=H92SjCPh5eA)
+- Single Board Computer メニューの **P Model セクション** を参照してください。
 
-### Gモデル
+### G モデル
 
 <br/><p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/others/gmodel_introduction.png" width="800"></p>
-<p align="center" ><strong> 左から右へ: D3-G, AI-G, VCP-G </strong></p><br/>
+<p align="center" ><strong> 左から順に: D3-G, AI-G, VCP-G </strong></p><br/>
 
-- TOPST Gモデルの紹介動画は近日公開予定です。
-- シングルボードコンピュータメニューの**Gモデルセクション**を参照してください。
+- TOPST G モデルの紹介動画は近日中に公開予定です。
+- Single Board Computer メニューの **G Model セクション** を参照してください。
 
 <br/><br/><br/>
 
 ## 問題が発生した場合
 
-このドキュメントの使用中に質問や問題がある場合は、コミュニティサイトまたはGitHubリポジトリにお問い合わせください。できるだけ早く返信いたします。
+本ドキュメントのご利用中にご不明な点や問題がございましたら、コミュニティサイトまたは GitHub リポジトリよりお問い合わせください。できるだけ早くご返信いたします。
 - TOPST GitHub : [https://github.com/topst-development](https://github.com/topst-development)
-- TOPST コミュニティ : [https://community.topst.ai/](https://community.topst.ai/)
+- TOPST Community : [https://community.topst.ai/](https://community.topst.ai/)
 
 <br/><br/><br/>
 
-## コミュニティに参加する
+## コミュニティへの参加
 
-  •	TOPST コミュニティ : https://community.topst.ai/ - 主な技術サポートチャンネルで、英語と韓国語の両方がサポートされています
+  •	TOPST Community : https://community.topst.ai/ - 主要な技術サポートチャネルであり、英語と韓国語の両方に対応しています
 
-  •	TOPST 公式Eメール : topst@topst.ai 
-    – ビジネスパートナーシップやその他のお問い合わせについては、メールをお送りください
+  •	TOPST 公式 E-mail : topst@topst.ai 
+    – 事業提携やその他のお問い合わせをご希望の場合は、メールをお送りください
 
 <br/><br/><br/>
 
-## 貢献する
+## コントリビュート
 
-TOPSTドキュメントへのフィードバック、パッチの提供、コンテンツの追加、作品の紹介など、皆様からの貢献を心より歓迎します。
+TOPST ドキュメントへのフィードバック、パッチの提供、コンテンツの追加、そして皆様の作品のご紹介を心より歓迎いたします。 
 <br/>
-PRをお送りください。(topst@topst.ai)
+PR をお送りいただくだけで結構です。(topst@topst.ai)
 

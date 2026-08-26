@@ -1,21 +1,21 @@
-# Official Images for TOPST VCP 
+# TOPST VCP 公式イメージ 
 
-Official of TOPST VCP is based on Free RTOS.  
-You can download the image file here.  
+TOPST VCP の公式イメージは Free RTOS をベースとしています。  
+イメージファイルはここからダウンロードできます。  
 
 <img src="https://github.com/topst-development/Documentation/assets/161264431/626b98b5-dadf-4734-b70e-c25491916773">  
 
-**Download :**  
--	[Free RTOS image](https://drive.google.com/file/d/1dptd30hq__tFXrF4GobiqJaFSWOSXe43/view?usp=drive_link)
+**ダウンロード :**  
+-	[Free RTOS イメージ](https://drive.google.com/file/d/1dptd30hq__tFXrF4GobiqJaFSWOSXe43/view?usp=drive_link)
 <br>
--	For more information, please visit github
+-	詳細については github をご覧ください
 
-**Release note :**  
+**リリースノート :**  
 
-|Ver|   Date   |
+|バージョン|   日付   |
 |:-:|:--------:|
 |1.0|2024.04.26|  
 
-TOPST team is also preparing other official OS versions.  
+TOPST チームは他の公式 OS バージョンも準備しています。  
 
-For information on releases of other OS, please refer to the TOPST community.  
+他の OS のリリースに関する情報は、TOPST コミュニティを参照してください。  

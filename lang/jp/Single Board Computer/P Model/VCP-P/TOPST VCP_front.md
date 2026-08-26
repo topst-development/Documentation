@@ -1,18 +1,18 @@
 # TOPST VCP
 <br/>
 
-TOPST VCP is High performance MCU for Real time Applications.
+TOPST VCP は、リアルタイムアプリケーション向けの高性能 MCU です。
 <br/>
 
 
-To navigate to the main document pages, please refer to the table below.
+主要なドキュメントページに移動するには、以下の表を参照してください。
 <br/>
 
 <br/>
 
-[Hardware Overview](https://topst.ai/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification) : Hardware specification, information of peripherals etc.
+[ハードウェア概要](https://topst.ai/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification) : ハードウェア仕様、周辺機器の情報など。
 
-[TOPST VCP Official Images](https://flab-dev.net/tech/docs?TOPST-VCP&Software) : If you want to quickly mount a pre-built image, You can download it.
+[TOPST VCP 公式イメージ](https://flab-dev.net/tech/docs?TOPST-VCP&Software) : ビルド済みイメージをすぐにマウントしたい場合は、ここからダウンロードできます。
 
-[Free RTOS SDK build guide](https://topst.ai/tech/docs?TOPST-VCP&Software&SDK&1.%20Specification) : To perform the SDK build yourself, please refer to this page.
+[Free RTOS SDK ビルドガイド](https://topst.ai/tech/docs?TOPST-VCP&Software&SDK&1.%20Specification) : SDK ビルドを自分で行う場合は、このページを参照してください。
 

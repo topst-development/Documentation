@@ -1,19 +1,19 @@
 # TOSPT VCP  
 
 
-The key specifications for the Topst VCP are as follows.
+Topst VCP의 주요 사양은 다음과 같습니다.
 
-For more detailed specifications and instructions on usage, please refer to the Document below.  
-- [Board Specification](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification)
-- [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Periperals&1.%20Power%20in%20Connector)
-- [Schematic](https://drive.google.com/file/d/1JVAUYN4zxuKCY-mxab5mSaby5Lm5hw-c/view?usp=sharing)
+더 자세한 사양 및 사용 방법은 아래 문서를 참조하십시오.  
+- [보드 사양](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Overview&1.%20specification)
+- [주변장치 정보](https://flab-dev.net/tech/docs?TOPST-VCP&Hardware&Periperals&1.%20Power%20in%20Connector)
+- [회로도](https://drive.google.com/file/d/1JVAUYN4zxuKCY-mxab5mSaby5Lm5hw-c/view?usp=sharing)
 
 <br/>
 
 <table>
   <tr>
     <th>
-      Part Name
+      항목 이름
     </th>
     <th>
       TOPST VCP
@@ -32,7 +32,7 @@ For more detailed specifications and instructions on usage, please refer to the 
       SRAM
     </td>
     <td>
-      512KB (Including Retention RAM 16KB)
+      512KB (Retention RAM 16KB 포함)
     </td>
   </tr>
   <tr>

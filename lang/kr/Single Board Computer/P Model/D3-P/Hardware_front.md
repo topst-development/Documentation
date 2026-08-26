@@ -1,18 +1,18 @@
 # TOPST D3  
 
-The key specifications for the Topst D3 are as follows.  
-For more detailed specifications and instructions on usage, please refer to the Document below.
+Topst D3의 주요 사양은 다음과 같습니다.  
+더 자세한 사양 및 사용 방법에 대한 안내는 아래 문서를 참조하십시오.
 
-- [Board Specification](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification)
-- [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Peripherals&1.%20GPIO)
-- [Schematic](https://drive.google.com/file/d/1M9VXhLHARlfA2COzmtsRDQhMAEiikiGE/view?usp=sharing)
+- [보드 사양](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification)
+- [주변장치 정보](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Peripherals&1.%20GPIO)
+- [회로도](https://drive.google.com/file/d/1M9VXhLHARlfA2COzmtsRDQhMAEiikiGE/view?usp=sharing)
 
 <br/>
 
 <table>
   <tr>
     <th>
-      Part Name
+      부품명
     </th>
     <th>
       TOPST D3
@@ -44,7 +44,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Memory
+      메모리
     </td>
     <td>
       4GB / 8GB
@@ -52,10 +52,10 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td rowspan="2">
-      Storage
+      스토리지
     </td>
     <td>
-      Micro SD Card Slot
+      Micro SD 카드 슬롯
     </td>
     <tr>
     <td>
@@ -65,7 +65,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Network
+      네트워크
     </td>
     <td>
       Gigabit Ethernet
@@ -73,7 +73,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Camera
+      카메라
     </td>
     <td>
       MIPI CSI2 2-lane 1ch, MIPI CSI2 4-lane 1ch

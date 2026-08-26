@@ -1,19 +1,19 @@
 # TOPST AI
 
 
-The key specifications for the TOPST AI are as follows.
+TOPST AI の主な仕様は次のとおりです。
 
-For more detailed specifications and instructions on usage, please refer to the table below.
-- [Board Specification](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification)
-- [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Periperials&1.%20GPIO)
-- [Schematic](https://drive.google.com/file/d/1K5FRUOBnA4mya_wkIiCnZR4u9AAlN8R4/view?usp=drive_link)
+より詳細な仕様および使用方法については、以下の表を参照してください。
+- [ボード仕様](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification)
+- [周辺機器の情報](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Periperials&1.%20GPIO)
+- [回路図](https://drive.google.com/file/d/1K5FRUOBnA4mya_wkIiCnZR4u9AAlN8R4/view?usp=drive_link)
 
 <br/>
 
 <table>
   <tr>
     <th>
-      Part Name
+      部品名
     </th>
     <th>
       TOPST AI
@@ -37,7 +37,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Memory
+      メモリ
     </td>
     <td>
       4GB LPDDR4X
@@ -45,7 +45,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Storage
+      ストレージ
     </td>
     <td>
       32GB eMMC 5.1 Flash Storage, 8MB SNOR
@@ -53,7 +53,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Camera IN
+      カメラ入力
     </td>
     <td>
       MIPI CSI2 2-lane
@@ -61,7 +61,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Video OUT
+      映像出力
     </td>
     <td>
       MIPI DSI 2-lane

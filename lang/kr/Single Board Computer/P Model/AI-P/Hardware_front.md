@@ -1,19 +1,19 @@
 # TOPST AI
 
 
-The key specifications for the TOPST AI are as follows.
+TOPST AI의 주요 사양은 다음과 같습니다.
 
-For more detailed specifications and instructions on usage, please refer to the table below.
-- [Board Specification](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification)
-- [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Periperials&1.%20GPIO)
-- [Schematic](https://drive.google.com/file/d/1K5FRUOBnA4mya_wkIiCnZR4u9AAlN8R4/view?usp=drive_link)
+더 자세한 사양 및 사용 방법에 대한 안내는 아래 표를 참조하십시오.
+- [보드 사양](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Overview&1.%20Specification)
+- [주변장치 정보](https://flab-dev.net/tech/docs?TOPST-AI&Hardware&Periperials&1.%20GPIO)
+- [회로도](https://drive.google.com/file/d/1K5FRUOBnA4mya_wkIiCnZR4u9AAlN8R4/view?usp=drive_link)
 
 <br/>
 
 <table>
   <tr>
     <th>
-      Part Name
+      부품명
     </th>
     <th>
       TOPST AI
@@ -37,7 +37,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Memory
+      메모리
     </td>
     <td>
       4GB LPDDR4X
@@ -45,7 +45,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Storage
+      스토리지
     </td>
     <td>
       32GB eMMC 5.1 Flash Storage, 8MB SNOR
@@ -53,7 +53,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Camera IN
+      카메라 입력
     </td>
     <td>
       MIPI CSI2 2-lane
@@ -61,7 +61,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Video OUT
+      비디오 출력
     </td>
     <td>
       MIPI DSI 2-lane

@@ -1,1 +1,1 @@
-This folder contains AI-G available applications Figure files.
+このフォルダには、AI-G の利用可能なアプリケーションの図ファイルが含まれています。

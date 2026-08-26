@@ -1,18 +1,18 @@
 # TOPST D3  
 
-The key specifications for the Topst D3 are as follows.  
-For more detailed specifications and instructions on usage, please refer to the Document below.
+Topst D3 の主な仕様は次のとおりです。  
+より詳細な仕様および使用方法については、以下のドキュメントを参照してください。
 
-- [Board Specification](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification)
-- [Information of peripheral](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Peripherals&1.%20GPIO)
-- [Schematic](https://drive.google.com/file/d/1M9VXhLHARlfA2COzmtsRDQhMAEiikiGE/view?usp=sharing)
+- [ボード仕様](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification)
+- [周辺機器の情報](https://flab-dev.net/tech/docs?TOPST-D3&Hardware&Peripherals&1.%20GPIO)
+- [回路図](https://drive.google.com/file/d/1M9VXhLHARlfA2COzmtsRDQhMAEiikiGE/view?usp=sharing)
 
 <br/>
 
 <table>
   <tr>
     <th>
-      Part Name
+      部品名
     </th>
     <th>
       TOPST D3
@@ -44,7 +44,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Memory
+      メモリ
     </td>
     <td>
       4GB / 8GB
@@ -52,10 +52,10 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td rowspan="2">
-      Storage
+      ストレージ
     </td>
     <td>
-      Micro SD Card Slot
+      Micro SD カードスロット
     </td>
     <tr>
     <td>
@@ -65,7 +65,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Network
+      ネットワーク
     </td>
     <td>
       Gigabit Ethernet
@@ -73,7 +73,7 @@ For more detailed specifications and instructions on usage, please refer to the 
   </tr>
   <tr>
     <td>
-      Camera
+      カメラ
     </td>
     <td>
       MIPI CSI2 2-lane 1ch, MIPI CSI2 4-lane 1ch

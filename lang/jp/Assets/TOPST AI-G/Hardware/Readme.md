@@ -1,1 +1,1 @@
-This folder contains AI-G hardware Figure files.
+このフォルダには、AI-G ハードウェアの図ファイルが含まれています。

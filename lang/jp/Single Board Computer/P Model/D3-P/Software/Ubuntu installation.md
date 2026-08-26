@@ -1,23 +1,23 @@
-# 1. Introduction
-This document describes how to develop the Ubuntu environment in the main core (CA72) of the TOPST D3 (Open platform board). In addition to the native Ubuntu image provided on the board, this document describes how to develop your own specialized Ubuntu environment. User-created ubuntu file systems can be downloaded to the file system area of the main core (CA72) by using the **_FWDN_** tool.
+# 1. はじめに
+本書では、TOPST D3(オープンプラットフォームボード)のメインコア(CA72)で Ubuntu 環境を開発する方法について説明します。ボードで提供されるネイティブの Ubuntu イメージに加えて、本書ではユーザー独自の特化した Ubuntu 環境を開発する方法について説明します。ユーザーが作成した ubuntu ファイルシステムは、**_FWDN_** ツールを使用してメインコア(CA72)のファイルシステム領域にダウンロードできます。
 
-This document is described in the following order:
-* Ubuntu File System Creation Guide
-* FWDN Guide
-* Booted Ubuntu GUI Screen 
+本書は次の順序で説明します:
+* Ubuntu ファイルシステム作成ガイド
+* FWDN ガイド
+* 起動した Ubuntu GUI 画面 
   
 <br><br>
 
-# 2. Ubuntu File System Creation Guide
+# 2. Ubuntu ファイルシステム作成ガイド
 
-This chapter describes how to install the Ubuntu file system for the main core (CA72) on the Host PC.
+本章では、Host PC 上でメインコア(CA72)用の Ubuntu ファイルシステムをインストールする方法について説明します。
 
-Refer to “Documentation/TOPST-D3/Software/SDK/LINUX” for the user's development environment.
+ユーザーの開発環境については、“Documentation/TOPST-D3/Software/SDK/LINUX” を参照してください。
 
 <br><br>
 
-## 2.1. Get Ubuntu with Git
-The Ubuntu version provided by Git is Ubuntu 22.04.2 LTS (Jammy Jellyfish) as shown below.
+## 2.1. Git で Ubuntu を取得する
+Git で提供される Ubuntu のバージョンは、以下に示すとおり Ubuntu 22.04.2 LTS (Jammy Jellyfish) です。
 
 ```
 $ git clone https://gitlab.com/topst.ai/topst-d3-ubuntu.git
@@ -25,10 +25,10 @@ $ git clone https://gitlab.com/topst.ai/topst-d3-ubuntu.git
 
 <br><br>
 
-# 3. Execute Script
+# 3. スクリプトの実行
 
 
-Run 'populate_ubuntu.sh'.
+'populate_ubuntu.sh' を実行します。
 ```
 $ sudo ./populate_ubuntu.sh 
 [!] Prepare workspace
@@ -73,7 +73,7 @@ I: Retrieving dbus 1.12.20-2ubuntu4
                    ㆍ
                    ㆍ
 ```
-You can check etx4 file below.
+以下で etx4 ファイルを確認できます。
 ```
 $ ls
 populate_ubuntu.sh  src  ubuntu.ext4
