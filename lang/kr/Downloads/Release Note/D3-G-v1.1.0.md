@@ -7,9 +7,9 @@
 - [tools](https://github.com/topst-development/tools/tree/release/1.1.0)
 - [manifests](https://github.com/topst-development/manifests/tree/release/1.1.0)
 
-## 새로운 기능
-- 이제 Ubuntu Gnome 데스크탑을 지원합니다.
-- gstreamer에서 VPU-HEVC 인코더/디코더를 활용할 수 있습니다.
+## 신규 기능
+- 이제 Ubuntu Gnome Desktop을 지원합니다.
+- VPU-HEVC 인코더/디코더를 gstreamer에서 사용할 수 있습니다
 - 활성화된 커널 기능
     - docker용 netfilter
     - 스왑 파티션
@@ -17,29 +17,29 @@
     - USB BT 동글 드라이버
  
 ## 개선 사항
-- PCIe 데이터 전송을 위해 고속 IO 버스 미해결 매개변수가 조정되었습니다.
+- PCIe 데이터 전송을 위해 고속 IO 버스의 outstanding 파라미터가 조정되었습니다.
 
 ## 버그 수정
 - PowerVR GPU 드라이버의 메모리 누수
 
 ## 알려진 문제
-- VPU-HEVC 인코더는 아직 4K 콘텐츠 인코딩을 지원하지 않습니다(다음 릴리스에서 지원 예정).
-- sdcard가 삽입되어 있을 때 웜 리부팅이 가끔 오래 걸립니다(약 40초).
-- MIPI에 연결된 외부 카메라는 현재 최대 30fps를 지원합니다(다음 릴리스에서 최대 60fps 지원 예정).
+- VPU-HEVC 인코더는 아직 콘텐츠를 4K로 인코딩하는 기능을 지원하지 않습니다(다음 릴리스에서 지원 예정)
+- sdcard가 삽입되어 있는 경우 웜 리부팅에 때때로 긴 시간(약 40초)이 소요됩니다.
+- MIPI에 연결된 외부 카메라는 현재 최대 30fps까지 지원합니다(다음 릴리스에서 최대 60fps 지원 예정)
 
 ## 가이드
-- VLC 플레이어
-    - 콘텐츠를 재생하기 전에 속성 설정에서 비디오 출력을 **'X11 비디오 출력(XCB)'**으로 설정해야 합니다.
+- VLC Player
+    - 콘텐츠를 재생하기 전에 속성 설정에서 비디오 출력을 **'X11 video output(XCB)'**(으)로 설정해야 합니다.
 - firefox
-	- 필요한 경우 'sudo apt install --reinstall firefox'로 Firefox를 다시 설치하십시오.
+	- 필요한 경우 'sudo apt install --reinstall firefox' 명령으로 Firefox를 재설치하십시오.
 
 ## 부록.
-<p align="center"><strong>표 1.1 USB 블루투스 동글</strong></p>
+<p align="center"><strong>표 1.1 USB Bluetooth 동글</strong></p>
 <div align="center">
 	<table>
 	  <tr>
-	    <td><strong>제조사 이름</strong></td>
-	    <td><strong>칩셋 이름</strong></td>
+	    <td><strong>제조사명</strong></td>
+	    <td><strong>칩셋명</strong></td>
 	  </tr>
 	  <tr>
 	    <td rowspan="16">RealTek</td>
@@ -122,8 +122,8 @@
 <div align="center">
 	<table>
 	  <tr>
-	    <td><strong>제조사 이름</strong></td>
-	    <td><strong>칩셋 이름</strong></td>
+	    <td><strong>제조사명</strong></td>
+	    <td><strong>칩셋명</strong></td>
 	  </tr>
 	  <tr>
 	    <td>RealTek</td>

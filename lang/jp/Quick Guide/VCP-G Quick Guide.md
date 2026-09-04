@@ -1,20 +1,20 @@
 # VCP-G クイックガイド
 ---
 
-### 1.1 Windows環境でのFWDNの実行
-1. ボードをダウンロードモードに設定します
-   FWDNスイッチを押しながら、電源ケーブルをVCP-Gボードに接続します。
+### 1.1 Windows 環境での FWDN の実行
+1. ボードをダウンロードモードに設定する
+   FWDN スイッチを押しながら、VCP-G ボードに電源ケーブルを接続します。
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Set%20Board%20to%20Download%20Mode.png"></p>
     <p align="center"><strong>図 1.1 ボードをダウンロードモードに設定</strong></p>
-2. ダウンロードページに移動します
+2. ダウンロードページに移動する
 
-3. Yocto VCP-Gイメージをダウンロードします
+3. Yocto VCP-G イメージをダウンロードする
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20VCP-G%20Image.png" width="550"></p>
-    <p align="center"><strong>図 1.2 VCP-Gイメージのダウンロード</strong></p> <br/>
+    <p align="center"><strong>図 1.2 VCP-G イメージのダウンロード</strong></p> <br/>
 
-4. fwdn_vcp.batをクリックします。「fwdn_vcp.bat」は、***FWDN V8***を使用してファームウェアを自動的にダウンロードする実行ファイルです。
+4. fwdn_vcp.bat をクリックします。「fwdn_vcp.bat」は、***FWDN V8*** を使用してファームウェアを自動的にダウンロードする実行ファイルです。 
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_vcp.bat.png" width="550"></p>
-    <p align="center"><strong>図 1.3 fwdn_vcp.batをクリック</strong></p> <br/>
+    <p align="center"><strong>図 1.3 fwdn_vcp.bat のクリック</strong></p> <br/>
 ```
 [main:27] FWDN VCP v0.1.1 - 2022.8.12 11:38:19
 Com port num : 10
@@ -64,15 +64,15 @@ size : 2097152 byte
  100% [||||||||||||||||||||||||||||||] 2097152/2097152
 ```
 
-4. ボードのリセット
-   ダウンロードプロセスが完了したら、電源ケーブルを取り外して再接続します。
+4. ボードをリセットする
+   ダウンロード処理が完了したら、電源ケーブルを抜いて再度接続します。
     <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/Reset%20the%20Board.png"></p>
     <p align="center"><strong>図 1.4 ボードのリセット</strong></p>
 
 </br></br></br>
 
-### 1.2 Linux環境でのFWDNの実行
-Linux環境では、以下のコマンドを入力してVCP-Gイメージをダウンロードできます。
+### 1.2 Linux 環境での FWDN の実行
+Linux 環境では、次のコマンドを入力することで AI-G イメージをダウンロードできます。 
 
 ```
 ./fwdn.sh 

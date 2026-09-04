@@ -1,2 +1,2 @@
-This folder contains AI-G software Figure files.
+このフォルダには、AI-G ソフトウェアの図ファイルが含まれています。
 

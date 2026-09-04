@@ -1,2 +1,2 @@
-This folder contains D3-G hardware Figure files.
+このフォルダには、D3-G ハードウェアの図ファイルが含まれています。
 

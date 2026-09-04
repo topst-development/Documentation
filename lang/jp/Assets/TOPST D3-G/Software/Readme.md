@@ -1,1 +1,1 @@
-This folder contains D3-G software Figure fiies.
+このフォルダには、D3-G ソフトウェアの図ファイルが含まれています。

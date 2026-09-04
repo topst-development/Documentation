@@ -1,11 +1,11 @@
 # 1. 소개
 ---
-이 문서는 TCC7045 애플리케이션 프로세서를 기반으로 하는 VCP-G의 하드웨어 사용자 가이드입니다. 이 문서는 시스템 설치, 디버깅 및 VCP-G의 전반적인 설계 및 사용에 대한 자세한 정보를 설명합니다.
+이 문서는 TCC7045 애플리케이션 프로세서 기반의 VCP-G에 대한 하드웨어 사용자 가이드입니다. 이 문서에서는 VCP-G의 시스템 설치, 디버깅 및 전체 설계와 사용법에 대한 상세 정보를 설명합니다.
 
 
-표 1.1은 VCP-G의 기능을 설명합니다.
+표 1.1은 VCP-G의 특징을 설명합니다.
 
-<p align="center"><strong>표 1.1 VCP-G의 기능</strong></p>
+<p align="center"><strong>표 1.1 VCP-G의 특징</strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -14,7 +14,7 @@
 	  </tr>
 	  <tr>
 	    <td colspan="3">패키지</td>
-	    <td>패키지 핀 대 핀 호환 FBGA 196-pin (12BD)</td>
+	    <td>패키지	핀 투 핀 호환 FBGA 196-pin (12BD)</td>
 	  </tr>
 	    <tr>
 	    <td colspan="3">CPU 주파수</td>
@@ -30,59 +30,59 @@
 	    <td colspan="3">512 KB (Retention RAM 16 KB 포함)</td>
 	  </tr>
 	  <tr>
-	    <td colspan="2">데이터 플래시</td>
+	    <td colspan="2">DataFlash</td>
 	    <td colspan="3">256 KB</td>
 	  </tr>
 	  <tr>
 	    <td colspan="2">DMA 채널</td>
-	    <td colspan="3">16 채널</td>
+	    <td colspan="3">16채널</td>
 	  </tr>
 	  <tr>
-	    <td rowspan="13">주변 장치</td>
-	    <td colspan="2">이더넷</td>
-	    <td>AVB 포함 1 Gbps</td>
+	    <td rowspan="13">주변장치</td>
+	    <td colspan="2">Ethernet</td>
+	    <td>1 Gbps (AVB 지원)</td>
 	  </tr>
 	  <tr>
 		<td colspan="2">CAN / CANFD</td>
-	    <td>3 채널</td>
+	    <td>3채널</td>
 	  </tr>
 	  <tr>
 	    <td colspan="2">전용 LIN / UART</td>
-	    <td>3 채널 (최대 6 채널)</td>
+	    <td>3채널 (최대 6채널)</td>
 	  </tr>
 	  <tr>
 	    <td colspan="2">전용 I2C</td>
-	    <td>3 채널 (최대 6 채널)</td>
+	    <td>3채널 (최대 6채널)</td>
 	  </tr>
 	  <tr>
 	  <tr>
 	    <td colspan="2">전용 GPSB (SPI)</td>
-	    <td>2 채널 (최대 5 채널)</td>
+	    <td>2채널 (최대 5채널)</td>
 	  </tr>
 	    <tr>
-	    <td colspan="2">MFIO (할당된 UART, I2C, GPSB)</td>
-	    <td>3 채널</td>
+	    <td colspan="2">MFIO (UART, I2C, GPSB 할당)</td>
+	    <td>3채널</td>
 	  </tr>
 	  <tr>
 	    <td rowspan="4">ADC</td> 
-	    <td>해상도</td>
-	    <td>12-bit SAR 타입</td>
+	    <td>분해능</td>
+	    <td>12비트 SAR 방식</td>
 	  </tr>
 	  <tr>
 	    <td>채널</td>
-	    <td>12 채널 x 2 그룹</td>
+	    <td>12채널 x 2그룹</td>
 	  </tr>
 	  <tr>
 	    <td>입력 범위</td>
 	    <td>3.3V</td>
 	  </tr>
 	  <tr>
-	    <td>샘플 속도</td>
+	    <td>샘플링 속도</td>
 	    <td>1.0 MSPs 이상</td>
 	  </tr>
 	  <tr>
 	    <td colspan="2">I2S</td>
-	    <td>1 채널</td>
+	    <td>1채널</td>
 	  </tr>
 	  <tr>
 	    <td colspan="2">시리얼 플래시 인터페이스</td>
@@ -94,7 +94,7 @@
 	  </tr>
 	  <tr>
 	    <td colspan="3">온도</td>
-	    <td>-40 ℃ ~ 105 ℃</td>
+	    <td>-40 ℃ to 105 ℃</td>
 	  </tr>
 	</table>
 </div>
@@ -112,27 +112,27 @@
 	  </tr>
 	  <tr>
 	    <td clospan="2">ADC</td>
-	    <td>Analog to Digital Converter</td>
+	    <td>아날로그-디지털 변환기</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">FWDN</td>
-	    <td>Firmware Download</td>
+	    <td>펌웨어 다운로드</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">GPIO</td>
-	    <td>General Purpose Input Output</td>
+	    <td>범용 입출력</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">MCU</td>
-	    <td>Micro-controller Unit</td>
+	    <td>마이크로컨트롤러 유닛</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">TOPST</td>
-	    <td>Total Open-Platform for System development and Training</td>
+	    <td>시스템 개발 및 교육을 위한 통합 개방형 플랫폼</td>
 	  </tr>
 	  <tr>
 	    <td clospan="2">VCP</td>
-	    <td>Vehicle Control Processer</td>
+	    <td>차량 제어 프로세서</td>
 	  </tr>
 	</table>
 </div>
@@ -151,7 +151,7 @@
 
 # 3. VCP-G 개요
 ---
-VCP-G는 다음 목적으로 사용할 수 있습니다:
+VCP-G는 다음과 같은 용도로 사용할 수 있습니다:
   - 시스템 개발
   - 교육
 
@@ -175,12 +175,12 @@ VCP-G는 다음 목적으로 사용할 수 있습니다:
 
 ## 3.1 VCP-G
 ---
-그림 3.1은 VCP-G의 평면도를 보여줍니다.
+그림 3.1은 VCP-G의 윗면을 보여줍니다.
 <p align="center"><img src= "https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/3.1%20TOPST%20VCP-G%20Board%20(Top%20View)%20.png"></p>
-<p align="center"><strong>그림 3.1 VCP-G (평면도)</strong></p>
+<p align="center"><strong>그림 3.1 VCP-G (윗면)</strong></p>
 
-표 3.2는 VCP-G의 커넥터(평면도)를 설명합니다.
-<p align="center"><strong>표 3.2 VCP-G의 커넥터 (평면도)</strong></p>
+표 3.2는 VCP-G(윗면)의 커넥터를 설명합니다.
+<p align="center"><strong>표 3.2 VCP-G의 커넥터 (윗면)</strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -192,50 +192,50 @@ VCP-G는 다음 목적으로 사용할 수 있습니다:
 	  <tr>
 	    <td colspan="4">1</td>
 	    <td>J18D100</td>
-	    <td>36-pin Female Header</td>
+	    <td>36핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">2</td>
 	    <td>J5D100</td>
-	    <td>10-pin Male Header</td>
+	    <td>10핀 수 헤더</td>
 	    <td>CAN용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">3</td>
 	    <td>J3D100</td>
-	    <td>6-pin Male Header</td>
+	    <td>6핀 수 헤더</td>
 	    <td>SPI용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">4</td>
 	    <td>J8D104</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">5</td>
 	    <td>J8D102</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">6</td>
 	    <td>J10D100</td>
-	    <td>10-pin Female Header</td>
+	    <td>10핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">7</td>
 	    <td>J100</td>
-	    <td>10-pin Male Header</td>
+	    <td>10핀 수 헤더</td>
 	    <td>JTAG용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">8</td>
 	    <td>SW100</td>
 	    <td>RESET 택트 스위치</td>
-	    <td>GRESETn: 시스템 및 VCP-G의 전원 관리 초기화</td>
+	    <td>GRESETn: VCP-G의 시스템 및 전원 관리를 초기화합니다</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">9</td>
@@ -247,7 +247,7 @@ VCP-G는 다음 목적으로 사용할 수 있습니다:
 	    <td colspan="4">10</td>
 	    <td>SW101</td>
 	    <td>택트 스위치</td>
-	    <td>FWDN: VCP-G의 펌웨어 다운로드 모드 진입</td>
+	    <td>FWDN: VCP-G의 펌웨어 다운로드 모드로 진입합니다</td>
 	  </tr>  
 	  <tr>
 	    <td colspan="4">11</td>
@@ -258,29 +258,29 @@ VCP-G는 다음 목적으로 사용할 수 있습니다:
 	  <tr>
 	    <td colspan="4">12</td>
 	    <td>J8D100</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>전원 및 리셋용 헤더</td>
 	  </tr>  
 	  <tr>
 	    <td colspan="4">13</td>
 	    <td>J8D101</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>  
 	  <tr>
 	    <td colspan="4">14</td>
 	    <td>J8D103</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>    
 	</table>
 </div>
 
-그림 3.2는 VCP-G의 저면도를 보여줍니다.  
+그림 3.2는 VCP-G의 아랫면을 보여줍니다.  
 
 **참고:** 그림 3.2는 현재 TOPST_VCP-G_V1.1.1 보드를 보여줍니다. 이 이미지는 TOPST_VCP-G_V2.1.1 보드로 업데이트될 예정입니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/3.2%20TOPST%20VCP-G%20Board%20(Bottom%20View).png"></p>
-<p align="center"><strong>그림 3.2 VCP-G (저면도)</strong></p>
+<p align="center"><strong>그림 3.2 VCP-G (아랫면)</strong></p>
 
 </br></br></br></br>
 
@@ -289,15 +289,15 @@ VCP-G는 다음 목적으로 사용할 수 있습니다:
 ## 4.1 Quad SPI 플래시 메모리 (U101)
 ---
 Quad SPI 플래시 메모리에 대한 정보는 다음과 같습니다:
-  - 밀도 : 64 Mb  
+  - 용량 : 64 Mb  
   
-**참고:** SNOR는 기본적으로 VCP-G에 장착되어 있지 않습니다.
+**참고:** SNOR는 기본적으로 VCP-G에 실장되어 있지 않습니다.
 
 </br></br></br>
 
 ## 4.2 전원 입력 커넥터 (J101)
 ---
-DC 12V는 12V 어댑터에서 J101의 DC 잭을 통해 VCP-G에 공급됩니다.  
+12V 어댑터에서 J101의 DC 잭을 통해 VCP-G에 DC 12V가 공급됩니다.  
 그림 4.1은 J101의 위치를 보여줍니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.1%20Power%20In%20Connector%20(J101).png"></p>
 <p align="center"><strong>그림 4.1 전원 입력 커넥터 (J101)</strong><p>
@@ -306,10 +306,10 @@ DC 12V는 12V 어댑터에서 J101의 DC 잭을 통해 VCP-G에 공급됩니다.
 
 ## 4.3 JTAG용 커넥터 (J100)
 ---
-JTAG 에뮬레이터는 디버깅을 위해 J100을 통해 VCP-G에 연결할 수 있습니다. 그림 4.2는 J100의 위치를 보여줍니다.
+디버깅을 위해 J100을 통해 VCP-G에 JTAG 에뮬레이터를 연결할 수 있습니다. 그림 4.2는 J100의 위치를 보여줍니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.2%20Connector%20for%20JTAG%20(J100).png"></p>
 <p align="center"><strong>그림 4.2 JTAG용 커넥터 (J100)</strong><p>
-JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려면 R178 및 R179의 연결을 변경해야 합니다. R178에 의해 TRSRn이 high로 설정되면 MCU가 JTAG 모드로 진입합니다.
+JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려면 R178과 R179의 연결을 변경해야 합니다. R178에 의해 TRSRn이 high로 설정되면 MCU는 JTAG 모드로 진입합니다.
 
 표 4.1은 J100의 핀을 설명합니다.
 <p align="center"><strong>표 4.1 J100 핀 설명</strong></p>
@@ -317,8 +317,8 @@ JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려
 	<table>
 	  <tr>
 	    <th rowspan="2"><strong>핀 번호</strong></th>
-	    <th rowspan="2"><strong>회로도 넷 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th rowspan="2"><strong>회로도 네트 이름</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -340,7 +340,7 @@ JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려
 	    <td>3</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>4</td>
@@ -352,7 +352,7 @@ JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려
 	    <td>5</td>
 		<td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>6</td>
@@ -376,7 +376,7 @@ JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려
 	    <td>9</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>10</td>
@@ -416,13 +416,13 @@ JTAG는 기본적으로 비활성화되어 있습니다. JTAG를 활성화하려
 
 ## 4.4 FWDN 스위치 (SW101)
 ---
-VCP-G에는 부트 모드(BM)를 사용하는 부트 구성을 위한 하나의 핀이 있으며 UART FWDN 모드와 일반 모드의 2가지 모드를 지원합니다.   
-그림 4.3은 VCP-G의 부트 모드를 선택하는 데 사용되는 FWDN 택트 스위치(SW101)의 위치를 보여줍니다.
+VCP-G는 Boot Mode (BM)를 사용하는 부팅 설정용 핀을 하나 가지고 있으며, UART FWDN 모드와 일반 모드의 두 가지 모드를 지원합니다.   
+그림 4.3은 VCP-G의 부팅 모드를 선택하는 데 사용되는 FWDN 택트 스위치 (SW101)의 위치를 보여줍니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.3%20FWDN%20Tact%20Switch%20(SW101).png"></p>
 <p align="center"><strong>그림 4.3 FWDN 택트 스위치 (SW101)</strong><p>
 
-표 4.3은 FWDN 택트 스위치(SW101)를 사용하여 부트 모드를 선택하는 방법을 설명합니다.
-<p align="center"><strong>표 4.3 부트 모드용 택트 스위치 (SW101) 설명</strong></p>
+표 4.3은 FWDN 택트 스위치 (SW101)를 사용하여 부팅 모드를 선택하는 방법을 설명합니다.
+<p align="center"><strong>표 4.3 부팅 모드용 택트 스위치 (SW101) 설명</strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -438,36 +438,36 @@ VCP-G에는 부트 모드(BM)를 사용하는 부트 구성을 위한 하나의 
 	  <tr>
 	    <td colspan="3">FWDN (옵션)</td>
 	    <td>High (1)</td>
-	    <td>누른 상태에서 전원 켬</td>
+	    <td>누른 상태에서 전원 인가</td>
 	  </tr>
 	</table>
 </div>
 </br></br>
 
-### 4.4.1 FWDN 모드 방법
+### 4.4.1 FWDN 모드 진입 방법
 FWDN 모드로 진입하는 방법은 다음과 같이 두 가지가 있습니다.
 
 #### 4.4.1.1 방법 1
-FWDN 스위치(SW101)를 누른 상태에서 12V 전원 공급 장치를 연결하여 VCP-G 보드를 웁니다.  
-FWDN 스위치를 누른 상태에서 전원이 인가되면 FWDN 빨간색 표시등이 켜집니다. FWDN 스위치(SW101)를 놓으면 MCU가 FWDN 모드로 진입합니다.  
+FWDN 스위치 (SW101)를 누른 상태에서 12V 전원 공급 장치를 연결하여 VCP-G 보드의 전원을 켜십시오.  
+FWDN 스위치를 누른 상태에서 전원이 인가되면 FWDN 빨간색 표시등이 켜집니다. FWDN 스위치 (SW101)에서 손을 떼면 MCU가 FWDN 모드로 진입합니다.  
 그림 4.4는 방법 1을 사용하여 FWDN 모드로 진입하는 방법을 보여줍니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.4%20Entering%20FWDN%20Mode%20by%20Using%20Method%201.png"></p>
-<p align="center"><strong>그림 4.4 방법 1을 사용하여 FWDN 모드 진입</strong><p>
+<p align="center"><strong>그림 4.4 방법 1을 사용한 FWDN 모드 진입</strong><p>
 
 #### 4.4.1.2 방법 2
-VCP-G 보드가 12V 전원 공급 장치에 연결된 상태에서 FWDN 스위치(SW101)를 누른 다음 RESET 택트 스위치(SW100)를 누릅니다.  
-FWDN 스위치를 누른 상태에서 전원이 인가되면 FWDN 빨간색 표시등이 켜집니다. RESET 택트 스위치를 누르는 동안 3.3V 녹색 표시등이 꺼집니다. FWDN 스위치(SW101)를 놓으면 MCU가 FWDN 모드로 진입합니다.  
+VCP-G 보드가 12V 전원 공급 장치에 연결된 상태에서 FWDN 스위치 (SW101)를 누른 다음 RESET 택트 스위치 (SW100)를 누르십시오.  
+FWDN 스위치를 누른 상태에서 전원이 인가되면 FWDN 빨간색 표시등이 켜집니다. RESET 택트 스위치를 누르는 동안 3.3V 초록색 표시등이 꺼집니다. FWDN 스위치 (SW101)에서 손을 떼면 MCU가 FWDN 모드로 진입합니다.  
 그림 4.5는 방법 2를 사용한 FWDN 모드를 보여줍니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.5%20Entering%20FWDN%20Mode%20by%20Using%20Method%202.png"></p>
-<p align="center"><strong>그림 4.5 방법 2를 사용하여 FWDN 모드 진입</strong><p>
+<p align="center"><strong>그림 4.5 방법 2를 사용한 FWDN 모드 진입</strong><p>
 
 </br></br></br>
 
 ## 4.5 RESET 택트 스위치 (SW100)
 ---
-VCP-G에는 GRESETn 핀을 사용하여 RESET 전원을 위한 하나의 RESET 스위치가 있습니다.  
-그림 4.6은 RESET 택트 스위치(SW100)를 보여줍니다.
+VCP-G는 GRESETn 핀을 사용하는 RESET 전원용 RESET 스위치를 하나 가지고 있습니다.  
+그림 4.6은 RESET 택트 스위치 (SW100)를 보여줍니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.6%20RESET%20Tact%20Switch%20(SW100).png"></p>
 <p align="center"><strong>그림 4.6 RESET 택트 스위치 (SW100)</strong><p>
 </br></br>
@@ -475,9 +475,9 @@ VCP-G에는 GRESETn 핀을 사용하여 RESET 전원을 위한 하나의 RESET �
 ### 4.5.1 RESET 택트 스위치 (SW100) 기능
 SW100은 VCP-G의 전원 블록과 시스템 블록을 리셋하는 택트 스위치입니다.  
 이 버튼의 기능은 다음과 같습니다:
-  - 전원이 켜진 상태에서 RESET 택트 스위치(SW100)를 누르면 VCP-G의 전원 블록과 시스템이 강제로 리셋됩니다.
+  - 전원이 켜진 상태에서 RESET 택트 스위치 (SW100)를 누르면 VCP-G의 전원 블록과 시스템이 강제로 리셋됩니다.
 
-**중요:** 전원이 갑자기 꺼지고 데이터가 손상될 수 있으므로 택트 스위치를 누를 때 주의하십시오.
+**중요:** 전원이 갑자기 꺼져 데이터가 손상될 수 있으므로 택트 스위치를 누를 때 주의하십시오.
 
 </br></br></br>
 
@@ -488,16 +488,16 @@ JC100은 표준 USB Type-C 커넥터입니다. VCP-G에서 JC100은 UART를 통�
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.7%20USB%20Type-C%20Connector%20(JC100).png"></p>
 <p align="center"><strong>그림 4.7 USB Type-C 커넥터 (JC100)</strong><p>
 
-JC100을 통해 FWDN을 수행하거나 VCP-G의 디버깅 메시지를 확인할 수 있습니다.
-VCP-G의 JC100에는 USB-to-UART 브리지 컨트롤러가 내장되어 있어 USB Type-C 케이블을 사용하여 JC100을 PC에 직접 연결할 수 있습니다.
+JC100을 통해 VCP-G의 FWDN을 수행하거나 디버깅 메시지를 확인할 수 있습니다.
+VCP-G의 JC100에는 USB-to-UART 브리지 컨트롤러가 내장되어 있으므로 USB Type-C 케이블을 사용하여 JC100을 PC에 직접 연결할 수 있습니다.
 
 </br></br></br>
 
-## 4.7 GPIO, ADC, 전원, CAN 및 SPI용 핀 헤더
+## 4.7 GPIO, ADC, 전원, CAN, SPI용 핀 헤더
 ---
-VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하기 위한 전원, GPIO, ADC, CAN 및 SPI용 9개의 2.54mm 핀 헤더가 있습니다.  
+VCP-G에는 센서나 서브 보드와 같은 다른 주변장치에 연결하기 위한 전원, GPIO, ADC, CAN, SPI용 2.54 mm 핀 헤더가 9개 있습니다.  
 
-표 4.4는 VCP-G의 9개 핀 헤더의 용도를 설명합니다.
+표 4.4는 VCP-G에 있는 9개 핀 헤더의 용도를 설명합니다.
 <p align="center"><strong>표 4.4 VCP-G의 핀 헤더 </strong></p>
 <div align="center">
 	<table>
@@ -510,65 +510,65 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <td colspan="4">1</td>
 	    <td>J18D100</td>
-	    <td>36-pin Female Header</td>
+	    <td>36핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">2</td>
 	    <td>J5D100</td>
-	    <td>10-pin Male Header</td>
+	    <td>10핀 수 헤더</td>
 	    <td>CAN용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">3</td>
 	    <td>J3D100</td>
-	    <td>6-pin Male Header</td>
+	    <td>6핀 수 헤더</td>
 	    <td>SPI용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">4</td>
 	    <td>J8D104</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">5</td>
 	    <td>J8D102</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">6</td>
 	    <td>J10D100</td>
-	    <td>10-pin Female Header</td>
+	    <td>10핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">7</td>
 	    <td>J8D100</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>전원 및 리셋용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">8</td>
 	    <td>J8D101</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	  <tr>
 	    <td colspan="4">9</td>
 	    <td>J8D103</td>
-	    <td>8-pin Female Header</td>
+	    <td>8핀 암 헤더</td>
 	    <td>GPIO 및 ADC용 헤더</td>
 	  </tr>
 	</table>
 </div>
 
-그림 4.8은 VCP-G의 핀 헤더 위치를 보여줍니다.
+그림 4.8은 VCP-G의 핀 헤더 위치를 나타냅니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.8%20Pin%20Headers%20on%20TOPST%20VCP-G%20Board.png"></p>
 <p align="center"><strong>그림 4.8 VCP-G의 핀 헤더 </strong><p>
 
-표 4.5는 J10D100의 핀 설명을 보여줍니다.
+표 4.5는 J10D100의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.5 J10D100 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -579,7 +579,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -611,7 +611,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	    <td>GND</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>5</td>
@@ -658,7 +658,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	</table>
 </div>
 
-표 4.6은 J8D100의 핀 설명을 보여줍니다.
+표 4.6은 J8D100의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.6 J8D100 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -669,7 +669,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -715,14 +715,14 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	    <td>GND</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>7</td>
 	    <td>GND</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>8</td>
@@ -734,7 +734,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	</table>
 </div>
 
-표 4.7은 J8D101의 핀 설명을 보여줍니다.
+표 4.7은 J8D101의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.7 J8D101 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -745,7 +745,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -809,8 +809,8 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  </tr>
 	</table>
 </div>
- 
-표 4.8은 J8D102의 핀 설명을 보여줍니다.
+
+표 4.8은 J8D102의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.8 J8D102 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -821,7 +821,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -885,8 +885,8 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  </tr>
 	</table>
 </div>
- 
-표 4.9는 J8D103의 핀 설명을 보여줍니다.
+
+표 4.9는 J8D103의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.9 J8D103 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -897,7 +897,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -961,8 +961,8 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  </tr>
 	</table>
 </div>
- 
-표 4.10은 J8D104의 핀 설명을 보여줍니다.
+
+표 4.10은 J8D104의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.10 J8D104 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -973,7 +973,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -1037,8 +1037,8 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  </tr>
 	</table>
 </div>
- 
-표 4.11은 J3D100의 핀 설명을 보여줍니다.
+
+표 4.11은 J3D100의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.11 J3D100 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -1049,7 +1049,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -1095,12 +1095,12 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	    <td>GND</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	</table>
 </div>
- 
-표 4.12는 J18D100의 핀 설명을 보여줍니다.
+
+표 4.12는 J18D100의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.12 J18D100 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -1111,7 +1111,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -1126,7 +1126,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  </tr>
 	  <tr>
 	    <td>2</td>
-	    <td>5V</td>
+	   <td>5V</td>
 	    <td>VCP_5P0</td>
 	    <td>-</td>
 	    <td>전원 5.0V</td>
@@ -1360,19 +1360,19 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	    <td>GND</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	  <tr>
 	    <td>36</td>
 	    <td>GND</td>
 	    <td>DGND</td>
 	    <td>-</td>
-	    <td>접지</td>
+	    <td>그라운드</td>
 	  </tr>
 	</table>
 </div>
- 
-표 4.13은 J5D100의 핀 설명을 보여줍니다.
+
+표 4.13은 J5D100의 핀 설명을 나타냅니다.
 <p align="center"><strong>표 4.13 J5D100 핀 설명</strong></p>
 <div align="center">
 	<table>
@@ -1383,7 +1383,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  <tr>
 	    <th rowspan="2"><strong>포트 이름</strong></th>
 	    <th rowspan="2"><strong>신호 이름</strong></th>
-	    <th><strong>방향</strong></th>
+	    <th><strong>DIR</strong></th>
 	    <th rowspan="2"><strong>설명</strong></th>
 	  </tr>
 	  <tr>
@@ -1401,7 +1401,7 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	    <td>3.3V</td>
 	    <td>VCP_3P3</td>
 	    <td>-</td>
-	    <td>전원 3.3V</td>
+    <td>전원 3.3V</td>
 	  </tr>
 	  <tr>
 	    <td>3</td>
@@ -1461,12 +1461,12 @@ VCP-G에는 센서나 서브 보드와 같은 다른 주변 장치에 연결하�
 	  </tr>
 	</table>
 </div>
- 
-그림 4.9는 VCP-G의 10개 핀 헤더의 전체 핀 할당을 보여줍니다.
+
+그림 4.9는 VCP-G에 있는 10개 핀 헤더의 전체 핀 할당을 나타냅니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Hardware/4.9%20Total%20Pin%20Assignment%20of%20Pin%20Headers%20on%20TOPST%20VCP-G%20Board.png"></p>
-<p align="center"><strong>그림 4.9 VCP-G의 핀 헤더 전체 핀 할당 </strong><p>
- 
+<p align="center"><strong>그림 4.9 VCP-G 핀 헤더의 전체 핀 할당 </strong><p>
+
 # 참고 문헌
   - 자세한 내용은 TOPST에 문의하십시오: topst@topst.ai
- 
-**참고:** 참조 문서는 계약 조건에 따라 가능한 경우 제공될 수 있습니다. 참조 문서를 사용할 수 없는 경우 개발과 직접 관련된 내용을 안내받을 수 있습니다.
+
+**참고:** 참고 문서는 계약 조건에 따라 제공이 가능한 경우 제공될 수 있습니다. 참고 문서를 제공할 수 없는 경우에는 개발과 직접 관련된 내용을 안내해 드릴 수 있습니다.

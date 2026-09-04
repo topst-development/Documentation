@@ -7,26 +7,26 @@
 - [meta-topst-bsp](https://github.com/topst-development/meta-topst-bsp/tree/release/1.2.0)
 - [manifests](https://github.com/topst-development/manifests/tree/release/1.2.0)
 
-## 새로운 기능
-- gstreamer에서 VPU-AVC 인코더/디코더를 활용할 수 있습니다.
-- gstreamer에서 VPU-VP9 디코더를 활용할 수 있습니다.
+## 신규 기능
+- VPU-AVC 인코더/디코더를 gstreamer에서 사용할 수 있습니다
+- VPU-VP9 디코더를 gstreamer에서 사용할 수 있습니다
 
 ## 개선 사항
-- VPU 인코더가 4K 콘텐츠 인코딩을 지원합니다.
+- VPU 인코더가 콘텐츠를 4K로 인코딩하는 것을 지원합니다
 
 
-## 알려진 문제
-- sdcard가 삽입되어 있을 때 웜 리부팅이 가끔 오래 걸립니다(약 40초).
-- MIPI에 연결된 외부 카메라는 현재 최대 30fps를 지원합니다(다음 릴리스에서 최대 60fps 지원 예정).
+## 알려진 이슈
+- sdcard가 삽입되어 있는 경우 웜 리부트에 간혹 오랜 시간(약 40초)이 소요됩니다.
+- MIPI에 연결된 외부 카메라는 현재 최대 30fps까지 지원합니다(다음 릴리스에서 최대 60fps를 지원할 예정입니다)
 
 ## 가이드
-- VLC 플레이어
-    - 콘텐츠를 재생하기 전에 속성 설정에서 비디오 출력을 **'X11 비디오 출력(XCB)'**으로 설정해야 합니다.
+- VLC Player
+    - 콘텐츠를 재생하기 전에 속성 설정에서 video output을 **'X11 video output(XCB)'** 로 설정해야 합니다.
 - firefox
-	- 필요한 경우 'sudo apt install --reinstall firefox'로 Firefox를 다시 설치하십시오.
+	- 필요한 경우 'sudo apt install --reinstall firefox' 명령으로 Firefox를 다시 설치하십시오.
 
 ## 부록.
-<p align="center"><strong>표 1.1 USB 블루투스 동글</strong></p>
+<p align="center"><strong>표 1.1 USB Bluetooth 동글</strong></p>
 <div align="center">
 	<table>
 	  <tr>

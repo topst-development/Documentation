@@ -1,1 +1,1 @@
-This folder contains VCP-G software Figure files 
+このフォルダには、VCP-G ソフトウェアの図ファイルが含まれています 

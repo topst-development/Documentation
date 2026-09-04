@@ -1,101 +1,101 @@
-# 1. Introduction
+# 1. 소개
 ---
-This document provides guidelines on using the VCP-G with FreeRTOS. It includes configuration instructions and example codes to help you easily develop embedded applications by using the VCP-G under the FreeRTOS environment.
+이 문서는 FreeRTOS 환경에서 VCP-G를 사용하는 방법에 대한 지침을 제공합니다. FreeRTOS 환경에서 VCP-G를 사용하여 임베디드 애플리케이션을 손쉽게 개발할 수 있도록 설정 방법과 예제 코드를 포함합니다.
 
-Specifically, this document provides guidance on FreeRTOS-based example applications for the VCP-G, including: 
-- Digital Out/In
+특히 이 문서는 다음을 포함하여 VCP-G용 FreeRTOS 기반 예제 애플리케이션에 대한 안내를 제공합니다. 
+- 디지털 출력/입력
 - SPI
 - I2C
 - UART
 - PWM
 - Additional Example
 
-Refer to Figure 1.1 before using the VCP-G.
+VCP-G를 사용하기 전에 그림 1.1을 참조하십시오.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/vcp-g%20pinout%20Diagram.png"></p>
-<p align="center"><strong>Figure 1.1 VCP-G Pinout Diagram</strong></p>
+<p align="center"><strong>그림 1.1 VCP-G 핀아웃 다이어그램</strong></p>
 </br>
 
-To run each example, you should modify the `main.c` file located at:
+각 예제를 실행하려면 다음 위치에 있는 `main.c` 파일을 수정해야 합니다.
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-After making the necessary changes, compile the project by using the provided Makefile to generate the firmware binary.
+필요한 변경을 완료한 후 제공된 Makefile을 사용하여 프로젝트를 컴파일하고 펌웨어 바이너리를 생성합니다.
 </br></br></br></br>
 
-# 2. Digital In/Out
+# 2. 디지털 입력/출력
 ---
-This chapter provides examples of controlling LEDs by using the digital pins of the VCP-G board. In VCP-G, digital pins are used to send or receive binary signals (HIGH or LOW), making them essential for controlling components like LEDs, switches, and sensors. 
+본 장에서는 VCP-G 보드의 디지털 핀을 사용하여 LED를 제어하는 예제를 제공합니다. VCP-G에서 디지털 핀은 이진 신호(HIGH 또는 LOW)를 송수신하는 데 사용되며, LED, 스위치, 센서와 같은 부품을 제어하는 데 필수적입니다. 
 
-This chapter contains two example projects that demonstrate how to control LEDs and button by using digital outputs and inputs, giving you a basic understanding of digital pin functions.
+이 장에서는 디지털 출력과 입력을 사용하여 LED와 버튼을 제어하는 방법을 보여주는 두 개의 예제 프로젝트를 다루며, 디지털 핀 기능에 대한 기본적인 이해를 돕습니다.
 </br></br></br>
 
-## 2.1 Digital Out
+## 2.1 디지털 출력
 ---
-This example demonstrates how to control LEDs on a breadboard by using the VCP-G board under FreeRTOS.  
-You can find the relevant source file at:  
+이 예제는 FreeRTOS 환경에서 VCP-G 보드를 사용하여 브레드보드의 LED를 제어하는 방법을 보여줍니다.  
+관련 소스 파일은 다음 위치에서 확인할 수 있습니다.  
 
 ```
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-Before proceeding, ensure that the VCP-G FreeRTOS SDK is correctly installed. For installation and setup instructions, please refer to the VCP-G FreeRTOS SDK Getting Started guide.
+진행하기 전에 VCP-G FreeRTOS SDK가 올바르게 설치되어 있는지 확인하십시오. 설치 및 설정 방법은 VCP-G FreeRTOS SDK Getting Started 가이드를 참조하십시오.
 
-To implement this example, modify the main.c file to configure the GPIO pins connected to the LEDs as digital outputs. A FreeRTOS task should be created to turn on four LEDs one by one in order, then turn them off in reverse order. Each LED transition should include a 500 ms delay to clearly observe the sequence.
+이 예제를 구현하려면 main.c 파일을 수정하여 LED에 연결된 GPIO 핀을 디지털 출력으로 설정합니다. 네 개의 LED를 순서대로 하나씩 켠 다음 역순으로 끄는 FreeRTOS 태스크를 생성해야 합니다. 동작 순서를 명확하게 확인할 수 있도록 각 LED 전환에는 500 ms 지연을 포함해야 합니다.
 </br></br>
 
-### 2.1.1 Hardware Reqirements  
-- VCP-G board (x1)
-- Breadboard (x1)
+### 2.1.1 하드웨어 요구 사항  
+- VCP-G 보드 (x1)
+- 브레드보드 (x1)
 - LED (x4)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1) 
-- Male to male jumper wire (x9)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1) 
+- 수-수 점퍼 와이어 (x9)
 </br></br>
 
-### 2.1.2 Circuit
+### 2.1.2 회로
 - LED01
-    - (+) pin is connected to pin 7 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 7번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED02
-    - (+) pin is connected to pin 6 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 6번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED03
-    - (+) pin is connected to pin 5 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 5번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED04
-    - (+) pin is connected to pin 4 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard. 
+    - (+) 핀은 VCP-G 보드의 4번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_digital_out.png" width="600"></p>
-<p align="center"><strong>Figure 2.1 vcp4LED Circuit Schematic</strong></p>
+<p align="center"><strong>그림 2.1 vcp4LED 회로도</strong></p>
 
-#### 2.1.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 2.1.2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 2.1 Pin Mapping of vcp4LED</strong></p>
+<p align="center"><strong>표 2.1 vcp4LED의 핀 매핑</strong></p>
 <div align="center">	
 	<table>
 		<tr>
-			<th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+			<th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED01 (+) pin</td>
+	        <td colspan="3">LED01 (+) 핀</td>
 	        <td>7</td>
 	        <td>B[01]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED02 (+) pin</td>
+	        <td colspan="3">LED02 (+) 핀</td>
 	        <td>6</td>
 	        <td>A[13]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED03 (+) pin</td>
+	        <td colspan="3">LED03 (+) 핀</td>
 	        <td>5</td>
 	        <td>B[10]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED04 (+) pin</td>
+	        <td colspan="3">LED04 (+) 핀</td>
 	        <td>4</td>
 	        <td>B[27]</td>
 	    </tr>
@@ -103,8 +103,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 2.1.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 2.1.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 static void Main_StartTask(void * pArg)
@@ -136,91 +136,91 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the four connected LEDs turn on sequentially from LED01 to LED04, then turn off in reverse order. Each transition occurs with a 500 ms delay, creating a smooth blinking pattern.
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 연결된 네 개의 LED가 LED01부터 LED04까지 순차적으로 켜진 다음 역순으로 꺼집니다. 각 전환은 500 ms 지연을 두고 발생하여 부드러운 점멸 패턴을 만듭니다.
 </br></br></br>
 
-## 2.2 Digital In
+## 2.2 디지털 입력
 ---
-This example demonstrates how to read input from a push button and use it to control an LED by using the VCP-G board under FreeRTOS.
-The relevant source file can be found at:
+이 예제는 FreeRTOS 환경에서 VCP-G 보드를 사용하여 푸시 버튼의 입력을 읽고 이를 통해 LED를 제어하는 방법을 보여줍니다.
+관련 소스 파일은 다음 위치에서 확인할 수 있습니다.
 ``` 
 $ ~/vcp/sources/app.sample/app.base/main.c
 ```
-To implement this example, modify main.c to configure one GPIO pin as a digital input (connected to a button) and four GPIO pins as digital outputs (connected to LEDs).  
-A FreeRTOS task continuously monitors the button state and when the button is pressed, LED1 and LED3 turn on.
-When the button is not pressed, LED2 and LED4 turn on instead.
+이 예제를 구현하려면 main.c를 수정하여 GPIO 핀 하나를 디지털 입력(버튼에 연결)으로, GPIO 핀 네 개를 디지털 출력(LED에 연결)으로 설정합니다.  
+FreeRTOS 태스크가 버튼 상태를 지속적으로 모니터링하며, 버튼을 누르면 LED1과 LED3이 켜집니다.
+버튼을 누르지 않으면 대신 LED2와 LED4가 켜집니다.
 </br></br>
 
-### 2.2.1 Hardware Requirements
-- VCP-G Board (x1)
-- Breadboard (x1)
+### 2.2.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 브레드보드 (x1)
 - LED (x4)
-- Button switch (sensor) (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to male jumper wire (x11)
+- 버튼 스위치 (센서) (x1)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- Male to male 점퍼 와이어 (x11)
 </br></br>
 
-### 2.2.2 Circuit
+### 2.2.2 회로
 - LED01
-    - (+) pin is connected to pin 7 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 7번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED02
-    - (+) pin is connected to pin 6 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 6번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED03
-    - (+) pin is connected to pin 5 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 5번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED04
-    - (+) pin is connected to pin 4 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard. 
-- Button switch
-    - One leg of the button switch is connected to pin 2 on the VCP-G board.
-    - The diagonally opposite leg of the button is connected to the power rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 4번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다. 
+- 버튼 스위치
+    - 버튼 스위치의 한쪽 다리는 VCP-G 보드의 2번 핀에 연결됩니다.
+    - 버튼의 대각선 반대편 다리는 브레드보드의 전원 레일에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_digital_in.png" width="600"></p>
-<p align="center"><strong>Figure 2.2 vcp4LED_Button Circuit Schematic</strong></p>
+<p align="center"><strong>그림 2.2 vcp4LED_Button 회로도</strong></p>
 
-#### 2.2.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 2.2.2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 2.2 Pin Mapping of vcp4LED_Button</strong></p>
+<p align="center"><strong>표 2.2 vcp4LED_Button의 핀 매핑</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED01 (+) pin</td>
+	        <td colspan="3">LED01 (+) 핀</td>
 	        <td>7</td>
 	        <td>B[01]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED02 (+) pin</td>
+	        <td colspan="3">LED02 (+) 핀</td>
 	        <td>6</td>
 	        <td>A[13]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED03 (+) pin</td>
+	        <td colspan="3">LED03 (+) 핀</td>
 	        <td>5</td>
 	        <td>B[10]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED04 (+) pin</td>
+	        <td colspan="3">LED04 (+) 핀</td>
 	        <td>4</td>
 	        <td>B[27]</td>
 	    </tr>
 	    </tr>
 	        <tr>
-	        <td colspan="3">one leg pin of button</td>
+	        <td colspan="3">버튼의 한쪽 다리 핀</td>
 	        <td>2</td>
 	        <td>B[28]</td>
 	    </tr>
@@ -228,8 +228,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 2.2.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 2.2.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 static void Main_StartTask(void *pArg)
@@ -269,74 +269,74 @@ static void Main_StartTask(void *pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, pressing the button turns on LED01 and LED03, while releasing the button turns on LED02 and LED04.
-The system continuously monitors the button state and updates the LED status in real time with a 50 ms polling interval.
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 버튼을 누를 때 LED01과 LED03이 켜지고, 버튼을 놓으면 LED02와 LED04가 켜집니다.
+시스템은 버튼 상태를 지속적으로 모니터링하고 50 ms 폴링 간격으로 LED 상태를 실시간으로 업데이트합니다.
 </br></br></br></br>
 
 # 3. VCP-G I2C
 ---
-This chapter provides instructions for configuring Inter-integrated Circuit (I2C) communication on the VCP-G running FreeRTOS.  
-I2C is a two-wire, synchronous communication protocol designed for efficient data exchange between multiple devices. It operates with a serial data line (SDA) and a serial clock line (SCL), allowing multiple peripherals to communicate with a microcontroller using unique addresses. I2C supports both master-slave communication and multi-master configurations, making it ideal for connecting sensors, displays, and other low-speed devices while minimizing the number of required connections.
+이 장에서는 FreeRTOS를 실행하는 VCP-G에서 Inter-integrated Circuit (I2C) 통신을 설정하는 방법을 설명합니다.  
+I2C는 여러 장치 간의 효율적인 데이터 교환을 위해 설계된 2선식 동기 통신 프로토콜입니다. 시리얼 데이터 라인(SDA)과 시리얼 클록 라인(SCL)으로 동작하며, 여러 주변 장치가 고유한 주소를 사용하여 마이크로컨트롤러와 통신할 수 있습니다. I2C는 마스터-슬레이브 통신과 멀티 마스터 구성을 모두 지원하므로, 필요한 연결 수를 최소화하면서 센서, 디스플레이 및 기타 저속 장치를 연결하는 데 적합합니다.
 </br></br></br>
 
 ## 3.1 vcpI2C_LCD1602
 ---
-This example program demonstrates how the VCP-G board controls an LCD1602 display by using the I2C communication protocol. The LCD1602 is a 16-character, 2-line liquid crystal display commonly used in embedded system projects. By utilizing the LiquidCrystal_I2C library, the board sends commands and data over the I2C bus to efficiently control the display.  
-In this example, the LCD is initialized and the backlight is enabled for clear visibility. The program then positions the cursor to display the text "Hello TOPST" on the screen.
+이 예제 프로그램은 VCP-G 보드가 I2C 통신 프로토콜을 사용하여 LCD1602 디스플레이를 제어하는 방법을 보여줍니다. LCD1602는 임베디드 시스템 프로젝트에서 일반적으로 사용되는 16문자 2줄 액정 디스플레이입니다. LiquidCrystal_I2C 라이브러리를 활용하여 보드는 I2C 버스를 통해 명령과 데이터를 전송하고 디스플레이를 효율적으로 제어합니다.  
+이 예제에서는 LCD를 초기화하고 선명한 가시성을 위해 백라이트를 켭니다. 그런 다음 프로그램은 커서를 이동하여 화면에 "Hello TOPST" 텍스트를 표시합니다.
 </br></br>
 
-### 3.1.1 Hardware Requirements
-- VCP-G Board (x1)
+### 3.1.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
 - LCD1602 (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to female jumper wire (x4)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-암 점퍼 와이어 (x4)
 </br></br>
 
-### 3.1.2 Circuit
+### 3.1.2 회로
 - LCD1602
-    - VCC pin of the LCD1602 is connected to the analog pin 5V on the VCP-G board.
-    - GND pin of the LCD1602 is connected to GND on the VCP-G board.
-    - SDA pin of the LCD1602 is connected to pin 7 on the VCP-G board.
-    - SCL pin of the LCD1602 is connected to pin 8 on the VCP-G board.
+    - LCD1602의 VCC 핀은 VCP-G 보드의 아날로그 핀 5V에 연결됩니다.
+    - LCD1602의 GND 핀은 VCP-G 보드의 GND에 연결됩니다.
+    - LCD1602의 SDA 핀은 VCP-G 보드의 7번 핀에 연결됩니다.
+    - LCD1602의 SCL 핀은 VCP-G 보드의 8번 핀에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_i2c.png" width="600"></p>
-<p align="center"><strong>Figure 3.1 vcpI2C_LCD1602 Circuit Schematic</strong></p>
+<p align="center"><strong>그림 3.1 vcpI2C_LCD1602 회로도</strong></p>
 
-#### 3.1.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 3.1.2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 3.1 Pin Mapping of vcpI2C_LCD1602</strong></p>
+<p align="center"><strong>표 3.1 vcpI2C_LCD1602의 핀 매핑</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LCD1602 VCC pin</td>
+	        <td colspan="3">LCD1602 VCC 핀</td>
 	        <td>5V</td>
 	        <td>-</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LCD1602 GND pin</td>
+	        <td colspan="3">LCD1602 GND 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LCD1602 SDA pin</td>
+	        <td colspan="3">LCD1602 SDA 핀</td>
 	        <td>7</td>
 	        <td>B[01]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">LED (-) pin</td>
+	        <td colspan="3">LED (-) 핀</td>
 	        <td>8</td>
 	        <td>B[00]</td>
 	    </tr>
@@ -345,8 +345,8 @@ The following table shows pin mapping.
 
 </br></br>
 
-### 3.1.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 3.1.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <i2c.h>
 #include <lcd.h>
@@ -373,110 +373,110 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
-#### Additional Configuration Notes
-To enable LCD testing through I2C, follow these steps:  
+#### 추가 설정 참고 사항
+I2C를 통해 LCD를 테스트하려면 다음 단계를 따르십시오.  
 
-**1. Enable lcd.c in the Build System**  
-- Navigate to the following path:
+**1. 빌드 시스템에서 lcd.c 활성화**  
+- 다음 경로로 이동합니다.
 ```
 $ vi ~/vcp/sources/dev.drivers/i2c/rules.mk
 ```
-- Find the following line:
+- 다음 줄을 찾습니다.
 ```
 #SRCS += lcd.c
 ```
-- Unannotate the line to activate the file:
+- 해당 줄의 주석을 해제하여 파일을 활성화합니다.
 ```
 SRCS += lcd.c
 ```
 
-**2. Check or Modify LCD Function Logic**  
-If you need to inspect or edit the logic for LCD initialization, commands, or print functions, refer to:
+**2. LCD 함수 로직 확인 또는 수정**  
+LCD 초기화, 명령 또는 출력 함수의 로직을 확인하거나 편집해야 하는 경우 다음을 참조하십시오.
 ```
 $ vi ~/vcp/sources/dev.drivers/i2c/lcd.c
 ```
 
-**3. Configure I2C Channel and Port**  
-The I2C channel number and associated port used by the LCD can be changed in:
+**3. I2C 채널 및 포트 설정**  
+LCD에서 사용하는 I2C 채널 번호와 관련 포트는 다음에서 변경할 수 있습니다.
 ```
 $ vi ~/vcp/sources/dev.drivers/i2c/lcd.h
 ```
 
-After editing the code, go to the following directory and run the following build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 다음 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the LCD displays the message "Hello TOPST" on the screen, confirming that I2C communication is working properly.  
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 LCD 화면에 "Hello TOPST" 메시지가 표시되며, 이를 통해 I2C 통신이 정상적으로 동작함을 확인할 수 있습니다.  
 </br></br></br></br>
 
 # 4. VCP SPI
 ---
-This chapter provides instructions for configuring Serial Peripheral Interface (SPI) communication on the VCP-G.  
-SPI is a high-speed, synchronous communication protocol used to exchange data between microcontrollers and peripherals. It operates with separate lines for data transmission (MOSI and MISO), clock synchronization (SCK), and device selection (SS), ensuring efficient and reliable communication.  
+이 장에서는 VCP-G에서 Serial Peripheral Interface(SPI) 통신을 구성하는 방법을 설명합니다.  
+SPI는 마이크로컨트롤러와 주변 장치 간에 데이터를 교환하는 데 사용되는 고속 동기 통신 프로토콜입니다. 데이터 전송(MOSI 및 MISO), 클록 동기화(SCK), 장치 선택(SS)을 위한 별도의 라인으로 동작하여 효율적이고 신뢰성 있는 통신을 보장합니다.  
 </br></br></br>
 
 ## 4.1 vcpSPI_Dot8x8
 ---
-This example program demonstrates how the VCP-G board controls an 8x8 LED dot matrix by using the MAX7219 driver through SPI.
-In this example, a predefined binary array is used to display the letter "X" on the dot matrix. The display is updated through SPI communication, and the MAX7219 internally handles row and column control.
-This example helps illustrate how to send data patterns over SPI to control external display devices such as LED matrices.
+이 예제 프로그램은 VCP-G 보드가 SPI를 통해 MAX7219 드라이버를 사용하여 8x8 LED 도트 매트릭스를 제어하는 방법을 보여줍니다.
+이 예제에서는 미리 정의된 이진 배열을 사용하여 도트 매트릭스에 문자 "X"를 표시합니다. 디스플레이는 SPI 통신을 통해 갱신되며, MAX7219가 내부적으로 행과 열 제어를 처리합니다.
+이 예제는 LED 매트릭스와 같은 외부 디스플레이 장치를 제어하기 위해 SPI를 통해 데이터 패턴을 전송하는 방법을 설명하는 데 도움이 됩니다.
 </br></br>
 
-### 4.1.1 Hardware Requirements
-- VCP-G Board (x1)
-- 8x8 Dot Matrix (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to female jumper wire (x2)
-- Female to female jumper wire (x3)
+### 4.1.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 8x8 도트 매트릭스 (x1)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-암 점퍼 와이어 (x2)
+- 암-암 점퍼 와이어 (x3)
 </br></br>
 
-### 4.1.2 Circuit
-- 8x8 Dot Matrix
-    - VCC pin of the 8x8 Dot Matrix is connected to the analog pin 5V on the VCP-G board.
-    - GND pin of the 8x8 Dot Matrix is connected to GND on the VCP-G board.
-    - DIN pin of the 8x8 Dot Matrix is connected to SPI pin 4 on the VCP-G board.
-    - CS pin of the 8x8 Dot Matrix is connected to SPI pin 5 on the VCP-G board.
-    - CLS pin of the 8x8 Dot Matrix is connected to SPI pin 3 on the VCP-G board.
+### 4.1.2 회로
+- 8x8 도트 매트릭스
+    - 8x8 도트 매트릭스의 VCC 핀은 VCP-G 보드의 아날로그 핀 5V에 연결됩니다.
+    - 8x8 도트 매트릭스의 GND 핀은 VCP-G 보드의 GND에 연결됩니다.
+    - 8x8 도트 매트릭스의 DIN 핀은 VCP-G 보드의 SPI 4번 핀에 연결됩니다.
+    - 8x8 도트 매트릭스의 CS 핀은 VCP-G 보드의 SPI 5번 핀에 연결됩니다.
+    - 8x8 도트 매트릭스의 CLS 핀은 VCP-G 보드의 SPI 3번 핀에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_spi.png" width="600"></p>
-<p align="center"><strong>Figure 4.1 vcpSPI_Dot8x8 Circuit Schematic</strong></p>
+<p align="center"><strong>그림 4.1 vcpSPI_Dot8x8 회로도</strong></p>
 
-#### 4.1.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 4.1.2.1 핀맵
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 4.1 Pin Mapping of vcpSPI_Dot8x8</strong></p>
+<p align="center"><strong>표 4.1 vcpSPI_Dot8x8의 핀맵</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">8x8 Dot Matrix VCC pin</td>
+	        <td colspan="3">8x8 도트 매트릭스 VCC 핀</td>
 	        <td>5V</td>
 	        <td>-</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">8x8 Dot Matrix GND pin</td>
+	        <td colspan="3">8x8 도트 매트릭스 GND 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">8x8 Dot Matrix DIN pin</td>
+	        <td colspan="3">8x8 도트 매트릭스 DIN 핀</td>
 	        <td>SPI 4</td>
 	        <td>B[06]</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">8x8 Dot Matrix CS pin</td>
+	        <td colspan="3">8x8 도트 매트릭스 CS 핀</td>
 	        <td>SPI 5</td>
 	        <td>B[05]</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">8x8 Dot Matrix CLK pin</td>
+	        <td colspan="3">8x8 도트 매트릭스 CLK 핀</td>
 	        <td>SPI 3</td>
 	        <td>B[04]</td>
 	    </tr>
@@ -484,8 +484,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 4.1.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 4.1.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <dot_matrix.h>
 static void Main_StartTask(void * pArg)
@@ -505,80 +505,80 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
-#### Additional Configuration Notes
-To enable Dot Matrix testing through SPI, follow these steps:  
-**1. Enable dot_matrix.c in the Build System**  
-- Navigate to the following path:
+#### 추가 설정 참고 사항
+SPI를 통해 도트 매트릭스 테스트를 활성화하려면 다음 단계를 따르십시오:  
+**1. 빌드 시스템에서 dot_matrix.c 활성화**  
+- 다음 경로로 이동합니다.
 ```
 $ vi ~/vcp/sources/dev.drivers/gpsb/rules.mk
 ```
-- Find the line:
+- 다음 줄을 찾습니다:
 ```
 #SRCS += dot_matrix.c
 ```
-- Unannotate to activate the file:
+- 주석을 해제하여 파일을 활성화합니다:
 ```
 SRCS += dot_matrix.c
 ```
-**2. Check or Modify Dot Matrix Function Logic**  
-To inspect or edit the logic for Dot Matrix initialization, control commands, or display patterns, refer to the following source file:
+**2. 도트 매트릭스 기능 로직 확인 또는 수정**  
+도트 매트릭스 초기화, 제어 명령 또는 표시 패턴에 대한 로직을 확인하거나 편집하려면 다음 소스 파일을 참조하십시오:
 ```
 $ vi ~/vcp/sources/dev.drivers/gpsb/dot_matrix.c
 ```
-**3. Configure SPI Channel and GPIOs**  
-The SPI channel and associated GPIO pins used by the Dot Matrix can be configured in the following header file:
+**3. SPI 채널 및 GPIO 구성**  
+도트 매트릭스에서 사용하는 SPI 채널과 관련 GPIO 핀은 다음 헤더 파일에서 구성할 수 있습니다:
 ```
 $ vi ~/vcp/sources/dev.drivers/gpsb/dot_matrix.h
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the 8x8 LED dot matrix displays the letter "X", confirming that SPI communication with the MAX7219 driver is working correctly. 
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 8x8 LED 도트 매트릭스에 문자 "X"가 표시되며, 이는 MAX7219 드라이버와의 SPI 통신이 올바르게 동작하고 있음을 확인시켜 줍니다. 
 </br></br></br></br>
 
 # 5. VCP-G UART
 ---
-This chapter provides instructions for configuring Universal Asynchronous Receiver-Transmitter (UART) communication on the VCP-G.  
-UART is a widely used serial communication protocol that transmits data asynchronously using only two lines: Transmit (TX) and Receive (RX). It is essential for exchanging data between microcontrollers, sensors, and computers without requiring a shared clock signal.  
-The following chapters describe how to send and receive data through UART.
+이 장에서는 VCP-G에서 Universal Asynchronous Receiver-Transmitter(UART) 통신을 구성하는 방법을 설명합니다.  
+UART는 송신(TX)과 수신(RX)의 두 개의 선만 사용하여 데이터를 비동기적으로 전송하는 널리 사용되는 직렬 통신 프로토콜입니다. 공통 클록 신호 없이 마이크로컨트롤러, 센서 및 컴퓨터 간에 데이터를 교환하는 데 필수적입니다.  
+다음 장에서는 UART를 통해 데이터를 송수신하는 방법을 설명합니다.
 </br></br></br>
 
-## 5.1 Uart Communication Test (FT232BL)
+## 5.1 UART 통신 테스트 (FT232BL)
 ---
-This example demonstrates how to verify UART communication on the VCP-G board by using the FT232BL USB to TTL serial module.
-The UART TX and RX pins of the VCP-G board are connected to the FT232BL module, which is in turn connected to a PC through USB.
-A terminal program such as MobaXterm is used on the PC to view the transmitted messages.
+이 예제에서는 FT232BL USB to TTL 시리얼 모듈을 사용하여 VCP-G 보드의 UART 통신을 검증하는 방법을 설명합니다.
+VCP-G 보드의 UART TX 및 RX 핀은 FT232BL 모듈에 연결되고, 이 모듈은 다시 USB를 통해 PC에 연결됩니다.
+PC에서는 MobaXterm과 같은 터미널 프로그램을 사용하여 전송된 메시지를 확인합니다.
 </br></br>
 
-### 5.1.1 Hardware Requirements
-- VCP-G Board (x1)
-- FT232BL USB to TTL serial module (x1)
-- Mini USB Cable (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to female jumper wire (x2)
+### 5.1.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- FT232BL USB to TTL 시리얼 모듈 (x1)
+- 미니 USB 케이블 (x1)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-암 점퍼 와이어 (x2)
 </br></br>
 
-### 5.1.2 Circuit
+### 5.1.2 회로
 - FT232BL
-    - The RXD pin of the FT232BL module is connected to pin 18 (TXD) on the VCP-G board.
-    - The TXD pin of the FT232BL module is connected to pin 19 (RXD) on the VCP-G board.
+    - FT232BL 모듈의 RXD 핀은 VCP-G 보드의 18번 핀(TXD)에 연결됩니다.
+    - FT232BL 모듈의 TXD 핀은 VCP-G 보드의 19번 핀(RXD)에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_uart.png" width="600"></p>
-<p align="center"><strong>Figure 5.1 vcpUART Circuit Schematic</strong></p>
+<p align="center"><strong>그림 5.1 vcpUART 회로도</strong></p>
 
-#### 5.1.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 5.1.2.1 핀맵
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 4.1 Pin Mapping of vcpUART</strong></p>
+<p align="center"><strong>표 4.1 vcpUART의 핀맵</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
@@ -595,8 +595,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 5.1.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 5.1.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <uart_example.h>
 void Main_StartTask(void *pArg)
@@ -611,76 +611,76 @@ void Main_StartTask(void *pArg)
     }
 }
 ```
-#### Additional Configuration Notes
-To enable UART testing, follow these steps:  
-**1. Enable uart_example.c in the Build System**  
-- Navigate to the following path:
+#### 추가 설정 참고 사항
+UART 테스트를 활성화하려면 다음 단계를 따르십시오:  
+**1. 빌드 시스템에서 uart_example.c 활성화**  
+- 다음 경로로 이동합니다.
 ```
 $ vi ~/vcp/sources/dev.drivers/uart/rules.mk
 ```
-- Find the line:
+- 다음 줄을 찾습니다:
 ```
 #SRCS += uart_example.c
 ```
-- Unannotate to activate the file:
+- 주석을 해제하여 파일을 활성화합니다:
 ```
 SRCS += uart_example.c
 ```
-**2. Check or Modify UART Function Logic**  
-To inspect or edit the logic for UART initialization, data transmission/reception, or interrupt handling, refer to the following source file:
+**2. UART 기능 로직 확인 또는 수정**  
+UART 초기화, 데이터 송수신 또는 인터럽트 처리에 대한 로직을 확인하거나 편집하려면 다음 소스 파일을 참조하십시오:
 ```
 $ vi ~/vcp/sources/dev.drivers/uart/tcc70xx/uart_example.c
 ```
-**3. Configure UART Channel and GPIOs**  
-The UART channel, baud rate, and associated TX/RX GPIO pins used for the UART test can be configured in the following header file:
+**3. UART 채널 및 GPIO 구성**  
+UART 테스트에 사용되는 UART 채널, 보드레이트 및 관련 TX/RX GPIO 핀은 다음 헤더 파일에서 구성할 수 있습니다:
 ```
 $ vi ~/vcp/sources/dev.drivers/uart/uart_example.h
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the message "[UART] Hello from UART!" appears once on the serial terminal, confirming that UART transmission from the VCP-G board is working properly through the FT232BL USB to TTL module.
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 시리얼 터미널에 "[UART] Hello from UART!" 메시지가 한 번 표시되며, 이는 FT232BL USB to TTL 모듈을 통한 VCP-G 보드의 UART 전송이 정상적으로 동작하고 있음을 확인시켜 줍니다.
 </br></br></br></br>
 
 # 6. VCP-G PWM
 ---
-This chapter provides instructions for configuring Pulse Width Modulation (PWM) on the VCP-G. PWM is a technique used to control the amount of power delivered to devices such as motors, LEDs, and buzzers by varying the duty cycle of a digital signal. It operates by switching the output pin on and off at a high frequency, where the ratio of on-time to the total period determines the effective output level. The following chapters describe how to generate PWM signals using FreeRTOS on the VCP-G and how to apply them to control external components.
+이 장에서는 VCP-G에서 PWM(Pulse Width Modulation)을 구성하는 방법을 설명합니다. PWM은 디지털 신호의 듀티 사이클을 변화시켜 모터, LED, 부저와 같은 장치에 전달되는 전력량을 제어하는 데 사용되는 기법입니다. 출력 핀을 높은 주파수로 켜고 끄는 방식으로 동작하며, 전체 주기에 대한 온타임의 비율이 실효 출력 레벨을 결정합니다. 다음 장에서는 VCP-G에서 FreeRTOS를 사용하여 PWM 신호를 생성하는 방법과 이를 외부 부품 제어에 적용하는 방법을 설명합니다.
 </br></br></br>
 
 ## 6.1 pwmFade
 ---
-This example program demonstrates how the VCP board controls an LED on the breadboard by gradually increasing and decreasing its brightness in a loop by using PWM. After the LED reaches its maximum brightness, the brightness of the LED begins to decrease. The program continuously adjusts the LED's brightness, creating a fading effect.
+이 예제 프로그램은 VCP 보드가 PWM을 사용하여 브레드보드의 LED 밝기를 반복적으로 점차 높이고 낮추면서 제어하는 방법을 보여줍니다. LED가 최대 밝기에 도달한 후에는 LED의 밝기가 감소하기 시작합니다. 프로그램은 LED의 밝기를 지속적으로 조정하여 페이딩 효과를 만들어냅니다.
 </br></br>
 
-### 6.1.1 Hardware Requirements
-- VCP-G Board (x1)
-- Breadboard (x1)
+### 6.1.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 브레드보드 (x1)
 - LED (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to male jumper wire (x2)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-수 점퍼 와이어 (x2)
 </br></br>
 
-### 6.1.2 Circuit
+### 6.1.2 회로
 - LED
-    - (+) pin is connected to pin 45 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 45번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_pwm.png" width="600"></p>
-<p align="center"><strong>Figure 5.1 pwmFade Circuit Schematic</strong></p>
+<p align="center"><strong>그림 5.1 pwmFade 회로도</strong></p>
 
-#### 6.1.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 6.1.2.1 핀맵
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 4.1 Pin Mapping of pwmFade</strong></p>
+<p align="center"><strong>표 4.1 pwmFade의 핀맵</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
@@ -692,8 +692,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 6.1.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 6.1.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 #include <pdm.h>
@@ -780,96 +780,96 @@ void Main_StartTask(void * pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, you can observe a gradual LED fade-in and fade-out effect driven by PWM on GPIO A10, confirming that the PDM-based PWM output from the VCP-G is functioning correctly.
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 GPIO A10에서 PWM으로 구동되는 LED의 점진적인 페이드인 및 페이드아웃 효과를 관찰할 수 있으며, 이는 VCP-G의 PDM 기반 PWM 출력이 올바르게 동작하고 있음을 확인시켜 줍니다.
 
-**Note**: To change the GPIO port used for PWM output, refer to the configuration in the pdm.c file.
+**참고**: PWM 출력에 사용되는 GPIO 포트를 변경하려면 pdm.c 파일의 설정을 참조하십시오.
 </br></br></br></br>
 
-# 7. Additional Examples
+# 7. 추가 예제
 ---
-This chapter introduces additional sensor examples using FreeRTOS on the VCP-G board. It provides example guides on how to use commonly used Arduino sensors with FreeRTOS on the VCP-G board, enabling you to integrate various sensors into your projects effectively.
+이 장에서는 VCP-G 보드에서 FreeRTOS를 사용하는 추가 센서 예제를 소개합니다. VCP-G 보드에서 FreeRTOS와 함께 일반적으로 사용되는 Arduino 센서를 사용하는 방법에 대한 예제 가이드를 제공하여 다양한 센서를 프로젝트에 효과적으로 통합할 수 있도록 합니다.
 </br></br></br>
 
-## 7.1 Infrared (IR) Sensor (Transceiver)
+## 7.1 적외선(IR) 센서(송수신기)
 ---
-This example demonstrates how the VCP-G board controls an IR sensor and two LEDs on a breadboard. When the IR sensor detects an object (sensor value is LOW), the first LED turns on, and the second LED turns off. Conversely, when no object is detected (sensor value is HIGH), the second LED turns on while the first LED turns off. The presence or absence of an object is also printed to the serial monitor.
+이 예제는 VCP-G 보드가 브레드보드의 IR 센서와 두 개의 LED를 제어하는 방법을 보여줍니다. IR 센서가 물체를 감지하면(센서 값이 LOW), 첫 번째 LED가 켜지고 두 번째 LED가 꺼집니다. 반대로 물체가 감지되지 않으면(센서 값이 HIGH), 두 번째 LED가 켜지고 첫 번째 LED가 꺼집니다. 물체의 유무는 시리얼 모니터에도 출력됩니다.
 </br></br>
 
-### 7.1.1 Hardware Requirements
-- VCP-G Board (x1)
-- Breadboard (x1)
-- IR transceiver sensor (x1)
-- LED (x2: Different colors are recommended)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to male jumper wire (x5)
-- Male to female jumper wire (x3)
+### 7.1.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 브레드보드 (x1)
+- IR 송수신 센서 (x1)
+- LED (x2: 서로 다른 색상을 권장합니다)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-수 점퍼 와이어 (x5)
+- 수-암 점퍼 와이어 (x3)
 </br></br>
 
-### 7.1.2 Circuit
-- IR Transceiver sensor
-    - OUT pin of the IR sensor is connected to pin 38 on the VCP-G board.
-    - VCC pin of the IR sensor is connected to 5V on the VCP-G board.
-    - GND pin of the IR sensor is connected to GND on the VCP-G board.
+### 7.1.2 회로
+- IR 송수신 센서
+    - IR 센서의 OUT 핀은 VCP-G 보드의 38번 핀에 연결됩니다.
+    - IR 센서의 VCC 핀은 VCP-G 보드의 5V에 연결됩니다.
+    - IR 센서의 GND 핀은 VCP-G 보드의 GND에 연결됩니다.
 - LED01
-    - (+) pin is connected to pin 16 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 16번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 - LED02
-    - (+) pin is connected to pin 17 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 17번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_irsensor1.png" width="600"></p>
-<p align="center"><strong>Figure 7.1 Infrared (IR) Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.1 적외선(IR) 센서 회로도</strong></p>
 
-##### 7.1.2.1 Pin Mapping
-The following table shows pin mapping.
+##### 7.1.2.1 핀맵
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 7.1 Pin Mapping of irSensor_LED</strong></p>
+<p align="center"><strong>표 7.1 irSensor_LED의 핀맵</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">IR Sensor OUT pin </td>
+	        <td colspan="3">IR 센서 OUT 핀 </td>
 	        <td>38</td>
 	        <td>K[13]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">IR Sensor VCC pin </td>
+	        <td colspan="3">IR 센서 VCC 핀 </td>
 	        <td>5V</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">IR Sensor GND pin</td>
+	        <td colspan="3">IR 센서 GND 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED01 (+) pin</td>
+	        <td colspan="3">LED01 (+) 핀</td>
 	        <td>16</td>
 	        <td>A[06]</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED01 (-) pin</td>
+	        <td colspan="3">LED01 (-) 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED02 (+) pin</td>
+	        <td colspan="3">LED02 (+) 핀</td>
 	        <td>17</td>
 	        <td>A[07]</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED02 (-) pin </td>
+	        <td colspan="3">LED02 (-) 핀 </td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
@@ -877,8 +877,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 7.1.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 7.1.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 #define PIR_SENSOR_PIN   GPIO_GPK(13)
@@ -908,78 +908,78 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the IR sensor detects the presence or absence of an object and controls two LEDs accordingly. When an object is detected, the first LED turns on; when no object is detected, the second LED turns on. This behavior confirms that the IR sensor input and GPIO output on the VCP-G board are working properly.
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 IR 센서가 물체의 유무를 감지하고 그에 따라 두 개의 LED를 제어합니다. 물체가 감지되면 첫 번째 LED가 켜지고, 물체가 감지되지 않으면 두 번째 LED가 켜집니다. 이 동작은 VCP-G 보드의 IR 센서 입력과 GPIO 출력이 정상적으로 동작하고 있음을 확인시켜 줍니다.
 
-**Note**: If you need to change the GPIO pins used for the IR sensor or LEDs, refer to the configuration section inside the source code.
+**참고**: IR 센서 또는 LED에 사용되는 GPIO 핀을 변경해야 하는 경우 소스 코드 내부의 설정 섹션을 참조하십시오.
 </br></br></br>
 
-## 7.2 Infrared (IR) Sensor (Receiver)
+## 7.2 적외선(IR) 센서 (수신기)
 ---
-This example demonstrates how the VCP-G board uses an IR receiver sensor to detect signals from a remote control. When an IR signal is received, the onboard logic turns on an LED connected to the breadboard. This confirms that the IR receiver module is correctly decoding incoming signals, and the VCP-G is responding as expected. The reception status is also displayed on the serial monitor.
+이 예제는 VCP-G 보드가 IR 수신기 센서를 사용하여 리모컨의 신호를 감지하는 방법을 보여줍니다. IR 신호가 수신되면 온보드 로직이 브레드보드에 연결된 LED를 켭니다. 이는 IR 수신기 모듈이 수신 신호를 올바르게 디코딩하고 있으며 VCP-G가 예상대로 응답하고 있음을 확인시켜 줍니다. 수신 상태는 시리얼 모니터에도 표시됩니다.
 </br></br>
 
-### 7.2.1 Hardware Requirements
-- VCP-G Board (x1)
-- Breadboard (x1)
-- IR Receiver sensor (x1)
-- Arduino Remote (x1)
+### 7.2.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 브레드보드 (x1)
+- IR 수신기 센서 (x1)
+- Arduino 리모컨 (x1)
 - LED (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to male jumper wire (x5)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-수 점퍼 와이어 (x5)
 </br></br>
 
-### 7.2.2 Circuit
-- IR Receiver sensor
-    - SIG pin of the IR sensor is connected to pin 40 on the VCP-G board.
-    - GND pin of the IR sensor is connected to GND on the VCP-G board.
-    - VCC pin of the IR sensor is connected to 5V on the VCP-G board.
+### 7.2.2 회로
+- IR 수신기 센서
+    - IR 센서의 SIG 핀은 VCP-G 보드의 40번 핀에 연결됩니다.
+    - IR 센서의 GND 핀은 VCP-G 보드의 GND에 연결됩니다.
+    - IR 센서의 VCC 핀은 VCP-G 보드의 5V에 연결됩니다.
 - LED
-    - (+) pin is connected to pin 7 on the VCP-G board.
-    - (–) pin is connected to the GND rail on the breadboard.
+    - (+) 핀은 VCP-G 보드의 7번 핀에 연결됩니다.
+    - (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_irsensor2.png" width="600"></p>
-<p align="center"><strong>Figure 7.2 IR Receiver Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.2 IR 수신기 센서 회로도</strong></p>
 
-##### 7.2.2.1 Pin Mapping
-The following table shows pin mapping.
+##### 7.2.2.1 핀맵
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 7.1 Pin Mapping of irSensor_LED</strong></p>
+<p align="center"><strong>표 7.1 irSensor_LED의 핀맵</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">IR Sensor SIG pin </td>
+	        <td colspan="3">IR 센서 SIG 핀 </td>
 	        <td>40</td>
 	        <td>K[11]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">IR Sensor GND pin </td>
+	        <td colspan="3">IR 센서 GND 핀 </td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">IR Sensor VCC pin</td>
+	        <td colspan="3">IR 센서 VCC 핀</td>
 	        <td>VCC</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED (+) pin</td>
+	        <td colspan="3">LED (+) 핀</td>
 	        <td>7</td>
 	        <td>B[01]</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED (-) pin</td>
+	        <td colspan="3">LED (-) 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
@@ -988,8 +988,8 @@ The following table shows pin mapping.
 
 </br></br>
 
-### 7.2.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 7.2.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 #define PIR_SENSOR_PIN   GPIO_GPK(11)
@@ -1024,64 +1024,64 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the ***FWDN*** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the IR receiver detects signals from a remote control and turns on an LED for a short time. This confirms that the VCP-G is correctly reading IR input and controlling the GPIO output in response to received signals.
+이 명령은 펌웨어 이미지를 생성하고 ***FWDN*** 툴을 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 IR 수신기가 리모컨의 신호를 감지하고 짧은 시간 동안 LED를 켭니다. 이는 VCP-G가 IR 입력을 올바르게 읽고 수신된 신호에 따라 GPIO 출력을 제어하고 있음을 확인시켜 줍니다.
 
-**Note**: To change the GPIO pins used for the IR sensor or LED, refer to the configuration section inside the source code.
+**참고**: IR 센서 또는 LED에 사용되는 GPIO 핀을 변경하려면 소스 코드 내부의 설정 섹션을 참조하십시오.
 </br></br></br>
 
-## 7.3 Gas Sensor
+## 7.3 가스 센서
 ---
-This example demonstrates how the VCP-G board uses a Gas sensor (MQ 135) to detect various harmful gases in the air. It reads the analog value from a sensor connected to the analog pin on the VCP-G board, converts it to a voltage, and then prints it to the serial monitor with one decimal place.
+이 예제는 VCP-G 보드가 가스 센서(MQ 135)를 사용하여 공기 중의 다양한 유해 가스를 감지하는 방법을 보여줍니다. VCP-G 보드의 아날로그 핀에 연결된 센서에서 아날로그 값을 읽어 전압으로 변환한 다음 소수점 한 자리까지 시리얼 모니터에 출력합니다.
 
-**Note:** Gas Sensor (MQ-135) is a product of Winsen®. All rights to its design, trademark, and related intellectual property are owned by Winsen.
+**참고:** Gas Sensor (MQ-135)는 Winsen®의 제품입니다. 해당 디자인, 상표 및 관련 지식 재산권에 대한 모든 권리는 Winsen이 보유합니다.
 </br></br>
 
-### 7.3.1 Hardware Requirements
-- VCP-G Board (x1)
-- Gas sensor (MQ135) (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to female jumper wire (x3)
+### 7.3.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 가스 센서 (MQ135) (x1)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-암 점퍼 와이어 (x3)
 </br></br>
 
-### 7.3.2 Circuit
-- Gas sensor
-    - A0 pin of the gas sensor is connected to the analog pin 55 on the VCP-G board. 
-    - VCC pin of the gas sensor is connected to 5V on the VCP-G board.
-    - GND pin of the gas sensor is connected to GND on the VCP-G board.
+### 7.3.2 회로
+- 가스 센서
+    - 가스 센서의 A0 핀은 VCP-G 보드의 아날로그 55번 핀에 연결됩니다. 
+    - 가스 센서의 VCC 핀은 VCP-G 보드의 5V에 연결됩니다.
+    - 가스 센서의 GND 핀은 VCP-G 보드의 GND에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_gassensor.png" width="600"></p>
-<p align="center"><strong>Figure 7.3 Gas Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.3 가스 센서 회로도</strong></p>
 
-#### 7.3.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 7.3.2.1 핀맵
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 7.3 Pin Mapping of Gas Sensor</strong></p>
+<p align="center"><strong>표 7.3 가스 센서의 핀맵</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">Gas Sensor A0 pin</td>
+	        <td colspan="3">가스 센서 A0 핀</td>
 	        <td>55</td>
 	        <td>K[15]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">Gas Sensor VCC pin</td>
+	        <td colspan="3">가스 센서 VCC 핀</td>
 	        <td>5V</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">Gas Sensor GND pin</td>
+	        <td colspan="3">가스 센서 GND 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
@@ -1089,8 +1089,8 @@ The following table shows pin mapping.
 </div>
 </br></br>
 
-### 7.3.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 7.3.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 #define GAS_SENSOR_PIN  GPIO_GPK(15)
@@ -1110,78 +1110,78 @@ static void Main_StartTask(void * pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and uses the **FWDN** tool to flash the generated image to the VCP-G.  
-After the code is successfully flashed and executed, the gas sensor continuously monitors the surrounding air quality. When gas is detected (sensor output is LOW), a message indicating gas detection is displayed on the serial monitor; otherwise, it reports clean air. This confirms that the VCP-G is correctly reading digital input from the gas sensor.
+이 과정에서 펌웨어 이미지가 생성되며, **FWDN** 도구를 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 성공적으로 플래싱되어 실행되면 가스 센서가 주변 공기 질을 지속적으로 모니터링합니다. 가스가 감지되면(센서 출력이 LOW) 가스 감지를 나타내는 메시지가 시리얼 모니터에 표시되고, 그렇지 않으면 깨끗한 공기임을 보고합니다. 이는 VCP-G가 가스 센서의 디지털 입력을 올바르게 읽고 있음을 확인시켜 줍니다.
 
-**Note**: To change the GPIO pin used for the gas sensor, refer to the configuration section inside the source code. Most gas sensor modules include a small adjustment screw (potentiometer) for sensitivity control. If the sensor does not respond reliably, try adjusting this screw to fine-tune the gas detection threshold.
+**참고**: 가스 센서에 사용되는 GPIO 핀을 변경하려면 소스 코드 내부의 설정 섹션을 참조하십시오. 대부분의 가스 센서 모듈에는 감도 조절용 작은 조정 나사(가변 저항)가 포함되어 있습니다. 센서가 안정적으로 반응하지 않는 경우 이 나사를 조정하여 가스 감지 임계값을 미세 조정해 보십시오.
 </br></br></br>
 
-## 7.4 Capacitive Touch Sensor
+## 7.4 정전식 터치 센서
 ---
-This example demonstrates how the VCP-G board interfaces with a capacitive touch sensor and controls an LED on a breadboard. The capacitive touch sensor detects physical contact from a finger by sensing changes in capacitance.  
-When a touch is detected, the sensor outputs a digital HIGH signal to the VCP-G, which in turn turns on an LED. This example confirms that the touch input is correctly recognized and that the GPIO output responds accordingly. The touch detection status is also displayed on the serial monitor.
+이 예제는 VCP-G 보드가 정전식 터치 센서와 인터페이스하고 브레드보드의 LED를 제어하는 방법을 보여줍니다. 정전식 터치 센서는 정전 용량의 변화를 감지하여 손가락의 물리적 접촉을 감지합니다.  
+터치가 감지되면 센서는 VCP-G에 디지털 HIGH 신호를 출력하고, VCP-G는 이에 따라 LED를 켭니다. 이 예제는 터치 입력이 올바르게 인식되고 GPIO 출력이 그에 따라 응답하는지 확인시켜 줍니다. 터치 감지 상태는 시리얼 모니터에도 표시됩니다.
 </br></br>
 
-### 7.4.1 Hardware Requirements
-- VCP-G Board (x1)
-- Breadboard (x1)
-- Capacitive Touch sensor (x1)
+### 7.4.1 하드웨어 요구 사항
+- VCP-G 보드 (x1)
+- 브레드보드 (x1)
+- 정전식 터치 센서 (x1)
 - LED (x1)
-- 12V 1A Power Adapter (x1)
-- USB Type-C to A Cable (x1)
-- Male to male jumper wire (x6)
+- 12V 1A 전원 어댑터 (x1)
+- USB Type-C to A 케이블 (x1)
+- 수-수 점퍼 와이어 (x6)
 </br></br>
 
-### 7.4.2 Circuit
-- Touch Sensor 
-    - SIG pin of the Touch Sensor Module is connected to the pin 39 on the VCP-G board.
-    - VCC pin of the Touch Sensor Module is connected to 5V on the VCP-G board.
-    - GND pin of the Touch Sensor Module is connected to GND on the VCP-G board.
+### 7.4.2 회로
+- 터치 센서 
+    - 터치 센서 모듈의 SIG 핀은 VCP-G 보드의 39번 핀에 연결됩니다.
+    - 터치 센서 모듈의 VCC 핀은 VCP-G 보드의 5V에 연결됩니다.
+    - 터치 센서 모듈의 GND 핀은 VCP-G 보드의 GND에 연결됩니다.
 - LED
-    - (+) pin of the LED is connected to pin 7 on the VCP-G board.
-    - (–) pin of the LED is connected to the GND rail on the breadboard.
+    - LED의 (+) 핀은 VCP-G 보드의 7번 핀에 연결됩니다.
+    - LED의 (–) 핀은 브레드보드의 GND 레일에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20VCP-G/Software/F_touchsensor.png" width="600"></p>
-<p align="center"><strong>Figure 7.4 Touch Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.4 터치 센서 회로도</strong></p>
 
-#### 7.4.2.1 Pin Mapping
-The following table shows pin mapping.
+#### 7.4.2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
-<p align="center"><strong>Table 7.5 Pin Mapping of Touch Sensor</strong></p>
+<p align="center"><strong>표 7.5 터치 센서 핀 매핑</strong></p>
 <div align="center">
 	<table>
 	    <tr>
-	        <th colspan="3">Pin Name</th>
-	        <th>VCP-G Board</th>
+	        <th colspan="3">핀 이름</th>
+	        <th>VCP-G 보드</th>
 	        <th>GPIO</th>
 	    </tr>
 	    <tr>
-	        <td colspan="3">Touch sensor SIG pin</td>
+	        <td colspan="3">터치 센서 SIG 핀</td>
 	        <td>39</td>
 	        <td>K[12]</td>
 	    </tr>
 	        <tr>
-	        <td colspan="3">Touch sensor VCC pin</td>
+	        <td colspan="3">터치 센서 VCC 핀</td>
 	        <td>5V</td>
 	        <td>-</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">Touch sensor GND pin</td>
+	        <td colspan="3">터치 센서 GND 핀</td>
 	        <td>GND</td>
 		    <td>-</td>
 		</tr>
 	    <tr>
-	        <td colspan="3">LED (+) pin</td>
+	        <td colspan="3">LED (+) 핀</td>
 	        <td>7</td>
 	        <td>B[01]</td>
 	    </tr>
 	    <tr>
-	        <td colspan="3">LED (-) pin</td>
+	        <td colspan="3">LED (-) 핀</td>
 	        <td>GND</td>
 	        <td>-</td>
 	    </tr>
@@ -1190,8 +1190,8 @@ The following table shows pin mapping.
 
 </br></br>
 
-### 7.4.3 How to execute
-To run this example, modify **Main_StartTask()** in the main.c file as shown.
+### 7.4.3 실행 방법
+이 예제를 실행하려면 main.c 파일의 **Main_StartTask()**를 다음과 같이 수정합니다.
 ```
 #include <gpio.h>
 #define TOUCH_SENSOR_PIN GPIO_GPK(12) 
@@ -1218,20 +1218,20 @@ void Main_StartTask(void * pArg)
     }
 }
 ```
-After editing the code, go to the following directory and run the build command:  
+코드를 편집한 후 다음 디렉터리로 이동하여 빌드 명령을 실행합니다.  
 ```
 $ cd ~/vcp/build/tcc70xx/gcc
 $ make
 ```
-This generates a firmware image and use the FWDN tool to flash the generated image to the VCP-G.  
-Once the code is successfully flashed and executed, the capacitive touch sensor monitors touch input from a human finger. When a touch is detected (sensor output is HIGH), a message is printed to the serial monitor and an LED is turned on. When no touch is detected, the LED is turned off. This confirms that the VCP-G is correctly reading input from the touch sensor and controlling GPIO output accordingly.
+이 과정을 통해 펌웨어 이미지가 생성되며, FWDN 도구를 사용하여 생성된 이미지를 VCP-G에 플래싱합니다.  
+코드가 정상적으로 플래싱되어 실행되면 정전식 터치 센서가 사람 손가락의 터치 입력을 감지합니다. 터치가 감지되면(센서 출력이 HIGH) 시리얼 모니터에 메시지가 출력되고 LED가 켜집니다. 터치가 감지되지 않으면 LED는 꺼집니다. 이를 통해 VCP-G가 터치 센서의 입력을 올바르게 읽고 GPIO 출력을 정상적으로 제어하고 있음을 확인할 수 있습니다.
 
-**Note**: To change the GPIO pin used for the touch sensor or LED, refer to the configuration section inside the source code.
+**참고**: 터치 센서나 LED에 사용되는 GPIO 핀을 변경하려면 소스 코드 내의 설정 부분을 참조하십시오.
 </br></br></br></br>
 
-# 8. References
+# 8. 참고 자료
 ---
-- Contact TOPST for more details: topst@topst.ai
+- 자세한 내용은 TOPST에 문의하십시오: topst@topst.ai
 
-**Note:** Reference documents can be provided whenever available, depending on the terms of a contract. If the reference
-documents are unavailable, the contents directly related to your development can be guided.
+**참고:** 참조 문서는 계약 조건에 따라 제공이 가능한 경우 제공될 수 있습니다. 참조
+문서를 이용할 수 없는 경우에는 개발과 직접 관련된 내용을 안내받을 수 있습니다.

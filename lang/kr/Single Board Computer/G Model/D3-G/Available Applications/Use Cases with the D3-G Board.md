@@ -1,75 +1,75 @@
-# 1. Introduction 
+# 1. 소개 
 ---
-This document provides examples of using the D3-G.   
-This document includes the following information:
-- Input Device
-  - Keyboard 
-  - Mouse
-- Video Output
-- Camera Connection
+이 문서는 D3-G 사용 예제를 제공합니다.   
+이 문서는 다음 정보를 포함합니다:
+- 입력 장치
+  - 키보드 
+  - 마우스
+- 비디오 출력
+- 카메라 연결
   - MIPI CSI
-  - USB Webcam
-- Storage Connection
-  - SD Card
+  - USB 웹캠
+- 스토리지 연결
+  - SD 카드
   - SATA HDD
   - NVMe M.2 SSD
-  - USB Storage
-- Ethernet Connection
-- 40-pin GPIO Header
-  - Available Sensor and Device
+  - USB 저장 장치
+- 이더넷 연결
+- 40핀 GPIO 헤더
+  - 사용 가능한 센서 및 디바이스
 
 <br/><br/><br/><br/>
 
 
-# 2. Input Device
+# 2. 입력 장치
 ---
-The D3-G supports two USB ports for connecting input devices.
-It includes one USB 2.0 Type-A port and one USB 3.0 Type-A port, allowing you to connect a mouse or keyboard to control the D3-G directly. 
+D3-G는 입력 장치 연결을 위해 두 개의 USB 포트를 지원합니다.
+USB 2.0 Type-A 포트 1개와 USB 3.0 Type-A 포트 1개가 있으며, 마우스나 키보드를 연결하여 D3-G를 직접 제어할 수 있습니다. 
 
-**Note**: The USB Type-C port on the D3-G is reserved for firmware downloads and cannot be used to connect input devices.
+**참고**: D3-G의 USB Type-C 포트는 펌웨어 다운로드 전용이므로 입력 장치 연결에 사용할 수 없습니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/input%20device.png" width="500"></p>
-<p align="center"><strong>Figure 2.1 Connect Input Device to D3-G board </strong></p><br/><br/><br/><br/>
+<p align="center"><strong>그림 2.1 D3-G 보드에 입력 장치 연결 </strong></p><br/><br/><br/><br/>
 
 
-# 3. Video Output
+# 3. 비디오 출력
 ---
-The D3-G supports FHD monitors through its DisplayPort (DP) output only.
-It also supports multi-display output using a daisy chain setup, allowing  connection of up to two FHD monitors and one HD monitor simultaneously.
+D3-G는 DisplayPort(DP) 출력을 통해서만 FHD 모니터를 지원합니다.
+또한 데이지 체인 구성을 사용한 다중 디스플레이 출력을 지원하여 최대 2대의 FHD 모니터와 1대의 HD 모니터를 동시에 연결할 수 있습니다.
 
-**Note**: To use HDMI, a separate active converter adapter is required.
+**참고**: HDMI를 사용하려면 별도의 액티브 컨버터 어댑터가 필요합니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/monitor.png" width="500"></p>
-<p align="center"><strong>Figure 3.1 Connect Monitor to D3-G board </strong></p>
+<p align="center"><strong>그림 3.1 D3-G 보드에 모니터 연결 </strong></p>
 
 <br/><br/><br/><br/>
 
-# 4. Camera Connection
+# 4. 카메라 연결
 ---
-The D3-G supports camera functionality, offering flexibility for various applications.
-You can connect either a MIPI CSI camera or a USB webcam depending on your project requirements.
+D3-G는 카메라 기능을 지원하여 다양한 애플리케이션에 유연하게 대응합니다.
+프로젝트 요구 사항에 따라 MIPI CSI 카메라 또는 USB 웹캠을 연결할 수 있습니다.
 
 <br/><br/><br/>
 
-## 4.1 USB Webcam
+## 4.1 USB 웹캠
 ---
-The D3-G supports USB webcams, with resolutions up to Full HD (FHD).
-You can test the webcam by following these steps:
+D3-G는 최대 Full HD(FHD) 해상도의 USB 웹캠을 지원합니다.
+다음 단계에 따라 웹캠을 테스트할 수 있습니다:
 
 
-#### Step 1. Connect the USB camera to a USB port on the board.
+#### 단계 1. USB 카메라를 보드의 USB 포트에 연결합니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/webcam.png" width="400"></p>
-<p align="center"><strong>Figure 4.1 Connect Webcam to D3-G board</strong></p><br/>
+<p align="center"><strong>그림 4.1 D3-G 보드에 웹캠 연결</strong></p><br/>
 
-#### Step 2. Connect the input devices (mouse and keyboard) and monitor to D3-G.
+#### 단계 2. 입력 장치(마우스 및 키보드)와 모니터를 D3-G에 연결합니다.
    
-#### Step 3. Boot the D3-G.
+#### 단계 3. D3-G를 부팅합니다.
 
-#### Step 4. Check the available /dev/video devices.
+#### 단계 4. 사용 가능한 /dev/video 장치를 확인합니다.
 ```
 $ ls /dev/video*
 ```
 
-#### Step 5. Verify the video output using OpenCV (or vutils).
+#### 단계 5. OpenCV(또는 vutils)를 사용하여 비디오 출력을 확인합니다.
 ```
 $ touch webcam.py
 $ chmod a+x webcam.py
@@ -114,167 +114,167 @@ $ python3 webcam.py
 
 ## 4.2 MIPI CSI
 ---
-CSI stands for Camera Serial Interface, a standard interface defined by the MIPI Alliance for connecting camera modules to host processors.
-It enables high-speed, low-power transmission of image data from the camera to the processor.
+CSI는 Camera Serial Interface의 약자로, 카메라 모듈을 호스트 프로세서에 연결하기 위해 MIPI Alliance가 정의한 표준 인터페이스입니다.
+이를 통해 카메라에서 프로세서로 이미지 데이터를 고속 및 저전력으로 전송할 수 있습니다.
 
-The D3-G features two MIPI CSI channels (ch0 and ch1), allowing you to attach camera modules that support Flat Flexible Cable (FFC) connections.
-Currently, the D3-G supports only the ArduCam (5 MP) and Raspberry Pi v1 Camera (5 MP) modules. 
+D3-G는 두 개의 MIPI CSI 채널(ch0 및 ch1)을 제공하므로 Flat Flexible Cable(FFC) 연결을 지원하는 카메라 모듈을 장착할 수 있습니다.
+현재 D3-G는 ArduCam(5 MP)과 Raspberry Pi v1 Camera(5 MP) 모듈만 지원합니다. 
 
-**Note**: Currently, the D3-G does not support simultaneous use of CSI channel 0 and CSI channel 1.
+**참고**: 현재 D3-G는 CSI 채널 0과 CSI 채널 1의 동시 사용을 지원하지 않습니다.
 
 <br/><br/>
 
 ### 4.2.1 ArduCam
-ArduCam is a versatile camera module designed for embedded systems and IoT applications. It supports various image sensors and interfaces, including MIPI CSI, making it suitable for integration with development boards like the D3-G.
-The 5 MP ArduCam module supported by the D3-G offers decent image quality and is commonly used for basic computer vision tasks, streaming, and camera-based AI applications. Its compatibility with FFC cables makes it easy to connect to the D3-G board’s CSI interface. 
+ArduCam은 임베디드 시스템과 IoT 애플리케이션을 위해 설계된 다목적 카메라 모듈입니다. MIPI CSI를 포함한 다양한 이미지 센서와 인터페이스를 지원하므로 D3-G와 같은 개발 보드에 통합하기에 적합합니다.
+D3-G가 지원하는 5 MP ArduCam 모듈은 우수한 화질을 제공하며 기본적인 컴퓨터 비전 작업, 스트리밍, 카메라 기반 AI 애플리케이션에 널리 사용됩니다. FFC 케이블과 호환되므로 D3-G 보드의 CSI 인터페이스에 쉽게 연결할 수 있습니다. 
 
-The specifications for the ArduCam module are as follows.
+ArduCam 모듈의 사양은 다음과 같습니다.
 
-| Specification                     | Description                                 |
+| 사양                     | 설명                                 |
 | ------------------------ | ------------------------------------------- |
-| Sensor                   | OV5647 (5 Megapixel)                        |
-| Resolution               | 2592 × 1944 (Full 5 MP)                      |
-| Supported Output Formats | RAW, YUV, JPEG (sensor dependent)           |
-| Interface                | MIPI CSI-2                                  |
-| Frame Rate               | Up to 30fps at 1080p, 60fps at 720p         |
-| Lens Mount               | Fixed-focus lens (standard)                 |
-| Field of View (FOV)      | Approximately 54° – 70° (varies by model)         |
-| Connection Type          | Flat Flexible Cable (FFC)                   |
-| Operating Voltage        | 3.3V (typical)                              |
-| Form Factor              | Compact PCB, approximately 25 mm x 24 mm                   |
-| Compatibility            | Raspberry Pi and D3-G (through MIPI CSI-2 port)    |
-| Additional Features      | Low power consumption, plug-and-play module |
+| 센서                   | OV5647 (500만 화소)                        |
+| 해상도                    | 2592 × 1944 (Full 5 MP)                      |
+| 지원 출력 포맷 | RAW, YUV, JPEG (센서에 따라 다름)           |
+| 인터페이스                 | MIPI CSI-2                                  |
+| 프레임 레이트               | 1080p에서 최대 30fps, 720p에서 60fps         |
+| 렌즈 마운트               | 고정 초점 렌즈 (표준)                 |
+| 시야각 (FOV)              | 약 54° – 70° (모델에 따라 다름)                   |
+| 연결 방식                  | Flat Flexible Cable (FFC)                   |
+| 동작 전압        | 3.3V (일반)                              |
+| 폼 팩터              | 소형 PCB, 약 25 mm x 24 mm                   |
+| 호환성                    | Raspberry Pi 및 D3-G (MIPI CSI-2 포트를 통해)     |
+| 추가 기능      | 저전력 소비, 플러그 앤 플레이 모듈 |
 
 
-You can test the ArduCam by following these steps:
+다음 단계에 따라 ArduCam을 테스트할 수 있습니다:
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/arducam.png" width="400"></p>
-<p align="center"><strong>Figure 4.2 ArduCam </strong></p><br/>
+<p align="center"><strong>그림 4.2 ArduCam </strong></p><br/>
 
-#### Step 1. Connect ArduCam to D3-G board MIPI CSI 0 as shown in Figure 4.3.
+#### 단계 1. 그림 4.3과 같이 ArduCam을 D3-G 보드의 MIPI CSI 0에 연결합니다.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 4.3 Connect ArduCam to D3-G board</strong></p> <br/>
+<p align="center"><strong>그림 4.3 D3-G 보드에 ArduCam 연결</strong></p> <br/>
 
-#### Step 2. After the ArduCam is connected, you can verify the video stream using the following GStreamer command on the D3-G board:
+#### 단계 2. ArduCam을 연결한 후 D3-G 보드에서 다음 GStreamer 명령을 사용하여 비디오 스트림을 확인할 수 있습니다:
 ```
 $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
 ```
 
-This command captures video from the CSI-connected ArduCam, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
-Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
+이 명령은 CSI로 연결된 ArduCam에서 비디오를 캡처하고 표시용으로 변환한 후 Wayland 디스플레이 서버를 사용하여 전체 화면 모드로 렌더링합니다.  
+명령을 실행하기 전에 카메라 모듈이 단단히 연결되어 있는지 확인하십시오. 비디오가 표시되지 않으면 케이블 연결을 확인하고 /dev/video0이 시스템에서 정상적으로 인식되는지 확인하십시오.
 
 <br/><br/>
 
 ### 4.2.2 Raspberry Pi v1 Camera
-The Raspberry Pi v1 Camera Module is a compact 5 MP camera developed by the Raspberry Pi Foundation. It is based on the OmniVision OV5647 image sensor and connects to the host board through a MIPI CSI-2 interface using a Flat Flexible Cable (FFC).
+Raspberry Pi v1 Camera Module은 Raspberry Pi Foundation에서 개발한 소형 5 MP 카메라입니다. OmniVision OV5647 이미지 센서를 기반으로 하며, Flat Flexible Cable(FFC)을 사용하여 MIPI CSI-2 인터페이스를 통해 호스트 보드에 연결됩니다.
 
-Designed originally for the Raspberry Pi series, this module is also compatible with the D3-G, making it a reliable choice for basic camera applications such as image capture, video recording, and computer vision projects.
+원래 Raspberry Pi 시리즈용으로 설계되었지만 D3-G와도 호환되므로 이미지 캡처, 비디오 녹화, 컴퓨터 비전 프로젝트와 같은 기본적인 카메라 애플리케이션에 적합한 선택입니다.
 
-The specifications for the Raspberry Pi v1 camera module are as follows.
+Raspberry Pi v1 Camera 모듈의 사양은 다음과 같습니다.
 
-| Specification                | Description                              |
+| 사양                | 설명                              |
 | ------------------- | ---------------------------------------- |
-| Sensor              | OmniVision OV5647                        |
-| Resolution          | 2592 × 1944 (5 MP)                        |
-| Output Formats      | RAW, YUV, JPEG                           |
-| Interface           | MIPI CSI-2                               |
-| Frame Rate          | 1080p30, 720p60, VGA90                   |
-| Lens                | Fixed-focus                              |
-| Field of View (FOV) | Up to 54°                                     |
-| Cable Type          | FFC (15-pin)                             |
-| Board Dimensions    | 25 mm x 24 mm                              |
-| Compatibility       | Raspberry Pi and D3-G (through MIPI CSI-2 port) |
+| 센서              | OmniVision OV5647                        |
+| 해상도          | 2592 × 1944 (5 MP)                        |
+| 출력 포맷      | RAW, YUV, JPEG                           |
+| 인터페이스            | MIPI CSI-2                               |
+| 프레임 레이트          | 1080p30, 720p60, VGA90                   |
+| 렌즈                | 고정 초점                              |
+| 화각 (FOV) | 최대 54°                                     |
+| 케이블 유형          | FFC (15핀)                             |
+| 보드 치수    | 25 mm x 24 mm                              |
+| 호환성               | Raspberry Pi 및 D3-G (MIPI CSI-2 포트를 통해) |
 
-You can test the Raspberry Pi v1 camera by following these steps:
+다음 단계에 따라 Raspberry Pi v1 카메라를 테스트할 수 있습니다:
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam.jpg" width="400"></p>
-<p align="center"><strong>Figure 4.4. Raspberry Pi v1 Camera </strong></p><br/>
+<p align="center"><strong>그림 4.4. Raspberry Pi v1 Camera </strong></p><br/>
 
-#### Step 1. Connect Raspberry Pi v1 camera to D3-G board MIPI CSI 1 as shown in Figure 4.5.
+#### 단계 1. 그림 4.5와 같이 Raspberry Pi v1 카메라를 D3-G 보드의 MIPI CSI 1에 연결합니다.
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/rasp%20v1%20cam%20to%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 4.5 Connect Raspberry Pi v1 Camera to D3-G board</strong></p> <br/>
+<p align="center"><strong>그림 4.5 D3-G 보드에 Raspberry Pi v1 Camera 연결</strong></p> <br/>
 
-#### Step 2. After the Raspberry Pi camera is connected, you can verify the video stream using the following GStreamer command on the D3-G:
+#### 2단계. Raspberry Pi 카메라를 연결한 후 D3-G에서 다음 GStreamer 명령을 사용하여 비디오 스트림을 확인할 수 있습니다:
 ```
 $ gst-launch-1.0 v4l2src device=/dev/video0 io-mode=2 ! video/x-raw,format=NV12,width=1920,height=1280,framerate=30/1 ! videoconvert ! waylandsink fullscreen=true
 ```
 
-This command captures video from the CSI-connected Raspberry Pi camera, converts it for display, and renders it in fullscreen mode using the Wayland display server.  
-Make sure that the camera module is securely connected before running the command. If the video does not appear, check the cable connection and verify that /dev/video0 is properly recognized by the system.
+이 명령은 CSI로 연결된 Raspberry Pi 카메라에서 비디오를 캡처하고 표시용으로 변환한 다음, Wayland 디스플레이 서버를 사용하여 전체 화면 모드로 렌더링합니다.  
+명령을 실행하기 전에 카메라 모듈이 단단히 연결되어 있는지 확인하십시오. 비디오가 표시되지 않으면 케이블 연결을 확인하고 /dev/video0이 시스템에서 정상적으로 인식되는지 확인하십시오.
 
 <br/><br/><br/><br/>
 
-# 5. Storage Connection
+# 5. 스토리지 연결
 ---
-This chapter covers how to connect the D3-G to various storage devices. Supported storage options include USB drives, SD cards, and external storage through PCIe.
+이 장에서는 D3-G를 다양한 스토리지 장치에 연결하는 방법을 설명합니다. 지원되는 스토리지 옵션에는 USB 드라이브, SD 카드 및 PCIe를 통한 외장 스토리지가 있습니다.
 
 <br/><br/><br/>
 
-## 5.1 USB Drive
+## 5.1 USB 드라이브
 ---
-The D3-G supports USB storage devices through its USB 2.0 and USB 3.0 Type-A ports.
-To connect a USB drive:
+D3-G는 USB 2.0 및 USB 3.0 Type-A 포트를 통해 USB 스토리지 장치를 지원합니다.
+USB 드라이브를 연결하려면:
 
-### Step 1. Plug the USB drive into one of the available USB Type-A ports on the D3-G.
+### 1단계. D3-G에서 사용 가능한 USB Type-A 포트 중 하나에 USB 드라이브를 연결합니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/usb%20storage%20connection%20with%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 5.1 Connect USB Storage to D3-G board</strong></p> <br/>
+<p align="center"><strong>그림 5.1 D3-G 보드에 USB 스토리지 연결</strong></p> <br/>
 
-### Step 2. After it is connected, the device is typically recognized as /dev/sda1, /dev/sdb1, and so on, depending on the system state.
+### 2단계. 연결한 후에는 시스템 상태에 따라 장치가 일반적으로 /dev/sda1, /dev/sdb1 등으로 인식됩니다.
 
 <br/>
 
-### Step 3. You can manually mount the USB drive using the following command:
+### 3단계. 다음 명령을 사용하여 USB 드라이브를 수동으로 마운트할 수 있습니다:
    ```
    $ sudo mount /dev/sda1 /mnt
    ```
 
 <br/><br/><br/>
 
-## 5.2 SD Card
+## 5.2 SD 카드
 ---
-The D3-G includes a microSD card slot that supports standard SDHC/SDXC cards.
-To use an SD card with the D3-G:
+D3-G에는 표준 SDHC/SDXC 카드를 지원하는 microSD 카드 슬롯이 있습니다.
+D3-G에서 SD 카드를 사용하려면:
 
 <br/>
 
-### Step 1. Insert the microSD card into the SD card slot on the D3-G board.
+### 1단계. D3-G 보드의 SD 카드 슬롯에 microSD 카드를 삽입합니다.
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sd%20card%20connect%20with%20d3g.png" width="500"></p>
-<p align="center"><strong>Figure 5.2 Connect SD Card to D3-G board</strong></p> <br/>
+<p align="center"><strong>그림 5.2 D3-G 보드에 SD 카드 연결</strong></p> <br/>
 
-### Step 2. After it is inserted, the system typically recognizes the SD card as /dev/mmcblk1p1 or a similar device node.
+### 2단계. 삽입한 후에는 시스템이 일반적으로 SD 카드를 /dev/mmcblk1p1 또는 유사한 장치 노드로 인식합니다.
   ```
   $ ls /dev/mmcblk*
   ```
 <br/>
 
-### Step 3. To mount the SD card manually, use the following command:
+### 3단계. SD 카드를 수동으로 마운트하려면 다음 명령을 사용하십시오:
 ```
 $ sudo mount /dev/mmcblk1p1 /mnt 
 ```
-### Step 4. After mounting, you can access the SD card contents under the /mnt directory.
+### 4단계. 마운트한 후에는 /mnt 디렉터리에서 SD 카드의 내용에 접근할 수 있습니다.
 
 <br/><br/><br/>
 
 ## 5.3 SATA HDD
 ---
 
-The D3-G supports the use of SATA storage devices, such as HDDs or SSDs, through its PCIe slot using a compatible SATA controller.
+D3-G는 호환되는 SATA 컨트롤러를 사용하여 PCIe 슬롯을 통해 HDD 또는 SSD와 같은 SATA 스토리지 장치를 사용할 수 있도록 지원합니다.
 
 <br/>
 
-#### Step 1. Connect the PCIe to SATA Module
+#### 1단계. PCIe to SATA 모듈 연결
 
-To use a SATA HDD with the D3-G through PCIe, you must first connect a PCIe-to-SATA adapter module to the D3-G's PCIe slot.
+PCIe를 통해 D3-G에서 SATA HDD를 사용하려면 먼저 PCIe-to-SATA 어댑터 모듈을 D3-G의 PCIe 슬롯에 연결해야 합니다.
 
-Then, connect the HDD to the SATA module and ensure that the HDD is powered by an external 12V power supply.
+그런 다음 HDD를 SATA 모듈에 연결하고 HDD에 외부 12V 전원 공급 장치로 전원이 공급되는지 확인하십시오.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/sata.png" width="500"></p>
-<p align="center"><strong>Figure 5.3 Connect D3-G board PCIe to SATA Module </strong></p><br/>
+<p align="center"><strong>그림 5.3 D3-G 보드 PCIe에 SATA 모듈 연결 </strong></p><br/>
 
-#### Step 2. Boot the D3-G 
-After booting the D3-G, observe the boot log to verify that the PCIe device is recognized by the system.
-Look for messages such as **telechips-pcie: Link up**, which indicate that the PCIe link has been successfully established.
+#### 2단계. D3-G 부팅 
+D3-G를 부팅한 후 부팅 로그를 확인하여 PCIe 장치가 시스템에서 인식되는지 확인하십시오.
+PCIe 링크가 성공적으로 설정되었음을 나타내는 **telechips-pcie: Link up**과 같은 메시지를 찾으십시오.
 
 ```
 Starting kernel ...
@@ -298,13 +298,13 @@ TOPST login:
 
 <br/>
 
-#### Step 3. Check SATA HDD Recognition
+#### 3단계. SATA HDD 인식 확인
 ```
 root@TOPST:~# lspci
 00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
 01:00.0 SATA controller: ASMedia Technology Inc. Device 1064 (rev 02)
 ```
-If the **lspci** command is not available, install pciutils by using the following command.
+**lspci** 명령을 사용할 수 없는 경우 다음 명령을 사용하여 pciutils를 설치하십시오.
 
 ```
 $ sudo apt-get install pciutils
@@ -312,7 +312,7 @@ $ sudo apt-get install pciutils
 
 <br/>
 
-#### Step 4. Mount the SATA HDD
+#### 4단계. SATA HDD 마운트
 ```
 $ fdisk /dev/sda
 Welcome to fdisk (util-linux 2.37.4).
@@ -322,21 +322,21 @@ Be careful before using the write command.
 Command (m for help): 
 ```
 
-Type the following keys in order inside the fdisk prompt:
+fdisk 프롬프트에서 다음 키를 순서대로 입력하십시오:
 
-- o — Create a new empty DOS partition table (optional, clears existing table)
+- o — 비어 있는 새 DOS 파티션 테이블 생성 (선택 사항, 기존 테이블 삭제)
 
-- n — Add a new partition
+- n — 새 파티션 추가
 
-- p — Choose a primary partition
+- p — 주 파티션 선택
 
-- 1 — Set partition number to 1
+- 1 — 파티션 번호를 1로 설정
 
-- Press Enter — Accept default first sector
+- Enter 키 입력 — 기본 시작 섹터 적용
 
-- Press Enter — Accept default last sector (uses full disk)
+- Enter 키 입력 — 기본 마지막 섹터 적용 (디스크 전체 사용)
 
-- w — Write the partition table and exit
+- w — 파티션 테이블을 기록하고 종료합니다
 
 ```
 $ mkfs.ext4 /dev/sda1
@@ -348,9 +348,9 @@ $ mount /dev/sda1 /mnt/sata
 
 <br/>
 
-#### Step 5. Execution Result
-This output confirms that the SATA SSD partition (/dev/sdb1) has been successfully formatted with the ext4 file system and mounted at /mnt/sata.
-The **df -h** command shows that the device is now recognized and available for use by the system.
+#### 단계 5. 실행 결과
+이 출력은 SATA SSD 파티션(/dev/sdb1)이 ext4 파일 시스템으로 성공적으로 포맷되어 /mnt/sata에 마운트되었음을 확인해 줍니다.
+**df -h** 명령은 해당 장치가 이제 인식되어 시스템에서 사용할 수 있음을 보여줍니다.
 
 ```
 $ df -h
@@ -370,18 +370,18 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 
 ## 5.4 NVMe M.2 SSD
 ---
-The D3-G supports direct connections of NVMe M.2 SSDs through its PCIe slot.
+D3-G는 PCIe 슬롯을 통해 NVMe M.2 SSD의 직접 연결을 지원합니다.
 <br/>
 
-#### Step 1. Connect the SSD
-- NVMe SSD (M.2 PCIe): Insert the NVMe M.2 SSD into the D3-G’s PCIe slot. 
+#### 1단계. SSD 연결
+- NVMe SSD (M.2 PCIe): NVMe M.2 SSD를 D3-G의 PCIe 슬롯에 삽입합니다. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/M.2%20SSD%20connection.png" width="600"></p>
-<p align="center"><strong>Figure 5.4 Connect NVMe M.2 SSD to D3-G board</strong></p><br/>
+<p align="center"><strong>그림 5.4 D3-G 보드에 NVMe M.2 SSD 연결</strong></p><br/>
 
-#### Step 2. Boot the D3-G
-After executing the **reboot** command, observe the boot log to verify that the PCIe device is recognized by the system.
-Look for messages such as **telechips-pcie: Link up**, which indicate that the PCIe link has been successfully established.
+#### 2단계. D3-G 부팅
+**reboot** 명령을 실행한 후 부팅 로그를 확인하여 PCIe 장치가 시스템에서 인식되는지 검증하십시오.
+PCIe 링크가 성공적으로 설정되었음을 나타내는 **telechips-pcie: Link up**과 같은 메시지를 찾으십시오.
 
 ```
 $ reboot
@@ -407,13 +407,13 @@ TOPST login:
 
 <br/>
 
-#### Step 3. Check SSD Recognition
+#### 3단계. SSD 인식 확인
 ```
 root@TOPST:~# lspci
 00:00.0 PCI bridge: Synopsys, Inc. Device 8040 (rev 01)
 01:00.0 Non-Volatile memory controller: Solid State Storage Technology Corporation Device 1007 (rev 03)
 ```
-If the **lspci** command is not available, install pciutils by using the following command.
+**lspci** 명령을 사용할 수 없는 경우 다음 명령을 사용하여 pciutils를 설치하십시오.
 
 ```
 $ sudo apt-get install pciutils
@@ -421,7 +421,7 @@ $ sudo apt-get install pciutils
 
 <br/>
 
-#### Step 4. Mount the SSD
+#### 4단계. SSD 마운트
 ```
 $ fdisk /dev/nvme0n1
 Welcome to fdisk (util-linux 2.37.4).
@@ -431,21 +431,21 @@ Be careful before using the write command.
 Command (m for help): 
 ```
 
-Type the following keys in order inside the fdisk prompt:
+fdisk 프롬프트에서 다음 키를 순서대로 입력하십시오:
 
-- o — Create a new empty DOS partition table (optional, clears existing table)
+- o — 비어 있는 새 DOS 파티션 테이블 생성 (선택 사항, 기존 테이블 삭제)
 
-- n — Add a new partition
+- n — 새 파티션 추가
 
-- p — Choose a primary partition
+- p — 주 파티션 선택
 
-- 1 — Set partition number to 1
+- 1 — 파티션 번호를 1로 설정
 
-- Press Enter — Accept default first sector
+- Enter 키 입력 — 기본 시작 섹터 적용
 
-- Press Enter — Accept default last sector (uses full disk)
+- Enter 키 입력 — 기본 마지막 섹터 적용 (디스크 전체 사용)
 
-- w — Write the partition table and exit
+- w — 파티션 테이블을 기록하고 종료합니다
 
 ```
 $ mkfs.ext4 /dev/nvme0n1p1
@@ -457,8 +457,8 @@ $ mount /dev/nvme0n1p1 /mnt/nvme
 
 <br/>
 
-#### Step 5. Execution Result
-This output confirms that the NVMe SSD device (/dev/nvme0n1p1) has been successfully detected and mounted by the system at /mnt/nvme.
+#### 단계 5. 실행 결과
+이 출력은 NVMe SSD 장치(/dev/nvme0n1p1)가 시스템에 의해 정상적으로 감지되어 /mnt/nvme에 마운트되었음을 확인해 줍니다.
 ```
 $ df -h
 
@@ -475,27 +475,27 @@ tmpfs           296M  4.0K  296M   1% /run/user/0
 <br/><br/><br/><br/>
 
 
-# 6. Ethernet Connection
+# 6. 이더넷 연결
 ---
-The D3-G supports Ethernet connectivity through its onboard J2C Ethernet port. This allows the D3-G to communicate with local networks or the internet using standard TCP/IP protocols. Ethernet is commonly used for deploying applications that require remote access, data streaming, or software updates.
+D3-G는 온보드 J2C 이더넷 포트를 통해 이더넷 연결을 지원합니다. 이를 통해 D3-G는 표준 TCP/IP 프로토콜을 사용하여 로컬 네트워크 또는 인터넷과 통신할 수 있습니다. 이더넷은 원격 접속, 데이터 스트리밍 또는 소프트웨어 업데이트가 필요한 애플리케이션을 배포하는 데 일반적으로 사용됩니다.
 
 <br/><br/><br/>
 
-## 6.1 Network Connection Through Router
+## 6.1 라우터를 통한 네트워크 연결
 ---
-This method connects the D3-G to a local network using a standard router. The D3-G can obtain an IP address automatically through DHCP or be configured with a static IP address.
+이 방법은 표준 라우터를 사용하여 D3-G를 로컬 네트워크에 연결합니다. D3-G는 DHCP를 통해 자동으로 IP 주소를 할당받거나 고정 IP 주소로 구성할 수 있습니다.
 
 <br/><br/>
 
-### 6.1.1 Create Network Configuration File
+### 6.1.1 네트워크 구성 파일 생성
 
-1. Dynamic IP through DHCP
-If your network provides a DHCP server (for example, a router or ICS-enabled Windows PC), no file editing is necessary. The system automatically obtains an IP address as soon as the Ethernet cable is connected.
+1. DHCP를 통한 동적 IP
+네트워크에서 DHCP 서버(예: 라우터 또는 ICS가 활성화된 Windows PC)를 제공하는 경우 파일을 편집할 필요가 없습니다. 이더넷 케이블을 연결하는 즉시 시스템이 자동으로 IP 주소를 할당받습니다.
 
-You can simply plug in the cable and start using the network right away. Proceed to Chapter 6.1.3 Verify Network Connectivity.
+케이블을 연결하기만 하면 바로 네트워크를 사용할 수 있습니다. 6.1.3 네트워크 연결 확인 장으로 진행하십시오.
 
-2. Static IP Configuration
-If you prefer to assign a static IP address (for example, when using direct PC connection or no DHCP server is available), edit the same file with the following content:
+2. 고정 IP 구성
+고정 IP 주소를 할당하려는 경우(예: PC에 직접 연결하거나 DHCP 서버를 사용할 수 없는 경우), 동일한 파일을 다음 내용으로 편집하십시오:
 ```
 $ vi /etc/systemd/network/20-wired.network
 
@@ -508,12 +508,12 @@ Gateway=192.168.137.1
 DNS=8.8.8.8
 ```
 
-This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
+이 설정은 IP 주소를 192.168.137.2로 지정하고, 192.168.137.1을 게이트웨이(Windows ICS에서 일반적으로 사용됨)로 사용하며, Google DNS를 구성합니다.
 
 <br/><br/>
 
-### 6.1.2 Restart Network Service
-Apply the new network configuration by restarting the systemd-networkd service:
+### 6.1.2 네트워크 서비스 재시작
+systemd-networkd 서비스를 재시작하여 새 네트워크 구성을 적용하십시오:
 
 ```
 sudo systemctl restart systemd-networkd
@@ -521,11 +521,11 @@ sudo systemctl restart systemd-networkd
 
 <br/><br/>
 
-### 6.1.3 Verify Network Connectivity
+### 6.1.3 네트워크 연결 확인
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/router%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 6.1 Network Connection Through Router</strong></p>
+<p align="center"><strong>그림 6.1 라우터를 통한 네트워크 연결</strong></p>
 
-Test the internet connection by pinging Google's public DNS server:
+Google 공용 DNS 서버에 ping을 보내 인터넷 연결을 테스트하십시오:
 
 ```
 $ ping 8.8.8.8
@@ -539,44 +539,44 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 
 <br/><br/><br/>
 
-## 6.2 Network Sharing with Host PC
+## 6.2 호스트 PC와 네트워크 공유
 ---
-You can share your PC's internet connection with the D3-G without using a router by utilizing the Internet Connection Sharing (ICS) feature available in Windows operating systems.
+Windows 운영 체제에서 제공하는 인터넷 연결 공유(ICS) 기능을 활용하면 라우터를 사용하지 않고도 PC의 인터넷 연결을 D3-G와 공유할 수 있습니다.
 
 <br/><br/>
 
-### 6.2.1 Host PC Network Configuration
-- Control Panel → Network and Internet → Network Connectivity → Set Ethernet
+### 6.2.1 호스트 PC 네트워크 구성
+- 제어판 → 네트워크 및 인터넷 → 네트워크 연결 → 이더넷 설정
  
-1. Locate the network adapter connected to the internet (for example, Wi-Fi), right-click on it, and select **Properties**.
+1. 인터넷에 연결된 네트워크 어댑터(예: Wi-Fi)를 찾아 마우스 오른쪽 버튼으로 클릭한 후 **속성**을 선택하십시오.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet1.png" width="600"></p>
-<p align="center"><strong>Figure 6.2 Select Properties</strong></p><br/>
+<p align="center"><strong>그림 6.2 속성 선택</strong></p><br/>
  
-2. Select the sharing tab.
+2. 공유 탭을 선택하십시오.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet2.png" width="400"></p>
-<p align="center"><strong>Figure 6.3 Select Sharing Tab</strong></p><br/>
+<p align="center"><strong>그림 6.3 공유 탭 선택</strong></p><br/>
 
-3. Check the box labeled "Allow other network users to connect through this computer’s Internet connection".
+3. "다른 네트워크 사용자가 이 컴퓨터의 인터넷 연결을 통해 연결할 수 있도록 허용" 확인란을 선택하십시오.
  
-4. In the Home networking connection dropdown menu, select the Ethernet adapter that the D3-G will connect to (for example, "Ethernet").
+4. 홈 네트워킹 연결 드롭다운 메뉴에서 D3-G가 연결될 이더넷 어댑터(예: "Ethernet")를 선택합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Available%20Applications/ethernet3.png" width="400"></p>
-<p align="center"><strong>Figure 6.4 Select Ethernet Adapter</strong></p><br/>
+<p align="center"><strong>그림 6.4 이더넷 어댑터 선택</strong></p><br/>
  
-5. Click **OK** to save the settings.
+5. **확인**을 클릭하여 설정을 저장하십시오.
 
 <br/><br/>
 
-### 6.2.2 Create Network Configuration File 
-1. Dynamic IP Through DHCP
-If your network provides a DHCP server (for example, a router or ICS-enabled Windows PC), no file editing is necessary. The system automatically obtains an IP address as soon as the Ethernet cable is connected.
+### 6.2.2 네트워크 구성 파일 생성 
+1. DHCP를 통한 동적 IP
+네트워크에서 DHCP 서버(예: 라우터 또는 ICS가 활성화된 Windows PC)를 제공하는 경우 파일을 편집할 필요가 없습니다. 이더넷 케이블을 연결하는 즉시 시스템이 자동으로 IP 주소를 할당받습니다.
 
-You can simply plug in the cable and start using the network right away. Proceed to Chapter 6.2.4 Verify Network Connection.
+케이블을 연결하기만 하면 바로 네트워크를 사용할 수 있습니다. 6.2.4 네트워크 연결 확인 장으로 진행하십시오.
 
-2. Static IP Configuration
-If you prefer to assign a static IP address (for example, when using direct PC connection or no DHCP server is available), edit the same file with the following content:
+2. 고정 IP 구성
+고정 IP 주소를 할당하려는 경우(예: PC에 직접 연결하거나 DHCP 서버를 사용할 수 없는 경우), 동일한 파일을 다음 내용으로 편집하십시오:
 ```
 $ vi /etc/systemd/network/20-wired.network
 
@@ -588,12 +588,12 @@ Address=192.168.137.2/24
 Gateway=192.168.137.1
 DNS=8.8.8.8
 ```
-This sets the IP address to 192.168.137.2, uses 192.168.137.1 as the gateway (common in Windows ICS), and configures Google DNS.
+이 설정은 IP 주소를 192.168.137.2로 지정하고, 192.168.137.1을 게이트웨이(Windows ICS에서 일반적으로 사용됨)로 사용하며, Google DNS를 구성합니다.
 
 <br/><br/>
 
-### 6.2.3 Restart Network Service
-Apply the new network configuration by restarting the systemd-networkd service:
+### 6.2.3 네트워크 서비스 재시작
+systemd-networkd 서비스를 재시작하여 새 네트워크 구성을 적용하십시오:
 
 ```
 sudo systemctl restart systemd-networkd
@@ -601,12 +601,12 @@ sudo systemctl restart systemd-networkd
 
 <br/><br/>
 
-### 6.2.4 Verify Network Connectivity
+### 6.2.4 네트워크 연결 확인
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/host%20pc%20ethernet%20connection.png"width="500"></p>
-<p align="center"><strong>Figure 6.5 Network Sharing with Host PC</strong></p>
+<p align="center"><strong>그림 6.5 호스트 PC와 네트워크 공유</strong></p>
 <br/>
 
-Test the internet connection by pinging Google's public DNS server:
+Google 공용 DNS 서버에 ping을 보내 인터넷 연결을 테스트하십시오:
 
 ```
 $ ping 8.8.8.8
@@ -619,72 +619,72 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 
 <br/><br/><br/><br/>
 
-# 7. 40-pin GPIO Header
+# 7. 40핀 GPIO 헤더
 ---
-The D3-G features a 40-pin GPIO header, providing flexible I/O capabilities for various hardware projects.
-This header is compatible with general-purpose input/output (GPIO) operations and can be used to connect sensors, LEDs, buttons, and other peripheral devices.
+D3-G는 40핀 GPIO 헤더를 갖추고 있어 다양한 하드웨어 프로젝트에 유연한 I/O 기능을 제공합니다.
+이 헤더는 범용 입출력(GPIO) 동작과 호환되며 센서, LED, 버튼 및 기타 주변 장치를 연결하는 데 사용할 수 있습니다.
 
-Each pin supports multiple functions such as digital I/O, PWM, I2C, SPI, and UART, depending on the configuration.
+각 핀은 구성에 따라 디지털 I/O, PWM, I2C, SPI, UART 등 여러 기능을 지원합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/d3-g%20gpio%2040pinmap.png" width="800"></p>
-<p align="center"><strong>Figure 7.1 40-pin GPIO Header Pinmap of D3-G </strong></p> <br/>
+<p align="center"><strong>그림 7.1 D3-G의 40핀 GPIO 헤더 핀맵 </strong></p> <br/>
 
-**Note**: Refer to the official pinout diagram for detailed pin functions and voltage levels before connecting external hardware.
+**참고**: 외부 하드웨어를 연결하기 전에 공식 핀아웃 다이어그램을 참조하여 자세한 핀 기능과 전압 레벨을 확인하십시오.
 
 <br/><br/><br/>
 
-## 7.1 GPIO Digital In/Out
+## 7.1 GPIO 디지털 입출력
 ---
-The D3-G supports digital input and output (GPIO) through its 40-pin header, enabling you to interact with external devices such as buttons, LEDs, and sensors. 
+D3-G는 40핀 헤더를 통해 디지털 입력 및 출력(GPIO)을 지원하므로 버튼, LED, 센서와 같은 외부 장치와 상호 작용할 수 있습니다. 
 
 ### 7.1.1 LED
 ---
-One of the simplest and most common GPIO output examples is controlling an LED.  
-This section demonstrates how to connect and use a LED sensor using the D3-G.
+가장 간단하고 일반적인 GPIO 출력 예제 중 하나는 LED를 제어하는 것입니다.  
+이 절에서는 D3-G를 사용하여 LED 센서를 연결하고 사용하는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Breadboard (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 브레드보드 (x1)
 - LED (x1)
-- Male to female jumper wire (x2)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+- 수-암 점퍼 와이어 (x2)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
+#### 단계 2. 예제 회로
 - LED
-    - (+) pin connected to pin 12 on the D3-G board.
-    - (-) pin connected to pin 14 which acts as GND on the D3-G board.  
+    - (+) 핀은 D3-G 보드의 12번 핀에 연결합니다.
+    - (-) 핀은 D3-G 보드에서 GND 역할을 하는 14번 핀에 연결합니다.  
     
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png"></p>
 
-<p align="center"><strong>Figure 7.2 D3-G GPIO LED Circuit Schematic </strong></p> <br/>
+<p align="center"><strong>그림 7.2 D3-G GPIO LED 회로도 </strong></p> <br/>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.1 Pin Mapping of D3-G LED</strong></p>
+  <p><strong>표 7.1 D3-G LED 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
       <tr>
-          <td colspan="3">LED (+) pin</td>
+          <td colspan="3">LED (+) 핀</td>
           <td>12</td>
           <td>89</td>
       </tr>
       <tr>
-          <td colspan="3">LED (-) pin</td>
+          <td colspan="3">LED (-) 핀</td>
           <td>14</td>
           <td>GND</td>
       </tr>
   </table>
 </div>
 
-#### Step 3. How to execute
-To operate the LED connected to GPIO89 on the D3-G board, run the following code:
+#### 단계 3. 실행 방법
+D3-G 보드의 GPIO89에 연결된 LED를 동작시키려면 다음 코드를 실행하십시오:
 
 ```
 import time
@@ -775,65 +775,65 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 
 ```
 $ python3 led_test.py
 ```
 
-This script configures GPIO89 as a digital output and toggles its state every 1 second.
-When executed, the LED connected to GPIO89 blinks 10 times, turning on for 1 second and then off for 1 second repeatedly. After 10 cycles, the script exits and automatically unexports the GPIO.
+이 스크립트는 GPIO89를 디지털 출력으로 설정하고 1초마다 상태를 전환합니다.
+실행하면 GPIO89에 연결된 LED가 1초 동안 켜지고 1초 동안 꺼지기를 반복하며 10회 깜박입니다. 10회 반복 후 스크립트가 종료되고 GPIO가 자동으로 unexport됩니다.
 
-To stop the script early, press **[Ctrl+C]**.
-In either case, the pin will be properly released and cleaned up.
+스크립트를 조기에 중지하려면 **[Ctrl+C]**를 누르십시오.
+두 경우 모두 핀이 올바르게 해제되고 정리됩니다.
 
-**Note**: This setup assumes a direct LED connection. For safe and long-term operation, it is strongly recommended to use a current-limiting resistor (for example, 220Ω) in series with the LED to prevent excessive current draw and protect the GPIO pin from potential damage.
+**참고**: 이 설정은 LED를 직접 연결하는 것을 전제로 합니다. 안전하고 장기적인 동작을 위해 과도한 전류 소모를 방지하고 GPIO 핀이 손상되지 않도록 LED와 직렬로 전류 제한 저항(예: 220Ω)을 사용하는 것을 강력히 권장합니다.
 
 <br/><br/><br/><br/>
 
-### 7.1.2 Button
+### 7.1.2 버튼
 ---
-A push button is a basic input device commonly used to demonstrate digital input handling through GPIO.
-This section demonstrates how to connect and use a basic button module with the D3-G.
+푸시 버튼은 GPIO를 통한 디지털 입력 처리를 시연하는 데 일반적으로 사용되는 기본 입력 장치입니다.
+이 절에서는 D3-G에서 기본 버튼 모듈을 연결하고 사용하는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Breadboard (x1)
-- Button (x1)
-- Male to female jumper wire (x2)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 브레드보드 (x1)
+- 버튼 (x1)
+- 수-암 점퍼 와이어 (x2)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Button switch
-    - One leg of the button switch is connected to pin 10 on the D3-G board.
-    - The opposite leg above the button is connected to the 3.3V pin.
+#### 단계 2. 예제 회로
+- 버튼 스위치
+    - 버튼 스위치의 한쪽 다리는 D3-G 보드의 10번 핀에 연결합니다.
+    - 버튼 위쪽의 반대편 다리는 3.3V 핀에 연결합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/button_circuit.png"></p> 
-<p align="center"><strong>Figure 7.3 D3-G GPIO Button Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.3 D3-G GPIO 버튼 회로도</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.2 Pin Mapping of D3-G Button</strong></p>
+  <p><strong>표 7.2 D3-G 버튼 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
       <tr>
-          <td colspan="3">One leg pin of button</td>
+          <td colspan="3">버튼의 한쪽 다리 핀</td>
           <td>10</td>
           <td>88</td>
       </tr>
   </table>
 </div>
 
-#### Step 3. How to execute
-To monitor the button input connected to GPIO88 on the D3-G board, run the following code:
+#### 단계 3. 실행 방법
+D3-G 보드의 GPIO88에 연결된 버튼 입력을 모니터링하려면 다음 코드를 실행하십시오:
 
 ```
 import os
@@ -895,52 +895,52 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 test_button.py
 ```
-This script configures GPIO88 as a digital input and continuously monitors its value in real time.
-When executed, pressing the button connected to GPIO88 prints a message indicating that the button has been pressed.
+이 스크립트는 GPIO88을 디지털 입력으로 설정하고 그 값을 실시간으로 지속적으로 모니터링합니다.
+실행한 후 GPIO88에 연결된 버튼을 누르면 버튼이 눌렸음을 나타내는 메시지가 출력됩니다.
 
-To stop the script, press **[Ctrl+C]**.
-When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+스크립트가 종료되면 GPIO88은 자동으로 unexport되고 정리됩니다.
 
-**Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G based on the 40-pin header pinout.
-Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
+**참고**: 여기서는 GPIO88을 예로 사용했습니다. 40핀 헤더 핀 배치에 따라 D3-G에서 사용 가능한 GPIO 핀을 사용할 수 있습니다.
+공식 핀 배치도를 참조하여 하드웨어 구성에 맞는 GPIO 번호를 선택하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.1.3 Touch Sensor
+### 7.1.3 터치 센서
 ---
-A touch sensor can be used to detect human touch as a digital input signal through GPIO.
-This section demonstrates how to connect and read input from a basic touch sensor module using the D3-G.
+터치 센서는 GPIO를 통해 사람의 터치를 디지털 입력 신호로 감지하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 기본 터치 센서 모듈을 연결하고 입력을 읽는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Touch Sensor (x1)
-- Female to female jumper wire (x3)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 터치 센서 (x1)
+- 암-암 점퍼 와이어 (x3)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Touch sensor
-    - SIG pin of the touch sensor is connected to pin 88 on the D3-G board.
-    - VCC pin of the touch sensor is connected to the 3.3V on the D3-G board.
-    - GND pin of the touch sensor is connected to GND on the D3-G board.
+#### 단계 2. 예제 회로
+- 터치 센서
+    - 터치 센서의 SIG 핀은 D3-G 보드의 88번 핀에 연결합니다.
+    - 터치 센서의 VCC 핀은 D3-G 보드의 3.3V에 연결합니다.
+    - 터치 센서의 GND 핀은 D3-G 보드의 GND에 연결합니다.
 
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/touch%20circuit.png"></p>
-<p align="center"><strong>Figure 7.4 D3-G GPIO Touch Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.4 D3-G GPIO 터치 센서 회로도</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.3 Pin Mapping of D3-G Touch Sensor</strong></p>
+  <p><strong>표 7.3 D3-G 터치 센서 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -962,8 +962,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-To monitor the touch sensor connected to GPIO88 on the D3-G board, simply run the following code:
+#### 단계 3. 실행 방법
+D3-G 보드의 GPIO88에 연결된 터치 센서를 모니터링하려면 다음 코드를 실행하기만 하면 됩니다:
 ```
 import os
 import time
@@ -1029,60 +1029,60 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 
 ```
 $ python3 touch_test.py
 ```
 
-This script configures GPIO88 as a digital input and continuously monitors its value in real time.
+이 스크립트는 GPIO88을 디지털 입력으로 설정하고 그 값을 실시간으로 지속적으로 모니터링합니다.
 
-When executed, touching the sensor will cause the terminal to print a message such as:
+실행한 후 센서를 터치하면 터미널에 다음과 같은 메시지가 출력됩니다:
 ```
 touch detected.
 ```
-When the sensor is not touched, the output will be:
+센서를 터치하지 않으면 출력은 다음과 같습니다:
 ```
 touch released.
 ```
-To stop the script, press **[Ctrl+C]**.
-When the script is terminated, GPIO88 will be automatically unexported and cleaned up.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+스크립트가 종료되면 GPIO88은 자동으로 unexport되고 정리됩니다.
 
-**Note**: GPIO88 is used here as an example. You may use any available GPIO pin on the D3-G based on the 40-pin header pinout.
-Refer to the official pinout diagram and select a GPIO number that matches your hardware configuration.
+**참고**: 여기서는 GPIO88을 예로 사용했습니다. 40핀 헤더 핀 배치에 따라 D3-G에서 사용 가능한 GPIO 핀을 사용할 수 있습니다.
+공식 핀 배치도를 참조하여 하드웨어 구성에 맞는 GPIO 번호를 선택하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.1.4 Vibration Detection Sensor
+### 7.1.4 진동 감지 센서
 ---
-A vibration sensor can be used to detect physical shocks or vibrations and output a digital input signal through GPIO.
-This section demonstrates how to connect and detect input from a basic vibration sensor module using the D3-G.
+진동 센서는 물리적 충격이나 진동을 감지하여 GPIO를 통해 디지털 입력 신호를 출력하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 기본 진동 센서 모듈을 연결하고 입력을 감지하는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Vibration Detection Sensor (x1)
-- Female to female jumper wire (x4)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 진동 감지 센서 (x1)
+- 암-암 점퍼 와이어 (x4)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Vibration Detection Sensor
-    - VCC pin of the Vibration Detection Sensor is connected to the 3.3V pin on the D3-G board.
-    - GND pin of the Vibration Detection Sensor is connected to the GND on the D3-G board.
-    - DO pin of the Vibration Detection Sensor is connected to the 88 pin on the D3-G board.
+#### 단계 2. 예제 회로
+- 진동 감지 센서
+    - 진동 감지 센서의 VCC 핀은 D3-G 보드의 3.3V 핀에 연결합니다.
+    - 진동 감지 센서의 GND 핀은 D3-G 보드의 GND에 연결합니다.
+    - 진동 감지 센서의 DO 핀은 D3-G 보드의 88번 핀에 연결합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/vibr%20circuit.png"></p>
-<p align="center"><strong>Figure 7.5 D3-G GPIO Vibration Detection Sensor Circuit Schematic</strong></p>
+<p align="center"><strong>그림 7.5 D3-G GPIO 진동 감지 센서 회로도</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.4 Pin Mapping of D3-G Vibration Detection Sensor</strong></p>
+  <p><strong>표 7.4 D3-G 진동 감지 센서의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1104,8 +1104,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-To monitor the vibration sensor connected to GPIO88 on the D3-G board, run the following code:
+#### 단계 3. 실행 방법
+D3-G 보드의 GPIO88에 연결된 진동 센서를 모니터링하려면 다음 코드를 실행하십시오.
 ```
 import os
 import time
@@ -1166,62 +1166,62 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 
 ```
 $ python3 vibration_test.py
 ```
 
-This script configures GPIO88 as a digital input and continuously monitors its value in real time.
-When executed, vibrations or shocks detected by the sensor cause the terminal to print a message such as:
+이 스크립트는 GPIO88을 디지털 입력으로 설정하고 그 값을 실시간으로 지속적으로 모니터링합니다.
+실행하면 센서가 감지한 진동이나 충격에 따라 터미널에 다음과 같은 메시지가 출력됩니다.
 ```
 vibration detected.
 ```
-When there is no vibration, the output will be:
+진동이 없으면 출력은 다음과 같습니다.
 ```
 no vibration detected.
 ```
-To stop the script, press **[Ctrl+C]**.
-Upon termination, GPIO88 is automatically unexported and cleaned up.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+종료 시 GPIO88은 자동으로 unexport되어 정리됩니다.
 
-**Note**: GPIO88 is used here as an example. You may use any other available GPIO pin depending on your sensor wiring and header layout. Refer to the D3-G pinout before choosing a GPIO number.
+**참고**: 여기서는 GPIO88을 예로 사용합니다. 센서 배선과 헤더 배치에 따라 사용 가능한 다른 GPIO 핀을 사용할 수 있습니다. GPIO 번호를 선택하기 전에 D3-G 핀맵을 참조하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.1.5 Infrared Sensor (SZH-SSBH-002)
+### 7.1.5 적외선 센서 (SZH-SSBH-002)
 ---
-An infrared sensor can be used to detect nearby obstacles by sensing reflected infrared light and outputting a digital signal through GPIO.
-This section demonstrates how to connect and read input from the SZH-SSBH-002 infrared sensor using the D3-G.
+적외선 센서는 반사된 적외선을 감지하여 근처의 장애물을 검출하고 GPIO를 통해 디지털 신호를 출력하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 SZH-SSBH-002 적외선 센서를 연결하고 입력을 읽는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Breadboard (x1)
-- Infrared Sensor (x1)
-- Male to female jumper wire (x5)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 브레드보드 (x1)
+- 적외선 센서 (x1)
+- 수-암 점퍼 와이어 (x5)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Infrared Sensor
-    - VCC pin of the Infrared Sensor is connected to the 3.3V pin on the D3-G board.
-    - GND pin of the Infrared Sensor is connected to the GND on the D3-G board.
-    - OUT pin of the Infrared Sensor is connected to the 89 pin on the D3-G board.
+#### 단계 2. 예제 회로
+- 적외선 센서
+    - 적외선 센서의 VCC 핀은 D3-G 보드의 3.3V 핀에 연결합니다.
+    - 적외선 센서의 GND 핀은 D3-G 보드의 GND에 연결합니다.
+    - 적외선 센서의 OUT 핀은 D3-G 보드의 89번 핀에 연결합니다.
 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/topst-development/Documentation/d3g/Assets/TOPST%20D3-G/Software/szh-ssbh-002_circuit.png">
 </p> 
-<p align="center"><strong>Figure 7.6 IR Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>그림 7.6 IR 센서 실험 회로</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.5 Pin Mapping of D3-G IR Sensor</strong></p>
+  <p><strong>표 7.5 D3-G IR 센서의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1243,8 +1243,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-To monitor the IR sensor connected to GPIO89 on the D3-G board, run the following code:
+#### 단계 3. 실행 방법
+D3-G 보드의 GPIO89에 연결된 IR 센서를 모니터링하려면 다음 코드를 실행하십시오.
 
 ```
 import os
@@ -1308,63 +1308,63 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 ir_test.py
 ```
-This script configures GPIO89 as a digital input and continuously monitors its state to detect obstacles.
-When an object is detected in front of the IR sensor, the terminal displays:
+이 스크립트는 GPIO89를 디지털 입력으로 설정하고 상태를 지속적으로 모니터링하여 장애물을 감지합니다.
+IR 센서 앞에서 물체가 감지되면 터미널에 다음이 표시됩니다.
 ```
 obstacle detected.
 ```
-When no object is detected, it displays:
+물체가 감지되지 않으면 다음이 표시됩니다.
 ```
 no obstacle detected.
 ```
-To stop the script, press **[Ctrl+C]**.
-When the script is terminated, GPIO89 is automatically unexported and cleaned up.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+스크립트를 종료하면 GPIO89는 자동으로 unexport되어 정리됩니다.
 
-**Note**: GPIO89 is used as an example in this script.
-You may use any available GPIO pin based on the 40-pin header of the D3-G. Refer to the official pinout diagram for accurate pin selection.
+**참고**: 이 스크립트에서는 GPIO89를 예로 사용합니다.
+D3-G의 40핀 헤더에 따라 사용 가능한 GPIO 핀을 사용할 수 있습니다. 정확한 핀 선택을 위해 공식 핀맵 도면을 참조하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.1.6 Photoresistor (SZH-SSBH-011)
+### 7.1.6 광저항 센서 (SZH-SSBH-011)
 ---
-A photoresistor can be used to detect ambient light levels and output a digital signal when the light intensity crosses a certain threshold through GPIO.
-This section demonstrates how to connect and read input from the SZH-SSBH-011 photoresistor sensor using the D3-G.
+광저항 센서는 주변 조도를 감지하여 광량이 특정 임계값을 넘을 때 GPIO를 통해 디지털 신호를 출력하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 SZH-SSBH-011 광저항 센서를 연결하고 입력을 읽는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Photoresistor module (SZH-SSBH-011) (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 광저항 모듈 (SZH-SSBH-011) (x1)
 - LED (x1)
-- 220Ω resistor (x1)
-- Breadboard (x1)
-- Male to Female Jumper Wires (x7)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+- 220Ω 저항 (x1)
+- 브레드보드 (x1)
+- 수-암 점퍼 와이어 (x7)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Photoresistor (SZH-SSBH-011)
-    - VCC pin of the Photoresistor is connected to the 3.3V pin on the D3-G board.
-    - GND pin of the Photoresistor is connected to the GND on the D3-G board.
-    - DO pin of the Photoresistor is connected to pin 89 on the D3-G board.
+#### 단계 2. 예제 회로
+- 광저항 센서 (SZH-SSBH-011)
+    - 광저항 센서의 VCC 핀은 D3-G 보드의 3.3V 핀에 연결합니다.
+    - 광저항 센서의 GND 핀은 D3-G 보드의 GND에 연결합니다.
+    - 광저항 센서의 DO 핀은 D3-G 보드의 89번 핀에 연결합니다.
 - LED
-    - (+) pin of the LED is connected to the GND on the D3-G board.
-    - (-) pin of the LED is connected to pin 83 on the D3-G board.
+    - LED의 (+) 핀은 D3-G 보드의 GND에 연결합니다.
+    - LED의 (-) 핀은 D3-G 보드의 83번 핀에 연결합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/circuit.png"></p>
-<p align="center"><strong>Figure 7.7 Photoresistor Experiment Circuit</strong></p>
+<p align="center"><strong>그림 7.7 광저항 센서 실험 회로</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.6 Pin Mapping of D3-G Photoresistor</strong></p>
+  <p><strong>표 7.6 D3-G 광저항 센서의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1388,10 +1388,10 @@ The following table shows pin mapping.
 
 
 <div align="center">
-  <p><strong>Table 7.7 Pin Mapping of D3-G LED</strong></p>
+  <p><strong>표 7.7 D3-G LED의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1408,8 +1408,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-### Step 3. How to execute
-Run the following Python script to monitor brightness with the CDS sensor and control the LED accordingly:
+### 3단계. 실행 방법
+CDS 센서로 밝기를 모니터링하고 그에 따라 LED를 제어하려면 다음 Python 스크립트를 실행하십시오.
 
 ```
 import os
@@ -1477,61 +1477,61 @@ if __name__ == "__main__":
     main()
 ```
 
-### Step 4. Execution Result
-Run the code with the following command.
+### 4단계. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 CDS_test.py
 ```
-This script configures GPIO89 as an input for the photoresistor sensor and GPIO83 as an output for the LED.
-When ambient light is detected, the terminal prints:
+이 스크립트는 GPIO89를 광저항 센서용 입력으로, GPIO83을 LED용 출력으로 설정합니다.
+주변 광이 감지되면 터미널에 다음이 출력됩니다.
 ```
 sensor value: 0
 brightness detected. Turning on the LED.
 ```
-and the LED turns ON.
-When no light is detected, it prints:
+그리고 LED가 켜집니다.
+빛이 감지되지 않으면 다음이 출력됩니다.
 ```
 sensor value: 1
 no brightness detected. Turning off the LED.
 ```
-and the LED turns OFF.
-To stop the script, press **[Ctrl+C]**.
-When the script is terminated, both GPIO pins are automatically unexported and cleaned up.
+그리고 LED가 꺼집니다.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+스크립트를 종료하면 두 GPIO 핀 모두 자동으로 unexport되어 정리됩니다.
 
-**Note**: GPIO83 and GPIO89 are used in this example. You may use any available GPIO pin based on the 40-pin header layout of the D3-G. Refer to the official pinout diagram for accurate pin selection.
+**참고**: 이 예제에서는 GPIO83과 GPIO89를 사용합니다. D3-G의 40핀 헤더 배치에 따라 사용 가능한 GPIO 핀을 사용할 수 있습니다. 정확한 핀 선택을 위해 공식 핀맵 도면을 참조하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.1.7 Air Pollution Detection Sensor
+### 7.1.7 대기 오염 감지 센서
 ---
-An air pollution detection sensor can be used to monitor the presence of harmful gases or particulate matter in the environment and output a digital signal through GPIO.
-This section demonstrates how to connect and read input from an air pollution detection sensor using the D3-G.
+대기 오염 감지 센서는 환경 내 유해 가스나 미세먼지의 존재를 모니터링하고 GPIO를 통해 디지털 신호를 출력하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 대기 오염 감지 센서를 연결하고 입력을 읽는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Air Pollution (Gas) Detection Sensor Module (x1)
-- Breadboard (x1)
-- Male to Female Jumper Wires (x3)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 대기 오염(가스) 감지 센서 모듈 (x1)
+- 브레드보드 (x1)
+- 수-암 점퍼 와이어 (x3)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Air Pollution Detection Sensor
-    - VCC pin of the Air Pollution Detection Sensor is connected to the 3.3V pin on the D3-G board.
-    - GND pin of the Air Pollution Detection Sensor is connected to the GND on the D3-G board.
-    - DO pin of the Air Pollution Detection Sensor is connected to pin 88 on the D3-G board.
+#### 단계 2. 예제 회로
+- 대기 오염 감지 센서
+    - 대기 오염 감지 센서의 VCC 핀은 D3-G 보드의 3.3V 핀에 연결합니다.
+    - 대기 오염 감지 센서의 GND 핀은 D3-G 보드의 GND에 연결합니다.
+    - 대기 오염 감지 센서의 DO 핀은 D3-G 보드의 88번 핀에 연결합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/gas%20circuit.png"></p>
-<p align="center"><strong>Figure 7.8 Air Pollution Detection Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>그림 7.8 대기 오염 감지 센서 실험 회로</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.8 Pin Mapping of D3-G Air Pollution Detection Sensor</strong></p>
+  <p><strong>표 7.8 D3-G 대기 오염 감지 센서의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1553,8 +1553,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to Execute
-Run the following Python script to monitor gas detection using the GPIO88 pin:
+#### 3단계. 실행 방법
+GPIO88 핀을 사용하여 가스 감지를 모니터링하려면 다음 Python 스크립트를 실행하십시오.
 
 ```
 import os
@@ -1617,57 +1617,57 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 gas_sensor_test.py
 ```
-This script configures GPIO88 as a digital input and continuously monitors gas detection status.
-When the gas concentration reaches the sensor’s threshold, the terminal displays:
+이 스크립트는 GPIO88을 디지털 입력으로 설정하고 가스 감지 상태를 지속적으로 모니터링합니다.
+가스 농도가 센서의 임계값에 도달하면 터미널에 다음이 표시됩니다.
 ```
 gas detected.
 ```
-When no gas is detected, the terminal shows:
+가스가 감지되지 않으면 터미널에 다음이 표시됩니다.
 ```
 no gas detected.
 ```
-To stop the script, press **[Ctrl+C]**.
-When the script is terminated, GPIO88 is automatically unexported and cleaned up.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+스크립트를 종료하면 GPIO88은 자동으로 unexport되어 정리됩니다.
 
-**Note**: GPIO88 is used here as an example. You may use any available GPIO pin based on the 40-pin header layout of the D3-G. Refer to the official pinout diagram for accurate pin selection.
+**참고**: 여기서는 GPIO88을 예로 사용합니다. D3-G의 40핀 헤더 배치에 따라 사용 가능한 GPIO 핀을 사용할 수 있습니다. 정확한 핀 선택을 위해 공식 핀맵 도면을 참조하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.1.8 Ultrasonic Sensor
+### 7.1.8 초음파 센서
 ---
-An ultrasonic sensor can be used to measure the distance to nearby objects by emitting ultrasonic waves and receiving the reflected signal, then outputting a digital (or pulse-based) signal through GPIO.
-This section demonstrates how to connect and read input from an ultrasonic sensor using the D3-G.
+초음파 센서는 초음파를 발신하고 반사된 신호를 수신하여 주변 물체까지의 거리를 측정한 후, GPIO를 통해 디지털(또는 펄스 기반) 신호를 출력하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 초음파 센서를 연결하고 입력을 읽는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Ultrasonic Sensor (x1)
-- Female to Female Jumper Wires (x4)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 초음파 센서 (x1)
+- 암-암 점퍼 와이어 (x4)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Ultrasonic Sensor
-    - VCC pin of the Ultrasonic Sensor is connected to the 5V pin on the D3-G board.
-    - GND pin of the Ultrasonic Sensor is connected to the GND on the D3-G board.
-    - TRIG pin of the Ultrasonic Sensor is connected to pin 82 on the D3-G board.
-    - ECHO pin of the Ultrasonic Sensor is connected to pin 88 on the D3-G board.
+#### 단계 2. 예제 회로
+- 초음파 센서
+    - 초음파 센서의 VCC 핀은 D3-G 보드의 5V 핀에 연결합니다.
+    - 초음파 센서의 GND 핀은 D3-G 보드의 GND에 연결합니다.
+    - 초음파 센서의 TRIG 핀은 D3-G 보드의 82번 핀에 연결합니다.
+    - 초음파 센서의 ECHO 핀은 D3-G 보드의 88번 핀에 연결합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/ultra%20circuit.png"></p>
-<p align="center"><strong>Figure 7.9 Ultrasonic Sensor Experiment Circuit</strong></p>
+<p align="center"><strong>그림 7.9 초음파 센서 실험 회로</strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.9 Pin Mapping of D3-G Ultrasonic Sensor</strong></p>
+  <p><strong>표 7.9 D3-G 초음파 센서의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1694,8 +1694,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to Execute
-Run the following Python script to measure distance using the ultrasonic sensor:
+#### 3단계. 실행 방법
+초음파 센서를 사용하여 거리를 측정하려면 다음 Python 스크립트를 실행하십시오.
 ```
 import os
 import time
@@ -1765,67 +1765,67 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 ultrasonic_sensor_test.py
 ```
-This script configures GPIO82 as a digital output to trigger the ultrasonic pulse, and GPIO88 as a digital input to receive the echo.
-When the script runs, the distance to the nearest object in front of the sensor is printed every second, for example:
+이 스크립트는 초음파 펄스를 발생시키기 위해 GPIO82를 디지털 출력으로, 에코를 수신하기 위해 GPIO88을 디지털 입력으로 설정합니다.
+스크립트를 실행하면 센서 앞의 가장 가까운 물체까지의 거리가 1초마다 출력됩니다. 예를 들면 다음과 같습니다.
 ```
 Distance: 23.45 cm
 Distance: 24.12 cm
 ...
 ```
-To stop the script, press **[Ctrl+C]**.
-When the script is terminated, GPIO82 and GPIO88 are automatically unexported and cleaned up.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+스크립트를 종료하면 GPIO82와 GPIO88은 자동으로 unexport되어 정리됩니다.
 
-**Note**: GPIO82 and GPIO88 are used as examples. You may use any available GPIO pin based on the 40-pin header layout of the D3-G. Refer to the official pinout diagram for accurate pin selection. Also, ensure your ECHO pin's voltage level is safe for the D3-G (some modules output 5V and may need a voltage divider or level shifter).
+**참고**: 여기서는 GPIO82와 GPIO88을 예로 사용합니다. D3-G의 40핀 헤더 배치에 따라 사용 가능한 GPIO 핀을 사용할 수 있습니다. 정확한 핀 선택을 위해 공식 핀맵 도면을 참조하십시오. 또한 ECHO 핀의 전압 레벨이 D3-G에 안전한지 확인하십시오(일부 모듈은 5V를 출력하므로 전압 분배기나 레벨 시프터가 필요할 수 있습니다).
 
 <br/><br/><br/><br/>
 
 ## 7.2 I2C
 ---
-The D3-G provides I2C communication through the 40-pin GPIO header, allowing it to interface with various peripherals such as sensors, displays, and expansion modules.
-Inter-integrated Circuit (I2C) is a two-wire communication protocol consisting of a data line (SDA) and a clock line (SCL), enabling multiple devices to communicate over a shared bus.
+D3-G는 40핀 GPIO 헤더를 통해 I2C 통신을 제공하므로 센서, 디스플레이, 확장 모듈 등 다양한 주변 장치와 인터페이스할 수 있습니다.
+I2C(Inter-integrated Circuit)는 데이터 라인(SDA)과 클록 라인(SCL)으로 구성된 2선식 통신 프로토콜로, 여러 장치가 공유 버스를 통해 통신할 수 있게 합니다.
 
-I2C communication follows a master-slave architecture, where one master device controls the communication and up to 127 slave devices can be connected on the same bus.
-The SDA line is used for both transmitting and receiving data, while the SCL line synchronizes the timing of data transfer. This synchronous communication model allows devices to exchange information in a coordinated, clock-driven manner.
+I2C 통신은 마스터-슬레이브 구조를 따르며, 하나의 마스터 장치가 통신을 제어하고 동일한 버스에 최대 127개의 슬레이브 장치를 연결할 수 있습니다.
+SDA 라인은 데이터 송신과 수신에 모두 사용되며, SCL 라인은 데이터 전송 타이밍을 동기화합니다. 이러한 동기식 통신 방식을 통해 장치들은 클록에 기반하여 정렬된 방식으로 정보를 교환할 수 있습니다.
 
 <br/><br/><br/><br/>
 
-### 7.2.1 1602A LCD Display
+### 7.2.1 1602A LCD 디스플레이
 ---
-The 1602A LCD is a character display module commonly used in embedded systems.
-On the D3-G, the LCD's SDA and SCL lines can be connected to GPIO pins configured for I2C. Once connected, the LCD can be controlled using the Linux I2C tools or custom software.
+1602A LCD는 임베디드 시스템에서 일반적으로 사용되는 문자 표시 모듈입니다.
+D3-G에서는 LCD의 SDA 및 SCL 라인을 I2C용으로 설정된 GPIO 핀에 연결할 수 있습니다. 연결한 후에는 Linux I2C 도구나 사용자 정의 소프트웨어를 사용하여 LCD를 제어할 수 있습니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- 1602A I2C LCD Module (x1)
-- Female to Female Jumper Wires (x4)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)  
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 1602A I2C LCD 모듈 (x1)
+- 암-암 점퍼 와이어 (x4)
+- DC 5V 전원 어댑터 (x1)
+- USB to TTL 시리얼 케이블 (x1)  
 
-Make sure the LCD module has an I2C backpack
+LCD 모듈에 I2C 백팩이 있는지 확인하십시오
 
-#### Step 2. Example Circuit
-- I2C LCD Module
-    - GND pin of the I2C LCD Module is connected to the GND pin on the D3-G board.
-    - VCC pin of the I2C LCD Module is connected to the 5V on the D3-G board.
-    - SDA pin of the I2C LCD Module is connected to pin 82 on the D3-G board.
-    - SCL pin of the I2C LCD Module is connected to pin 81 pin on the D3-G board.
+#### 단계 2. 예제 회로
+- I2C LCD 모듈
+    - I2C LCD 모듈의 GND 핀은 D3-G 보드의 GND 핀에 연결합니다.
+    - I2C LCD 모듈의 VCC 핀은 D3-G 보드의 5V에 연결합니다.
+    - I2C LCD 모듈의 SDA 핀은 D3-G 보드의 82번 핀에 연결합니다.
+    - I2C LCD 모듈의 SCL 핀은 D3-G 보드의 81번 핀에 연결합니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/lcd_circuit.png"></p>
-<p align="center"><strong>Figure 7.10 D3-G I2C LCD Module Circuit Schematic  </strong></p>
+<p align="center"><strong>그림 7.10 D3-G I2C LCD 모듈 회로도  </strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.10 Pin Mapping of D3-G I2C LCD Module</strong></p>
+  <p><strong>표 7.10 D3-G I2C LCD 모듈의 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1852,12 +1852,12 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-Install required Python libraries first:
+#### 단계 3. 실행 방법
+필요한 Python 라이브러리를 먼저 설치합니다:
 ```
 $ pip install RPLCD smbus2
 ```
-Then use the following Python code to write text to the LCD:
+그런 다음 아래 Python 코드를 사용하여 LCD에 텍스트를 출력합니다:
 ```
 import smbus2
 import time
@@ -1886,70 +1886,70 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 lcd_test.py
 ```
-This script initializes an I2C-based 1602A LCD using the RPLCD library and displays user-entered text on the screen.
-When you run the script, you are prompted to enter a string. That text is shown on the LCD for 4 seconds and then cleared. For example:
+이 스크립트는 RPLCD 라이브러리를 사용하여 I2C 기반 1602A LCD를 초기화하고 사용자가 입력한 텍스트를 화면에 표시합니다.
+스크립트를 실행하면 문자열을 입력하라는 메시지가 표시됩니다. 입력한 텍스트는 LCD에 4초 동안 표시된 후 지워집니다. 예를 들면 다음과 같습니다:
 ```
 Enter text to display on LCD: Hello D3-G!
 ```
-The LCD will display:
+LCD에 다음이 표시됩니다:
 ```
 Hello D3-G!
 ```
-and then clear after 4 seconds.
+그리고 4초 후에 지워집니다.
 
-To stop the script, press **[Ctrl+C]**.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
 
-**Note** : GPIO82 and GPIO81 are used for I2C by default on the D3-G.
-Make sure the I2C address (0x27) matches your specific LCD module. Use **i2cdetect -y 3** to scan I2C devices if needed.
+**참고** : D3-G에서는 기본적으로 GPIO82와 GPIO81이 I2C용으로 사용됩니다.
+I2C 주소(0x27)가 사용 중인 LCD 모듈과 일치하는지 확인하십시오. 필요한 경우 **i2cdetect -y 3** 명령으로 I2C 장치를 검색하십시오.
 
 <br/><br/><br/><br/>
 
 ## 7.3 SPI
 ---
-The D3-G supports Serial Peripheral Interface (SPI) communication through a 40-pin GPIO header, enabling data exchange between external devices and the D3-G.
+D3-G는 40핀 GPIO 헤더를 통해 Serial Peripheral Interface(SPI) 통신을 지원하므로 외부 장치와 D3-G 간에 데이터를 교환할 수 있습니다.
 
-SPI is a synchronous serial communication protocol that enables full-duplex communication - meaning data can be transmitted and received simultaneously. It uses four main lines: Master Out Slave In (MOSI), Master In Slave Out (MISO), Serial Clock (SCLK), and Chip Select (CS).
+SPI는 전이중 통신을 지원하는 동기식 직렬 통신 프로토콜로, 데이터를 동시에 송수신할 수 있습니다. Master Out Slave In(MOSI), Master In Slave Out(MISO), Serial Clock(SCLK), Chip Select(CS)의 네 가지 주요 신호선을 사용합니다.
 
-Unlike I2C, which uses shared lines for multiple devices, SPI requires a dedicated CS line for each slave device. This one-to-many structure makes SPI fast and straightforward to implement, but it can require more physical wiring when multiple devices are involved.
+여러 장치가 공용 신호선을 사용하는 I2C와 달리 SPI는 각 슬레이브 장치마다 전용 CS 신호선이 필요합니다. 이러한 일대다 구조 덕분에 SPI는 속도가 빠르고 구현이 간단하지만, 여러 장치를 연결하는 경우 물리적인 배선이 더 많이 필요할 수 있습니다.
 
 <br/><br/><br/><br/>
 
-### 7.3.1 Dot Matrix
+### 7.3.1 도트 매트릭스
 ---
-8x8 dot matrix display is commonly used for simple text or pattern output in embedded systems. On the D3-G, the dot matrix module can be controlled through SPI using a driver chip such as the MAX7219.
+8x8 도트 매트릭스 디스플레이는 임베디드 시스템에서 간단한 텍스트나 패턴을 출력하는 데 일반적으로 사용됩니다. D3-G에서는 MAX7219와 같은 드라이버 칩을 사용하여 SPI를 통해 도트 매트릭스 모듈을 제어할 수 있습니다.
 
-The MAX7219 handles row and column scanning internally, allowing the microcontroller to control the entire display using only a few SPI signals: MOSI (DIN), SCLK, and CS (LOAD). Once connected, the display can be controlled using SPI communication through user-defined scripts or libraries.
+MAX7219는 행과 열 스캔을 내부적으로 처리하므로 마이크로컨트롤러는 MOSI(DIN), SCLK, CS(LOAD)의 몇 가지 SPI 신호만으로 전체 디스플레이를 제어할 수 있습니다. 연결이 완료되면 사용자 정의 스크립트나 라이브러리를 통해 SPI 통신으로 디스플레이를 제어할 수 있습니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Dot Matrix (x1)
-- Male to Female Jumper Wires (x4)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 도트 매트릭스 (x1)
+- 수-암 점퍼 와이어 (x4)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Dot Matrix
-    - VCC pin of the Dot Matrix is connected to the 5V pin on the D3-G board.
-    - GND pin of the Dot Matrix is connected to the GND pin on the D3-G board.
-    - DIN pin of the Dot Matrix is connected to the pin 120 on the D3-G board.
-    - CS pin of the Dot Matrix is connected to the pin 119 on the D3-G board.
-    - CLK pin of the Dot Matrix is connected to the pin 118 on the D3-G board.
+#### 단계 2. 예제 회로
+- 도트 매트릭스
+    - 도트 매트릭스의 VCC 핀은 D3-G 보드의 5V 핀에 연결됩니다.
+    - 도트 매트릭스의 GND 핀은 D3-G 보드의 GND 핀에 연결됩니다.
+    - 도트 매트릭스의 DIN 핀은 D3-G 보드의 120번 핀에 연결됩니다.
+    - 도트 매트릭스의 CS 핀은 D3-G 보드의 119번 핀에 연결됩니다.
+    - 도트 매트릭스의 CLK 핀은 D3-G 보드의 118번 핀에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/dot%20circuit.png"></p>
-<p align="center"><strong>Figure 7.11 D3-G Dot Matrix Module Circuit Schematic  </strong></p>
+<p align="center"><strong>그림 7.11 D3-G 도트 매트릭스 모듈 회로도  </strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 <div align="center">
-  <p><strong>Table 7.11 Pin Mapping of D3-G Dot Matrix</strong></p>
+  <p><strong>표 7.11 D3-G 도트 매트릭스 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -1981,8 +1981,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-The following Python script shows how to directly control the MAX7219 through /dev/spidev3.0 using low-level fcntl calls. This method is suitable for devices without external SPI libraries:
+#### 단계 3. 실행 방법
+다음 Python 스크립트는 저수준 fcntl 호출을 사용하여 /dev/spidev3.0을 통해 MAX7219를 직접 제어하는 방법을 보여 줍니다. 이 방법은 외부 SPI 라이브러리가 없는 장치에 적합합니다:
 ```
 #!/usr/bin/env python3
  
@@ -2171,62 +2171,62 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 dot_matrix_test.py
 ```
-This script initializes the SPI-connected MAX7219 dot matrix display and prompts you to input a value. Depending on the input, a specific pattern is shown on the 8x8 LED matrix.
+이 스크립트는 SPI로 연결된 MAX7219 도트 매트릭스 디스플레이를 초기화하고 값을 입력하라는 메시지를 표시합니다. 입력값에 따라 8x8 LED 매트릭스에 특정 패턴이 표시됩니다.
 
-When the script runs, you will see:
+스크립트를 실행하면 다음이 표시됩니다:
 ```
 Enter a number, an uppercase letter (0-9, A-Z), 'Smile', 'Dance', 'Angry', 'Good', 'Nice', 'Emotion':
 ```
-Examples:
-- Entering A will display the letter A.
-- Entering Smile will show a smiley face pattern.
-- Entering Dance will trigger alternating dance animations.
-- Entering Nice will animate the letters N-I-C-E in sequence.
+예:
+- A를 입력하면 문자 A가 표시됩니다.
+- Smile을 입력하면 웃는 얼굴 패턴이 표시됩니다.
+- Dance를 입력하면 번갈아 나타나는 댄스 애니메이션이 실행됩니다.
+- Nice를 입력하면 N-I-C-E 문자가 순서대로 애니메이션됩니다.
 
-To stop the script, press **[Ctrl+C]**.
-On termination, the SPI device is safely closed, and the LED matrix stops updating.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
+종료 시 SPI 장치가 안전하게 닫히고 LED 매트릭스 업데이트가 중지됩니다.
 
-**Note**: Ensure that /dev/spidev3.0 exists and the wiring matches the pin mapping table. Also, power the MAX7219 module with a stable 5V source.
+**참고**: /dev/spidev3.0이 존재하는지, 배선이 핀 매핑 표와 일치하는지 확인하십시오. 또한 MAX7219 모듈에는 안정적인 5V 전원을 공급하십시오.
 
 <br/><br/><br/><br/>
 
 ## 7.4 PWM
 ---
-Pulse Width Modulation (PWM) is used to control devices like LEDs, motors, and buzzers by varying the width of the pulse signal. The D3-G supports PWM through the sysfs interface in Linux.
+Pulse Width Modulation(PWM)은 펄스 신호의 폭을 변화시켜 LED, 모터, 부저와 같은 장치를 제어하는 데 사용됩니다. D3-G는 Linux의 sysfs 인터페이스를 통해 PWM을 지원합니다.
 
-### 7.4.1 LED Brightness Control
+### 7.4.1 LED 밝기 제어
 ---
-This example demonstrates controlling an LED's brightness using PWM on the D3-G.
+이 예제에서는 D3-G에서 PWM을 사용하여 LED의 밝기를 제어하는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
 - LED (x1)
-- Male to Female Jumper Wires (x2)
-- Breadboard
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+- 수-암 점퍼 와이어 (x2)
+- 브레드보드
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
+#### 단계 2. 예제 회로
 - LED
-    - (+) pin of the LED is connected to pin 89 on the D3-G board.
-    - (-) pin of the LED is connected to the GND pin on the D3-G board.
+    - LED의 (+) 핀은 D3-G 보드의 89번 핀에 연결됩니다.
+    - LED의 (-) 핀은 D3-G 보드의 GND 핀에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/led.png"></p>
-<p align="center"><strong>Figure 7.12 D3-G LED Circuit Schematic  </strong></p>
+<p align="center"><strong>그림 7.12 D3-G LED 회로도  </strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.12 Pin Mapping of D3-G LED</strong></p>
+  <p><strong>표 7.12 D3-G LED 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -2243,8 +2243,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-To operate the LED (PWM) connected to GPIO89 on the D3-G board, run the following code:
+#### 단계 3. 실행 방법
+D3-G 보드의 GPIO89에 연결된 LED(PWM)를 동작시키려면 다음 코드를 실행하십시오:
 ```
 import time
 
@@ -2309,54 +2309,54 @@ finally:
     print("PWM disabled and cleaned up.")
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 led_pwm.py
 ```
-This script initializes PWM on the LED pin and continuously fades the LED brightness up and down.
+이 스크립트는 LED 핀에서 PWM을 초기화하고 LED 밝기를 지속적으로 밝아졌다 어두워지도록 조절합니다.
 
-Once the script is executed, you will see an output like:
+스크립트를 실행하면 다음과 같은 출력이 표시됩니다:
 ```
 Starting LED PWM control (press Ctrl+C to stop)
 ```
-The LED will gradually brighten and then dim repeatedly, simulating a "breathing" effect.
+LED가 점차 밝아졌다가 어두워지는 동작을 반복하여 "숨쉬는" 효과를 냅니다.
 
-To stop the script, press **[Ctrl+C]**.
+스크립트를 중지하려면 **[Ctrl+C]**를 누르십시오.
 
-**Note**: Ensure the PWM channel is not already in use and that the D3-G supports hardware PWM on the selected GPIO. If PWM does not activate, verify the export, period, and duty_cycle settings in /sys/class/pwm/.
+**참고**: PWM 채널이 이미 사용 중이지 않은지, 선택한 GPIO에서 D3-G가 하드웨어 PWM을 지원하는지 확인하십시오. PWM이 동작하지 않으면 /sys/class/pwm/의 export, period, duty_cycle 설정을 확인하십시오.
 
 <br/><br/><br/><br/>
 
-### 7.4.2 Mini Servo Motor
+### 7.4.2 미니 서보 모터
 ---
-A mini servo motor can be used to control precise angular movement based on a Pulse Width Modulation (PWM) signal through GPIO.
-This section demonstrates how to connect and control a mini servo motor using the D3-G.
+미니 서보 모터는 GPIO를 통한 Pulse Width Modulation(PWM) 신호를 기반으로 정밀한 각도 이동을 제어하는 데 사용할 수 있습니다.
+이 절에서는 D3-G를 사용하여 미니 서보 모터를 연결하고 제어하는 방법을 설명합니다.
 
-#### Step 1. Hardware Requirements
-- D3-G board (x1)
-- Servo Motor (x1)
-- Male to Female Jumper Wires (x3)
-- DC 5V Power Adapter (x1)
-- USB to TTL Serial Cable (x1)
+#### 단계 1. 하드웨어 요구 사항
+- D3-G 보드 (x1)
+- 서보 모터 (x1)
+- 수-암 점퍼 와이어 (x3)
+- DC 5V 전원 어댑터 (x1)
+- USB-TTL 시리얼 케이블 (x1)
 
-#### Step 2. Example Circuit
-- Servo Motor
-    - VCC pin of the Servo Motor is connected to the 5V on the D3-G board.
-    - GND pin of the Servo Motor is connected to the GND on the D3-G board.
-    - SIG pin of the Servo Motor is connected to pin 89 on the D3-G board.
+#### 단계 2. 예제 회로
+- 서보 모터
+    - 서보 모터의 VCC 핀은 D3-G 보드의 5V에 연결됩니다.
+    - 서보 모터의 GND 핀은 D3-G 보드의 GND에 연결됩니다.
+    - 서보 모터의 SIG 핀은 D3-G 보드의 89번 핀에 연결됩니다.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/motor_circuit.png"p>
-<p align="center"><strong>Figure 7.13 D3-G Servo Motor Circuit Schematic  </strong></p>
+<p align="center"><strong>그림 7.13 D3-G 서보 모터 회로도  </strong></p>
 
-##### Step 2.1 Pin Mapping
-The following table shows pin mapping.
+##### 단계 2.1 핀 매핑
+다음 표는 핀 매핑을 나타냅니다.
 
 <div align="center">
-  <p><strong>Table 7.13 Pin Mapping of D3-G Servo Motor</strong></p>
+  <p><strong>표 7.13 D3-G 서보 모터 핀 매핑</strong></p>
   <table>
       <tr>
-          <th colspan="3">Pin Name</th>
+          <th colspan="3">핀 이름</th>
           <th>D3-G</th>
           <th>GPIO</th>
       </tr>
@@ -2378,8 +2378,8 @@ The following table shows pin mapping.
   </table>
 </div>
 
-#### Step 3. How to execute
-The following Python script shows how to directly control a mini servo motor using PWM through the sysfs interface on the D3-G. This method requires no external libraries and provides fine-grained control over angle-based positioning.
+#### 단계 3. 실행 방법
+다음 Python 스크립트는 D3-G에서 sysfs 인터페이스를 통해 PWM으로 미니 서보 모터를 직접 제어하는 방법을 보여 줍니다. 이 방법은 외부 라이브러리가 필요 없으며 각도 기반 위치 제어를 세밀하게 수행할 수 있습니다.
 ```
 import time
 import os
@@ -2443,18 +2443,18 @@ if __name__ == "__main__":
         print("PWM cleaned up.")
 ```
 
-#### Step 4. Execution Result
-Run the code with the following command.
+#### 단계 4. 실행 결과
+다음 명령으로 코드를 실행하십시오.
 ```
 $ python3 motor_test.py
 ```
-This script uses PWM to control a mini servo motor by adjusting the duty cycle based on the target angle.
-Once executed, you will be prompted with:
+이 스크립트는 목표 각도에 따라 듀티 사이클을 조정하여 PWM으로 미니 서보 모터를 제어합니다.
+실행하면 다음과 같은 입력 메시지가 표시됩니다:
 ```
 Enter 1 (CW) or 0 (CCW), q to quit:
 ```
-Entering 1 rotates the servo clockwise to 180°, and entering 0 rotates the servo counter-clockwise to 0°. You can repeat this as many times as needed.
+1을 입력하면 서보가 시계 방향으로 180°까지 회전하고, 0을 입력하면 반시계 방향으로 0°까지 회전합니다. 필요한 만큼 반복할 수 있습니다.
 
-To stop the script, enter **[q]** or press **[Ctrl+C]**. The script will then disable and unexport the PWM channel.
+스크립트를 중지하려면 **[q]**를 입력하거나 **[Ctrl+C]**를 누르십시오. 그러면 스크립트가 PWM 채널을 비활성화하고 unexport합니다.
 
-**Note**: Ensure your servo motor supports a 50 Hz PWM signal and operates within the 1 ms to 2 ms duty pulse range for safe operation.
+**참고**: 안전한 동작을 위해 서보 모터가 50 Hz PWM 신호를 지원하고 1 ms~2 ms 듀티 펄스 범위에서 동작하는지 확인하십시오.

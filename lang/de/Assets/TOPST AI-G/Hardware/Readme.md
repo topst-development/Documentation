@@ -1,0 +1,1 @@
+Dieser Ordner enthält die Abbildungsdateien für die AI-G-Hardware.

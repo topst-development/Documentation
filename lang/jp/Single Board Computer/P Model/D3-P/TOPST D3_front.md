@@ -1,18 +1,18 @@
 # TOPST D3 
 <br/>
 
-TOPST D3  is High performance SBC with Multi-CPU; Cortex-A72 quad & Cortex-A53, Cortex-R5.  
+TOPST D3 は、Cortex-A72 quad & Cortex-A53、Cortex-R5 のマルチ CPU を搭載した高性能 SBC です。  
 
 <br/>
 
-To navigate to the main document pages, please refer to the table below.
+主要なドキュメントページに移動するには、以下の表を参照してください。
 <br/>
 
 <br/>
 
-[Hardware Overview](https://topst.ai/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification) : Hardware specification, information of peripherals etc.
+[ハードウェア概要](https://topst.ai/tech/docs?TOPST-D3&Hardware&Overview&1.%20Specification) : ハードウェア仕様、周辺機器の情報など。
 
-[TOPST D3 Official Images](https://drive.google.com/file/d/1eJimz-nC3WcH8Kp6yauGftyIznoC6FB7/view?usp=drive_link) : If you want to quickly mount a pre-built image, You can download it.
+[TOPST D3 公式イメージ](https://drive.google.com/file/d/1eJimz-nC3WcH8Kp6yauGftyIznoC6FB7/view?usp=drive_link) : ビルド済みイメージをすぐにマウントしたい場合は、ここからダウンロードできます。
 
-[Linux SDK build guide](https://topst.ai/tech/docs?TOPST-D3&Software&SDK&LINUX&1.%20Environment%20Setting.md) : To perform the SDK build yourself, please refer to this page.
+[Linux SDK ビルドガイド](https://topst.ai/tech/docs?TOPST-D3&Software&SDK&LINUX&1.%20Environment%20Setting.md) : SDK ビルドを自分で行う場合は、このページを参照してください。
 

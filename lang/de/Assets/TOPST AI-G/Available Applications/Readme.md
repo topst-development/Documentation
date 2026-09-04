@@ -1,0 +1,1 @@
+Dieser Ordner enthält die Abbildungsdateien zu den verfügbaren Anwendungen für AI-G.

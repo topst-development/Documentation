@@ -1,67 +1,67 @@
 # D3-G クイックガイド
 ---
 
-## 1.1 USBブートモードでのD3-GボードとホストPCの接続
+## 1.1 USB 起動モードで D3-G ボードとホスト PC を接続する
 ---
-ファームウェアダウンローダー (FWDN) は、ホストPCとのUSB通信を通じてD3-GにROMイメージを書き込みます。
+Firmware Downloader (FWDN) は、ホスト PC との USB 通信を介して D3-G に ROM イメージを書き込みます。 
 
-D3-Gには1つのブートモードボタンがあり、2種類のブートモードをサポートしています。このガイドでは、FWDNモードに焦点を当てています。
+D3-G には Boot Mode ボタンが 1 つあり、2 種類の起動モードをサポートしています。本ガイドでは FWDN モードを中心に説明します。
 
-- USBブートモード (FWDNモード) : ホストPC上のFWDNツールを使用してROMイメージを書き込むために使用されます
+- USB Boot Mode (FWDN Mode) : ホスト PC の FWDN ツールを使用して ROM イメージを書き込む際に使用します 
 
-- eMMCブートモード : eMMCデバイスに保存されているROMイメージを使用してD3-Gを起動するために使用されます
+- eMMC Boot Mode : eMMC デバイスに保存されている ROM イメージを使用して D3-G を起動する際に使用します 
 
-**注**: USB Type-C FWDNポートは、ファームウェアダウンローダー (FWDN) に使用されます。
+**注意**: USB Type-C FWDN ポートはファームウェアダウンローダ (FWDN) に使用されます。 
 
 
 
-FWDNを使用するには、次のようにD3-GボードをホストPCに接続します。
+FWDN を使用するには、次のように D3-G ボードをホスト PC に接続します。 
 
-1. ホストPCにVTCドライバがインストールされていることを確認します。VTCドライバがインストールされていない場合は、第1.2章に示すようにインストールしてください。
+1. ホスト PC に VTC ドライバがインストールされていることを確認します。VTC ドライバがインストールされていない場合は、第 1.2 章の説明に従ってインストールします。  
 
-2. USB Type-Cケーブル1本を用意します。
+2. USB Type-C ケーブルを 1 本用意します。 
 
-3. USBブートモードに入るには、FWDNスイッチを押しながら電源ケーブルをD3-Gボードに接続します。
+3. USB 起動モードに入るには、FWDN スイッチを押しながら D3-G ボードに電源ケーブルを接続します。
 
-4. USB Type-CケーブルをD3-GボードのUSB Type-C FWDNポートとホストPCに接続します。
+4. USB Type-C ケーブルを D3-G ボードの USB Type-C FWDN ポートとホスト PC に接続します。 
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Hardware/connect%20to%20d3g%20to%20host%20pc%20using%20c%20type.png">
 </p>
-<p align="center"><strong>図 1.1 USB C-Typeケーブルを使用したD3-GボードとホストPCの接続</strong></p>
+<p align="center"><strong>図 1.1 USB C-Type ケーブルを使用した D3-G ボードとホスト PC の接続 </strong></p>
 
 <br/><br/>
 
-## 1.2 VTCドライバのインストール方法 (Windows/Ubuntu)
-管理者として実行して、Vendor Telechips Certification (VTC) ドライバ（[telechipsドライバ](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing)にあります）をホストPCにインストールします。上記のようにFWDNモードでUSBを接続すると、Telechips VTC USBドライバが図1.2および図1.3のように設定されます。
+## 1.2 VTC ドライバのインストール方法 (Windows/Ubuntu)
+管理者として実行し、Vendor Telechips Certification (VTC) ドライバ ([telechips ドライバ](https://drive.google.com/file/d/1muQnY8kuKxDsy3p3FUiQqcG34Zjk-mnR/view?usp=sharing) から入手可能) をホスト PC にインストールします。上記のように FWDN モードで USB を接続すると、図 1.2 および図 1.3 のように Telechips VTC USB ドライバが設定されます。
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Windows%20Environment.png", width="700">
 </p>
-<p align="center"><strong>図 1.2 Windows環境でのUSB接続</strong></p>
+<p align="center"><strong>図 1.2 Windows 環境での USB 接続</strong></p>
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20Connection%20in%20Linux%20System.png", width="700">
 </p>
-<p align="center"><strong>図 1.3 Linux環境でのUSB接続</strong></p>  
+<p align="center"><strong>図 1.3 Linux 環境での USB 接続</strong></p>  
 
-**注**: VTCドライバ V5.0.0.14以降を使用してください。バージョンを確認するには、Windows環境のデバイスマネージャーを確認してください。
+**注意**: VTC ドライバ V5.0.0.14 以上を使用してください。バージョンを確認するには、Windows 環境のデバイスマネージャーで確認します。  
 
 <br/><br/><br/>
 
-## 1.3 Windows環境でのFWDN
+## 1.3 Windows 環境での FWDN
 
 ### 1.3.1 D3-G Yocto
 ---
 1. ダウンロードページに移動します
 
-2. D3-G Yoctoイメージをダウンロードします
+2. D3-G Yocto イメージをダウンロードします
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20v1.2.0%20Yocto%20Image.png" width="550"></p>
-<p align="center"><strong>図 1.4 D3-G Yoctoイメージのダウンロード</strong></p> <br/>
+<p align="center"><strong>図 1.4 D3-G Yocto イメージのダウンロード</strong></p> <br/>
 
-3. fwdn.batをクリックします。「fwdn.bat」は、***FWDN V8***を使用してファームウェアを自動的にダウンロードする実行ファイルです。
+3. fwdn.bat をクリックします。“fwdn.bat” は ***FWDN V8*** を使用してファームウェアを自動的にダウンロードする実行ファイルです。 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn.bat.png" width="550"></p>
-<p align="center"><strong>図 1.5 fwdn.batをクリック</strong></p> <br/>
+<p align="center"><strong>図 1.5 fwdn.bat のクリック</strong></p> <br/>
 
 ```
 C:\output_d3g.fwdn>fwdn.exe --fwdn boot-firmware\fwdn.json
@@ -158,17 +158,17 @@ C:\output_d3g.fwdn>fwdn.exe -w "output_d3g.fai" --storage emmc --area user
 ** When writing FAI files without low-format, there may be garbage values in partition where data is not written.
 ```
 
-### 1.3.2 D3-G Ubuntuデスクトップ
+### 1.3.2 D3-G Ubuntu Desktop
 ---
 1. ダウンロードページに移動します
 
-2. D3-G Ubuntuデスクトップイメージをダウンロードします
+2. D3-G Ubuntu Desktop イメージをダウンロードします
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20v1.2.0%20Ubuntu%20Desktop%20Image.png" width="550"></p>
-<p align="center"><strong>図 1.6 D3-G Ubuntuデスクトップイメージのダウンロード</strong></p> <br/>
+<p align="center"><strong>図 1.6 D3-G Ubuntu Desktop イメージのダウンロード</strong></p> <br/>
 
-3. fwdn.batをクリックします。「fwdn.bat」は、***FWDN V8***を使用してファームウェアを自動的にダウンロードする実行ファイルです。
+3. fwdn.bat をクリックします。“fwdn.bat” は ***FWDN V8*** を使用してファームウェアを自動的にダウンロードする実行ファイルです。 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_ubuntu.bat.png" width="550"></p>
-<p align="center"><strong>図 1.7 fwdn.batをクリック</strong></p> <br/>
+<p align="center"><strong>図 1.7 fwdn.bat のクリック</strong></p> <br/>
 
 ```
 C:\d3g-ubuntu.fwdn>fwdn.exe --fwdn boot-firmware\fwdn.json
@@ -224,17 +224,17 @@ C:\d3g-ubuntu.fwdn>fwdn.exe -w "d3g.fai" --storage emmc --area user
 ** When writing FAI files without low-format, there may be garbage values in partition where data is not written.
 ```
 
-### 1.3.3 D3-G Ubuntuヘッドレス
+### 1.3.3 D3-G Ubuntu Headless
 ---
 1. ダウンロードページに移動します
 
-2. D3-G Ubuntuヘッドレスイメージをダウンロードします
+2. D3-G Ubuntu Headless イメージをダウンロードします
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20D3-G%20Ubuntu%20Headless%20Image.png" width="550"></p>
-<p align="center"><strong>図 1.8 D3-G Ubuntuヘッドレスイメージのダウンロード</strong></p> <br/>
+<p align="center"><strong>図 1.8 D3-G Ubuntu Headless イメージのダウンロード</strong></p> <br/>
 
-3. fwdn.batをクリックします。「fwdn.bat」は、***FWDN V8***を使用してファームウェアを自動的にダウンロードする実行ファイルです。
+3. fwdn.bat をクリックします。“fwdn.bat” は ***FWDN V8*** を使用してファームウェアを自動的にダウンロードする実行ファイルです。 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_ubuntu_headless.bat.png" width="550"></p>
-<p align="center"><strong>図 1.9 fwdn.batをクリック</strong></p> <br/>
+<p align="center"><strong>図 1.9 fwdn.bat のクリック</strong></p> <br/>
 
 ```
 C:\d3g-ubuntu-headless>fwdn.exe --fwdn boot-firmware\fwdn.json
@@ -293,59 +293,59 @@ C:\d3g-ubuntu-headless>fwdn.exe -w "d3g.fai" --storage emmc --area user
 
 <br/><br/><br/>
 
-## 1.4 Linux環境でのFWDN
+## 1.4 Linux 環境での FWDN
 
-### 1.4.1 D3-Gイメージの抽出
+### 1.4.1 D3-G イメージの展開
 ---
-セクション1.3でダウンロードしたD3-GイメージをLinuxシステム上で抽出します。
+1.3 節でダウンロードした D3-G イメージを Linux システム上で展開します。
 
 <br/><br/><br/>
 
-### 1.4.2 Telechips USBデバイスのUdevルール
+### 1.4.2 Telechips USB デバイス用 Udev ルール
 ---
-以下のコマンドを実行すると、LinuxでFWDNをダウンロードする際に「sudo」コマンドを使用する必要がなくなります。
+次のコマンドを実行すると、Linux で FWDN をダウンロードする際に 'sudo' コマンドを使用する必要がなくなります。
 ```
 $ echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"140e\", MODE=\"0666\", OWNER=\"${USER}\"" | sudo tee /etc/udev/rules.d/99-topst.rules
 $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 <br/><br/><br/>
 
-### 1.4.3 fwdn.shを使用したD3-Gイメージのフラッシュ
+### 1.4.3 fwdn.sh による D3-G イメージの書き込み
 ---
-LinuxでD3-Gイメージをダウンロードするには、次のコマンドを実行します: "./fwdn.sh"。
+Linux で D3-G イメージをダウンロードするには、次のコマンドを実行します: "./fwdn.sh"。
 
 ```
 $ ./fwdn.sh
 ```
 
-これでD3-Gを起動する準備が整いました。デバイスとの通信を開始するには、第1.5章を参照してください。
+これで D3-G を起動する準備が整いました。デバイスとの通信を開始するには、第 1.5 章を参照してください。
 
 
 <br/><br/><br/><br/>
 
-## 1.5 D3-GボードとホストPCの接続
+## 1.5 D3-G ボードとホスト PC の接続
 ---
-この章では、ファームウェアのダウンロードとシリアル通信のために、UARTを介してホストPCをD3-Gボードに接続する方法について説明します。
+本章では、ファームウェアのダウンロードおよびシリアル通信のために、UART を介してホスト PC を D3-G ボードに接続する方法を説明します。
 
 <br/><br/><br/>
 
-## 1.6 UARTを使用したD3-Gボードの接続 
+## 1.6 UART による D3-G ボードの接続 
 ---
-以下の手順に従い、UART接続を使用してファームウェアのダウンロードが正常に完了したことを確認します。
+次の手順に従い、UART 接続を使用してファームウェアのダウンロードが正常に完了したことを確認します。 
 
-1. Windows環境にシリアルポートドライバ（例：CP210x Windowsドライバ）とPL2303_prolificドライバをインストールします。
-2. Tera TermやPuTTYなどのターミナルエミュレータをインストールします。
-3. ホストPCとD3-GボードのUARTピンを接続します。USB-TTLケーブルを使用してください。
-4. 黒いケーブルをGNDピンに接続します。
-5. 白いケーブル(RXD)をUARTピンのTXピンに接続し、緑色のケーブル(TXD)をUARTピンのRXピンに接続します。
+1. Windows 環境でシリアルポートドライバ (例: CP210x Windows Driver) と PL2303_prolific ドライバをインストールします。 
+2. Tera Term や PuTTY などのターミナルエミュレータをインストールします。 
+3. ホスト PC と D3-G ボードの UART ピンを接続します。USB-to-TTL ケーブルを使用します。 
+4. 黒色のケーブルを GND ピンに接続します。 
+5. 白色のケーブル (RXD) を UART ピンの TX ピンに、緑色のケーブル (TXD) を UART ピンの RX ピンに接続します。
 6. ターミナルエミュレータアプリケーションを実行します。
-7. PCでデバイスマネージャーを開き、UARTに使用されているポート番号を確認します。
-8. デバイスマネージャーで確認したポート番号をターミナルエミュレータのSerial lineフィールドに入力します。**Speed** (bps)を115200に設定し、**Flow control**を**None**に設定します。
-9. 電源ケーブルを接続します。すると、D3-GはデフォルトのeMMCブートモードで起動します。
+7. PC でデバイスマネージャーを開き、UART に使用されているポート番号を確認します。
+8. デバイスマネージャーで確認したポート番号を、ターミナルエミュレータの Serial line フィールドに入力します。**Speed** (bps) を 115200 に設定し、**Flow control を None に設定します。**
+9. 電源ケーブルを接続します。すると、D3-G はデフォルトの eMMC 起動モードで起動します。
 
 
  
 <p align="center">
     <img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20D3-G/Software/USB%20to%20TTL%20Connection.png", width="700">
 </p>
-<p align="center"><strong>図 1.6 ホストPCとのUART接続</strong></p><br/>  
+<p align="center"><strong>図 1.6 ホスト PC との UART 接続</strong></p><br/>  

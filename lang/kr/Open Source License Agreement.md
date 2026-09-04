@@ -1,51 +1,51 @@
 
-# Open source License Agreement
+# 오픈소스 라이선스 동의서
 
-Welcome to TOPST.AI
+TOPST.AI에 오신 것을 환영합니다
 
 <br/>
-We are pleased to provide you access to various open source software ("Software") on our website. Before you proceed to use any of the Software, we kindly request that you carefully read and understand the following declaration.
+당사는 웹사이트를 통해 다양한 오픈소스 소프트웨어("소프트웨어")를 이용하실 수 있도록 제공하게 되어 기쁘게 생각합니다. 소프트웨어를 사용하시기 전에, 다음 선언문을 주의 깊게 읽고 이해해 주시기 바랍니다.
 <br/><br/>
 
-## Open source License Agreement
-All Software provided on our website is subject to the terms and conditions of the respective open source licenses under which they are distributed. By using the Software, you agree to comply with the terms of these licenses.
+## 오픈소스 라이선스 동의서
+당사 웹사이트에서 제공되는 모든 소프트웨어는 각각의 소프트웨어가 배포되는 오픈소스 라이선스의 조건 및 조항을 따릅니다. 소프트웨어를 사용함으로써 귀하는 해당 라이선스의 조건을 준수하는 데 동의하는 것입니다.
 <br/><br/>
 
-## Permitted Use
-You are granted a non-exclusive, worldwide, royalty-free license to use, modify, and distribute the Software in accordance with the terms of the applicable open source licenses. Please be aware that each open source license may have specific requirements, such as attribution, sharing derivative works under the same license, and providing the source code when distributing modified versions. Make sure to review and adhere to the requirements of each license.
+## 허용되는 사용
+귀하에게는 해당 오픈소스 라이선스의 조건에 따라 소프트웨어를 사용, 수정 및 배포할 수 있는 비독점적이고 전 세계적이며 로열티가 없는 라이선스가 부여됩니다. 각 오픈소스 라이선스에는 저작자 표시, 동일한 라이선스로 2차적 저작물 공유, 수정된 버전을 배포할 때 소스 코드 제공 등 특정한 요구 사항이 있을 수 있음에 유의하십시오. 각 라이선스의 요구 사항을 반드시 검토하고 준수하십시오.
 <br/><br/>
 
-## No Warranty
-The Software is provided on an "AS IS" basis, without warranties or conditions of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. We do not guarantee the accuracy, reliability, non-infringement, or completeness of the Software.
+## 보증의 부인
+소프트웨어는 명시적이든 묵시적이든 어떠한 종류의 보증이나 조건 없이 "있는 그대로(AS IS)" 제공되며, 여기에는 상품성 및 특정 목적에의 적합성에 대한 묵시적 보증이 포함되나 이에 국한되지 않습니다. 당사는 소프트웨어의 정확성, 신뢰성, 비침해성 또는 완전성을 보장하지 않습니다.
 <br/><br/>
 
-## No Liability 
-In no event shall TOPST.AI or its contributors be liable for any damages or losses arising from the use of the Software. This includes, but is not limited to, direct, indirect, incidental, special, or consequential damages, even if advised of the possibility of such damage.You are responsible for all or any of intellectual property licenses required for actual application, TOPST.AI does not provide any indemnification for any intellectual properties owned by third party.
+## 책임의 부인 
+어떠한 경우에도 TOPST.AI 또는 그 기여자는 소프트웨어의 사용으로 인해 발생하는 손해나 손실에 대하여 책임을 지지 않습니다. 여기에는 그러한 손해의 가능성을 사전에 고지받은 경우라 하더라도 직접적, 간접적, 부수적, 특별 또는 결과적 손해가 포함되나 이에 국한되지 않습니다. 실제 적용에 필요한 모든 지적재산권 라이선스에 대한 책임은 귀하에게 있으며, TOPST.AI는 제3자가 소유한 어떠한 지적재산권에 대해서도 면책을 제공하지 않습니다.
 <br/><br/>
 
-## Compliance with Laws
-You are solely responsible for ensuring that your use of the Software complies with all applicable laws, regulations, and export control restrictions.
+## 법령 준수
+귀하의 소프트웨어 사용이 모든 관련 법률, 규정 및 수출 통제 제한을 준수하도록 보장할 책임은 전적으로 귀하에게 있습니다.
 <br/><br/>
 
-## Acknowledgment of Third-Party Rights
-The Software may include components developed and maintained by third parties. All rights, title, and interest in and to such third-party components remain with the respective owners.
+## 제3자 권리의 인정
+소프트웨어에는 제3자가 개발하고 유지 관리하는 구성 요소가 포함될 수 있습니다. 그러한 제3자 구성 요소에 대한 모든 권리, 소유권 및 이익은 각 소유자에게 귀속됩니다.
 <br/><br/>
 
-## No Endorsement
-The provision of the Software does not constitute an endorsement, warranty, or support by TOPST.AI. We do not assume any responsibility for any issues arising from your use of the Software.
+## 추천의 부인
+소프트웨어의 제공은 TOPST.AI에 의한 추천, 보증 또는 지원을 구성하지 않습니다. 당사는 귀하의 소프트웨어 사용으로 인해 발생하는 어떠한 문제에 대해서도 책임을 지지 않습니다.
 <br/><br/>
 
-## Updates and Modifications
-We reserve the right to modify, suspend, or discontinue the availability of any Software on our website at any time and without notice.
+## 업데이트 및 수정
+당사는 언제든지 사전 통지 없이 당사 웹사이트에서 제공되는 소프트웨어의 이용 가능 여부를 수정, 중단 또는 종료할 권리를 보유합니다.
 <br/><br/>
 
-By accessing and using the Software on our website, you acknowledge that you have read, understood, and agreed to be bound by the terms and conditions outlined in this declaration and the applicable open source licenses.
+당사 웹사이트에서 소프트웨어에 접근하고 이를 사용함으로써, 귀하는 본 선언문 및 해당 오픈소스 라이선스에 명시된 조건과 조항을 읽고 이해하였으며 이에 구속되는 데 동의함을 인정하는 것입니다.
 
 <br/><br/>
-#### If you do not agree with any part of this declaration or the open source licenses, please refrain from using the Software.
+#### 본 선언문 또는 오픈소스 라이선스의 어느 부분에도 동의하지 않으시는 경우, 소프트웨어를 사용하지 마십시오.
 <br/><br/>
 
-Thank you for being a part of TOPST community!
+TOPST 커뮤니티의 일원이 되어 주셔서 감사합니다!
 
 
 

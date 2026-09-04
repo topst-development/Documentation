@@ -8,25 +8,25 @@
 - [manifests](https://github.com/topst-development/manifests/tree/release/1.2.0)
 
 ## 新機能
-- VPU-AVCエンコーダ/デコーダがgstreamerで利用可能になりました
-- VPU-VP9デコーダがgstreamerで利用可能になりました
+- VPU-AVC エンコーダ/デコーダを gstreamer で利用できます
+- VPU-VP9 デコーダを gstreamer で利用できます
 
 ## 改善点
-- VPUエンコーダが4Kへのコンテンツエンコードをサポートしました
+- VPU エンコーダはコンテンツの 4K へのエンコードに対応します
 
 
 ## 既知の問題
-- SDカードが挿入されている場合、ウォームリブートに時間がかかる（約40秒）ことがあります。
-- MIPIに接続された外部カメラは現在最大30fpsをサポートしています（次のリリースで最大60fpsをサポート予定）
+- sdcard が挿入されている場合、ウォームリブートに時間がかかることがあります（約 40 秒）。
+- MIPI に接続された外部カメラは、現時点では最大 30fps まで対応しています（次回リリースで最大 60fps に対応予定です）
 
 ## ガイド
-- VLCプレーヤー
-    - コンテンツを再生する前に、プロパティ設定でビデオ出力を**「X11 video output(XCB)」**に設定する必要があります。
+- VLC Player
+    - コンテンツを再生する前に、プロパティ設定で video output を **'X11 video output(XCB)'** に設定する必要があります。
 - firefox
-	- 必要に応じて、「sudo apt install --reinstall firefox」でFirefoxを再インストールしてください。
+	- 必要に応じて 'sudo apt install --reinstall firefox' で Firefox を再インストールしてください。
 
-## 付録
-<p align="center"><strong>表 1.1 USB Bluetoothドングル</strong></p>
+## 付録.
+<p align="center"><strong>表 1.1 USB Bluetooth ドングル</strong></p>
 <div align="center">
 	<table>
 	  <tr>
@@ -110,7 +110,7 @@
 </div>  
 
 
-<p align="center"><strong>表 1.2 USB Wi-Fiドングル</strong></p>
+<p align="center"><strong>表 1.2 USB Wifi ドングル</strong></p>
 <div align="center">
 	<table>
 	  <tr>

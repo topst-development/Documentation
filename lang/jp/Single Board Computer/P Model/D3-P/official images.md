@@ -1,21 +1,21 @@
-# Official Images for TOPST D3  
+# TOPST D3 公式イメージ  
 
-Official of TOPST D3 is based on Ubuntu 22.04.  
-You can download the image file here.  
+TOPST D3 の公式イメージは Ubuntu 22.04 をベースとしています。  
+イメージファイルはここからダウンロードできます。  
 
 <img src="https://github.com/topst-development/Documentation/assets/161264431/83d93c78-6437-4f96-a0bf-23f22da1aba1">  
 
-**Download :**  
--	[Ubuntu images](https://drive.google.com/file/d/1hDoKRjrKDnP5lGk1c1pXN73kgdZN4TGv/view?usp=sharing)
+**ダウンロード :**  
+-	[Ubuntu イメージ](https://drive.google.com/file/d/1hDoKRjrKDnP5lGk1c1pXN73kgdZN4TGv/view?usp=sharing)
 <br>
--	For more information, please visit github
+-	詳細については github をご覧ください
 
-**Release note :**  
+**リリースノート :**  
 
-|Ver|   Date   |
+|バージョン|   日付   |
 |:-:|:--------:|
 |1.0|2024.04.26|  
 
-TOPST team is also preparing other official OS versions.  
+TOPST チームは他の公式 OS バージョンも準備しています。  
 
-For information on releases of other OS, please refer to the TOPST community.  
+他の OS のリリースに関する情報は、TOPST コミュニティを参照してください。  
