@@ -15,7 +15,8 @@
 
 - Improved application memory cleanup, input/output range checks, and initialization error reporting.
 - Updated the MobileNetV2 model binaries and metadata.
-- Updated COM port detection in the Windows firmware download script to use PowerShell.
+- Replaced WMIC with PowerShell for COM port detection in the Windows firmware download script.
+- Corrected the default camera input path shown in `tc-nn-camera-app` help to match the actual default, `/dev/video2`.
 
 ## Usage Notes
 

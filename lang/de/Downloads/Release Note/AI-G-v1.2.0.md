@@ -15,7 +15,8 @@
 
 - Die Freigabe des Anwendungsspeichers, die Prüfung der Ein- und Ausgabebereiche sowie die Fehlermeldungen bei der Initialisierung wurden verbessert.
 - Die Modelldateien und Metadaten von MobileNetV2 wurden aktualisiert.
-- Das Windows-Skript zum Übertragen der Firmware verwendet nun PowerShell zur Erkennung der COM-Ports.
+- Das Windows-Skript zum Übertragen der Firmware verwendet nun PowerShell statt WMIC zur Erkennung der COM-Ports.
+- Der in der Hilfe von `tc-nn-camera-app` angezeigte Standardpfad für den Kameraeingang wurde auf den tatsächlichen Standardwert `/dev/video2` korrigiert.
 
 ## Hinweise zur Verwendung
 
