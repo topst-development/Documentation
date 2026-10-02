@@ -16,7 +16,7 @@
 - 改善了應用程式的記憶體清理、輸入輸出範圍檢查與初始化錯誤提示。
 - 更新了 MobileNetV2 模型的二進位檔案和中繼資料。
 - 將 Windows 韌體下載指令碼的 COM 連接埠查詢方式從 WMIC 改為 PowerShell。
-- 修正了 `tc-nn-camera-app` 說明中顯示的預設攝影機輸入路徑，使其與實際預設值 `/dev/video2` 一致。
+- 將 `tc-nn-camera-app` 中的預設攝影機輸入路徑從 `/dev/video0` 變更為 `/dev/video2`。
 
 ## 使用說明
 

@@ -16,7 +16,7 @@
 - 改进了应用程序的内存清理、输入输出范围检查和初始化错误提示。
 - 更新了 MobileNetV2 模型的二进制文件和元数据。
 - 将 Windows 固件下载脚本的 COM 端口查询方式从 WMIC 改为 PowerShell。
-- 修正了 `tc-nn-camera-app` 帮助信息中的默认摄像头输入路径，使其与实际默认值 `/dev/video2` 一致。
+- 将 `tc-nn-camera-app` 中的默认摄像头输入路径从 `/dev/video0` 更改为 `/dev/video2`。
 
 ## 使用说明
 
