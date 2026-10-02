@@ -10,7 +10,7 @@
 
 要使用 ***FWDN V8***，请按以下方式将 AI-G 开发板连接到主机 PC： 
 
-1. 检查主机 PC 上是否已安装 VTC 驱动程序。如果未安装 VTC 驱动程序，请按第 4.2.1 章所示进行安装。  
+1. 检查主机 PC 上是否已安装 VTC 驱动程序。如果未安装 VTC 驱动程序，请按第 1.2 章所示进行安装。
 
 2. 准备一根 USB Type-C 线缆和一根 Ethernet 线缆。 
 
@@ -40,43 +40,33 @@
 <p align="center"><strong>图 1.3 设置用于 FWDN 的 Ethernet 设备属性</strong></p><br/>
 <br/><br/><br/>
 
-## 1.4 添加 WMIC
-在执行 FWDN 之前，必须安装 WMIC 以确定连接到 AI-G 开发板 FWDN 端口的端口号。
+## 1.4 检查 FWDN COM 端口
 
-1. 打开设置：从开始菜单打开设置。
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/8.%20Open%20Settings%20from%20Start%20menu.png"></p>
-<p align="center"><strong>图 1.4 从开始菜单打开设置</strong></p>  <br/>
+AI-G v1.2.0 中的 `fwdn_ai.bat` 使用 PowerShell 列出 COM 端口。
 
-2. 选择系统：进入系统菜单。
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/9.%20Go%20to%20the%20System%20menu.png"></p>
-<p align="center"><strong>图 1.5 进入系统菜单</strong></p>  <br/>
+按照第 1.1 节的步骤，以 FWDN 模式连接开发板。在设备管理器中检查 Telechips VTC 设备的 COM 端口，或在 PowerShell 中运行以下命令：
 
-3. 可选功能：单击可选功能菜单。
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/10.%20Click%20the%20Selective%20Features%20menu.png"></p>
-<p align="center"><strong>图 1.6 单击可选功能菜单</strong></p>  <br/>
+```powershell
+Get-CimInstance Win32_PnPEntity | Where-Object { $_.Name -match '\(COM[0-9]+\)' } | Select-Object -ExpandProperty Name
+```
 
-4. 查看功能：单击 **添加可选功能** 旁边的 **查看功能** 按钮。
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/11.%20Click%20the%20View%20Features%20button%20next%20to%20Add%20optional%20Features.png"></p>
-<p align="center"><strong>图 1.7 单击添加可选功能旁边的查看功能按钮</strong></p>  <br/>
-
-5. 搜索 WMIC：在搜索框中输入 **"WMIC"**。
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/12.%20Type%20WMIC%20in%20the%20search%20box.png"></p>
-<p align="center"><strong>图 1.8 在搜索框中输入 WMIC</strong></p>  <br/>
-
-6. 安装：选择 WMIC 项并单击 **"下一步"** 按钮以完成安装。
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/13.%20Select%20the%20WMIC%20item%20and%20click%20the%20Next%20button%20to%20complete%20the%20installation.png"></p>
-<p align="center"><strong>图 1.9 选择 WMIC 项并单击下一步按钮以完成安装</strong></p>  <br/>
+此命令会列出检测到的所有 COM 设备。请确认第 1.2 节所示 Telechips VTC 设备的 COM 端口。
 
 ## 1.5 在 Windows 环境中执行 FWDN
-1. 进入下载页面
 
-2. 下载 AI-G Yocto 镜像
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20AI-G%20Image.png" width="550"></p>
-<p align="center"><strong>图 1.10 下载 AI-G Yocto 镜像</strong></p> <br/>
+1. 下载 [AI-G v1.2.0 固件包](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.2.0/aig-yp4-v1.2.0-r01.zip) (`aig-yp4-v1.2.0-r01.zip`)。
 
-3. 单击 fwdn_aig.bat。“fwdn_aig.bat”是使用 ***FWDN V8*** 自动下载固件的可执行文件。 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_aig.bat.png" width="550"></p>
-<p align="center"><strong>图 1.11 单击 fwdn_aig.bat</strong></p> <br/>
+2. 解压 ZIP 文件，并在包含 `fwdn_ai.bat` 的文件夹中打开 PowerShell。
+
+3. 运行以下命令：
+
+```powershell
+.\fwdn_ai.bat
+```
+
+出现 `Input USB Port Number` 提示时，仅输入第 1.4 节中确认的 FWDN COM 端口的数字部分（例如，`COM44` 输入 `44`）。
+
+以下日志来自以前的固件包，仅供参考。可执行文件名称、版本、COM 端口号和处理时间可能不同。
 
 ```
 TOPST AI-G FWDN Batch File
@@ -379,12 +369,13 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 <br/><br/><br/>
 
-### 1.6.3 使用 fwdn.sh 烧录 AI-G 镜像
+### 1.6.3 使用 fwdn_ai.sh 烧录 AI-G 镜像
 
-在 Linux 环境中，您可以输入以下命令下载 AI-G 镜像。 
+在解压后包含 `fwdn_ai.sh` 的文件夹中，为随附的 FWDN 二进制文件添加执行权限，然后运行脚本：
 
-```
-./fwdn.sh 
+```bash
+chmod +x ./fwdn_ai
+bash ./fwdn_ai.sh
 ```
 ***FWDN*** 完成后，请从 FWDN 端口拔下 USB Type-C 线缆并拔下电源线。 
 
@@ -408,12 +399,12 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/6.%20connetc%20host%20pc%20to%20ai-g%20with%20uart%20cable.png"></p>
-<p align="center"><strong>图 1.12 与主机 PC 的 UART 连接</strong></p>  <br/>
+<p align="center"><strong>图 1.4 与主机 PC 的 UART 连接</strong></p>  <br/>
 
 
-下面的图 1.13 显示了成功登录的画面。  
+下面的图 1.5 显示了成功登录的画面。
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/7.%20connenct%20screen.png" width="550"></p>
-<p align="center"><strong>图 1.13 已连接的画面（ID 和密码均为 topst）</strong></p> <br/>
+<p align="center"><strong>图 1.5 已连接的画面（ID 和密码均为 topst）</strong></p> <br/>
 
 <br/><br/>

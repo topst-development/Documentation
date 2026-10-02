@@ -10,7 +10,7 @@
 
 หากต้องการใช้ ***FWDN V8*** ให้เชื่อมต่อบอร์ด AI-G เข้ากับเครื่อง PC โฮสต์ตามขั้นตอนต่อไปนี้ 
 
-1. ตรวจสอบว่าได้ติดตั้งไดรเวอร์ VTC บนเครื่อง PC โฮสต์แล้ว หากยังไม่ได้ติดตั้งไดรเวอร์ VTC ให้ติดตั้งตามที่แสดงในบทที่ 4.2.1  
+1. ตรวจสอบว่าได้ติดตั้งไดรเวอร์ VTC บนเครื่อง PC โฮสต์แล้ว หากยังไม่ได้ติดตั้งไดรเวอร์ VTC ให้ติดตั้งตามที่แสดงในบทที่ 1.2
 
 2. เตรียมสาย USB Type-C จำนวน 1 เส้น และสาย Ethernet จำนวน 1 เส้น 
 
@@ -40,43 +40,33 @@
 <p align="center"><strong>รูปที่ 1.3 การตั้งค่าคุณสมบัติของอุปกรณ์ Ethernet สำหรับ FWDN</strong></p><br/>
 <br/><br/><br/>
 
-## 1.4 การเพิ่ม WMIC
-ก่อนดำเนินการ FWDN จะต้องติดตั้ง WMIC เพื่อให้ทราบพอร์ตที่เชื่อมต่อกับพอร์ต FWDN ของบอร์ด AI-G
+## 1.4 ตรวจสอบพอร์ต COM สำหรับ FWDN
 
-1. เปิดการตั้งค่า: เปิดการตั้งค่าจากเมนู Start
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/8.%20Open%20Settings%20from%20Start%20menu.png"></p>
-<p align="center"><strong>รูปที่ 1.4 เปิดการตั้งค่าจากเมนู Start</strong></p>  <br/>
+สคริปต์ `fwdn_ai.bat` ใน AI-G v1.2.0 ใช้ PowerShell เพื่อแสดงรายการพอร์ต COM
 
-2. เลือกระบบ: ไปที่เมนูระบบ
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/9.%20Go%20to%20the%20System%20menu.png"></p>
-<p align="center"><strong>รูปที่ 1.5 ไปที่เมนูระบบ</strong></p>  <br/>
+เชื่อมต่อบอร์ดในโหมด FWDN ตามขั้นตอนในหัวข้อ 1.1 ตรวจสอบพอร์ต COM ของอุปกรณ์ Telechips VTC ใน Device Manager หรือเรียกใช้คำสั่งต่อไปนี้ใน PowerShell:
 
-3. คุณลักษณะเสริม: คลิกที่เมนูคุณลักษณะเสริม
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/10.%20Click%20the%20Selective%20Features%20menu.png"></p>
-<p align="center"><strong>รูปที่ 1.6 คลิกที่เมนูคุณลักษณะเสริม</strong></p>  <br/>
+```powershell
+Get-CimInstance Win32_PnPEntity | Where-Object { $_.Name -match '\(COM[0-9]+\)' } | Select-Object -ExpandProperty Name
+```
 
-4. ดูคุณลักษณะ: คลิกปุ่ม **ดูคุณลักษณะ** ที่อยู่ถัดจาก **เพิ่มคุณลักษณะเสริม**
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/11.%20Click%20the%20View%20Features%20button%20next%20to%20Add%20optional%20Features.png"></p>
-<p align="center"><strong>รูปที่ 1.7 คลิกปุ่มดูคุณลักษณะที่อยู่ถัดจากเพิ่มคุณลักษณะเสริม</strong></p>  <br/>
-
-5. ค้นหา WMIC: พิมพ์ **"WMIC"** ในกล่องค้นหา
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/12.%20Type%20WMIC%20in%20the%20search%20box.png"></p>
-<p align="center"><strong>รูปที่ 1.8 พิมพ์ WMIC ในกล่องค้นหา</strong></p>  <br/>
-
-6. ติดตั้ง: เลือกรายการ WMIC แล้วคลิกปุ่ม **"ถัดไป"** เพื่อดำเนินการติดตั้งให้เสร็จสมบูรณ์
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/13.%20Select%20the%20WMIC%20item%20and%20click%20the%20Next%20button%20to%20complete%20the%20installation.png"></p>
-<p align="center"><strong>รูปที่ 1.9 เลือกรายการ WMIC แล้วคลิกปุ่มถัดไปเพื่อดำเนินการติดตั้งให้เสร็จสมบูรณ์</strong></p>  <br/>
+คำสั่งนี้แสดงอุปกรณ์ COM ทั้งหมดที่ตรวจพบ ให้ระบุพอร์ต COM ของอุปกรณ์ Telechips VTC ที่แสดงในหัวข้อ 1.2
 
 ## 1.5 การเรียกใช้ FWDN ในสภาพแวดล้อม Windows
-1. ไปที่หน้าดาวน์โหลด
 
-2. ดาวน์โหลดอิมเมจ AI-G Yocto
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20AI-G%20Image.png" width="550"></p>
-<p align="center"><strong>รูปที่ 1.10 ดาวน์โหลดอิมเมจ AI-G Yocto</strong></p> <br/>
+1. ดาวน์โหลด[แพ็กเกจเฟิร์มแวร์ AI-G v1.2.0](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.2.0/aig-yp4-v1.2.0-r01.zip) (`aig-yp4-v1.2.0-r01.zip`)
 
-3. คลิก fwdn_aig.bat โดย “fwdn_aig.bat” เป็นไฟล์ปฏิบัติการที่ดาวน์โหลดเฟิร์มแวร์โดยอัตโนมัติด้วยการใช้ ***FWDN V8*** 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_aig.bat.png" width="550"></p>
-<p align="center"><strong>รูปที่ 1.11 คลิก fwdn_aig.bat</strong></p> <br/>
+2. แตกไฟล์ ZIP แล้วเปิด PowerShell ในโฟลเดอร์ที่มีไฟล์ `fwdn_ai.bat`
+
+3. เรียกใช้คำสั่งต่อไปนี้:
+
+```powershell
+.\fwdn_ai.bat
+```
+
+เมื่อข้อความ `Input USB Port Number` ปรากฏ ให้ป้อนเฉพาะหมายเลขพอร์ต COM สำหรับ FWDN ที่ตรวจสอบในหัวข้อ 1.4 (เช่น ป้อน `44` สำหรับ `COM44`)
+
+บันทึกด้านล่างเป็นตัวอย่างจากแพ็กเกจเฟิร์มแวร์รุ่นก่อนหน้า ชื่อไฟล์ปฏิบัติการ เวอร์ชัน หมายเลขพอร์ต COM และระยะเวลาอาจแตกต่างกัน
 
 ```
 TOPST AI-G FWDN Batch File
@@ -379,12 +369,13 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 <br/><br/><br/>
 
-### 1.6.3 การแฟลชอิมเมจ AI-G ด้วย fwdn.sh
+### 1.6.3 การแฟลชอิมเมจ AI-G ด้วย fwdn_ai.sh
 
-ในสภาพแวดล้อม Linux ท่านสามารถดาวน์โหลดอิมเมจ AI-G ได้โดยป้อนคำสั่งต่อไปนี้ 
+ในโฟลเดอร์ที่แตกไฟล์แล้วและมี `fwdn_ai.sh` ให้เพิ่มสิทธิ์ในการเรียกใช้ไฟล์ไบนารี FWDN ที่มาพร้อมแพ็กเกจ แล้วเรียกใช้สคริปต์:
 
-```
-./fwdn.sh 
+```bash
+chmod +x ./fwdn_ai
+bash ./fwdn_ai.sh
 ```
 หลังจาก ***FWDN*** เสร็จสมบูรณ์แล้ว ให้ถอดสาย USB Type-C ออกจากพอร์ต FWDN และถอดสายไฟออก 
 
@@ -408,12 +399,12 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/6.%20connetc%20host%20pc%20to%20ai-g%20with%20uart%20cable.png"></p>
-<p align="center"><strong>รูปที่ 1.12 การเชื่อมต่อ UART กับเครื่อง PC โฮสต์</strong></p>  <br/>
+<p align="center"><strong>รูปที่ 1.4 การเชื่อมต่อ UART กับเครื่อง PC โฮสต์</strong></p>  <br/>
 
 
-รูปที่ 1.13 ด้านล่างแสดงการเข้าสู่ระบบที่สำเร็จ  
+รูปที่ 1.5 ด้านล่างแสดงการเข้าสู่ระบบที่สำเร็จ
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/7.%20connenct%20screen.png" width="550"></p>
-<p align="center"><strong>รูปที่ 1.13 หน้าจอที่เชื่อมต่อแล้ว (ID และรหัสผ่านคือ topst)</strong></p> <br/>
+<p align="center"><strong>รูปที่ 1.5 หน้าจอที่เชื่อมต่อแล้ว (ID และรหัสผ่านคือ topst)</strong></p> <br/>
 
 <br/><br/>

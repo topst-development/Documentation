@@ -52,6 +52,8 @@ Downloads is the place for downloading Yocto SDK, Ubuntu Images, and etc.
 
 #### Image
 ##### Yocto
+###### v1.2.0
+- AIG-TOPST-Yocto-image-v1.2.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.2.0/aig-yp4-v1.2.0-r01.zip)
 ###### v1.1.0
 - AIG-TOPST-Yocto-image-v1.1.0-r01 : [Download Link](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.1.0/aig-yp4-v1.1.0-r01.zip)
 ###### v1.0.0

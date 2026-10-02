@@ -10,7 +10,7 @@ You can transfer the built image to AI-G by using ***FWDN***. AI-G provides ***F
 
 To use ***FWDN V8***, connect the AI-G board to the Host PC as follows: 
 
-1. Check that VTC driver is installed on the Host PC. If the VTC driver is not installed, install it as shown in Chapter 4.2.1.  
+1. Check that VTC driver is installed on the Host PC. If the VTC driver is not installed, install it as shown in Chapter 1.2.
 
 2. Prepare one USB Type-C cable and one Ethernet Cable. 
 
@@ -40,43 +40,33 @@ Host PC Network Configuration
 <p align="center"><strong>Figure 1.3 Setting Ethernet Device Properties for FWDN</strong></p><br/>
 <br/><br/><br/>
 
-## 1.4 Add WMIC
-Before FWDN, WMIC must be installed to know the port connected to the FWDN port of the AI-G board.
+## 1.4 Check the FWDN COM Port
 
-1. Open Settings: Open Settings from the Start menu.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/8.%20Open%20Settings%20from%20Start%20menu.png"></p>
-<p align="center"><strong>Figure 1.4 Open Settings from Start menu</strong></p>  <br/>
+The `fwdn_ai.bat` script in AI-G v1.2.0 uses PowerShell to list COM ports.
 
-2. Select System: Go to the System menu.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/9.%20Go%20to%20the%20System%20menu.png"></p>
-<p align="center"><strong>Figure 1.5 Go to the System menu</strong></p>  <br/>
+Connect the board in FWDN mode as described in Section 1.1. Check the Telechips VTC device's COM port in Device Manager, or run this command in PowerShell:
 
-3. Selective Features: Click the Selective Features menu.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/10.%20Click%20the%20Selective%20Features%20menu.png"></p>
-<p align="center"><strong>Figure 1.6 Click the Selective Features menu</strong></p>  <br/>
+```powershell
+Get-CimInstance Win32_PnPEntity | Where-Object { $_.Name -match '\(COM[0-9]+\)' } | Select-Object -ExpandProperty Name
+```
 
-4. View Features: Click the **View Features** button next to **Add Optional Features**.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/11.%20Click%20the%20View%20Features%20button%20next%20to%20Add%20optional%20Features.png"></p>
-<p align="center"><strong>Figure 1.7 Click the View Features button next to Add Optional Features</strong></p>  <br/>
-
-5. WMIC Search: Type **"WMIC"** in the search box.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/12.%20Type%20WMIC%20in%20the%20search%20box.png"></p>
-<p align="center"><strong>Figure 1.8 Type WMIC in the search box</strong></p>  <br/>
-
-6. Install: Select the WMIC item and click the **"Next"** button to complete the installation.
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/13.%20Select%20the%20WMIC%20item%20and%20click%20the%20Next%20button%20to%20complete%20the%20installation.png"></p>
-<p align="center"><strong>Figure 1.9 Select the WMIC item and click the next button to complete the installation</strong></p>  <br/>
+This command lists all detected COM devices. Identify the COM port for the Telechips VTC device shown in Section 1.2.
 
 ## 1.5 Execute FWDN in Windows Environment
-1. Go to Downloads Page
 
-2. Download AI-G Yocto Image
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Download%20AI-G%20Image.png" width="550"></p>
-<p align="center"><strong>Figure 1.10 Download AI-G Yocto Image</strong></p> <br/>
+1. Download the [AI-G v1.2.0 firmware package](https://topst-downloads.s3.ap-northeast-2.amazonaws.com/Yocto/v1.2.0/aig-yp4-v1.2.0-r01.zip) (`aig-yp4-v1.2.0-r01.zip`).
 
-3. Click fwdn_aig.bat. The “fwdn_aig.bat” is an executable file that automatically downloads firmware by using ***FWDN V8***. 
-<p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/Click%20fwdn_aig.bat.png" width="550"></p>
-<p align="center"><strong>Figure 1.11 Click fwdn_aig.bat</strong></p> <br/>
+2. Extract the ZIP file and open PowerShell in the folder containing `fwdn_ai.bat`.
+
+3. Run the following command:
+
+```powershell
+.\fwdn_ai.bat
+```
+
+When `Input USB Port Number` appears, enter only the number of the FWDN COM port checked in Section 1.4 (for example, `44` for `COM44`).
+
+The following log is an example from an earlier firmware package. Executable names, versions, COM port numbers, and timings may differ.
 
 ```
 TOPST AI-G FWDN Batch File
@@ -379,12 +369,13 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 <br/><br/><br/>
 
-### 1.6.3 Flashing the AI-G Image with fwdn.sh
+### 1.6.3 Flashing the AI-G Image with fwdn_ai.sh
 
-In a Linux environment, you can download AI-G image by entering the following command. 
+In the extracted folder containing `fwdn_ai.sh`, grant execute permission to the bundled FWDN binary and run the script:
 
-```
-./fwdn.sh 
+```bash
+chmod +x ./fwdn_ai
+bash ./fwdn_ai.sh
 ```
 After ***FWDN*** is completed, remove the USB Type-C cable from the FWDN port and remove the power cable. 
 
@@ -408,12 +399,12 @@ Perform the following steps and verify that the firmware download is successfull
 
  
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/6.%20connetc%20host%20pc%20to%20ai-g%20with%20uart%20cable.png"></p>
-<p align="center"><strong>Figure 1.12 UART Connection with Host PC</strong></p>  <br/>
+<p align="center"><strong>Figure 1.4 UART Connection with Host PC</strong></p>  <br/>
 
 
-Figure 1.13 below shows a successful login.  
+Figure 1.5 below shows a successful login.
 
 <p align="center"><img src="https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/TOPST%20AI-G/Software/Linux%20SDK/7.%20connenct%20screen.png" width="550"></p>
-<p align="center"><strong>Figure 1.13 Connected Screen (ID and Password are topst)</strong></p> <br/>
+<p align="center"><strong>Figure 1.5 Connected Screen (ID and Password are topst)</strong></p> <br/>
 
 <br/><br/>
