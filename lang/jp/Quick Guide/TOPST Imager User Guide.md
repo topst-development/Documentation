@@ -1,8 +1,3 @@
----
-title: TOPST Imager ユーザーガイド
-description: Windows または Linux で TOPST ボードに OS イメージをインストールする方法を説明します。
----
-
 # TOPST Imager ユーザーガイド
 
 TOPST Imager は、TOPST ボードに OS やファームウェアをインストールするアプリケーションです。

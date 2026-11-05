@@ -1,8 +1,3 @@
----
-title: TOPST Imager Benutzerhandbuch
-description: Erfahren Sie, wie Sie unter Windows oder Linux ein Betriebssystem-Image auf einem TOPST-Board installieren.
----
-
 # TOPST Imager Benutzerhandbuch
 
 TOPST Imager installiert ein Betriebssystem oder eine Firmware auf einem TOPST-Board.

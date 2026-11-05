@@ -1,8 +1,3 @@
----
-title: TOPST Imager 사용자 가이드
-description: Windows 또는 Linux에서 TOPST 보드에 운영체제 이미지를 설치하는 방법을 안내합니다.
----
-
 # TOPST Imager 사용자 가이드
 
 TOPST Imager는 TOPST 보드에 운영체제 또는 펌웨어를 설치하는 애플리케이션입니다.

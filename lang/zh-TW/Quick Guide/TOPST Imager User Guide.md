@@ -1,8 +1,3 @@
----
-title: TOPST Imager 使用者指南
-description: 說明如何在 Windows 或 Linux 上為 TOPST 開發板安裝作業系統映像檔。
----
-
 # TOPST Imager 使用者指南
 
 TOPST Imager 是用於在 TOPST 開發板上安裝作業系統或韌體的應用程式。

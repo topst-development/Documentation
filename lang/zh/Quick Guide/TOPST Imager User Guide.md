@@ -1,8 +1,3 @@
----
-title: TOPST Imager 用户指南
-description: 了解如何在 Windows 或 Linux 上为 TOPST 开发板安装操作系统镜像。
----
-
 # TOPST Imager 用户指南
 
 TOPST Imager 是用于在 TOPST 开发板上安装操作系统或固件的应用程序。
