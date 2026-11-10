@@ -1,402 +1,235 @@
 # TOPST Imager 用户指南
 
-TOPST Imager 是用于在 TOPST 开发板上安装操作系统或固件的应用程序。
-无需熟悉计算机或电子设备。请结合本指南和应用中的提示，逐步操作。
+TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编程或电子知识。请保持本指南打开，并逐个画面操作。
 
 > **重要：** 烧录可能会清除开发板 eMMC 中的所有内容。开始前请备份所需文件。
 
-## 1. 常用术语
+> **关于截图：** 红框和带数字的圆圈仅为本指南添加，不会在 TOPST Imager 中显示。截图使用 Windows 浅色主题；Linux 和深色主题的操作方式相同。
 
-| 应用中的术语 | 简单说明 |
+## 1. 画面中的术语
+
+| 术语 | 简单说明 |
 | --- | --- |
-| Board | 要安装操作系统的 TOPST 设备。 |
-| Image | 要安装到开发板的操作系统文件。 |
-| Flashing | 将镜像文件写入开发板的过程。 |
-| Boot mode | 允许计算机向开发板安装镜像的特殊状态。 |
-| FWDN | 安装镜像的内部工具，无需手动运行。 |
-| COM port | 计算机用于识别通过 USB 连接的开发板的名称。 |
-| eMMC | 开发板内置的存储器。 |
+| Board / Device | 要安装镜像的 TOPST 产品。 |
+| Image | 包含操作系统或固件的文件。 |
+| Flashing | 将所选镜像写入开发板。 |
+| Firmware Download Mode / Boot Mode | 用于烧录的特殊开发板状态。 |
+| FWDN | TOPST Imager 在后台运行的工具，无需自行启动。 |
+| COM port | AI-G 和 VCP-G 使用的 USB 串口连接。Linux 显示为 `/dev/ttyUSB...` 或 `/dev/ttyACM...`。 |
+| eMMC | 开发板内置存储器。 |
 
-## 2. 支持的开发板和镜像文件
+## 2. 支持的开发板
 
-| 开发板 | 自定义镜像格式 | 所需连接 |
+| 开发板 | 自定义镜像 | 烧录时使用的连接 |
 | --- | --- | --- |
-| TOPST D3-G | `.fai` | FWDN USB Type-C 数据线 |
-| TOPST AI-G | `.fai` | FWDN USB Type-C 数据线和以太网线 |
-| TOPST VCP-G | `.rom` | FWDN USB Type-C 数据线 |
+| TOPST D3-G | `.fai` | 开发板电源和 FWDN USB Type-C 数据线 |
+| TOPST AI-G | `.fai` | 开发板电源、FWDN USB Type-C 数据线和以太网线 |
+| TOPST VCP-G | `.rom` | 开发板电源和 FWDN USB Type-C 数据线 |
 
-> 仅充电的 USB 线无法使用。请使用**支持数据传输的 USB Type-C 线**。
+请使用支持**数据传输**的 USB Type-C 线。仅充电线无法使用。
 
-## 3. 开始前的准备
+## 3. 开始前准备
 
-- 要烧录的 TOPST 开发板及其电源适配器
-- 支持数据传输的 USB Type-C 线
-- 已连接互联网的计算机
-- 使用 AI-G 时所需的以太网线
-- 足够下载和解压官方镜像的计算机存储空间
+- 正确的 TOPST 开发板和电源适配器
+- USB Type-C 数据线
+- 使用 AI-G 时的以太网线
+- 使用官方镜像时可连接互联网的计算机
+- 能同时存放下载压缩文件和解压包的足够磁盘空间
 - 开发板上重要数据的备份
 
-烧录期间，请勿关闭开发板、拔掉 USB 或以太网线、关闭 TOPST Imager、关闭计算机或让计算机进入睡眠状态。
+烧录期间：
 
-## 4. 基本流程
+- 不要关闭开发板或计算机。
+- 不要拔掉 USB 或以太网线。
+- 不要关闭 TOPST Imager。
+- 不要让计算机进入睡眠。
 
-Windows 和 Linux 的基本流程相同。
+## 4. 应用选项
 
-1. 启动 TOPST Imager。
-2. 选择开发板。
-3. 选择操作系统或 **Custom Image**。
-4. 选择要安装的版本。
-5. 按应用提示完成连接并进入启动模式。
-6. 开始烧录。
-7. 等待出现 **Complete** 画面。
+选择主窗口左下角的 **App Options**。
 
-可以单击项目后选择 **Next**，也可以双击项目进入下一步。
+![TOPST Imager 应用选项](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+
+1. **Language：** 选择语言后立即切换画面，以便预览。
+2. **TOPST Imager User Guide：** 在浏览器中打开本用户指南。
+3. **Ask the Community：** 打开 [TOPST 社区](https://community.topst.ai/)。
+4. **Save：** 保存所选语言。选择 **Cancel**、按 `Esc` 或点击窗口外部，会恢复打开窗口前使用的语言。
+
+支持韩语、英语、日语、简体中文、繁体中文、泰语和德语。浅色或深色外观自动跟随操作系统主题。
 
 ---
 
-# Windows 使用说明
+# Windows
 
-## 1. 在 Windows 上安装 TOPST Imager
+## 5. 安装 TOPST Imager
 
-### 1.1 支持的系统
+### 5.1 系统要求
 
 - Windows 10 64 位或更新版本
 - Windows 11 64 位
 
-### 1.2 安装应用
+### 5.2 安装
 
-1. 从 TOPST 官方网站下载 Windows 版 `TOPST Imager.exe`。
-2. 双击下载的文件。
+1. 下载官方 TOPST Imager Windows 安装程序。
+2. 双击安装程序。
 3. 阅读并接受许可协议。
-4. 如有需要，勾选桌面快捷方式。
-5. 选择 **Install**。
-6. 安装完成后选择 **Launch TOPST Imager**，然后结束安装向导。
+4. 选择 **Install**。
+5. 完成后选择 **Launch TOPST Imager**。
 
-如 Windows 显示保护提示，请先确认安装程序来自 TOPST 官方网站。无法确认来源时，请勿运行。
+启动应用或 VTC 驱动安装程序时，Windows 可能请求管理员权限。请确认文件来自官方 TOPST 发行包后再选择 **Yes**。
 
-默认安装位置：
+## 6. 选择开发板、操作系统和版本
 
-```text
-%LOCALAPPDATA%\Programs\TOPST Imager
-```
+### 6.1 选择开发板
 
-## 2. 语言和显示主题
+![选择 TOPST 开发板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
 
-1. 选择窗口左下角的 **App Options**。
-2. 选择所需语言。
-3. 选择 **Save**。
+1. 选择与手中产品一致的开发板。
+2. 确认该行高亮并显示 **Selected**，然后选择 **Next**。
 
-> 截图中的红框和数字是为本指南添加的，实际应用中不会显示。
+也可双击开发板继续。选错时选择 **Back** 返回重选。
 
-![选择 TOPST Imager 的语言和支持选项](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
-
-1. **Language：** 选择语言。
-2. **Ask the Community：** 需要帮助时打开 TOPST 社区。
-3. **Save：** 应用所选语言。
-
-支持韩语、英语、日语、简体中文、繁体中文、泰语和德语。浅色或深色外观自动跟随 Windows 系统主题。
-
-## 3. 安装官方镜像
-
-### 3.1 选择开发板
-
-1. 核对开发板图片和名称。
-2. 单击所需开发板。
-3. 确认选中项的颜色已改变。
-4. 选择 **Next**。
-
-![选择 D3-G 开发板和 Next 按钮](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
-
-1. 选择所需的**开发板项目**。
-2. 确认选中后选择 **Next**。
-
-选错时，选择 **Back** 返回重选。
-
-### 3.2 选择操作系统和版本
-
-1. 选择操作系统，然后选择 **Next**。
-2. 选择要安装的版本。
-3. 核对发布日期和文件大小。
+### 6.2 选择操作系统
 
 ![选择官方操作系统或自定义镜像](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
 
-1. 使用官方镜像时，选择所需的**操作系统**。
-2. 使用计算机中已有的文件时，选择 **Use Custom Image**。
-3. 确认后选择 **Next**。
+1. 选择 TOPST 提供的操作系统。
+2. 使用计算机中的文件时选择 **Use Custom Image**。
+3. 选择 **Next** 或双击所选行。
 
-![选择操作系统版本和 Flashing 按钮](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+### 6.3 选择版本
 
-1. 选择**版本**并核对下载大小和发布日期。
-2. 正确后选择 **Flashing**。
+![选择镜像版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
 
-- **Download size：** 从互联网下载的压缩文件大小。
-- **Extracted size：** 解压后预计占用的计算机空间。
+1. 选择所需版本，检查说明、发布日期、下载大小和解压大小。
+2. 选择 **Flashing**。
 
-不一定必须使用最新版本。没有其他说明时，请选择推荐版本或最新稳定版。
+- **Download size** 是从互联网传输的压缩文件大小。
+- **Extracted size** 是解压后预计所需的磁盘空间。
 
-### 3.3 确认清除警告
+除非项目要求特定版本，否则使用最新稳定版或推荐版本。
 
-烧录前，应用会警告开发板的 eMMC 内容可能被清除。
+### 6.4 确认清除数据
 
-1. 再次核对开发板和镜像。
-2. 确认开发板上没有需要保留的数据。
-3. 准备好后选择确认按钮。
+![确认 eMMC 清除警告](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
-![带有 Cancel 和 Confirm 按钮的 eMMC 清除警告](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+1. 需要重新检查开发板、镜像或备份时，选择 **Cancel**。
+2. 只有理解所选开发板的 eMMC 数据可能被删除后，才选择 **Confirm**。
 
-1. 尚未准备好或需要重新检查时，选择 **Cancel**。
-2. 理解 eMMC 内容可能被清除后，才选择 **Confirm**。
+此时选择 **Cancel** 不会清除开发板。
 
-不确定时选择 **Cancel**。在此处取消不会清除开发板。
+## 7. 在 Windows 上烧录 D3-G
 
-## 4. 烧录 D3-G
+Windows 上的 D3-G 烧录设置分为三步。
 
-### 4.1 第 1 步：安装驱动
+### 第 1 步：安装 VTC 驱动
+
+![安装 D3-G VTC 驱动](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
 1. 选择 **Install Driver**。
-2. Windows 请求管理员权限时，核对消息并选择 **Yes**。
-3. 按 VTC 驱动安装程序的提示完成全部步骤。
+2. 批准 Windows 管理员请求。
+3. 完成 VTC 驱动安装程序。
 4. 返回 TOPST Imager。
 5. 选择 **Driver Installation Complete**。
 
-![D3-G VTC 驱动安装说明](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+通常每台 Windows 计算机只需安装一次。取消管理员请求就不会安装驱动；准备好后再次选择 **Install Driver**。
 
-1. 先选择 **Install Driver** 启动安装程序。
-2. 完成所有步骤后再选择 **Driver Installation Complete**。
+### 第 2 步：进入启动模式并检测开发板
 
-通常每台计算机只需安装一次。
+![进入 D3-G 启动模式并检测开发板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
-### 4.2 第 2 步：进入启动模式并检测开发板
-
-请观察开发板图片和闪烁标记。
-
-1. **按下 BOOT 按钮。**
-2. 保持按住 BOOT。
-3. **按下并松开 RESET 按钮。**
+1. 按启动模式动画的闪烁标记操作。
+2. 按住 **BOOT**。
+3. 按住 BOOT 时按下并松开 **RESET**。
 4. 松开 BOOT。
-5. 确认 USB Type-C 线与计算机和开发板连接牢固。
-6. 检查应用是否检测到开发板。
+5. 牢固连接 FWDN USB Type-C 数据线。
+6. 状态未自动刷新时选择 **Check Again**。
+7. 状态变为已连接后选择 **Start Flashing**。
 
-![D3-G 启动模式与开发板检测画面](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+Windows 设备管理器的通用串行总线控制器下，可能显示类似 `Telechips TCCxxxx VTC USB Driver` 的名称。
 
-1. 对照图片和闪烁标记完成启动模式操作。
-2. 更改连接后选择 **Check Again**。
-3. 检测成功后 **Continue Flashing** 可用。
+### 第 3 步：烧录
 
-Windows 设备管理器中可能显示类似 `Telechips TCCxxxx VTC USB Driver` 的名称。
+官方镜像分别显示以下进度：
 
-### 4.3 第 3 步：烧录镜像
+1. 下载
+2. 解压
+3. 烧录
 
-1. 选择 **Start Flashing**。
-2. 查看下载、解压和烧录进度。
-3. 等待完成画面出现。
+各项进度从 0% 到 100%。请等待 **Complete** 画面后再断开连接。
 
-## 5. 烧录 AI-G
+## 8. 在 Windows 上烧录 AI-G
 
-AI-G 同时使用 USB 和以太网连接。
+AI-G 烧录设置分为三步。
 
-### 5.1 第 1 步：设置以太网
+### 第 1 步：设置以太网
 
-1. 用以太网线连接计算机与 AI-G。
-2. 选择连接 AI-G 的以太网适配器。
-3. 按提示将计算机地址设为 `192.168.0.8/24`。
-4. 确认网络设置完成。
+1. 用以太网线直接连接计算机和 AI-G。
+2. 选择连接 AI-G 的有线适配器，而非 Wi-Fi。
+3. 出现提示时允许应用设置临时地址 `192.168.0.8/24`。
+4. 网络就绪后继续。
 
-请选择**连接 AI-G 的有线以太网适配器**，而不是 Wi-Fi。
+操作完成或取消后，TOPST Imager 会恢复临时更改的 Windows 网络设置。
 
-### 5.2 第 2 步：进入启动模式并选择 COM 端口
+### 第 2 步：启动模式与 COM 端口
 
-1. 观察动画并按下 BOOT。
-2. 按住 BOOT 时按下并松开 RESET。
-3. 松开 BOOT。
-4. 选择新检测到的 AI-G USB COM 端口。
-5. 再次检查电源、USB Type-C 线和以太网线。
-
-如果有多个 COM 端口，可暂时拔下 AI-G USB 线。消失的端口就是 AI-G 端口。重新连接后再次进入启动模式再继续。
-
-### 5.3 第 3 步：烧录镜像
-
-1. 选择 **Start Flashing**。
-2. 等待进度达到 100%。
-3. 完成画面出现后重启开发板。
-
-## 6. 烧录 VCP-G
-
-### 6.1 第 1 步：进入启动模式
-
-1. 查看画面中的开发板图片。
-2. 按住 BOOT。
-3. 按下并松开 RESET。
+1. 按屏幕启动模式动画操作。
+2. 按住 **BOOT**。
+3. 按下并松开 **RESET**。
 4. 松开 BOOT。
-5. 选择 **Next**。
+5. 选择 AI-G 的 COM 端口。
+6. 检查电源、USB Type-C 数据线和以太网线。
+7. 继续烧录。
 
-### 6.2 第 2 步：选择 COM 端口
+存在多个 COM 端口时，可暂时拔下 AI-G USB 线。消失的端口通常属于 AI-G。重新连接、再次进入启动模式，然后选择该端口。
 
-1. 选择 VCP-G 的 USB COM 端口。
-2. 如果未列出，重新连接 USB Type-C 线。
-3. 刷新列表并选择正确端口。
+### 第 3 步：烧录
 
-### 6.3 第 3 步：烧录镜像
+等待达到 100% 并出现 **Complete** 画面。
 
-1. 选择 **Start Flashing**。
-2. 等待进度达到 100%。
-3. 完成画面出现后重启开发板。
+## 9. 在 Windows 上烧录 VCP-G
 
-## 7. 安装自定义镜像
+VCP-G 烧录设置分为两步。
 
-此选项用于安装官方目录中没有的本地镜像文件。
+### 第 1 步：启动模式与 COM 端口
 
-1. 在操作系统选择画面单击 **Custom Image**。
-2. 选择 **Next** 或双击该项目。
-3. 将文件拖入虚线区域，或选择 **Browse for FAI Image** / **Browse for ROM Image** 来选取文件。
-4. 检查所选文件名。
-5. 选择 **Next**，并按对应开发板的连接提示操作。
+启动模式指南和 COM 端口选择在同一画面。
 
-D3-G 和 AI-G 使用 `.fai`，VCP-G 使用 `.rom`，请勿选错格式。
-文件已在本机，因此烧录画面不会显示下载和解压步骤。
+1. 按动画将 VCP-G 设为 Firmware Download Mode。
+2. 按指南要求按下并松开 **RESET**。
+3. 选择 VCP-G 的 COM 端口。
+4. 再次检查电源及 FWDN USB Type-C 数据线。
+5. 继续烧录。
 
-## 8. Windows 故障排除
+### 第 2 步：烧录
 
-### 检测不到开发板
+等待达到 100% 并出现 **Complete** 画面。
 
-1. 确认开发板已通电。
-2. 确认 USB 线不是仅充电线。
-3. 确认连接到 FWDN USB Type-C 端口。
-4. 重新执行进入启动模式的步骤。
-5. D3-G 需确认 VTC 驱动已安装。
+## 10. 在 Windows 上使用自定义镜像
 
-### 没有 COM 端口
+1. 先选择正确的开发板。
+2. 在操作系统画面单击 **Use Custom Image**。
+3. 选择 **Next** 或双击 **Use Custom Image**。
+4. 将文件拖入放置区域，或选择浏览按钮。
+5. 检查文件名后继续。
 
-1. 拔下并重新连接 USB 线。
-2. 检查开发板电源。
-3. 重新进入启动模式。
-4. 刷新 COM 端口列表。
+使用正确格式：
 
-### AI-G 网络错误
+- D3-G: `.fai`
+- AI-G: `.fai`
+- VCP-G: `.rom`
 
-1. 检查计算机和 AI-G 之间的以太网线。
-2. 确认选择有线适配器而非 Wi-Fi。
-3. 确认计算机地址为 `192.168.0.8/24`。
-4. 按应用提示从第 1 步重新开始。
-
-### 出现 `Failed open port` 或 `GetLastError : 22`
-
-检查 FWDN USB Type-C 线，重新连接，然后从启动模式步骤重新操作。
-
-### 下载没有进展
-
-1. 检查互联网连接。
-2. 检查计算机剩余空间。
-3. 稍等后选择 **Retry**。
-
-### 烧录中想返回上一步
-
-烧录开始后返回会出现取消确认窗口。取消前请确认开发板处于安全状态，并遵循屏幕提示。
-
-### 需要错误相关帮助
-
-1. 复制错误窗口中的详细信息。
-2. 从 **App Options** 打开日志文件夹。
-3. 准备错误消息和日志文件。
-4. 在 [TOPST 社区](https://community.topst.ai/)提问。
-
-Windows 上的常见日志位置：
-
-```text
-%LOCALAPPDATA%\Telechips\TOPST Imager\logs\topst-imager.log
-```
+文件已在本机，因此 **Download** 和 **Extraction** 进度行会隐藏。对应开发板的驱动、网络、启动模式、COM 端口和烧录步骤仍然适用。
 
 ---
 
-# Linux 使用说明
+# Linux
 
-## 1. Linux 使用前准备
+## 11. Linux 要求
 
-画面和基本流程与 Windows 相同，但准备工作不同。开发板、操作系统和版本按钮的位置与上面的 Windows 截图相同。Linux 会跳过 D3-G 的 Windows 驱动安装画面，直接进入启动模式和开发板检测。
+当前发行包支持 **x86_64 Linux**。Windows `.exe` FWDN 文件不能在 Linux 使用。
 
-- 不要安装 Windows VTC 驱动。
-- D3-G 需要 Linux USB 权限。
-- AI-G 和 VCP-G 需要串口权限。
-- 发行包必须包含 Linux FWDN 可执行文件。
-- 解压官方镜像需要 `unzip` 或 `bsdtar`。
-
-不熟悉命令行时，请管理员或开发人员完成下面的 **Linux 管理员设置**。一次性设置完成后，普通用户可按屏幕提示操作。
-
-## 2. 在 Linux 上安装和运行
-
-以下示例使用 Ubuntu。
-
-### 2.1 解压安装包
-
-1. 从官方网站下载适合计算机的 Linux 包。
-2. 打开下载文件夹。
-3. 打开终端并执行：
-
-```bash
-cd ~/Downloads
-tar -xzf TOPST-Imager-<version>-Linux-<architecture>.tar.gz
-```
-
-将 `<version>` 和 `<architecture>` 替换为实际文件名中的值。输入文件名前几个字符后可按 `Tab` 自动补全。
-
-### 2.2 运行应用
-
-进入解压后的文件夹并运行：
-
-```bash
-cd TOPST-Imager-<version>-Linux-<architecture>
-chmod +x topst-imager
-./topst-imager
-```
-
-如果提示缺少 `Qt` 库，则当前包不含 Qt 运行时。普通用户应向发行方索取**包含 Qt 6.12 运行时的 Linux 包**，而不要尝试手动安装。
-
-## 3. Linux 管理员设置
-
-通常只需执行一次。
-
-### 3.1 安装解压工具
-
-```bash
-sudo apt update
-sudo apt install unzip
-```
-
-### 3.2 AI-G 和 VCP-G 串口权限
-
-```bash
-sudo usermod -aG dialout "$USER"
-```
-
-执行后注销并重新登录，或重启计算机。
-
-### 3.3 D3-G USB 权限
-
-1. 将 D3-G 以启动模式连接。
-2. 在终端查找 USB ID：
-
-```bash
-lsusb
-```
-
-3. 使用检测到的厂商 ID 和产品 ID 创建 `/etc/udev/rules.d/99-topst.rules`。
-
-```text
-SUBSYSTEM=="usb", ATTR{idVendor}=="VENDOR_ID", ATTR{idProduct}=="PRODUCT_ID", MODE="0666"
-```
-
-4. 重新加载规则：
-
-```bash
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-```
-
-不要随意填写 `VENDOR_ID` 和 `PRODUCT_ID`。不清楚 D3-G 的正确值时，请联系 TOPST 支持。
-
-### 3.4 检查 Linux FWDN 文件
-
-发行包的以下位置必须包含无扩展名的 Linux 可执行文件：
+发行应用必须包含以下 Linux 可执行工具：
 
 ```text
 tools/fwdn_d3/fwdn_d3
@@ -404,94 +237,191 @@ tools/fwdn_ai/fwdn_ai
 tools/fwdn_vcp/fwdn_vcp
 ```
 
-如果文件存在，请赋予执行权限：
+计算机还需要：
+
+- 用于官方 ZIP 包的 `unzip`
+- 用于管理员确认窗口的 `policykit-1`
+- 用于 AI-G 和 VCP-G 临时串口访问的 `acl`
+
+Ubuntu 管理员可执行：
 
 ```bash
-chmod +x tools/fwdn_d3/fwdn_d3
-chmod +x tools/fwdn_ai/fwdn_ai
-chmod +x tools/fwdn_vcp/fwdn_vcp
+sudo apt update
+sudo apt install unzip policykit-1 acl
 ```
 
-缺少这些文件时，Linux 无法烧录。不能使用 Windows `.exe` 文件代替。
+**不要**用 `sudo` 运行 TOPST Imager 或 FWDN。应用仅在需要授予所选串口设备临时访问权限时请求管理员权限。
 
-## 4. 在 Linux 上烧录 D3-G
+## 12. 安装并启动 Linux 包
 
-Linux 不使用 Windows VTC 驱动安装步骤。
+压缩文件名可能随版本变化。`.tar.gz` 包示例：
 
-1. 选择 D3-G 镜像。
-2. 观看动画并按下 BOOT。
-3. 按住 BOOT 时按下并松开 RESET。
-4. 松开 BOOT。
-5. 检查是否检测到开发板。
-6. 开始烧录并等待完成。
+```bash
+cd ~/Downloads
+tar -xzf TOPST-Imager-<version>-Linux-x86_64.tar.gz
+cd TOPST-Imager-<version>-Linux-x86_64
+chmod +x topst-imager
+./topst-imager
+```
 
-未检测到时，检查 USB 权限规则、Type-C 线、电源和启动模式。
+请使用下载包的实际文件和文件夹名称。用户包应包含 Qt 运行时；若缺少 Qt 库，请下载完整官方 Linux 包，而不要以 root 运行。
 
-## 5. 在 Linux 上烧录 AI-G
+## 13. 在 Linux 上选择镜像
 
-TOPST Imager 不会在 Linux 上自动修改以太网地址。请在 Ubuntu 设置中手动配置。
+开发板、操作系统、版本、自定义镜像和 eMMC 警告画面，与第 6 节和第 10 节的 Windows 画面相同。
+
+## 14. 在 Linux 上烧录 D3-G
+
+不显示 Windows VTC 驱动安装步骤，因此 Linux 上分为两步。
+
+### 第 1 步：启动模式与开发板检测
+
+1. 按住 **BOOT**。
+2. 按下并松开 **RESET**。
+3. 松开 BOOT。
+4. 连接 FWDN USB Type-C 数据线。
+5. 必要时选择 **Check Again**。
+6. 检测到 D3-G 后继续。
+
+Linux 直接检测 D3-G FWDN USB 设备。未检测到时，请检查数据线、电源、启动模式，以及 Linux 包提供且已安装的 udev 规则。
+
+### 第 2 步：烧录
+
+等待下载、解压和烧录完成。自定义 `.fai` 镜像仅显示烧录进度。
+
+## 15. 在 Linux 上烧录 AI-G
+
+AI-G 烧录设置分为三步。
+
+### 第 1 步：设置以太网
+
+Linux 以太网地址不会自动更改，请在网络设置中配置：
 
 1. 打开 **设置 → 网络**。
-2. 打开连接 AI-G 的有线网络设置。
-3. 将 IPv4 方法设为**手动**。
-4. 地址输入 `192.168.0.8`。
-5. 子网掩码输入 `255.255.255.0`；如果使用前缀长度则输入 `24`。
-6. 如无其他说明，网关和 DNS 留空。
-7. 应用设置后关闭并重新开启有线连接。
-8. 返回 TOPST Imager，检查以太网状态。
-9. 按屏幕提示进入启动模式。
-10. 选择 AI-G 的 `/dev/ttyUSB...` 或 `/dev/ttyACM...` 端口。
-11. 开始烧录。
+2. 打开连接 AI-G 的有线连接。
+3. 将 IPv4 设为**手动**。
+4. 地址：`192.168.0.8`
+5. 子网掩码：`255.255.255.0`，或前缀长度 `24`
+6. 除非网络管理员另有要求，否则网关和 DNS 留空。
+7. 应用更改，重新连接有线网络，返回 TOPST Imager。
 
-## 6. 在 Linux 上烧录 VCP-G
+### 第 2 步：启动模式、COM 端口和临时访问
 
-1. 按屏幕提示进入启动模式。
-2. 选择 `/dev/ttyUSB...` 或 `/dev/ttyACM...` 格式的端口。
-3. 确认端口正确后开始烧录。
-4. 等待完成画面。
+1. 按启动模式动画操作。
+2. 选择 AI-G 端口，例如 `/dev/ttyUSB0`。
+3. 端口不可写时选择 **Grant Temporary Access**。
+4. 批准 Linux 管理员窗口。
+5. 权限就绪后烧录按钮可用。
 
-没有端口时，请确认已加入 `dialout` 组，并已注销后重新登录。
+临时权限仅作用于所选串口设备，在烧录后、取消后或离开烧录画面后释放。无需将用户永久加入 `dialout` 组。
 
-## 7. Linux 故障排除
+### 第 3 步：烧录
 
-### 出现 `Permission denied`
+等待 **Complete** 画面。
 
-- AI-G 或 VCP-G：确认用户属于 `dialout` 组。
-- D3-G：确认 udev USB 权限规则已生效。
-- FWDN 文件：确认已通过 `chmod +x` 赋予执行权限。
+## 16. 在 Linux 上烧录 VCP-G
 
-### 找不到 Linux FWDN 文件
+与 Windows 一样，烧录设置分为两步。
 
-检查发行文件夹的 `tools/fwdn_*` 中是否有 Linux 可执行文件。Windows `.exe` 无法在 Linux 上运行。
+### 第 1 步：启动模式、COM 端口和临时访问
 
-### 没有开发板端口
+1. 按启动模式指南操作。
+2. 选择 VCP-G 端口，例如 `/dev/ttyUSB0`。
+3. 如果显示 **Grant Temporary Access**，请选择并批准管理员窗口。
+4. 所选端口可访问后继续。
 
-执行以下命令列出端口：
+### 第 2 步：烧录
 
-```bash
-ls /dev/ttyUSB* /dev/ttyACM* 2>/dev/null
+等待达到 100% 并出现 **Complete** 画面。自定义 `.rom` 镜像仅显示烧录进度。
+
+## 17. 下载、重试和临时文件
+
+使用官方镜像时，应用会：
+
+1. 创建临时工作文件夹。
+2. 下载 ZIP 包。
+3. 解压到临时文件夹。
+4. 运行对应开发板的 FWDN 可执行文件。
+5. 烧录成功或取消后删除下载及解压的临时数据。
+
+下载时断网，请保持应用打开并重新联网。应用会自动重试，服务器支持时从部分下载处续传。状态以所选应用语言显示。
+
+某些可恢复的烧录错误会临时保留准备好的包，便于返回指定设置步骤而无需重新下载。
+
+## 18. 出现错误窗口时
+
+应用检测到已知 FWDN 错误后会立即打开错误窗口。如显示三秒倒计时，请阅读消息；倒计时后应用返回所需恢复步骤。检查所列项目后选择 **OK**。
+
+### D3-G 连接错误
+
+检查：
+
+1. 开发板电源连接
+2. FWDN USB Type-C 数据线连接
+3. 是否进入 Firmware Download Mode
+
+应用返回 D3-G 启动模式步骤。
+
+### AI-G 连接或同步错误
+
+检查：
+
+1. 开发板电源连接
+2. 是否进入 Firmware Download Mode
+3. COM 端口选择是否正确
+
+如消息为 `Failed open port`，检查 FWDN USB Type-C 数据线和所选端口。如为 `TCP Socket Open Fail`，检查以太网线、适配器和 `192.168.0.8/24` 设置。
+
+### VCP-G 连接错误
+
+检查：
+
+1. 开发板电源连接
+2. 是否进入 Firmware Download Mode
+3. COM 端口选择是否正确
+
+出现 `GetLastError : 22` 时，检查 FWDN USB Type-C 连接。
+
+### 没有 COM 端口
+
+1. 检查电源。
+2. 重新连接 USB 数据线。
+3. 再次进入 Firmware Download Mode。
+4. 刷新端口列表。
+5. Linux 上选择端口后选择 **Grant Temporary Access**。
+
+### 烧录完全失败
+
+如错误为 `Failed to write in eFlash` 或 `Failed FWDN`，请按消息从第一个烧录设置步骤重新开始。写入仍在进行时不要断开开发板。
+
+## 19. 日志文件
+
+求助时提供完整错误消息、开发板名称、所选镜像版本、操作系统和日志文件。
+
+Windows 日志位置：
+
+```text
+%LOCALAPPDATA%\Telechips\TOPST Imager\logs\topst-imager.log
 ```
 
-比较连接 USB 前后的列表。新出现的端口通常就是开发板端口。
+常见 Linux 日志位置：
 
-### 未跟随浅色或深色主题
+```text
+~/.local/share/Telechips/TOPST Imager/logs/topst-imager.log
+```
 
-应用使用 Linux 桌面通过 Qt 提供的主题信息。某些环境可能不会立即生效，请尝试重启应用。
+需要更多帮助时，使用 **App Options → Ask the Community** 或访问 [TOPST 社区](https://community.topst.ai/)。
 
-## 8. 烧录完成后
+## 20. 烧录完成后
 
-1. 确认显示成功消息。
-2. 等待 TOPST Imager 完成所有工作。
+1. 确认 **Complete** 画面可见。
+2. 等待应用说明操作已完成。
 3. 安全关闭开发板电源。
-4. 拔掉 FWDN 线，或重新连接为日常使用所需的线缆。
-5. 开机并确认新操作系统正常启动。
+4. 拔掉 FWDN 线，或恢复正常使用的接线。
+5. 开机并检查新操作系统是否启动。
 
-官方镜像会下载并解压到临时文件夹。烧录成功后，下载文件和解压文件夹会自动删除。
+记住三条规则：
 
-## 9. 请牢记三件事
-
-1. **确认选择了正确的开发板和镜像。**
-2. **烧录时不要断电或拔线。**
-3. **出现错误时，按屏幕列表从上到下逐项检查。**
-
-需要帮助时，请准备错误消息和日志文件，在 [TOPST 社区](https://community.topst.ai/)提问。
+1. 仔细选择开发板和镜像。
+2. 烧录时绝不拔线或断电。
+3. 出现错误时，从上到下检查所有列出项目。

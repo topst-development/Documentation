@@ -1,424 +1,235 @@
 # TOPST Imager User Guide
 
-TOPST Imager is an application for installing an operating system or firmware on a TOPST board.
+TOPST Imager installs an operating system or firmware on a TOPST board. You do not need to know programming or electronics. Keep this guide open and follow one screen at a time.
 
-You do not need to be familiar with computers or electronic devices. Follow this guide slowly, one step at a time, together with the instructions shown in the application.
+> **Important:** Flashing can erase everything stored in the board's eMMC. Back up any files you need before you begin.
 
-> **Important:** Flashing may erase everything stored in the board's eMMC. Back up any files you need before you begin.
+> **About the screenshots:** Red boxes and numbered circles were added only for this guide. They do not appear in TOPST Imager. The screenshots use the Windows light theme; Linux and dark-theme screens work in the same way.
 
-## 1. Helpful Terms
+## 1. Words You Will See
 
-| Term shown in the application | Simple meaning |
+| Word | Simple meaning |
 | --- | --- |
-| Board | The TOPST device on which you will install the operating system. |
-| Image | The operating system file that will be installed on the board. |
-| Flashing | The process of installing an image file on the board. |
-| Boot mode | A special state that allows the computer to install an image on the board. |
-| FWDN | The internal tool that installs an image on a TOPST board. You do not need to run it yourself. |
-| COM port | The name the computer uses to identify a board connected by USB. |
+| Board / Device | The TOPST product on which the image will be installed. |
+| Image | A file containing an operating system or firmware. |
+| Flashing | Writing the selected image to the board. |
+| Firmware Download Mode / Boot Mode | A special board state used for flashing. |
+| FWDN | The tool TOPST Imager runs in the background. You do not run it yourself. |
+| COM port | The USB serial connection used by AI-G and VCP-G. Linux displays it as `/dev/ttyUSB...` or `/dev/ttyACM...`. |
 | eMMC | Storage built into the board. |
 
-## 2. Supported Boards and Image Files
+## 2. Supported Boards
 
-| Board | Custom image format | Required connection |
+| Board | Custom image | Connections used while flashing |
 | --- | --- | --- |
-| TOPST D3-G | `.fai` | FWDN USB Type-C data cable |
-| TOPST AI-G | `.fai` | FWDN USB Type-C data cable and Ethernet cable |
-| TOPST VCP-G | `.rom` | FWDN USB Type-C data cable |
+| TOPST D3-G | `.fai` | Board power and FWDN USB Type-C data cable |
+| TOPST AI-G | `.fai` | Board power, FWDN USB Type-C data cable, and Ethernet cable |
+| TOPST VCP-G | `.rom` | Board power and FWDN USB Type-C data cable |
 
-> A charge-only USB cable will not work. Use a **USB Type-C cable that supports data transfer**.
+Use a USB Type-C cable that supports **data transfer**. A charge-only cable will not work.
 
-## 3. Before You Begin
+## 3. Prepare Before Starting
 
-Check each item below.
+- The correct TOPST board and its power adapter
+- A USB Type-C data cable
+- An Ethernet cable when using AI-G
+- A computer connected to the internet when using an official image
+- Enough free disk space for both the compressed download and the extracted package
+- A backup of important data on the board
 
-- The TOPST board you want to flash
-- The board's power adapter
-- A USB Type-C cable that supports data transfer
-- A computer connected to the internet
-- An Ethernet cable if you are using AI-G
-- Enough free space on the computer to download and extract the official image
-- A backup of any important data stored on the board
+While flashing is in progress:
 
-Do not do any of the following while flashing is in progress.
-
-- Do not turn off the board.
+- Do not turn off the board or computer.
 - Do not disconnect the USB or Ethernet cable.
 - Do not close TOPST Imager.
-- Do not turn off the computer or let it enter sleep mode.
+- Do not let the computer enter sleep mode.
 
-## 4. Basic Process
+## 4. App Options
 
-The basic process is the same on Windows and Linux.
+Select **App Options** at the bottom-left of the main window.
 
-1. Start TOPST Imager.
-2. Select the board you want to use.
-3. Select an operating system or **Custom Image**.
-4. Select the version you want to install.
-5. Follow the connection and boot mode instructions shown in the application.
-6. Start flashing.
-7. Wait until the **Complete** screen appears.
+![TOPST Imager App Options](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
 
-You can click an item once and then select **Next**, or double-click the item to move to the next screen.
+1. **Language:** Selecting a language changes the screen immediately so that you can preview it.
+2. **TOPST Imager User Guide:** Opens this user guide in your web browser.
+3. **Ask the Community:** Opens the [TOPST Community](https://community.topst.ai/).
+4. **Save:** Keeps the selected language. **Cancel**, the `Esc` key, or clicking outside the window restores the language that was active before the window opened.
+
+Supported languages are Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Thai, and German. The light or dark appearance follows the operating system theme automatically.
 
 ---
 
-# Windows Instructions
+# Windows
 
-## 1. Installing TOPST Imager on Windows
+## 5. Install TOPST Imager
 
-### 1.1 Supported Systems
+### 5.1 Requirements
 
 - Windows 10 64-bit or later
 - Windows 11 64-bit
 
-### 1.2 Install the Application
+### 5.2 Installation
 
-1. Download the Windows version of `TOPST Imager.exe` from the official TOPST website.
-2. Double-click the downloaded `TOPST Imager.exe` file.
+1. Download the official TOPST Imager Windows installer.
+2. Double-click the installer.
 3. Read and accept the license agreement.
-4. Select the desktop shortcut option if you want a shortcut.
-5. Select **Install**.
-6. When installation is complete, select **Launch TOPST Imager**, and then finish the setup.
+4. Select **Install**.
+5. When installation is complete, select **Launch TOPST Imager**.
 
-If Windows displays a protection message, first make sure the installer came from the official TOPST website. Do not run an installer if you cannot confirm its source.
+Windows may ask for administrator permission when TOPST Imager or the VTC driver installer starts. Confirm that the file came from the official TOPST distribution before selecting **Yes**.
 
-The default installation location is:
+## 6. Select a Board, Operating System, and Version
 
-```text
-%LOCALAPPDATA%\Programs\TOPST Imager
-```
+### 6.1 Select the Board
 
-## 2. Language and Display Theme
+![Select a TOPST board](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
 
-1. Select **App Options** at the bottom-left corner of the window.
-2. Select the language you want to use.
-3. Select **Save**.
+1. Select the board that matches the product in front of you.
+2. Check that the row is highlighted and says **Selected**, and then select **Next**.
 
-> The red boxes and numbers in the screenshots were added for this guide. They do not appear in the actual application.
+You can also double-click a board to continue. If you choose the wrong board, select **Back** and choose again.
 
-![Selecting the language and support options in TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+### 6.2 Select an Operating System
 
-1. **Language:** Select the language you want to use.
-2. **Ask the Community:** Open the TOPST community when you need help.
-3. **Save:** Apply the selected language.
+![Select an official operating system or a custom image](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
 
-TOPST Imager supports Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Thai, and German. The light or dark appearance follows the Windows system theme automatically.
+1. Select an operating system supplied by TOPST.
+2. To use a file already stored on the computer, select **Use Custom Image**.
+3. Select **Next**, or double-click the selected row.
 
-## 3. Installing an Official Image
+### 6.3 Select a Version
 
-### 3.1 Select a Board
+![Select an image version](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
 
-1. Check the board picture and name.
-2. Click the board you want to use once.
-3. Make sure the selected item changes color.
-4. Select **Next**.
+1. Select the required version. Check its description, release date, download size, and extracted size.
+2. Select **Flashing**.
 
-![Selecting the D3-G board and the Next button in TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
+- **Download size** is the compressed file size transferred from the internet.
+- **Extracted size** is the approximate disk space needed after extraction.
 
-1. Select the **board item** you want to use.
-2. Confirm that it is selected, and then select **Next**.
+Unless your project requires a specific release, use the latest stable or recommended version.
 
-If you selected the wrong board, select **Back** and choose again.
+### 6.4 Confirm Data Erasure
 
-### 3.2 Select an Operating System and Version
+![Confirm the eMMC erase warning](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
-1. Select the operating system you want to install, and then select **Next**.
-2. Select the version you want to install.
-3. Check the release date and file sizes.
+1. Select **Cancel** if you need to check the board, image, or backup again.
+2. Select **Confirm** only when you understand that the selected board's eMMC data may be deleted.
 
-![Selecting an official operating system or custom image in TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
+Selecting **Cancel** at this point does not erase the board.
 
-1. To use an official image, select the **operating system** you want.
-2. To use a file already stored on your computer, select **Use Custom Image**.
-3. Confirm the selection, and then select **Next**.
+## 7. Flash D3-G on Windows
 
-![Selecting an operating system version and the Flashing button in TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+D3-G uses three flashing setup steps on Windows.
 
-1. Select the **version** you want to install and check its download size and release date.
-2. If the selection is correct, select **Flashing**.
+### Step 1: Install the VTC Driver
 
-The sizes shown on the screen have the following meanings.
-
-- **Download size:** The size of the compressed file downloaded from the internet
-- **Extracted size:** The estimated space needed on the computer after the file is extracted
-
-The newest version is not always required. Unless you have received different instructions, select the recommended version or the latest stable version.
-
-### 3.3 Confirm the Erase Warning
-
-Before flashing starts, TOPST Imager warns you that the contents of the board's eMMC may be erased.
-
-1. Check the selected board and image again.
-2. Make sure there is no data on the board that you still need.
-3. When you are ready, select the confirmation button.
-
-![The eMMC erase warning with Cancel and Confirm buttons](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
-
-1. Select **Cancel** if you are not ready or want to check your selection again.
-2. Select **Confirm** only after you understand that the eMMC contents may be erased.
-
-If you are unsure, select **Cancel**. Canceling at this point will not erase the board.
-
-## 4. Flashing D3-G
-
-### 4.1 Step 1: Install the Driver
+![Install the D3-G VTC driver](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
 1. Select **Install Driver**.
-2. If Windows asks for administrator permission, check the message and select **Yes**.
-3. Follow the VTC driver installer until installation is complete.
+2. Approve the Windows administrator request.
+3. Complete the VTC Driver Installer.
 4. Return to TOPST Imager.
 5. Select **Driver Installation Complete**.
 
-![D3-G VTC driver installation instructions in TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+You normally install this driver only once on each Windows computer. If you cancel the administrator request, no driver is installed; select **Install Driver** again when ready.
 
-1. First select **Install Driver** to start the installer.
-2. Complete every step in the installer, and then select **Driver Installation Complete**.
+### Step 2: Enter Boot Mode and Detect the Board
 
-You normally need to install the driver only once on each computer.
+![Enter D3-G boot mode and detect the board](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
-### 4.2 Step 2: Enter Boot Mode and Detect the Board
-
-Watch the board picture and the flashing markers on the screen, and follow these steps.
-
-1. **Press the BOOT button** on the board.
-2. Keep holding the BOOT button.
-3. **Press and release the RESET button.**
+1. Follow the flashing markers in the boot-mode animation.
+2. Press and hold the **BOOT** button.
+3. While holding BOOT, press and release the **RESET** button.
 4. Release the BOOT button.
-5. Make sure the USB Type-C cable is firmly connected to the computer and the board.
-6. Check whether the application detects the board.
+5. Connect the FWDN USB Type-C data cable firmly.
+6. Select **Check Again** if the status does not refresh automatically.
+7. When the status changes to connected, select **Start Flashing**.
 
-![D3-G boot mode and board detection screen in TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+In Windows Device Manager, a connected D3-G may appear under Universal Serial Bus controllers with a name similar to `Telechips TCCxxxx VTC USB Driver`.
 
-1. Follow the boot mode sequence while watching the board picture and flashing markers.
-2. After changing a connection, select **Check Again**.
-3. When the board is detected, **Continue Flashing** becomes available.
+### Step 3: Flashing
 
-In Windows Device Manager, the board may appear with a name similar to `Telechips TCCxxxx VTC USB Driver`.
+For an official image, the screen shows separate progress for:
 
-### 4.3 Step 3: Flash the Image
+1. Download
+2. Extraction
+3. Flashing
 
-1. Select **Start Flashing**.
-2. Watch the download, extraction, and flashing progress.
-3. Wait until the completion screen appears.
+Each progress value changes from 0% to 100%. Wait for the **Complete** screen before disconnecting anything.
 
-## 5. Flashing AI-G
+## 8. Flash AI-G on Windows
 
-AI-G uses both a USB connection and an Ethernet connection.
+AI-G uses three flashing setup steps.
 
-### 5.1 Step 1: Set Up Ethernet
+### Step 1: Ethernet Setup
 
-1. Connect the computer and AI-G with an Ethernet cable.
-2. Select the Ethernet adapter connected to AI-G.
-3. Follow the instructions to set the computer's address to `192.168.0.8/24`.
-4. Confirm that the network setup is complete.
+1. Connect the computer directly to AI-G with an Ethernet cable.
+2. Select the wired Ethernet adapter connected to AI-G, not Wi-Fi.
+3. Allow TOPST Imager to apply the temporary address `192.168.0.8/24` when prompted.
+4. Continue when the network status is ready.
 
-Select the **wired Ethernet adapter connected to AI-G**, not the Wi-Fi adapter.
+TOPST Imager restores the temporary Windows network setting when the operation finishes or is canceled.
 
-### 5.2 Step 2: Enter Boot Mode and Select a COM Port
+### Step 2: Boot Mode and COM Port
 
-1. Press the BOOT button while watching the animation.
-2. While holding BOOT, press and release the RESET button.
-3. Release the BOOT button.
-4. Select the newly detected AI-G USB COM port.
-5. Check the board power, USB Type-C cable, and Ethernet cable again.
+1. Follow the on-screen boot-mode animation.
+2. Press and hold **BOOT**.
+3. Press and release the **RESET** button.
+4. Release BOOT.
+5. Select the COM port that belongs to AI-G.
+6. Check the board power, USB Type-C cable, and Ethernet cable.
+7. Continue to flashing.
 
-If several COM ports are listed, temporarily disconnect the AI-G USB cable. The port that disappears is the AI-G port. Reconnect the cable and repeat the boot mode sequence before continuing.
+If several COM ports are listed, disconnect the AI-G USB cable briefly. The port that disappears is normally the AI-G port. Reconnect the cable, repeat boot mode, and select that port.
 
-### 5.3 Step 3: Flash the Image
+### Step 3: Flashing
 
-1. Select **Start Flashing**.
-2. Wait until the progress reaches 100%.
-3. Restart the board after the completion screen appears.
+Wait until flashing reaches 100% and the **Complete** screen appears.
 
-## 6. Flashing VCP-G
+## 9. Flash VCP-G on Windows
 
-### 6.1 Step 1: Enter Boot Mode
+VCP-G uses two flashing setup steps.
 
-1. Check the board picture on the screen.
-2. Press and hold the BOOT button.
-3. Press and release the RESET button.
-4. Release the BOOT button.
-5. Select **Next**.
+### Step 1: Boot Mode and COM Port
 
-### 6.2 Step 2: Select a COM Port
+The boot-mode guide and COM-port selection are on the same screen.
 
-1. Select the USB COM port connected to VCP-G.
-2. If the port is not listed, reconnect the USB Type-C cable.
-3. Refresh the list and select the correct port.
+1. Follow the board animation to set VCP-G to Firmware Download Mode.
+2. Press and release the **RESET** button when the guide tells you to do so.
+3. Select the COM port belonging to VCP-G.
+4. Recheck the board power and FWDN USB Type-C data cable.
+5. Continue to flashing.
 
-### 6.3 Step 3: Flash the Image
+### Step 2: Flashing
 
-1. Select **Start Flashing**.
-2. Wait until the progress reaches 100%.
-3. Restart the board after the completion screen appears.
+Wait until flashing reaches 100% and the **Complete** screen appears.
 
-## 7. Installing a Custom Image
+## 10. Use a Custom Image on Windows
 
-Use this option to install a local image file that is not listed in the official catalog.
+1. Select the correct board first.
+2. On the operating-system screen, click **Use Custom Image** once.
+3. Select **Next**, or double-click **Use Custom Image**.
+4. Either drag the file into the drop area or select the browse button.
+5. Check the selected file name, and then continue.
 
-1. On the operating system selection screen, click **Custom Image** once.
-2. Select **Next**, or double-click the item.
-3. Use either of the following methods.
-   - Drag the file into the dotted area.
-   - Select **Browse for FAI Image** or **Browse for ROM Image**, and then select the file.
-4. Check the selected file name.
-5. Select **Next** and follow the connection instructions for your board.
-
-Make sure you select the correct file type.
+Use the correct file type:
 
 - D3-G: `.fai`
 - AI-G: `.fai`
 - VCP-G: `.rom`
 
-Because a custom image is already stored on your computer, the download and extraction steps are not shown on the flashing screen.
-
-## 8. Troubleshooting on Windows
-
-### The Board Is Not Detected
-
-Check the following items in order.
-
-1. Make sure the board has power.
-2. Make sure the USB cable is not a charge-only cable.
-3. Make sure the cable is connected to the FWDN USB Type-C port.
-4. Repeat the boot mode sequence.
-5. For D3-G, make sure the VTC driver is installed.
-
-### No COM Port Is Listed
-
-1. Disconnect and reconnect the USB cable.
-2. Check the board power.
-3. Enter boot mode again.
-4. Refresh the COM port list.
-
-### AI-G Shows a Network Error
-
-1. Check the Ethernet cable between AI-G and the computer.
-2. Make sure you selected the wired Ethernet adapter, not Wi-Fi.
-3. Make sure the computer's address is `192.168.0.8/24`.
-4. Follow the application instructions and start again from Step 1.
-
-### A `Failed open port` or `GetLastError : 22` Message Appears
-
-Check the FWDN USB Type-C cable connection. Reconnect the cable, and then repeat the process from the boot mode step.
-
-### The Download Does Not Progress
-
-1. Check the internet connection.
-2. Check the free storage space on the computer.
-3. Wait a moment, and then select **Retry**.
-
-### You Want to Return to the Previous Step While Flashing
-
-If flashing has started, a cancellation confirmation window appears when you go back. Before canceling, check that the board is in a safe state and follow the instructions shown on the screen.
-
-### You Need Help with an Error
-
-1. Copy the details from the error window.
-2. Open the log folder from **App Options**.
-3. Prepare the error message and log file.
-4. Ask a question in the [TOPST Community](https://community.topst.ai/).
-
-On Windows, logs are normally stored in:
-
-```text
-%LOCALAPPDATA%\Telechips\TOPST Imager\logs\topst-imager.log
-```
+A custom image is already on the computer, so the **Download** and **Extraction** progress rows are hidden. The same board-specific driver, network, boot-mode, COM-port, and flashing steps still apply.
 
 ---
 
-# Linux Instructions
+# Linux
 
-## 1. Before Using TOPST Imager on Linux
+## 11. Linux Requirements
 
-The screens and basic process are the same on Linux and Windows, but some preparation steps are different.
+The current Linux distribution supports **x86_64 Linux**. Windows `.exe` FWDN files cannot be used on Linux.
 
-The board, operating system, and version buttons are in the same locations shown in the Windows screenshots above. On Linux, the Windows driver installation screen for D3-G is skipped, and the application moves directly to boot mode and board detection.
-
-- Do not install the Windows VTC driver.
-- D3-G requires Linux USB permissions.
-- AI-G and VCP-G require serial port permissions.
-- The distribution package must include Linux FWDN executables.
-- `unzip` or `bsdtar` is required to extract official images.
-
-If you are not comfortable entering commands, ask a system administrator or developer to complete the **Linux Administrator Setup** section below. After this one-time setup, a general user can follow the on-screen instructions.
-
-## 2. Installing and Running TOPST Imager on Linux
-
-The examples below use Ubuntu.
-
-### 2.1 Extract the Package
-
-1. Download the correct Linux package for your computer from the official TOPST website.
-2. Open the Downloads folder.
-3. Open a terminal and enter the following commands.
-
-```bash
-cd ~/Downloads
-tar -xzf TOPST-Imager-<version>-Linux-<architecture>.tar.gz
-```
-
-Replace `<version>` and `<architecture>` with the values in the actual file name. You can type the beginning of the file name and press `Tab` to complete it automatically.
-
-### 2.2 Run the Application
-
-Move to the extracted folder, and then start the application.
-
-```bash
-cd TOPST-Imager-<version>-Linux-<architecture>
-chmod +x topst-imager
-./topst-imager
-```
-
-If an error says that a `Qt` library is missing, the current Linux package does not include the Qt runtime. General users should ask the distributor for a **Linux package that includes the Qt 6.12 runtime** instead of trying to install it manually.
-
-## 3. Linux Administrator Setup
-
-These settings normally need to be completed only once.
-
-### 3.1 Install an Extraction Tool
-
-```bash
-sudo apt update
-sudo apt install unzip
-```
-
-### 3.2 Serial Port Permissions for AI-G and VCP-G
-
-```bash
-sudo usermod -aG dialout "$USER"
-```
-
-After running the command, sign out and sign in again, or restart the computer.
-
-### 3.3 USB Permissions for D3-G
-
-1. Connect D3-G in boot mode.
-2. Run the following command in a terminal to find the board's USB IDs.
-
-```bash
-lsusb
-```
-
-3. Use the detected vendor ID and product ID to create `/etc/udev/rules.d/99-topst.rules`.
-
-```text
-SUBSYSTEM=="usb", ATTR{idVendor}=="VENDOR_ID", ATTR{idProduct}=="PRODUCT_ID", MODE="0666"
-```
-
-4. Reload the rules.
-
-```bash
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-```
-
-Do not enter random values for `VENDOR_ID` and `PRODUCT_ID`. If you do not know the correct values for D3-G, contact TOPST support.
-
-### 3.4 Check the Linux FWDN Files
-
-The Linux distribution must contain executable files without an extension in the following locations.
+The distributed application must include executable Linux tools at:
 
 ```text
 tools/fwdn_d3/fwdn_d3
@@ -426,94 +237,191 @@ tools/fwdn_ai/fwdn_ai
 tools/fwdn_vcp/fwdn_vcp
 ```
 
-If the files are present, give them execute permission.
+The computer also needs:
+
+- `unzip` for official ZIP packages
+- `policykit-1` for the administrator confirmation window
+- `acl` for temporary AI-G and VCP-G serial-port access
+
+On Ubuntu, an administrator can install them with:
 
 ```bash
-chmod +x tools/fwdn_d3/fwdn_d3
-chmod +x tools/fwdn_ai/fwdn_ai
-chmod +x tools/fwdn_vcp/fwdn_vcp
+sudo apt update
+sudo apt install unzip policykit-1 acl
 ```
 
-Flashing cannot work on Linux without these files. Windows `.exe` files cannot be used instead.
+Do **not** run TOPST Imager or FWDN with `sudo`. TOPST Imager requests administrator permission only when it needs to grant temporary access to the selected serial device.
 
-## 4. Flashing D3-G on Linux
+## 12. Install and Start the Linux Package
 
-Linux does not use the Windows VTC driver installation step.
-
-1. Select a D3-G image.
-2. Press the BOOT button while watching the on-screen animation.
-3. While holding BOOT, press and release the RESET button.
-4. Release the BOOT button.
-5. Check whether the board is detected.
-6. Start flashing and wait until it is complete.
-
-If D3-G is not detected, check the USB permission rule, Type-C cable, board power, and boot mode.
-
-## 5. Flashing AI-G on Linux
-
-TOPST Imager does not automatically change the Ethernet address on Linux. Set it manually in Ubuntu Settings.
-
-1. Open **Settings → Network** in Ubuntu.
-2. Open the settings for the wired network connected to AI-G.
-3. Set the IPv4 method to **Manual**.
-4. Enter `192.168.0.8` as the address.
-5. Enter `255.255.255.0` as the netmask. If the screen uses prefix length notation, enter `24`.
-6. Leave Gateway and DNS empty unless you have received different instructions.
-7. Apply the settings, and then turn the wired connection off and on again.
-8. Return to TOPST Imager and check the Ethernet status.
-9. Follow the on-screen instructions to enter boot mode.
-10. Select the `/dev/ttyUSB...` or `/dev/ttyACM...` port for AI-G.
-11. Start flashing.
-
-## 6. Flashing VCP-G on Linux
-
-1. Follow the on-screen instructions to put VCP-G into boot mode.
-2. Select a port in the form `/dev/ttyUSB...` or `/dev/ttyACM...`.
-3. Confirm the correct port, and then start flashing.
-4. Wait until the completion screen appears.
-
-If no port is listed, make sure you joined the `dialout` group and signed out and back in afterward.
-
-## 7. Troubleshooting on Linux
-
-### `Permission denied` Appears
-
-- AI-G or VCP-G: Make sure the user belongs to the `dialout` group.
-- D3-G: Make sure the udev USB permission rule is active.
-- FWDN file: Make sure you gave it execute permission with `chmod +x`.
-
-### The Linux FWDN File Cannot Be Found
-
-Check for the Linux executable under `tools/fwdn_*` in the distribution folder. A Windows `.exe` file cannot run on Linux.
-
-### No Board Port Is Listed
-
-Run the following command to list available ports.
+The exact archive name may vary by release. For a `.tar.gz` package:
 
 ```bash
-ls /dev/ttyUSB* /dev/ttyACM* 2>/dev/null
+cd ~/Downloads
+tar -xzf TOPST-Imager-<version>-Linux-x86_64.tar.gz
+cd TOPST-Imager-<version>-Linux-x86_64
+chmod +x topst-imager
+./topst-imager
 ```
 
-Compare the list before and after connecting the USB cable. The newly added port is usually the board port.
+Use the actual file and folder names from the downloaded package. A user package should include the Qt runtime; if Qt libraries are missing, download the complete official Linux package rather than running the application as root.
 
-### The Application Does Not Follow the Light or Dark Theme
+## 13. Select the Image on Linux
 
-TOPST Imager uses the theme information provided by the Linux desktop through Qt. Some desktop environments may not apply the system theme immediately. Try restarting the application.
+Board, operating-system, version, custom-image, and eMMC warning screens work the same way as the Windows screens in Sections 6 and 10.
 
-## 8. After Flashing Is Complete
+## 14. Flash D3-G on Linux
 
-1. Make sure the success message appears.
-2. Wait for TOPST Imager to finish all work.
+D3-G has two flashing setup steps on Linux because the Windows VTC Driver Installer step is not shown.
+
+### Step 1: Boot Mode and Board Detection
+
+1. Press and hold **BOOT**.
+2. Press and release the **RESET** button.
+3. Release BOOT.
+4. Connect the FWDN USB Type-C data cable.
+5. Select **Check Again** if needed.
+6. Continue when D3-G is detected.
+
+Linux detects the D3-G FWDN USB device directly. If it is not detected, check the USB data cable, board power, boot mode, and the installed udev rule supplied with the Linux package.
+
+### Step 2: Flashing
+
+Wait for download, extraction, and flashing to finish. Custom `.fai` images show only flashing progress.
+
+## 15. Flash AI-G on Linux
+
+AI-G has three flashing setup steps.
+
+### Step 1: Ethernet Setup
+
+TOPST Imager does not automatically change the Linux Ethernet address. Set it in the Linux network settings:
+
+1. Open **Settings → Network**.
+2. Open the wired connection connected to AI-G.
+3. Set IPv4 to **Manual**.
+4. Address: `192.168.0.8`
+5. Netmask: `255.255.255.0`, or prefix length `24`
+6. Leave Gateway and DNS empty unless your network administrator tells you otherwise.
+7. Apply the change, reconnect the wired connection, and return to TOPST Imager.
+
+### Step 2: Boot Mode, COM Port, and Temporary Access
+
+1. Follow the boot-mode animation.
+2. Select the AI-G port, such as `/dev/ttyUSB0`.
+3. If the port is not writable, select **Grant Temporary Access**.
+4. Approve the Linux administrator window.
+5. When access is ready, the flashing button becomes available.
+
+Temporary access is applied only to the selected serial device and is released after flashing, cancellation, or leaving the flashing screen. You do not need to add the user permanently to the `dialout` group.
+
+### Step 3: Flashing
+
+Wait until the **Complete** screen appears.
+
+## 16. Flash VCP-G on Linux
+
+VCP-G uses two flashing setup steps on Linux, just as it does on Windows.
+
+### Step 1: Boot Mode, COM Port, and Temporary Access
+
+1. Follow the boot-mode guide.
+2. Select the VCP-G port, such as `/dev/ttyUSB0`.
+3. If shown, select **Grant Temporary Access** and approve the administrator window.
+4. Continue when the selected port is accessible.
+
+### Step 2: Flashing
+
+Wait until flashing reaches 100% and the **Complete** screen appears. A custom `.rom` image shows only flashing progress.
+
+## 17. Downloads, Retries, and Temporary Files
+
+For an official image, TOPST Imager:
+
+1. Creates a temporary working folder.
+2. Downloads the ZIP package.
+3. Extracts the package into the temporary folder.
+4. Runs the board-specific FWDN executable.
+5. Deletes the downloaded and extracted temporary data after successful flashing or cancellation.
+
+If the internet connection stops during a download, keep TOPST Imager open and reconnect the network. The application automatically retries and resumes from the partial download when the server supports it. The status appears in the selected application language.
+
+Some recoverable flashing errors keep the prepared package temporarily so you can return to the instructed setup step without downloading it again.
+
+## 18. When an Error Window Appears
+
+TOPST Imager detects known FWDN errors and immediately opens an error window. If the window shows a three-second countdown, read the message; after the countdown the app returns to the required recovery step. Select **OK** after checking the listed items.
+
+### D3-G Connection Error
+
+Check:
+
+1. Board power connection
+2. FWDN USB Type-C cable connection
+3. Firmware Download Mode entry
+
+The application returns to the D3-G boot-mode step.
+
+### AI-G Connection or Synchronization Error
+
+Check:
+
+1. Board power connection
+2. Firmware Download Mode entry
+3. Correct COM-port selection
+
+If the message specifically says `Failed open port`, check the FWDN USB Type-C cable and selected port. If it says `TCP Socket Open Fail`, check the Ethernet cable, adapter, and `192.168.0.8/24` network setting.
+
+### VCP-G Connection Error
+
+Check:
+
+1. Board power connection
+2. Firmware Download Mode entry
+3. Correct COM-port selection
+
+If `GetLastError : 22` appears, check the FWDN USB Type-C cable connection.
+
+### No COM Port Appears
+
+1. Check board power.
+2. Reconnect the USB data cable.
+3. Repeat Firmware Download Mode.
+4. Refresh the port list.
+5. On Linux, select **Grant Temporary Access** after choosing the port.
+
+### Flashing Fails Completely
+
+If the error says `Failed to write in eFlash` or `Failed FWDN`, follow the message and restart from the first flashing setup step. Do not disconnect the board while a write operation is still active.
+
+## 19. Log Files
+
+When requesting help, include the complete error message, board name, selected image version, operating system, and the log file.
+
+Windows log location:
+
+```text
+%LOCALAPPDATA%\Telechips\TOPST Imager\logs\topst-imager.log
+```
+
+Typical Linux log location:
+
+```text
+~/.local/share/Telechips/TOPST Imager/logs/topst-imager.log
+```
+
+If you still need help, use **App Options → Ask the Community** or visit the [TOPST Community](https://community.topst.ai/).
+
+## 20. After Flashing Completes
+
+1. Confirm that the **Complete** screen is visible.
+2. Wait until TOPST Imager says the operation is finished.
 3. Turn off the board safely.
 4. Disconnect the FWDN cable or reconnect the cables for normal use.
-5. Turn on the board and make sure the new operating system starts.
+5. Turn on the board and check that the new operating system starts.
 
-Official images are downloaded and extracted in a temporary folder. After flashing completes successfully, the downloaded files and extracted folder are deleted automatically.
+Remember these three rules:
 
-## 9. Three Things to Remember
-
-1. **Make sure you selected the correct board and image.**
-2. **Do not disconnect power or cables while flashing is in progress.**
-3. **If an error occurs, check every item in the on-screen list from top to bottom.**
-
-If you need help, prepare the error message and log file, and ask a question in the [TOPST Community](https://community.topst.ai/).
+1. Select the board and image carefully.
+2. Never disconnect power or cables while flashing is active.
+3. When an error appears, check every listed item from top to bottom.
