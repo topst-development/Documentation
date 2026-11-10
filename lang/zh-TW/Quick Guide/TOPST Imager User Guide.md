@@ -61,14 +61,14 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 # Windows
 
-## 5. 安裝 TOPST Imager
+## 1. 安裝 TOPST Imager
 
-### 5.1 系統需求
+### 1.1 系統需求
 
 - Windows 10 64 位元或更新版本
 - Windows 11 64 位元
 
-### 5.2 安裝
+### 1.2 安裝
 
 安裝程式支援韓文與英文。下方 **Install** 與 **Launch TOPST Imager now** 是英文安裝程式中的文字。
 
@@ -80,9 +80,9 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 啟動應用程式或 VTC 驅動程式安裝精靈時，Windows 可能要求管理員權限。確認檔案來自官方 TOPST 發行套件後，再選取 **是**。
 
-## 6. 選取開發板、作業系統與版本
+## 2. 選取開發板、作業系統與版本
 
-### 6.1 選取開發板
+### 2.1 選取開發板
 
 ![選取 TOPST 開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20Board%20Selection.png)
 
@@ -91,7 +91,7 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 也可按兩下開發板繼續。選錯時選取 **返回** 返回重選。
 
-### 6.2 選取作業系統
+### 2.2 選取作業系統
 
 ![選取官方作業系統或自訂映像檔](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20OS%20Selection.png)
 
@@ -99,7 +99,7 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 2. 使用電腦中的檔案時選取 **使用自訂映像**。
 3. 選取 **下一步** 或按兩下所選列。
 
-### 6.3 選取版本
+### 2.3 選取版本
 
 ![選取映像檔版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20Version%20Selection.png)
 
@@ -111,7 +111,7 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 除非專案要求特定版本，否則使用最新穩定版或建議版本。
 
-### 6.4 確認清除資料
+### 2.4 確認清除資料
 
 ![確認 eMMC 清除警告](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
@@ -120,7 +120,7 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 此時選取 **取消** 不會清除開發板。
 
-## 7. 在 Windows 上燒錄 D3-G
+## 3. 在 Windows 上燒錄 D3-G
 
 Windows 上的 D3-G 燒錄設定分為三步。
 
@@ -160,7 +160,7 @@ Windows 裝置管理員的通用序列匯流排控制器下，可能顯示類似
 
 各項進度從 0% 到 100%。請等待 **完成** 畫面後再中斷連線。
 
-## 8. 在 Windows 上燒錄 AI-G
+## 4. 在 Windows 上燒錄 AI-G
 
 AI-G 燒錄設定分為三步。
 
@@ -189,7 +189,7 @@ AI-G 燒錄設定分為三步。
 
 等待達到 100% 並出現 **完成** 畫面。
 
-## 9. 在 Windows 上燒錄 VCP-G
+## 5. 在 Windows 上燒錄 VCP-G
 
 VCP-G 燒錄設定分為兩步。
 
@@ -207,7 +207,7 @@ VCP-G 燒錄設定分為兩步。
 
 等待達到 100% 並出現 **完成** 畫面。
 
-## 10. 在 Windows 上使用自訂映像檔
+## 6. 在 Windows 上使用自訂映像檔
 
 1. 先選取正確的開發板。
 2. 在作業系統畫面按一下 **使用自訂映像**。
@@ -227,7 +227,7 @@ VCP-G 燒錄設定分為兩步。
 
 # Linux
 
-## 11. Linux 需求
+## 1. Linux 需求
 
 目前發行套件支援 **x86_64 Linux**。Windows `.exe` FWDN 檔案不能在 Linux 使用。
 
@@ -254,7 +254,7 @@ sudo apt install unzip policykit-1 acl
 
 **不要**用 `sudo` 執行 TOPST Imager 或 FWDN。應用程式僅在需要授予所選序列裝置暫時存取權限時要求管理員權限。
 
-## 12. 安裝並啟動 Linux 套件
+## 2. 安裝並啟動 Linux 套件
 
 壓縮檔名可能隨版本變更。`.tar.gz` 套件範例：
 
@@ -268,11 +268,11 @@ chmod +x topst-imager
 
 請使用下載套件的實際檔案與資料夾名稱。使用者套件應包含 Qt 執行階段；若缺少 Qt 程式庫，請下載完整官方 Linux 套件，而不要以 root 執行。
 
-## 13. 在 Linux 上選取映像檔
+## 3. 在 Linux 上選取映像檔
 
-開發板、作業系統、版本、自訂映像檔與 eMMC 警告畫面，與第 6 節和第 10 節的 Windows 畫面相同。
+開發板、作業系統、版本、自訂映像檔與 eMMC 警告畫面，與第 2 節和第 6 節的 Windows 畫面相同。
 
-## 14. 在 Linux 上燒錄 D3-G
+## 4. 在 Linux 上燒錄 D3-G
 
 不顯示 Windows VTC 驅動程式安裝步驟，因此 Linux 上分為兩步。
 
@@ -291,7 +291,7 @@ Linux 直接偵測 D3-G FWDN USB 裝置。未偵測到時，請檢查資料傳�
 
 等待下載、解壓縮與燒錄完成。自訂 `.fai` 映像檔僅顯示燒錄進度。
 
-## 15. 在 Linux 上燒錄 AI-G
+## 5. 在 Linux 上燒錄 AI-G
 
 AI-G 燒錄設定分為三步。
 
@@ -321,7 +321,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 等待 **完成** 畫面。
 
-## 16. 在 Linux 上燒錄 VCP-G
+## 6. 在 Linux 上燒錄 VCP-G
 
 與 Windows 一樣，燒錄設定分為兩步。
 
@@ -336,7 +336,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 等待達到 100% 並出現 **完成** 畫面。自訂 `.rom` 映像檔僅顯示燒錄進度。
 
-## 17. 下載、重試與暫存檔案
+## 7. 下載、重試與暫存檔案
 
 使用官方映像檔時，應用程式會：
 
@@ -350,7 +350,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 某些可復原的燒錄錯誤會暫時保留準備好的套件，方便返回指定設定步驟而不必重新下載。
 
-## 18. 出現錯誤視窗時
+## 8. 出現錯誤視窗時
 
 偵測到已知 FWDN 錯誤後會立即開啟錯誤視窗。若顯示三秒倒數，請閱讀訊息；倒數後返回所需復原步驟。檢查所列項目後選取 **確認**。
 
@@ -396,7 +396,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 若錯誤為 `Failed to write in eFlash` 或 `Failed FWDN`，請按訊息從第一個燒錄設定步驟重新開始。寫入仍在進行時不要中斷開發板連線。
 
-## 19. 記錄檔
+## 9. 記錄檔
 
 求助時提供完整錯誤訊息、開發板名稱、所選映像檔版本、作業系統與記錄檔。
 
@@ -414,7 +414,7 @@ Windows 記錄檔位置：
 
 需要更多協助時，使用 **應用程式選項 → 前往社群提問** 或造訪 [TOPST 社群](https://community.topst.ai/)。
 
-## 20. 燒錄完成後
+## 10. 燒錄完成後
 
 1. 確認 **完成** 畫面可見。
 2. 等待應用程式說明操作已完成。

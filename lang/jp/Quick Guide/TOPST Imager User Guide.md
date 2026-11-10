@@ -61,14 +61,14 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 # Windows
 
-## 5. TOPST Imager のインストール
+## 1. TOPST Imager のインストール
 
-### 5.1 必要な環境
+### 1.1 必要な環境
 
 - Windows 10 64 ビット以降
 - Windows 11 64 ビット
 
-### 5.2 インストール
+### 1.2 インストール
 
 インストーラーは韓国語と英語に対応しています。以下の **Install** と **Launch TOPST Imager now** は英語インストーラーの表示です。
 
@@ -80,9 +80,9 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 アプリや VTC ドライバーの起動時に Windows が管理者権限を求める場合があります。公式 TOPST 配布ファイルであることを確認してから **はい** を選択してください。
 
-## 6. ボード、OS、バージョンの選択
+## 2. ボード、OS、バージョンの選択
 
-### 6.1 ボードの選択
+### 2.1 ボードの選択
 
 ![TOPST ボードの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20Board%20Selection.png)
 
@@ -91,7 +91,7 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 ダブルクリックでも進めます。間違えたら **戻る** で戻って選び直してください。
 
-### 6.2 OS の選択
+### 2.2 OS の選択
 
 ![公式 OS またはカスタムイメージの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20OS%20Selection.png)
 
@@ -99,7 +99,7 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 2. コンピューター上のファイルを使う場合は **カスタムイメージを使用** を選択します。
 3. **次へ** を選択するか、選択した行をダブルクリックします。
 
-### 6.3 バージョンの選択
+### 2.3 バージョンの選択
 
 ![イメージのバージョンの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20Version%20Selection.png)
 
@@ -111,7 +111,7 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 プロジェクトで特定の版が必要な場合を除き、最新の安定版または推奨版を使用してください。
 
-### 6.4 データ消去の確認
+### 2.4 データ消去の確認
 
 ![eMMC 消去警告の確認](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
@@ -120,7 +120,7 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 この時点の **キャンセル** ではボードは消去されません。
 
-## 7. Windows で D3-G に書き込む
+## 3. Windows で D3-G に書き込む
 
 Windows の D3-G 書き込み設定は 3 ステップです。
 
@@ -160,7 +160,7 @@ Windows デバイスマネージャーの USB コントローラー配下に `Te
 
 各進捗は 0% から 100% になります。**完了** 画面が出るまで何も外さないでください。
 
-## 8. Windows で AI-G に書き込む
+## 4. Windows で AI-G に書き込む
 
 AI-G の書き込み設定は 3 ステップです。
 
@@ -189,7 +189,7 @@ AI-G の書き込み設定は 3 ステップです。
 
 100% になり **完了** 画面が出るまで待ちます。
 
-## 9. Windows で VCP-G に書き込む
+## 5. Windows で VCP-G に書き込む
 
 VCP-G の書き込み設定は 2 ステップです。
 
@@ -207,7 +207,7 @@ VCP-G の書き込み設定は 2 ステップです。
 
 100% になり **完了** 画面が出るまで待ちます。
 
-## 10. Windows でカスタムイメージを使う
+## 6. Windows でカスタムイメージを使う
 
 1. 正しいボードを先に選択します。
 2. OS 画面で **カスタムイメージを使用** を一度クリックします。
@@ -227,7 +227,7 @@ VCP-G の書き込み設定は 2 ステップです。
 
 # Linux
 
-## 11. Linux の要件
+## 1. Linux の要件
 
 現在の配布版は **x86_64 Linux** に対応します。Windows の `.exe` FWDN ファイルは使用できません。
 
@@ -254,7 +254,7 @@ sudo apt install unzip policykit-1 acl
 
 TOPST Imager や FWDN を `sudo` で実行**しないでください**。選択したシリアル機器への一時アクセスが必要な場合だけ、アプリが管理者権限を要求します。
 
-## 12. Linux パッケージのインストールと起動
+## 2. Linux パッケージのインストールと起動
 
 アーカイブ名はリリースで異なります。`.tar.gz` の例:
 
@@ -268,11 +268,11 @@ chmod +x topst-imager
 
 ダウンロードした実際のファイル名とフォルダー名を使ってください。ユーザー向けパッケージには Qt ランタイムが必要です。Qt が不足する場合は root で実行せず、完全な公式 Linux パッケージを取得してください。
 
-## 13. Linux でのイメージ選択
+## 3. Linux でのイメージ選択
 
-ボード、OS、バージョン、カスタムイメージ、eMMC 警告は、第 6 節と第 10 節の Windows 画面と同様に動作します。
+ボード、OS、バージョン、カスタムイメージ、eMMC 警告は、第 2 節と第 6 節の Windows 画面と同様に動作します。
 
-## 14. Linux で D3-G に書き込む
+## 4. Linux で D3-G に書き込む
 
 Windows VTC ドライバー画面がないため、設定は 2 ステップです。
 
@@ -291,7 +291,7 @@ Linux は D3-G FWDN USB 機器を直接検出します。検出されなけれ�
 
 ダウンロード、展開、書き込みの完了を待ちます。カスタム `.fai` では書き込み進捗のみ表示します。
 
-## 15. Linux で AI-G に書き込む
+## 5. Linux で AI-G に書き込む
 
 設定は 3 ステップです。
 
@@ -321,7 +321,7 @@ Linux は D3-G FWDN USB 機器を直接検出します。検出されなけれ�
 
 **完了** 画面を待ちます。
 
-## 16. Linux で VCP-G に書き込む
+## 6. Linux で VCP-G に書き込む
 
 Windows と同様、設定は 2 ステップです。
 
@@ -336,7 +336,7 @@ Windows と同様、設定は 2 ステップです。
 
 100% になり **完了** 画面が出るまで待ちます。カスタム `.rom` は書き込み進捗のみ表示します。
 
-## 17. ダウンロード、再試行、一時ファイル
+## 7. ダウンロード、再試行、一時ファイル
 
 公式イメージでは次のように動作します。
 
@@ -350,7 +350,7 @@ Windows と同様、設定は 2 ステップです。
 
 復旧可能な一部の書き込みエラーでは準備済みパッケージを一時保持するため、再取得せず案内された設定に戻れます。
 
-## 18. エラーウィンドウが表示された場合
+## 8. エラーウィンドウが表示された場合
 
 既知の FWDN エラーは直ちに表示されます。3 秒のカウントダウンがあればメッセージを読んでください。終了後、必要な復旧手順に戻ります。項目を確認して **確認** を選択します。
 
@@ -396,7 +396,7 @@ D3-G のブートモード手順に戻ります。
 
 `Failed to write in eFlash` または `Failed FWDN` なら案内に従って最初の設定からやり直します。書き込み動作中はボードを外さないでください。
 
-## 19. ログファイル
+## 9. ログファイル
 
 問い合わせ時はエラー全文、ボード名、イメージのバージョン、OS、ログを添えてください。
 
@@ -414,7 +414,7 @@ Linux の標準的なログ:
 
 **アプリオプション → コミュニティで質問する** または [TOPST コミュニティ](https://community.topst.ai/)で相談できます。
 
-## 20. 書き込み完了後
+## 10. 書き込み完了後
 
 1. **完了** 画面を確認します。
 2. アプリが完了を知らせるまで待ちます。

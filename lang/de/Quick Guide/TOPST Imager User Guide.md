@@ -61,14 +61,14 @@ Unterstützt werden Koreanisch, Englisch, Japanisch, vereinfachtes und tradition
 
 # Windows
 
-## 5. TOPST Imager installieren
+## 1. TOPST Imager installieren
 
-### 5.1 Voraussetzungen
+### 1.1 Voraussetzungen
 
 - Windows 10, 64 Bit, oder neuer
 - Windows 11, 64 Bit
 
-### 5.2 Installation
+### 1.2 Installation
 
 Der Installer unterstützt Koreanisch und Englisch. **Install** und **Launch TOPST Imager now** unten entsprechen dem englischen Installer.
 
@@ -80,9 +80,9 @@ Der Installer unterstützt Koreanisch und Englisch. **Install** und **Launch TOP
 
 Beim Start von TOPST Imager oder des VTC-Installers kann Windows Administratorrechte anfordern. Prüfen Sie vor **Ja**, ob die Datei aus der offiziellen TOPST-Distribution stammt.
 
-## 6. Board, Betriebssystem und Version auswählen
+## 2. Board, Betriebssystem und Version auswählen
 
-### 6.1 Board auswählen
+### 2.1 Board auswählen
 
 ![Ein TOPST-Board auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20Board%20Selection.png)
 
@@ -91,7 +91,7 @@ Beim Start von TOPST Imager oder des VTC-Installers kann Windows Administratorre
 
 Auch ein Doppelklick führt weiter. Bei falscher Auswahl gehen Sie mit **Zurück** zurück.
 
-### 6.2 Betriebssystem auswählen
+### 2.2 Betriebssystem auswählen
 
 ![Offizielles Betriebssystem oder eigenes Image auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20OS%20Selection.png)
 
@@ -99,7 +99,7 @@ Auch ein Doppelklick führt weiter. Bei falscher Auswahl gehen Sie mit **Zurück
 2. Für eine lokale Datei wählen Sie **Benutzerdefiniertes Image verwenden**.
 3. Wählen Sie **Weiter** oder doppelklicken Sie auf die gewählte Zeile.
 
-### 6.3 Version auswählen
+### 2.3 Version auswählen
 
 ![Eine Image-Version auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20Version%20Selection.png)
 
@@ -111,7 +111,7 @@ Auch ein Doppelklick führt weiter. Bei falscher Auswahl gehen Sie mit **Zurück
 
 Nutzen Sie ohne projektspezifische Vorgaben die neueste stabile oder empfohlene Version.
 
-### 6.4 Datenlöschung bestätigen
+### 2.4 Datenlöschung bestätigen
 
 ![Die eMMC-Löschwarnung bestätigen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
@@ -120,7 +120,7 @@ Nutzen Sie ohne projektspezifische Vorgaben die neueste stabile oder empfohlene 
 
 **Abbrechen** löscht das Board an dieser Stelle nicht.
 
-## 7. D3-G unter Windows flashen
+## 3. D3-G unter Windows flashen
 
 Die Flash-Einrichtung besteht aus drei Schritten.
 
@@ -160,7 +160,7 @@ Offizielle Images zeigen separate Fortschrittswerte für:
 
 Jeder Wert steigt von 0 % auf 100 %. Trennen Sie erst nach dem Bildschirm **Abgeschlossen** eine Verbindung.
 
-## 8. AI-G unter Windows flashen
+## 4. AI-G unter Windows flashen
 
 Die Einrichtung besteht aus drei Schritten.
 
@@ -189,7 +189,7 @@ Bei mehreren Ports ziehen Sie AI-G-USB kurz ab. Der verschwundene Port gehört n
 
 Warten Sie auf 100 % und den Bildschirm **Abgeschlossen**.
 
-## 9. VCP-G unter Windows flashen
+## 5. VCP-G unter Windows flashen
 
 Die Einrichtung besteht aus zwei Schritten.
 
@@ -207,7 +207,7 @@ Bootmodus-Anleitung und Portauswahl stehen auf derselben Seite.
 
 Warten Sie auf 100 % und den Bildschirm **Abgeschlossen**.
 
-## 10. Eigenes Image unter Windows verwenden
+## 6. Eigenes Image unter Windows verwenden
 
 1. Wählen Sie zuerst das richtige Board.
 2. Klicken Sie auf der Betriebssystemseite einmal auf **Benutzerdefiniertes Image verwenden**.
@@ -227,7 +227,7 @@ Da die Datei lokal vorliegt, sind **Download** und **Entpacken** ausgeblendet. D
 
 # Linux
 
-## 11. Linux-Voraussetzungen
+## 1. Linux-Voraussetzungen
 
 Die aktuelle Distribution unterstützt **x86_64 Linux**. Windows-FWDN-`.exe`-Dateien lassen sich nicht verwenden.
 
@@ -254,7 +254,7 @@ sudo apt install unzip policykit-1 acl
 
 Starten Sie TOPST Imager oder FWDN **nicht** mit `sudo`. Die Anwendung fordert Administratorrechte nur für temporären Zugriff auf das ausgewählte serielle Gerät an.
 
-## 12. Linux-Paket installieren und starten
+## 2. Linux-Paket installieren und starten
 
 Der Archivname hängt von der Version ab. Für ein `.tar.gz`-Paket:
 
@@ -268,11 +268,11 @@ chmod +x topst-imager
 
 Verwenden Sie die tatsächlichen Datei- und Ordnernamen. Ein Benutzerpaket sollte Qt enthalten. Fehlen Qt-Bibliotheken, laden Sie das vollständige offizielle Linux-Paket herunter, statt die Anwendung als root auszuführen.
 
-## 13. Image unter Linux auswählen
+## 3. Image unter Linux auswählen
 
-Board-, Betriebssystem-, Versions-, Custom-Image- und eMMC-Warnseiten funktionieren wie die Windows-Seiten in Abschnitt 6 und 10.
+Board-, Betriebssystem-, Versions-, Custom-Image- und eMMC-Warnseiten funktionieren wie die Windows-Seiten in Abschnitt 2 und 6.
 
-## 14. D3-G unter Linux flashen
+## 4. D3-G unter Linux flashen
 
 Ohne den Windows-VTC-Installer besteht die Einrichtung aus zwei Schritten.
 
@@ -291,7 +291,7 @@ Linux erkennt das D3-G-FWDN-USB-Gerät direkt. Prüfen Sie sonst Datenkabel, Str
 
 Warten Sie auf Download, Entpacken und Flashen. Eigene `.fai`-Images zeigen nur den Flash-Fortschritt.
 
-## 15. AI-G unter Linux flashen
+## 5. AI-G unter Linux flashen
 
 Die Einrichtung besteht aus drei Schritten.
 
@@ -321,7 +321,7 @@ Der Zugriff gilt nur für das ausgewählte serielle Gerät. Er endet nach Flashe
 
 Warten Sie auf **Abgeschlossen**.
 
-## 16. VCP-G unter Linux flashen
+## 6. VCP-G unter Linux flashen
 
 Wie unter Windows gibt es zwei Einrichtungsschritte.
 
@@ -336,7 +336,7 @@ Wie unter Windows gibt es zwei Einrichtungsschritte.
 
 Warten Sie auf 100 % und **Abgeschlossen**. Eigene `.rom`-Images zeigen nur den Flash-Fortschritt.
 
-## 17. Downloads, Wiederholungen und temporäre Dateien
+## 7. Downloads, Wiederholungen und temporäre Dateien
 
 Bei offiziellen Images führt TOPST Imager diese Schritte aus:
 
@@ -350,7 +350,7 @@ Bei einer Internetunterbrechung lassen Sie die Anwendung geöffnet und verbinden
 
 Manche behebbaren Flash-Fehler behalten das vorbereitete Paket vorübergehend, damit Sie ohne erneuten Download zum angegebenen Schritt zurückkehren können.
 
-## 18. Wenn ein Fehlerfenster erscheint
+## 8. Wenn ein Fehlerfenster erscheint
 
 Bekannte FWDN-Fehler werden sofort angezeigt. Lesen Sie bei einem Drei-Sekunden-Countdown die Meldung; danach kehrt die Anwendung zum erforderlichen Wiederherstellungsschritt zurück. Prüfen Sie die Punkte und wählen Sie **Bestätigen**.
 
@@ -396,7 +396,7 @@ Bei `GetLastError : 22` prüfen Sie die FWDN-USB-Type-C-Verbindung.
 
 Bei `Failed to write in eFlash` oder `Failed FWDN` beginnen Sie nach Meldung wieder mit dem ersten Einrichtungsschritt. Trennen Sie das Board nicht während eines laufenden Schreibvorgangs.
 
-## 19. Protokolldateien
+## 9. Protokolldateien
 
 Geben Sie bei Hilfsanfragen vollständige Fehlermeldung, Boardname, Image-Version, Betriebssystem und Protokolldatei an.
 
@@ -414,7 +414,7 @@ Windows-Protokollpfad:
 
 Verwenden Sie **App-Optionen → Community fragen** oder besuchen Sie die [TOPST-Community](https://community.topst.ai/).
 
-## 20. Nach dem Flashen
+## 10. Nach dem Flashen
 
 1. Prüfen Sie, ob **Abgeschlossen** angezeigt wird.
 2. Warten Sie auf die Abschlussmeldung der Anwendung.

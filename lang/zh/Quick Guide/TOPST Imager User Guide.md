@@ -61,14 +61,14 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 
 # Windows
 
-## 5. 安装 TOPST Imager
+## 1. 安装 TOPST Imager
 
-### 5.1 系统要求
+### 1.1 系统要求
 
 - Windows 10 64 位或更新版本
 - Windows 11 64 位
 
-### 5.2 安装
+### 1.2 安装
 
 安装程序支持韩语和英语。以下 **Install** 和 **Launch TOPST Imager now** 为英语安装程序中的文字。
 
@@ -80,9 +80,9 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 
 启动应用或 VTC 驱动安装程序时，Windows 可能请求管理员权限。请确认文件来自官方 TOPST 发行包后再选择 **是**。
 
-## 6. 选择开发板、操作系统和版本
+## 2. 选择开发板、操作系统和版本
 
-### 6.1 选择开发板
+### 2.1 选择开发板
 
 ![选择 TOPST 开发板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20Board%20Selection.png)
 
@@ -91,7 +91,7 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 
 也可双击开发板继续。选错时选择 **返回** 返回重选。
 
-### 6.2 选择操作系统
+### 2.2 选择操作系统
 
 ![选择官方操作系统或自定义镜像](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20OS%20Selection.png)
 
@@ -99,7 +99,7 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 2. 使用计算机中的文件时选择 **使用自定义镜像**。
 3. 选择 **下一步** 或双击所选行。
 
-### 6.3 选择版本
+### 2.3 选择版本
 
 ![选择镜像版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20Version%20Selection.png)
 
@@ -111,7 +111,7 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 
 除非项目要求特定版本，否则使用最新稳定版或推荐版本。
 
-### 6.4 确认清除数据
+### 2.4 确认清除数据
 
 ![确认 eMMC 清除警告](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
@@ -120,7 +120,7 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 
 此时选择 **取消** 不会清除开发板。
 
-## 7. 在 Windows 上烧录 D3-G
+## 3. 在 Windows 上烧录 D3-G
 
 Windows 上的 D3-G 烧录设置分为三步。
 
@@ -160,7 +160,7 @@ Windows 设备管理器的通用串行总线控制器下，可能显示类似 `T
 
 各项进度从 0% 到 100%。请等待 **完成** 画面后再断开连接。
 
-## 8. 在 Windows 上烧录 AI-G
+## 4. 在 Windows 上烧录 AI-G
 
 AI-G 烧录设置分为三步。
 
@@ -189,7 +189,7 @@ AI-G 烧录设置分为三步。
 
 等待达到 100% 并出现 **完成** 画面。
 
-## 9. 在 Windows 上烧录 VCP-G
+## 5. 在 Windows 上烧录 VCP-G
 
 VCP-G 烧录设置分为两步。
 
@@ -207,7 +207,7 @@ VCP-G 烧录设置分为两步。
 
 等待达到 100% 并出现 **完成** 画面。
 
-## 10. 在 Windows 上使用自定义镜像
+## 6. 在 Windows 上使用自定义镜像
 
 1. 先选择正确的开发板。
 2. 在操作系统画面单击 **使用自定义镜像**。
@@ -227,7 +227,7 @@ VCP-G 烧录设置分为两步。
 
 # Linux
 
-## 11. Linux 要求
+## 1. Linux 要求
 
 当前发行包支持 **x86_64 Linux**。Windows `.exe` FWDN 文件不能在 Linux 使用。
 
@@ -254,7 +254,7 @@ sudo apt install unzip policykit-1 acl
 
 **不要**用 `sudo` 运行 TOPST Imager 或 FWDN。应用仅在需要授予所选串口设备临时访问权限时请求管理员权限。
 
-## 12. 安装并启动 Linux 包
+## 2. 安装并启动 Linux 包
 
 压缩文件名可能随版本变化。`.tar.gz` 包示例：
 
@@ -268,11 +268,11 @@ chmod +x topst-imager
 
 请使用下载包的实际文件和文件夹名称。用户包应包含 Qt 运行时；若缺少 Qt 库，请下载完整官方 Linux 包，而不要以 root 运行。
 
-## 13. 在 Linux 上选择镜像
+## 3. 在 Linux 上选择镜像
 
-开发板、操作系统、版本、自定义镜像和 eMMC 警告画面，与第 6 节和第 10 节的 Windows 画面相同。
+开发板、操作系统、版本、自定义镜像和 eMMC 警告画面，与第 2 节和第 6 节的 Windows 画面相同。
 
-## 14. 在 Linux 上烧录 D3-G
+## 4. 在 Linux 上烧录 D3-G
 
 不显示 Windows VTC 驱动安装步骤，因此 Linux 上分为两步。
 
@@ -291,7 +291,7 @@ Linux 直接检测 D3-G FWDN USB 设备。未检测到时，请检查数据线�
 
 等待下载、解压和烧录完成。自定义 `.fai` 镜像仅显示烧录进度。
 
-## 15. 在 Linux 上烧录 AI-G
+## 5. 在 Linux 上烧录 AI-G
 
 AI-G 烧录设置分为三步。
 
@@ -321,7 +321,7 @@ Linux 以太网地址不会自动更改，请在网络设置中配置：
 
 等待 **完成** 画面。
 
-## 16. 在 Linux 上烧录 VCP-G
+## 6. 在 Linux 上烧录 VCP-G
 
 与 Windows 一样，烧录设置分为两步。
 
@@ -336,7 +336,7 @@ Linux 以太网地址不会自动更改，请在网络设置中配置：
 
 等待达到 100% 并出现 **完成** 画面。自定义 `.rom` 镜像仅显示烧录进度。
 
-## 17. 下载、重试和临时文件
+## 7. 下载、重试和临时文件
 
 使用官方镜像时，应用会：
 
@@ -350,7 +350,7 @@ Linux 以太网地址不会自动更改，请在网络设置中配置：
 
 某些可恢复的烧录错误会临时保留准备好的包，便于返回指定设置步骤而无需重新下载。
 
-## 18. 出现错误窗口时
+## 8. 出现错误窗口时
 
 应用检测到已知 FWDN 错误后会立即打开错误窗口。如显示三秒倒计时，请阅读消息；倒计时后应用返回所需恢复步骤。检查所列项目后选择 **确认**。
 
@@ -396,7 +396,7 @@ Linux 以太网地址不会自动更改，请在网络设置中配置：
 
 如错误为 `Failed to write in eFlash` 或 `Failed FWDN`，请按消息从第一个烧录设置步骤重新开始。写入仍在进行时不要断开开发板。
 
-## 19. 日志文件
+## 9. 日志文件
 
 求助时提供完整错误消息、开发板名称、所选镜像版本、操作系统和日志文件。
 
@@ -414,7 +414,7 @@ Windows 日志位置：
 
 需要更多帮助时，使用 **应用选项 → 前往社区提问** 或访问 [TOPST 社区](https://community.topst.ai/)。
 
-## 20. 烧录完成后
+## 10. 烧录完成后
 
 1. 确认 **完成** 画面可见。
 2. 等待应用说明操作已完成。

@@ -61,14 +61,14 @@ TOPST Imager는 TOPST 보드에 운영체제 또는 펌웨어를 설치합니다
 
 # Windows
 
-## 5. TOPST Imager 설치
+## 1. TOPST Imager 설치
 
-### 5.1 요구 사항
+### 1.1 요구 사항
 
 - Windows 10 64비트 이상
 - Windows 11 64비트
 
-### 5.2 설치
+### 1.2 설치
 
 1. 공식 TOPST Imager Windows 설치 프로그램을 다운로드합니다.
 2. 설치 프로그램을 두 번 클릭합니다.
@@ -78,9 +78,9 @@ TOPST Imager는 TOPST 보드에 운영체제 또는 펌웨어를 설치합니다
 
 TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Windows가 관리자 권한을 요청할 수 있습니다. 공식 TOPST 배포 파일인지 확인한 후 **예**를 선택하세요.
 
-## 6. 보드, 운영체제 및 버전 선택
+## 2. 보드, 운영체제 및 버전 선택
 
-### 6.1 보드 선택
+### 2.1 보드 선택
 
 ![TOPST 보드 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20Board%20Selection.png)
 
@@ -89,7 +89,7 @@ TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Window
 
 보드를 두 번 클릭해도 다음으로 이동할 수 있습니다. 잘못 선택했다면 **이전**으로 돌아가 다시 선택하세요.
 
-### 6.2 운영체제 선택
+### 2.2 운영체제 선택
 
 ![공식 운영체제 또는 사용자 이미지 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20OS%20Selection.png)
 
@@ -97,7 +97,7 @@ TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Window
 2. 컴퓨터에 저장된 파일을 사용하려면 **사용자 정의 사용**을 선택합니다.
 3. **다음**을 선택하거나 선택한 행을 두 번 클릭합니다.
 
-### 6.3 버전 선택
+### 2.3 버전 선택
 
 ![이미지 버전 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20Version%20Selection.png)
 
@@ -109,7 +109,7 @@ TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Window
 
 프로젝트에서 특정 릴리스를 요구하지 않는다면 최신 안정 버전 또는 권장 버전을 사용하세요.
 
-### 6.4 데이터 삭제 확인
+### 2.4 데이터 삭제 확인
 
 ![eMMC 삭제 경고 확인](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
@@ -118,7 +118,7 @@ TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Window
 
 이 단계에서 **취소**를 선택하면 보드는 삭제되지 않습니다.
 
-## 7. Windows에서 D3-G 플래싱
+## 3. Windows에서 D3-G 플래싱
 
 Windows의 D3-G 플래싱 설정은 3단계입니다.
 
@@ -158,7 +158,7 @@ Windows 장치 관리자의 범용 직렬 버스 컨트롤러 아래에 `Telechi
 
 각 진행률은 0%에서 100%로 바뀝니다. **완료** 화면이 나타날 때까지 아무것도 분리하지 마세요.
 
-## 8. Windows에서 AI-G 플래싱
+## 4. Windows에서 AI-G 플래싱
 
 AI-G 플래싱 설정은 3단계입니다.
 
@@ -187,7 +187,7 @@ COM 포트가 여러 개면 AI-G USB 케이블을 잠시 분리하세요. 사라
 
 진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다.
 
-## 9. Windows에서 VCP-G 플래싱
+## 5. Windows에서 VCP-G 플래싱
 
 VCP-G 플래싱 설정은 2단계입니다.
 
@@ -205,7 +205,7 @@ VCP-G 플래싱 설정은 2단계입니다.
 
 진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다.
 
-## 10. Windows에서 사용자 이미지 사용
+## 6. Windows에서 사용자 이미지 사용
 
 1. 먼저 올바른 보드를 선택합니다.
 2. 운영체제 화면에서 **사용자 정의 사용**을 한 번 클릭합니다.
@@ -225,7 +225,7 @@ VCP-G 플래싱 설정은 2단계입니다.
 
 # Linux
 
-## 11. Linux 요구 사항
+## 1. Linux 요구 사항
 
 현재 Linux 배포판은 **x86_64 Linux**를 지원합니다. Windows `.exe` FWDN 파일은 Linux에서 사용할 수 없습니다.
 
@@ -252,7 +252,7 @@ sudo apt install unzip policykit-1 acl
 
 TOPST Imager 또는 FWDN을 `sudo`로 실행하지 **마세요**. TOPST Imager는 선택한 시리얼 장치에 임시 접근 권한이 필요할 때만 관리자 권한을 요청합니다.
 
-## 12. Linux 패키지 설치 및 실행
+## 2. Linux 패키지 설치 및 실행
 
 정확한 압축 파일 이름은 릴리스마다 다를 수 있습니다. `.tar.gz` 패키지의 예:
 
@@ -266,11 +266,11 @@ chmod +x topst-imager
 
 다운로드한 패키지의 실제 파일 및 폴더 이름을 사용하세요. 사용자용 패키지에는 Qt 런타임이 포함되어 있어야 합니다. Qt 라이브러리가 없다면 root로 실행하지 말고 완전한 공식 Linux 패키지를 다운로드하세요.
 
-## 13. Linux에서 이미지 선택
+## 3. Linux에서 이미지 선택
 
-보드, 운영체제, 버전, 사용자 이미지 및 eMMC 경고 화면은 6절과 10절의 Windows 화면과 동일하게 동작합니다.
+보드, 운영체제, 버전, 사용자 이미지 및 eMMC 경고 화면은 2절과 6절의 Windows 화면과 동일하게 동작합니다.
 
-## 14. Linux에서 D3-G 플래싱
+## 4. Linux에서 D3-G 플래싱
 
 Windows VTC 드라이버 설치 화면이 없으므로 Linux의 D3-G 플래싱 설정은 2단계입니다.
 
@@ -289,7 +289,7 @@ Linux는 D3-G FWDN USB 장치를 직접 감지합니다. 감지되지 않으면 
 
 다운로드, 압축 해제 및 플래싱이 완료될 때까지 기다립니다. 사용자 `.fai` 이미지는 플래싱 진행률만 표시합니다.
 
-## 15. Linux에서 AI-G 플래싱
+## 5. Linux에서 AI-G 플래싱
 
 AI-G 플래싱 설정은 3단계입니다.
 
@@ -319,7 +319,7 @@ TOPST Imager는 Linux Ethernet 주소를 자동 변경하지 않습니다. Linux
 
 **완료** 화면이 나타날 때까지 기다립니다.
 
-## 16. Linux에서 VCP-G 플래싱
+## 6. Linux에서 VCP-G 플래싱
 
 Windows와 마찬가지로 Linux의 VCP-G 플래싱 설정은 2단계입니다.
 
@@ -334,7 +334,7 @@ Windows와 마찬가지로 Linux의 VCP-G 플래싱 설정은 2단계입니다.
 
 진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다. 사용자 `.rom` 이미지는 플래싱 진행률만 표시합니다.
 
-## 17. 다운로드, 재시도 및 임시 파일
+## 7. 다운로드, 재시도 및 임시 파일
 
 공식 이미지를 사용하면 TOPST Imager는 다음과 같이 동작합니다.
 
@@ -348,7 +348,7 @@ Windows와 마찬가지로 Linux의 VCP-G 플래싱 설정은 2단계입니다.
 
 복구 가능한 일부 플래싱 오류에서는 준비된 패키지를 임시로 유지하므로 다시 다운로드하지 않고 안내된 설정 단계로 돌아갈 수 있습니다.
 
-## 18. 오류 창이 나타날 때
+## 8. 오류 창이 나타날 때
 
 TOPST Imager는 알려진 FWDN 오류를 감지하면 즉시 오류 창을 엽니다. 3초 카운트다운이 표시되면 메시지를 읽으세요. 카운트다운 후 앱이 필요한 복구 단계로 돌아갑니다. 나열된 항목을 확인하고 **확인**을 선택하세요.
 
@@ -394,7 +394,7 @@ TOPST Imager는 알려진 FWDN 오류를 감지하면 즉시 오류 창을 엽�
 
 `Failed to write in eFlash` 또는 `Failed FWDN` 오류라면 메시지에 따라 첫 번째 플래싱 설정 단계부터 다시 시작하세요. 기록 작업이 진행 중일 때는 보드를 분리하지 마세요.
 
-## 19. 로그 파일
+## 9. 로그 파일
 
 도움을 요청할 때는 전체 오류 메시지, 보드 이름, 선택한 이미지 버전, 운영체제 및 로그 파일을 함께 제공하세요.
 
@@ -412,7 +412,7 @@ Windows 로그 경로:
 
 추가 도움이 필요하면 **앱 옵션 → 커뮤니티에서 질문하기**를 사용하거나 [TOPST 커뮤니티](https://community.topst.ai/)를 방문하세요.
 
-## 20. 플래싱 완료 후
+## 10. 플래싱 완료 후
 
 1. **완료** 화면이 보이는지 확인합니다.
 2. TOPST Imager가 작업 완료를 알릴 때까지 기다립니다.
