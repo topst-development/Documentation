@@ -46,14 +46,14 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 ## 4. 應用程式選項
 
-選取主視窗左下角的 **App Options**。
+選取主視窗左下角的 **應用程式選項**。
 
-![TOPST Imager 應用程式選項](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+![TOPST Imager 應用程式選項](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20App%20Options.png)
 
-1. **Language：** 選取語言後立即切換畫面，以便預覽。
-2. **TOPST Imager User Guide：** 在瀏覽器中開啟本使用者指南。
-3. **Ask the Community：** 開啟 [TOPST 社群](https://community.topst.ai/)。
-4. **Save：** 儲存所選語言。選取 **Cancel**、按 `Esc` 或點選視窗外部，會恢復開啟視窗前的語言。
+1. **語言：** 選取語言後立即切換畫面，以便預覽。
+2. **TOPST Imager 使用者指南：** 在瀏覽器中開啟本使用者指南。
+3. **前往社群提問：** 開啟 [TOPST 社群](https://community.topst.ai/)。
+4. **儲存：** 儲存所選語言。選取 **取消**、按 `Esc` 或點選視窗外部，會恢復開啟視窗前的語言。
 
 支援韓文、英文、日文、簡體中文、繁體中文、泰文與德文。淺色或深色外觀自動跟隨作業系統佈景主題。
 
@@ -70,53 +70,55 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 ### 5.2 安裝
 
+安裝程式支援韓文與英文。下方 **Install** 與 **Launch TOPST Imager now** 是英文安裝程式中的文字。
+
 1. 下載官方 TOPST Imager Windows 安裝程式。
 2. 按兩下安裝程式。
 3. 閱讀並接受授權合約。
 4. 選取 **Install**。
-5. 完成後選取 **Launch TOPST Imager**。
+5. 完成後選取 **Launch TOPST Imager now**。
 
-啟動應用程式或 VTC 驅動程式安裝精靈時，Windows 可能要求管理員權限。確認檔案來自官方 TOPST 發行套件後，再選取 **Yes**。
+啟動應用程式或 VTC 驅動程式安裝精靈時，Windows 可能要求管理員權限。確認檔案來自官方 TOPST 發行套件後，再選取 **是**。
 
 ## 6. 選取開發板、作業系統與版本
 
 ### 6.1 選取開發板
 
-![選取 TOPST 開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
+![選取 TOPST 開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20Board%20Selection.png)
 
 1. 選取與手邊產品一致的開發板。
-2. 確認該列反白並顯示 **Selected**，再選取 **Next**。
+2. 確認該列反白並顯示 **已選擇**，再選取 **下一步**。
 
-也可按兩下開發板繼續。選錯時選取 **Back** 返回重選。
+也可按兩下開發板繼續。選錯時選取 **返回** 返回重選。
 
 ### 6.2 選取作業系統
 
-![選取官方作業系統或自訂映像檔](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
+![選取官方作業系統或自訂映像檔](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20OS%20Selection.png)
 
 1. 選取 TOPST 提供的作業系統。
-2. 使用電腦中的檔案時選取 **Use Custom Image**。
-3. 選取 **Next** 或按兩下所選列。
+2. 使用電腦中的檔案時選取 **使用自訂映像**。
+3. 選取 **下一步** 或按兩下所選列。
 
 ### 6.3 選取版本
 
-![選取映像檔版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+![選取映像檔版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20Version%20Selection.png)
 
 1. 選取所需版本，檢查說明、發行日期、下載大小與解壓縮大小。
-2. 選取 **Flashing**。
+2. 選取 **燒錄**。
 
-- **Download size** 是從網際網路傳輸的壓縮檔大小。
-- **Extracted size** 是解壓縮後預計所需的磁碟空間。
+- **線上下載** 是從網際網路傳輸的壓縮檔大小。
+- **最低所需空間** 是解壓縮後預計所需的磁碟空間。
 
 除非專案要求特定版本，否則使用最新穩定版或建議版本。
 
 ### 6.4 確認清除資料
 
-![確認 eMMC 清除警告](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+![確認 eMMC 清除警告](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
-1. 需要重新檢查開發板、映像檔或備份時，選取 **Cancel**。
-2. 只有瞭解所選開發板的 eMMC 資料可能被刪除後，才選取 **Confirm**。
+1. 需要重新檢查開發板、映像檔或備份時，選取 **取消**。
+2. 只有瞭解所選開發板的 eMMC 資料可能被刪除後，才選取 **確認**。
 
-此時選取 **Cancel** 不會清除開發板。
+此時選取 **取消** 不會清除開發板。
 
 ## 7. 在 Windows 上燒錄 D3-G
 
@@ -124,27 +126,27 @@ Windows 上的 D3-G 燒錄設定分為三步。
 
 ### 步驟 1：安裝 VTC 驅動程式
 
-![安裝 D3-G VTC 驅動程式](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+![安裝 D3-G VTC 驅動程式](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
-1. 選取 **Install Driver**。
+1. 選取 **安裝驅動程式**。
 2. 核准 Windows 管理員要求。
 3. 完成 VTC 驅動程式安裝。
 4. 返回 TOPST Imager。
-5. 選取 **Driver Installation Complete**。
+5. 選取 **驅動程式安裝完成**。
 
-通常每部 Windows 電腦只需安裝一次。取消管理員要求就不會安裝驅動程式；準備好後再次選取 **Install Driver**。
+通常每部 Windows 電腦只需安裝一次。取消管理員要求就不會安裝驅動程式；準備好後再次選取 **安裝驅動程式**。
 
 ### 步驟 2：進入開機模式並偵測開發板
 
-![進入 D3-G 開機模式並偵測開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+![進入 D3-G 開機模式並偵測開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. 按開機模式動畫的閃爍標記操作。
 2. 按住 **BOOT**。
 3. 按住 BOOT 時按下並放開 **RESET**。
 4. 放開 BOOT。
 5. 牢固連接 FWDN USB Type-C 資料傳輸線。
-6. 狀態未自動更新時選取 **Check Again**。
-7. 狀態變為已連接後選取 **Start Flashing**。
+6. 狀態未自動更新時選取 **重新檢查**。
+7. 狀態變為已連接後選取 **開始燒錄**。
 
 Windows 裝置管理員的通用序列匯流排控制器下，可能顯示類似 `Telechips TCCxxxx VTC USB Driver` 的名稱。
 
@@ -156,7 +158,7 @@ Windows 裝置管理員的通用序列匯流排控制器下，可能顯示類似
 2. 解壓縮
 3. 燒錄
 
-各項進度從 0% 到 100%。請等待 **Complete** 畫面後再中斷連線。
+各項進度從 0% 到 100%。請等待 **完成** 畫面後再中斷連線。
 
 ## 8. 在 Windows 上燒錄 AI-G
 
@@ -185,7 +187,7 @@ AI-G 燒錄設定分為三步。
 
 ### 步驟 3：燒錄
 
-等待達到 100% 並出現 **Complete** 畫面。
+等待達到 100% 並出現 **完成** 畫面。
 
 ## 9. 在 Windows 上燒錄 VCP-G
 
@@ -203,13 +205,13 @@ VCP-G 燒錄設定分為兩步。
 
 ### 步驟 2：燒錄
 
-等待達到 100% 並出現 **Complete** 畫面。
+等待達到 100% 並出現 **完成** 畫面。
 
 ## 10. 在 Windows 上使用自訂映像檔
 
 1. 先選取正確的開發板。
-2. 在作業系統畫面按一下 **Use Custom Image**。
-3. 選取 **Next** 或按兩下 **Use Custom Image**。
+2. 在作業系統畫面按一下 **使用自訂映像**。
+3. 選取 **下一步** 或按兩下 **使用自訂映像**。
 4. 將檔案拖入放置區域，或選取瀏覽按鈕。
 5. 檢查檔名後繼續。
 
@@ -219,7 +221,7 @@ VCP-G 燒錄設定分為兩步。
 - AI-G: `.fai`
 - VCP-G: `.rom`
 
-檔案已在本機，因此 **Download** 和 **Extraction** 進度列會隱藏。對應開發板的驅動程式、網路、開機模式、COM 連接埠與燒錄步驟仍適用。
+檔案已在本機，因此 **下載** 和 **解壓縮** 進度列會隱藏。對應開發板的驅動程式、網路、開機模式、COM 連接埠與燒錄步驟仍適用。
 
 ---
 
@@ -280,7 +282,7 @@ chmod +x topst-imager
 2. 按下並放開 **RESET**。
 3. 放開 BOOT。
 4. 連接 FWDN USB Type-C 資料傳輸線。
-5. 必要時選取 **Check Again**。
+5. 必要時選取 **重新檢查**。
 6. 偵測到 D3-G 後繼續。
 
 Linux 直接偵測 D3-G FWDN USB 裝置。未偵測到時，請檢查資料傳輸線、電源、開機模式，以及 Linux 套件提供且已安裝的 udev 規則。
@@ -309,7 +311,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 1. 按開機模式動畫操作。
 2. 選取 AI-G 連接埠，例如 `/dev/ttyUSB0`。
-3. 連接埠無法寫入時選取 **Grant Temporary Access**。
+3. 連接埠無法寫入時選取 **授予暫時權限**。
 4. 核准 Linux 管理員視窗。
 5. 權限就緒後燒錄按鈕可用。
 
@@ -317,7 +319,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 ### 步驟 3：燒錄
 
-等待 **Complete** 畫面。
+等待 **完成** 畫面。
 
 ## 16. 在 Linux 上燒錄 VCP-G
 
@@ -327,12 +329,12 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 1. 按開機模式指南操作。
 2. 選取 VCP-G 連接埠，例如 `/dev/ttyUSB0`。
-3. 若顯示 **Grant Temporary Access**，請選取並核准管理員視窗。
+3. 若顯示 **授予暫時權限**，請選取並核准管理員視窗。
 4. 所選連接埠可存取後繼續。
 
 ### 步驟 2：燒錄
 
-等待達到 100% 並出現 **Complete** 畫面。自訂 `.rom` 映像檔僅顯示燒錄進度。
+等待達到 100% 並出現 **完成** 畫面。自訂 `.rom` 映像檔僅顯示燒錄進度。
 
 ## 17. 下載、重試與暫存檔案
 
@@ -350,7 +352,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
 ## 18. 出現錯誤視窗時
 
-偵測到已知 FWDN 錯誤後會立即開啟錯誤視窗。若顯示三秒倒數，請閱讀訊息；倒數後返回所需復原步驟。檢查所列項目後選取 **OK**。
+偵測到已知 FWDN 錯誤後會立即開啟錯誤視窗。若顯示三秒倒數，請閱讀訊息；倒數後返回所需復原步驟。檢查所列項目後選取 **確認**。
 
 ### D3-G 連線錯誤
 
@@ -388,7 +390,7 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 2. 重新連接 USB 資料傳輸線。
 3. 再次進入 Firmware Download Mode。
 4. 重新整理連接埠清單。
-5. Linux 上選取連接埠後選取 **Grant Temporary Access**。
+5. Linux 上選取連接埠後選取 **授予暫時權限**。
 
 ### 燒錄完全失敗
 
@@ -410,11 +412,11 @@ Windows 記錄檔位置：
 ~/.local/share/Telechips/TOPST Imager/logs/topst-imager.log
 ```
 
-需要更多協助時，使用 **App Options → Ask the Community** 或造訪 [TOPST 社群](https://community.topst.ai/)。
+需要更多協助時，使用 **應用程式選項 → 前往社群提問** 或造訪 [TOPST 社群](https://community.topst.ai/)。
 
 ## 20. 燒錄完成後
 
-1. 確認 **Complete** 畫面可見。
+1. 確認 **完成** 畫面可見。
 2. 等待應用程式說明操作已完成。
 3. 安全關閉開發板電源。
 4. 拔除 FWDN 線，或還原正常使用的接線。

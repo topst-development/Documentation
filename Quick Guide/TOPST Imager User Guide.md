@@ -48,7 +48,7 @@ While flashing is in progress:
 
 Select **App Options** at the bottom-left of the main window.
 
-![TOPST Imager App Options](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+![TOPST Imager App Options](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20App%20Options.png)
 
 1. **Language:** Selecting a language changes the screen immediately so that you can preview it.
 2. **TOPST Imager User Guide:** Opens this user guide in your web browser.
@@ -74,7 +74,7 @@ Supported languages are Korean, English, Japanese, Simplified Chinese, Tradition
 2. Double-click the installer.
 3. Read and accept the license agreement.
 4. Select **Install**.
-5. When installation is complete, select **Launch TOPST Imager**.
+5. When installation is complete, select **Launch TOPST Imager now**.
 
 Windows may ask for administrator permission when TOPST Imager or the VTC driver installer starts. Confirm that the file came from the official TOPST distribution before selecting **Yes**.
 
@@ -82,7 +82,7 @@ Windows may ask for administrator permission when TOPST Imager or the VTC driver
 
 ### 6.1 Select the Board
 
-![Select a TOPST board](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
+![Select a TOPST board](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20Board%20Selection.png)
 
 1. Select the board that matches the product in front of you.
 2. Check that the row is highlighted and says **Selected**, and then select **Next**.
@@ -91,7 +91,7 @@ You can also double-click a board to continue. If you choose the wrong board, se
 
 ### 6.2 Select an Operating System
 
-![Select an official operating system or a custom image](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
+![Select an official operating system or a custom image](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20OS%20Selection.png)
 
 1. Select an operating system supplied by TOPST.
 2. To use a file already stored on the computer, select **Use Custom Image**.
@@ -99,19 +99,19 @@ You can also double-click a board to continue. If you choose the wrong board, se
 
 ### 6.3 Select a Version
 
-![Select an image version](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+![Select an image version](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20Version%20Selection.png)
 
 1. Select the required version. Check its description, release date, download size, and extracted size.
 2. Select **Flashing**.
 
-- **Download size** is the compressed file size transferred from the internet.
-- **Extracted size** is the approximate disk space needed after extraction.
+- **Online download** is the compressed file size transferred from the internet.
+- **Minimum required space** is the approximate disk space needed after extraction.
 
 Unless your project requires a specific release, use the latest stable or recommended version.
 
 ### 6.4 Confirm Data Erasure
 
-![Confirm the eMMC erase warning](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+![Confirm the eMMC erase warning](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
 1. Select **Cancel** if you need to check the board, image, or backup again.
 2. Select **Confirm** only when you understand that the selected board's eMMC data may be deleted.
@@ -124,7 +124,7 @@ D3-G uses three flashing setup steps on Windows.
 
 ### Step 1: Install the VTC Driver
 
-![Install the D3-G VTC driver](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+![Install the D3-G VTC driver](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
 1. Select **Install Driver**.
 2. Approve the Windows administrator request.
@@ -136,7 +136,7 @@ You normally install this driver only once on each Windows computer. If you canc
 
 ### Step 2: Enter Boot Mode and Detect the Board
 
-![Enter D3-G boot mode and detect the board](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+![Enter D3-G boot mode and detect the board](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. Follow the flashing markers in the boot-mode animation.
 2. Press and hold the **BOOT** button.
@@ -219,7 +219,7 @@ Use the correct file type:
 - AI-G: `.fai`
 - VCP-G: `.rom`
 
-A custom image is already on the computer, so the **Download** and **Extraction** progress rows are hidden. The same board-specific driver, network, boot-mode, COM-port, and flashing steps still apply.
+A custom image is already on the computer, so the **Download** and **Extract** progress rows are hidden. The same board-specific driver, network, boot-mode, COM-port, and flashing steps still apply.
 
 ---
 
@@ -350,7 +350,7 @@ Some recoverable flashing errors keep the prepared package temporarily so you ca
 
 ## 18. When an Error Window Appears
 
-TOPST Imager detects known FWDN errors and immediately opens an error window. If the window shows a three-second countdown, read the message; after the countdown the app returns to the required recovery step. Select **OK** after checking the listed items.
+TOPST Imager detects known FWDN errors and immediately opens an error window. If the window shows a three-second countdown, read the message; after the countdown the app returns to the required recovery step. Select **Confirm** after checking the listed items.
 
 ### D3-G Connection Error
 

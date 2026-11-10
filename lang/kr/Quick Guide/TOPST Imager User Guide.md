@@ -46,14 +46,14 @@ TOPST Imager는 TOPST 보드에 운영체제 또는 펌웨어를 설치합니다
 
 ## 4. 앱 옵션
 
-메인 창 왼쪽 아래의 **App Options**를 선택합니다.
+메인 창 왼쪽 아래의 **앱 옵션**을 선택합니다.
 
-![TOPST Imager 앱 옵션](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+![TOPST Imager 앱 옵션](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20App%20Options.png)
 
-1. **Language:** 언어를 선택하면 화면이 즉시 바뀌어 미리 확인할 수 있습니다.
-2. **TOPST Imager User Guide:** 웹 브라우저에서 이 사용자 가이드를 엽니다.
-3. **Ask the Community:** [TOPST 커뮤니티](https://community.topst.ai/)를 엽니다.
-4. **Save:** 선택한 언어를 저장합니다. **Cancel**, `Esc` 키 또는 창 바깥을 클릭하면 옵션 창을 열기 전의 언어로 돌아갑니다.
+1. **언어:** 언어를 선택하면 화면이 즉시 바뀌어 미리 확인할 수 있습니다.
+2. **TOPST Imager 사용자 가이드:** 웹 브라우저에서 이 사용자 가이드를 엽니다.
+3. **커뮤니티에서 질문하기:** [TOPST 커뮤니티](https://community.topst.ai/)를 엽니다.
+4. **저장:** 선택한 언어를 저장합니다. **취소**, `Esc` 키 또는 창 바깥을 클릭하면 옵션 창을 열기 전의 언어로 돌아갑니다.
 
 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 태국어, 독일어를 지원합니다. 밝은 테마와 어두운 테마는 운영체제 설정을 자동으로 따릅니다.
 
@@ -73,50 +73,50 @@ TOPST Imager는 TOPST 보드에 운영체제 또는 펌웨어를 설치합니다
 1. 공식 TOPST Imager Windows 설치 프로그램을 다운로드합니다.
 2. 설치 프로그램을 두 번 클릭합니다.
 3. 사용권 계약을 읽고 동의합니다.
-4. **Install**을 선택합니다.
-5. 설치가 완료되면 **Launch TOPST Imager**를 선택합니다.
+4. **설치**를 선택합니다.
+5. 설치가 완료되면 **TOPST Imager 바로 실행**을 선택합니다.
 
-TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Windows가 관리자 권한을 요청할 수 있습니다. 공식 TOPST 배포 파일인지 확인한 후 **Yes**를 선택하세요.
+TOPST Imager 또는 VTC 드라이버 설치 프로그램을 시작할 때 Windows가 관리자 권한을 요청할 수 있습니다. 공식 TOPST 배포 파일인지 확인한 후 **예**를 선택하세요.
 
 ## 6. 보드, 운영체제 및 버전 선택
 
 ### 6.1 보드 선택
 
-![TOPST 보드 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
+![TOPST 보드 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20Board%20Selection.png)
 
 1. 실제 사용하는 제품과 일치하는 보드를 선택합니다.
-2. 행이 강조되고 **Selected**가 표시되는지 확인한 다음 **Next**를 선택합니다.
+2. 행이 강조되고 **선택됨**이 표시되는지 확인한 다음 **다음**을 선택합니다.
 
-보드를 두 번 클릭해도 다음으로 이동할 수 있습니다. 잘못 선택했다면 **Back**으로 돌아가 다시 선택하세요.
+보드를 두 번 클릭해도 다음으로 이동할 수 있습니다. 잘못 선택했다면 **이전**으로 돌아가 다시 선택하세요.
 
 ### 6.2 운영체제 선택
 
-![공식 운영체제 또는 사용자 이미지 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
+![공식 운영체제 또는 사용자 이미지 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20OS%20Selection.png)
 
 1. TOPST가 제공하는 운영체제를 선택합니다.
-2. 컴퓨터에 저장된 파일을 사용하려면 **Use Custom Image**를 선택합니다.
-3. **Next**를 선택하거나 선택한 행을 두 번 클릭합니다.
+2. 컴퓨터에 저장된 파일을 사용하려면 **사용자 정의 사용**을 선택합니다.
+3. **다음**을 선택하거나 선택한 행을 두 번 클릭합니다.
 
 ### 6.3 버전 선택
 
-![이미지 버전 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+![이미지 버전 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20Version%20Selection.png)
 
 1. 필요한 버전을 선택합니다. 설명, 출시일, 다운로드 크기와 압축 해제 크기를 확인합니다.
-2. **Flashing**을 선택합니다.
+2. **플래싱**을 선택합니다.
 
-- **Download size**는 인터넷에서 전송되는 압축 파일의 크기입니다.
-- **Extracted size**는 압축 해제 후 필요한 대략적인 디스크 공간입니다.
+- **온라인 다운로드**는 인터넷에서 전송되는 압축 파일의 크기입니다.
+- **최소 필요 공간**은 압축 해제 후 필요한 대략적인 디스크 공간입니다.
 
 프로젝트에서 특정 릴리스를 요구하지 않는다면 최신 안정 버전 또는 권장 버전을 사용하세요.
 
 ### 6.4 데이터 삭제 확인
 
-![eMMC 삭제 경고 확인](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+![eMMC 삭제 경고 확인](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
-1. 보드, 이미지 또는 백업을 다시 확인해야 한다면 **Cancel**을 선택합니다.
-2. 선택한 보드의 eMMC 데이터가 삭제될 수 있음을 이해한 경우에만 **Confirm**을 선택합니다.
+1. 보드, 이미지 또는 백업을 다시 확인해야 한다면 **취소**를 선택합니다.
+2. 선택한 보드의 eMMC 데이터가 삭제될 수 있음을 이해한 경우에만 **확인**을 선택합니다.
 
-이 단계에서 **Cancel**을 선택하면 보드는 삭제되지 않습니다.
+이 단계에서 **취소**를 선택하면 보드는 삭제되지 않습니다.
 
 ## 7. Windows에서 D3-G 플래싱
 
@@ -124,27 +124,27 @@ Windows의 D3-G 플래싱 설정은 3단계입니다.
 
 ### 1단계: VTC 드라이버 설치
 
-![D3-G VTC 드라이버 설치](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+![D3-G VTC 드라이버 설치](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
-1. **Install Driver**를 선택합니다.
+1. **드라이버 설치**를 선택합니다.
 2. Windows 관리자 권한 요청을 승인합니다.
 3. VTC 드라이버 설치를 완료합니다.
 4. TOPST Imager로 돌아옵니다.
-5. **Driver Installation Complete**를 선택합니다.
+5. **드라이버 설치 완료**를 선택합니다.
 
-일반적으로 Windows 컴퓨터마다 한 번만 설치하면 됩니다. 관리자 권한 요청을 취소하면 드라이버가 설치되지 않습니다. 준비되면 **Install Driver**를 다시 선택하세요.
+일반적으로 Windows 컴퓨터마다 한 번만 설치하면 됩니다. 관리자 권한 요청을 취소하면 드라이버가 설치되지 않습니다. 준비되면 **드라이버 설치**를 다시 선택하세요.
 
 ### 2단계: 부트 모드 진입 및 보드 감지
 
-![D3-G 부트 모드 진입 및 보드 감지](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+![D3-G 부트 모드 진입 및 보드 감지](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. 부트 모드 애니메이션의 깜박이는 표시를 따릅니다.
 2. **BOOT** 버튼을 길게 누릅니다.
 3. BOOT을 누른 상태에서 **RESET**을 눌렀다 놓습니다.
 4. BOOT을 놓습니다.
 5. FWDN USB Type-C 데이터 케이블을 단단히 연결합니다.
-6. 상태가 자동 갱신되지 않으면 **Check Again**을 선택합니다.
-7. 연결 상태로 바뀌면 **Start Flashing**을 선택합니다.
+6. 상태가 자동 갱신되지 않으면 **다시 확인**을 선택합니다.
+7. 연결 상태로 바뀌면 **플래싱 진행**을 선택합니다.
 
 Windows 장치 관리자의 범용 직렬 버스 컨트롤러 아래에 `Telechips TCCxxxx VTC USB Driver`와 비슷한 이름으로 표시될 수 있습니다.
 
@@ -156,7 +156,7 @@ Windows 장치 관리자의 범용 직렬 버스 컨트롤러 아래에 `Telechi
 2. 압축 해제
 3. 플래싱
 
-각 진행률은 0%에서 100%로 바뀝니다. **Complete** 화면이 나타날 때까지 아무것도 분리하지 마세요.
+각 진행률은 0%에서 100%로 바뀝니다. **완료** 화면이 나타날 때까지 아무것도 분리하지 마세요.
 
 ## 8. Windows에서 AI-G 플래싱
 
@@ -185,7 +185,7 @@ COM 포트가 여러 개면 AI-G USB 케이블을 잠시 분리하세요. 사라
 
 ### 3단계: 플래싱
 
-진행률이 100%가 되고 **Complete** 화면이 나타날 때까지 기다립니다.
+진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다.
 
 ## 9. Windows에서 VCP-G 플래싱
 
@@ -203,13 +203,13 @@ VCP-G 플래싱 설정은 2단계입니다.
 
 ### 2단계: 플래싱
 
-진행률이 100%가 되고 **Complete** 화면이 나타날 때까지 기다립니다.
+진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다.
 
 ## 10. Windows에서 사용자 이미지 사용
 
 1. 먼저 올바른 보드를 선택합니다.
-2. 운영체제 화면에서 **Use Custom Image**를 한 번 클릭합니다.
-3. **Next**를 선택하거나 **Use Custom Image**를 두 번 클릭합니다.
+2. 운영체제 화면에서 **사용자 정의 사용**을 한 번 클릭합니다.
+3. **다음**을 선택하거나 **사용자 정의 사용**을 두 번 클릭합니다.
 4. 파일을 드롭 영역으로 끌어 놓거나 파일 찾기 버튼을 선택합니다.
 5. 선택한 파일 이름을 확인하고 진행합니다.
 
@@ -219,7 +219,7 @@ VCP-G 플래싱 설정은 2단계입니다.
 - AI-G: `.fai`
 - VCP-G: `.rom`
 
-사용자 이미지는 컴퓨터에 이미 있으므로 **Download**와 **Extraction** 진행률 행이 숨겨집니다. 보드별 드라이버, 네트워크, 부트 모드, COM 포트 및 플래싱 절차는 동일하게 적용됩니다.
+사용자 이미지는 컴퓨터에 이미 있으므로 **다운로드**와 **압축 해제** 진행률 행이 숨겨집니다. 보드별 드라이버, 네트워크, 부트 모드, COM 포트 및 플래싱 절차는 동일하게 적용됩니다.
 
 ---
 
@@ -280,7 +280,7 @@ Windows VTC 드라이버 설치 화면이 없으므로 Linux의 D3-G 플래싱 �
 2. **RESET**을 눌렀다 놓습니다.
 3. BOOT을 놓습니다.
 4. FWDN USB Type-C 데이터 케이블을 연결합니다.
-5. 필요하면 **Check Again**을 선택합니다.
+5. 필요하면 **다시 확인**을 선택합니다.
 6. D3-G가 감지되면 진행합니다.
 
 Linux는 D3-G FWDN USB 장치를 직접 감지합니다. 감지되지 않으면 USB 데이터 케이블, 보드 전원, 부트 모드 및 Linux 패키지와 함께 제공되어 설치된 udev 규칙을 확인하세요.
@@ -309,7 +309,7 @@ TOPST Imager는 Linux Ethernet 주소를 자동 변경하지 않습니다. Linux
 
 1. 부트 모드 애니메이션을 따릅니다.
 2. `/dev/ttyUSB0`과 같은 AI-G 포트를 선택합니다.
-3. 포트에 쓰기 권한이 없다면 **Grant Temporary Access**를 선택합니다.
+3. 포트에 쓰기 권한이 없다면 **임시 권한 설정**을 선택합니다.
 4. Linux 관리자 창에서 승인합니다.
 5. 접근 권한이 준비되면 플래싱 버튼을 사용할 수 있습니다.
 
@@ -317,7 +317,7 @@ TOPST Imager는 Linux Ethernet 주소를 자동 변경하지 않습니다. Linux
 
 ### 3단계: 플래싱
 
-**Complete** 화면이 나타날 때까지 기다립니다.
+**완료** 화면이 나타날 때까지 기다립니다.
 
 ## 16. Linux에서 VCP-G 플래싱
 
@@ -327,12 +327,12 @@ Windows와 마찬가지로 Linux의 VCP-G 플래싱 설정은 2단계입니다.
 
 1. 부트 모드 안내를 따릅니다.
 2. `/dev/ttyUSB0`과 같은 VCP-G 포트를 선택합니다.
-3. 표시된다면 **Grant Temporary Access**를 선택하고 관리자 창에서 승인합니다.
+3. 표시된다면 **임시 권한 설정**을 선택하고 관리자 창에서 승인합니다.
 4. 선택한 포트에 접근할 수 있게 되면 진행합니다.
 
 ### 2단계: 플래싱
 
-진행률이 100%가 되고 **Complete** 화면이 나타날 때까지 기다립니다. 사용자 `.rom` 이미지는 플래싱 진행률만 표시합니다.
+진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다. 사용자 `.rom` 이미지는 플래싱 진행률만 표시합니다.
 
 ## 17. 다운로드, 재시도 및 임시 파일
 
@@ -350,7 +350,7 @@ Windows와 마찬가지로 Linux의 VCP-G 플래싱 설정은 2단계입니다.
 
 ## 18. 오류 창이 나타날 때
 
-TOPST Imager는 알려진 FWDN 오류를 감지하면 즉시 오류 창을 엽니다. 3초 카운트다운이 표시되면 메시지를 읽으세요. 카운트다운 후 앱이 필요한 복구 단계로 돌아갑니다. 나열된 항목을 확인하고 **OK**를 선택하세요.
+TOPST Imager는 알려진 FWDN 오류를 감지하면 즉시 오류 창을 엽니다. 3초 카운트다운이 표시되면 메시지를 읽으세요. 카운트다운 후 앱이 필요한 복구 단계로 돌아갑니다. 나열된 항목을 확인하고 **확인**을 선택하세요.
 
 ### D3-G 연결 오류
 
@@ -388,7 +388,7 @@ TOPST Imager는 알려진 FWDN 오류를 감지하면 즉시 오류 창을 엽�
 2. USB 데이터 케이블을 다시 연결합니다.
 3. Firmware Download Mode 진입을 반복합니다.
 4. 포트 목록을 새로 고칩니다.
-5. Linux에서는 포트 선택 후 **Grant Temporary Access**를 선택합니다.
+5. Linux에서는 포트 선택 후 **임시 권한 설정**을 선택합니다.
 
 ### 플래싱이 완전히 실패함
 
@@ -410,11 +410,11 @@ Windows 로그 경로:
 ~/.local/share/Telechips/TOPST Imager/logs/topst-imager.log
 ```
 
-추가 도움이 필요하면 **App Options → Ask the Community**를 사용하거나 [TOPST 커뮤니티](https://community.topst.ai/)를 방문하세요.
+추가 도움이 필요하면 **앱 옵션 → 커뮤니티에서 질문하기**를 사용하거나 [TOPST 커뮤니티](https://community.topst.ai/)를 방문하세요.
 
 ## 20. 플래싱 완료 후
 
-1. **Complete** 화면이 보이는지 확인합니다.
+1. **완료** 화면이 보이는지 확인합니다.
 2. TOPST Imager가 작업 완료를 알릴 때까지 기다립니다.
 3. 보드 전원을 안전하게 끕니다.
 4. FWDN 케이블을 분리하거나 일반 사용에 맞게 케이블을 다시 연결합니다.

@@ -46,14 +46,14 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 ## 4. アプリのオプション
 
-メイン画面左下の **App Options** を選択します。
+メイン画面左下の **アプリオプション** を選択します。
 
-![TOPST Imager のアプリオプション](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+![TOPST Imager のアプリオプション](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20App%20Options.png)
 
-1. **Language:** 選択すると表示がすぐに切り替わり、言語を確認できます。
-2. **TOPST Imager User Guide:** Web ブラウザーでこのガイドを開きます。
-3. **Ask the Community:** [TOPST コミュニティ](https://community.topst.ai/)を開きます。
-4. **Save:** 選択した言語を保存します。**Cancel**、`Esc` キー、または画面の外側のクリックでは、オプションを開く前の言語に戻ります。
+1. **言語：** 選択すると表示がすぐに切り替わり、言語を確認できます。
+2. **TOPST Imager ユーザーガイド：** Web ブラウザーでこのガイドを開きます。
+3. **コミュニティで質問する：** [TOPST コミュニティ](https://community.topst.ai/)を開きます。
+4. **保存：** 選択した言語を保存します。**キャンセル**、`Esc` キー、または画面の外側のクリックでは、オプションを開く前の言語に戻ります。
 
 韓国語、英語、日本語、簡体字中国語、繁体字中国語、タイ語、ドイツ語に対応します。ライト／ダーク表示は OS のテーマに自動で従います。
 
@@ -70,53 +70,55 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 ### 5.2 インストール
 
+インストーラーは韓国語と英語に対応しています。以下の **Install** と **Launch TOPST Imager now** は英語インストーラーの表示です。
+
 1. 公式の Windows インストーラーをダウンロードします。
 2. インストーラーをダブルクリックします。
 3. 使用許諾契約を読み、同意します。
 4. **Install** を選択します。
-5. 完了後、**Launch TOPST Imager** を選択します。
+5. 完了後、**Launch TOPST Imager now** を選択します。
 
-アプリや VTC ドライバーの起動時に Windows が管理者権限を求める場合があります。公式 TOPST 配布ファイルであることを確認してから **Yes** を選択してください。
+アプリや VTC ドライバーの起動時に Windows が管理者権限を求める場合があります。公式 TOPST 配布ファイルであることを確認してから **はい** を選択してください。
 
 ## 6. ボード、OS、バージョンの選択
 
 ### 6.1 ボードの選択
 
-![TOPST ボードの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
+![TOPST ボードの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20Board%20Selection.png)
 
 1. 手元の製品と一致するボードを選択します。
-2. 行が強調表示され **Selected** と表示されていることを確認し、**Next** を選択します。
+2. 行が強調表示され **選択済み** と表示されていることを確認し、**次へ** を選択します。
 
-ダブルクリックでも進めます。間違えたら **Back** で戻って選び直してください。
+ダブルクリックでも進めます。間違えたら **戻る** で戻って選び直してください。
 
 ### 6.2 OS の選択
 
-![公式 OS またはカスタムイメージの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
+![公式 OS またはカスタムイメージの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20OS%20Selection.png)
 
 1. TOPST が提供する OS を選択します。
-2. コンピューター上のファイルを使う場合は **Use Custom Image** を選択します。
-3. **Next** を選択するか、選択した行をダブルクリックします。
+2. コンピューター上のファイルを使う場合は **カスタムイメージを使用** を選択します。
+3. **次へ** を選択するか、選択した行をダブルクリックします。
 
 ### 6.3 バージョンの選択
 
-![イメージのバージョンの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+![イメージのバージョンの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20Version%20Selection.png)
 
 1. 必要なバージョンを選び、説明、リリース日、ダウンロードサイズ、展開後サイズを確認します。
-2. **Flashing** を選択します。
+2. **フラッシング** を選択します。
 
-- **Download size** はインターネットから取得する圧縮ファイルのサイズです。
-- **Extracted size** は展開後に必要なディスク容量の目安です。
+- **ダウンロード** はインターネットから取得する圧縮ファイルのサイズです。
+- **必要な最小空き容量** は展開後に必要なディスク容量の目安です。
 
 プロジェクトで特定の版が必要な場合を除き、最新の安定版または推奨版を使用してください。
 
 ### 6.4 データ消去の確認
 
-![eMMC 消去警告の確認](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+![eMMC 消去警告の確認](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
-1. ボード、イメージ、バックアップを再確認する場合は **Cancel** を選択します。
-2. 選択したボードの eMMC データが消去される可能性を理解した場合のみ **Confirm** を選択します。
+1. ボード、イメージ、バックアップを再確認する場合は **キャンセル** を選択します。
+2. 選択したボードの eMMC データが消去される可能性を理解した場合のみ **確認** を選択します。
 
-この時点の **Cancel** ではボードは消去されません。
+この時点の **キャンセル** ではボードは消去されません。
 
 ## 7. Windows で D3-G に書き込む
 
@@ -124,27 +126,27 @@ Windows の D3-G 書き込み設定は 3 ステップです。
 
 ### ステップ 1: VTC ドライバーのインストール
 
-![D3-G VTC ドライバーのインストール](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+![D3-G VTC ドライバーのインストール](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
-1. **Install Driver** を選択します。
+1. **ドライバーをインストール** を選択します。
 2. Windows の管理者権限要求を承認します。
 3. VTC ドライバーのインストールを完了します。
 4. TOPST Imager に戻ります。
-5. **Driver Installation Complete** を選択します。
+5. **ドライバーのインストール完了** を選択します。
 
-通常は各 Windows コンピューターで一度だけ必要です。権限要求をキャンセルするとインストールされません。準備ができたら **Install Driver** を再選択してください。
+通常は各 Windows コンピューターで一度だけ必要です。権限要求をキャンセルするとインストールされません。準備ができたら **ドライバーをインストール** を再選択してください。
 
 ### ステップ 2: ブートモードとボードの検出
 
-![D3-G のブートモードとボード検出](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+![D3-G のブートモードとボード検出](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. ブートモードのアニメーションの点滅表示に従います。
 2. **BOOT** を押し続けます。
 3. BOOT を押したまま **RESET** を押して離します。
 4. BOOT を離します。
 5. FWDN USB Type-C データケーブルを確実に接続します。
-6. 状態が自動更新されない場合は **Check Again** を選択します。
-7. 接続済みになったら **Start Flashing** を選択します。
+6. 状態が自動更新されない場合は **再確認** を選択します。
+7. 接続済みになったら **フラッシング開始** を選択します。
 
 Windows デバイスマネージャーの USB コントローラー配下に `Telechips TCCxxxx VTC USB Driver` のような名前で表示される場合があります。
 
@@ -156,7 +158,7 @@ Windows デバイスマネージャーの USB コントローラー配下に `Te
 2. 展開
 3. 書き込み
 
-各進捗は 0% から 100% になります。**Complete** 画面が出るまで何も外さないでください。
+各進捗は 0% から 100% になります。**完了** 画面が出るまで何も外さないでください。
 
 ## 8. Windows で AI-G に書き込む
 
@@ -185,7 +187,7 @@ AI-G の書き込み設定は 3 ステップです。
 
 ### ステップ 3: 書き込み
 
-100% になり **Complete** 画面が出るまで待ちます。
+100% になり **完了** 画面が出るまで待ちます。
 
 ## 9. Windows で VCP-G に書き込む
 
@@ -203,13 +205,13 @@ VCP-G の書き込み設定は 2 ステップです。
 
 ### ステップ 2: 書き込み
 
-100% になり **Complete** 画面が出るまで待ちます。
+100% になり **完了** 画面が出るまで待ちます。
 
 ## 10. Windows でカスタムイメージを使う
 
 1. 正しいボードを先に選択します。
-2. OS 画面で **Use Custom Image** を一度クリックします。
-3. **Next** を選択するか **Use Custom Image** をダブルクリックします。
+2. OS 画面で **カスタムイメージを使用** を一度クリックします。
+3. **次へ** を選択するか **カスタムイメージを使用** をダブルクリックします。
 4. ドロップ領域にファイルをドラッグするか参照ボタンを選択します。
 5. ファイル名を確認して進みます。
 
@@ -219,7 +221,7 @@ VCP-G の書き込み設定は 2 ステップです。
 - AI-G: `.fai`
 - VCP-G: `.rom`
 
-ローカルファイルなので **Download** と **Extraction** の進捗行は非表示です。ボード別のドライバー、ネットワーク、ブートモード、COM ポート、書き込み手順は同じです。
+ローカルファイルなので **ダウンロード** と **展開** の進捗行は非表示です。ボード別のドライバー、ネットワーク、ブートモード、COM ポート、書き込み手順は同じです。
 
 ---
 
@@ -280,7 +282,7 @@ Windows VTC ドライバー画面がないため、設定は 2 ステップで�
 2. **RESET** を押して離します。
 3. BOOT を離します。
 4. FWDN USB Type-C データケーブルを接続します。
-5. 必要なら **Check Again** を選択します。
+5. 必要なら **再確認** を選択します。
 6. D3-G が検出されたら進みます。
 
 Linux は D3-G FWDN USB 機器を直接検出します。検出されなければデータケーブル、電源、ブートモード、パッケージ付属のインストール済み udev ルールを確認してください。
@@ -309,7 +311,7 @@ Linux は D3-G FWDN USB 機器を直接検出します。検出されなけれ�
 
 1. アニメーションに従います。
 2. `/dev/ttyUSB0` など AI-G のポートを選択します。
-3. 書き込めない場合は **Grant Temporary Access** を選択します。
+3. 書き込めない場合は **一時アクセスを許可** を選択します。
 4. Linux の管理者ウィンドウで承認します。
 5. 権限が準備できると書き込みボタンが有効になります。
 
@@ -317,7 +319,7 @@ Linux は D3-G FWDN USB 機器を直接検出します。検出されなけれ�
 
 ### ステップ 3: 書き込み
 
-**Complete** 画面を待ちます。
+**完了** 画面を待ちます。
 
 ## 16. Linux で VCP-G に書き込む
 
@@ -327,12 +329,12 @@ Windows と同様、設定は 2 ステップです。
 
 1. ブートモード案内に従います。
 2. `/dev/ttyUSB0` など VCP-G のポートを選択します。
-3. 表示された場合は **Grant Temporary Access** を選択し管理者ウィンドウで承認します。
+3. 表示された場合は **一時アクセスを許可** を選択し管理者ウィンドウで承認します。
 4. 選択したポートにアクセスできたら進みます。
 
 ### ステップ 2: 書き込み
 
-100% になり **Complete** 画面が出るまで待ちます。カスタム `.rom` は書き込み進捗のみ表示します。
+100% になり **完了** 画面が出るまで待ちます。カスタム `.rom` は書き込み進捗のみ表示します。
 
 ## 17. ダウンロード、再試行、一時ファイル
 
@@ -350,7 +352,7 @@ Windows と同様、設定は 2 ステップです。
 
 ## 18. エラーウィンドウが表示された場合
 
-既知の FWDN エラーは直ちに表示されます。3 秒のカウントダウンがあればメッセージを読んでください。終了後、必要な復旧手順に戻ります。項目を確認して **OK** を選択します。
+既知の FWDN エラーは直ちに表示されます。3 秒のカウントダウンがあればメッセージを読んでください。終了後、必要な復旧手順に戻ります。項目を確認して **確認** を選択します。
 
 ### D3-G 接続エラー
 
@@ -388,7 +390,7 @@ D3-G のブートモード手順に戻ります。
 2. USB データケーブルを再接続します。
 3. Firmware Download Mode を繰り返します。
 4. 一覧を更新します。
-5. Linux ではポート選択後 **Grant Temporary Access** を選択します。
+5. Linux ではポート選択後 **一時アクセスを許可** を選択します。
 
 ### 書き込みが完全に失敗した場合
 
@@ -410,11 +412,11 @@ Linux の標準的なログ:
 ~/.local/share/Telechips/TOPST Imager/logs/topst-imager.log
 ```
 
-**App Options → Ask the Community** または [TOPST コミュニティ](https://community.topst.ai/)で相談できます。
+**アプリオプション → コミュニティで質問する** または [TOPST コミュニティ](https://community.topst.ai/)で相談できます。
 
 ## 20. 書き込み完了後
 
-1. **Complete** 画面を確認します。
+1. **完了** 画面を確認します。
 2. アプリが完了を知らせるまで待ちます。
 3. ボードの電源を安全に切ります。
 4. FWDN を外すか通常使用の配線に戻します。

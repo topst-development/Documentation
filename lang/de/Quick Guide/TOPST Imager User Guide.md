@@ -46,14 +46,14 @@ Während des Flashens:
 
 ## 4. Anwendungsoptionen
 
-Wählen Sie unten links im Hauptfenster **App Options**.
+Wählen Sie unten links im Hauptfenster **App-Optionen**.
 
-![Anwendungsoptionen von TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20App%20Options.png)
+![Anwendungsoptionen von TOPST Imager](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20App%20Options.png)
 
-1. **Language:** Die Anzeige wechselt sofort zur Vorschau in die gewählte Sprache.
-2. **TOPST Imager User Guide:** Öffnet dieses Handbuch im Webbrowser.
-3. **Ask the Community:** Öffnet die [TOPST-Community](https://community.topst.ai/).
-4. **Save:** Speichert die Sprache. **Cancel**, die Taste `Esc` oder ein Klick außerhalb des Fensters stellt die zuvor aktive Sprache wieder her.
+1. **Sprache:** Die Anzeige wechselt sofort zur Vorschau in die gewählte Sprache.
+2. **TOPST Imager Benutzerhandbuch:** Öffnet dieses Handbuch im Webbrowser.
+3. **Community fragen:** Öffnet die [TOPST-Community](https://community.topst.ai/).
+4. **Speichern:** Speichert die Sprache. **Abbrechen**, die Taste `Esc` oder ein Klick außerhalb des Fensters stellt die zuvor aktive Sprache wieder her.
 
 Unterstützt werden Koreanisch, Englisch, Japanisch, vereinfachtes und traditionelles Chinesisch, Thai und Deutsch. Die helle oder dunkle Darstellung folgt automatisch dem Betriebssystemdesign.
 
@@ -70,53 +70,55 @@ Unterstützt werden Koreanisch, Englisch, Japanisch, vereinfachtes und tradition
 
 ### 5.2 Installation
 
+Der Installer unterstützt Koreanisch und Englisch. **Install** und **Launch TOPST Imager now** unten entsprechen dem englischen Installer.
+
 1. Laden Sie den offiziellen Windows-Installer für TOPST Imager herunter.
 2. Doppelklicken Sie darauf.
 3. Lesen und akzeptieren Sie die Lizenzvereinbarung.
 4. Wählen Sie **Install**.
-5. Wählen Sie nach Abschluss **Launch TOPST Imager**.
+5. Wählen Sie nach Abschluss **Launch TOPST Imager now**.
 
-Beim Start von TOPST Imager oder des VTC-Installers kann Windows Administratorrechte anfordern. Prüfen Sie vor **Yes**, ob die Datei aus der offiziellen TOPST-Distribution stammt.
+Beim Start von TOPST Imager oder des VTC-Installers kann Windows Administratorrechte anfordern. Prüfen Sie vor **Ja**, ob die Datei aus der offiziellen TOPST-Distribution stammt.
 
 ## 6. Board, Betriebssystem und Version auswählen
 
 ### 6.1 Board auswählen
 
-![Ein TOPST-Board auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Board%20Selection.png)
+![Ein TOPST-Board auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20Board%20Selection.png)
 
 1. Wählen Sie das Board, das Ihrem tatsächlichen Produkt entspricht.
-2. Prüfen Sie die hervorgehobene Zeile mit **Selected** und wählen Sie **Next**.
+2. Prüfen Sie die hervorgehobene Zeile mit **Ausgewählt** und wählen Sie **Weiter**.
 
-Auch ein Doppelklick führt weiter. Bei falscher Auswahl gehen Sie mit **Back** zurück.
+Auch ein Doppelklick führt weiter. Bei falscher Auswahl gehen Sie mit **Zurück** zurück.
 
 ### 6.2 Betriebssystem auswählen
 
-![Offizielles Betriebssystem oder eigenes Image auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20OS%20Selection.png)
+![Offizielles Betriebssystem oder eigenes Image auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20OS%20Selection.png)
 
 1. Wählen Sie ein von TOPST bereitgestelltes Betriebssystem.
-2. Für eine lokale Datei wählen Sie **Use Custom Image**.
-3. Wählen Sie **Next** oder doppelklicken Sie auf die gewählte Zeile.
+2. Für eine lokale Datei wählen Sie **Benutzerdefiniertes Image verwenden**.
+3. Wählen Sie **Weiter** oder doppelklicken Sie auf die gewählte Zeile.
 
 ### 6.3 Version auswählen
 
-![Eine Image-Version auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20Version%20Selection.png)
+![Eine Image-Version auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20Version%20Selection.png)
 
 1. Wählen Sie die benötigte Version. Prüfen Sie Beschreibung, Veröffentlichungsdatum, Downloadgröße und entpackte Größe.
-2. Wählen Sie **Flashing**.
+2. Wählen Sie **Flashen**.
 
-- **Download size** ist die komprimierte Dateigröße aus dem Internet.
-- **Extracted size** ist der ungefähre Speicherbedarf nach dem Entpacken.
+- **Online-Download** ist die komprimierte Dateigröße aus dem Internet.
+- **Erforderlicher Mindestspeicher** ist der ungefähre Speicherbedarf nach dem Entpacken.
 
 Nutzen Sie ohne projektspezifische Vorgaben die neueste stabile oder empfohlene Version.
 
 ### 6.4 Datenlöschung bestätigen
 
-![Die eMMC-Löschwarnung bestätigen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+![Die eMMC-Löschwarnung bestätigen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
 
-1. Wählen Sie **Cancel**, wenn Sie Board, Image oder Sicherung erneut prüfen müssen.
-2. Wählen Sie **Confirm** nur, wenn Sie die mögliche Löschung der eMMC-Daten verstanden haben.
+1. Wählen Sie **Abbrechen**, wenn Sie Board, Image oder Sicherung erneut prüfen müssen.
+2. Wählen Sie **Bestätigen** nur, wenn Sie die mögliche Löschung der eMMC-Daten verstanden haben.
 
-**Cancel** löscht das Board an dieser Stelle nicht.
+**Abbrechen** löscht das Board an dieser Stelle nicht.
 
 ## 7. D3-G unter Windows flashen
 
@@ -124,27 +126,27 @@ Die Flash-Einrichtung besteht aus drei Schritten.
 
 ### Schritt 1: VTC-Treiber installieren
 
-![Den D3-G-VTC-Treiber installieren](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
+![Den D3-G-VTC-Treiber installieren](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20D3-G%20Driver%20Installation.png)
 
-1. Wählen Sie **Install Driver**.
+1. Wählen Sie **Treiber installieren**.
 2. Bestätigen Sie die Windows-Administratoranfrage.
 3. Schließen Sie den VTC Driver Installer ab.
 4. Kehren Sie zu TOPST Imager zurück.
-5. Wählen Sie **Driver Installation Complete**.
+5. Wählen Sie **Treiberinstallation abgeschlossen**.
 
-Normalerweise ist die Installation pro Windows-Computer nur einmal nötig. Brechen Sie die Administratoranfrage ab, wird kein Treiber installiert. Wählen Sie später erneut **Install Driver**.
+Normalerweise ist die Installation pro Windows-Computer nur einmal nötig. Brechen Sie die Administratoranfrage ab, wird kein Treiber installiert. Wählen Sie später erneut **Treiber installieren**.
 
 ### Schritt 2: Bootmodus und Board-Erkennung
 
-![D3-G in den Bootmodus versetzen und erkennen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
+![D3-G in den Bootmodus versetzen und erkennen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. Folgen Sie den blinkenden Markierungen der Animation.
 2. Halten Sie **BOOT** gedrückt.
 3. Drücken Sie dabei **RESET** und lassen Sie RESET los.
 4. Lassen Sie BOOT los.
 5. Verbinden Sie das FWDN-USB-Type-C-Datenkabel fest.
-6. Wählen Sie **Check Again**, wenn sich der Status nicht automatisch aktualisiert.
-7. Wählen Sie bei verbundenem Status **Start Flashing**.
+6. Wählen Sie **Erneut prüfen**, wenn sich der Status nicht automatisch aktualisiert.
+7. Wählen Sie bei verbundenem Status **Flashen starten**.
 
 Im Windows-Geräte-Manager kann D3-G unter USB-Controllern etwa als `Telechips TCCxxxx VTC USB Driver` erscheinen.
 
@@ -156,7 +158,7 @@ Offizielle Images zeigen separate Fortschrittswerte für:
 2. Entpacken
 3. Flashen
 
-Jeder Wert steigt von 0 % auf 100 %. Trennen Sie erst nach dem Bildschirm **Complete** eine Verbindung.
+Jeder Wert steigt von 0 % auf 100 %. Trennen Sie erst nach dem Bildschirm **Abgeschlossen** eine Verbindung.
 
 ## 8. AI-G unter Windows flashen
 
@@ -185,7 +187,7 @@ Bei mehreren Ports ziehen Sie AI-G-USB kurz ab. Der verschwundene Port gehört n
 
 ### Schritt 3: Flashen
 
-Warten Sie auf 100 % und den Bildschirm **Complete**.
+Warten Sie auf 100 % und den Bildschirm **Abgeschlossen**.
 
 ## 9. VCP-G unter Windows flashen
 
@@ -203,13 +205,13 @@ Bootmodus-Anleitung und Portauswahl stehen auf derselben Seite.
 
 ### Schritt 2: Flashen
 
-Warten Sie auf 100 % und den Bildschirm **Complete**.
+Warten Sie auf 100 % und den Bildschirm **Abgeschlossen**.
 
 ## 10. Eigenes Image unter Windows verwenden
 
 1. Wählen Sie zuerst das richtige Board.
-2. Klicken Sie auf der Betriebssystemseite einmal auf **Use Custom Image**.
-3. Wählen Sie **Next** oder doppelklicken Sie auf **Use Custom Image**.
+2. Klicken Sie auf der Betriebssystemseite einmal auf **Benutzerdefiniertes Image verwenden**.
+3. Wählen Sie **Weiter** oder doppelklicken Sie auf **Benutzerdefiniertes Image verwenden**.
 4. Ziehen Sie die Datei in den Ablagebereich oder verwenden Sie die Durchsuchen-Schaltfläche.
 5. Prüfen Sie den Dateinamen und fahren Sie fort.
 
@@ -219,7 +221,7 @@ Verwenden Sie das richtige Format:
 - AI-G: `.fai`
 - VCP-G: `.rom`
 
-Da die Datei lokal vorliegt, sind **Download** und **Extraction** ausgeblendet. Die boardspezifischen Treiber-, Netzwerk-, Bootmodus-, COM-Port- und Flash-Schritte gelten weiterhin.
+Da die Datei lokal vorliegt, sind **Download** und **Entpacken** ausgeblendet. Die boardspezifischen Treiber-, Netzwerk-, Bootmodus-, COM-Port- und Flash-Schritte gelten weiterhin.
 
 ---
 
@@ -280,7 +282,7 @@ Ohne den Windows-VTC-Installer besteht die Einrichtung aus zwei Schritten.
 2. Drücken Sie **RESET** und lassen Sie RESET los.
 3. Lassen Sie BOOT los.
 4. Verbinden Sie das FWDN-USB-Type-C-Datenkabel.
-5. Wählen Sie bei Bedarf **Check Again**.
+5. Wählen Sie bei Bedarf **Erneut prüfen**.
 6. Fahren Sie nach Erkennung von D3-G fort.
 
 Linux erkennt das D3-G-FWDN-USB-Gerät direkt. Prüfen Sie sonst Datenkabel, Stromversorgung, Bootmodus und die mitgelieferte installierte udev-Regel.
@@ -309,7 +311,7 @@ Die Linux-Ethernet-Adresse wird nicht automatisch geändert. Richten Sie sie in 
 
 1. Folgen Sie der Animation.
 2. Wählen Sie den AI-G-Port, etwa `/dev/ttyUSB0`.
-3. Wählen Sie bei fehlendem Schreibzugriff **Grant Temporary Access**.
+3. Wählen Sie bei fehlendem Schreibzugriff **Temporären Zugriff gewähren**.
 4. Bestätigen Sie das Linux-Administratorfenster.
 5. Sobald der Zugriff bereit ist, wird die Flash-Schaltfläche verfügbar.
 
@@ -317,7 +319,7 @@ Der Zugriff gilt nur für das ausgewählte serielle Gerät. Er endet nach Flashe
 
 ### Schritt 3: Flashen
 
-Warten Sie auf **Complete**.
+Warten Sie auf **Abgeschlossen**.
 
 ## 16. VCP-G unter Linux flashen
 
@@ -327,12 +329,12 @@ Wie unter Windows gibt es zwei Einrichtungsschritte.
 
 1. Folgen Sie der Bootmodus-Anleitung.
 2. Wählen Sie den VCP-G-Port, etwa `/dev/ttyUSB0`.
-3. Wählen Sie gegebenenfalls **Grant Temporary Access** und bestätigen Sie das Administratorfenster.
+3. Wählen Sie gegebenenfalls **Temporären Zugriff gewähren** und bestätigen Sie das Administratorfenster.
 4. Fahren Sie fort, sobald der Port zugänglich ist.
 
 ### Schritt 2: Flashen
 
-Warten Sie auf 100 % und **Complete**. Eigene `.rom`-Images zeigen nur den Flash-Fortschritt.
+Warten Sie auf 100 % und **Abgeschlossen**. Eigene `.rom`-Images zeigen nur den Flash-Fortschritt.
 
 ## 17. Downloads, Wiederholungen und temporäre Dateien
 
@@ -350,7 +352,7 @@ Manche behebbaren Flash-Fehler behalten das vorbereitete Paket vorübergehend, d
 
 ## 18. Wenn ein Fehlerfenster erscheint
 
-Bekannte FWDN-Fehler werden sofort angezeigt. Lesen Sie bei einem Drei-Sekunden-Countdown die Meldung; danach kehrt die Anwendung zum erforderlichen Wiederherstellungsschritt zurück. Prüfen Sie die Punkte und wählen Sie **OK**.
+Bekannte FWDN-Fehler werden sofort angezeigt. Lesen Sie bei einem Drei-Sekunden-Countdown die Meldung; danach kehrt die Anwendung zum erforderlichen Wiederherstellungsschritt zurück. Prüfen Sie die Punkte und wählen Sie **Bestätigen**.
 
 ### D3-G-Verbindungsfehler
 
@@ -388,7 +390,7 @@ Bei `GetLastError : 22` prüfen Sie die FWDN-USB-Type-C-Verbindung.
 2. Verbinden Sie das USB-Datenkabel erneut.
 3. Wiederholen Sie den Firmware Download Mode.
 4. Aktualisieren Sie die Liste.
-5. Wählen Sie unter Linux nach der Portauswahl **Grant Temporary Access**.
+5. Wählen Sie unter Linux nach der Portauswahl **Temporären Zugriff gewähren**.
 
 ### Flashen schlägt vollständig fehl
 
@@ -410,11 +412,11 @@ Windows-Protokollpfad:
 ~/.local/share/Telechips/TOPST Imager/logs/topst-imager.log
 ```
 
-Verwenden Sie **App Options → Ask the Community** oder besuchen Sie die [TOPST-Community](https://community.topst.ai/).
+Verwenden Sie **App-Optionen → Community fragen** oder besuchen Sie die [TOPST-Community](https://community.topst.ai/).
 
 ## 20. Nach dem Flashen
 
-1. Prüfen Sie, ob **Complete** angezeigt wird.
+1. Prüfen Sie, ob **Abgeschlossen** angezeigt wird.
 2. Warten Sie auf die Abschlussmeldung der Anwendung.
 3. Schalten Sie das Board sicher aus.
 4. Entfernen Sie FWDN oder stellen Sie die normale Verkabelung her.
