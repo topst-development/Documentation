@@ -28,7 +28,8 @@
     "release": "릴리즈: ",
     "findFai": ".fai 이미지 찾기",
     "findRom": ".rom 이미지 찾기",
-    "customImage": "사용자 지정 이미지"
+    "customImage": "사용자 지정 이미지",
+    "refresh": "새로 고침"
   },
   "en": {
     "options": "App Options",
@@ -59,7 +60,8 @@
     "release": "Released: ",
     "findFai": "Browse .fai Image",
     "findRom": "Browse .rom Image",
-    "customImage": "Custom Image"
+    "customImage": "Custom Image",
+    "refresh": "Refresh"
   },
   "ja": {
     "options": "アプリオプション",
@@ -90,7 +92,8 @@
     "release": "リリース日: ",
     "findFai": ".faiイメージを参照",
     "findRom": ".romイメージを参照",
-    "customImage": "カスタムイメージ"
+    "customImage": "カスタムイメージ",
+    "refresh": "更新"
   },
   "zh": {
     "options": "应用选项",
@@ -121,7 +124,8 @@
     "release": "发布日期：",
     "findFai": "浏览 .fai 镜像",
     "findRom": "浏览 .rom 镜像",
-    "customImage": "自定义镜像"
+    "customImage": "自定义镜像",
+    "refresh": "刷新"
   },
   "tw": {
     "options": "應用程式選項",
@@ -152,7 +156,8 @@
     "release": "發佈日期：",
     "findFai": "瀏覽 .fai 映像",
     "findRom": "瀏覽 .rom 映像",
-    "customImage": "自訂映像"
+    "customImage": "自訂映像",
+    "refresh": "重新整理"
   },
   "th": {
     "options": "ตัวเลือกแอป",
@@ -183,7 +188,8 @@
     "release": "วันที่เผยแพร่: ",
     "findFai": "ค้นหาอิมเมจ .fai",
     "findRom": "ค้นหาอิมเมจ .rom",
-    "customImage": "อิมเมจแบบกำหนดเอง"
+    "customImage": "อิมเมจแบบกำหนดเอง",
+    "refresh": "รีเฟรช"
   },
   "de": {
     "options": "App-Optionen",
@@ -214,6 +220,7 @@
     "release": "Veröffentlicht: ",
     "findFai": ".fai-Image durchsuchen",
     "findRom": ".rom-Image durchsuchen",
-    "customImage": "Benutzerdefiniertes Image"
+    "customImage": "Benutzerdefiniertes Image",
+    "refresh": "Aktualisieren"
   }
 }

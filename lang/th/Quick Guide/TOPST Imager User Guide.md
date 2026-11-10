@@ -141,9 +141,9 @@ Windows อาจขอสิทธิ์ผู้ดูแลเมื่อเ
 ![เข้าโหมดบูต D3-G และตรวจจับบอร์ด](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. ทำตามสัญลักษณ์กะพริบในภาพเคลื่อนไหว
-2. กด **BOOT** ค้างไว้
-3. ระหว่างกด BOOT ให้กดแล้วปล่อย **RESET**
-4. ปล่อย BOOT
+2. กด ปุ่ม **BOOT** ค้างไว้
+3. ระหว่างกด ปุ่ม **BOOT** ให้กดแล้วปล่อย ปุ่ม **RESET**
+4. ปล่อย ปุ่ม **BOOT**
 5. ต่อสายข้อมูล FWDN USB Type-C ให้แน่น
 6. เลือก **ตรวจสอบอีกครั้ง** หากสถานะไม่อัปเดตอัตโนมัติ
 7. เมื่อสถานะเชื่อมต่อแล้ว เลือก **เริ่มการแฟลช**
@@ -166,6 +166,8 @@ Windows อาจขอสิทธิ์ผู้ดูแลเมื่อเ
 
 ### ขั้นที่ 1: ตั้งค่า Ethernet
 
+![การตั้งค่าอะแดปเตอร์ Ethernet และเครือข่าย AI-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. ต่อคอมพิวเตอร์กับ AI-G โดยตรงด้วยสาย Ethernet
 2. เลือกอะแดปเตอร์มีสายที่ต่อ AI-G ไม่ใช่ Wi-Fi
 3. เมื่อมีคำขอ ให้อนุญาตแอปใช้ที่อยู่ชั่วคราว `192.168.0.8/24`
@@ -176,9 +178,9 @@ Windows อาจขอสิทธิ์ผู้ดูแลเมื่อเ
 ### ขั้นที่ 2: โหมดบูตและพอร์ต COM
 
 1. ทำตามภาพเคลื่อนไหวโหมดบูต
-2. กด **BOOT** ค้างไว้
-3. กดแล้วปล่อย **RESET**
-4. ปล่อย BOOT
+2. กด ปุ่ม **BOOT** ค้างไว้
+3. กดแล้วปล่อย ปุ่ม **RESET**
+4. ปล่อย ปุ่ม **BOOT**
 5. เลือกพอร์ต COM ของ AI-G
 6. ตรวจสอบไฟเลี้ยง สาย USB Type-C และ Ethernet
 7. ไปต่อเพื่อแฟลช
@@ -195,10 +197,12 @@ Windows อาจขอสิทธิ์ผู้ดูแลเมื่อเ
 
 ### ขั้นที่ 1: โหมดบูตและพอร์ต COM
 
+![โหมดบูตและการเลือกพอร์ต COM ของ VCP-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 คำแนะนำโหมดบูตและการเลือกพอร์ตอยู่หน้าจอเดียวกัน
 
 1. ทำตามภาพเคลื่อนไหวเพื่อเข้า Firmware Download Mode
-2. กดแล้วปล่อย **RESET** เมื่อคำแนะนำระบุ
+2. กดแล้วปล่อย ปุ่ม **RESET** เมื่อคำแนะนำระบุ
 3. เลือกพอร์ต COM ของ VCP-G
 4. ตรวจสอบไฟเลี้ยงและสายข้อมูล FWDN USB Type-C อีกครั้ง
 5. ไปต่อเพื่อแฟลช
@@ -208,6 +212,14 @@ Windows อาจขอสิทธิ์ผู้ดูแลเมื่อเ
 รอจนถึง 100% และหน้าจอ **เสร็จสมบูรณ์** ปรากฏ
 
 ## 6. ใช้อิมเมจที่กำหนดเองบน Windows
+
+**D3-G / AI-G (.fai)**
+
+![เลือกอิมเมจ FAI ที่กำหนดเองสำหรับ D3-G และ AI-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![เลือกอิมเมจ ROM ที่กำหนดเองสำหรับ VCP-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. เลือกบอร์ดที่ถูกต้องก่อน
 2. คลิก **ใช้อิมเมจแบบกำหนดเอง** หนึ่งครั้งในหน้าระบบปฏิบัติการ
@@ -278,9 +290,9 @@ chmod +x topst-imager
 
 ### ขั้นที่ 1: โหมดบูตและตรวจจับบอร์ด
 
-1. กด **BOOT** ค้างไว้
-2. กดแล้วปล่อย **RESET**
-3. ปล่อย BOOT
+1. กด ปุ่ม **BOOT** ค้างไว้
+2. กดแล้วปล่อย ปุ่ม **RESET**
+3. ปล่อย ปุ่ม **BOOT**
 4. ต่อสายข้อมูล FWDN USB Type-C
 5. เลือก **ตรวจสอบอีกครั้ง** หากจำเป็น
 6. ไปต่อเมื่อตรวจพบ D3-G

@@ -3,7 +3,9 @@
  [string]$OutputDirectory = (Join-Path $PSScriptRoot '..\Assets\Quick Guide\TOPST Imager'),
  [string]$LabelsPath = (Join-Path $PSScriptRoot 'topst-imager-ui-labels.json'),
  [string[]]$Locales = @('en','kr','jp','zh','zh-TW','th','de'),
- [string]$RawDirectory = ''
+ [string]$RawDirectory = '',
+ [ValidateSet('Core','Additional','All')]
+ [string]$CaptureSet = 'Core'
 )
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName UIAutomationClient
@@ -68,7 +70,11 @@ function Capture($path, $boxes) {
  foreach($box in $boxes){$g.DrawRectangle($pen,[single]$box.x,[single]$box.y,[single]$box.w,[single]$box.h)}
  # Draw badges after every rectangle so highlight lines cannot obscure digits.
  foreach($box in $boxes){
-  $badge=New-Object Drawing.RectangleF(([single]$box.x-15),([single]$box.y-15),30,30)
+  $badgeX=$box.x;$badgeY=$box.y
+  if((Split-Path $path -Leaf) -match 'Custom (FAI|ROM) Image' -and $box.n -eq 2){
+   $badgeX=$box.x-18;$badgeY=$box.y+$box.h/2
+  }
+  $badge=New-Object Drawing.RectangleF(([single]$badgeX-15),([single]$badgeY-15),30,30)
   $g.FillEllipse($red,$badge)
   $g.DrawString([string]$box.n,$font,[Drawing.Brushes]::White,$badge,$format)
  }
@@ -122,13 +128,20 @@ try {
   $script:localeOutput=Join-Path $OutputDirectory $script:locale
   New-Item -ItemType Directory -Path $script:localeOutput -Force|Out-Null
   $app=Start-Process -FilePath $ApplicationPath -WorkingDirectory (Split-Path $ApplicationPath) -PassThru
-  Start-Sleep -Seconds 3
-  $app.Refresh();$script:window=$app.MainWindowHandle
+  $script:window=[IntPtr]::Zero
+  for($attempt=0;$attempt -lt 30;$attempt++){
+   Start-Sleep -Milliseconds 500
+   $app.Refresh()
+   if($app.HasExited){throw "TOPST Imager exited before opening a window: $($app.ExitCode)"}
+   $script:window=$app.MainWindowHandle
+   if($script:window -ne [IntPtr]::Zero){break}
+  }
   if($script:window -eq 0){throw 'TOPST Imager window not found'}
   [ImagerCaptureNative]::ShowWindow($script:window,9)|Out-Null
   [ImagerCaptureNative]::SetWindowPos($script:window,[IntPtr](-1),40,40,926,649,0x40)|Out-Null
   [ImagerCaptureNative]::SetForegroundWindow($script:window)|Out-Null
   Start-Sleep -Milliseconds 500
+  if($CaptureSet -in @('Core','All')) {
   ClickButton 'options'
   SaveScreen 'App Options' @((Box 290 210 330 42 1),(ButtonBox 'openUserGuide' 2),(ButtonBox 'askCommunity' 3),(ButtonBox 'save' 4))
   ClickButton 'cancel'
@@ -147,6 +160,49 @@ try {
   # This only advances the guide; never run the driver installer or flash button.
   ClickButton 'driverComplete'
   SaveScreen 'D3-G Boot Mode' @((Box 344 170 500 87 1),(ButtonBox 'checkAgain' 2),(ButtonBox 'startFlash' 3))
+  }
+  if($CaptureSet -in @('Additional','All')) {
+   # Return to the board list if the core capture ended at the D3-G boot guide.
+   if($CaptureSet -eq 'All') {
+    ClickButton 'back'; ClickButton 'back'; ClickButton 'back'; ClickButton 'back'
+   }
+   # Custom FAI selection (D3-G and AI-G use the same local-file workflow).
+   Click 500 140
+   ClickButton 'next'
+   Click 500 360
+   ClickButton 'next'
+   SaveScreen 'Custom FAI Image' @((Box 344 180 502 180 1),(ButtonBox 'findFai' 2))
+   ClickButton 'back'; ClickButton 'back'
+   # Custom ROM selection for VCP-G.
+   Click 500 330
+   ClickButton 'next'
+   Click 500 210
+   ClickButton 'next'
+   SaveScreen 'Custom ROM Image' @((Box 344 180 502 180 1),(ButtonBox 'findRom' 2))
+   ClickButton 'back'
+   # VCP-G official image: stop at the boot-mode and COM-port guide.
+   Click 500 130
+   ClickButton 'next'
+   Click 500 150
+   ClickButton 'write'
+   Click 550 380
+   SaveScreen 'VCP-G Boot Mode and COM Port' @((Box 346 172 498 85 1),(Box 346 319 404 38 2),(ButtonBox 'refresh' 3),(ButtonBox 'startFlash' 4))
+   ClickButton 'back'; ClickButton 'back'; ClickButton 'back'
+   # AI-G official image: view Ethernet settings without changing the network.
+   Click 500 235
+   ClickButton 'next'
+   Click 500 130
+   ClickButton 'next'
+   Click 500 150
+   ClickButton 'write'
+   Click 550 380
+   # Select the last adapter in the sorted list for this capture machine:
+   # its physical Realtek USB Ethernet adapter. This does not change its address.
+   Click 500 218
+   [System.Windows.Forms.SendKeys]::SendWait('{END}{ENTER}')
+   Start-Sleep -Milliseconds 400
+   SaveScreen 'AI-G Ethernet Setup' @((Box 346 196 390 44 1),(Box 346 242 498 68 2),(ButtonBox 'refresh' 3))
+  }
   $app.CloseMainWindow()|Out-Null
   if(-not $app.WaitForExit(4000)){$app.Kill();$app.WaitForExit()}
   $app=$null

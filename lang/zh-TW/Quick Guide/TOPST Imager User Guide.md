@@ -141,9 +141,9 @@ Windows 上的 D3-G 燒錄設定分為三步。
 ![進入 D3-G 開機模式並偵測開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. 按開機模式動畫的閃爍標記操作。
-2. 按住 **BOOT**。
-3. 按住 BOOT 時按下並放開 **RESET**。
-4. 放開 BOOT。
+2. 按住 **BOOT** 按鈕。
+3. 按住 **BOOT** 按鈕 時按下並放開 **RESET** 按鈕。
+4. 放開 **BOOT** 按鈕。
 5. 牢固連接 FWDN USB Type-C 資料傳輸線。
 6. 狀態未自動更新時選取 **重新檢查**。
 7. 狀態變為已連接後選取 **開始燒錄**。
@@ -166,6 +166,8 @@ AI-G 燒錄設定分為三步。
 
 ### 步驟 1：設定乙太網路
 
+![AI-G 乙太網路介面卡與網路設定](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. 用乙太網路線直接連接電腦與 AI-G。
 2. 選取連接 AI-G 的有線介面卡，而非 Wi-Fi。
 3. 出現提示時允許應用程式設定暫時位址 `192.168.0.8/24`。
@@ -176,9 +178,9 @@ AI-G 燒錄設定分為三步。
 ### 步驟 2：開機模式與 COM 連接埠
 
 1. 按畫面開機模式動畫操作。
-2. 按住 **BOOT**。
-3. 按下並放開 **RESET**。
-4. 放開 BOOT。
+2. 按住 **BOOT** 按鈕。
+3. 按下並放開 **RESET** 按鈕。
+4. 放開 **BOOT** 按鈕。
 5. 選取 AI-G 的 COM 連接埠。
 6. 檢查電源、USB Type-C 資料傳輸線與乙太網路線。
 7. 繼續燒錄。
@@ -195,10 +197,12 @@ VCP-G 燒錄設定分為兩步。
 
 ### 步驟 1：開機模式與 COM 連接埠
 
+![VCP-G 開機模式與 COM 連接埠選取](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 開機模式指南與 COM 連接埠選取在同一畫面。
 
 1. 按動畫將 VCP-G 設為 Firmware Download Mode。
-2. 按指南要求按下並放開 **RESET**。
+2. 按指南要求按下並放開 **RESET** 按鈕。
 3. 選取 VCP-G 的 COM 連接埠。
 4. 再次檢查電源與 FWDN USB Type-C 資料傳輸線。
 5. 繼續燒錄。
@@ -208,6 +212,14 @@ VCP-G 燒錄設定分為兩步。
 等待達到 100% 並出現 **完成** 畫面。
 
 ## 6. 在 Windows 上使用自訂映像檔
+
+**D3-G / AI-G (.fai)**
+
+![為 D3-G 和 AI-G 選取自訂 FAI 映像檔](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![為 VCP-G 選取自訂 ROM 映像檔](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. 先選取正確的開發板。
 2. 在作業系統畫面按一下 **使用自訂映像**。
@@ -278,9 +290,9 @@ chmod +x topst-imager
 
 ### 步驟 1：開機模式與開發板偵測
 
-1. 按住 **BOOT**。
-2. 按下並放開 **RESET**。
-3. 放開 BOOT。
+1. 按住 **BOOT** 按鈕。
+2. 按下並放開 **RESET** 按鈕。
+3. 放開 **BOOT** 按鈕。
 4. 連接 FWDN USB Type-C 資料傳輸線。
 5. 必要時選取 **重新檢查**。
 6. 偵測到 D3-G 後繼續。

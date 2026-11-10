@@ -14,7 +14,7 @@ const keys = [
   'next', 'back', 'selected', 'useCustom', 'write', 'flash', 'flashing',
   'complete', 'installDriver', 'driverComplete', 'checkAgain', 'startFlash',
   'download', 'extract', 'confirm', 'configurePermissions', 'onlineDownload',
-  'minimum', 'spaceRequired', 'release', 'findFai', 'findRom', 'customImage',
+  'minimum', 'spaceRequired', 'release', 'findFai', 'findRom', 'customImage', 'refresh',
 ];
 const labels = {};
 for (const language of ['ko', 'en', 'ja', 'zh', 'tw', 'th', 'de']) {

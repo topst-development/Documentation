@@ -140,8 +140,8 @@ You normally install this driver only once on each Windows computer. If you canc
 
 1. Follow the flashing markers in the boot-mode animation.
 2. Press and hold the **BOOT** button.
-3. While holding BOOT, press and release the **RESET** button.
-4. Release the BOOT button.
+3. While holding the **BOOT** button, press and release the **RESET** button.
+4. Release the **BOOT** button.
 5. Connect the FWDN USB Type-C data cable firmly.
 6. Select **Check Again** if the status does not refresh automatically.
 7. When the status changes to connected, select **Start Flashing**.
@@ -164,6 +164,8 @@ AI-G uses three flashing setup steps.
 
 ### Step 1: Ethernet Setup
 
+![AI-G Ethernet adapter and network setup](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. Connect the computer directly to AI-G with an Ethernet cable.
 2. Select the wired Ethernet adapter connected to AI-G, not Wi-Fi.
 3. Allow TOPST Imager to apply the temporary address `192.168.0.8/24` when prompted.
@@ -174,9 +176,9 @@ TOPST Imager restores the temporary Windows network setting when the operation f
 ### Step 2: Boot Mode and COM Port
 
 1. Follow the on-screen boot-mode animation.
-2. Press and hold **BOOT**.
+2. Press and hold the **BOOT** button.
 3. Press and release the **RESET** button.
-4. Release BOOT.
+4. Release the **BOOT** button.
 5. Select the COM port that belongs to AI-G.
 6. Check the board power, USB Type-C cable, and Ethernet cable.
 7. Continue to flashing.
@@ -193,6 +195,8 @@ VCP-G uses two flashing setup steps.
 
 ### Step 1: Boot Mode and COM Port
 
+![VCP-G boot mode and COM port selection](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 The boot-mode guide and COM-port selection are on the same screen.
 
 1. Follow the board animation to set VCP-G to Firmware Download Mode.
@@ -206,6 +210,14 @@ The boot-mode guide and COM-port selection are on the same screen.
 Wait until flashing reaches 100% and the **Complete** screen appears.
 
 ## 6. Use a Custom Image on Windows
+
+**D3-G / AI-G (.fai)**
+
+![Custom FAI image selection for D3-G and AI-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![Custom ROM image selection for VCP-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. Select the correct board first.
 2. On the operating-system screen, click **Use Custom Image** once.
@@ -276,9 +288,9 @@ D3-G has two flashing setup steps on Linux because the Windows VTC Driver Instal
 
 ### Step 1: Boot Mode and Board Detection
 
-1. Press and hold **BOOT**.
+1. Press and hold the **BOOT** button.
 2. Press and release the **RESET** button.
-3. Release BOOT.
+3. Release the **BOOT** button.
 4. Connect the FWDN USB Type-C data cable.
 5. Select **Check Again** if needed.
 6. Continue when D3-G is detected.

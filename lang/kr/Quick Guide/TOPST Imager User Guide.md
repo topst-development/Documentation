@@ -140,8 +140,8 @@ Windows의 D3-G 플래싱 설정은 3단계입니다.
 
 1. 부트 모드 애니메이션의 깜박이는 표시를 따릅니다.
 2. **BOOT** 버튼을 길게 누릅니다.
-3. BOOT을 누른 상태에서 **RESET**을 눌렀다 놓습니다.
-4. BOOT을 놓습니다.
+3. **BOOT** 버튼을 누른 상태에서 **RESET** 버튼을 눌렀다 놓습니다.
+4. **BOOT** 버튼을 놓습니다.
 5. FWDN USB Type-C 데이터 케이블을 단단히 연결합니다.
 6. 상태가 자동 갱신되지 않으면 **다시 확인**을 선택합니다.
 7. 연결 상태로 바뀌면 **플래싱 진행**을 선택합니다.
@@ -164,6 +164,8 @@ AI-G 플래싱 설정은 3단계입니다.
 
 ### 1단계: Ethernet 설정
 
+![AI-G Ethernet 어댑터 및 네트워크 설정](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. Ethernet 케이블로 컴퓨터와 AI-G를 직접 연결합니다.
 2. Wi-Fi가 아닌 AI-G에 연결된 유선 Ethernet 어댑터를 선택합니다.
 3. 요청이 표시되면 TOPST Imager가 임시 주소 `192.168.0.8/24`를 적용하도록 허용합니다.
@@ -174,9 +176,9 @@ AI-G 플래싱 설정은 3단계입니다.
 ### 2단계: 부트 모드 및 COM 포트
 
 1. 화면의 부트 모드 애니메이션을 따릅니다.
-2. **BOOT**을 길게 누릅니다.
-3. **RESET**을 눌렀다 놓습니다.
-4. BOOT을 놓습니다.
+2. **BOOT** 버튼을 길게 누릅니다.
+3. **RESET** 버튼을 눌렀다 놓습니다.
+4. **BOOT** 버튼을 놓습니다.
 5. AI-G의 COM 포트를 선택합니다.
 6. 보드 전원, USB Type-C 및 Ethernet 케이블을 확인합니다.
 7. 플래싱으로 진행합니다.
@@ -193,10 +195,12 @@ VCP-G 플래싱 설정은 2단계입니다.
 
 ### 1단계: 부트 모드 및 COM 포트
 
+![VCP-G 부트 모드 및 COM 포트 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 부트 모드 안내와 COM 포트 선택은 같은 화면에 있습니다.
 
 1. 보드 애니메이션에 따라 VCP-G를 Firmware Download Mode로 전환합니다.
-2. 안내에 따라 **RESET**을 눌렀다 놓습니다.
+2. 안내에 따라 **RESET** 버튼을 눌렀다 놓습니다.
 3. VCP-G의 COM 포트를 선택합니다.
 4. 보드 전원과 FWDN USB Type-C 데이터 케이블을 다시 확인합니다.
 5. 플래싱으로 진행합니다.
@@ -206,6 +210,14 @@ VCP-G 플래싱 설정은 2단계입니다.
 진행률이 100%가 되고 **완료** 화면이 나타날 때까지 기다립니다.
 
 ## 6. Windows에서 사용자 이미지 사용
+
+**D3-G / AI-G (.fai)**
+
+![D3-G 및 AI-G용 사용자 FAI 이미지 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G용 사용자 ROM 이미지 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. 먼저 올바른 보드를 선택합니다.
 2. 운영체제 화면에서 **사용자 정의 사용**을 한 번 클릭합니다.
@@ -276,9 +288,9 @@ Windows VTC 드라이버 설치 화면이 없으므로 Linux의 D3-G 플래싱 �
 
 ### 1단계: 부트 모드 및 보드 감지
 
-1. **BOOT**을 길게 누릅니다.
-2. **RESET**을 눌렀다 놓습니다.
-3. BOOT을 놓습니다.
+1. **BOOT** 버튼을 길게 누릅니다.
+2. **RESET** 버튼을 눌렀다 놓습니다.
+3. **BOOT** 버튼을 놓습니다.
 4. FWDN USB Type-C 데이터 케이블을 연결합니다.
 5. 필요하면 **다시 확인**을 선택합니다.
 6. D3-G가 감지되면 진행합니다.

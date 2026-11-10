@@ -141,9 +141,9 @@ Windows の D3-G 書き込み設定は 3 ステップです。
 ![D3-G のブートモードとボード検出](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. ブートモードのアニメーションの点滅表示に従います。
-2. **BOOT** を押し続けます。
-3. BOOT を押したまま **RESET** を押して離します。
-4. BOOT を離します。
+2. **BOOT** ボタンを押し続けます。
+3. **BOOT** ボタンを押したまま **RESET** ボタンを押して離します。
+4. **BOOT** ボタンを離します。
 5. FWDN USB Type-C データケーブルを確実に接続します。
 6. 状態が自動更新されない場合は **再確認** を選択します。
 7. 接続済みになったら **フラッシング開始** を選択します。
@@ -166,6 +166,8 @@ AI-G の書き込み設定は 3 ステップです。
 
 ### ステップ 1: Ethernet の設定
 
+![AI-G の Ethernet アダプターとネットワーク設定](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. コンピューターと AI-G を Ethernet ケーブルで直接接続します。
 2. Wi-Fi ではなく AI-G に接続した有線アダプターを選択します。
 3. 要求されたら一時アドレス `192.168.0.8/24` の適用を許可します。
@@ -176,9 +178,9 @@ AI-G の書き込み設定は 3 ステップです。
 ### ステップ 2: ブートモードと COM ポート
 
 1. 画面のブートモードアニメーションに従います。
-2. **BOOT** を押し続けます。
-3. **RESET** を押して離します。
-4. BOOT を離します。
+2. **BOOT** ボタンを押し続けます。
+3. **RESET** ボタンを押して離します。
+4. **BOOT** ボタンを離します。
 5. AI-G の COM ポートを選択します。
 6. 電源、USB Type-C、Ethernet ケーブルを確認します。
 7. 書き込みに進みます。
@@ -195,10 +197,12 @@ VCP-G の書き込み設定は 2 ステップです。
 
 ### ステップ 1: ブートモードと COM ポート
 
+![VCP-G のブートモードと COM ポート選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 ブートモード案内と COM ポート選択は同じ画面にあります。
 
 1. アニメーションに従って Firmware Download Mode にします。
-2. 案内されたタイミングで **RESET** を押して離します。
+2. 案内されたタイミングで **RESET** ボタンを押して離します。
 3. VCP-G の COM ポートを選択します。
 4. 電源と FWDN USB Type-C データケーブルを再確認します。
 5. 書き込みに進みます。
@@ -208,6 +212,14 @@ VCP-G の書き込み設定は 2 ステップです。
 100% になり **完了** 画面が出るまで待ちます。
 
 ## 6. Windows でカスタムイメージを使う
+
+**D3-G / AI-G (.fai)**
+
+![D3-G と AI-G 用のカスタム FAI イメージ選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G 用のカスタム ROM イメージ選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. 正しいボードを先に選択します。
 2. OS 画面で **カスタムイメージを使用** を一度クリックします。
@@ -278,9 +290,9 @@ Windows VTC ドライバー画面がないため、設定は 2 ステップで�
 
 ### ステップ 1: ブートモードとボード検出
 
-1. **BOOT** を押し続けます。
-2. **RESET** を押して離します。
-3. BOOT を離します。
+1. **BOOT** ボタンを押し続けます。
+2. **RESET** ボタンを押して離します。
+3. **BOOT** ボタンを離します。
 4. FWDN USB Type-C データケーブルを接続します。
 5. 必要なら **再確認** を選択します。
 6. D3-G が検出されたら進みます。

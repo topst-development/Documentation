@@ -141,9 +141,9 @@ Windows 上的 D3-G 烧录设置分为三步。
 ![进入 D3-G 启动模式并检测开发板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. 按启动模式动画的闪烁标记操作。
-2. 按住 **BOOT**。
-3. 按住 BOOT 时按下并松开 **RESET**。
-4. 松开 BOOT。
+2. 按住 **BOOT** 按钮。
+3. 按住 **BOOT** 按钮 时按下并松开 **RESET** 按钮。
+4. 松开 **BOOT** 按钮。
 5. 牢固连接 FWDN USB Type-C 数据线。
 6. 状态未自动刷新时选择 **重新检查**。
 7. 状态变为已连接后选择 **开始烧录**。
@@ -166,6 +166,8 @@ AI-G 烧录设置分为三步。
 
 ### 第 1 步：设置以太网
 
+![AI-G 以太网适配器和网络设置](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. 用以太网线直接连接计算机和 AI-G。
 2. 选择连接 AI-G 的有线适配器，而非 Wi-Fi。
 3. 出现提示时允许应用设置临时地址 `192.168.0.8/24`。
@@ -176,9 +178,9 @@ AI-G 烧录设置分为三步。
 ### 第 2 步：启动模式与 COM 端口
 
 1. 按屏幕启动模式动画操作。
-2. 按住 **BOOT**。
-3. 按下并松开 **RESET**。
-4. 松开 BOOT。
+2. 按住 **BOOT** 按钮。
+3. 按下并松开 **RESET** 按钮。
+4. 松开 **BOOT** 按钮。
 5. 选择 AI-G 的 COM 端口。
 6. 检查电源、USB Type-C 数据线和以太网线。
 7. 继续烧录。
@@ -195,10 +197,12 @@ VCP-G 烧录设置分为两步。
 
 ### 第 1 步：启动模式与 COM 端口
 
+![VCP-G 启动模式和 COM 端口选择](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 启动模式指南和 COM 端口选择在同一画面。
 
 1. 按动画将 VCP-G 设为 Firmware Download Mode。
-2. 按指南要求按下并松开 **RESET**。
+2. 按指南要求按下并松开 **RESET** 按钮。
 3. 选择 VCP-G 的 COM 端口。
 4. 再次检查电源及 FWDN USB Type-C 数据线。
 5. 继续烧录。
@@ -208,6 +212,14 @@ VCP-G 烧录设置分为两步。
 等待达到 100% 并出现 **完成** 画面。
 
 ## 6. 在 Windows 上使用自定义镜像
+
+**D3-G / AI-G (.fai)**
+
+![为 D3-G 和 AI-G 选择自定义 FAI 镜像](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![为 VCP-G 选择自定义 ROM 镜像](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. 先选择正确的开发板。
 2. 在操作系统画面单击 **使用自定义镜像**。
@@ -278,9 +290,9 @@ chmod +x topst-imager
 
 ### 第 1 步：启动模式与开发板检测
 
-1. 按住 **BOOT**。
-2. 按下并松开 **RESET**。
-3. 松开 BOOT。
+1. 按住 **BOOT** 按钮。
+2. 按下并松开 **RESET** 按钮。
+3. 松开 **BOOT** 按钮。
 4. 连接 FWDN USB Type-C 数据线。
 5. 必要时选择 **重新检查**。
 6. 检测到 D3-G 后继续。

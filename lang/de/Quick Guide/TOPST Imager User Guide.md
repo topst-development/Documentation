@@ -141,9 +141,9 @@ Normalerweise ist die Installation pro Windows-Computer nur einmal nötig. Brech
 ![D3-G in den Bootmodus versetzen und erkennen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. Folgen Sie den blinkenden Markierungen der Animation.
-2. Halten Sie **BOOT** gedrückt.
-3. Drücken Sie dabei **RESET** und lassen Sie RESET los.
-4. Lassen Sie BOOT los.
+2. Halten Sie die **BOOT**-Taste gedrückt.
+3. Drücken Sie dabei die **RESET**-Taste und lassen Sie die **RESET**-Taste los.
+4. Lassen Sie die **BOOT**-Taste los.
 5. Verbinden Sie das FWDN-USB-Type-C-Datenkabel fest.
 6. Wählen Sie **Erneut prüfen**, wenn sich der Status nicht automatisch aktualisiert.
 7. Wählen Sie bei verbundenem Status **Flashen starten**.
@@ -166,6 +166,8 @@ Die Einrichtung besteht aus drei Schritten.
 
 ### Schritt 1: Ethernet einrichten
 
+![Ethernet-Adapter und Netzwerkeinrichtung für AI-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
+
 1. Verbinden Sie Computer und AI-G direkt per Ethernet-Kabel.
 2. Wählen Sie den angeschlossenen kabelgebundenen Adapter, nicht WLAN.
 3. Erlauben Sie auf Aufforderung die temporäre Adresse `192.168.0.8/24`.
@@ -176,9 +178,9 @@ Nach Abschluss oder Abbruch stellt TOPST Imager die vorübergehend geänderten W
 ### Schritt 2: Bootmodus und COM-Port
 
 1. Folgen Sie der Bootmodus-Animation.
-2. Halten Sie **BOOT** gedrückt.
-3. Drücken Sie **RESET** und lassen Sie RESET los.
-4. Lassen Sie BOOT los.
+2. Halten Sie die **BOOT**-Taste gedrückt.
+3. Drücken Sie die **RESET**-Taste und lassen Sie die **RESET**-Taste los.
+4. Lassen Sie die **BOOT**-Taste los.
 5. Wählen Sie den AI-G-COM-Port.
 6. Prüfen Sie Stromversorgung, USB Type-C und Ethernet.
 7. Fahren Sie mit dem Flashen fort.
@@ -195,10 +197,12 @@ Die Einrichtung besteht aus zwei Schritten.
 
 ### Schritt 1: Bootmodus und COM-Port
 
+![Bootmodus und COM-Port-Auswahl für VCP-G](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
+
 Bootmodus-Anleitung und Portauswahl stehen auf derselben Seite.
 
 1. Versetzen Sie VCP-G anhand der Animation in den Firmware Download Mode.
-2. Drücken Sie **RESET** und lassen Sie RESET los, wenn die Anleitung dies vorgibt.
+2. Drücken Sie die **RESET**-Taste und lassen Sie die **RESET**-Taste los, wenn die Anleitung dies vorgibt.
 3. Wählen Sie den VCP-G-COM-Port.
 4. Prüfen Sie Stromversorgung und FWDN-USB-Type-C-Datenkabel erneut.
 5. Fahren Sie mit dem Flashen fort.
@@ -208,6 +212,14 @@ Bootmodus-Anleitung und Portauswahl stehen auf derselben Seite.
 Warten Sie auf 100 % und den Bildschirm **Abgeschlossen**.
 
 ## 6. Eigenes Image unter Windows verwenden
+
+**D3-G / AI-G (.fai)**
+
+![Eigenes FAI-Image für D3-G und AI-G auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![Eigenes ROM-Image für VCP-G auswählen](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/de/TOPST%20Imager%20Custom%20ROM%20Image.png)
 
 1. Wählen Sie zuerst das richtige Board.
 2. Klicken Sie auf der Betriebssystemseite einmal auf **Benutzerdefiniertes Image verwenden**.
@@ -278,9 +290,9 @@ Ohne den Windows-VTC-Installer besteht die Einrichtung aus zwei Schritten.
 
 ### Schritt 1: Bootmodus und Board-Erkennung
 
-1. Halten Sie **BOOT** gedrückt.
-2. Drücken Sie **RESET** und lassen Sie RESET los.
-3. Lassen Sie BOOT los.
+1. Halten Sie die **BOOT**-Taste gedrückt.
+2. Drücken Sie die **RESET**-Taste und lassen Sie die **RESET**-Taste los.
+3. Lassen Sie die **BOOT**-Taste los.
 4. Verbinden Sie das FWDN-USB-Type-C-Datenkabel.
 5. Wählen Sie bei Bedarf **Erneut prüfen**.
 6. Fahren Sie nach Erkennung von D3-G fort.
