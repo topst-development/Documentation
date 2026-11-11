@@ -4,7 +4,7 @@ TOPST Imager 用于在 TOPST 开发板上安装操作系统或固件。无需编
 
 > **重要：** 烧录可能会清除开发板 eMMC 中的所有内容。开始前请备份所需文件。
 
-> **关于截图：** 红框和带数字的圆圈仅为本指南添加，不会在 TOPST Imager 中显示。截图使用 Windows 浅色主题；Linux 和深色主题的操作方式相同。
+> **关于截图：** 红框和带数字的圆圈仅为本指南添加，不会在 TOPST Imager 中显示。截图使用 Windows 和 Linux 的浅色主题；深色主题的操作方式相同。
 
 ## 1. 画面中的术语
 
@@ -284,11 +284,37 @@ chmod +x topst-imager
 
 开发板、操作系统、版本、自定义镜像和 eMMC 警告画面，与第 2 节和第 6 节的 Windows 画面相同。
 
+**选择开发板**
+
+![选择开发板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20Board%20Selection.png)
+
+**选择操作系统**
+
+![选择操作系统](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20OS%20Selection.png)
+
+**选择版本**
+
+![选择版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20Version%20Selection.png)
+
+**确认清除数据**
+
+![确认清除数据](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+
+**D3-G / AI-G (.fai)**
+
+![D3-G / AI-G (.fai)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G (.rom)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20Custom%20ROM%20Image.png)
+
 ## 4. 在 Linux 上烧录 D3-G
 
 不显示 Windows VTC 驱动安装步骤，因此 Linux 上分为两步。
 
 ### 第 1 步：启动模式与开发板检测
+
+![Linux 上的 D3-G 启动模式与开发板检测](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. 按住 **BOOT** 按钮。
 2. 按下并松开 **RESET** 按钮。
@@ -308,6 +334,8 @@ Linux 直接检测 D3-G FWDN USB 设备。未检测到时，请检查数据线�
 AI-G 烧录设置分为三步。
 
 ### 第 1 步：设置以太网
+
+![Linux 上的 AI-G 以太网设置](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
 
 Linux 以太网地址不会自动更改，请在网络设置中配置：
 
@@ -338,6 +366,8 @@ Linux 以太网地址不会自动更改，请在网络设置中配置：
 与 Windows 一样，烧录设置分为两步。
 
 ### 第 1 步：启动模式、COM 端口和临时访问
+
+![Linux 上的 VCP-G 启动模式、COM 端口与临时访问](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh/Linux/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
 
 1. 按启动模式指南操作。
 2. 选择 VCP-G 端口，例如 `/dev/ttyUSB0`。

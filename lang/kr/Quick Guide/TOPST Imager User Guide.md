@@ -4,7 +4,7 @@ TOPST Imager는 TOPST 보드에 운영체제 또는 펌웨어를 설치합니다
 
 > **중요:** 플래싱하면 보드 eMMC에 저장된 모든 데이터가 삭제될 수 있습니다. 시작하기 전에 필요한 파일을 백업하세요.
 
-> **스크린샷 안내:** 빨간 상자와 번호 원은 이 가이드를 위해 추가한 것으로 TOPST Imager에는 표시되지 않습니다. 스크린샷은 Windows의 밝은 테마를 사용하며, Linux와 어두운 테마에서도 사용 방법은 같습니다.
+> **스크린샷 안내:** 빨간 상자와 번호 원은 이 가이드를 위해 추가한 것으로 TOPST Imager에는 표시되지 않습니다. 스크린샷은 Windows와 Linux의 밝은 테마를 사용하며, 어두운 테마에서도 사용 방법은 같습니다.
 
 ## 1. 화면에서 볼 수 있는 용어
 
@@ -282,11 +282,37 @@ chmod +x topst-imager
 
 보드, 운영체제, 버전, 사용자 이미지 및 eMMC 경고 화면은 2절과 6절의 Windows 화면과 동일하게 동작합니다.
 
+**보드 선택**
+
+![보드 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20Board%20Selection.png)
+
+**운영체제 선택**
+
+![운영체제 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20OS%20Selection.png)
+
+**버전 선택**
+
+![버전 선택](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20Version%20Selection.png)
+
+**데이터 삭제 확인**
+
+![데이터 삭제 확인](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+
+**D3-G / AI-G (.fai)**
+
+![D3-G / AI-G (.fai)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G (.rom)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20Custom%20ROM%20Image.png)
+
 ## 4. Linux에서 D3-G 플래싱
 
 Windows VTC 드라이버 설치 화면이 없으므로 Linux의 D3-G 플래싱 설정은 2단계입니다.
 
 ### 1단계: 부트 모드 및 보드 감지
+
+![Linux의 D3-G 부트 모드 및 보드 감지](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. **BOOT** 버튼을 길게 누릅니다.
 2. **RESET** 버튼을 눌렀다 놓습니다.
@@ -306,6 +332,8 @@ Linux는 D3-G FWDN USB 장치를 직접 감지합니다. 감지되지 않으면 
 AI-G 플래싱 설정은 3단계입니다.
 
 ### 1단계: Ethernet 설정
+
+![Linux의 AI-G Ethernet 설정](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
 
 TOPST Imager는 Linux Ethernet 주소를 자동 변경하지 않습니다. Linux 네트워크 설정에서 지정하세요.
 
@@ -336,6 +364,8 @@ TOPST Imager는 Linux Ethernet 주소를 자동 변경하지 않습니다. Linux
 Windows와 마찬가지로 Linux의 VCP-G 플래싱 설정은 2단계입니다.
 
 ### 1단계: 부트 모드, COM 포트 및 임시 접근
+
+![Linux의 VCP-G 부트 모드, COM 포트 및 임시 접근](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/kr/Linux/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
 
 1. 부트 모드 안내를 따릅니다.
 2. `/dev/ttyUSB0`과 같은 VCP-G 포트를 선택합니다.

@@ -4,7 +4,7 @@ TOPST Imager 用於在 TOPST 開發板上安裝作業系統或韌體。不需要
 
 > **重要：** 燒錄可能會清除開發板 eMMC 中的所有內容。開始前請備份所需檔案。
 
-> **關於畫面擷取：** 紅框和帶數字的圓圈僅為本指南加入，不會在 TOPST Imager 中顯示。圖片使用 Windows 淺色佈景主題；Linux 和深色主題的操作方式相同。
+> **關於畫面擷取：** 紅框和帶數字的圓圈僅為本指南加入，不會在 TOPST Imager 中顯示。圖片使用 Windows 與 Linux 的淺色佈景主題；深色主題的操作方式相同。
 
 ## 1. 畫面中的術語
 
@@ -284,11 +284,37 @@ chmod +x topst-imager
 
 開發板、作業系統、版本、自訂映像檔與 eMMC 警告畫面，與第 2 節和第 6 節的 Windows 畫面相同。
 
+**選取開發板**
+
+![選取開發板](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20Board%20Selection.png)
+
+**選取作業系統**
+
+![選取作業系統](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20OS%20Selection.png)
+
+**選取版本**
+
+![選取版本](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20Version%20Selection.png)
+
+**確認清除資料**
+
+![確認清除資料](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+
+**D3-G / AI-G (.fai)**
+
+![D3-G / AI-G (.fai)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G (.rom)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20Custom%20ROM%20Image.png)
+
 ## 4. 在 Linux 上燒錄 D3-G
 
 不顯示 Windows VTC 驅動程式安裝步驟，因此 Linux 上分為兩步。
 
 ### 步驟 1：開機模式與開發板偵測
+
+![Linux 上的 D3-G 開機模式與開發板偵測](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. 按住 **BOOT** 按鈕。
 2. 按下並放開 **RESET** 按鈕。
@@ -308,6 +334,8 @@ Linux 直接偵測 D3-G FWDN USB 裝置。未偵測到時，請檢查資料傳�
 AI-G 燒錄設定分為三步。
 
 ### 步驟 1：設定乙太網路
+
+![Linux 上的 AI-G 乙太網路設定](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
 
 Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 
@@ -338,6 +366,8 @@ Linux 乙太網路位址不會自動變更，請在網路設定中指定：
 與 Windows 一樣，燒錄設定分為兩步。
 
 ### 步驟 1：開機模式、COM 連接埠與暫時存取
+
+![Linux 上的 VCP-G 開機模式、COM 連接埠與暫時存取](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/zh-TW/Linux/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
 
 1. 按開機模式指南操作。
 2. 選取 VCP-G 連接埠，例如 `/dev/ttyUSB0`。

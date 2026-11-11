@@ -4,7 +4,7 @@ TOPST Imager ใช้ติดตั้งระบบปฏิบัติก�
 
 > **สำคัญ:** การแฟลชอาจลบข้อมูลทั้งหมดใน eMMC ของบอร์ด โปรดสำรองไฟล์ที่ต้องการก่อนเริ่ม
 
-> **เกี่ยวกับภาพหน้าจอ:** กรอบแดงและวงกลมตัวเลขเพิ่มไว้เฉพาะในคู่มือนี้ ไม่มีใน TOPST Imager ภาพใช้ธีมสว่างของ Windows ส่วน Linux และธีมมืดใช้ขั้นตอนเหมือนกัน
+> **เกี่ยวกับภาพหน้าจอ:** กรอบแดงและวงกลมตัวเลขเพิ่มไว้เฉพาะในคู่มือนี้ ไม่มีใน TOPST Imager ภาพใช้ธีมสว่างของ Windows และ Linux ส่วนธีมมืดใช้ขั้นตอนเหมือนกัน
 
 ## 1. คำศัพท์บนหน้าจอ
 
@@ -284,11 +284,37 @@ chmod +x topst-imager
 
 หน้าเลือกบอร์ด ระบบปฏิบัติการ เวอร์ชัน อิมเมจที่กำหนดเอง และคำเตือน eMMC ทำงานเหมือน Windows ในหัวข้อ 2 และ 6
 
+**เลือกบอร์ด**
+
+![เลือกบอร์ด](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20Board%20Selection.png)
+
+**เลือกระบบปฏิบัติการ**
+
+![เลือกระบบปฏิบัติการ](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20OS%20Selection.png)
+
+**เลือกเวอร์ชัน**
+
+![เลือกเวอร์ชัน](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20Version%20Selection.png)
+
+**ยืนยันการลบข้อมูล**
+
+![ยืนยันการลบข้อมูล](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+
+**D3-G / AI-G (.fai)**
+
+![D3-G / AI-G (.fai)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G (.rom)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20Custom%20ROM%20Image.png)
+
 ## 4. แฟลช D3-G บน Linux
 
 มีสองขั้นตอนเพราะไม่มีหน้าติดตั้งไดรเวอร์ Windows VTC
 
 ### ขั้นที่ 1: โหมดบูตและตรวจจับบอร์ด
+
+![โหมดบูตและตรวจจับบอร์ด D3-G บน Linux](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. กด ปุ่ม **BOOT** ค้างไว้
 2. กดแล้วปล่อย ปุ่ม **RESET**
@@ -308,6 +334,8 @@ Linux ตรวจพบอุปกรณ์ D3-G FWDN USB โดยตรง �
 การตั้งค่ามีสามขั้นตอน
 
 ### ขั้นที่ 1: ตั้งค่า Ethernet
+
+![การตั้งค่า Ethernet ของ AI-G บน Linux](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
 
 แอปไม่เปลี่ยนที่อยู่ Ethernet ของ Linux อัตโนมัติ ให้ตั้งค่าเครือข่ายเอง:
 
@@ -338,6 +366,8 @@ Linux ตรวจพบอุปกรณ์ D3-G FWDN USB โดยตรง �
 มีสองขั้นตอนเช่นเดียวกับ Windows
 
 ### ขั้นที่ 1: โหมดบูต พอร์ต COM และสิทธิ์ชั่วคราว
+
+![โหมดบูต พอร์ต COM และสิทธิ์ชั่วคราวของ VCP-G บน Linux](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/th/Linux/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
 
 1. ทำตามคำแนะนำโหมดบูต
 2. เลือกพอร์ต VCP-G เช่น `/dev/ttyUSB0`

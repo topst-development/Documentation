@@ -4,7 +4,7 @@ TOPST Imager は TOPST ボードに OS やファームウェアをインスト�
 
 > **重要:** 書き込みにより、ボードの eMMC に保存されたすべてのデータが消去される場合があります。開始前に必要なファイルをバックアップしてください。
 
-> **スクリーンショットについて:** 赤枠と番号付きの丸は、このガイド専用の注釈です。TOPST Imager には表示されません。画像は Windows のライトテーマですが、Linux やダークテーマでも操作は同じです。
+> **スクリーンショットについて:** 赤枠と番号付きの丸は、このガイド専用の注釈です。TOPST Imager には表示されません。画像は Windows と Linux のライトテーマです。ダークテーマでも操作は同じです。
 
 ## 1. 画面に表示される用語
 
@@ -284,11 +284,37 @@ chmod +x topst-imager
 
 ボード、OS、バージョン、カスタムイメージ、eMMC 警告は、第 2 節と第 6 節の Windows 画面と同様に動作します。
 
+**ボードの選択**
+
+![ボードの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20Board%20Selection.png)
+
+**OS の選択**
+
+![OS の選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20OS%20Selection.png)
+
+**バージョンの選択**
+
+![バージョンの選択](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20Version%20Selection.png)
+
+**データ消去の確認**
+
+![データ消去の確認](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+
+**D3-G / AI-G (.fai)**
+
+![D3-G / AI-G (.fai)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G (.rom)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20Custom%20ROM%20Image.png)
+
 ## 4. Linux で D3-G に書き込む
 
 Windows VTC ドライバー画面がないため、設定は 2 ステップです。
 
 ### ステップ 1: ブートモードとボード検出
+
+![Linux の D3-G ブートモードとボード検出](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. **BOOT** ボタンを押し続けます。
 2. **RESET** ボタンを押して離します。
@@ -308,6 +334,8 @@ Linux は D3-G FWDN USB 機器を直接検出します。検出されなけれ�
 設定は 3 ステップです。
 
 ### ステップ 1: Ethernet の設定
+
+![Linux の AI-G Ethernet 設定](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
 
 アドレスは自動変更されません。Linux のネットワーク設定で指定します。
 
@@ -338,6 +366,8 @@ Linux は D3-G FWDN USB 機器を直接検出します。検出されなけれ�
 Windows と同様、設定は 2 ステップです。
 
 ### ステップ 1: ブートモード、COM ポート、一時アクセス
+
+![Linux の VCP-G ブートモード、COM ポート、一時アクセス](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/jp/Linux/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
 
 1. ブートモード案内に従います。
 2. `/dev/ttyUSB0` など VCP-G のポートを選択します。

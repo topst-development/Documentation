@@ -4,7 +4,7 @@ TOPST Imager installs an operating system or firmware on a TOPST board. You do n
 
 > **Important:** Flashing can erase everything stored in the board's eMMC. Back up any files you need before you begin.
 
-> **About the screenshots:** Red boxes and numbered circles were added only for this guide. They do not appear in TOPST Imager. The screenshots use the Windows light theme; Linux and dark-theme screens work in the same way.
+> **About the screenshots:** Red boxes and numbered circles were added only for this guide. They do not appear in TOPST Imager. Windows and Linux screenshots use the light theme. Dark-theme screens work in the same way.
 
 ## 1. Words You Will See
 
@@ -282,11 +282,37 @@ Use the actual file and folder names from the downloaded package. A user package
 
 Board, operating-system, version, custom-image, and eMMC warning screens work the same way as the Windows screens in Sections 2 and 6.
 
+**Board selection**
+
+![Board selection](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20Board%20Selection.png)
+
+**Operating system selection**
+
+![Operating system selection](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20OS%20Selection.png)
+
+**Version selection**
+
+![Version selection](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20Version%20Selection.png)
+
+**Data erasure confirmation**
+
+![Data erasure confirmation](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20eMMC%20Erase%20Warning.png)
+
+**D3-G / AI-G (.fai)**
+
+![D3-G / AI-G (.fai)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20Custom%20FAI%20Image.png)
+
+**VCP-G (.rom)**
+
+![VCP-G (.rom)](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20Custom%20ROM%20Image.png)
+
 ## 4. Flash D3-G on Linux
 
 D3-G has two flashing setup steps on Linux because the Windows VTC Driver Installer step is not shown.
 
 ### Step 1: Boot Mode and Board Detection
+
+![D3-G boot mode and board detection on Linux](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20D3-G%20Boot%20Mode.png)
 
 1. Press and hold the **BOOT** button.
 2. Press and release the **RESET** button.
@@ -306,6 +332,8 @@ Wait for download, extraction, and flashing to finish. Custom `.fai` images show
 AI-G has three flashing setup steps.
 
 ### Step 1: Ethernet Setup
+
+![AI-G Ethernet setup on Linux](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20AI-G%20Ethernet%20Setup.png)
 
 TOPST Imager does not automatically change the Linux Ethernet address. Set it in the Linux network settings:
 
@@ -336,6 +364,8 @@ Wait until the **Complete** screen appears.
 VCP-G uses two flashing setup steps on Linux, just as it does on Windows.
 
 ### Step 1: Boot Mode, COM Port, and Temporary Access
+
+![VCP-G boot mode, COM port, and temporary access on Linux](https://raw.githubusercontent.com/topst-development/Documentation/refs/heads/main/Assets/Quick%20Guide/TOPST%20Imager/en/Linux/TOPST%20Imager%20VCP-G%20Boot%20Mode%20and%20COM%20Port.png)
 
 1. Follow the boot-mode guide.
 2. Select the VCP-G port, such as `/dev/ttyUSB0`.
